@@ -5,9 +5,13 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/domain/event/MarginCalledEvent.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/domain/model/query/MarginQuery.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java

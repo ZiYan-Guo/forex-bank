@@ -118,6 +118,24 @@ public class RiskMonitorLog extends BaseAggregate {
         markUpdated();
     }
 
+    public void triggeredBy(String ruleCode, String ruleName) {
+        this.monitorRuleCode = ruleCode;
+        this.monitorRuleName = ruleName;
+        markUpdated();
+    }
+
+    public static RiskMonitorLog triggered(String logNo, Long customerId, String bizType,
+                                            String bizNo, BigDecimal transactionAmount,
+                                            String transactionCurrency, LocalDateTime transactionTime,
+                                            String monitorRuleCode, String monitorRuleName,
+                                            String riskCategory, String riskLevel,
+                                            BigDecimal riskScore) {
+        RiskMonitorLog log = create(logNo, customerId, bizType, bizNo,
+                transactionAmount, transactionCurrency, transactionTime,
+                monitorRuleCode, monitorRuleName, riskCategory, riskLevel, riskScore);
+        return log;
+    }
+
     @Override
     protected void validate() {
         if (logNo == null || logNo.isBlank()) {

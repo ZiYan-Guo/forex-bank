@@ -43,3 +43,11 @@ CREATE TABLE t_position_limit_config (
     PRIMARY KEY (id),
     UNIQUE KEY uk_limit (currency, limit_type)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='敞口限额配置表';
+
+-- Seed position limit config data
+INSERT INTO t_position_limit_config (id, currency, limit_type, limit_amount, warning_pct, is_enabled) VALUES
+(1, 'USD', 'OVERALL', 10000000.00, 80.00, 1),
+(2, 'EUR', 'OVERALL', 8000000.00, 80.00, 1),
+(3, 'JPY', 'OVERALL', 1000000000.00, 80.00, 1),
+(4, 'USD', 'INTRADAY', 5000000.00, 80.00, 1),
+(5, 'USD', 'OVERNIGHT', 2000000.00, 80.00, 1);

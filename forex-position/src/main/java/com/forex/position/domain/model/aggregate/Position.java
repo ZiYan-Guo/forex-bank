@@ -4,7 +4,6 @@ import com.forex.common.base.domain.BaseAggregate;
 import lombok.Getter;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.time.LocalDate;
 
 @Getter
@@ -24,6 +23,13 @@ public class Position extends BaseAggregate {
     private LocalDate positionDate;
     private Long traderId;
     private String branchCode;
+    /** Normal position within limits. 正常，敞口在限额内。 */
+    public static final String RISK_NORMAL = "NORMAL";
+    /** Warning - approaching limit. 预警，接近限额。 */
+    public static final String RISK_WARNING = "WARNING";  
+    /** Breach - exceeded limit. 超限，已突破限额。 */
+    public static final String RISK_BREACH = "BREACH";
+
     private String riskLevel;
     private String hedgingAction;
 
@@ -100,22 +106,51 @@ public class Position extends BaseAggregate {
     /** Calculate net = long - short. 计算净头寸。 */
     public void calculateNetPosition() {
         this.netPosition = this.longAmount.subtract(this.shortAmount);
-        updateLimitUsagePct();
     }
 
-    /** Check if net position exceeds limit. Recalculates before checking. 检查是否超限(先重算)。 */
-    public void checkLimit() {
+    /**
+     * Check position limit and update risk level.
+     * NORMAL if usagePct < warningPct.
+     * WARNING if usagePct >= warningPct && < 100%.
+     * BREACH if usagePct >= 100%.
+     * 检查敞口限额并更新风险等级。
+     */
+    public void checkLimit(BigDecimal warningPct) {
         calculateNetPosition();
         if (positionLimit == null || positionLimit.compareTo(BigDecimal.ZERO) <= 0) {
-            this.riskLevel = "LOW";
+            this.riskLevel = RISK_NORMAL;
             return;
         }
         BigDecimal netAbs = this.netPosition.abs();
-        if (netAbs.compareTo(positionLimit) > 0) {
-            this.riskLevel = "HIGH";
+        BigDecimal usagePct = netAbs.divide(positionLimit, 4, java.math.RoundingMode.HALF_UP)
+                .multiply(BigDecimal.valueOf(100));
+        this.limitUsagePct = usagePct;
+        
+        BigDecimal warnThreshold = warningPct != null ? warningPct : BigDecimal.valueOf(80);
+        if (usagePct.compareTo(BigDecimal.valueOf(100)) >= 0) {
+            this.riskLevel = RISK_BREACH;
+        } else if (usagePct.compareTo(warnThreshold) >= 0) {
+            this.riskLevel = RISK_WARNING;
         } else {
-            this.riskLevel = "LOW";
+            this.riskLevel = RISK_NORMAL;
         }
+    }
+
+    /**
+     * Check limit using default 80% warning threshold.
+     * 使用默认80%预警阈值检查限额。
+     */
+    public void checkLimit() {
+        checkLimit(BigDecimal.valueOf(80));
+    }
+
+    /**
+     * Set hedging action recommendation.
+     * 设置对冲建议。
+     */
+    public void setHedgingAction(String action) {
+        this.hedgingAction = action;
+        markUpdated();
     }
 
     public void updateRiskLevel(String riskLevel) {
@@ -125,16 +160,6 @@ public class Position extends BaseAggregate {
 
     public void assignPositionNo(String positionNo) {
         this.positionNo = positionNo;
-    }
-
-    private void updateLimitUsagePct() {
-        if (positionLimit == null || positionLimit.compareTo(BigDecimal.ZERO) == 0) {
-            this.limitUsagePct = BigDecimal.ZERO;
-            return;
-        }
-        this.limitUsagePct = this.netPosition.abs()
-                .divide(positionLimit, 4, RoundingMode.HALF_UP)
-                .multiply(BigDecimal.valueOf(100));
     }
 
     @Override

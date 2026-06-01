@@ -72,3 +72,29 @@ CREATE TABLE t_risk_report (
     KEY idx_report_status (report_status),
     KEY idx_submit_time (submit_time)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='风险报告表';
+
+DROP TABLE IF EXISTS t_risk_param_config;
+CREATE TABLE IF NOT EXISTS t_risk_param_config (
+    id BIGINT NOT NULL,
+    param_key VARCHAR(50) NOT NULL COMMENT '参数键',
+    param_value VARCHAR(500) NOT NULL COMMENT '参数值',
+    param_type VARCHAR(30) NOT NULL COMMENT 'POSITION_LIMIT/STOP_LOSS/MARGIN_CALL/ALERT_THRESHOLD',
+    currency VARCHAR(10) DEFAULT NULL COMMENT '适用币种',
+    is_enabled TINYINT DEFAULT 1,
+    create_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    update_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    version INT NOT NULL DEFAULT 0 COMMENT '版本号',
+    deleted TINYINT NOT NULL DEFAULT 0 COMMENT '逻辑删除',
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_param_key_ccy (param_key, currency)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='风控参数配置表';
+
+-- Seed data
+INSERT INTO t_risk_param_config (id, param_key, param_value, param_type, currency, is_enabled) VALUES
+(1, 'position.limit.overall', '10000000', 'POSITION_LIMIT', 'USD', 1),
+(2, 'position.limit.intraday', '5000000', 'POSITION_LIMIT', 'USD', 1),
+(3, 'position.limit.overnight', '2000000', 'POSITION_LIMIT', 'USD', 1),
+(4, 'stop.loss.total', '500000', 'STOP_LOSS', NULL, 1),
+(5, 'margin.call.pct', '50', 'MARGIN_CALL', NULL, 1),
+(6, 'margin.force.pct', '30', 'MARGIN_CALL', NULL, 1),
+(7, 'alert.deviation.pct', '5', 'ALERT_THRESHOLD', NULL, 1);

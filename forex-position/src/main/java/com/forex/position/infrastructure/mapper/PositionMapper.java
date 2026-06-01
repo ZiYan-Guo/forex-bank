@@ -9,6 +9,9 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
+import java.time.LocalDate;
+import java.util.List;
+
 @Mapper
 public interface PositionMapper extends BaseMapperExt<PositionPO> {
 
@@ -38,4 +41,8 @@ public interface PositionMapper extends BaseMapperExt<PositionPO> {
             " ORDER BY create_time DESC" +
             "</script>")
     Page<PositionPO> pageQuery(Page<PositionPO> page, @Param("query") com.forex.position.domain.model.query.PositionQuery query);
+
+    @Select("SELECT * FROM t_position WHERE currency_pair = #{currencyPair} AND position_date = #{date} AND deleted = 0")
+    List<PositionPO> selectByCurrencyPairAndDate(@Param("currencyPair") String currencyPair,
+                                                  @Param("date") LocalDate date);
 }

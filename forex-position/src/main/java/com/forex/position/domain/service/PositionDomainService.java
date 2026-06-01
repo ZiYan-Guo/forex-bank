@@ -2,6 +2,8 @@ package com.forex.position.domain.service;
 
 import com.forex.position.domain.event.PositionLimitBreachEvent;
 import com.forex.position.domain.model.aggregate.Position;
+import com.forex.position.domain.model.entity.PositionLimitConfig;
+import com.forex.position.domain.repository.PositionLimitConfigRepository;
 import com.forex.position.domain.repository.PositionRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -10,63 +12,104 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.util.List;
 
+/**
+ * Position domain service. Manages position lifecycle, aggregation and limit checking.
+ * 敞口领域服务。管理头寸生命周期、汇总和限额检查。
+ */
 @Slf4j
 @Service
 @RequiredArgsConstructor
 public class PositionDomainService {
 
-    private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("yyyyMMdd");
-    private static final String POSITION_NO_PREFIX = "POS";
-
     private final PositionRepository positionRepository;
+    private final PositionLimitConfigRepository limitConfigRepository;
     private final ApplicationEventPublisher eventPublisher;
 
     public Position createPosition(String currencyPair, String positionType,
-                                    String positionCurrency, BigDecimal positionLimit,
-                                    LocalDate positionDate, Long traderId, String branchCode) {
+                                    String positionCurrency, Long traderId, String branchCode) {
+        PositionLimitConfig config = getLimitConfigForCurrency(positionCurrency);
+        BigDecimal limit = config != null ? config.getLimitAmount() : BigDecimal.ZERO;
         Position position = Position.create(currencyPair, positionType, positionCurrency,
-                positionLimit, positionDate, traderId, branchCode);
-        String positionNo = generatePositionNo(currencyPair);
-        position.assignPositionNo(positionNo);
-        log.info("Created position, positionNo: {}, currencyPair: {}", positionNo, currencyPair);
+                limit, LocalDate.now(), traderId, branchCode);
+        position.assignPositionNo(generatePositionNo(currencyPair));
         return position;
     }
 
+    /**
+     * Aggregate all positions for a currency pair on a given date.
+     * 汇总指定日期和货币对的所有敞口。
+     */
     public Position aggregatePositions(String currencyPair, LocalDate date) {
-        log.info("Aggregating positions for currencyPair: {}, date: {}", currencyPair, date);
-        return Position.create(currencyPair, "AGGREGATED", null, BigDecimal.ZERO, date, null, null);
+        List<Position> positions = positionRepository.findByCurrencyPairAndDate(currencyPair, date);
+        Position aggregated = Position.create(currencyPair, "AGGREGATE", 
+                extractCurrency(currencyPair), BigDecimal.ZERO, date, null, null);
+        aggregated.assignPositionNo("POS_AGG_" + date + "_" + currencyPair.replace("/", "_"));
+        
+        BigDecimal totalLong = positions.stream()
+                .map(Position::getLongAmount).reduce(BigDecimal.ZERO, BigDecimal::add);
+        BigDecimal totalShort = positions.stream()
+                .map(Position::getShortAmount).reduce(BigDecimal.ZERO, BigDecimal::add);
+        
+        if (totalLong.compareTo(BigDecimal.ZERO) > 0) aggregated.addLong(totalLong);
+        if (totalShort.compareTo(BigDecimal.ZERO) > 0) aggregated.addShort(totalShort);
+        
+        PositionLimitConfig config = getLimitConfigForCurrency(extractCurrency(currencyPair));
+        if (config != null) {
+            aggregated.assignPositionNo(aggregated.getPositionNo());
+            aggregated.checkLimit(config.getWarningPct());
+        }
+        
+        log.info("Aggregated positions for {} on {}: long={}, short={}, net={}", 
+                currencyPair, date, totalLong, totalShort, aggregated.getNetPosition());
+        return aggregated;
     }
 
-    public void checkPositionLimit(Position pos) {
-        pos.checkLimit();
-        positionRepository.save(pos);
-        if ("HIGH".equals(pos.getRiskLevel())) {
+    /**
+     * Check position against limit configuration and publish breach event.
+     * 检查敞口限额并发布超限事件。
+     */
+    public void checkPositionLimit(Position position) {
+        PositionLimitConfig config = getLimitConfigForCurrency(position.getPositionCurrency());
+        if (config != null) {
+            position.checkLimit(config.getWarningPct());
+        } else {
+            position.checkLimit();
+        }
+        positionRepository.save(position);
+        
+        if (Position.RISK_BREACH.equals(position.getRiskLevel())) {
             eventPublisher.publishEvent(new PositionLimitBreachEvent(
-                    pos.getId(), pos.getPositionLimit(), pos.getLimitUsagePct()));
-            log.warn("Position limit breached, positionId: {}, limit: {}, usage: {}",
-                    pos.getId(), pos.getPositionLimit(), pos.getLimitUsagePct());
+                    position.getId(), position.getPositionLimit(), position.getLimitUsagePct()));
+            log.warn("Position limit breach: positionNo={}, currency={}, usage={}%",
+                    position.getPositionNo(), position.getPositionCurrency(), position.getLimitUsagePct());
+        } else if (Position.RISK_WARNING.equals(position.getRiskLevel())) {
+            log.warn("Position limit warning: positionNo={}, currency={}, usage={}%",
+                    position.getPositionNo(), position.getPositionCurrency(), position.getLimitUsagePct());
         }
     }
 
     public String getHedgingAdvice(Position pos) {
         if (pos.getNetPosition() == null || pos.getNetPosition().compareTo(BigDecimal.ZERO) == 0) {
-            log.info("No hedging action needed for position: {}", pos.getPositionNo());
             return "NONE";
         }
-        if (pos.getNetPosition().compareTo(BigDecimal.ZERO) > 0) {
-            log.info("Hedging advice for position {}: SELL to offset long position", pos.getPositionNo());
-            return "SELL";
-        } else {
-            log.info("Hedging advice for position {}: BUY to offset short position", pos.getPositionNo());
-            return "BUY";
-        }
+        return pos.getNetPosition().compareTo(BigDecimal.ZERO) > 0 ? "SELL" : "BUY";
+    }
+
+    private PositionLimitConfig getLimitConfigForCurrency(String currency) {
+        if (currency == null) return null;
+        List<PositionLimitConfig> configs = limitConfigRepository.findByCurrency(currency);
+        return configs.isEmpty() ? null : configs.get(0);
     }
 
     private String generatePositionNo(String currencyPair) {
-        String datePart = LocalDate.now().format(DATE_FORMAT);
-        String suffix = String.format("%06d", (long) (Math.random() * 1_000_000));
-        return POSITION_NO_PREFIX + datePart + suffix;
+        return "POS" + LocalDate.now().format(java.time.format.DateTimeFormatter.ofPattern("yyyyMMdd"))
+                + String.format("%06d", (int)(Math.random() * 1000000));
+    }
+
+    private String extractCurrency(String currencyPair) {
+        if (currencyPair == null || !currencyPair.contains("/")) return "CNY";
+        return currencyPair.split("/")[0];
     }
 }

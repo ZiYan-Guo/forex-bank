@@ -46,3 +46,7 @@ CREATE TABLE t_margin_call (
     KEY idx_margin_id (margin_id),
     KEY idx_call_date (call_date)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='保证金追缴记录表';
+
+-- Add water level tracking and collateral value columns
+ALTER TABLE t_margin_account ADD COLUMN collateral_value DECIMAL(22,6) DEFAULT 0 COMMENT '担保品价值';
+ALTER TABLE t_margin_account ADD COLUMN water_level VARCHAR(20) DEFAULT 'SAFE' COMMENT '水位线: SAFE/MARGIN_CALL/FORCE_LIQUIDATION';

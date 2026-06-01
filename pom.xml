@@ -35,6 +35,7 @@
         <module>forex-notification</module>
         <module>forex-ocr</module>
         <module>forex-schedule</module>
+        <module>forex-saccr</module>
     </modules>
 
     <properties>
@@ -59,7 +60,7 @@
         <sentinel.version>1.8.6</sentinel.version>
         <nacos.version>2.3.2</nacos.version>
 
-        <rocketmq.version>5.1.4</rocketmq.version>
+        <rocketmq.version>2.3.1</rocketmq.version>
 
         <flowable.version>7.0.0</flowable.version>
         <drools.version>9.44.0.Final</drools.version>

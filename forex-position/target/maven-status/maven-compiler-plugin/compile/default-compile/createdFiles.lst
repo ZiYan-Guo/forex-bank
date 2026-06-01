@@ -5,8 +5,13 @@ com/forex/position/infrastructure/mapper/PositionMapper.class
 com/forex/position/domain/repository/PositionRepository.class
 com/forex/position/domain/model/aggregate/Position.class
 com/forex/position/adapter/controller/PositionController.class
+com/forex/position/domain/model/entity/PositionLimitConfig.class
+com/forex/position/infrastructure/persistence/PositionLimitConfigPO.class
+com/forex/position/infrastructure/mapper/PositionLimitConfigMapper.class
 com/forex/position/domain/service/PositionDomainService.class
+com/forex/position/domain/repository/PositionLimitConfigRepository.class
 com/forex/position/application/service/PositionAppService.class
+com/forex/position/infrastructure/repository/PositionLimitConfigRepositoryImpl.class
 com/forex/position/domain/event/PositionLimitBreachEvent.class
 com/forex/position/domain/model/valueobject/PositionAmount.class
 com/forex/position/PositionApplication.class

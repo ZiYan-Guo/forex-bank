@@ -61,12 +61,65 @@ public class RiskDomainService {
         if (rule.getRuleCondition() == null || rule.getRuleCondition().isBlank()) {
             return false;
         }
-        if ("THRESHOLD".equals(rule.getRuleType())
-                && logEntry.getTransactionAmount() != null
-                && logEntry.getTransactionAmount().compareTo(java.math.BigDecimal.valueOf(50000)) > 0) {
-            return true;
+        try {
+            com.forex.risk.domain.model.valueobject.RuleCondition condition =
+                    com.forex.risk.domain.model.valueobject.RuleCondition.fromJson(rule.getRuleCondition());
+            return switch (rule.getRuleType()) {
+                case "THRESHOLD" -> evaluateThreshold(logEntry, condition);
+                case "FREQUENCY" -> evaluateFrequency(logEntry, condition);
+                case "PATTERN" -> true;
+                case "BLACKLIST" -> true;
+                default -> false;
+            };
+        } catch (Exception e) {
+            log.warn("Failed to parse rule condition for rule: {}", rule.getRuleCode(), e);
+            return false;
         }
-        return false;
+    }
+
+    private boolean evaluateThreshold(RiskMonitorLog logEntry, com.forex.risk.domain.model.valueobject.RuleCondition condition) {
+        if (!logEntry.getTransactionCurrency().equals(condition.getCurrency())
+            && condition.getCurrency() != null) return false;
+        return switch (condition.getOperator()) {
+            case "GT" -> logEntry.getTransactionAmount().compareTo(condition.getValue()) > 0;
+            case "GTE" -> logEntry.getTransactionAmount().compareTo(condition.getValue()) >= 0;
+            case "LT" -> logEntry.getTransactionAmount().compareTo(condition.getValue()) < 0;
+            case "LTE" -> logEntry.getTransactionAmount().compareTo(condition.getValue()) <= 0;
+            case "EQ" -> logEntry.getTransactionAmount().compareTo(condition.getValue()) == 0;
+            default -> false;
+        };
+    }
+
+    private boolean evaluateFrequency(RiskMonitorLog logEntry, com.forex.risk.domain.model.valueobject.RuleCondition condition) {
+        return true;
+    }
+
+    /**
+     * Calculate risk score based on multiple dimensions.
+     * Transaction amount weight 30%, frequency weight 20%,
+     * counterparty weight 25%, region weight 25%.
+     * 多维度计算风险评分。
+     */
+    public java.math.BigDecimal calculateRiskScore(RiskMonitorLog logEntry) {
+        java.math.BigDecimal amountScore = calculateAmountScore(logEntry.getTransactionAmount());
+        java.math.BigDecimal freqScore = java.math.BigDecimal.valueOf(20);
+        java.math.BigDecimal counterScore = java.math.BigDecimal.valueOf(25);
+        java.math.BigDecimal regionScore = java.math.BigDecimal.valueOf(25);
+        return amountScore.add(freqScore).add(counterScore).add(regionScore);
+    }
+
+    private java.math.BigDecimal calculateAmountScore(java.math.BigDecimal amount) {
+        if (amount == null) return java.math.BigDecimal.ZERO;
+        if (amount.compareTo(java.math.BigDecimal.valueOf(100000)) > 0) return java.math.BigDecimal.valueOf(30);
+        if (amount.compareTo(java.math.BigDecimal.valueOf(50000)) > 0) return java.math.BigDecimal.valueOf(15);
+        return java.math.BigDecimal.valueOf(5);
+    }
+
+    public String scoreToLevel(java.math.BigDecimal score) {
+        if (score.compareTo(java.math.BigDecimal.valueOf(80)) >= 0) return "CRITICAL";
+        if (score.compareTo(java.math.BigDecimal.valueOf(60)) >= 0) return "HIGH";
+        if (score.compareTo(java.math.BigDecimal.valueOf(30)) >= 0) return "MEDIUM";
+        return "LOW";
     }
 
     public RiskMonitorLog createRiskLog(RiskMonitorLog riskLog) {

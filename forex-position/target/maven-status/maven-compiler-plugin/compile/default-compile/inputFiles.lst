@@ -5,10 +5,15 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/application/service/PositionAppService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/domain/event/PositionLimitBreachEvent.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/domain/model/aggregate/Position.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/domain/model/entity/PositionLimitConfig.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/domain/model/query/PositionQuery.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/domain/model/valueobject/PositionAmount.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/domain/repository/PositionLimitConfigRepository.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/domain/repository/PositionRepository.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/infrastructure/mapper/PositionLimitConfigMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/infrastructure/mapper/PositionMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/infrastructure/persistence/PositionLimitConfigPO.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/infrastructure/persistence/PositionPO.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/infrastructure/repository/PositionLimitConfigRepositoryImpl.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/infrastructure/repository/PositionRepositoryImpl.java

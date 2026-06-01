@@ -13,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -73,6 +74,12 @@ public class PositionRepositoryImpl implements PositionRepository {
                 po.getRiskLevel(),
                 po.getHedgingAction()
         );
+    }
+
+    @Override
+    public List<Position> findByCurrencyPairAndDate(String currencyPair, LocalDate date) {
+        List<PositionPO> poList = positionMapper.selectByCurrencyPairAndDate(currencyPair, date);
+        return poList.stream().map(this::toDomain).toList();
     }
 
     private PositionPO toPO(Position position) {

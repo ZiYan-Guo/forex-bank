@@ -1,6 +1,7 @@
 package com.forex.margin.domain.model.aggregate;
 
 import com.forex.common.base.domain.BaseAggregate;
+import com.forex.margin.domain.model.valueobject.WaterLevel;
 import lombok.Getter;
 
 import java.math.BigDecimal;
@@ -25,6 +26,8 @@ public class MarginAccount extends BaseAggregate {
     private String status;
     private String collateralType;
     private String releaseReason;
+    private String waterLevel;
+    private BigDecimal collateralValue;
 
     private MarginAccount() {
         super();
@@ -46,6 +49,57 @@ public class MarginAccount extends BaseAggregate {
         account.status = "PENDING";
         account.validate();
         return account;
+    }
+
+    public static BigDecimal calculateMarginRate(int tenorMonths) {
+        if (tenorMonths <= 12) return new BigDecimal("0.07");
+        if (tenorMonths <= 36) return new BigDecimal("0.12");
+        return new BigDecimal("0.15");
+    }
+
+    public static BigDecimal calculateRequiredAmount(BigDecimal notional, int tenorMonths, BigDecimal volatilityPct) {
+        BigDecimal rate = calculateMarginRate(tenorMonths);
+        BigDecimal volAdj = BigDecimal.ONE.add(volatilityPct != null ? volatilityPct : BigDecimal.ZERO);
+        return notional.multiply(rate).multiply(volAdj).setScale(2, java.math.RoundingMode.HALF_UP);
+    }
+
+    public void pay() {
+        this.depositedAmount = this.requiredAmount;
+        this.shortfallAmount = BigDecimal.ZERO;
+        this.status = "PAID";
+        markUpdated();
+    }
+
+    public void partialPay(BigDecimal amount) {
+        if (amount == null || amount.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new IllegalArgumentException("存入金额必须大于0");
+        }
+        this.depositedAmount = this.depositedAmount.add(amount);
+        this.shortfallAmount = calculateShortfall();
+        this.status = this.shortfallAmount.compareTo(BigDecimal.ZERO) > 0 ? "PARTIAL" : "PAID";
+        markUpdated();
+    }
+
+    public void cancel(String reason) {
+        if (!"PENDING".equals(this.status) && !"CALLED".equals(this.status)) {
+            throw new IllegalArgumentException("只有待缴或追缴状态的保证金才能取消");
+        }
+        this.status = "CANCELLED";
+        this.releaseReason = reason;
+        markUpdated();
+    }
+
+    public WaterLevel checkWaterLevel() {
+        if (requiredAmount.compareTo(BigDecimal.ZERO) == 0) {
+            return WaterLevel.evaluate(BigDecimal.ZERO, BigDecimal.ONE);
+        }
+        return WaterLevel.evaluate(depositedAmount, requiredAmount);
+    }
+
+    public BigDecimal getDepositRatio() {
+        if (requiredAmount.compareTo(BigDecimal.ZERO) == 0) return BigDecimal.ZERO;
+        return depositedAmount.divide(requiredAmount, 4, java.math.RoundingMode.HALF_UP)
+                .multiply(BigDecimal.valueOf(100));
     }
 
     public static MarginAccount reconstitute(Long id, String marginNo, Long customerId,
@@ -128,6 +182,13 @@ public class MarginAccount extends BaseAggregate {
 
     public void assignMarginNo(String marginNo) {
         this.marginNo = marginNo;
+    }
+
+    /**
+     * Set water level after evaluation. 设置水位线。
+     */
+    public void setWaterLevel(String level) {
+        this.waterLevel = level;
     }
 
     @Override

@@ -24,7 +24,7 @@ public class PositionAppService {
     public Position createPosition(PositionCmd cmd) {
         Position position = positionDomainService.createPosition(
                 cmd.getCurrencyPair(), cmd.getPositionType(), cmd.getPositionCurrency(),
-                BigDecimal.ZERO, LocalDate.now(), cmd.getTraderId(), cmd.getBranchCode());
+                cmd.getTraderId(), cmd.getBranchCode());
         if (cmd.getLongAmount() != null) {
             position.addLong(cmd.getLongAmount());
         }
