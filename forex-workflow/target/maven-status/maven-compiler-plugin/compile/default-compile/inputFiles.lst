@@ -1,0 +1,16 @@
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/src/main/java/com/forex/workflow/adapter/controller/WorkflowController.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/src/main/java/com/forex/workflow/adapter/dto/CompleteTaskReq.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/src/main/java/com/forex/workflow/adapter/dto/StartProcessReq.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/src/main/java/com/forex/workflow/adapter/dto/WorkflowTaskResp.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/src/main/java/com/forex/workflow/application/command/StartProcessCmd.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/src/main/java/com/forex/workflow/application/query/WorkflowQuery.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/src/main/java/com/forex/workflow/application/service/WorkflowAppService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/src/main/java/com/forex/workflow/domain/model/aggregate/WorkflowTask.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/src/main/java/com/forex/workflow/domain/model/entity/ApprovalRecord.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/src/main/java/com/forex/workflow/domain/repository/WorkflowTaskRepository.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/src/main/java/com/forex/workflow/domain/service/WorkflowDomainService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/WorkflowTaskMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/ApprovalRecordPO.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/WorkflowTaskPO.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/src/main/java/com/forex/workflow/infrastructure/repository/WorkflowTaskRepositoryImpl.java

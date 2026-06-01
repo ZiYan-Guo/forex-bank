@@ -1,0 +1,13 @@
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ocr/src/main/java/com/forex/ocr/adapter/controller/OcrController.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ocr/src/main/java/com/forex/ocr/adapter/dto/OcrTaskResp.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ocr/src/main/java/com/forex/ocr/adapter/dto/OcrUploadReq.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ocr/src/main/java/com/forex/ocr/application/query/OcrQuery.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ocr/src/main/java/com/forex/ocr/application/service/OcrAppService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ocr/src/main/java/com/forex/ocr/domain/event/OcrCompletedEvent.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ocr/src/main/java/com/forex/ocr/domain/model/aggregate/OcrTask.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ocr/src/main/java/com/forex/ocr/domain/repository/OcrTaskRepository.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ocr/src/main/java/com/forex/ocr/domain/service/OcrDomainService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ocr/src/main/java/com/forex/ocr/infrastructure/mapper/OcrTaskMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ocr/src/main/java/com/forex/ocr/infrastructure/persistence/OcrTaskPO.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ocr/src/main/java/com/forex/ocr/infrastructure/repository/OcrTaskRepositoryImpl.java

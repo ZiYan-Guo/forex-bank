@@ -1,0 +1,6 @@
+com/forex/common/mybatis/config/MybatisPlusConfig.class
+com/forex/common/mybatis/base/BaseMapperExt.class
+com/forex/common/mybatis/base/BasePO.class
+com/forex/common/mybatis/handler/EncryptTypeHandler.class
+com/forex/common/mybatis/handler/JsonTypeHandler.class
+com/forex/common/mybatis/config/MyMetaObjectHandler.class

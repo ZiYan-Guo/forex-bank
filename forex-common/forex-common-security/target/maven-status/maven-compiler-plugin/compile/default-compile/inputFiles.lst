@@ -1,0 +1,11 @@
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserInfo.java

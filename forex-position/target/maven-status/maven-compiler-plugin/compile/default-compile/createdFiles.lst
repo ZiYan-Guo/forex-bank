@@ -1,0 +1,14 @@
+com/forex/position/infrastructure/persistence/PositionPO.class
+com/forex/position/infrastructure/repository/PositionRepositoryImpl.class
+com/forex/position/application/command/PositionCmd.class
+com/forex/position/infrastructure/mapper/PositionMapper.class
+com/forex/position/domain/repository/PositionRepository.class
+com/forex/position/domain/model/aggregate/Position.class
+com/forex/position/adapter/controller/PositionController.class
+com/forex/position/domain/service/PositionDomainService.class
+com/forex/position/application/service/PositionAppService.class
+com/forex/position/domain/event/PositionLimitBreachEvent.class
+com/forex/position/domain/model/valueobject/PositionAmount.class
+com/forex/position/PositionApplication.class
+com/forex/position/domain/model/query/PositionQuery.class
+com/forex/position/adapter/dto/PositionResp.class

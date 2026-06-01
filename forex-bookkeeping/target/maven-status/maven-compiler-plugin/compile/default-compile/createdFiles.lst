@@ -1,0 +1,14 @@
+com/forex/bookkeeping/domain/model/query/JournalQuery.class
+com/forex/bookkeeping/application/command/CreateEntryCmd.class
+com/forex/bookkeeping/domain/service/BookkeepingDomainService.class
+com/forex/bookkeeping/application/service/BookkeepingAppService.class
+com/forex/bookkeeping/domain/model/valueobject/VoucherNo.class
+com/forex/bookkeeping/infrastructure/repository/JournalEntryRepositoryImpl.class
+com/forex/bookkeeping/infrastructure/mapper/JournalEntryMapper.class
+com/forex/bookkeeping/domain/repository/JournalEntryRepository.class
+com/forex/bookkeeping/BookkeepingApplication.class
+com/forex/bookkeeping/adapter/dto/EntryResp.class
+com/forex/bookkeeping/infrastructure/persistence/JournalEntryPO.class
+com/forex/bookkeeping/domain/model/aggregate/JournalEntry.class
+com/forex/bookkeeping/adapter/controller/BookkeepingController.class
+com/forex/bookkeeping/domain/event/EntryPostedEvent.class

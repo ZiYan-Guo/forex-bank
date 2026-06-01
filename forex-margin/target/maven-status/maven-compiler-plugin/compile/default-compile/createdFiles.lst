@@ -1,0 +1,14 @@
+com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.class
+com/forex/margin/infrastructure/mapper/MarginAccountMapper.class
+com/forex/margin/application/command/CreateMarginCmd.class
+com/forex/margin/domain/service/MarginDomainService.class
+com/forex/margin/domain/model/aggregate/MarginAccount.class
+com/forex/margin/application/service/MarginAppService.class
+com/forex/margin/domain/repository/MarginAccountRepository.class
+com/forex/margin/domain/event/MarginCalledEvent.class
+com/forex/margin/domain/model/query/MarginQuery.class
+com/forex/margin/infrastructure/persistence/MarginAccountPO.class
+com/forex/margin/adapter/controller/MarginController.class
+com/forex/margin/domain/model/valueobject/MarginAmount.class
+com/forex/margin/MarginApplication.class
+com/forex/margin/adapter/dto/MarginResp.class

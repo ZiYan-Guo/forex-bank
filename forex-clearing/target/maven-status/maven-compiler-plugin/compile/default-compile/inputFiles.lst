@@ -1,0 +1,14 @@
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/ClearingApplication.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ClearingController.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ClearingResp.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/application/command/GenerateClearingCmd.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/application/service/ClearingAppService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/domain/event/InstructionSentEvent.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/domain/model/query/ClearingQuery.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ClearingAmount.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/domain/repository/ClearingInstructionRepository.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/domain/service/ClearingDomainService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/ClearingInstructionMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/ClearingInstructionPO.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/infrastructure/repository/ClearingInstructionRepositoryImpl.java

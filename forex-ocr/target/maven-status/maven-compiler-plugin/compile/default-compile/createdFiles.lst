@@ -1,0 +1,13 @@
+com/forex/ocr/infrastructure/mapper/OcrTaskMapper.class
+com/forex/ocr/OcrApplication.class
+com/forex/ocr/domain/repository/OcrTaskRepository.class
+com/forex/ocr/domain/service/OcrDomainService.class
+com/forex/ocr/domain/event/OcrCompletedEvent.class
+com/forex/ocr/application/service/OcrAppService.class
+com/forex/ocr/application/query/OcrQuery.class
+com/forex/ocr/adapter/dto/OcrUploadReq.class
+com/forex/ocr/infrastructure/repository/OcrTaskRepositoryImpl.class
+com/forex/ocr/adapter/controller/OcrController.class
+com/forex/ocr/domain/model/aggregate/OcrTask.class
+com/forex/ocr/infrastructure/persistence/OcrTaskPO.class
+com/forex/ocr/adapter/dto/OcrTaskResp.class

@@ -1,0 +1,14 @@
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/BookkeepingApplication.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/dto/EntryResp.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/command/CreateEntryCmd.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/event/EntryPostedEvent.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/JournalEntry.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/query/JournalQuery.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/valueobject/VoucherNo.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/JournalEntryRepository.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/JournalEntryMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/persistence/JournalEntryPO.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/repository/JournalEntryRepositoryImpl.java
