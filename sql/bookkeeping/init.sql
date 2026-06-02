@@ -70,3 +70,23 @@ CREATE TABLE t_ledger (
     PRIMARY KEY (id),
     UNIQUE KEY uk_account_period_ccy (account_code, currency, fiscal_period)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='分户账表';
+
+DROP TABLE IF EXISTS t_month_end_closing;
+CREATE TABLE t_month_end_closing (
+    id BIGINT NOT NULL COMMENT '主键ID',
+    closing_id VARCHAR(64) NOT NULL COMMENT '结账编号',
+    fiscal_period VARCHAR(6) NOT NULL COMMENT '会计期间',
+    closing_date DATE NOT NULL COMMENT '结账日期',
+    closing_status VARCHAR(20) NOT NULL DEFAULT 'OPEN' COMMENT 'OPEN/IN_PROGRESS/COMPLETED/LOCKED',
+    checklist_json TEXT COMMENT '检查清单JSON',
+    audit_trail TEXT COMMENT '审计轨迹',
+    total_debits DECIMAL(22,6) DEFAULT 0 COMMENT '借方总额',
+    total_credits DECIMAL(22,6) DEFAULT 0 COMMENT '贷方总额',
+    operator_id BIGINT COMMENT '操作员',
+    create_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    update_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+    version INT DEFAULT 0 COMMENT '版本号',
+    deleted TINYINT DEFAULT 0 COMMENT '逻辑删除',
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_closing_period (fiscal_period)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='月末结账表';

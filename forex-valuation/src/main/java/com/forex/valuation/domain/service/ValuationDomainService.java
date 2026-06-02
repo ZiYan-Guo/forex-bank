@@ -2,6 +2,8 @@ package com.forex.valuation.domain.service;
 
 import com.forex.valuation.domain.event.ValuationCompletedEvent;
 import com.forex.valuation.domain.model.aggregate.ValuationResult;
+import com.forex.valuation.domain.model.valueobject.ValuationInput;
+import com.forex.valuation.domain.model.valueobject.ValuationModelType;
 import com.forex.valuation.domain.repository.ValuationResultRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +20,7 @@ public class ValuationDomainService {
 
     private final ValuationResultRepository valuationResultRepository;
     private final ApplicationEventPublisher eventPublisher;
+    private final ValuationModelRegistry modelRegistry;
 
     /** Calculate valuation for a trade. BS/GK models estimate fair value. 计算交易的估值(BS/GK模型)。 */
     public ValuationResult calculateValuation(ValuationResult input) {
@@ -35,13 +38,23 @@ public class ValuationDomainService {
 
     /** Estimate fair value based on valuation method. 根据估值方法估算公允价值。 */
     private BigDecimal estimateFairValue(ValuationResult result) {
-        if ("BS".equalsIgnoreCase(result.getValuationMethod())
-                || "GK".equalsIgnoreCase(result.getValuationMethod())) {
-            return result.getNotionalAmount() != null
-                    ? result.getNotionalAmount().multiply(java.math.BigDecimal.ONE)
-                    : java.math.BigDecimal.ZERO;
-        }
-        return result.getNotionalAmount() != null ? result.getNotionalAmount() : java.math.BigDecimal.ZERO;
+        ValuationModelType type = getModelType(result.getValuationMethod());
+        ValuationModel model = modelRegistry.getModel(type);
+        if (model == null) return result.getNotionalAmount();
+
+        ValuationInput input = ValuationInput.builder()
+                .notionalAmount(result.getNotionalAmount())
+                .valuationDate(result.getValuationDate())
+                .build();
+        return model.calculateFairValue(input);
+    }
+
+    private ValuationModelType getModelType(String method) {
+        if ("BS".equalsIgnoreCase(method)) return ValuationModelType.BLACK_SCHOLES;
+        if ("GK".equalsIgnoreCase(method)) return ValuationModelType.GARMAN_KOHLHAGEN;
+        if ("DCF".equalsIgnoreCase(method)) return ValuationModelType.DISCOUNTED_CASH_FLOW;
+        if ("MC".equalsIgnoreCase(method)) return ValuationModelType.MONTE_CARLO;
+        return ValuationModelType.BLACK_SCHOLES;
     }
 
     /** Calculate P&L as fairValue minus notionalAmount. 计算损益=公允价值-名义本金。 */

@@ -1,10 +1,16 @@
 package com.forex.valuation.adapter.controller;
 
 import com.forex.common.base.result.R;
+import com.forex.valuation.adapter.dto.PnlAttributionResp;
 import com.forex.valuation.adapter.dto.ValuationResp;
 import com.forex.valuation.application.command.CalculateValuationCmd;
 import com.forex.valuation.application.service.ValuationAppService;
+import com.forex.valuation.domain.model.aggregate.PnlAttribution;
 import com.forex.valuation.domain.model.aggregate.ValuationResult;
+import com.forex.valuation.domain.model.valueobject.ValuationInput;
+import com.forex.valuation.domain.model.valueobject.ValuationModelType;
+import com.forex.valuation.domain.repository.PnlAttributionRepository;
+import com.forex.valuation.domain.service.PnlAttributionService;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -28,6 +34,8 @@ import java.util.List;
 public class ValuationController {
 
     private final ValuationAppService valuationAppService;
+    private final PnlAttributionService pnlAttributionService;
+    private final PnlAttributionRepository pnlAttributionRepository;
 
     @Operation(summary = "查询交易估值记录")
     @GetMapping("/trade/{tradeId}")
@@ -51,6 +59,67 @@ public class ValuationController {
     public R<Void> recalculate(@PathVariable LocalDate date) {
         valuationAppService.recalculateAll(date);
         return R.okMsg("重算已触发");
+    }
+
+    @Operation(summary = "计算损益归因")
+    @PostMapping("/pnl/attribution")
+    public R<PnlAttributionResp> calculateAttribution(@RequestBody CalculateValuationCmd cmd) {
+        LocalDate today = cmd.getValuationDate() != null ? cmd.getValuationDate() : LocalDate.now();
+        LocalDate yesterday = today.minusDays(1);
+
+        ValuationInput todayInput = ValuationInput.builder()
+                .tradeId(cmd.getTradeId())
+                .valuationDate(today)
+                .notionalAmount(java.math.BigDecimal.valueOf(100000))
+                .spotRate(java.math.BigDecimal.valueOf(7.25))
+                .strikePrice(java.math.BigDecimal.valueOf(7.20))
+                .timeToMaturity(0.5)
+                .callPut("CALL")
+                .build();
+
+        ValuationInput yesterdayInput = ValuationInput.builder()
+                .tradeId(cmd.getTradeId())
+                .valuationDate(yesterday)
+                .notionalAmount(java.math.BigDecimal.valueOf(100000))
+                .spotRate(java.math.BigDecimal.valueOf(7.20))
+                .strikePrice(java.math.BigDecimal.valueOf(7.20))
+                .timeToMaturity(0.5 + 1.0 / 365.0)
+                .callPut("CALL")
+                .build();
+
+        PnlAttribution attr = pnlAttributionService.calculateAttribution(
+                todayInput, yesterdayInput, ValuationModelType.GARMAN_KOHLHAGEN);
+        PnlAttribution saved = pnlAttributionRepository.save(attr);
+        return R.ok("归因计算成功", toPnlAttributionResp(saved));
+    }
+
+    @Operation(summary = "查询损益归因")
+    @GetMapping("/pnl/attribution/{tradeId}")
+    public R<List<PnlAttributionResp>> getAttributions(@PathVariable Long tradeId) {
+        List<PnlAttribution> attributions = pnlAttributionRepository.findByTradeId(tradeId);
+        List<PnlAttributionResp> respList = attributions.stream()
+                .map(this::toPnlAttributionResp)
+                .toList();
+        return R.ok(respList);
+    }
+
+    private PnlAttributionResp toPnlAttributionResp(PnlAttribution attr) {
+        PnlAttributionResp resp = new PnlAttributionResp();
+        resp.setId(attr.getId());
+        resp.setAttribNo(attr.getAttribNo());
+        resp.setTradeId(attr.getTradeId());
+        resp.setTradeNo(attr.getTradeNo());
+        resp.setAttribDate(attr.getAttribDate());
+        resp.setTotalPnl(attr.getTotalPnl());
+        resp.setDeltaPnl(attr.getDeltaPnl());
+        resp.setThetaPnl(attr.getThetaPnl());
+        resp.setGammaPnl(attr.getGammaPnl());
+        resp.setVegaPnl(attr.getVegaPnl());
+        resp.setCarryPnl(attr.getCarryPnl());
+        resp.setTradePnl(attr.getTradePnl());
+        resp.setTariffType(attr.getTariffType());
+        resp.setTariffValue(attr.getTariffValue());
+        return resp;
     }
 
     private ValuationResp toValuationResp(ValuationResult result) {

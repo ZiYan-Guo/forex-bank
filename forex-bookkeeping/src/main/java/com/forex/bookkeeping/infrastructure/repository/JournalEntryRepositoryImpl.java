@@ -13,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 
 import org.springframework.stereotype.Repository;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -59,6 +60,20 @@ public class JournalEntryRepositoryImpl implements JournalEntryRepository {
 
         List<JournalEntry> records = page.getRecords().stream().map(this::toDomain).toList();
         return PageResp.of(page.getTotal(), records, (int) page.getCurrent(), (int) page.getSize());
+    }
+
+    @Override
+    public BigDecimal sumByDirection(String fiscalPeriod, String direction) {
+        List<JournalEntryPO> entries = journalEntryMapper.selectByPeriodAndDirection(fiscalPeriod, direction);
+        return entries.stream()
+                .map(JournalEntryPO::getAmount)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
+
+    @Override
+    public List<JournalEntry> findByStatusAndPeriod(String status, String fiscalPeriod) {
+        List<JournalEntryPO> entries = journalEntryMapper.selectByStatusAndPeriod(status, fiscalPeriod);
+        return entries.stream().map(this::toDomain).toList();
     }
 
     private JournalEntry toDomain(JournalEntryPO po) {

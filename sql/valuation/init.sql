@@ -37,3 +37,27 @@ CREATE TABLE t_valuation_model_config (
     PRIMARY KEY (id),
     UNIQUE KEY uk_model_product (model_type, product_type)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='估值模型配置表';
+
+DROP TABLE IF EXISTS t_pnl_attribution;
+CREATE TABLE t_pnl_attribution (
+    id BIGINT NOT NULL COMMENT '主键',
+    attrib_no VARCHAR(64) NOT NULL COMMENT '归因编号',
+    trade_id BIGINT NOT NULL COMMENT '交易ID',
+    trade_no VARCHAR(64) NOT NULL COMMENT '交易编号',
+    attrib_date DATE NOT NULL COMMENT '归因日期',
+    total_pnl DECIMAL(22,6) DEFAULT 0 COMMENT '总损益',
+    delta_pnl DECIMAL(22,6) DEFAULT 0 COMMENT 'Delta损益',
+    theta_pnl DECIMAL(22,6) DEFAULT 0 COMMENT 'Theta损益',
+    gamma_pnl DECIMAL(22,6) DEFAULT 0 COMMENT 'Gamma损益',
+    vega_pnl DECIMAL(22,6) DEFAULT 0 COMMENT 'Vega损益',
+    carry_pnl DECIMAL(22,6) DEFAULT 0 COMMENT '息差损益',
+    trade_pnl DECIMAL(22,6) DEFAULT 0 COMMENT '交易操作损益',
+    tariff_type VARCHAR(30) COMMENT '归因维度类型',
+    tariff_value VARCHAR(100) COMMENT '归因维度值',
+    create_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    update_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    version INT NOT NULL DEFAULT 0,
+    deleted TINYINT NOT NULL DEFAULT 0,
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_trade_attrib_date (trade_id, attrib_date)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='损益归因表';

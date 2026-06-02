@@ -4,6 +4,7 @@ import com.forex.common.base.dto.PageResp;
 import com.forex.common.base.result.R;
 import com.forex.position.adapter.dto.PositionResp;
 import com.forex.position.application.command.PositionCmd;
+import com.forex.position.application.service.ExposureAnalysisService;
 import com.forex.position.application.service.PositionAppService;
 import com.forex.position.domain.model.aggregate.Position;
 import com.forex.position.domain.model.query.PositionQuery;
@@ -25,6 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 
 @Tag(name = "敞口管理")
 @RestController
@@ -33,6 +35,7 @@ import java.util.List;
 public class PositionController {
 
     private final PositionAppService positionAppService;
+    private final ExposureAnalysisService exposureAnalysisService;
 
     @Operation(summary = "创建头寸")
     @PostMapping("/create")
@@ -81,6 +84,40 @@ public class PositionController {
     public R<Void> checkBreach() {
         positionAppService.checkBreach();
         return R.okMsg("限额检查完成");
+    }
+
+    @Operation(summary = "多维度敞口分析")
+    @PostMapping("/analysis/multi-dim")
+    public R<ExposureAnalysisService.ExposureAnalysisResult> multiDimAnalysis(
+            @RequestBody Map<String, Object> request) {
+        LocalDate date = LocalDate.parse((String) request.get("date"));
+        @SuppressWarnings("unchecked")
+        List<String> dimensions = (List<String>) request.get("dimensions");
+        @SuppressWarnings("unchecked")
+        List<String> currencies = (List<String>) request.get("currencies");
+        ExposureAnalysisService.ExposureAnalysisResult result = exposureAnalysisService.analyze(
+                date,
+                dimensions.toArray(new String[0]),
+                currencies != null ? currencies.toArray(new String[0]) : null);
+        return R.ok(result);
+    }
+
+    @Operation(summary = "到期日阶梯分析")
+    @PostMapping("/analysis/maturity-ladder")
+    public R<ExposureAnalysisService.MaturityLadder> maturityLadder(
+            @RequestBody Map<String, Object> request) {
+        LocalDate date = LocalDate.parse((String) request.get("date"));
+        ExposureAnalysisService.MaturityLadder result = exposureAnalysisService.analyzeMaturityLadder(date);
+        return R.ok(result);
+    }
+
+    @Operation(summary = "敞口热力图")
+    @PostMapping("/analysis/heatmap")
+    public R<ExposureAnalysisService.HeatmapData> heatmap(
+            @RequestBody Map<String, Object> request) {
+        LocalDate date = LocalDate.parse((String) request.get("date"));
+        ExposureAnalysisService.HeatmapData result = exposureAnalysisService.generateHeatmap(date);
+        return R.ok(result);
     }
 
     private PositionResp toPositionResp(Position position) {

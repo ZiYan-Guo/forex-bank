@@ -4,6 +4,8 @@ import com.forex.bookkeeping.domain.model.aggregate.JournalEntry;
 import com.forex.bookkeeping.domain.model.query.JournalQuery;
 import com.forex.common.base.dto.PageResp;
 
+import java.math.BigDecimal;
+import java.util.List;
 import java.util.Optional;
 
 public interface JournalEntryRepository {
@@ -17,4 +19,8 @@ public interface JournalEntryRepository {
     Optional<JournalEntry> findByBizNo(String bizNo);
 
     PageResp<JournalEntry> pageQuery(JournalQuery query);
+
+    BigDecimal sumByDirection(String fiscalPeriod, String direction);
+
+    List<JournalEntry> findByStatusAndPeriod(String status, String fiscalPeriod);
 }

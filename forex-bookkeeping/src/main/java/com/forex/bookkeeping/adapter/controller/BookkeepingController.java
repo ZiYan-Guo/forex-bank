@@ -4,7 +4,10 @@ import com.forex.bookkeeping.adapter.dto.EntryResp;
 import com.forex.bookkeeping.application.command.CreateEntryCmd;
 import com.forex.bookkeeping.application.service.BookkeepingAppService;
 import com.forex.bookkeeping.domain.model.aggregate.JournalEntry;
+import com.forex.bookkeeping.domain.model.aggregate.MonthEndClosing;
 import com.forex.bookkeeping.domain.model.query.JournalQuery;
+import com.forex.bookkeeping.domain.service.MonthEndClosingService;
+import com.forex.bookkeeping.domain.service.RevaluationEntryService;
 import com.forex.common.base.annotation.Idempotent;
 import com.forex.common.base.annotation.RedisLock;
 import com.forex.common.base.dto.PageResp;
@@ -25,6 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 
 @Tag(name = "簿记核算")
 @RestController
@@ -33,6 +37,8 @@ import java.util.List;
 public class BookkeepingController {
 
     private final BookkeepingAppService bookkeepingAppService;
+    private final RevaluationEntryService revaluationEntryService;
+    private final MonthEndClosingService monthEndClosingService;
 
     @Operation(summary = "创建记账分录")
     @PostMapping("/entry/create")
@@ -76,6 +82,32 @@ public class BookkeepingController {
         PageResp<EntryResp> result = PageResp.of(
                 page.getTotal(), respList, page.getPageNum(), page.getPageSize());
         return R.ok(result);
+    }
+
+    @Operation(summary = "生成外币重估分录")
+    @PostMapping("/revaluation")
+    public R<List<EntryResp>> revaluation(@RequestBody Map<String, Object> request) {
+        @SuppressWarnings("unchecked")
+        List<Map<String, Object>> currencies = (List<Map<String, Object>>) request.get("currencies");
+        List<RevaluationEntryService.FxBalance> balances = currencies.stream().map(m -> {
+            RevaluationEntryService.FxBalance b = new RevaluationEntryService.FxBalance();
+            b.setCurrency((String) m.get("currency"));
+            b.setOldRate(new java.math.BigDecimal(m.get("oldRate").toString()));
+            b.setNewRate(new java.math.BigDecimal(m.get("newRate").toString()));
+            b.setBalance(new java.math.BigDecimal(m.get("balance").toString()));
+            return b;
+        }).toList();
+        List<JournalEntry> entries = revaluationEntryService.batchRevaluation(balances);
+        List<EntryResp> respList = entries.stream().map(this::toEntryResp).toList();
+        return R.ok("重估分录生成成功", respList);
+    }
+
+    @Operation(summary = "月末结账")
+    @PostMapping("/closing/month-end/{fiscalPeriod}")
+    public R<MonthEndClosing> monthEndClosing(@PathVariable String fiscalPeriod,
+                                               @RequestBody(required = false) List<RevaluationEntryService.FxBalance> balances) {
+        MonthEndClosing closing = monthEndClosingService.executeMonthEndClosing(fiscalPeriod, balances);
+        return R.ok("月末结账完成", closing);
     }
 
     @Operation(summary = "日终批量过账")

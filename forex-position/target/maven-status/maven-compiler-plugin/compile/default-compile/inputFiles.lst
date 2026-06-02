@@ -2,6 +2,7 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/adapter/controller/PositionController.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/adapter/dto/PositionResp.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/application/command/PositionCmd.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/application/service/ExposureAnalysisService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/application/service/PositionAppService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/domain/event/PositionLimitBreachEvent.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/domain/model/aggregate/Position.java

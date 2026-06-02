@@ -10,6 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -55,5 +57,14 @@ public class BookkeepingDomainService {
 
     public String generateVoucherNo(String prefix) {
         return VoucherNo.generate(prefix).getValue();
+    }
+
+    public void postEntriesForPeriod(String fiscalPeriod) {
+        List<JournalEntry> draftEntries = journalEntryRepository.findByStatusAndPeriod(
+                JournalEntry.STATUS_DRAFT, fiscalPeriod);
+        for (JournalEntry entry : draftEntries) {
+            postEntry(entry);
+        }
+        log.info("Batch posted {} draft entries for period {}", draftEntries.size(), fiscalPeriod);
     }
 }

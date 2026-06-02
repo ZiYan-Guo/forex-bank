@@ -36,4 +36,10 @@ public interface JournalEntryMapper extends BaseMapperExt<JournalEntryPO> {
             " ORDER BY create_time DESC" +
             "</script>")
     List<JournalEntryPO> pageQuery(Page<?> page, @Param("query") JournalQuery query);
+
+    @Select("SELECT * FROM t_journal_entry WHERE fiscal_period = #{fiscalPeriod} AND entry_direction = #{direction} AND deleted = 0")
+    List<JournalEntryPO> selectByPeriodAndDirection(@Param("fiscalPeriod") String fiscalPeriod, @Param("direction") String direction);
+
+    @Select("SELECT * FROM t_journal_entry WHERE entry_status = #{status} AND fiscal_period = #{fiscalPeriod} AND deleted = 0")
+    List<JournalEntryPO> selectByStatusAndPeriod(@Param("status") String status, @Param("fiscalPeriod") String fiscalPeriod);
 }
