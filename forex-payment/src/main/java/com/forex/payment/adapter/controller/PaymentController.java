@@ -12,6 +12,8 @@ import com.forex.payment.adapter.dto.SendPaymentReq;
 import com.forex.payment.application.command.CreatePaymentCmd;
 import com.forex.payment.application.command.SendPaymentCmd;
 import com.forex.payment.domain.model.dto.PaymentQuery;
+import com.forex.payment.application.service.BankCodeValidationService;
+import com.forex.payment.application.service.BatchPaymentService;
 import com.forex.payment.application.service.PaymentAppService;
 import com.forex.payment.domain.model.aggregate.CrossBorderPayment;
 
@@ -30,7 +32,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Tag(name = "跨境支付")
 @RestController
@@ -39,6 +44,8 @@ import java.util.List;
 public class PaymentController {
 
     private final PaymentAppService paymentAppService;
+    private final BatchPaymentService batchPaymentService;
+    private final BankCodeValidationService bankCodeValidationService;
 
     @Operation(summary = "创建汇出支付")
     @PostMapping("/outward")
@@ -157,6 +164,63 @@ public class PaymentController {
         cmd.setValueDate(req.getValueDate());
         cmd.setRemark(req.getRemark());
         return cmd;
+    }
+
+    @Operation(summary = "批量提交支付")
+    @PostMapping("/batch/submit")
+    public R<Map<String, Object>> batchSubmit(@RequestBody Map<String, Object> body) {
+        String channel = (String) body.get("channel");
+        @SuppressWarnings("unchecked")
+        List<Map<String, Object>> payments = (List<Map<String, Object>>) body.get("payments");
+        List<CreatePaymentCmd> commands = new ArrayList<>();
+        for (Map<String, Object> p : payments) {
+            CreatePaymentCmd cmd = new CreatePaymentCmd();
+            cmd.setCustomerId(p.get("customerId") != null
+                    ? Long.valueOf(p.get("customerId").toString()) : null);
+            cmd.setPaymentType((String) p.get("paymentType"));
+            cmd.setPayAmount(p.get("payAmount") != null
+                    ? new BigDecimal(p.get("payAmount").toString()) : null);
+            cmd.setPayCurrency((String) p.get("payCurrency"));
+            cmd.setBeneficiaryName((String) p.get("beneficiaryName"));
+            cmd.setBeneficiaryAccount((String) p.get("beneficiaryAccount"));
+            cmd.setBeneficiaryBank((String) p.get("beneficiaryBank"));
+            cmd.setBeneficiarySwift((String) p.get("beneficiarySwift"));
+            cmd.setBeneficiaryCountry((String) p.get("beneficiaryCountry"));
+            cmd.setReceivingBankCode((String) p.get("receivingBankCode"));
+            cmd.setPaymentPurpose((String) p.get("paymentPurpose"));
+            cmd.setChargeBearer((String) p.get("chargeBearer"));
+            commands.add(cmd);
+        }
+        return R.ok(Map.of("channel", channel, "successCount",
+                batchPaymentService.processBatch(commands, channel).getSuccessCount()));
+    }
+
+    @Operation(summary = "验证SWIFT/BIC代码")
+    @PostMapping("/validate/swift")
+    public R<Map<String, Object>> validateSwift(@RequestBody Map<String, String> body) {
+        String swiftCode = body.get("swiftCode");
+        boolean valid = bankCodeValidationService.validateSwiftCode(swiftCode);
+        String completed = bankCodeValidationService.autoCompleteBic(swiftCode, null);
+        return R.ok(Map.of("swiftCode", swiftCode, "valid", valid, "completed", completed != null ? completed : ""));
+    }
+
+    @Operation(summary = "验证IBAN")
+    @PostMapping("/validate/iban")
+    public R<Map<String, Object>> validateIban(@RequestBody Map<String, String> body) {
+        String iban = body.get("iban");
+        boolean valid = bankCodeValidationService.validateIban(iban);
+        return R.ok(Map.of("iban", iban, "valid", valid));
+    }
+
+    @Operation(summary = "计算渠道费用")
+    @PostMapping("/fee/calculate")
+    public R<Map<String, Object>> calculateFee(@RequestBody Map<String, Object> body) {
+        String channel = (String) body.get("channel");
+        String chargeBearer = (String) body.get("chargeBearer");
+        BigDecimal amount = body.get("amount") != null
+                ? new BigDecimal(body.get("amount").toString()) : BigDecimal.ZERO;
+        BigDecimal fee = bankCodeValidationService.calculateFee(channel, chargeBearer, amount);
+        return R.ok(Map.of("channel", channel, "chargeBearer", chargeBearer, "amount", amount, "fee", fee));
     }
 
     private PaymentResp toResp(CrossBorderPayment payment) {

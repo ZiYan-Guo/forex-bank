@@ -8,6 +8,9 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/application/command/BlacklistHitCmd.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/application/command/CreatePaymentCmd.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/application/command/SendPaymentCmd.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/application/service/BankCodeValidationService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/application/service/BatchPaymentService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/application/service/PaymentAppService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSentEvent.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSubmittedEvent.java

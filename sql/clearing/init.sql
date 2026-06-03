@@ -57,3 +57,92 @@ CREATE TABLE t_settlement_batch (
     UNIQUE KEY uk_batch_no (batch_no),
     KEY idx_batch_date_channel (batch_date, clearing_channel)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='清算批次表';
+
+DROP TABLE IF EXISTS t_confirmation_match;
+CREATE TABLE IF NOT EXISTS t_confirmation_match (
+    id BIGINT NOT NULL,
+    confirm_id VARCHAR(64) NOT NULL,
+    trade_no VARCHAR(64) NOT NULL,
+    trade_type VARCHAR(30),
+    confirm_flag VARCHAR(20) NOT NULL COMMENT 'CENTRALIZED/BILATERAL',
+    currency_pair VARCHAR(20),
+    direction VARCHAR(10),
+    amount DECIMAL(22,6),
+    rate DECIMAL(16,8),
+    value_date DATE,
+    counterparty VARCHAR(200),
+    match_status VARCHAR(30) DEFAULT 'UNMATCHED',
+    external_ref VARCHAR(64),
+    discrepancy_detail VARCHAR(500),
+    retry_count INT DEFAULT 0,
+    next_retry_at DATETIME,
+    resolution_action VARCHAR(30),
+    resolution_comment VARCHAR(500),
+    create_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    update_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    version INT NOT NULL DEFAULT 0,
+    deleted TINYINT NOT NULL DEFAULT 0,
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_confirm_id (confirm_id),
+    KEY idx_trade_no (trade_no),
+    KEY idx_match_status (match_status)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='交易确认匹配表(JR/T 0310-2025)';
+
+DROP TABLE IF EXISTS t_settlement_tracker;
+CREATE TABLE IF NOT EXISTS t_settlement_tracker (
+    id BIGINT NOT NULL,
+    tracking_id VARCHAR(64) NOT NULL,
+    payment_no VARCHAR(64),
+    instruction_no VARCHAR(64),
+    current_status VARCHAR(30) NOT NULL,
+    status_changed_at DATETIME,
+    channel VARCHAR(30),
+    gpi_status VARCHAR(100),
+    exception_reason VARCHAR(200),
+    exception_detail VARCHAR(500),
+    create_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_tracking_id (tracking_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='结算追踪表';
+
+CREATE TABLE IF NOT EXISTS t_pvp_settlement_pair (
+    id BIGINT NOT NULL,
+    pair_id VARCHAR(64) NOT NULL,
+    pay_instruction_id BIGINT NOT NULL,
+    pay_instruction_no VARCHAR(64) NOT NULL,
+    receive_instruction_id BIGINT NOT NULL,
+    receive_instruction_no VARCHAR(64) NOT NULL,
+    pay_currency VARCHAR(10) NOT NULL,
+    pay_amount DECIMAL(22,6) NOT NULL,
+    receive_currency VARCHAR(10) NOT NULL,
+    receive_amount DECIMAL(22,6) NOT NULL,
+    settlement_date DATE NOT NULL,
+    status VARCHAR(20) DEFAULT 'PAIRED',
+    failure_reason VARCHAR(500),
+    settled_at DATETIME,
+    create_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    update_time DATETIME,
+    version INT DEFAULT 0,
+    deleted TINYINT DEFAULT 0,
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_pair_id (pair_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='PVP交收对表';
+
+CREATE TABLE IF NOT EXISTS t_cls_session (
+    id BIGINT NOT NULL,
+    session_id VARCHAR(64) NOT NULL,
+    settlement_date DATE NOT NULL,
+    pay_in_window_start DATETIME,
+    pay_in_window_end DATETIME,
+    session_status VARCHAR(20) DEFAULT 'SCHEDULED',
+    total_pay_in_sum DECIMAL(22,6) DEFAULT 0,
+    total_pay_out_sum DECIMAL(22,6) DEFAULT 0,
+    net_position DECIMAL(22,6) DEFAULT 0,
+    position_json TEXT,
+    create_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    update_time DATETIME,
+    version INT DEFAULT 0,
+    deleted TINYINT DEFAULT 0,
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_session_id (session_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='CLS结算场次表';
