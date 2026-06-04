@@ -42,6 +42,11 @@ const routes: RouteRecordRaw[] = [
       { path: 'notification', name: 'Notification', component: () => import('@/views/notification/NotificationCenter.vue'), meta: { title: '通知公告', icon: 'bell' } },
       { path: 'ocr', name: 'Ocr', component: () => import('@/views/ocr/OcrUpload.vue'), meta: { title: 'OCR识别', icon: 'scan' } },
       { path: 'schedule', name: 'Schedule', component: () => import('@/views/schedule/JobManagement.vue'), meta: { title: '定时任务', icon: 'clock-circle' } },
+      { path: 'ai/prediction', name: 'AiRatePrediction', component: () => import('@/views/ai/AiRatePrediction.vue'), meta: { title: 'AI汇率预测', icon: 'rise' } },
+      { path: 'ai/risk', name: 'AiRiskDashboard', component: () => import('@/views/ai/AiRiskDashboard.vue'), meta: { title: 'AI智能风控', icon: 'safety-certificate' } },
+      { path: 'ai/chat', name: 'AiChatAssistant', component: () => import('@/views/ai/AiChatAssistant.vue'), meta: { title: 'AI智能客服', icon: 'robot' } },
+      { path: 'ai/trading', name: 'AiTradingCoPilot', component: () => import('@/views/ai/AiTradingCoPilot.vue'), meta: { title: 'AI交易助手', icon: 'assistant' } },
+      { path: 'ai/document', name: 'AiDocumentAudit', component: () => import('@/views/ai/AiDocumentAudit.vue'), meta: { title: 'AI智能审单', icon: 'file-search' } },
     ]
   }
 ]

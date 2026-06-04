@@ -1,0 +1,61 @@
+server:
+  port: 8200
+
+spring:
+  application:
+    name: forex-ai
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/forex_ai?useUnicode=true&characterEncoding=utf8mb4&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: forex123
+  redis:
+    host: localhost
+    port: 6379
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: dev
+        group: FOREX_GROUP
+      config:
+        server-addr: localhost:8848
+        namespace: dev
+        group: FOREX_GROUP
+        file-extension: yaml
+        refresh-enabled: true
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:sk-default-placeholder}
+      base-url: ${OPENAI_BASE_URL:http://localhost:11434/v1}
+      chat:
+        options:
+          model: ${AI_CHAT_MODEL:qwen2.5:7b}
+          temperature: 0.7
+
+forex:
+  ai:
+    provider: ${AI_PROVIDER:ollama}
+    default-model: ${DEFAULT_MODEL:qwen2.5:7b}
+    embedding-model: ${EMBED_MODEL:nomic-embed-text}
+    knowledge-base-path: classpath:knowledge/
+    prediction:
+      history-days: 90
+      confidence-level: 0.95
+    risk:
+      aml-threshold: 0.7
+      fuzzy-match-threshold: 0.8
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn

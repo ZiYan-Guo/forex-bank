@@ -41,6 +41,14 @@
           <a-menu-item key="/ocr">OCR识别</a-menu-item>
           <a-menu-item key="/schedule">定时任务</a-menu-item>
         </a-sub-menu>
+        <a-sub-menu key="ai" title="AI智能">
+          <template #icon><robot-outlined /></template>
+          <a-menu-item key="/ai/prediction">汇率预测</a-menu-item>
+          <a-menu-item key="/ai/risk">智能风控</a-menu-item>
+          <a-menu-item key="/ai/chat">智能客服</a-menu-item>
+          <a-menu-item key="/ai/trading">交易助手</a-menu-item>
+          <a-menu-item key="/ai/document">智能审单</a-menu-item>
+        </a-sub-menu>
       </a-menu>
     </a-layout-sider>
     <a-layout>
