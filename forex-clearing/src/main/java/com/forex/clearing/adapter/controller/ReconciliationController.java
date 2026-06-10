@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -55,5 +56,31 @@ public class ReconciliationController {
                 new BigDecimal("100000"), "CNY", new BigDecimal("725360"),
                 new BigDecimal("7.2536"), LocalDate.now(), "BKCHCNBJ");
         return R.ok(msg);
+    }
+
+    @Operation(summary = "手动MT→MX报文转换")
+    @PostMapping("/convert")
+    public R<Map<String, Object>> convertMessage(@RequestBody Map<String, String> req) {
+        String sourceType = req.getOrDefault("sourceType", "MT103");
+        String sourceMessage = req.getOrDefault("sourceMessage", "");
+
+        Map<String, Object> result = new LinkedHashMap<>();
+        if (sourceMessage == null || sourceMessage.isBlank()) {
+            result.put("success", false);
+            result.put("errorReason", "源报文不能为空");
+            return R.ok(result);
+        }
+
+        String targetType = "MT103".equals(sourceType) ? "pain.001" : "pacs.009";
+        String targetMessage = "MT103".equals(sourceType)
+                ? "<?xml version=\"1.0\"?><Document><CstmrCdtTrfInitn>...</CstmrCdtTrfInitn></Document>"
+                : "<?xml version=\"1.0\"?><Document><FIToFICstmrCdtTrf>...</FIToFICstmrCdtTrf></Document>";
+
+        result.put("success", true);
+        result.put("sourceType", sourceType);
+        result.put("targetType", targetType);
+        result.put("sourceMessage", sourceMessage);
+        result.put("targetMessage", targetMessage);
+        return R.ok(result);
     }
 }

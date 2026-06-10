@@ -75,7 +75,12 @@ public class SwiftMessageGenerator {
      */
     public String generatePacs008(String msgId, String debtorName, String debtorAcct,
                                    String creditorName, String creditorAcct, String creditorBic,
-                                   String currency, BigDecimal amount, String remittanceInfo) {
+                                   String currency, BigDecimal amount, String remittanceInfo,
+                                   String debtorCountry, String debtorCity, String debtorStreet,
+                                   String creditorCountry, String creditorCity, String creditorStreet) {
+        String creationTime = LocalDateTime.now().toString();
+        String debtorPstlAdr = generatePostalAddress(debtorCountry, debtorCity, debtorStreet);
+        String creditorPstlAdr = generatePostalAddress(creditorCountry, creditorCity, creditorStreet);
         String xml = String.format("""
             <?xml version="1.0" encoding="UTF-8"?>
             <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.08">
@@ -88,18 +93,41 @@ public class SwiftMessageGenerator {
                 <CdtTrfTxInf>
                   <PmtId><EndToEndId>%s</EndToEndId></PmtId>
                   <IntrBkSttlmAmt Ccy="%s">%s</IntrBkSttlmAmt>
-                  <Dbtr><Nm>%s</Nm></Dbtr>
+                  <Dbtr><Nm>%s</Nm>%s</Dbtr>
                   <DbtrAcct><Id><Othr><Id>%s</Id></Othr></Id></DbtrAcct>
-                  <Cdtr><Nm>%s</Nm></Cdtr>
+                  <Cdtr><Nm>%s</Nm>%s</Cdtr>
                   <CdtrAcct><Id><Othr><Id>%s</Id></Othr></Id></CdtrAcct>
                   <CdtrAgt><FinInstnId><BICFI>%s</BICFI></FinInstnId></CdtrAgt>
                   <RmtInf><Ustrd>%s</Ustrd>
                 </CdtTrfTxInf>
               </FIToFICstmrCdtTrf>
             </Document>""",
-            msgId, LocalDateTime.now(), msgId, currency, amount.toPlainString(),
-            debtorName, debtorAcct, creditorName, creditorAcct, creditorBic, remittanceInfo);
+            msgId, creationTime, msgId, currency, amount.toPlainString(),
+            debtorName, debtorPstlAdr, debtorAcct,
+            creditorName, creditorPstlAdr, creditorAcct, creditorBic, remittanceInfo);
         log.info("Generated pacs.008 for msgId: {}", msgId);
         return xml;
+    }
+
+    private String generatePostalAddress(String country, String city, String street) {
+        if ((country == null || country.isBlank()) && (city == null || city.isBlank())) {
+            return "";
+        }
+        StringBuilder xml = new StringBuilder("<PstlAdr>");
+        if (country != null && !country.isBlank()) {
+            xml.append("<Ctry>").append(country).append("</Ctry>");
+        }
+        if (city != null && !city.isBlank()) {
+            xml.append("<TwnNm>").append(city).append("</TwnNm>");
+        }
+        String adrLine = (street != null && !street.isBlank()) ? street : "";
+        if (country != null && !country.isBlank()) {
+            adrLine = country + ", " + city + (street != null && !street.isBlank() ? ", " + street : "");
+        }
+        if (!adrLine.isEmpty() && adrLine.length() <= 70) {
+            xml.append("<AdrLine>").append(adrLine).append("</AdrLine>");
+        }
+        xml.append("</PstlAdr>");
+        return xml.toString();
     }
 }

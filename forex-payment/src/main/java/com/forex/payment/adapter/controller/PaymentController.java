@@ -34,6 +34,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -222,6 +223,23 @@ public class PaymentController {
         BigDecimal fee = bankCodeValidationService.calculateFee(channel, chargeBearer, amount);
         return R.ok(Map.of("channel", channel, "chargeBearer", chargeBearer, "amount", amount, "fee", fee));
     }
+
+    @Operation(summary = "校验结构化地址")
+    @PostMapping("/validate/address")
+    public R<Map<String, Object>> validateAddress(@RequestBody Map<String, String> req) {
+        List<String> missing = new ArrayList<>();
+        if (isBlank(req.get("country"))) missing.add("country");
+        if (isBlank(req.get("city"))) missing.add("city");
+        if (isBlank(req.get("streetName")) && isBlank(req.get("buildingNumber"))) missing.add("streetOrBuilding");
+
+        Map<String, Object> result = new LinkedHashMap<>();
+        result.put("valid", missing.isEmpty());
+        result.put("missingFields", missing);
+        result.put("message", missing.isEmpty() ? "地址校验通过" : "缺少必要字段: " + String.join(", ", missing));
+        return R.ok(result);
+    }
+
+    private boolean isBlank(String s) { return s == null || s.isBlank(); }
 
     private PaymentResp toResp(CrossBorderPayment payment) {
         PaymentResp resp = new PaymentResp();

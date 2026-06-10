@@ -49,6 +49,65 @@
               <a-select-option value="AU">澳大利亚</a-select-option>
             </a-select>
           </a-form-item>
+          <!-- Structured Address per ISO 20022 -->
+          <a-row :gutter="16">
+            <a-col :span="12">
+              <a-form-item label="国家/地区" name="beneficiaryCountry" :rules="[{required:true, message:'必填'}]">
+                <a-select v-model:value="form.beneficiaryCountry" placeholder="选择国家">
+                  <a-select-option value="CN">中国 China</a-select-option>
+                  <a-select-option value="US">美国 United States</a-select-option>
+                  <a-select-option value="GB">英国 United Kingdom</a-select-option>
+                  <a-select-option value="JP">日本 Japan</a-select-option>
+                  <a-select-option value="HK">中国香港 Hong Kong</a-select-option>
+                  <a-select-option value="SG">新加坡 Singapore</a-select-option>
+                  <a-select-option value="DE">德国 Germany</a-select-option>
+                  <a-select-option value="FR">法国 France</a-select-option>
+                  <a-select-option value="AU">澳大利亚 Australia</a-select-option>
+                </a-select>
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="邮编" name="beneficiaryPostCode">
+                <a-input v-model:value="form.beneficiaryPostCode" placeholder="100080" />
+              </a-form-item>
+            </a-col>
+          </a-row>
+          <a-row :gutter="16">
+            <a-col :span="12">
+              <a-form-item label="省/州" name="beneficiaryProvince">
+                <a-input v-model:value="form.beneficiaryProvince" placeholder="Beijing" />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="城市" name="beneficiaryCity" :rules="[{required:true, message:'必填'}]">
+                <a-input v-model:value="form.beneficiaryCity" placeholder="Shanghai" />
+              </a-form-item>
+            </a-col>
+          </a-row>
+          <a-row :gutter="16">
+            <a-col :span="16">
+              <a-form-item label="街道" name="beneficiaryStreet">
+                <a-input v-model:value="form.beneficiaryStreet" placeholder="Nanjing Road" />
+              </a-form-item>
+            </a-col>
+            <a-col :span="8">
+              <a-form-item label="门牌号" name="beneficiaryBuildingNo">
+                <a-input v-model:value="form.beneficiaryBuildingNo" placeholder="100号" />
+              </a-form-item>
+            </a-col>
+          </a-row>
+          <a-row :gutter="16">
+            <a-col :span="12">
+              <a-form-item label="建筑物名称" name="beneficiaryBuildingName">
+                <a-input v-model:value="form.beneficiaryBuildingName" placeholder="可选" />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-tag color="blue" style="margin-top:32px">
+                符合 ISO 20022 结构化地址要求 (2026年11月强制)
+              </a-form-tag>
+            </a-col>
+          </a-row>
         </a-form>
 
         <!-- Step 3: 款项信息 -->
@@ -212,6 +271,16 @@ const step = ref(0)
 const submitting = ref(false)
 const loading = ref(false)
 
+const form = reactive({
+  beneficiaryCountry: 'CN',
+  beneficiaryPostCode: '',
+  beneficiaryProvince: '',
+  beneficiaryCity: '',
+  beneficiaryStreet: '',
+  beneficiaryBuildingNo: '',
+  beneficiaryBuildingName: '',
+})
+
 const outwardForm = reactive({
   senderName: '',
   senderAccount: '',
@@ -225,7 +294,14 @@ const outwardForm = reactive({
   amount: null as number | null,
   purpose: '',
   chargeBearer: undefined as string | undefined,
-  valueDate: undefined as string | undefined
+  valueDate: undefined as string | undefined,
+  beneficiaryCountry: 'CN',
+  beneficiaryProvince: '',
+  beneficiaryCity: '',
+  beneficiaryStreet: '',
+  beneficiaryBuildingNo: '',
+  beneficiaryBuildingName: '',
+  beneficiaryPostCode: '',
 })
 
 const inwardForm = reactive({

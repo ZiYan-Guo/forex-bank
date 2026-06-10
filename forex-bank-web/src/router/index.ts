@@ -38,6 +38,7 @@ const routes: RouteRecordRaw[] = [
       { path: 'clearing/confirmation', name: 'ConfirmationBoard', component: () => import('@/views/clearing/ConfirmationBoard.vue'), meta: { title: '确认匹配看板', icon: 'check-square' } },
       { path: 'clearing/tracker', name: 'SettlementTracker', component: () => import('@/views/clearing/SettlementTracker.vue'), meta: { title: '结算追踪', icon: 'radar-chart' } },
       { path: 'clearing/dashboard', name: 'SettlementDashboard', component: () => import('@/views/clearing/SettlementDashboard.vue'), meta: { title: '结算仪表板', icon: 'dashboard' } },
+      { path: 'clearing/conversion-log', name: 'ConversionLog', component: () => import('@/views/clearing/ConversionLog.vue'), meta: { title: '报文转换日志', icon: 'swap' } },
       { path: 'workflow', name: 'Workflow', component: () => import('@/views/workflow/WorkflowList.vue'), meta: { title: '工作流', icon: 'apartment' } },
       { path: 'notification', name: 'Notification', component: () => import('@/views/notification/NotificationCenter.vue'), meta: { title: '通知公告', icon: 'bell' } },
       { path: 'ocr', name: 'Ocr', component: () => import('@/views/ocr/OcrUpload.vue'), meta: { title: 'OCR识别', icon: 'scan' } },

@@ -9,6 +9,7 @@ com/forex/payment/application/service/BankCodeValidationService.class
 com/forex/payment/infrastructure/repository/PaymentRepositoryImpl.class
 com/forex/payment/adapter/dto/AmlCheckReq.class
 com/forex/payment/domain/model/aggregate/CrossBorderPayment.class
+com/forex/payment/domain/model/valueobject/PostalAddress.class
 com/forex/payment/domain/service/PaymentDomainService.class
 com/forex/payment/adapter/dto/GpiUpdateReq.class
 com/forex/payment/domain/model/entity/BlacklistHit.class

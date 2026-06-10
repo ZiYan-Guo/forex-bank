@@ -1,3 +1,4 @@
+com/forex/customer/application/service/AddressCleansingService.class
 com/forex/customer/domain/model/entity/CustomerQuota.class
 com/forex/customer/domain/repository/CreditLimitRepository.class
 com/forex/customer/domain/model/valueobject/RiskLevel.class

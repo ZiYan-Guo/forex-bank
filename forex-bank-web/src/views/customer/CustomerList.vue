@@ -45,6 +45,11 @@
           <template v-else-if="column.key === 'riskLevel'">
             <a-tag :color="RiskLevelMap[record.riskLevel]?.color">{{ RiskLevelMap[record.riskLevel]?.label }}</a-tag>
           </template>
+          <template v-else-if="column.key === 'addressStatus'">
+            <a-tag :color="record.addressStatus === 'STRUCTURED' ? '#52c41a' : '#fa8c16'">
+              {{ record.addressStatus === 'STRUCTURED' ? '已结构化' : '待补录' }}
+            </a-tag>
+          </template>
           <template v-else-if="column.key === 'status'">
             <a-tag :color="record.status === 'ACTIVE' ? '#52c41a' : '#8c8c8c'">{{ record.status === 'ACTIVE' ? '正常' : '禁用' }}</a-tag>
           </template>
@@ -146,6 +151,8 @@ const columns = [
   { title: '客户类型', dataIndex: 'customerType', key: 'customerType' },
   { title: '证件号码', dataIndex: 'certNo', key: 'certNo' },
   { title: '风险等级', dataIndex: 'riskLevel', key: 'riskLevel' },
+  { title: '地址', dataIndex: 'address', key: 'address' },
+  { title: '地址状态', dataIndex: 'addressStatus', key: 'addressStatus' },
   { title: '状态', dataIndex: 'status', key: 'status' },
   { title: '操作', key: 'operation', width: 240 }
 ]

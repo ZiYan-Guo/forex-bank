@@ -1,3 +1,4 @@
+com/forex/clearing/application/service/MtMxConverter.class
 com/forex/clearing/infrastructure/persistence/ClearingInstructionPO.class
 com/forex/clearing/domain/repository/SettlementBatchRepository.class
 com/forex/clearing/adapter/controller/RouteController.class
@@ -48,6 +49,7 @@ com/forex/clearing/infrastructure/persistence/ClsSessionPO.class
 com/forex/clearing/domain/model/valueobject/ConfirmationFlag.class
 com/forex/clearing/domain/model/valueobject/SettlementRoute.class
 com/forex/clearing/domain/event/InstructionSentEvent.class
+com/forex/clearing/application/service/MtMxConverter$ConversionResult.class
 com/forex/clearing/application/dto/ReconciliationResult.class
 com/forex/clearing/domain/repository/ClearingInstructionRepository.class
 com/forex/clearing/application/service/SettlementTrackerService.class

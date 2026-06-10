@@ -12,11 +12,11 @@ public class BeneficiaryInfo extends BaseValueObject {
     private final String accountNo;
     private final String bankName;
     private final String bankSwiftCode;
-    private final String address;
+    private final PostalAddress postalAddress;
     private final String country;
 
     private BeneficiaryInfo(String name, String accountNo, String bankName,
-                            String bankSwiftCode, String address, String country) {
+                            String bankSwiftCode, PostalAddress postalAddress, String country) {
         if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("收款人名称不能为空");
         }
@@ -27,13 +27,17 @@ public class BeneficiaryInfo extends BaseValueObject {
         this.accountNo = accountNo;
         this.bankName = bankName;
         this.bankSwiftCode = bankSwiftCode;
-        this.address = address;
+        this.postalAddress = postalAddress;
         this.country = country;
     }
 
     public static BeneficiaryInfo of(String name, String accountNo, String bankName,
-                                      String bankSwiftCode, String address, String country) {
-        return new BeneficiaryInfo(name, accountNo, bankName, bankSwiftCode, address, country);
+                                      String bankSwiftCode, PostalAddress postalAddress, String country) {
+        return new BeneficiaryInfo(name, accountNo, bankName, bankSwiftCode, postalAddress, country);
+    }
+
+    public String getAddressLine() {
+        return postalAddress != null ? postalAddress.toUnstructured() : null;
     }
 
     @Override
@@ -44,13 +48,13 @@ public class BeneficiaryInfo extends BaseValueObject {
                 && Objects.equals(accountNo, that.accountNo)
                 && Objects.equals(bankName, that.bankName)
                 && Objects.equals(bankSwiftCode, that.bankSwiftCode)
-                && Objects.equals(address, that.address)
+                && Objects.equals(postalAddress, that.postalAddress)
                 && Objects.equals(country, that.country);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, accountNo, bankName, bankSwiftCode, address, country);
+        return Objects.hash(name, accountNo, bankName, bankSwiftCode, postalAddress, country);
     }
 
     @Override

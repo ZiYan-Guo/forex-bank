@@ -95,3 +95,15 @@ CREATE TABLE t_payment_reconciliation (
     KEY idx_reconciliation_status (reconciliation_status),
     KEY idx_transaction_ref (transaction_ref)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='支付对账表';
+
+DROP TABLE IF EXISTS t_mt_mx_conversion_log;
+CREATE TABLE IF NOT EXISTS t_mt_mx_conversion_log (
+    id BIGINT NOT NULL, log_no VARCHAR(64) NOT NULL,
+    source_type VARCHAR(20) NOT NULL COMMENT 'MT103/MT202',
+    target_type VARCHAR(20) NOT NULL COMMENT 'pain.001/pacs.009',
+    source_message TEXT, target_message TEXT,
+    conversion_status VARCHAR(20) COMMENT 'SUCCESS/FAILED',
+    error_reason VARCHAR(500), operator_id BIGINT,
+    create_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id), UNIQUE KEY uk_log_no (log_no), KEY idx_create_time (create_time)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='MT↔MX转换日志表';

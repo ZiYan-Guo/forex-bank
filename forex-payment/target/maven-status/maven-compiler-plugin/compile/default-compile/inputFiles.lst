@@ -21,6 +21,7 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/BeneficiaryInfo.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PaymentAmount.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PaymentNo.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PostalAddress.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/SwiftCode.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/domain/repository/BlacklistHitRepository.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/domain/repository/PaymentRepository.java
