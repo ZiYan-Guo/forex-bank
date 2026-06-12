@@ -1,4 +1,5 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/ClearingApplication.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ClearingController.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ConfirmationController.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/adapter/controller/PvpController.java
@@ -11,6 +12,8 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/application/dto/TradeConfirmation.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/application/service/AutomatedConfirmationService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/application/service/CipsMessageGenerator.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/application/service/CipsRoutingService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/application/service/ClearingAppService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/application/service/ConfirmationWorkflowService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/src/main/java/com/forex/clearing/application/service/MtMxConverter.java

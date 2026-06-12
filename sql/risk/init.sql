@@ -89,6 +89,30 @@ CREATE TABLE IF NOT EXISTS t_risk_param_config (
     UNIQUE KEY uk_param_key_ccy (param_key, currency)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='风控参数配置表';
 
+-- ============================================
+-- 资本项目便利化抽查规则表
+-- Capital Account Facilitation Sampling Rules
+-- ============================================
+CREATE TABLE IF NOT EXISTS t_sampling_rule (
+    id BIGINT NOT NULL, rule_code VARCHAR(50) NOT NULL COMMENT 'Rule Code 规则编码',
+    rule_name VARCHAR(200) NOT NULL COMMENT 'Rule Name 规则名称',
+    condition_json TEXT COMMENT 'Rule Condition JSON 规则条件',
+    sampling_rate DECIMAL(5,2) NOT NULL DEFAULT 10 COMMENT 'Sampling Rate % 抽查比例',
+    target_module VARCHAR(30) COMMENT 'Target Business Module 目标业务模块',
+    effective_date DATE COMMENT '生效日期', expire_date DATE COMMENT '失效日期',
+    priority INT DEFAULT 0, status VARCHAR(20) DEFAULT 'ACTIVE',
+    is_auto_extract TINYINT DEFAULT 1 COMMENT '是否自动提取样本',
+    create_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    update_time DATETIME, version INT DEFAULT 0, deleted TINYINT DEFAULT 0,
+    PRIMARY KEY (id), UNIQUE KEY uk_rule_code (rule_code)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Capital Account Facilitation Sampling Rules 资本项目便利化抽查规则表';
+
+-- Seed sampling rules 种子抽查规则
+INSERT INTO t_sampling_rule (id, rule_code, rule_name, condition_json, sampling_rate, target_module, effective_date, status) VALUES
+(1, 'SMP_HIGH_AMT', 'High Amount Transaction 大额交易', '{"minAmount":500000,"currency":"USD"}', 50.00, 'FX_PAYMENT', '2026-01-01', 'ACTIVE'),
+(2, 'SMP_HIGH_RISK', 'High Risk Country 高风险国家', '{"countries":["IR","KP","MM"]}', 100.00, 'FX_PAYMENT', '2026-01-01', 'ACTIVE'),
+(3, 'SMP_NEW_CUSTOMER', 'New Customer Transaction 新客户交易', '{"maxAccountAge":30}', 30.00, 'FX_EXCHANGE', '2026-01-01', 'ACTIVE');
+
 -- Seed data
 INSERT INTO t_risk_param_config (id, param_key, param_value, param_type, currency, is_enabled) VALUES
 (1, 'position.limit.overall', '10000000', 'POSITION_LIMIT', 'USD', 1),

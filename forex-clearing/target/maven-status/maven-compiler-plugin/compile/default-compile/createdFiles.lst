@@ -1,4 +1,5 @@
 com/forex/clearing/application/service/MtMxConverter.class
+com/forex/clearing/application/service/CipsMessageGenerator.class
 com/forex/clearing/infrastructure/persistence/ClearingInstructionPO.class
 com/forex/clearing/domain/repository/SettlementBatchRepository.class
 com/forex/clearing/adapter/controller/RouteController.class
@@ -29,6 +30,7 @@ com/forex/clearing/application/dto/TradeConfirmation.class
 com/forex/clearing/domain/service/ClsSessionService.class
 com/forex/clearing/adapter/controller/PvpController.class
 com/forex/clearing/infrastructure/repository/ClsSessionRepositoryImpl.class
+com/forex/clearing/application/service/CipsRoutingService.class
 com/forex/clearing/application/service/AutomatedConfirmationService.class
 com/forex/clearing/adapter/controller/ClearingController.class
 com/forex/clearing/domain/repository/ClsSessionRepository.class
@@ -42,6 +44,7 @@ com/forex/clearing/domain/model/valueobject/ClearingAmount.class
 com/forex/clearing/domain/model/query/ClearingQuery.class
 com/forex/clearing/infrastructure/mapper/SettlementTrackerMapper.class
 com/forex/clearing/domain/service/PvpSettlementService.class
+com/forex/clearing/adapter/controller/CipsController.class
 com/forex/clearing/infrastructure/repository/SettlementBatchRepositoryImpl.class
 com/forex/clearing/application/service/ConfirmationWorkflowService.class
 com/forex/clearing/infrastructure/repository/ClearingInstructionRepositoryImpl.class

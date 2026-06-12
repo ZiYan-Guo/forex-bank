@@ -1,5 +1,6 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/PaymentApplication.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentTemplateController.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/adapter/dto/AmlCheckReq.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/adapter/dto/CreatePaymentReq.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/adapter/dto/GpiUpdateReq.java
@@ -18,6 +19,7 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/domain/model/dto/PaymentQuery.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/domain/model/entity/BlacklistHit.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/domain/model/entity/PaymentReconciliation.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/domain/model/entity/PaymentTemplate.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/BeneficiaryInfo.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PaymentAmount.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PaymentNo.java

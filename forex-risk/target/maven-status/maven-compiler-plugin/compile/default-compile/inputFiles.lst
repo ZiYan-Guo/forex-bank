@@ -1,15 +1,18 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/RiskApplication.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/adapter/controller/RiskController.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/adapter/dto/RiskLogResp.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/adapter/dto/RiskReportResp.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/application/command/EvaluateCmd.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/application/command/GenerateReportCmd.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/application/service/RiskAppService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/domain/event/RiskAlertEvent.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/domain/model/aggregate/RiskMonitorLog.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/domain/model/entity/MonitorRule.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/domain/model/entity/RiskParamConfig.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/domain/model/entity/RiskReport.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/domain/model/entity/SamplingRule.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/domain/model/query/RiskQuery.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java
@@ -18,6 +21,7 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/domain/repository/RiskMonitorLogRepository.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/domain/repository/RiskParamConfigRepository.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/domain/repository/RiskReportRepository.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/domain/service/RiskDomainService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/infrastructure/config/RocketMqConsumerConfig.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/infrastructure/event/RiskEventListener.java

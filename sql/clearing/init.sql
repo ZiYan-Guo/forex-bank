@@ -146,3 +146,26 @@ CREATE TABLE IF NOT EXISTS t_cls_session (
     PRIMARY KEY (id),
     UNIQUE KEY uk_session_id (session_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='CLS结算场次表';
+
+CREATE TABLE IF NOT EXISTS t_cips_routing_config (
+    id BIGINT NOT NULL, bic_code VARCHAR(11) NOT NULL COMMENT 'BIC/SWIFT Code',
+    cips_id VARCHAR(20) NOT NULL COMMENT 'CIPS Participant ID',
+    bank_name VARCHAR(200) NOT NULL COMMENT 'Bank Name 银行名称',
+    participant_type VARCHAR(20) DEFAULT 'DIRECT' COMMENT 'DIRECT=直接参与 INDIRECT=间接参与',
+    status TINYINT DEFAULT 1 COMMENT '1=Active 启用 0=Inactive 停用',
+    create_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    update_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    version INT DEFAULT 0, deleted TINYINT DEFAULT 0,
+    PRIMARY KEY (id), UNIQUE KEY uk_bic_code (bic_code)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='CIPS Routing Configuration CIPS路由配置表';
+
+-- Seed CIPS participant data 种子数据
+INSERT INTO t_cips_routing_config (id, bic_code, cips_id, bank_name, participant_type) VALUES
+(1, 'BKCHCNBJ', 'CIPS00001', 'Bank of China 中国银行', 'DIRECT'),
+(2, 'ICBKCNBJ', 'CIPS00002', 'Industrial and Commercial Bank of China 工商银行', 'DIRECT'),
+(3, 'ABOCCNBJ', 'CIPS00003', 'Agricultural Bank of China 农业银行', 'DIRECT'),
+(4, 'MSBCCNBJ', 'CIPS00004', 'China Construction Bank 建设银行', 'DIRECT'),
+(5, 'PCBCCNBJ', 'CIPS00005', 'China Postal Savings Bank 邮储银行', 'INDIRECT'),
+(6, 'BOFACN3X', 'CIPS00010', 'Bank of America 美国银行', 'INDIRECT'),
+(7, 'CITICNSX', 'CIPS00011', 'CITIC Bank 中信银行', 'DIRECT'),
+(8, 'HSBCCNSH', 'CIPS00012', 'HSBC China 汇丰中国', 'DIRECT');

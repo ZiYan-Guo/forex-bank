@@ -1,3 +1,4 @@
+com/forex/payment/domain/model/entity/PaymentTemplate.class
 com/forex/payment/infrastructure/mapper/BlacklistHitMapper.class
 com/forex/payment/infrastructure/persistence/CrossBorderPaymentPO.class
 com/forex/payment/domain/repository/PaymentRepository.class
@@ -26,6 +27,7 @@ com/forex/payment/application/command/BlacklistHitCmd.class
 com/forex/payment/domain/model/entity/PaymentReconciliation.class
 com/forex/payment/application/service/BatchResult.class
 com/forex/payment/domain/model/valueobject/PaymentAmount.class
+com/forex/payment/adapter/controller/PaymentTemplateController.class
 com/forex/payment/domain/model/valueobject/PaymentNo.class
 com/forex/payment/application/command/SendPaymentCmd.class
 com/forex/payment/application/service/PaymentAppService.class

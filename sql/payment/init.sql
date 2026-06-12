@@ -96,6 +96,30 @@ CREATE TABLE t_payment_reconciliation (
     KEY idx_transaction_ref (transaction_ref)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='支付对账表';
 
+-- ============================================
+-- 跨境支付场景模板表
+-- Cross-border Payment Scenario Templates
+-- ============================================
+CREATE TABLE IF NOT EXISTS t_payment_template (
+    id BIGINT NOT NULL, template_code VARCHAR(50) NOT NULL COMMENT 'Template Code 模板编码',
+    template_name VARCHAR(200) NOT NULL COMMENT 'Template Name 模板名称',
+    scenario_type VARCHAR(30) NOT NULL COMMENT 'Scenario Type 场景类型: STUDY_ABROAD/TRAVEL_DEPOSIT/MEDICAL_EXPENSE/CUSTOM',
+    payment_direction VARCHAR(10) DEFAULT 'OUTWARD', default_pay_currency VARCHAR(10),
+    default_beneficiary_country VARCHAR(10), beneficiary_details TEXT COMMENT 'Pre-filled Beneficiary JSON 预填受益人信息',
+    default_purpose TEXT, default_purpose_code VARCHAR(20),
+    usage_instructions TEXT, sort_order INT DEFAULT 0,
+    is_public TINYINT DEFAULT 0, owner_customer_id BIGINT,
+    create_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    update_time DATETIME, version INT DEFAULT 0, deleted TINYINT DEFAULT 0,
+    PRIMARY KEY (id), UNIQUE KEY uk_template_code (template_code)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Cross-border Payment Scenario Templates 跨境支付场景模板表';
+
+-- Seed scenario templates 种子场景模板
+INSERT INTO t_payment_template (id, template_code, template_name, scenario_type, default_pay_currency, default_purpose, is_public) VALUES
+(1, 'TPL_STUDY_001', 'Study Abroad - US Tuition 美国留学学费', 'STUDY_ABROAD', 'USD', 'OVERSEAS STUDY TUITION PAYMENT', 1),
+(2, 'TPL_TRAVEL_001', 'Travel Deposit - Thailand 泰国旅游保证金', 'TRAVEL_DEPOSIT', 'CNY', 'TRAVEL SECURITY DEPOSIT', 1),
+(3, 'TPL_MEDICAL_001', 'Overseas Medical Expense 境外医疗费用', 'MEDICAL_EXPENSE', 'JPY', 'OVERSEAS MEDICAL TREATMENT EXPENSE', 1);
+
 DROP TABLE IF EXISTS t_mt_mx_conversion_log;
 CREATE TABLE IF NOT EXISTS t_mt_mx_conversion_log (
     id BIGINT NOT NULL, log_no VARCHAR(64) NOT NULL,
