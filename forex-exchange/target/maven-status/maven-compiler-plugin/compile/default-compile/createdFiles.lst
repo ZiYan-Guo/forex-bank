@@ -8,6 +8,7 @@ com/forex/exchange/ExchangeApplication.class
 com/forex/exchange/domain/model/valueobject/Money.class
 com/forex/exchange/domain/repository/ExchangeOrderRepository.class
 com/forex/exchange/domain/model/entity/ExchangeQuote.class
+com/forex/exchange/application/service/EnterpriseQuoteService.class
 com/forex/exchange/infrastructure/persistence/ExchangeQuotePO.class
 com/forex/exchange/domain/repository/ExchangeQuoteRepository.class
 com/forex/exchange/adapter/dto/QuoteResp.class

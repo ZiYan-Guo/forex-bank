@@ -8,6 +8,7 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-exchange/src/main/java/com/forex/exchange/adapter/dto/RateLockReq.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-exchange/src/main/java/com/forex/exchange/application/command/CancelOrderCmd.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-exchange/src/main/java/com/forex/exchange/application/command/CreateOrderCmd.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-exchange/src/main/java/com/forex/exchange/application/service/EnterpriseQuoteService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-exchange/src/main/java/com/forex/exchange/domain/event/OrderCancelledEvent.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-exchange/src/main/java/com/forex/exchange/domain/event/OrderConfirmedEvent.java

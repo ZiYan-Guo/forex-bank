@@ -18,6 +18,8 @@ com/forex/trading/domain/model/query/TradeQuery.class
 com/forex/trading/domain/event/TradeExecutedEvent.class
 com/forex/trading/infrastructure/repository/FxTradeRepositoryImpl.class
 com/forex/trading/infrastructure/mapper/TradeLifecycleMapper.class
+com/forex/trading/domain/model/enums/TradeStatus.class
+com/forex/trading/application/service/OptionStrategyService.class
 com/forex/trading/domain/event/TradeSettledEvent.class
 com/forex/trading/domain/service/TradeDomainService.class
 com/forex/trading/application/service/TradingAppService.class
