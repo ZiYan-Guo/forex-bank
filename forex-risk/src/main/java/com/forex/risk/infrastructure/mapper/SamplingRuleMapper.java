@@ -10,6 +10,10 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
+/**
+ * Sampling rule MyBatis mapper.
+ * 抽查规则数据访问层。
+ */
 @Mapper
 public interface SamplingRuleMapper extends BaseMapper<SamplingRulePO> {
 

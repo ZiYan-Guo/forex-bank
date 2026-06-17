@@ -6,12 +6,18 @@ import com.forex.payment.infrastructure.mapper.PaymentReconciliationMapper;
 import com.forex.payment.infrastructure.persistence.PaymentReconciliationPO;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 import java.util.List;
 
+/**
+ * Payment reconciliation repository implementation.
+ * 支付对账仓储实现。
+ */
+@Slf4j
 @Repository
 @RequiredArgsConstructor
 public class ReconciliationRepositoryImpl implements ReconciliationRepository {
@@ -23,8 +29,10 @@ public class ReconciliationRepositoryImpl implements ReconciliationRepository {
         PaymentReconciliationPO po = toPO(rec);
         if (rec.getId() == null) {
             paymentReconciliationMapper.insert(po);
+            log.info("Reconciliation record created: transactionRef={}, status={}", po.getTransactionRef(), po.getReconciliationStatus());
         } else {
             paymentReconciliationMapper.updateById(po);
+            log.info("Reconciliation record updated: id={}, status={}", po.getId(), po.getReconciliationStatus());
         }
         return toDomain(po);
     }

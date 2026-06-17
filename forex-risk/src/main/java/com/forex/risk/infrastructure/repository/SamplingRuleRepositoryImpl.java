@@ -6,12 +6,18 @@ import com.forex.risk.infrastructure.mapper.SamplingRuleMapper;
 import com.forex.risk.infrastructure.persistence.SamplingRulePO;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Sampling rule repository implementation.
+ * 抽查规则仓储实现。
+ */
+@Slf4j
 @Repository
 @RequiredArgsConstructor
 public class SamplingRuleRepositoryImpl implements SamplingRuleRepository {
@@ -23,8 +29,10 @@ public class SamplingRuleRepositoryImpl implements SamplingRuleRepository {
         SamplingRulePO po = toPO(rule);
         if (rule.getId() == null) {
             samplingRuleMapper.insert(po);
+            log.info("Sampling rule created: ruleCode={}, ruleName={}, rate={}%", po.getRuleCode(), po.getRuleName(), po.getSamplingRate());
         } else {
             samplingRuleMapper.updateById(po);
+            log.info("Sampling rule updated: id={}, ruleCode={}", po.getId(), po.getRuleCode());
         }
         return toDomain(po);
     }

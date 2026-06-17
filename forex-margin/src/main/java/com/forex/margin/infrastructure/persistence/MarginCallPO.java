@@ -9,6 +9,10 @@ import lombok.Data;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+/**
+ * Margin call persistent object.
+ * 保证金追缴持久化对象。
+ */
 @Data
 @TableName("t_margin_call")
 public class MarginCallPO {

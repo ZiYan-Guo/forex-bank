@@ -6,12 +6,18 @@ import com.forex.risk.infrastructure.mapper.MonitorRuleMapper;
 import com.forex.risk.infrastructure.persistence.MonitorRulePO;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Monitor rule repository implementation.
+ * 监测规则仓储实现。
+ */
+@Slf4j
 @Repository
 @RequiredArgsConstructor
 public class MonitorRuleRepositoryImpl implements MonitorRuleRepository {
@@ -23,8 +29,10 @@ public class MonitorRuleRepositoryImpl implements MonitorRuleRepository {
         MonitorRulePO po = toPO(rule);
         if (rule.getId() == null) {
             monitorRuleMapper.insert(po);
+            log.info("Monitor rule created: ruleCode={}, ruleName={}", po.getRuleCode(), po.getRuleName());
         } else {
             monitorRuleMapper.updateById(po);
+            log.info("Monitor rule updated: id={}, ruleCode={}", po.getId(), po.getRuleCode());
         }
         return toDomain(po);
     }

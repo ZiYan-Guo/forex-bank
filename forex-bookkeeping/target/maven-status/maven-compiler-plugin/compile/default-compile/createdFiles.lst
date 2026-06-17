@@ -1,4 +1,5 @@
 com/forex/bookkeeping/infrastructure/persistence/MonthEndClosingPO.class
+com/forex/bookkeeping/infrastructure/event/EntryPostedEventListener.class
 com/forex/bookkeeping/domain/model/query/JournalQuery.class
 com/forex/bookkeeping/domain/model/aggregate/MonthEndClosing.class
 com/forex/bookkeeping/application/command/CreateEntryCmd.class

@@ -10,6 +10,10 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
+/**
+ * Margin call MyBatis mapper.
+ * 保证金追缴数据访问层。
+ */
 @Mapper
 public interface MarginCallMapper extends BaseMapper<MarginCallPO> {
 

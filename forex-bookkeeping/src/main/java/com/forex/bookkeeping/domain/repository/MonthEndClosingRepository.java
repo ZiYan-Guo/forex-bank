@@ -5,6 +5,10 @@ import com.forex.bookkeeping.domain.model.aggregate.MonthEndClosing;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Repository interface for month-end closing aggregate.
+ * 月末结账仓储接口。
+ */
 public interface MonthEndClosingRepository {
 
     MonthEndClosing save(MonthEndClosing closing);

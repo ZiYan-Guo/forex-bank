@@ -9,6 +9,10 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
+/**
+ * Month-end closing MyBatis mapper.
+ * 月末结账数据访问层。
+ */
 @Mapper
 public interface MonthEndClosingMapper extends BaseMapperExt<MonthEndClosingPO> {
 

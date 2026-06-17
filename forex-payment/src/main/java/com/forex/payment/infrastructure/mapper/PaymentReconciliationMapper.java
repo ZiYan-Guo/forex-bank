@@ -11,6 +11,10 @@ import org.apache.ibatis.annotations.Select;
 import java.time.LocalDate;
 import java.util.List;
 
+/**
+ * Payment reconciliation MyBatis mapper.
+ * 支付对账数据访问层。
+ */
 @Mapper
 public interface PaymentReconciliationMapper extends BaseMapper<PaymentReconciliationPO> {
 

@@ -10,6 +10,10 @@ import lombok.EqualsAndHashCode;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+/**
+ * Sampling rule persistent object.
+ * 抽查规则持久化对象。
+ */
 @Data
 @EqualsAndHashCode(callSuper = true)
 @TableName("t_sampling_rule")

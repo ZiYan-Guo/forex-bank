@@ -6,11 +6,17 @@ import com.forex.margin.infrastructure.mapper.MarginCallMapper;
 import com.forex.margin.infrastructure.persistence.MarginCallPO;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * Margin call repository implementation.
+ * 保证金追缴仓储实现。
+ */
+@Slf4j
 @Repository
 @RequiredArgsConstructor
 public class MarginCallRepositoryImpl implements MarginCallRepository {
@@ -22,8 +28,10 @@ public class MarginCallRepositoryImpl implements MarginCallRepository {
         MarginCallPO po = toPO(marginCall);
         if (marginCall.getId() == null) {
             marginCallMapper.insert(po);
+            log.info("Margin call created: marginNo={}, callType={}, amount={}", po.getMarginNo(), po.getCallType(), po.getCallAmount());
         } else {
             marginCallMapper.updateById(po);
+            log.info("Margin call updated: id={}, responseStatus={}", po.getId(), po.getResponseStatus());
         }
     }
 

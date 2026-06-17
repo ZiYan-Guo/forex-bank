@@ -13,6 +13,7 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/event/EntryPostedEventListener.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/JournalEntryMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/MonthEndClosingMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/persistence/JournalEntryPO.java

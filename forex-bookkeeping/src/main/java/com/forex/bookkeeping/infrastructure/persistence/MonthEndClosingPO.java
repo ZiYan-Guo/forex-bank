@@ -10,6 +10,10 @@ import lombok.EqualsAndHashCode;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+/**
+ * Month-end closing persistent object.
+ * 月末结账持久化对象。
+ */
 @Data
 @EqualsAndHashCode(callSuper = true)
 @TableName("t_month_end_closing")

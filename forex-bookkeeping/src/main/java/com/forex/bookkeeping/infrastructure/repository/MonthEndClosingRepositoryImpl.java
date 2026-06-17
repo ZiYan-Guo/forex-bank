@@ -6,12 +6,18 @@ import com.forex.bookkeeping.infrastructure.mapper.MonthEndClosingMapper;
 import com.forex.bookkeeping.infrastructure.persistence.MonthEndClosingPO;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Month-end closing repository implementation.
+ * 月末结账仓储实现。
+ */
+@Slf4j
 @Repository
 @RequiredArgsConstructor
 public class MonthEndClosingRepositoryImpl implements MonthEndClosingRepository {
@@ -23,8 +29,10 @@ public class MonthEndClosingRepositoryImpl implements MonthEndClosingRepository 
         MonthEndClosingPO po = toPO(closing);
         if (closing.getId() == null) {
             monthEndClosingMapper.insert(po);
+            log.info("Month-end closing created: closingId={}, fiscalPeriod={}", po.getClosingId(), po.getFiscalPeriod());
         } else {
             monthEndClosingMapper.updateById(po);
+            log.info("Month-end closing updated: id={}, closingId={}, status={}", po.getId(), po.getClosingId(), po.getClosingStatus());
         }
         return toDomain(po);
     }

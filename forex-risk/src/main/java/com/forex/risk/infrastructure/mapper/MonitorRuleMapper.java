@@ -10,6 +10,10 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
+/**
+ * Monitor rule MyBatis mapper.
+ * 监测规则数据访问层。
+ */
 @Mapper
 public interface MonitorRuleMapper extends BaseMapper<MonitorRulePO> {
 
