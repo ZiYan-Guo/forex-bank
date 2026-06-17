@@ -29,7 +29,9 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/src/main/java/com/forex/settlement/infrastructure/mapper/BankGuaranteeMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/src/main/java/com/forex/settlement/infrastructure/mapper/CollectionMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/src/main/java/com/forex/settlement/infrastructure/mapper/DocumentaryCollectionMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/src/main/java/com/forex/settlement/infrastructure/mapper/GuaranteeMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/src/main/java/com/forex/settlement/infrastructure/mapper/LetterOfCreditMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/src/main/java/com/forex/settlement/infrastructure/persistence/BankGuaranteePO.java

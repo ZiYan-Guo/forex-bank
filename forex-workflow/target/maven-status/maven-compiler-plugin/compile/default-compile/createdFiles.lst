@@ -4,6 +4,7 @@ com/forex/workflow/adapter/dto/StartProcessReq.class
 com/forex/workflow/adapter/dto/WorkflowTaskResp.class
 com/forex/workflow/application/service/WorkflowAppService.class
 com/forex/workflow/infrastructure/repository/WorkflowTaskRepositoryImpl$1.class
+com/forex/workflow/infrastructure/mapper/ApprovalRecordMapper.class
 com/forex/workflow/WorkflowApplication.class
 com/forex/workflow/domain/service/WorkflowDomainService.class
 com/forex/workflow/domain/model/aggregate/WorkflowTask.class

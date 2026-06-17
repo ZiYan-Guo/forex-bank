@@ -1,3 +1,4 @@
+com/forex/auth/infrastructure/mapper/RolePermissionMapper.class
 com/forex/auth/infrastructure/mapper/UserMapper.class
 com/forex/auth/infrastructure/persistence/PermissionPO.class
 com/forex/auth/domain/model/aggregate/User.class
@@ -7,13 +8,16 @@ com/forex/auth/domain/model/aggregate/Role.class
 com/forex/auth/infrastructure/persistence/UserRolePO.class
 com/forex/auth/domain/model/valueobject/PasswordHash.class
 com/forex/auth/adapter/dto/LoginReq.class
+com/forex/auth/infrastructure/mapper/RoleMapper.class
 com/forex/auth/AuthApplication.class
 com/forex/auth/application/service/AuthAppService.class
 com/forex/auth/infrastructure/persistence/UserPO.class
 com/forex/auth/domain/model/valueobject/TokenVo.class
 com/forex/auth/adapter/dto/TokenResp.class
+com/forex/auth/infrastructure/mapper/UserRoleMapper.class
 com/forex/auth/infrastructure/persistence/RolePO.class
 com/forex/auth/domain/model/aggregate/Permission.class
+com/forex/auth/infrastructure/mapper/PermissionMapper.class
 com/forex/auth/infrastructure/persistence/RolePermissionPO.class
 com/forex/auth/domain/repository/UserRepository.class
 com/forex/auth/infrastructure/repository/UserRepositoryImpl.class

@@ -22,6 +22,7 @@ com/forex/settlement/infrastructure/persistence/DocumentaryCollectionPO.class
 com/forex/settlement/domain/model/aggregate/LetterOfCredit.class
 com/forex/settlement/adapter/dto/GuaranteeReq.class
 com/forex/settlement/infrastructure/repository/GuaranteeRepositoryImpl.class
+com/forex/settlement/infrastructure/mapper/DocumentaryCollectionMapper.class
 com/forex/settlement/infrastructure/repository/CollectionRepositoryImpl.class
 com/forex/settlement/domain/service/LcDomainService.class
 com/forex/settlement/domain/service/CollectionDomainService.class
@@ -30,6 +31,7 @@ com/forex/settlement/adapter/controller/CollectionController.class
 com/forex/settlement/adapter/dto/CollectionResp.class
 com/forex/settlement/domain/event/LcDocCheckedEvent.class
 com/forex/settlement/application/command/CreateCollectionCmd.class
+com/forex/settlement/infrastructure/mapper/BankGuaranteeMapper.class
 com/forex/settlement/application/command/AmendLcCmd.class
 com/forex/settlement/application/service/SettlementAppService.class
 com/forex/settlement/domain/model/entity/DocumentaryCollection.class

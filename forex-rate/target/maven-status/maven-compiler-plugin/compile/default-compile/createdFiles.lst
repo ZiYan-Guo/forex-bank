@@ -1,3 +1,4 @@
+com/forex/rate/infrastructure/mapper/RatePublishLogMapper.class
 com/forex/rate/application/service/RateAppService.class
 com/forex/rate/application/command/RateSaveCmd.class
 com/forex/rate/adapter/dto/RateResp.class
@@ -9,6 +10,7 @@ com/forex/rate/infrastructure/persistence/RatePublishLogPO.class
 com/forex/rate/infrastructure/persistence/ExchangeRatePO.class
 com/forex/rate/domain/repository/ExchangeRateRepository.class
 com/forex/rate/domain/model/valueobject/RateValue.class
+com/forex/rate/infrastructure/mapper/RatePublishConfigMapper.class
 com/forex/rate/adapter/dto/RateQueryReq.class
 com/forex/rate/infrastructure/mapper/ExchangeRateMapper.class
 com/forex/rate/infrastructure/persistence/RatePublishConfigPO.class

@@ -10,7 +10,11 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/TokenVo.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-auth/src/main/java/com/forex/auth/domain/service/AuthenticationDomainService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/PermissionMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/RoleMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/RolePermissionMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserRoleMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/PermissionPO.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/RolePO.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/RolePermissionPO.java

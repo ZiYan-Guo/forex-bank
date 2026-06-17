@@ -7,7 +7,10 @@ com/forex/reporting/domain/repository/SettlementReportRepository.class
 com/forex/reporting/domain/model/valueobject/ReportNo.class
 com/forex/reporting/ReportingApplication.class
 com/forex/reporting/domain/repository/BopReportRepository.class
+com/forex/reporting/infrastructure/persistence/ForexSettlementReportPO.class
+com/forex/reporting/infrastructure/mapper/CapitalAccountReportMapper.class
 com/forex/reporting/infrastructure/repository/BopReportRepositoryImpl.class
+com/forex/reporting/infrastructure/mapper/ForexSettlementReportMapper.class
 com/forex/reporting/infrastructure/repository/SettlementReportRepositoryImpl.class
 com/forex/reporting/infrastructure/persistence/SettlementReportPO.class
 com/forex/reporting/domain/model/entity/CapitalAccountReport.class
@@ -20,6 +23,7 @@ com/forex/reporting/infrastructure/persistence/BopReportPO.class
 com/forex/reporting/adapter/dto/BopReportResp.class
 com/forex/reporting/application/command/BopReportCmd.class
 com/forex/reporting/infrastructure/persistence/CapitalReportPO.class
+com/forex/reporting/infrastructure/persistence/CapitalAccountReportPO.class
 com/forex/reporting/infrastructure/mapper/CapitalReportMapper.class
 com/forex/reporting/domain/model/aggregate/BopReport.class
 com/forex/reporting/application/command/SettlementReportCmd.class

@@ -23,6 +23,7 @@ com/forex/account/infrastructure/repository/AccountRepositoryImpl.class
 com/forex/account/application/query/AccountQuery.class
 com/forex/account/application/query/TransactionDTO.class
 com/forex/account/infrastructure/persistence/AccountTransactionPO.class
+com/forex/account/infrastructure/mapper/BalanceSnapshotMapper.class
 com/forex/account/domain/service/AccountDomainService.class
 com/forex/account/infrastructure/persistence/ForexAccountPO.class
 com/forex/account/application/service/AccountAppService.class

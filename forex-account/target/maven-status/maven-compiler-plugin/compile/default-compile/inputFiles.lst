@@ -20,6 +20,7 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-account/src/main/java/com/forex/account/infrastructure/mapper/BalanceSnapshotMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java

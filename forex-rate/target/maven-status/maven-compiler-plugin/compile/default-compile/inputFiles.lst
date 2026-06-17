@@ -14,6 +14,8 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/RatePublishConfigMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/RatePublishLogMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/infrastructure/persistence/ExchangeRatePO.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/infrastructure/persistence/RatePublishConfigPO.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/infrastructure/persistence/RatePublishLogPO.java

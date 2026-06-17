@@ -18,10 +18,14 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/domain/repository/SettlementReportRepository.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/infrastructure/mapper/BopReportMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/infrastructure/mapper/CapitalAccountReportMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/infrastructure/mapper/CapitalReportMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/infrastructure/mapper/ForexSettlementReportMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/infrastructure/mapper/SettlementReportMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/infrastructure/persistence/BopReportPO.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/infrastructure/persistence/CapitalAccountReportPO.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/infrastructure/persistence/CapitalReportPO.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/infrastructure/persistence/ForexSettlementReportPO.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/infrastructure/persistence/SettlementReportPO.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/infrastructure/repository/BopReportRepositoryImpl.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/infrastructure/repository/CapitalReportRepositoryImpl.java
