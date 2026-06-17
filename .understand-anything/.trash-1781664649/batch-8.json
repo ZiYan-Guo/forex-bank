@@ -1,0 +1,271 @@
+{
+  "batchIndex": 8,
+  "module": "forex-web (Vue前端 - 页面组件/路由/api封装)",
+  "timestamp": "2026-06-17T00:00:00Z",
+  "nodes": [
+    {
+      "id": "file:forex-web/.../auth.ts",
+      "type": "file",
+      "label": "auth.ts",
+      "properties": { "path": "forex-web/src/api/auth.ts", "language": "typescript", "layer": "api-client", "module": "forex-web" }
+    },
+    {
+      "id": "func:login",
+      "type": "function",
+      "label": "login()",
+      "properties": { "description": "登录API调用 - POST /api/auth/login", "module": "forex-web", "layer": "api-client" }
+    },
+    {
+      "id": "func:logout",
+      "type": "function",
+      "label": "logout()",
+      "properties": { "description": "登出API调用", "module": "forex-web", "layer": "api-client" }
+    },
+    {
+      "id": "func:refreshToken",
+      "type": "function",
+      "label": "refreshToken()",
+      "properties": { "description": "刷新令牌API调用", "module": "forex-web", "layer": "api-client" }
+    },
+    {
+      "id": "file:forex-web/.../dashboard.ts",
+      "type": "file",
+      "label": "dashboard.ts",
+      "properties": { "path": "forex-web/src/api/dashboard.ts", "language": "typescript", "layer": "api-client", "module": "forex-web" }
+    },
+    {
+      "id": "func:getDashboardData",
+      "type": "function",
+      "label": "getDashboardData()",
+      "properties": { "description": "仪表盘数据API调用", "module": "forex-web", "layer": "api-client" }
+    },
+    {
+      "id": "file:forex-web/.../request.ts",
+      "type": "file",
+      "label": "request.ts",
+      "properties": { "path": "forex-web/src/api/request.ts", "language": "typescript", "layer": "api-client", "module": "forex-web" }
+    },
+    {
+      "id": "file:forex-web/.../index.ts",
+      "type": "file",
+      "label": "router/index.ts",
+      "properties": { "path": "forex-web/src/router/index.ts", "language": "typescript", "layer": "router", "module": "forex-web" }
+    },
+    {
+      "id": "file:forex-web/.../forex-exchange.vue",
+      "type": "file",
+      "label": "forex-exchange.vue",
+      "properties": { "path": "forex-web/src/views/forex/forex-exchange.vue", "language": "vue", "layer": "view", "module": "forex-web" }
+    },
+    {
+      "id": "component:forex-exchange",
+      "type": "vue-component",
+      "label": "ForexExchange",
+      "properties": { "description": "外汇交易页面 - 汇率展示、货币兑换、交易执行、K线图", "module": "forex-web", "layer": "view" }
+    },
+    {
+      "id": "file:forex-web/.../forex-limit.vue",
+      "type": "file",
+      "label": "forex-limit.vue",
+      "properties": { "path": "forex-web/src/views/forex/forex-limit.vue", "language": "vue", "layer": "view", "module": "forex-web" }
+    },
+    {
+      "id": "component:forex-limit",
+      "type": "vue-component",
+      "label": "ForexLimit",
+      "properties": { "description": "外汇额度管理页面 - 额度查询、调整、审批", "module": "forex-web", "layer": "view" }
+    },
+    {
+      "id": "file:forex-web/.../forex-risk.vue",
+      "type": "file",
+      "label": "forex-risk.vue",
+      "properties": { "path": "forex-web/src/views/forex/forex-risk.vue", "language": "vue", "layer": "view", "module": "forex-web" }
+    },
+    {
+      "id": "component:forex-risk",
+      "type": "vue-component",
+      "label": "ForexRisk",
+      "properties": { "description": "外汇风险管理页面 - 敞口监控、风险指标、预警列表", "module": "forex-web", "layer": "view" }
+    },
+    {
+      "id": "file:forex-web/.../forex-hedge.vue",
+      "type": "file",
+      "label": "forex-hedge.vue",
+      "properties": { "path": "forex-web/src/views/forex/forex-hedge.vue", "language": "vue", "layer": "view", "module": "forex-web" }
+    },
+    {
+      "id": "component:forex-hedge",
+      "type": "vue-component",
+      "label": "ForexHedge",
+      "properties": { "description": "外汇套保管理页面 - 套保策略、执行、对冲效果追踪", "module": "forex-web", "layer": "view" }
+    },
+    {
+      "id": "file:forex-web/.../forex-accounting.vue",
+      "type": "file",
+      "label": "forex-accounting.vue",
+      "properties": { "path": "forex-web/src/views/forex/forex-accounting.vue", "language": "vue", "layer": "view", "module": "forex-web" }
+    },
+    {
+      "id": "component:forex-accounting",
+      "type": "vue-component",
+      "label": "ForexAccounting",
+      "properties": { "description": "外汇会计核算页面 - 科目余额、会计分录、估值调整", "module": "forex-web", "layer": "view" }
+    },
+    {
+      "id": "file:forex-web/.../forex-cashpool.vue",
+      "type": "file",
+      "label": "forex-cashpool.vue",
+      "properties": { "path": "forex-web/src/views/forex/forex-cashpool.vue", "language": "vue", "layer": "view", "module": "forex-web" }
+    },
+    {
+      "id": "component:forex-cashpool",
+      "type": "vue-component",
+      "label": "ForexCashpool",
+      "properties": { "description": "现金池管理页面 - 资金归集、调拨、头寸分析", "module": "forex-web", "layer": "view" }
+    },
+    {
+      "id": "file:forex-web/.../bank-dashboard.vue",
+      "type": "file",
+      "label": "bank-dashboard.vue",
+      "properties": { "path": "forex-web/src/views/bank/bank-dashboard.vue", "language": "vue", "layer": "view", "module": "forex-web" }
+    },
+    {
+      "id": "component:bank-dashboard",
+      "type": "vue-component",
+      "label": "BankDashboard",
+      "properties": { "description": "银行总览仪表盘 - 总敞口、盈亏、交易量、最新汇率、预警", "module": "forex-web", "layer": "view" }
+    },
+    {
+      "id": "file:forex-web/.../bank-trade.vue",
+      "type": "file",
+      "label": "bank-trade.vue",
+      "properties": { "path": "forex-web/src/views/bank/bank-trade.vue", "language": "vue", "layer": "view", "module": "forex-web" }
+    },
+    {
+      "id": "component:bank-trade",
+      "type": "vue-component",
+      "label": "BankTrade",
+      "properties": { "description": "交易管理页面 - 交易查询、审核、结算、报表", "module": "forex-web", "layer": "view" }
+    },
+    {
+      "id": "file:forex-web/.../forex-limit-detail.vue",
+      "type": "file",
+      "label": "forex-limit-detail.vue",
+      "properties": { "path": "forex-web/src/views/forex/components/forex-limit-detail.vue", "language": "vue", "layer": "component", "module": "forex-web" }
+    },
+    {
+      "id": "component:forex-limit-detail",
+      "type": "vue-component",
+      "label": "ForexLimitDetail",
+      "properties": { "description": "额度详情弹窗组件", "module": "forex-web", "layer": "component" }
+    },
+    {
+      "id": "file:forex-web/.../exchange-form.vue",
+      "type": "file",
+      "label": "exchange-form.vue",
+      "properties": { "path": "forex-web/src/views/forex/components/exchange-form.vue", "language": "vue", "layer": "component", "module": "forex-web" }
+    },
+    {
+      "id": "component:exchange-form",
+      "type": "vue-component",
+      "label": "ExchangeForm",
+      "properties": { "description": "货币兑换表单组件 - 买入/卖出、金额、汇率锁定", "module": "forex-web", "layer": "component" }
+    },
+    {
+      "id": "file:forex-web/.../forex-layout.vue",
+      "type": "file",
+      "label": "forex-layout.vue",
+      "properties": { "path": "forex-web/src/views/forex/components/forex-layout.vue", "language": "vue", "layer": "component", "module": "forex-web" }
+    },
+    {
+      "id": "component:forex-layout",
+      "type": "vue-component",
+      "label": "ForexLayout",
+      "properties": { "description": "外汇模块布局组件 - 侧边栏导航、面包屑、内容区", "module": "forex-web", "layer": "component" }
+    },
+    {
+      "id": "file:forex-web/.../layout.vue",
+      "type": "file",
+      "label": "layout.vue",
+      "properties": { "path": "forex-web/src/views/layout/layout.vue", "language": "vue", "layer": "layout", "module": "forex-web" }
+    },
+    {
+      "id": "component:layout",
+      "type": "vue-component",
+      "label": "AppLayout",
+      "properties": { "description": "应用主布局 - 顶部导航、侧边菜单、标签页、用户信息", "module": "forex-web", "layer": "layout" }
+    },
+    {
+      "id": "file:forex-web/.../login-index.vue",
+      "type": "file",
+      "label": "login-index.vue",
+      "properties": { "path": "forex-web/src/views/login/login-index.vue", "language": "vue", "layer": "view", "module": "forex-web" }
+    },
+    {
+      "id": "component:login-index",
+      "type": "vue-component",
+      "label": "LoginIndex",
+      "properties": { "description": "登录页面 - 账号密码、验证码、多因子认证、国际化", "module": "forex-web", "layer": "view" }
+    },
+    {
+      "id": "file:forex-web/.../App.vue",
+      "type": "file",
+      "label": "App.vue",
+      "properties": { "path": "forex-web/src/App.vue", "language": "vue", "layer": "root", "module": "forex-web" }
+    },
+    {
+      "id": "component:App",
+      "type": "vue-component",
+      "label": "App",
+      "properties": { "description": "Vue根组件 - 路由视图入口", "module": "forex-web", "layer": "root" }
+    },
+    {
+      "id": "file:forex-web/.../main.ts",
+      "type": "file",
+      "label": "main.ts",
+      "properties": { "path": "forex-web/src/main.ts", "language": "typescript", "layer": "entry", "module": "forex-web" }
+    }
+  ],
+  "edges": [
+    { "type": "contains", "source": "file:forex-web/.../auth.ts", "target": "func:login" },
+    { "type": "contains", "source": "file:forex-web/.../auth.ts", "target": "func:logout" },
+    { "type": "contains", "source": "file:forex-web/.../auth.ts", "target": "func:refreshToken" },
+    { "type": "depends-on", "source": "func:login", "target": "file:forex-web/.../request.ts" },
+    { "type": "contains", "source": "file:forex-web/.../dashboard.ts", "target": "func:getDashboardData" },
+    { "type": "depends-on", "source": "func:getDashboardData", "target": "file:forex-web/.../request.ts" },
+    { "type": "depends-on", "source": "component:bank-dashboard", "target": "func:getDashboardData" },
+    { "type": "contains", "source": "file:forex-web/.../forex-exchange.vue", "target": "component:forex-exchange" },
+    { "type": "contains", "source": "file:forex-web/.../forex-limit.vue", "target": "component:forex-limit" },
+    { "type": "contains", "source": "file:forex-web/.../forex-risk.vue", "target": "component:forex-risk" },
+    { "type": "contains", "source": "file:forex-web/.../forex-hedge.vue", "target": "component:forex-hedge" },
+    { "type": "contains", "source": "file:forex-web/.../forex-accounting.vue", "target": "component:forex-accounting" },
+    { "type": "contains", "source": "file:forex-web/.../forex-cashpool.vue", "target": "component:forex-cashpool" },
+    { "type": "contains", "source": "file:forex-web/.../bank-dashboard.vue", "target": "component:bank-dashboard" },
+    { "type": "contains", "source": "file:forex-web/.../bank-trade.vue", "target": "component:bank-trade" },
+    { "type": "contains", "source": "file:forex-web/.../forex-limit-detail.vue", "target": "component:forex-limit-detail" },
+    { "type": "contains", "source": "file:forex-web/.../exchange-form.vue", "target": "component:exchange-form" },
+    { "type": "contains", "source": "file:forex-web/.../forex-layout.vue", "target": "component:forex-layout" },
+    { "type": "depends-on", "source": "component:forex-exchange", "target": "component:exchange-form" },
+    { "type": "depends-on", "source": "component:forex-limit", "target": "component:forex-limit-detail" },
+    { "type": "depends-on", "source": "component:forex-exchange", "target": "component:forex-layout" },
+    { "type": "depends-on", "source": "component:forex-limit", "target": "component:forex-layout" },
+    { "type": "depends-on", "source": "component:forex-risk", "target": "component:forex-layout" },
+    { "type": "depends-on", "source": "component:forex-hedge", "target": "component:forex-layout" },
+    { "type": "depends-on", "source": "component:forex-accounting", "target": "component:forex-layout" },
+    { "type": "depends-on", "source": "component:forex-cashpool", "target": "component:forex-layout" },
+    { "type": "contains", "source": "file:forex-web/.../layout.vue", "target": "component:layout" },
+    { "type": "contains", "source": "file:forex-web/.../login-index.vue", "target": "component:login-index" },
+    { "type": "contains", "source": "file:forex-web/.../App.vue", "target": "component:App" },
+    { "type": "depends-on", "source": "component:App", "target": "file:forex-web/.../index.ts" },
+    { "type": "depends-on", "source": "file:forex-web/.../index.ts", "target": "component:bank-dashboard" },
+    { "type": "depends-on", "source": "file:forex-web/.../index.ts", "target": "component:forex-exchange" },
+    { "type": "depends-on", "source": "file:forex-web/.../index.ts", "target": "component:forex-limit" },
+    { "type": "depends-on", "source": "file:forex-web/.../index.ts", "target": "component:forex-risk" },
+    { "type": "depends-on", "source": "file:forex-web/.../index.ts", "target": "component:forex-hedge" },
+    { "type": "depends-on", "source": "file:forex-web/.../index.ts", "target": "component:forex-accounting" },
+    { "type": "depends-on", "source": "file:forex-web/.../index.ts", "target": "component:forex-cashpool" },
+    { "type": "depends-on", "source": "file:forex-web/.../index.ts", "target": "component:bank-trade" },
+    { "type": "depends-on", "source": "file:forex-web/.../index.ts", "target": "component:login-index" },
+    { "type": "depends-on", "source": "file:forex-web/.../index.ts", "target": "component:layout" }
+  ]
+}

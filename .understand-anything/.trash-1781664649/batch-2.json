@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-bank-web/index.html",
+      "type": "file",
+      "name": "前端入口 HTML",
+      "filePath": "forex-bank-web/index.html",
+      "summary": "Vue 3 前端应用入口 HTML 文件，挂载点 <div id=\"app\"> 和入口脚本 /src/main.ts。",
+      "tags": ["html", "entry", "frontend"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bank-web/package-lock.json",
+      "type": "file",
+      "name": "npm 依赖锁文件",
+      "filePath": "forex-bank-web/package-lock.json",
+      "summary": "npm package-lock.json，锁定前端项目所有依赖包的具体版本。",
+      "tags": ["npm", "lock", "dependencies"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bank-web/package.json",
+      "type": "file",
+      "name": "前端项目配置",
+      "filePath": "forex-bank-web/package.json",
+      "summary": "前端项目 package.json，依赖 Vue 3.4.21、Ant Design Vue 4.2.1、Axios 1.6.8、ECharts 5.5.0、Pinia 2.1.7，脚本含 dev/build/preview。",
+      "tags": ["npm", "package.json", "frontend", "vue"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-bank-web/tsconfig.json",
+      "type": "file",
+      "name": "TypeScript 配置",
+      "filePath": "forex-bank-web/tsconfig.json",
+      "summary": "TypeScript 编译配置，目标 ES2020、ESNext 模块、strict 模式，路径别名 @ 映射 src/ 目录。",
+      "tags": ["typescript", "config", "frontend"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bank-web/tsconfig.node.json",
+      "type": "file",
+      "name": "Node TypeScript 配置",
+      "filePath": "forex-bank-web/tsconfig.node.json",
+      "summary": "TypeScript Node 端配置，用于 vite.config.ts 的编译，ESNext 模块、bundler 解析。",
+      "tags": ["typescript", "config", "node"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-bank-web/package.json",
+      "target": "file:forex-bank-web/package-lock.json",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-bank-web/tsconfig.json",
+      "target": "file:forex-bank-web/tsconfig.node.json",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-bank-web/index.html",
+      "target": "file:forex-bank-web/package.json",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 0.5
+    }
+  ]
+}

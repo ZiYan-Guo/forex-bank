@@ -1,0 +1,547 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "type": "file",
+      "name": "账户模块启动类",
+      "filePath": "forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "summary": "Spring Boot 应用启动入口，启用服务发现和 MyBatis Mapper 扫描。",
+      "tags": ["spring-boot", "startup", "account"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-account:AccountApplication",
+      "type": "class",
+      "name": "AccountApplication",
+      "filePath": "forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "summary": "Spring Boot 主应用类，注解 @SpringBootApplication、@EnableDiscoveryClient、@MapperScan。",
+      "tags": ["spring-boot", "application"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "type": "file",
+      "name": "账户管理 REST 控制器",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "summary": "账户管理 REST API 控制器，提供开户/销户/存取款/冻结解冻/交易流水查询等 9 个接口端点，使用 @Idempotent 和 @RedisLock 注解保障操作安全性。",
+      "tags": ["controller", "rest", "api", "account"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-account:AccountController",
+      "type": "class",
+      "name": "AccountController",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "summary": "账户管理 REST 控制器，依赖 AccountAppService 编排账户业务操作。",
+      "tags": ["controller", "rest"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/adapter/dto/AccountOperationReq.java",
+      "type": "file",
+      "name": "账户操作请求 DTO",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/dto/AccountOperationReq.java",
+      "summary": "账户存取/冻结操作的请求参数，包含 accountId、amount、relatedBizNo、summary。",
+      "tags": ["dto", "request", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/adapter/dto/AccountResp.java",
+      "type": "file",
+      "name": "账户响应 DTO",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/dto/AccountResp.java",
+      "summary": "账户信息响应 DTO，包含账户ID、账号、币种、余额、状态等全部字段，带 Swagger 注解。",
+      "tags": ["dto", "response", "swagger"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/adapter/dto/OpenAccountReq.java",
+      "type": "file",
+      "name": "开户请求 DTO",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/dto/OpenAccountReq.java",
+      "summary": "开户请求参数 DTO，包含 customerId、accountType、currency、accountName、openBranch，带 Bean Validation 注解。",
+      "tags": ["dto", "request", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/adapter/dto/TransactionResp.java",
+      "type": "file",
+      "name": "交易流水响应 DTO",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/dto/TransactionResp.java",
+      "summary": "交易流水响应 DTO，包含交易流水号、账户ID、金额、交易前后余额、关联业务信息等。",
+      "tags": ["dto", "response", "transaction"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/application/command/AccountOperationCmd.java",
+      "type": "file",
+      "name": "账户操作命令对象",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/command/AccountOperationCmd.java",
+      "summary": "账户操作 CQRS 命令对象，包含 accountId、amount、relatedBizNo、summary，带 Bean Validation。",
+      "tags": ["command", "cqrs"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/application/command/OpenAccountCmd.java",
+      "type": "file",
+      "name": "开户命令对象",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/command/OpenAccountCmd.java",
+      "summary": "开户 CQRS 命令对象，包含 customerId、accountType、currency、accountName、openBranch 字段。",
+      "tags": ["command", "cqrs"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/application/query/AccountDetailDTO.java",
+      "type": "file",
+      "name": "账户详情查询 DTO",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/query/AccountDetailDTO.java",
+      "summary": "账户详情查询结果 DTO，包含账户所有信息字段。",
+      "tags": ["dto", "query"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/application/query/AccountQuery.java",
+      "type": "file",
+      "name": "账户查询对象",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/query/AccountQuery.java",
+      "summary": "账户分页查询条件，继承 PageReq，支持按客户ID、账号、状态、币种筛选。",
+      "tags": ["query", "page", "filter"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/application/query/TransactionDTO.java",
+      "type": "file",
+      "name": "交易查询 DTO",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/query/TransactionDTO.java",
+      "summary": "交易流水查询结果 DTO，包含交易流水号、金额、交易前后余额、关联业务信息等。",
+      "tags": ["dto", "query", "transaction"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "type": "file",
+      "name": "账户应用服务",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "summary": "账户管理应用服务，编排开户、销户、存取款、冻结解冻等核心业务流程，发布领域事件（AccountOpenedEvent/BalanceChangedEvent），使用 @RedisLock 保障并发安全。",
+      "tags": ["service", "application", "transactional"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-account:AccountAppService",
+      "type": "class",
+      "name": "AccountAppService",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "summary": "账户应用服务，编排领域层操作、保存聚合根、发布领域事件。",
+      "tags": ["service", "application"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "type": "file",
+      "name": "外汇账户聚合根",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "外汇账户 DDD 聚合根，包含 accountNo/customerId/currency/balance 等字段，提供 create/reconstitute 工厂方法、deposit/withdraw/freeze/unfreeze/close 等业务方法，内部维护余额和可用余额计算逻辑。",
+      "tags": ["domain", "aggregate", "ddd", "account"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-account:ForexAccount",
+      "type": "class",
+      "name": "ForexAccount",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "外汇账户聚合根，继承 BaseAggregate，封装账户核心业务逻辑。",
+      "tags": ["domain", "aggregate", "ddd"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "type": "file",
+      "name": "账户交易实体",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "summary": "账户交易流水实体，包含 transactionNo/amount/balanceBefore/balanceAfter 等字段，提供 record 静态工厂方法自动生成流水号。",
+      "tags": ["domain", "entity", "transaction"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-account:AccountTransaction",
+      "type": "class",
+      "name": "AccountTransaction",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "summary": "账户交易实体，继承 BaseEntity，使用 UUID 生成交易流水号。",
+      "tags": ["domain", "entity"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "type": "file",
+      "name": "金额值对象",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "summary": "金额值对象，封装 amount 和 currency，提供 add/subtract/isPositive/isGreaterThan 等类型安全运算，校验币种一致性。",
+      "tags": ["value-object", "ddd", "money"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-account:Money",
+      "type": "class",
+      "name": "Money",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "summary": "金额值对象，提供类型安全的货币运算。",
+      "tags": ["value-object", "ddd"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "type": "file",
+      "name": "账号值对象",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "summary": "账号值对象，封装账号字符串，提供空值校验和 equals/hashCode 实现。",
+      "tags": ["value-object", "ddd", "account"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-account:AccountNumber",
+      "type": "class",
+      "name": "AccountNumber",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "summary": "账号值对象，继承 BaseValueObject。",
+      "tags": ["value-object", "ddd"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java",
+      "type": "file",
+      "name": "账户仓储接口",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java",
+      "summary": "账户仓储接口（DDD Port），定义 save/findById/findByAccountNo/findByCustomerId/pageQuery 方法。",
+      "tags": ["repository", "ddd", "port"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java",
+      "type": "file",
+      "name": "交易仓储接口",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java",
+      "summary": "交易流水仓储接口（DDD Port），定义 save/findByAccountId/findByTransactionNo/countByAccountId 方法。",
+      "tags": ["repository", "ddd", "port"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "type": "file",
+      "name": "账户领域服务",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "summary": "账户领域服务，封装开户/销户/冻结解冻/记账等核心业务逻辑，自动生成账号号（AC+日期+币种+随机数）。",
+      "tags": ["domain", "service", "business-logic"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-account:AccountDomainService",
+      "type": "class",
+      "name": "AccountDomainService",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "summary": "账户领域服务，协调聚合根操作并记录交易流水。",
+      "tags": ["domain", "service"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java",
+      "type": "file",
+      "name": "账户开户领域事件",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java",
+      "summary": "账户开户领域事件，包含 accountId/accountNo/customerId/currency 信息。",
+      "tags": ["domain-event", "ddd"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java",
+      "type": "file",
+      "name": "余额变更领域事件",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java",
+      "summary": "账户余额变更领域事件，包含 accountId/amount/txType/balanceAfter 信息。",
+      "tags": ["domain-event", "ddd"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java",
+      "type": "file",
+      "name": "账户仓储实现",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java",
+      "summary": "账户仓储接口的 MyBatis-Plus 实现，完成 ForexAccount <-> ForexAccountPO 的转换，支持分页查询。",
+      "tags": ["repository", "infrastructure", "mybatis"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java",
+      "type": "file",
+      "name": "交易仓储实现",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java",
+      "summary": "交易流水仓储接口的 MyBatis-Plus 实现，完成 AccountTransaction <-> AccountTransactionPO 转换。",
+      "tags": ["repository", "infrastructure", "mybatis"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java",
+      "type": "file",
+      "name": "外汇账户 MyBatis Mapper",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java",
+      "summary": "ForexAccountPO 的 MyBatis Mapper，继承 BaseMapperExt，提供按账号和按客户ID查询的自定义方法。",
+      "tags": ["mybatis", "mapper", "database"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java",
+      "type": "file",
+      "name": "交易流水 MyBatis Mapper",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java",
+      "summary": "AccountTransactionPO 的 MyBatis Mapper，提供按账户ID分页查询和按交易流水号查询方法。",
+      "tags": ["mybatis", "mapper", "database"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java",
+      "type": "file",
+      "name": "外汇账户持久化对象",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java",
+      "summary": "外汇账户数据库映射 PO，对应 t_forex_account 表，继承 BasePO 包含通用审计字段。",
+      "tags": ["po", "mybatis", "persistence"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java",
+      "type": "file",
+      "name": "交易流水持久化对象",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java",
+      "summary": "交易流水数据库映射 PO，对应 t_account_transaction 表。",
+      "tags": ["po", "mybatis", "persistence"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java",
+      "type": "file",
+      "name": "余额快照持久化对象",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java",
+      "summary": "余额快照数据库映射 PO，对应 t_account_balance_snapshot 表，按日记录账户余额快照。",
+      "tags": ["po", "mybatis", "persistence"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "target": "class:forex-account:AccountApplication",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "class:forex-account:AccountController",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "class:forex-account:AccountAppService",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "class:forex-account:ForexAccount",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "target": "class:forex-account:AccountTransaction",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "target": "class:forex-account:Money",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "target": "class:forex-account:AccountNumber",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "target": "class:forex-account:AccountDomainService",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-account:AccountController",
+      "target": "class:forex-account:AccountAppService",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-account:AccountAppService",
+      "target": "class:forex-account:AccountDomainService",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-account:AccountAppService",
+      "target": "class:forex-account:ForexAccount",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-account:AccountAppService",
+      "target": "class:forex-account:AccountTransaction",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-account:AccountDomainService",
+      "target": "class:forex-account:ForexAccount",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-account:AccountDomainService",
+      "target": "class:forex-account:AccountTransaction",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-account:ForexAccount",
+      "target": "class:forex-account:Money",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "class:forex-account:AccountController",
+      "target": "file:forex-account/src/main/java/com/forex/account/adapter/dto/AccountOperationReq.java",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-account:AccountController",
+      "target": "file:forex-account/src/main/java/com/forex/account/adapter/dto/AccountResp.java",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-account:AccountController",
+      "target": "file:forex-account/src/main/java/com/forex/account/adapter/dto/OpenAccountReq.java",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-account:AccountController",
+      "target": "file:forex-account/src/main/java/com/forex/account/adapter/dto/TransactionResp.java",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "type": "related",
+      "direction": "undirected",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "type": "related",
+      "direction": "undirected",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/command/OpenAccountCmd.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/adapter/dto/OpenAccountReq.java",
+      "type": "related",
+      "direction": "undirected",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/command/AccountOperationCmd.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/adapter/dto/AccountOperationReq.java",
+      "type": "related",
+      "direction": "undirected",
+      "weight": 0.7
+    }
+  ]
+}

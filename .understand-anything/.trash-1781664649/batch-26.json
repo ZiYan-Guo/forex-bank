@@ -1,0 +1,272 @@
+{
+  "batchIndex": 26,
+  "domain": "forex-risk + forex-saccr",
+  "nodes": [
+    {
+      "id": "file://forex-risk/src/main/java/com/forex/risk/domain/model/aggregate/RiskMonitorLog.java",
+      "type": "file",
+      "label": "RiskMonitorLog.java",
+      "summary": "风险监控日志聚合根，管理外汇交易监控日志的创建、评估(PASS/REJECT/MANUAL_REVIEW/ESCALATED)和完整性校验",
+      "tags": ["risk", "monitor", "aggregate", "forex-risk"]
+    },
+    {
+      "id": "class://RiskMonitorLog",
+      "type": "class",
+      "label": "RiskMonitorLog",
+      "summary": "风险监控日志聚合根，继承BaseAggregate，包含交易信息、风控规则触发记录和评估结果，提供create/reconstitute/pass/reject/escalate/manualReview等工厂和状态变更方法",
+      "tags": ["aggregate", "risk"]
+    },
+    {
+      "id": "file://forex-risk/src/main/java/com/forex/risk/domain/model/entity/MonitorRule.java",
+      "type": "file",
+      "label": "MonitorRule.java",
+      "summary": "监控规则实体，定义风控规则的编码、名称、类型、风险类别、条件和动作配置",
+      "tags": ["risk", "entity", "forex-risk"]
+    },
+    {
+      "id": "class://MonitorRule",
+      "type": "class",
+      "label": "MonitorRule",
+      "summary": "监控规则实体，继承BaseEntity，包含ruleCode/ruleName/ruleType/riskCategory/ruleCondition/ruleAction等风控规则字段",
+      "tags": ["entity", "risk"]
+    },
+    {
+      "id": "file://forex-risk/src/main/java/com/forex/risk/domain/model/entity/RiskParamConfig.java",
+      "type": "file",
+      "label": "RiskParamConfig.java",
+      "summary": "风险参数配置实体，存储风控系统参数键值对，支持按币种和类型分类",
+      "tags": ["risk", "entity", "config", "forex-risk"]
+    },
+    {
+      "id": "class://RiskParamConfig",
+      "type": "class",
+      "label": "RiskParamConfig",
+      "summary": "风险参数配置实体，继承BaseEntity，包含paramKey/paramValue/paramType/currency/isEnabled字段",
+      "tags": ["entity", "config"]
+    },
+    {
+      "id": "file://forex-risk/src/main/java/com/forex/risk/domain/model/entity/RiskReport.java",
+      "type": "file",
+      "label": "RiskReport.java",
+      "summary": "风险报告实体，包含报告编号、类型、期间、客户交易汇总和监管参考号",
+      "tags": ["risk", "entity", "report", "forex-risk"]
+    },
+    {
+      "id": "class://RiskReport",
+      "type": "class",
+      "label": "RiskReport",
+      "summary": "风险报告实体，继承BaseEntity，包含reportNo/reportType/reportPeriod/totalTransactions/totalAmount/reportContent等字段",
+      "tags": ["entity", "report"]
+    },
+    {
+      "id": "file://forex-risk/src/main/java/com/forex/risk/domain/model/entity/SamplingRule.java",
+      "type": "file",
+      "label": "SamplingRule.java",
+      "summary": "资本项目便利化抽查规则实体，定义JSON条件、抽查比例、目标业务模块和有效期",
+      "tags": ["risk", "entity", "sampling", "forex-risk"]
+    },
+    {
+      "id": "class://SamplingRule",
+      "type": "class",
+      "label": "SamplingRule",
+      "summary": "抽查规则实体，继承BaseEntity，包含ruleCode/conditionJson/samplingRate/targetModule/effectiveDate等规则字段",
+      "tags": ["entity", "sampling"]
+    },
+    {
+      "id": "file://forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "type": "file",
+      "label": "RiskScore.java",
+      "summary": "风险评分值对象，封装BigDecimal评分值，提供非负校验和高风险判断(>=70)",
+      "tags": ["risk", "value-object", "forex-risk"]
+    },
+    {
+      "id": "class://RiskScore",
+      "type": "class",
+      "label": "RiskScore",
+      "summary": "风险评分值对象，继承BaseValueObject，提供of工厂方法、isHigh判定和equals/hashCode",
+      "tags": ["value-object"]
+    },
+    {
+      "id": "file://forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "type": "file",
+      "label": "RuleCondition.java",
+      "summary": "规则条件值对象，支持从JSON反序列化，包含类型、字段、操作符、阈值、币种和时间窗口",
+      "tags": ["risk", "value-object", "condition", "forex-risk"]
+    },
+    {
+      "id": "class://RuleCondition",
+      "type": "class",
+      "label": "RuleCondition",
+      "summary": "规则条件值对象，继承BaseValueObject，使用Jackson反序列化，包含type/field/operator/value/currency/pattern/windowMinutes",
+      "tags": ["value-object", "condition"]
+    },
+    {
+      "id": "file://forex-risk/src/main/java/com/forex/risk/domain/repository/RiskParamConfigRepository.java",
+      "type": "file",
+      "label": "RiskParamConfigRepository.java",
+      "summary": "风险参数配置仓储接口，定义查询所有启用参数、按key和type查找方法",
+      "tags": ["repository", "risk", "forex-risk"]
+    },
+    {
+      "id": "interface://RiskParamConfigRepository",
+      "type": "interface",
+      "label": "RiskParamConfigRepository",
+      "summary": "风险参数配置仓储接口，提供findAllEnabled/findByParamKey/findByParamType方法",
+      "tags": ["repository"]
+    },
+    {
+      "id": "file://forex-risk/src/main/java/com/forex/risk/domain/repository/RiskReportRepository.java",
+      "type": "file",
+      "label": "RiskReportRepository.java",
+      "summary": "风险报告仓储接口，定义保存、按ID/编号查询和分页方法",
+      "tags": ["repository", "risk", "forex-risk"]
+    },
+    {
+      "id": "interface://RiskReportRepository",
+      "type": "interface",
+      "label": "RiskReportRepository",
+      "summary": "风险报告仓储接口，提供save/findById/findByReportNo/pageQuery方法",
+      "tags": ["repository"]
+    },
+    {
+      "id": "file://forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/RiskParamConfigMapper.java",
+      "type": "file",
+      "label": "RiskParamConfigMapper.java",
+      "summary": "风险参数配置MyBatis Mapper，定义按paramKey和paramType查询的SQL注解",
+      "tags": ["mapper", "mybatis", "risk", "forex-risk"]
+    },
+    {
+      "id": "table://t_risk_param_config",
+      "type": "table",
+      "label": "t_risk_param_config",
+      "summary": "风险参数配置表，包含param_key/param_value/param_type/currency/is_enabled字段",
+      "tags": ["table", "mysql"]
+    },
+    {
+      "id": "file://forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/RiskReportMapper.java",
+      "type": "file",
+      "label": "RiskReportMapper.java",
+      "summary": "风险报告MyBatis Mapper，定义按reportNo查询的SQL注解",
+      "tags": ["mapper", "mybatis", "risk", "forex-risk"]
+    },
+    {
+      "id": "table://t_risk_report",
+      "type": "table",
+      "label": "t_risk_report",
+      "summary": "风险报告表，包含report_no/report_type/report_period/customer_id/total_transactions/total_amount等字段",
+      "tags": ["table", "mysql"]
+    },
+    {
+      "id": "file://forex-risk/src/main/java/com/forex/risk/infrastructure/persistence/RiskParamConfigPO.java",
+      "type": "file",
+      "label": "RiskParamConfigPO.java",
+      "summary": "风险参数配置持久化对象，映射t_risk_param_config表",
+      "tags": ["po", "persistence", "risk", "forex-risk"]
+    },
+    {
+      "id": "file://forex-risk/src/main/java/com/forex/risk/infrastructure/persistence/RiskReportPO.java",
+      "type": "file",
+      "label": "RiskReportPO.java",
+      "summary": "风险报告持久化对象，映射t_risk_report表",
+      "tags": ["po", "persistence", "risk", "forex-risk"]
+    },
+    {
+      "id": "file://forex-risk/src/main/java/com/forex/risk/infrastructure/repository/RiskParamConfigRepositoryImpl.java",
+      "type": "file",
+      "label": "RiskParamConfigRepositoryImpl.java",
+      "summary": "风险参数配置仓储实现，使用MyBatis Plus LambdaQueryWrapper进行查询，实现领域对象与PO互转",
+      "tags": ["repository", "impl", "risk", "forex-risk"]
+    },
+    {
+      "id": "class://RiskParamConfigRepositoryImpl",
+      "type": "class",
+      "label": "RiskParamConfigRepositoryImpl",
+      "summary": "RiskParamConfigRepository实现，注入RiskParamConfigMapper，实现findAllEnabled/findByParamKey/findByParamType，含toDomain/toPO转换",
+      "tags": ["repository", "impl"]
+    },
+    {
+      "id": "file://forex-risk/src/main/java/com/forex/risk/infrastructure/repository/RiskReportRepositoryImpl.java",
+      "type": "file",
+      "label": "RiskReportRepositoryImpl.java",
+      "summary": "风险报告仓储实现，使用MyBatis Plus分页插件，支持CRUD和分页查询",
+      "tags": ["repository", "impl", "risk", "forex-risk"]
+    },
+    {
+      "id": "class://RiskReportRepositoryImpl",
+      "type": "class",
+      "label": "RiskReportRepositoryImpl",
+      "summary": "RiskReportRepository实现，注入RiskReportMapper，实现save/findById/findByReportNo/pageQuery，含toDomain/toPO转换",
+      "tags": ["repository", "impl"]
+    },
+    {
+      "id": "file://forex-risk/src/main/java/com/forex/risk/RiskApplication.java",
+      "type": "file",
+      "label": "RiskApplication.java",
+      "summary": "风控服务Spring Boot启动类，启用服务发现、MyBatis Mapper扫描，端口8210",
+      "tags": ["application", "spring-boot", "forex-risk"]
+    },
+    {
+      "id": "class://RiskApplication",
+      "type": "class",
+      "label": "RiskApplication",
+      "summary": "风控服务启动入口，@SpringBootApplication @EnableDiscoveryClient @MapperScan(\"com.forex.risk.infrastructure.mapper\")",
+      "tags": ["application"]
+    },
+    {
+      "id": "file://forex-risk/src/main/resources/application.yml",
+      "type": "file",
+      "label": "application.yml (forex-risk)",
+      "summary": "风控服务配置：端口8210，MySQL(forex-risk库)、Redis、Nacos注册中心dev/FOREX_GROUP、MyBatis Plus逻辑删除、Knife4j",
+      "tags": ["config", "yaml"]
+    },
+    {
+      "id": "file://forex-saccr/pom.xml",
+      "type": "file",
+      "label": "pom.xml (forex-saccr)",
+      "summary": "SA-CCR模块Maven配置，依赖forex-common-base/security/mybatis、Spring Web、Nacos、Redis、Knife4j",
+      "tags": ["pom", "maven", "forex-saccr"]
+    },
+    {
+      "id": "file://forex-saccr/src/main/resources/application.yml",
+      "type": "file",
+      "label": "application.yml (forex-saccr)",
+      "summary": "SA-CCR服务配置：端口8219，MySQL(forex_saccr库)、Redis、Nacos dev/FOREX_GROUP",
+      "tags": ["config", "yaml"]
+    },
+    {
+      "id": "file://forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java",
+      "type": "file",
+      "label": "SaccrApplication.java",
+      "summary": "SA-CCR服务Spring Boot启动类，启用服务发现和Mapper扫描",
+      "tags": ["application", "spring-boot", "forex-saccr"]
+    },
+    {
+      "id": "class://SaccrApplication",
+      "type": "class",
+      "label": "SaccrApplication",
+      "summary": "SA-CCR标准法对手信用风险计算服务启动入口",
+      "tags": ["application"]
+    }
+  ],
+  "edges": [
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/domain/model/aggregate/RiskMonitorLog.java", "to": "class://RiskMonitorLog", "type": "contains"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/domain/model/entity/MonitorRule.java", "to": "class://MonitorRule", "type": "contains"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/domain/model/entity/RiskParamConfig.java", "to": "class://RiskParamConfig", "type": "contains"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/domain/model/entity/RiskReport.java", "to": "class://RiskReport", "type": "contains"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/domain/model/entity/SamplingRule.java", "to": "class://SamplingRule", "type": "contains"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java", "to": "class://RiskScore", "type": "contains"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java", "to": "class://RuleCondition", "type": "contains"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/domain/repository/RiskParamConfigRepository.java", "to": "interface://RiskParamConfigRepository", "type": "contains"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/domain/repository/RiskReportRepository.java", "to": "interface://RiskReportRepository", "type": "contains"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/RiskApplication.java", "to": "class://RiskApplication", "type": "contains"},
+    {"from": "file://forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java", "to": "class://SaccrApplication", "type": "contains"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/RiskParamConfigMapper.java", "to": "table://t_risk_param_config", "type": "depends_on"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/RiskReportMapper.java", "to": "table://t_risk_report", "type": "depends_on"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/infrastructure/persistence/RiskParamConfigPO.java", "to": "table://t_risk_param_config", "type": "maps_to"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/infrastructure/persistence/RiskReportPO.java", "to": "table://t_risk_report", "type": "maps_to"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/infrastructure/repository/RiskParamConfigRepositoryImpl.java", "to": "interface://RiskParamConfigRepository", "type": "implements"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/infrastructure/repository/RiskParamConfigRepositoryImpl.java", "to": "file://forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/RiskParamConfigMapper.java", "type": "depends_on"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/infrastructure/repository/RiskReportRepositoryImpl.java", "to": "interface://RiskReportRepository", "type": "implements"},
+    {"from": "file://forex-risk/src/main/java/com/forex/risk/infrastructure/repository/RiskReportRepositoryImpl.java", "to": "file://forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/RiskReportMapper.java", "type": "depends_on"}
+  ]
+}

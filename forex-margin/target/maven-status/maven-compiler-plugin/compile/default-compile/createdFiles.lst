@@ -6,13 +6,16 @@ com/forex/margin/domain/model/valueobject/WaterLevel.class
 com/forex/margin/domain/model/entity/MarginCall.class
 com/forex/margin/application/command/CreateMarginCmd.class
 com/forex/margin/domain/service/MarginDomainService.class
+com/forex/margin/infrastructure/mapper/MarginCallMapper.class
 com/forex/margin/domain/model/aggregate/MarginAccount.class
 com/forex/margin/application/service/MarginAppService.class
 com/forex/margin/domain/repository/MarginAccountRepository.class
 com/forex/margin/domain/event/MarginCalledEvent.class
 com/forex/margin/domain/model/query/MarginQuery.class
 com/forex/margin/infrastructure/persistence/MarginAccountPO.class
+com/forex/margin/infrastructure/repository/MarginCallRepositoryImpl.class
 com/forex/margin/adapter/controller/MarginController.class
 com/forex/margin/domain/model/valueobject/MarginAmount.class
 com/forex/margin/MarginApplication.class
+com/forex/margin/infrastructure/persistence/MarginCallPO.class
 com/forex/margin/adapter/dto/MarginResp.class

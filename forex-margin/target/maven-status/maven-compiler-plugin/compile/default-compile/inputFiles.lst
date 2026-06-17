@@ -14,5 +14,8 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginCallMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginCallPO.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginCallRepositoryImpl.java

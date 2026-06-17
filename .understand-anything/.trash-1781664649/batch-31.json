@@ -1,0 +1,352 @@
+{
+  "batchIndex": 31,
+  "module": "forex-workflow, forex-notification",
+  "nodes": [
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/adapter/controller/WorkflowController.java",
+      "type": "file",
+      "name": "WorkflowController.java",
+      "properties": { "path": "forex-workflow/src/main/java/com/forex/workflow/adapter/controller/WorkflowController.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.workflow.adapter.controller.WorkflowController",
+      "type": "class",
+      "name": "WorkflowController",
+      "properties": { "kind": "RestController", "package": "com.forex.workflow.adapter.controller", "summary": "工作流管理控制器，提供启动工作流、完成任务、查询任务等REST接口" }
+    },
+    {
+      "id": "WorkflowController.start",
+      "type": "endpoint",
+      "name": "POST /api/workflow/start",
+      "properties": { "method": "POST", "path": "/api/workflow/start", "summary": "启动工作流" }
+    },
+    {
+      "id": "WorkflowController.complete",
+      "type": "endpoint",
+      "name": "POST /api/workflow/complete/{taskId}",
+      "properties": { "method": "POST", "path": "/api/workflow/complete/{taskId}", "summary": "完成任务" }
+    },
+    {
+      "id": "WorkflowController.getTask",
+      "type": "endpoint",
+      "name": "GET /api/workflow/task/{taskId}",
+      "properties": { "method": "GET", "path": "/api/workflow/task/{taskId}", "summary": "查询任务详情" }
+    },
+    {
+      "id": "WorkflowController.pageQuery",
+      "type": "endpoint",
+      "name": "POST /api/workflow/task/page",
+      "properties": { "method": "POST", "path": "/api/workflow/task/page", "summary": "分页查询任务" }
+    },
+    {
+      "id": "WorkflowController.getMyTasks",
+      "type": "endpoint",
+      "name": "GET /api/workflow/my-tasks/{assignee}",
+      "properties": { "method": "GET", "path": "/api/workflow/my-tasks/{assignee}", "summary": "查询我的任务" }
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/adapter/dto/CompleteTaskReq.java",
+      "type": "file",
+      "name": "CompleteTaskReq.java",
+      "properties": { "path": "forex-workflow/src/main/java/com/forex/workflow/adapter/dto/CompleteTaskReq.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.workflow.adapter.dto.CompleteTaskReq",
+      "type": "class",
+      "name": "CompleteTaskReq",
+      "properties": { "kind": "DTO", "package": "com.forex.workflow.adapter.dto", "summary": "完成任务请求体" }
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/adapter/dto/StartProcessReq.java",
+      "type": "file",
+      "name": "StartProcessReq.java",
+      "properties": { "path": "forex-workflow/src/main/java/com/forex/workflow/adapter/dto/StartProcessReq.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.workflow.adapter.dto.StartProcessReq",
+      "type": "class",
+      "name": "StartProcessReq",
+      "properties": { "kind": "DTO", "package": "com.forex.workflow.adapter.dto", "summary": "启动工作流请求体" }
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/adapter/dto/WorkflowTaskResp.java",
+      "type": "file",
+      "name": "WorkflowTaskResp.java",
+      "properties": { "path": "forex-workflow/src/main/java/com/forex/workflow/adapter/dto/WorkflowTaskResp.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.workflow.adapter.dto.WorkflowTaskResp",
+      "type": "class",
+      "name": "WorkflowTaskResp",
+      "properties": { "kind": "DTO", "package": "com.forex.workflow.adapter.dto", "summary": "工作流任务响应体" }
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/application/command/StartProcessCmd.java",
+      "type": "file",
+      "name": "StartProcessCmd.java",
+      "properties": { "path": "forex-workflow/src/main/java/com/forex/workflow/application/command/StartProcessCmd.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.workflow.application.command.StartProcessCmd",
+      "type": "class",
+      "name": "StartProcessCmd",
+      "properties": { "kind": "Command", "package": "com.forex.workflow.application.command", "summary": "启动工作流命令对象" }
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/application/service/WorkflowAppService.java",
+      "type": "file",
+      "name": "WorkflowAppService.java",
+      "properties": { "path": "forex-workflow/src/main/java/com/forex/workflow/application/service/WorkflowAppService.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.workflow.application.service.WorkflowAppService",
+      "type": "class",
+      "name": "WorkflowAppService",
+      "properties": { "kind": "ApplicationService", "package": "com.forex.workflow.application.service", "summary": "工作流应用服务，协调领域层处理工作流启动和任务完成" }
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/config/WorkflowConfig.java",
+      "type": "file",
+      "name": "WorkflowConfig.java",
+      "properties": { "path": "forex-workflow/src/main/java/com/forex/workflow/config/WorkflowConfig.java", "lang": "java", "note": "文件不存在于磁盘" }
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/domain/model/aggregate/WorkflowTask.java",
+      "type": "file",
+      "name": "WorkflowTask.java",
+      "properties": { "path": "forex-workflow/src/main/java/com/forex/workflow/domain/model/aggregate/WorkflowTask.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.workflow.domain.model.aggregate.WorkflowTask",
+      "type": "class",
+      "name": "WorkflowTask",
+      "properties": { "kind": "AggregateRoot", "package": "com.forex.workflow.domain.model.aggregate", "summary": "工作流任务聚合根，状态流转: PENDING→PROCESSING→APPROVED/REJECTED/CANCELLED" }
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/domain/model/entity/ProcessDefinition.java",
+      "type": "file",
+      "name": "ProcessDefinition.java",
+      "properties": { "path": "forex-workflow/src/main/java/com/forex/workflow/domain/model/entity/ProcessDefinition.java", "lang": "java", "note": "文件不存在于磁盘" }
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/domain/repository/WorkflowTaskRepository.java",
+      "type": "file",
+      "name": "WorkflowTaskRepository.java",
+      "properties": { "path": "forex-workflow/src/main/java/com/forex/workflow/domain/repository/WorkflowTaskRepository.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.workflow.domain.repository.WorkflowTaskRepository",
+      "type": "class",
+      "name": "WorkflowTaskRepository",
+      "properties": { "kind": "RepositoryInterface", "package": "com.forex.workflow.domain.repository", "summary": "工作流任务仓储接口，定义持久化契约" }
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/domain/service/ApprovalWorkflowService.java",
+      "type": "file",
+      "name": "ApprovalWorkflowService.java",
+      "properties": { "path": "forex-workflow/src/main/java/com/forex/workflow/domain/service/ApprovalWorkflowService.java", "lang": "java", "note": "文件不存在于磁盘" }
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/domain/service/FlowableDeploymentService.java",
+      "type": "file",
+      "name": "FlowableDeploymentService.java",
+      "properties": { "path": "forex-workflow/src/main/java/com/forex/workflow/domain/service/FlowableDeploymentService.java", "lang": "java", "note": "文件不存在于磁盘" }
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/WorkflowTaskMapper.java",
+      "type": "file",
+      "name": "WorkflowTaskMapper.java",
+      "properties": { "path": "forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/WorkflowTaskMapper.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.workflow.infrastructure.mapper.WorkflowTaskMapper",
+      "type": "class",
+      "name": "WorkflowTaskMapper",
+      "properties": { "kind": "MyBatisMapper", "package": "com.forex.workflow.infrastructure.mapper", "summary": "工作流任务MyBatis Mapper，操作t_workflow_task表" }
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/WorkflowTaskPO.java",
+      "type": "file",
+      "name": "WorkflowTaskPO.java",
+      "properties": { "path": "forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/WorkflowTaskPO.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.workflow.infrastructure.persistence.WorkflowTaskPO",
+      "type": "class",
+      "name": "WorkflowTaskPO",
+      "properties": { "kind": "PO", "package": "com.forex.workflow.infrastructure.persistence", "summary": "工作流任务持久化对象，映射t_workflow_task表" }
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/infrastructure/repository/WorkflowTaskRepositoryImpl.java",
+      "type": "file",
+      "name": "WorkflowTaskRepositoryImpl.java",
+      "properties": { "path": "forex-workflow/src/main/java/com/forex/workflow/infrastructure/repository/WorkflowTaskRepositoryImpl.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.workflow.infrastructure.repository.WorkflowTaskRepositoryImpl",
+      "type": "class",
+      "name": "WorkflowTaskRepositoryImpl",
+      "properties": { "kind": "RepositoryImpl", "package": "com.forex.workflow.infrastructure.repository", "summary": "工作流任务仓储实现，完成PO与领域对象转换" }
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java",
+      "type": "file",
+      "name": "WorkflowApplication.java",
+      "properties": { "path": "forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.workflow.WorkflowApplication",
+      "type": "class",
+      "name": "WorkflowApplication",
+      "properties": { "kind": "SpringBootApplication", "package": "com.forex.workflow", "summary": "forex-workflow微服务启动入口" }
+    },
+    {
+      "id": "file:forex-workflow/src/main/resources/application.yml",
+      "type": "file",
+      "name": "application.yml",
+      "properties": { "path": "forex-workflow/src/main/resources/application.yml", "lang": "yaml", "summary": "forex-workflow配置 (端口8215, MySQL, Redis, Nacos, Knife4j)" }
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notification.java",
+      "type": "file",
+      "name": "Notification.java",
+      "properties": { "path": "forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notification.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.notification.domain.model.aggregate.Notification",
+      "type": "class",
+      "name": "Notification",
+      "properties": { "kind": "AggregateRoot", "package": "com.forex.notification.domain.model.aggregate", "summary": "通知聚合根，状态: PENDING→SENT/FAILED，支持SMS/EMAIL/APP/SYSTEM通知" }
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/domain/repository/NotificationRepository.java",
+      "type": "file",
+      "name": "NotificationRepository.java",
+      "properties": { "path": "forex-notification/src/main/java/com/forex/notification/domain/repository/NotificationRepository.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.notification.domain.repository.NotificationRepository",
+      "type": "class",
+      "name": "NotificationRepository",
+      "properties": { "kind": "RepositoryInterface", "package": "com.forex.notification.domain.repository", "summary": "通知仓储接口" }
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/domain/service/NotificationService.java",
+      "type": "file",
+      "name": "NotificationService.java",
+      "properties": { "path": "forex-notification/src/main/java/com/forex/notification/domain/service/NotificationService.java", "lang": "java", "note": "文件不存在于磁盘" }
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/infrastructure/repository/NotificationRepositoryImpl.java",
+      "type": "file",
+      "name": "NotificationRepositoryImpl.java",
+      "properties": { "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/repository/NotificationRepositoryImpl.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.notification.infrastructure.repository.NotificationRepositoryImpl",
+      "type": "class",
+      "name": "NotificationRepositoryImpl",
+      "properties": { "kind": "RepositoryImpl", "package": "com.forex.notification.infrastructure.repository", "summary": "通知仓储实现" }
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "type": "file",
+      "name": "NotificationController.java",
+      "properties": { "path": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.notification.adapter.controller.NotificationController",
+      "type": "class",
+      "name": "NotificationController",
+      "properties": { "kind": "RestController", "package": "com.forex.notification.adapter.controller", "summary": "通知管理控制器，提供发送通知和查询接口" }
+    },
+    {
+      "id": "NotificationController.send",
+      "type": "endpoint",
+      "name": "POST /api/notification/send",
+      "properties": { "method": "POST", "path": "/api/notification/send", "summary": "发送通知" }
+    },
+    {
+      "id": "NotificationController.getById",
+      "type": "endpoint",
+      "name": "GET /api/notification/{id}",
+      "properties": { "method": "GET", "path": "/api/notification/{id}", "summary": "查询通知详情" }
+    },
+    {
+      "id": "NotificationController.pageQuery",
+      "type": "endpoint",
+      "name": "POST /api/notification/page",
+      "properties": { "method": "POST", "path": "/api/notification/page", "summary": "分页查询通知" }
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/NotificationApplication.java",
+      "type": "file",
+      "name": "NotificationApplication.java",
+      "properties": { "path": "forex-notification/src/main/java/com/forex/notification/NotificationApplication.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.notification.NotificationApplication",
+      "type": "class",
+      "name": "NotificationApplication",
+      "properties": { "kind": "SpringBootApplication", "package": "com.forex.notification", "summary": "forex-notification微服务启动入口" }
+    },
+    {
+      "id": "file:forex-notification/src/main/resources/application.yml",
+      "type": "file",
+      "name": "application.yml",
+      "properties": { "path": "forex-notification/src/main/resources/application.yml", "lang": "yaml", "summary": "forex-notification配置 (端口8216, MySQL, Redis, Nacos)" }
+    },
+    {
+      "id": "file:forex-notification/pom.xml",
+      "type": "file",
+      "name": "pom.xml",
+      "properties": { "path": "forex-notification/pom.xml", "lang": "xml", "summary": "forex-notification Maven POM，依赖common-base/security/mybatis、nacos、knife4j、mail" }
+    }
+  ],
+  "edges": [
+    { "source": "file:forex-workflow/src/main/java/com/forex/workflow/adapter/controller/WorkflowController.java", "target": "com.forex.workflow.adapter.controller.WorkflowController", "type": "contains" },
+    { "source": "com.forex.workflow.adapter.controller.WorkflowController", "target": "WorkflowController.start", "type": "contains" },
+    { "source": "com.forex.workflow.adapter.controller.WorkflowController", "target": "WorkflowController.complete", "type": "contains" },
+    { "source": "com.forex.workflow.adapter.controller.WorkflowController", "target": "WorkflowController.getTask", "type": "contains" },
+    { "source": "com.forex.workflow.adapter.controller.WorkflowController", "target": "WorkflowController.pageQuery", "type": "contains" },
+    { "source": "com.forex.workflow.adapter.controller.WorkflowController", "target": "WorkflowController.getMyTasks", "type": "contains" },
+    { "source": "com.forex.workflow.adapter.controller.WorkflowController", "target": "com.forex.workflow.application.service.WorkflowAppService", "type": "imports" },
+    { "source": "com.forex.workflow.adapter.controller.WorkflowController", "target": "com.forex.workflow.adapter.dto.StartProcessReq", "type": "imports" },
+    { "source": "com.forex.workflow.adapter.controller.WorkflowController", "target": "com.forex.workflow.adapter.dto.CompleteTaskReq", "type": "imports" },
+    { "source": "com.forex.workflow.adapter.controller.WorkflowController", "target": "com.forex.workflow.adapter.dto.WorkflowTaskResp", "type": "imports" },
+    { "source": "com.forex.workflow.adapter.controller.WorkflowController", "target": "com.forex.workflow.domain.model.aggregate.WorkflowTask", "type": "imports" },
+    { "source": "file:forex-workflow/src/main/java/com/forex/workflow/adapter/dto/CompleteTaskReq.java", "target": "com.forex.workflow.adapter.dto.CompleteTaskReq", "type": "contains" },
+    { "source": "file:forex-workflow/src/main/java/com/forex/workflow/adapter/dto/StartProcessReq.java", "target": "com.forex.workflow.adapter.dto.StartProcessReq", "type": "contains" },
+    { "source": "file:forex-workflow/src/main/java/com/forex/workflow/adapter/dto/WorkflowTaskResp.java", "target": "com.forex.workflow.adapter.dto.WorkflowTaskResp", "type": "contains" },
+    { "source": "file:forex-workflow/src/main/java/com/forex/workflow/application/command/StartProcessCmd.java", "target": "com.forex.workflow.application.command.StartProcessCmd", "type": "contains" },
+    { "source": "file:forex-workflow/src/main/java/com/forex/workflow/application/service/WorkflowAppService.java", "target": "com.forex.workflow.application.service.WorkflowAppService", "type": "contains" },
+    { "source": "com.forex.workflow.application.service.WorkflowAppService", "target": "com.forex.workflow.domain.model.aggregate.WorkflowTask", "type": "imports" },
+    { "source": "com.forex.workflow.application.service.WorkflowAppService", "target": "com.forex.workflow.domain.repository.WorkflowTaskRepository", "type": "imports" },
+    { "source": "file:forex-workflow/src/main/java/com/forex/workflow/domain/model/aggregate/WorkflowTask.java", "target": "com.forex.workflow.domain.model.aggregate.WorkflowTask", "type": "contains" },
+    { "source": "file:forex-workflow/src/main/java/com/forex/workflow/domain/repository/WorkflowTaskRepository.java", "target": "com.forex.workflow.domain.repository.WorkflowTaskRepository", "type": "contains" },
+    { "source": "com.forex.workflow.domain.repository.WorkflowTaskRepository", "target": "com.forex.workflow.domain.model.aggregate.WorkflowTask", "type": "imports" },
+    { "source": "file:forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/WorkflowTaskMapper.java", "target": "com.forex.workflow.infrastructure.mapper.WorkflowTaskMapper", "type": "contains" },
+    { "source": "file:forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/WorkflowTaskPO.java", "target": "com.forex.workflow.infrastructure.persistence.WorkflowTaskPO", "type": "contains" },
+    { "source": "com.forex.workflow.infrastructure.persistence.WorkflowTaskPO", "target": "table:forex_workflow.t_workflow_task", "type": "related" },
+    { "source": "file:forex-workflow/src/main/java/com/forex/workflow/infrastructure/repository/WorkflowTaskRepositoryImpl.java", "target": "com.forex.workflow.infrastructure.repository.WorkflowTaskRepositoryImpl", "type": "contains" },
+    { "source": "com.forex.workflow.infrastructure.repository.WorkflowTaskRepositoryImpl", "target": "com.forex.workflow.domain.repository.WorkflowTaskRepository", "type": "imports" },
+    { "source": "com.forex.workflow.infrastructure.repository.WorkflowTaskRepositoryImpl", "target": "com.forex.workflow.infrastructure.mapper.WorkflowTaskMapper", "type": "imports" },
+    { "source": "com.forex.workflow.infrastructure.repository.WorkflowTaskRepositoryImpl", "target": "com.forex.workflow.infrastructure.persistence.WorkflowTaskPO", "type": "imports" },
+    { "source": "com.forex.workflow.infrastructure.repository.WorkflowTaskRepositoryImpl", "target": "com.forex.workflow.domain.model.aggregate.WorkflowTask", "type": "imports" },
+    { "source": "file:forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java", "target": "com.forex.workflow.WorkflowApplication", "type": "contains" },
+    { "source": "file:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notification.java", "target": "com.forex.notification.domain.model.aggregate.Notification", "type": "contains" },
+    { "source": "file:forex-notification/src/main/java/com/forex/notification/domain/repository/NotificationRepository.java", "target": "com.forex.notification.domain.repository.NotificationRepository", "type": "contains" },
+    { "source": "com.forex.notification.domain.repository.NotificationRepository", "target": "com.forex.notification.domain.model.aggregate.Notification", "type": "imports" },
+    { "source": "file:forex-notification/src/main/java/com/forex/notification/infrastructure/repository/NotificationRepositoryImpl.java", "target": "com.forex.notification.infrastructure.repository.NotificationRepositoryImpl", "type": "contains" },
+    { "source": "com.forex.notification.infrastructure.repository.NotificationRepositoryImpl", "target": "com.forex.notification.domain.repository.NotificationRepository", "type": "imports" },
+    { "source": "com.forex.notification.infrastructure.repository.NotificationRepositoryImpl", "target": "com.forex.notification.domain.model.aggregate.Notification", "type": "imports" },
+    { "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java", "target": "com.forex.notification.adapter.controller.NotificationController", "type": "contains" },
+    { "source": "com.forex.notification.adapter.controller.NotificationController", "target": "NotificationController.send", "type": "contains" },
+    { "source": "com.forex.notification.adapter.controller.NotificationController", "target": "NotificationController.getById", "type": "contains" },
+    { "source": "com.forex.notification.adapter.controller.NotificationController", "target": "NotificationController.pageQuery", "type": "contains" },
+    { "source": "com.forex.notification.adapter.controller.NotificationController", "target": "com.forex.notification.domain.model.aggregate.Notification", "type": "imports" },
+    { "source": "file:forex-notification/src/main/java/com/forex/notification/NotificationApplication.java", "target": "com.forex.notification.NotificationApplication", "type": "contains" },
+    { "source": "com.forex.workflow.domain.model.aggregate.WorkflowTask", "target": "com.forex.notification.domain.model.aggregate.Notification", "type": "related" },
+    { "source": "com.forex.workflow.WorkflowApplication", "target": "com.forex.notification.NotificationApplication", "type": "related" }
+  ]
+}

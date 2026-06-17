@@ -1,0 +1,398 @@
+{
+  "batchIndex": 13,
+  "module": "forex-common-security + forex-common-base (core) + forex-customer (start)",
+  "layer": "security infrastructure + common base model/exception/lock/idempotent + customer aggregate/service/controller",
+  "description": "安全模块(自动配置/JWT过滤/国密加密/权限注解) + 公共基础(统一响应/异常处理/领域基类/Redis锁/幂等) + 客户模块启动",
+  "nodes": [
+    {
+      "id": "file:forex-common-security/config/SecurityAutoConfiguration",
+      "type": "file",
+      "name": "SecurityAutoConfiguration.java",
+      "language": "java",
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java"
+    },
+    {
+      "id": "class:SecurityAutoConfiguration",
+      "type": "class",
+      "name": "SecurityAutoConfiguration",
+      "kind": "configuration",
+      "description": "安全自动配置类，启动时校验JWT密钥长度(≥32字符)，创建JwtUtil和Sm2Util Bean"
+    },
+    {
+      "id": "file:forex-common-security/filter/TokenAuthenticationFilter",
+      "type": "file",
+      "name": "TokenAuthenticationFilter.java",
+      "language": "java",
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java"
+    },
+    {
+      "id": "class:TokenAuthenticationFilter",
+      "type": "class",
+      "name": "TokenAuthenticationFilter",
+      "kind": "filter",
+      "description": "JWT令牌鉴权过滤器，从Authorization Header提取Bearer Token，校验后将用户信息设置到ThreadLocal"
+    },
+    {
+      "id": "file:forex-common-security/jwt/JwtUtil",
+      "type": "file",
+      "name": "JwtUtil.java",
+      "language": "java",
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java"
+    },
+    {
+      "id": "class:JwtUtil",
+      "type": "class",
+      "name": "JwtUtil",
+      "kind": "utility",
+      "description": "JWT工具类(HMAC-SHA256)，生成访问令牌(30min)/刷新令牌(7天)，含userId/roles/permissions声明"
+    },
+    {
+      "id": "file:forex-common-security/annotation/RequirePermission",
+      "type": "file",
+      "name": "RequirePermission.java",
+      "language": "java",
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java"
+    },
+    {
+      "id": "class:RequirePermission",
+      "type": "class",
+      "name": "@RequirePermission",
+      "kind": "annotation",
+      "description": "权限注解，支持AND/OR匹配模式"
+    },
+    {
+      "id": "file:forex-common-security/annotation/RequireRole",
+      "type": "file",
+      "name": "RequireRole.java",
+      "language": "java",
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java"
+    },
+    {
+      "id": "class:RequireRole",
+      "type": "class",
+      "name": "@RequireRole",
+      "kind": "annotation",
+      "description": "角色注解，支持AND/OR匹配模式"
+    },
+    {
+      "id": "file:forex-common-security/aspect/PermissionAspect",
+      "type": "file",
+      "name": "PermissionAspect.java",
+      "language": "java",
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java"
+    },
+    {
+      "id": "class:PermissionAspect",
+      "type": "class",
+      "name": "PermissionAspect",
+      "kind": "aop_aspect",
+      "description": "权限切面，拦截@RequireRole和@RequirePermission注解，从UserContextHolder获取用户信息校验"
+    },
+    {
+      "id": "file:forex-common-security/sm/Sm2Util",
+      "type": "file",
+      "name": "Sm2Util.java",
+      "language": "java",
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java"
+    },
+    {
+      "id": "class:Sm2Util",
+      "type": "class",
+      "name": "Sm2Util",
+      "kind": "utility",
+      "description": "国密SM2非对称加密工具类，基于Hutool-SM2，支持加密/解密/签名/验签"
+    },
+    {
+      "id": "file:forex-common-security/sm/Sm3Util",
+      "type": "file",
+      "name": "Sm3Util.java",
+      "language": "java",
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java"
+    },
+    {
+      "id": "class:Sm3Util",
+      "type": "class",
+      "name": "Sm3Util",
+      "kind": "utility",
+      "description": "国密SM3哈希工具类，基于Hutool-SM3，支持哈希计算与验证"
+    },
+    {
+      "id": "file:forex-common-security/sm/Sm4Util",
+      "type": "file",
+      "name": "Sm4Util.java",
+      "language": "java",
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java"
+    },
+    {
+      "id": "class:Sm4Util",
+      "type": "class",
+      "name": "Sm4Util",
+      "kind": "utility",
+      "description": "国密SM4对称加密工具类，基于Hutool-SM4，支持CBC/ECB模式"
+    },
+    {
+      "id": "file:forex-common-base/result/R",
+      "type": "file",
+      "name": "R.java",
+      "language": "java",
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java"
+    },
+    {
+      "id": "class:R",
+      "type": "class",
+      "name": "R<T>",
+      "kind": "dto",
+      "description": "统一API响应体，所有Controller返回R<T>，含code/message/data/traceId/timestamp"
+    },
+    {
+      "id": "file:forex-common-base/result/ResultCode",
+      "type": "file",
+      "name": "ResultCode.java",
+      "language": "java",
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    },
+    {
+      "id": "enum:ResultCode",
+      "type": "enum",
+      "name": "ResultCode",
+      "kind": "enum",
+      "description": "统一结果码枚举，定义SUCCESS/FAILURE/业务异常/风控拦截/额度不足等18种状态码"
+    },
+    {
+      "id": "file:forex-common-base/exception/BusinessException",
+      "type": "file",
+      "name": "BusinessException.java",
+      "language": "java",
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java"
+    },
+    {
+      "id": "class:BusinessException",
+      "type": "class",
+      "name": "BusinessException",
+      "kind": "exception",
+      "description": "业务异常，继承BaseException，默认使用BUSINESS_ERROR码"
+    },
+    {
+      "id": "file:forex-common-base/exception/GlobalExceptionHandler",
+      "type": "file",
+      "name": "GlobalExceptionHandler.java",
+      "language": "java",
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java"
+    },
+    {
+      "id": "class:GlobalExceptionHandler",
+      "type": "class",
+      "name": "GlobalExceptionHandler",
+      "kind": "exception_handler",
+      "description": "全局异常处理器(@RestControllerAdvice)，统一处理BusinessException/IllegalArgumentException/Exception"
+    },
+    {
+      "id": "file:forex-common-base/exception/BaseException",
+      "type": "file",
+      "name": "BaseException.java",
+      "language": "java",
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BaseException.java"
+    },
+    {
+      "id": "class:BaseException",
+      "type": "class",
+      "name": "BaseException",
+      "kind": "exception",
+      "description": "异常基类，含code和message字段"
+    },
+    {
+      "id": "file:forex-common-base/domain/BaseAggregate",
+      "type": "file",
+      "name": "BaseAggregate.java",
+      "language": "java",
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java"
+    },
+    {
+      "id": "class:BaseAggregate",
+      "type": "class",
+      "name": "BaseAggregate",
+      "kind": "base_class",
+      "description": "聚合根基类，提供createdAt/updatedAt/version审计字段和markUpdated乐观锁"
+    },
+    {
+      "id": "file:forex-common-base/domain/BaseEntity",
+      "type": "file",
+      "name": "BaseEntity.java",
+      "language": "java",
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseEntity.java"
+    },
+    {
+      "id": "class:BaseEntity",
+      "type": "class",
+      "name": "BaseEntity",
+      "kind": "base_class",
+      "description": "实体基类(序列化标记)"
+    },
+    {
+      "id": "file:forex-common-base/domain/BaseValueObject",
+      "type": "file",
+      "name": "BaseValueObject.java",
+      "language": "java",
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java"
+    },
+    {
+      "id": "class:BaseValueObject",
+      "type": "class",
+      "name": "BaseValueObject",
+      "kind": "base_class",
+      "description": "值对象基类，强制子类实现equals/hashCode"
+    },
+    {
+      "id": "file:forex-common-base/annotation/RedisLock",
+      "type": "file",
+      "name": "RedisLock.java",
+      "language": "java",
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RedisLock.java"
+    },
+    {
+      "id": "class:RedisLock",
+      "type": "class",
+      "name": "@RedisLock",
+      "kind": "annotation",
+      "description": "Redis分布式锁注解，支持SpEL表达式key、租期/等待时间配置"
+    },
+    {
+      "id": "file:forex-common-base/lock/RedisLockAspect",
+      "type": "file",
+      "name": "RedisLockAspect.java",
+      "language": "java",
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java"
+    },
+    {
+      "id": "class:RedisLockAspect",
+      "type": "class",
+      "name": "RedisLockAspect",
+      "kind": "aop_aspect",
+      "description": "分布式锁切面实现，基于Redisson的RLock，@ConditionalOnBean条件注入"
+    },
+    {
+      "id": "file:forex-common-base/annotation/Idempotent",
+      "type": "file",
+      "name": "Idempotent.java",
+      "language": "java",
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java"
+    },
+    {
+      "id": "class:Idempotent",
+      "type": "class",
+      "name": "@Idempotent",
+      "kind": "annotation",
+      "description": "幂等注解，基于Redis令牌机制防止重复提交，支持SpEL key和过期时间"
+    },
+    {
+      "id": "file:forex-common-base/idempotent/IdempotentAspect",
+      "type": "file",
+      "name": "IdempotentAspect.java",
+      "language": "java",
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java"
+    },
+    {
+      "id": "class:IdempotentAspect",
+      "type": "class",
+      "name": "IdempotentAspect",
+      "kind": "aop_aspect",
+      "description": "幂等切面实现，使用Redisson RBucket.setIfAbsent检测重复请求"
+    },
+    {
+      "id": "file:forex-customer/domain/model/aggregate/Customer",
+      "type": "file",
+      "name": "Customer.java",
+      "language": "java",
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java"
+    },
+    {
+      "id": "class:Customer",
+      "type": "class",
+      "name": "Customer",
+      "kind": "aggregate_root",
+      "description": "客户聚合根，管理客户信息/风险等级/尽职调查状态/启用禁用，含create和reconstitute工厂方法"
+    },
+    {
+      "id": "file:forex-customer/domain/model/dto/CustomerQuery",
+      "type": "file",
+      "name": "CustomerQuery.java",
+      "language": "java",
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerQuery.java"
+    },
+    {
+      "id": "class:CustomerQuery",
+      "type": "class",
+      "name": "CustomerQuery",
+      "kind": "query",
+      "description": "客户查询DTO，支持客户编号/名称/类型/证件/风险等级/状态等组合查询"
+    },
+    {
+      "id": "file:forex-customer/domain/model/dto/CustomerRegInfo",
+      "type": "file",
+      "name": "CustomerRegInfo.java",
+      "language": "java",
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java"
+    },
+    {
+      "id": "class:CustomerRegInfo",
+      "type": "class",
+      "name": "CustomerRegInfo",
+      "kind": "dto",
+      "description": "客户注册信息DTO，含客户类型/名称/证件/联系方式/风险等级等注册字段"
+    },
+    {
+      "id": "file:forex-customer/domain/service/CustomerDomainService",
+      "type": "file",
+      "name": "CustomerDomainService.java",
+      "language": "java",
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java"
+    },
+    {
+      "id": "class:CustomerDomainService",
+      "type": "class",
+      "name": "CustomerDomainService",
+      "kind": "domain_service",
+      "description": "客户领域服务，创建客户(含证件去重)/更新风险等级/执行尽职调查，发布CustomerCreatedEvent"
+    },
+    {
+      "id": "file:forex-customer/adapter/controller/CustomerController",
+      "type": "file",
+      "name": "CustomerController.java",
+      "language": "java",
+      "path": "forex-customer/src/main/java/com/forex/customer/adapter/controller/CustomerController.java"
+    },
+    {
+      "id": "class:CustomerController",
+      "type": "class",
+      "name": "CustomerController",
+      "kind": "controller",
+      "description": "客户管理REST控制器，提供创建/更新/查询/风险等级变更/信用额度校验扣减/尽职调查接口"
+    }
+  ],
+  "edges": [
+    { "source": "class:SecurityAutoConfiguration", "target": "class:JwtUtil", "type": "creates", "label": "创建JwtUtil Bean" },
+    { "source": "class:TokenAuthenticationFilter", "target": "class:JwtUtil", "type": "uses", "label": "调JWT解析验证" },
+    { "source": "class:PermissionAspect", "target": "class:RequirePermission", "type": "intercepts", "label": "拦截@RequirePermission" },
+    { "source": "class:PermissionAspect", "target": "class:RequireRole", "type": "intercepts", "label": "拦截@RequireRole" },
+    { "source": "class:RedisLockAspect", "target": "class:RedisLock", "type": "intercepts", "label": "拦截@RedisLock" },
+    { "source": "class:RedisLockAspect", "target": "class:SpelUtil", "type": "uses", "label": "解析锁key" },
+    { "source": "class:IdempotentAspect", "target": "class:Idempotent", "type": "intercepts", "label": "拦截@Idempotent" },
+    { "source": "class:IdempotentAspect", "target": "class:SpelUtil", "type": "uses", "label": "解析幂等key" },
+    { "source": "class:GlobalExceptionHandler", "target": "class:BusinessException", "type": "catches", "label": "捕获业务异常" },
+    { "source": "class:BusinessException", "target": "class:BaseException", "type": "extends", "label": "继承异常基类" },
+    { "source": "class:BusinessException", "target": "class:ResultCode", "type": "uses", "label": "引用结果码" },
+    { "source": "class:R", "target": "class:ResultCode", "type": "uses", "label": "设置响应码" },
+    { "source": "class:CustomerController", "target": "class:CustomerDomainService", "type": "calls", "label": "调用领域服务" },
+    { "source": "class:CustomerDomainService", "target": "class:Customer", "type": "manages", "label": "操作客户聚合根" },
+    { "source": "class:CustomerDomainService", "target": "class:CustomerRegInfo", "type": "accepts", "label": "接收注册信息" },
+    { "source": "class:Customer", "target": "class:BaseAggregate", "type": "extends", "label": "继承聚合根基类" },
+    { "source": "class:ClearingInstruction", "target": "class:BaseAggregate", "type": "extends", "label": "继承聚合根基类" },
+    { "source": "class:BaseValueObject", "target": "class:NettingPosition", "type": "inherited_by", "label": "值对象基类" }
+  ],
+  "summary": {
+    "totalFiles": 27,
+    "totalNodes": 48,
+    "totalEdges": 18,
+    "note": "SM2Util/SM3Util/SM4Util实际在sm包而非encrypt包。BaseAggregate/BaseEntity/BaseValueObject在domain包而非model包。RedisLock和Idempotent注解在annotation包。R在result包。"
+  }
+}

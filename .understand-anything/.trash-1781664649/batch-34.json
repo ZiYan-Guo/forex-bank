@@ -1,0 +1,399 @@
+{
+  "batchIndex": 34,
+  "module": "SQL (DML/DDL) — all modules",
+  "nodes": [
+    {
+      "id": "file:sql/hedge-accounting/init.sql",
+      "type": "file",
+      "name": "init.sql",
+      "properties": { "path": "sql/hedge-accounting/init.sql", "lang": "sql", "summary": "套期会计模块DDL：套期关系表+有效性测试表" }
+    },
+    {
+      "id": "table:forex_hedge_accounting.t_hedge_relationship",
+      "type": "table",
+      "name": "t_hedge_relationship",
+      "properties": { "schema": "forex_hedge_accounting", "summary": "套期关系表，记录套期类型/被套期项目/套期工具/IFRS标准/有效性比率" }
+    },
+    {
+      "id": "table:forex_hedge_accounting.t_hedge_effectiveness_test",
+      "type": "table",
+      "name": "t_hedge_effectiveness_test",
+      "properties": { "schema": "forex_hedge_accounting", "summary": "有效性测试表，记录测试日期/方法/结果/状态" }
+    },
+    {
+      "id": "file:sql/init-all.sql",
+      "type": "file",
+      "name": "init-all.sql",
+      "properties": { "path": "sql/init-all.sql", "lang": "sql", "summary": "全局数据库初始化脚本，创建所有微服务的数据库Schema" }
+    },
+    {
+      "id": "file:sql/margin/init.sql",
+      "type": "file",
+      "name": "init.sql",
+      "properties": { "path": "sql/margin/init.sql", "lang": "sql", "summary": "保证金模块DDL：保证金账户表+追缴记录表+水位线字段" }
+    },
+    {
+      "id": "table:forex_margin.t_margin_account",
+      "type": "table",
+      "name": "t_margin_account",
+      "properties": { "schema": "forex_margin", "summary": "保证金账户表，状态: PENDING/PAID/PARTIAL/CALLED/RELEASED/CANCELLED，含水位线" }
+    },
+    {
+      "id": "table:forex_margin.t_margin_call",
+      "type": "table",
+      "name": "t_margin_call",
+      "properties": { "schema": "forex_margin", "summary": "保证金追缴记录表，响应状态: PENDING/AGREED/DISPUTED" }
+    },
+    {
+      "id": "file:sql/notification/init.sql",
+      "type": "file",
+      "name": "init.sql",
+      "properties": { "path": "sql/notification/init.sql", "lang": "sql", "summary": "通知模块DDL：通知记录表+公告表" }
+    },
+    {
+      "id": "table:forex_notification.t_notification",
+      "type": "table",
+      "name": "t_notification",
+      "properties": { "schema": "forex_notification", "summary": "通知记录表，状态: PENDING/SENT/FAILED，支持SMS/EMAIL/APP/SYSTEM" }
+    },
+    {
+      "id": "table:forex_notification.t_notice",
+      "type": "table",
+      "name": "t_notice",
+      "properties": { "schema": "forex_notification", "summary": "公告表，发布状态: DRAFT/PUBLISHED/EXPIRED" }
+    },
+    {
+      "id": "file:sql/ocr/init.sql",
+      "type": "file",
+      "name": "init.sql",
+      "properties": { "path": "sql/ocr/init.sql", "lang": "sql", "summary": "OCR识别模块DDL：OCR识别任务表" }
+    },
+    {
+      "id": "table:forex_ocr.t_ocr_task",
+      "type": "table",
+      "name": "t_ocr_task",
+      "properties": { "schema": "forex_ocr", "summary": "OCR识别任务表，状态: UPLOADED/PROCESSING/COMPLETED/FAILED" }
+    },
+    {
+      "id": "file:sql/position/init.sql",
+      "type": "file",
+      "name": "init.sql",
+      "properties": { "path": "sql/position/init.sql", "lang": "sql", "summary": "敞口管理模块DDL：外汇敞口表+限额配置表+种子数据" }
+    },
+    {
+      "id": "table:forex_position.t_position",
+      "type": "table",
+      "name": "t_position",
+      "properties": { "schema": "forex_position", "summary": "外汇敞口表，存储多头/空头/净头寸/限额/风险等级(NORMAL/WARNING/BREACH)" }
+    },
+    {
+      "id": "table:forex_position.t_position_limit_config",
+      "type": "table",
+      "name": "t_position_limit_config",
+      "properties": { "schema": "forex_position", "summary": "敞口限额配置表，按币种+限额类型(OVERALL/TRADER/INTRADAY/OVERNIGHT)配置" }
+    },
+    {
+      "id": "file:sql/rate/init.sql",
+      "type": "file",
+      "name": "init.sql",
+      "properties": { "path": "sql/rate/init.sql", "lang": "sql", "summary": "汇率管理模块DDL：汇率牌价表+发布渠道配置表+发布日志表" }
+    },
+    {
+      "id": "table:forex_rate.t_exchange_rate",
+      "type": "table",
+      "name": "t_exchange_rate",
+      "properties": { "schema": "forex_rate", "summary": "汇率牌价表，bid/ask/mid汇率，来源CFETS/MANUAL/MARKET" }
+    },
+    {
+      "id": "table:forex_rate.t_rate_publish_config",
+      "type": "table",
+      "name": "t_rate_publish_config",
+      "properties": { "schema": "forex_rate", "summary": "牌价发布渠道配置表，CORE/EBANK/MBANK/COUNTER渠道" }
+    },
+    {
+      "id": "table:forex_rate.t_rate_publish_log",
+      "type": "table",
+      "name": "t_rate_publish_log",
+      "properties": { "schema": "forex_rate", "summary": "牌价发布日志表" }
+    },
+    {
+      "id": "file:sql/reporting/init.sql",
+      "type": "file",
+      "name": "init.sql",
+      "properties": { "path": "sql/reporting/init.sql", "lang": "sql", "summary": "监管报送模块DDL：国际收支申报表+结售汇申报表+资本项目申报表+监管报送日志表" }
+    },
+    {
+      "id": "table:forex_reporting.t_balance_of_payment",
+      "type": "table",
+      "name": "t_balance_of_payment",
+      "properties": { "schema": "forex_reporting", "summary": "国际收支申报表，状态: DRAFT/READY/SUBMITTED/ACCEPTED/REJECTED/CORRECTED" }
+    },
+    {
+      "id": "table:forex_reporting.t_forex_settlement_report",
+      "type": "table",
+      "name": "t_forex_settlement_report",
+      "properties": { "schema": "forex_reporting", "summary": "结售汇申报表" }
+    },
+    {
+      "id": "table:forex_reporting.t_capital_account_report",
+      "type": "table",
+      "name": "t_capital_account_report",
+      "properties": { "schema": "forex_reporting", "summary": "资本项目与外汇账户申报表" }
+    },
+    {
+      "id": "table:forex_reporting.t_regulatory_submit_log",
+      "type": "table",
+      "name": "t_regulatory_submit_log",
+      "properties": { "schema": "forex_reporting", "summary": "监管报送日志表，记录批量报送结果" }
+    },
+    {
+      "id": "file:sql/risk/init.sql",
+      "type": "file",
+      "name": "init.sql",
+      "properties": { "path": "sql/risk/init.sql", "lang": "sql", "summary": "风险监测模块DDL：风险监测日志表+监测规则表+风险报告表+风控参数配置表+抽查规则表+种子数据" }
+    },
+    {
+      "id": "table:forex_risk.t_risk_monitor_log",
+      "type": "table",
+      "name": "t_risk_monitor_log",
+      "properties": { "schema": "forex_risk", "summary": "风险监测日志表，记录AML/制裁/可疑/大额/频繁交易监测结果" }
+    },
+    {
+      "id": "table:forex_risk.t_monitor_rule",
+      "type": "table",
+      "name": "t_monitor_rule",
+      "properties": { "schema": "forex_risk", "summary": "监测规则表，支持阈值/模式/黑名单/频率规则类型" }
+    },
+    {
+      "id": "table:forex_risk.t_risk_report",
+      "type": "table",
+      "name": "t_risk_report",
+      "properties": { "schema": "forex_risk", "summary": "风险报告表，可疑交易/大额交易/反洗钱报告" }
+    },
+    {
+      "id": "table:forex_risk.t_risk_param_config",
+      "type": "table",
+      "name": "t_risk_param_config",
+      "properties": { "schema": "forex_risk", "summary": "风控参数配置表，含POSITION_LIMIT/STOP_LOSS/MARGIN_CALL/ALERT_THRESHOLD参数" }
+    },
+    {
+      "id": "table:forex_risk.t_sampling_rule",
+      "type": "table",
+      "name": "t_sampling_rule",
+      "properties": { "schema": "forex_risk", "summary": "资本项目便利化抽查规则表，按比例抽样" }
+    },
+    {
+      "id": "file:sql/saccr/init.sql",
+      "type": "file",
+      "name": "init.sql",
+      "properties": { "path": "sql/saccr/init.sql", "lang": "sql", "summary": "SA-CCR计量模块DDL：SA-CCR计算结果表+ISDA SIMM计算结果表" }
+    },
+    {
+      "id": "table:forex_saccr.t_saccr_result",
+      "type": "table",
+      "name": "t_saccr_result",
+      "properties": { "schema": "forex_saccr", "summary": "SA-CCR计算结果表，存储RC/PFE/Exposure/Alpha等监管计量指标" }
+    },
+    {
+      "id": "table:forex_saccr.t_simm_result",
+      "type": "table",
+      "name": "t_simm_result",
+      "properties": { "schema": "forex_saccr", "summary": "ISDA SIMM计算结果表，存储Delta/Vega/曲率保证金和敏感度数据" }
+    },
+    {
+      "id": "file:sql/schedule/init.sql",
+      "type": "file",
+      "name": "init.sql",
+      "properties": { "path": "sql/schedule/init.sql", "lang": "sql", "summary": "定时任务模块DDL：任务配置表+任务执行日志表+默认种子任务" }
+    },
+    {
+      "id": "table:forex_schedule.t_schedule_job",
+      "type": "table",
+      "name": "t_schedule_job",
+      "properties": { "schema": "forex_schedule", "summary": "定时任务配置表，含cron表达式/状态/执行记录" }
+    },
+    {
+      "id": "table:forex_schedule.t_job_log",
+      "type": "table",
+      "name": "t_job_log",
+      "properties": { "schema": "forex_schedule", "summary": "任务执行日志表，记录每次任务执行的开始/结束/状态/结果" }
+    },
+    {
+      "id": "file:sql/settlement/init.sql",
+      "type": "file",
+      "name": "init.sql",
+      "properties": { "path": "sql/settlement/init.sql", "lang": "sql", "summary": "国际结算模块DDL：信用证表+跟单托收表+银行保函表" }
+    },
+    {
+      "id": "table:forex_settlement.t_letter_of_credit",
+      "type": "table",
+      "name": "t_letter_of_credit",
+      "properties": { "schema": "forex_settlement", "summary": "信用证表，涵盖进口/出口/备用/国内信用证全生命周期管理" }
+    },
+    {
+      "id": "table:forex_settlement.t_documentary_collection",
+      "type": "table",
+      "name": "t_documentary_collection",
+      "properties": { "schema": "forex_settlement", "summary": "跟单托收表，支持DP/DA方式" }
+    },
+    {
+      "id": "table:forex_settlement.t_bank_guarantee",
+      "type": "table",
+      "name": "t_bank_guarantee",
+      "properties": { "schema": "forex_settlement", "summary": "银行保函表，支持投标/履约/预付款/付款/质量保函" }
+    },
+    {
+      "id": "file:sql/trading/init.sql",
+      "type": "file",
+      "name": "init.sql",
+      "properties": { "path": "sql/trading/init.sql", "lang": "sql", "summary": "外汇买卖与衍生交易模块DDL：外汇交易表+交易头寸表+交易生命周期表" }
+    },
+    {
+      "id": "table:forex_trading.t_fx_trade",
+      "type": "table",
+      "name": "t_fx_trade",
+      "properties": { "schema": "forex_trading", "summary": "外汇交易表，支持SPOT/FORWARD/SWAP/OPTION交易类型" }
+    },
+    {
+      "id": "table:forex_trading.t_trade_position",
+      "type": "table",
+      "name": "t_trade_position",
+      "properties": { "schema": "forex_trading", "summary": "交易头寸表，按日期/货币对/类型记录净头寸和盯市估值" }
+    },
+    {
+      "id": "table:forex_trading.t_trade_lifecycle",
+      "type": "table",
+      "name": "t_trade_lifecycle",
+      "properties": { "schema": "forex_trading", "summary": "交易生命周期表，记录创建/确认/执行/展期/平仓/结算等事件" }
+    },
+    {
+      "id": "file:sql/valuation/init.sql",
+      "type": "file",
+      "name": "init.sql",
+      "properties": { "path": "sql/valuation/init.sql", "lang": "sql", "summary": "衍生品估值模块DDL：估值结果表+估值模型配置表+损益归因表" }
+    },
+    {
+      "id": "table:forex_valuation.t_valuation_result",
+      "type": "table",
+      "name": "t_valuation_result",
+      "properties": { "schema": "forex_valuation", "summary": "估值结果表，支持BS/GK/DCF/MONTE_CARLO估值方法" }
+    },
+    {
+      "id": "table:forex_valuation.t_valuation_model_config",
+      "type": "table",
+      "name": "t_valuation_model_config",
+      "properties": { "schema": "forex_valuation", "summary": "估值模型配置表" }
+    },
+    {
+      "id": "table:forex_valuation.t_pnl_attribution",
+      "type": "table",
+      "name": "t_pnl_attribution",
+      "properties": { "schema": "forex_valuation", "summary": "损益归因表，按Delta/Theta/Gamma/Vega/息差/交易操作维度分解损益" }
+    },
+    {
+      "id": "file:sql/workflow/init.sql",
+      "type": "file",
+      "name": "init.sql",
+      "properties": { "path": "sql/workflow/init.sql", "lang": "sql", "summary": "工作流管理模块DDL：工作流任务表+审批记录表" }
+    },
+    {
+      "id": "table:forex_workflow.t_workflow_task",
+      "type": "table",
+      "name": "t_workflow_task",
+      "properties": { "schema": "forex_workflow", "summary": "工作流任务表，状态: PENDING/PROCESSING/APPROVED/REJECTED/CANCELLED" }
+    },
+    {
+      "id": "table:forex_workflow.t_approval_record",
+      "type": "table",
+      "name": "t_approval_record",
+      "properties": { "schema": "forex_workflow", "summary": "审批记录表，记录每一步审批的审批人/结果/意见" }
+    },
+    {
+      "id": "file:sql/cashpool/init.sql",
+      "type": "file",
+      "name": "init.sql",
+      "properties": { "path": "sql/cashpool/init.sql", "lang": "sql", "summary": "资金池管理模块DDL：资金池主账户表+资金池成员表+境外放款合同表" }
+    },
+    {
+      "id": "table:forex_cashpool.t_cash_pool",
+      "type": "table",
+      "name": "t_cash_pool",
+      "properties": { "schema": "forex_cashpool", "summary": "资金池主账户表，状态: ACTIVE/SUSPENDED/CLOSED" }
+    },
+    {
+      "id": "table:forex_cashpool.t_pool_member",
+      "type": "table",
+      "name": "t_pool_member",
+      "properties": { "schema": "forex_cashpool", "summary": "资金池成员表，境内/境外成员，含结算模式(实时/每日/每周)" }
+    },
+    {
+      "id": "table:forex_cashpool.t_overseas_lending",
+      "type": "table",
+      "name": "t_overseas_lending",
+      "properties": { "schema": "forex_cashpool", "summary": "境外放款合同表，状态: DRAFT/SUBMITTED/APPROVED/ACTIVE/REPAID/OVERDUE/CANCELLED" }
+    }
+  ],
+  "edges": [
+    { "source": "file:sql/hedge-accounting/init.sql", "target": "table:forex_hedge_accounting.t_hedge_relationship", "type": "contains" },
+    { "source": "file:sql/hedge-accounting/init.sql", "target": "table:forex_hedge_accounting.t_hedge_effectiveness_test", "type": "contains" },
+    { "source": "table:forex_hedge_accounting.t_hedge_relationship", "target": "table:forex_hedge_accounting.t_hedge_effectiveness_test", "type": "related" },
+    { "source": "file:sql/margin/init.sql", "target": "table:forex_margin.t_margin_account", "type": "contains" },
+    { "source": "file:sql/margin/init.sql", "target": "table:forex_margin.t_margin_call", "type": "contains" },
+    { "source": "table:forex_margin.t_margin_account", "target": "table:forex_margin.t_margin_call", "type": "related" },
+    { "source": "file:sql/notification/init.sql", "target": "table:forex_notification.t_notification", "type": "contains" },
+    { "source": "file:sql/notification/init.sql", "target": "table:forex_notification.t_notice", "type": "contains" },
+    { "source": "file:sql/ocr/init.sql", "target": "table:forex_ocr.t_ocr_task", "type": "contains" },
+    { "source": "file:sql/position/init.sql", "target": "table:forex_position.t_position", "type": "contains" },
+    { "source": "file:sql/position/init.sql", "target": "table:forex_position.t_position_limit_config", "type": "contains" },
+    { "source": "table:forex_position.t_position", "target": "table:forex_position.t_position_limit_config", "type": "related" },
+    { "source": "file:sql/rate/init.sql", "target": "table:forex_rate.t_exchange_rate", "type": "contains" },
+    { "source": "file:sql/rate/init.sql", "target": "table:forex_rate.t_rate_publish_config", "type": "contains" },
+    { "source": "file:sql/rate/init.sql", "target": "table:forex_rate.t_rate_publish_log", "type": "contains" },
+    { "source": "table:forex_rate.t_exchange_rate", "target": "table:forex_rate.t_rate_publish_config", "type": "related" },
+    { "source": "table:forex_rate.t_rate_publish_config", "target": "table:forex_rate.t_rate_publish_log", "type": "related" },
+    { "source": "file:sql/reporting/init.sql", "target": "table:forex_reporting.t_balance_of_payment", "type": "contains" },
+    { "source": "file:sql/reporting/init.sql", "target": "table:forex_reporting.t_forex_settlement_report", "type": "contains" },
+    { "source": "file:sql/reporting/init.sql", "target": "table:forex_reporting.t_capital_account_report", "type": "contains" },
+    { "source": "file:sql/reporting/init.sql", "target": "table:forex_reporting.t_regulatory_submit_log", "type": "contains" },
+    { "source": "table:forex_reporting.t_balance_of_payment", "target": "table:forex_reporting.t_forex_settlement_report", "type": "related" },
+    { "source": "table:forex_reporting.t_forex_settlement_report", "target": "table:forex_reporting.t_capital_account_report", "type": "related" },
+    { "source": "table:forex_reporting.t_capital_account_report", "target": "table:forex_reporting.t_regulatory_submit_log", "type": "related" },
+    { "source": "file:sql/risk/init.sql", "target": "table:forex_risk.t_risk_monitor_log", "type": "contains" },
+    { "source": "file:sql/risk/init.sql", "target": "table:forex_risk.t_monitor_rule", "type": "contains" },
+    { "source": "file:sql/risk/init.sql", "target": "table:forex_risk.t_risk_report", "type": "contains" },
+    { "source": "file:sql/risk/init.sql", "target": "table:forex_risk.t_risk_param_config", "type": "contains" },
+    { "source": "file:sql/risk/init.sql", "target": "table:forex_risk.t_sampling_rule", "type": "contains" },
+    { "source": "table:forex_risk.t_monitor_rule", "target": "table:forex_risk.t_risk_monitor_log", "type": "related" },
+    { "source": "table:forex_risk.t_risk_monitor_log", "target": "table:forex_risk.t_risk_report", "type": "related" },
+    { "source": "file:sql/saccr/init.sql", "target": "table:forex_saccr.t_saccr_result", "type": "contains" },
+    { "source": "file:sql/saccr/init.sql", "target": "table:forex_saccr.t_simm_result", "type": "contains" },
+    { "source": "table:forex_saccr.t_saccr_result", "target": "table:forex_saccr.t_simm_result", "type": "related" },
+    { "source": "file:sql/schedule/init.sql", "target": "table:forex_schedule.t_schedule_job", "type": "contains" },
+    { "source": "file:sql/schedule/init.sql", "target": "table:forex_schedule.t_job_log", "type": "contains" },
+    { "source": "table:forex_schedule.t_schedule_job", "target": "table:forex_schedule.t_job_log", "type": "related" },
+    { "source": "file:sql/settlement/init.sql", "target": "table:forex_settlement.t_letter_of_credit", "type": "contains" },
+    { "source": "file:sql/settlement/init.sql", "target": "table:forex_settlement.t_documentary_collection", "type": "contains" },
+    { "source": "file:sql/settlement/init.sql", "target": "table:forex_settlement.t_bank_guarantee", "type": "contains" },
+    { "source": "file:sql/trading/init.sql", "target": "table:forex_trading.t_fx_trade", "type": "contains" },
+    { "source": "file:sql/trading/init.sql", "target": "table:forex_trading.t_trade_position", "type": "contains" },
+    { "source": "file:sql/trading/init.sql", "target": "table:forex_trading.t_trade_lifecycle", "type": "contains" },
+    { "source": "table:forex_trading.t_fx_trade", "target": "table:forex_trading.t_trade_lifecycle", "type": "related" },
+    { "source": "table:forex_trading.t_fx_trade", "target": "table:forex_trading.t_trade_position", "type": "related" },
+    { "source": "file:sql/valuation/init.sql", "target": "table:forex_valuation.t_valuation_result", "type": "contains" },
+    { "source": "file:sql/valuation/init.sql", "target": "table:forex_valuation.t_valuation_model_config", "type": "contains" },
+    { "source": "file:sql/valuation/init.sql", "target": "table:forex_valuation.t_pnl_attribution", "type": "contains" },
+    { "source": "table:forex_valuation.t_valuation_result", "target": "table:forex_valuation.t_valuation_model_config", "type": "related" },
+    { "source": "table:forex_valuation.t_valuation_result", "target": "table:forex_valuation.t_pnl_attribution", "type": "related" },
+    { "source": "file:sql/workflow/init.sql", "target": "table:forex_workflow.t_workflow_task", "type": "contains" },
+    { "source": "file:sql/workflow/init.sql", "target": "table:forex_workflow.t_approval_record", "type": "contains" },
+    { "source": "table:forex_workflow.t_workflow_task", "target": "table:forex_workflow.t_approval_record", "type": "related" },
+    { "source": "file:sql/cashpool/init.sql", "target": "table:forex_cashpool.t_cash_pool", "type": "contains" },
+    { "source": "file:sql/cashpool/init.sql", "target": "table:forex_cashpool.t_pool_member", "type": "contains" },
+    { "source": "file:sql/cashpool/init.sql", "target": "table:forex_cashpool.t_overseas_lending", "type": "contains" },
+    { "source": "table:forex_cashpool.t_cash_pool", "target": "table:forex_cashpool.t_pool_member", "type": "related" },
+    { "source": "table:forex_cashpool.t_cash_pool", "target": "table:forex_cashpool.t_overseas_lending", "type": "related" },
+    { "source": "table:forex_margin.t_margin_account", "target": "table:forex_position.t_position", "type": "related" },
+    { "source": "table:forex_position.t_position", "target": "table:forex_trading.t_trade_position", "type": "related" },
+    { "source": "table:forex_workflow.t_workflow_task", "target": "table:forex_notification.t_notification", "type": "related" }
+  ]
+}

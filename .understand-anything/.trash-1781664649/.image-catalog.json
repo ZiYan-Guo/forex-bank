@@ -1,0 +1,31 @@
+{
+  "catalog": "Image screenshots received for project context",
+  "received_at": "2026-06-17",
+  "images": [
+    {
+      "id": "img-batch-6",
+      "description": "forex-ai module file listing via `find` command",
+      "purpose": "Identified actual files in forex-ai module (infrastructure/domain/application/adapter)"
+    },
+    {
+      "id": "img-batch-7",
+      "description": "forex-auth module file listing via `find` command",
+      "purpose": "Identified actual files in forex-auth module (security/config/controllers/domain/infrastructure)"
+    },
+    {
+      "id": "img-batch-8",
+      "description": "forex-web Vue frontend file listing via `find` command (first set)",
+      "purpose": "Identified Vue views (forex-exchange, bank-dashboard, etc.) and API layers"
+    },
+    {
+      "id": "img-batch-9",
+      "description": "forex-web Vue frontend file listing via `find` command (second set)",
+      "purpose": "Identified additional Vue components (rate-chart, risk-gauge, stores, utilities)"
+    },
+    {
+      "id": "img-batch-10",
+      "description": "Java backend modules file listing via `find` command",
+      "purpose": "Identified files in forex-bookkeeping, forex-cashpool, forex-hedge-accounting"
+    }
+  ]
+}

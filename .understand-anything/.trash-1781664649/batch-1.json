@@ -1,0 +1,89 @@
+{
+  "nodes": [
+    {
+      "id": "file:API_SECURITY_GUIDE.md",
+      "type": "file",
+      "name": "API 安全增强指南",
+      "filePath": "API_SECURITY_GUIDE.md",
+      "summary": "API 安全增强指南文档，涵盖权限控制（@RequirePermission）、限流防护（@RateLimit）、输入验证（@ValidateInput）、响应头安全配置、SQL注入防护及安全最佳实践等内容。",
+      "tags": ["security", "api", "guide", "documentation"],
+      "complexity": "moderate",
+      "languageNotes": "使用 Markdown 编写，包含大量 Java 代码示例"
+    },
+    {
+      "id": "file:IMPROVEMENTS.md",
+      "type": "file",
+      "name": "改进清单文档",
+      "filePath": "IMPROVEMENTS.md",
+      "summary": "项目改进清单，记录已完成的核心增强功能（审计日志系统、幂等性保护、乐观锁与版本控制、聚合根验证完善、测试框架基础）及下一步改进计划（P1/P2优先级）。",
+      "tags": ["improvements", "changelog", "documentation"],
+      "complexity": "moderate",
+      "languageNotes": "包含 Java 和 SQL 代码示例及分阶段迁移计划"
+    },
+    {
+      "id": "file:LICENSE",
+      "type": "file",
+      "name": "Apache 2.0 许可证",
+      "filePath": "LICENSE",
+      "summary": "Apache License 2.0 开源许可证全文，定义软件使用、复制、分发、专利授权等条款。",
+      "tags": ["license", "legal", "apache"],
+      "complexity": "simple",
+      "languageNotes": "标准法律文本，英文原文"
+    },
+    {
+      "id": "file:README.md",
+      "type": "file",
+      "name": "项目自述文档",
+      "filePath": "README.md",
+      "summary": "银行外汇系统完整项目说明，涵盖技术栈（JDK17、Spring Boot 3.2.5、Spring Cloud Alibaba）、架构设计（DDD四层架构）、项目模块结构、快速启动指南、安全特性、数据库概览、API概览及角色设计。",
+      "tags": ["readme", "documentation", "architecture", "overview"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:pom.xml",
+      "type": "file",
+      "name": "Maven 父 POM",
+      "filePath": "pom.xml",
+      "summary": "Maven 多模块父 POM，定义模块列表（含 forex-common-base/security/mybatis、forex-gateway、forex-auth、forex-account 等 23 个模块）、统一版本管理（Spring Boot 3.2.5、MyBatis-Plus 3.5.5、Sentinel 1.8.6 等）及公共依赖配置。",
+      "tags": ["maven", "pom", "build", "dependency-management"],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:README.md",
+      "target": "file:API_SECURITY_GUIDE.md",
+      "type": "documents",
+      "direction": "undirected",
+      "weight": 0.6
+    },
+    {
+      "source": "file:README.md",
+      "target": "file:IMPROVEMENTS.md",
+      "type": "documents",
+      "direction": "undirected",
+      "weight": 0.5
+    },
+    {
+      "source": "file:README.md",
+      "target": "file:pom.xml",
+      "type": "documents",
+      "direction": "undirected",
+      "weight": 0.7
+    },
+    {
+      "source": "file:README.md",
+      "target": "file:LICENSE",
+      "type": "documents",
+      "direction": "undirected",
+      "weight": 0.3
+    },
+    {
+      "source": "file:pom.xml",
+      "target": "file:IMPROVEMENTS.md",
+      "type": "documents",
+      "direction": "undirected",
+      "weight": 0.4
+    }
+  ]
+}

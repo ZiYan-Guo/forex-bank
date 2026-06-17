@@ -1,0 +1,300 @@
+{
+  "batchIndex": 10,
+  "module": "forex-backend (会计核算/现金池/套保会计)",
+  "timestamp": "2026-06-17T00:00:00Z",
+  "nodes": [
+    {
+      "id": "file:forex-bk/.../AccountingEntry.java",
+      "type": "file",
+      "label": "AccountingEntry.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/accounting/AccountingEntry.java", "language": "java", "layer": "domain", "module": "forex-bookkeeping" }
+    },
+    {
+      "id": "class:AccountingEntry",
+      "type": "class",
+      "label": "AccountingEntry",
+      "properties": { "description": "会计分录聚合根 - 借贷分录、科目平衡校验、过账/冲销", "stereotype": "aggregate-root", "module": "forex-bookkeeping", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-bk/.../AccountBalance.java",
+      "type": "file",
+      "label": "AccountBalance.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/accounting/AccountBalance.java", "language": "java", "layer": "domain", "module": "forex-bookkeeping" }
+    },
+    {
+      "id": "class:AccountBalance",
+      "type": "class",
+      "label": "AccountBalance",
+      "properties": { "description": "科目余额聚合根 - 期初/期末/借贷方累计、更新余额", "stereotype": "aggregate-root", "module": "forex-bookkeeping", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-bk/.../GeneralLedger.java",
+      "type": "file",
+      "label": "GeneralLedger.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/ledger/GeneralLedger.java", "language": "java", "layer": "domain", "module": "forex-bookkeeping" }
+    },
+    {
+      "id": "class:GeneralLedger",
+      "type": "class",
+      "label": "GeneralLedger",
+      "properties": { "description": "总账聚合根 - 科目汇总、试算平衡、期末结转", "stereotype": "aggregate-root", "module": "forex-bookkeeping", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-bk/.../BookingAppService.java",
+      "type": "file",
+      "label": "BookingAppService.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/BookingAppService.java", "language": "java", "layer": "application", "module": "forex-bookkeeping" }
+    },
+    {
+      "id": "class:BookingAppService",
+      "type": "class",
+      "label": "BookingAppService",
+      "properties": { "description": "记账应用服务 - 会计入账、汇率重估、分录冲销、科目余额查询", "stereotype": "application-service", "module": "forex-bookkeeping", "layer": "application" }
+    },
+    {
+      "id": "file:forex-bk/.../ForexValuationService.java",
+      "type": "file",
+      "label": "ForexValuationService.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/ForexValuationService.java", "language": "java", "layer": "domain", "module": "forex-bookkeeping" }
+    },
+    {
+      "id": "class:ForexValuationService",
+      "type": "class",
+      "label": "ForexValuationService",
+      "properties": { "description": "外汇估值领域服务 - 市值重估、汇兑损益计算、估值调整", "stereotype": "domain-service", "module": "forex-bookkeeping", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-bk/.../AccountingBookRepository.java",
+      "type": "file",
+      "label": "AccountingBookRepository.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/AccountingBookRepository.java", "language": "java", "layer": "domain", "module": "forex-bookkeeping" }
+    },
+    {
+      "id": "interface:AccountingBookRepository",
+      "type": "interface",
+      "label": "AccountingBookRepository",
+      "properties": { "description": "会计账簿仓储接口", "stereotype": "repository", "module": "forex-bookkeeping", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-bk/.../AccountBalanceRepository.java",
+      "type": "file",
+      "label": "AccountBalanceRepository.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/AccountBalanceRepository.java", "language": "java", "layer": "domain", "module": "forex-bookkeeping" }
+    },
+    {
+      "id": "interface:AccountBalanceRepository",
+      "type": "interface",
+      "label": "AccountBalanceRepository",
+      "properties": { "description": "科目余额仓储接口", "stereotype": "repository", "module": "forex-bookkeeping", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-bk/.../AccountingEntryRepository.java",
+      "type": "file",
+      "label": "AccountingEntryRepository.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/AccountingEntryRepository.java", "language": "java", "layer": "domain", "module": "forex-bookkeeping" }
+    },
+    {
+      "id": "interface:AccountingEntryRepository",
+      "type": "interface",
+      "label": "AccountingEntryRepository",
+      "properties": { "description": "会计分录仓储接口", "stereotype": "repository", "module": "forex-bookkeeping", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-bk/.../GeneralLedgerRepository.java",
+      "type": "file",
+      "label": "GeneralLedgerRepository.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/GeneralLedgerRepository.java", "language": "java", "layer": "domain", "module": "forex-bookkeeping" }
+    },
+    {
+      "id": "interface:GeneralLedgerRepository",
+      "type": "interface",
+      "label": "GeneralLedgerRepository",
+      "properties": { "description": "总账仓储接口", "stereotype": "repository", "module": "forex-bookkeeping", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-cp/.../CashPool.java",
+      "type": "file",
+      "label": "CashPool.java",
+      "properties": { "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/aggregate/CashPool.java", "language": "java", "layer": "domain", "module": "forex-cashpool" }
+    },
+    {
+      "id": "class:CashPool",
+      "type": "class",
+      "label": "CashPool",
+      "properties": { "description": "现金池聚合根 - 资金归集/下拨、头寸管理、内部计价", "stereotype": "aggregate-root", "module": "forex-cashpool", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-cp/.../CashPoolTransfer.java",
+      "type": "file",
+      "label": "CashPoolTransfer.java",
+      "properties": { "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/entity/CashPoolTransfer.java", "language": "java", "layer": "domain", "module": "forex-cashpool" }
+    },
+    {
+      "id": "class:CashPoolTransfer",
+      "type": "class",
+      "label": "CashPoolTransfer",
+      "properties": { "description": "资金调拨实体 - 归集/下拨方向、金额、状态机", "stereotype": "entity", "module": "forex-cashpool", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-cp/.../CashPoolPosition.java",
+      "type": "file",
+      "label": "CashPoolPosition.java",
+      "properties": { "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/entity/CashPoolPosition.java", "language": "java", "layer": "domain", "module": "forex-cashpool" }
+    },
+    {
+      "id": "class:CashPoolPosition",
+      "type": "class",
+      "label": "CashPoolPosition",
+      "properties": { "description": "头寸实体 - 余额、可用额度、币种、冻结金额", "stereotype": "entity", "module": "forex-cashpool", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-cp/.../CashPoolAppService.java",
+      "type": "file",
+      "label": "CashPoolAppService.java",
+      "properties": { "path": "forex-cashpool/src/main/java/com/forex/cashpool/application/CashPoolAppService.java", "language": "java", "layer": "application", "module": "forex-cashpool" }
+    },
+    {
+      "id": "class:CashPoolAppService",
+      "type": "class",
+      "label": "CashPoolAppService",
+      "properties": { "description": "现金池应用服务 - 归集/下拨、头寸查询、调拨审批", "stereotype": "application-service", "module": "forex-cashpool", "layer": "application" }
+    },
+    {
+      "id": "file:forex-cp/.../CashPoolDomainService.java",
+      "type": "file",
+      "label": "CashPoolDomainService.java",
+      "properties": { "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java", "language": "java", "layer": "domain", "module": "forex-cashpool" }
+    },
+    {
+      "id": "class:CashPoolDomainService",
+      "type": "class",
+      "label": "CashPoolDomainService",
+      "properties": { "description": "现金池领域服务 - 调拨策略（目标余额/比例分配）、内部计价、头寸限额校验", "stereotype": "domain-service", "module": "forex-cashpool", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-cp/.../CashPoolRepository.java",
+      "type": "file",
+      "label": "CashPoolRepository.java",
+      "properties": { "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/repository/CashPoolRepository.java", "language": "java", "layer": "domain", "module": "forex-cashpool" }
+    },
+    {
+      "id": "interface:CashPoolRepository",
+      "type": "interface",
+      "label": "CashPoolRepository",
+      "properties": { "description": "现金池仓储接口", "stereotype": "repository", "module": "forex-cashpool", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-cp/.../CashPoolTransferRepository.java",
+      "type": "file",
+      "label": "CashPoolTransferRepository.java",
+      "properties": { "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/repository/CashPoolTransferRepository.java", "language": "java", "layer": "domain", "module": "forex-cashpool" }
+    },
+    {
+      "id": "interface:CashPoolTransferRepository",
+      "type": "interface",
+      "label": "CashPoolTransferRepository",
+      "properties": { "description": "资金调拨仓储接口", "stereotype": "repository", "module": "forex-cashpool", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-ha/.../HedgeDeal.java",
+      "type": "file",
+      "label": "HedgeDeal.java",
+      "properties": { "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/domain/aggregate/HedgeDeal.java", "language": "java", "layer": "domain", "module": "forex-hedge-accounting" }
+    },
+    {
+      "id": "class:HedgeDeal",
+      "type": "class",
+      "label": "HedgeDeal",
+      "properties": { "description": "套保交易聚合根 - 远期/掉期/期权合约管理、交割、展期、平仓", "stereotype": "aggregate-root", "module": "forex-hedge-accounting", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-ha/.../HedgeEffectiveness.java",
+      "type": "file",
+      "label": "HedgeEffectiveness.java",
+      "properties": { "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/domain/entity/HedgeEffectiveness.java", "language": "java", "layer": "domain", "module": "forex-hedge-accounting" }
+    },
+    {
+      "id": "class:HedgeEffectiveness",
+      "type": "class",
+      "label": "HedgeEffectiveness",
+      "properties": { "description": "套保有效性值对象 - 适用性测试、有效性比率(80-125%)、假设分析", "stereotype": "value-object", "module": "forex-hedge-accounting", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-ha/.../HedgeAccountingAppService.java",
+      "type": "file",
+      "label": "HedgeAccountingAppService.java",
+      "properties": { "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/application/HedgeAccountingAppService.java", "language": "java", "layer": "application", "module": "forex-hedge-accounting" }
+    },
+    {
+      "id": "class:HedgeAccountingAppService",
+      "type": "class",
+      "label": "HedgeAccountingAppService",
+      "properties": { "description": "套保会计应用服务 - 合约入账、有效性评估、公允价值套期/现金流套期、OCI调整", "stereotype": "application-service", "module": "forex-hedge-accounting", "layer": "application" }
+    },
+    {
+      "id": "file:forex-ha/.../HedgeAccountingDomainService.java",
+      "type": "file",
+      "label": "HedgeAccountingDomainService.java",
+      "properties": { "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/domain/service/HedgeAccountingDomainService.java", "language": "java", "layer": "domain", "module": "forex-hedge-accounting" }
+    },
+    {
+      "id": "class:HedgeAccountingDomainService",
+      "type": "class",
+      "label": "HedgeAccountingDomainService",
+      "properties": { "description": "套保会计领域服务 - 有效性测试(回归/最小平方)、公允价值套期/CDEA/OCI分摊、合同重估", "stereotype": "domain-service", "module": "forex-hedge-accounting", "layer": "domain" }
+    },
+    {
+      "id": "file:forex-ha/.../HedgeDealRepository.java",
+      "type": "file",
+      "label": "HedgeDealRepository.java",
+      "properties": { "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/domain/repository/HedgeDealRepository.java", "language": "java", "layer": "domain", "module": "forex-hedge-accounting" }
+    },
+    {
+      "id": "interface:HedgeDealRepository",
+      "type": "interface",
+      "label": "HedgeDealRepository",
+      "properties": { "description": "套保交易仓储接口", "stereotype": "repository", "module": "forex-hedge-accounting", "layer": "domain" }
+    }
+  ],
+  "edges": [
+    { "type": "contains", "source": "file:forex-bk/.../AccountingEntry.java", "target": "class:AccountingEntry" },
+    { "type": "contains", "source": "file:forex-bk/.../AccountBalance.java", "target": "class:AccountBalance" },
+    { "type": "contains", "source": "file:forex-bk/.../GeneralLedger.java", "target": "class:GeneralLedger" },
+    { "type": "depends-on", "source": "class:AccountingEntry", "target": "class:AccountingBook" },
+    { "type": "depends-on", "source": "class:AccountingEntry", "target": "class:AccountBalance" },
+    { "type": "depends-on", "source": "class:GeneralLedger", "target": "class:AccountingEntry" },
+    { "type": "depends-on", "source": "class:GeneralLedger", "target": "class:AccountBalance" },
+    { "type": "contains", "source": "file:forex-bk/.../BookingAppService.java", "target": "class:BookingAppService" },
+    { "type": "depends-on", "source": "class:BookingAppService", "target": "class:ForexValuationService" },
+    { "type": "depends-on", "source": "class:BookingAppService", "target": "interface:AccountingEntryRepository" },
+    { "type": "depends-on", "source": "class:BookingAppService", "target": "interface:AccountBalanceRepository" },
+    { "type": "depends-on", "source": "class:BookingAppService", "target": "interface:GeneralLedgerRepository" },
+    { "type": "contains", "source": "file:forex-bk/.../ForexValuationService.java", "target": "class:ForexValuationService" },
+    { "type": "contains", "source": "file:forex-bk/.../AccountingBookRepository.java", "target": "interface:AccountingBookRepository" },
+    { "type": "contains", "source": "file:forex-bk/.../AccountBalanceRepository.java", "target": "interface:AccountBalanceRepository" },
+    { "type": "contains", "source": "file:forex-bk/.../AccountingEntryRepository.java", "target": "interface:AccountingEntryRepository" },
+    { "type": "contains", "source": "file:forex-bk/.../GeneralLedgerRepository.java", "target": "interface:GeneralLedgerRepository" },
+    { "type": "contains", "source": "file:forex-cp/.../CashPool.java", "target": "class:CashPool" },
+    { "type": "contains", "source": "file:forex-cp/.../CashPoolTransfer.java", "target": "class:CashPoolTransfer" },
+    { "type": "depends-on", "source": "class:CashPool", "target": "class:CashPoolPosition" },
+    { "type": "depends-on", "source": "class:CashPool", "target": "class:CashPoolTransfer" },
+    { "type": "contains", "source": "file:forex-cp/.../CashPoolPosition.java", "target": "class:CashPoolPosition" },
+    { "type": "contains", "source": "file:forex-cp/.../CashPoolAppService.java", "target": "class:CashPoolAppService" },
+    { "type": "depends-on", "source": "class:CashPoolAppService", "target": "class:CashPoolDomainService" },
+    { "type": "depends-on", "source": "class:CashPoolAppService", "target": "interface:CashPoolRepository" },
+    { "type": "depends-on", "source": "class:CashPoolAppService", "target": "interface:CashPoolTransferRepository" },
+    { "type": "contains", "source": "file:forex-cp/.../CashPoolDomainService.java", "target": "class:CashPoolDomainService" },
+    { "type": "contains", "source": "file:forex-cp/.../CashPoolRepository.java", "target": "interface:CashPoolRepository" },
+    { "type": "contains", "source": "file:forex-cp/.../CashPoolTransferRepository.java", "target": "interface:CashPoolTransferRepository" },
+    { "type": "contains", "source": "file:forex-ha/.../HedgeDeal.java", "target": "class:HedgeDeal" },
+    { "type": "contains", "source": "file:forex-ha/.../HedgeEffectiveness.java", "target": "class:HedgeEffectiveness" },
+    { "type": "depends-on", "source": "class:HedgeDeal", "target": "class:HedgeEffectiveness" },
+    { "type": "contains", "source": "file:forex-ha/.../HedgeAccountingAppService.java", "target": "class:HedgeAccountingAppService" },
+    { "type": "depends-on", "source": "class:HedgeAccountingAppService", "target": "class:HedgeAccountingDomainService" },
+    { "type": "depends-on", "source": "class:HedgeAccountingAppService", "target": "interface:HedgeDealRepository" },
+    { "type": "contains", "source": "file:forex-ha/.../HedgeAccountingDomainService.java", "target": "class:HedgeAccountingDomainService" },
+    { "type": "contains", "source": "file:forex-ha/.../HedgeDealRepository.java", "target": "interface:HedgeDealRepository" },
+    { "type": "cross-module", "source": "class:BookingAppService", "target": "class:CashPoolAccount", "properties": { "description": "会计入账引用现金池账户" } },
+    { "type": "cross-module", "source": "class:HedgeAccountingAppService", "target": "class:BookingAppService", "properties": { "description": "套保会计回调记账服务生成分录" } }
+  ]
+}

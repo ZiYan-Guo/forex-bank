@@ -1,0 +1,369 @@
+{
+  "batchIndex": 29,
+  "domain": "forex-trading",
+  "nodes": [
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/domain/event/TradeSettledEvent.java",
+      "type": "file",
+      "label": "TradeSettledEvent.java",
+      "summary": "交易结算领域事件，包含交易ID、编号和结算状态",
+      "tags": ["event", "trading", "forex-trading"]
+    },
+    {
+      "id": "class://TradeSettledEvent",
+      "type": "class",
+      "label": "TradeSettledEvent",
+      "summary": "交易结算领域事件，继承BaseDomainEvent，eventName=\"FxTradeSettled\"",
+      "tags": ["event"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/domain/model/aggregate/FxTrade.java",
+      "type": "file",
+      "label": "FxTrade.java",
+      "summary": "外汇交易聚合根，管理即期/远期/掉期/期权四种交易类型的完整生命周期(PENDING→CONFIRMED→EXECUTED→SETTLED)",
+      "tags": ["aggregate", "trading", "fx", "forex-trading"]
+    },
+    {
+      "id": "class://FxTrade",
+      "type": "class",
+      "label": "FxTrade",
+      "summary": "外汇交易聚合根，继承BaseAggregate，包含tradeType/dealType/buySellCurrency/amounts/rates/dates等丰富字段，提供create/reconstitute/confirm/execute/settle/rollOver/closeOut/cancel/expire生命周期方法，含交易类型/方向/期权类型校验",
+      "tags": ["aggregate"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/domain/model/entity/TradeLifecycle.java",
+      "type": "file",
+      "label": "TradeLifecycle.java",
+      "summary": "交易生命周期实体，记录交易状态变更事件，包含事件类型、前后状态和操作人",
+      "tags": ["entity", "trading", "lifecycle", "forex-trading"]
+    },
+    {
+      "id": "class://TradeLifecycle",
+      "type": "class",
+      "label": "TradeLifecycle",
+      "summary": "交易生命周期实体，继承BaseEntity，包含tradeId/tradeNo/eventType/eventTime/beforeStatus/afterStatus/eventData/operatorId",
+      "tags": ["entity"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/domain/model/enums/TradeStatus.java",
+      "type": "file",
+      "label": "TradeStatus.java",
+      "summary": "交易状态枚举：DRAFT/QUOTED/CONFIRMED/EXECUTED/SETTLED/CANCELLED/EXPIRED，含中英文描述",
+      "tags": ["enum", "trading", "forex-trading"]
+    },
+    {
+      "id": "enum://TradeStatus",
+      "type": "enum",
+      "label": "TradeStatus",
+      "summary": "交易状态枚举，提供code/description属性和fromCode解析方法",
+      "tags": ["enum"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/domain/model/query/TradeQuery.java",
+      "type": "file",
+      "label": "TradeQuery.java",
+      "summary": "交易查询参数，继承PageReq，支持按交易编号/客户/类型/状态/方向/日期范围筛选",
+      "tags": ["query", "trading", "forex-trading"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/domain/repository/FxTradeRepository.java",
+      "type": "file",
+      "label": "FxTradeRepository.java",
+      "summary": "外汇交易仓储接口，定义保存、按ID/编号/客户查询和分页方法",
+      "tags": ["repository", "trading", "forex-trading"]
+    },
+    {
+      "id": "interface://FxTradeRepository",
+      "type": "interface",
+      "label": "FxTradeRepository",
+      "summary": "外汇交易仓储接口，提供save/findById/findByTradeNo/findByCustomerId/pageQuery方法",
+      "tags": ["repository"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "type": "file",
+      "label": "TradeDomainService.java",
+      "summary": "交易领域服务，处理交易创建/确认/执行/结算/展期/平仓/取消及远期汇率计算",
+      "tags": ["domain-service", "trading", "forex-trading"]
+    },
+    {
+      "id": "class://TradeDomainService",
+      "type": "class",
+      "label": "TradeDomainService",
+      "summary": "交易领域服务，依赖FxTradeRepository/ApplicationEventPublisher，提供createTrade/confirmTrade/executeTrade/settleTrade/rollOverTrade/closeOutTrade/cancelTrade方法，发布TradeExecutedEvent/TradeSettledEvent，支持SwapPoints远期汇率计算",
+      "tags": ["domain-service"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java",
+      "type": "file",
+      "label": "OptionStrategyService.java",
+      "summary": "期权策略推荐服务，根据客户风险偏好和外汇敞口推荐区间宝/风险逆转/领口期权等策略",
+      "tags": ["service", "option", "strategy", "forex-trading"]
+    },
+    {
+      "id": "class://OptionStrategyService",
+      "type": "class",
+      "label": "OptionStrategyService",
+      "summary": "期权策略推荐服务，提供recommendStrategies方法根据riskPreference推荐Range Forward/Risk Reversal/Collar策略",
+      "tags": ["service", "option"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/infrastructure/mapper/FxTradeMapper.java",
+      "type": "file",
+      "label": "FxTradeMapper.java",
+      "summary": "外汇交易MyBatis Mapper，按tradeNo查询和动态分页SQL(支持多条件)",
+      "tags": ["mapper", "mybatis", "trading", "forex-trading"]
+    },
+    {
+      "id": "table://t_fx_trade",
+      "type": "table",
+      "label": "t_fx_trade",
+      "summary": "外汇交易表，包含完整交易字段(编号/客户/类型/方向/货币/金额/汇率/日期/状态等)",
+      "tags": ["table", "mysql"]
+    },
+    {
+      "id": "table://t_trade_lifecycle",
+      "type": "table",
+      "label": "t_trade_lifecycle",
+      "summary": "交易生命周期表，包含trade_id/event_type/event_time/前后状态/event_data等",
+      "tags": ["table", "mysql"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/infrastructure/persistence/FxTradePO.java",
+      "type": "file",
+      "label": "FxTradePO.java",
+      "summary": "外汇交易持久化对象，映射t_fx_trade表",
+      "tags": ["po", "persistence", "trading", "forex-trading"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/infrastructure/persistence/TradeLifecyclePO.java",
+      "type": "file",
+      "label": "TradeLifecyclePO.java",
+      "summary": "交易生命周期持久化对象，映射t_trade_lifecycle表",
+      "tags": ["po", "persistence", "trading", "forex-trading"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/infrastructure/repository/FxTradeRepositoryImpl.java",
+      "type": "file",
+      "label": "FxTradeRepositoryImpl.java",
+      "summary": "外汇交易仓储实现，使用MyBatis Plus实现完整CRUD和分页查询",
+      "tags": ["repository", "impl", "trading", "forex-trading"]
+    },
+    {
+      "id": "class://FxTradeRepositoryImpl",
+      "type": "class",
+      "label": "FxTradeRepositoryImpl",
+      "summary": "FxTradeRepository实现，注入FxTradeMapper，实现save/findById/findByTradeNo/findByCustomerId/pageQuery，含toDomain/toPO转换",
+      "tags": ["repository", "impl"]
+    },
+    {
+      "id": "endpoint://POST /api/trading/spot",
+      "type": "endpoint",
+      "label": "POST /api/trading/spot",
+      "summary": "创建即期外汇交易，幂等性防重",
+      "tags": ["api", "trading"]
+    },
+    {
+      "id": "endpoint://POST /api/trading/forward",
+      "type": "endpoint",
+      "label": "POST /api/trading/forward",
+      "summary": "创建远期外汇交易，幂等性防重",
+      "tags": ["api", "trading"]
+    },
+    {
+      "id": "endpoint://POST /api/trading/swap",
+      "type": "endpoint",
+      "label": "POST /api/trading/swap",
+      "summary": "创建掉期外汇交易，幂等性防重",
+      "tags": ["api", "trading"]
+    },
+    {
+      "id": "endpoint://POST /api/trading/option",
+      "type": "endpoint",
+      "label": "POST /api/trading/option",
+      "summary": "创建期权外汇交易，幂等性防重",
+      "tags": ["api", "trading"]
+    },
+    {
+      "id": "endpoint://GET /api/trading/{tradeNo}",
+      "type": "endpoint",
+      "label": "GET /api/trading/{tradeNo}",
+      "summary": "查询交易详情",
+      "tags": ["api", "trading"]
+    },
+    {
+      "id": "endpoint://POST /api/trading/page",
+      "type": "endpoint",
+      "label": "POST /api/trading/page",
+      "summary": "分页查询交易",
+      "tags": ["api", "trading"]
+    },
+    {
+      "id": "endpoint://POST /api/trading/confirm/{tradeNo}",
+      "type": "endpoint",
+      "label": "POST /api/trading/confirm/{tradeNo}",
+      "summary": "确认交易，Redis锁防重",
+      "tags": ["api", "trading"]
+    },
+    {
+      "id": "endpoint://POST /api/trading/execute/{tradeNo}",
+      "type": "endpoint",
+      "label": "POST /api/trading/execute/{tradeNo}",
+      "summary": "执行交易，Redis锁防重",
+      "tags": ["api", "trading"]
+    },
+    {
+      "id": "endpoint://POST /api/trading/settle/{tradeNo}",
+      "type": "endpoint",
+      "label": "POST /api/trading/settle/{tradeNo}",
+      "summary": "结算交易，Redis锁防重",
+      "tags": ["api", "trading"]
+    },
+    {
+      "id": "endpoint://POST /api/trading/roll-over",
+      "type": "endpoint",
+      "label": "POST /api/trading/roll-over",
+      "summary": "展期交易，Redis锁防重",
+      "tags": ["api", "trading"]
+    },
+    {
+      "id": "endpoint://POST /api/trading/close/{tradeNo}",
+      "type": "endpoint",
+      "label": "POST /api/trading/close/{tradeNo}",
+      "summary": "平仓交易，Redis锁防重",
+      "tags": ["api", "trading"]
+    },
+    {
+      "id": "endpoint://POST /api/trading/cancel/{tradeNo}",
+      "type": "endpoint",
+      "label": "POST /api/trading/cancel/{tradeNo}",
+      "summary": "取消交易，Redis锁防重",
+      "tags": ["api", "trading"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/adapter/controller/TradingController.java",
+      "type": "file",
+      "label": "TradingController.java",
+      "summary": "外汇交易REST控制器，提供即期/远期/掉期/期权四种交易类型的完整生命周期管理接口",
+      "tags": ["controller", "trading", "forex-trading"]
+    },
+    {
+      "id": "class://TradingController",
+      "type": "class",
+      "label": "TradingController",
+      "summary": "外汇交易控制器，@Tag(\"外汇交易\") @RequestMapping(\"/api/trading\")，依赖TradingAppService，提供12个REST端点",
+      "tags": ["controller"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/adapter/dto/CreateTradeReq.java",
+      "type": "file",
+      "label": "CreateTradeReq.java",
+      "summary": "创建交易请求DTO，包含SPOT/FORWARD/SWAP/OPTION四种交易类型的完整字段",
+      "tags": ["dto", "trading", "forex-trading"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/adapter/dto/TradeResp.java",
+      "type": "file",
+      "label": "TradeResp.java",
+      "summary": "交易响应DTO，包含交易全部字段(类型/方向/货币/金额/汇率/日期/状态等)",
+      "tags": ["dto", "trading", "forex-trading"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/application/service/TradingAppService.java",
+      "type": "file",
+      "label": "TradingAppService.java",
+      "summary": "交易应用服务，封装四种交易类型的创建和全生命周期操作，使用RedisLock保证并发安全",
+      "tags": ["service", "application", "trading", "forex-trading"]
+    },
+    {
+      "id": "class://TradingAppService",
+      "type": "class",
+      "label": "TradingAppService",
+      "summary": "交易应用服务，依赖FxTradeRepository/TradeDomainService，提供createSpotTrade/createForwardTrade/createSwapTrade/createOptionTrade/confirmTrade/executeTrade/settleTrade/rollOverTrade/closeOutTrade/cancelTrade方法",
+      "tags": ["service", "application"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/TradingApplication.java",
+      "type": "file",
+      "label": "TradingApplication.java",
+      "summary": "外汇交易服务Spring Boot启动类，启用服务发现和Mapper扫描，端口8202",
+      "tags": ["application", "spring-boot", "forex-trading"]
+    },
+    {
+      "id": "class://TradingApplication",
+      "type": "class",
+      "label": "TradingApplication",
+      "summary": "外汇交易服务启动入口，@SpringBootApplication @EnableDiscoveryClient @MapperScan",
+      "tags": ["application"]
+    },
+    {
+      "id": "file://forex-trading/src/main/resources/application.yml",
+      "type": "file",
+      "label": "application.yml (forex-trading)",
+      "summary": "外汇交易服务配置：端口8202，MySQL(forex-trading库)、Redis、Nacos dev/FOREX_GROUP",
+      "tags": ["config", "yaml"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/domain/model/vo/TradeDirection.java",
+      "type": "file",
+      "label": "TradeDirection.java",
+      "summary": "交易方向值对象(文件未找到，交易方向以String常量BUY/SELL定义在FxTrade中)",
+      "tags": ["vo", "trading", "missing"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/domain/model/vo/TradeType.java",
+      "type": "file",
+      "label": "TradeType.java",
+      "summary": "交易类型值对象(文件未找到，交易类型以String常量SPOT/FORWARD/SWAP/OPTION定义在FxTrade中)",
+      "tags": ["vo", "trading", "missing"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/domain/model/entity/SettlementInstruction.java",
+      "type": "file",
+      "label": "SettlementInstruction.java",
+      "summary": "结算指令实体(文件未找到)",
+      "tags": ["entity", "trading", "missing"]
+    },
+    {
+      "id": "file://forex-trading/src/main/java/com/forex/trading/domain/model/entity/TradeConfirmation.java",
+      "type": "file",
+      "label": "TradeConfirmation.java",
+      "summary": "交易确认实体(文件未找到)",
+      "tags": ["entity", "trading", "missing"]
+    }
+  ],
+  "edges": [
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/domain/event/TradeSettledEvent.java", "to": "class://TradeSettledEvent", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/domain/model/aggregate/FxTrade.java", "to": "class://FxTrade", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/domain/model/entity/TradeLifecycle.java", "to": "class://TradeLifecycle", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/domain/model/enums/TradeStatus.java", "to": "enum://TradeStatus", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/domain/repository/FxTradeRepository.java", "to": "interface://FxTradeRepository", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java", "to": "class://TradeDomainService", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java", "to": "interface://FxTradeRepository", "type": "depends_on"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java", "to": "class://FxTrade", "type": "depends_on"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java", "to": "class://OptionStrategyService", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/infrastructure/mapper/FxTradeMapper.java", "to": "table://t_fx_trade", "type": "depends_on"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/infrastructure/persistence/FxTradePO.java", "to": "table://t_fx_trade", "type": "maps_to"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/infrastructure/persistence/TradeLifecyclePO.java", "to": "table://t_trade_lifecycle", "type": "maps_to"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/infrastructure/repository/FxTradeRepositoryImpl.java", "to": "class://FxTradeRepositoryImpl", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/infrastructure/repository/FxTradeRepositoryImpl.java", "to": "interface://FxTradeRepository", "type": "implements"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/adapter/controller/TradingController.java", "to": "class://TradingController", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/adapter/controller/TradingController.java", "to": "endpoint://POST /api/trading/spot", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/adapter/controller/TradingController.java", "to": "endpoint://POST /api/trading/forward", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/adapter/controller/TradingController.java", "to": "endpoint://POST /api/trading/swap", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/adapter/controller/TradingController.java", "to": "endpoint://POST /api/trading/option", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/adapter/controller/TradingController.java", "to": "endpoint://GET /api/trading/{tradeNo}", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/adapter/controller/TradingController.java", "to": "endpoint://POST /api/trading/page", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/adapter/controller/TradingController.java", "to": "endpoint://POST /api/trading/confirm/{tradeNo}", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/adapter/controller/TradingController.java", "to": "endpoint://POST /api/trading/execute/{tradeNo}", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/adapter/controller/TradingController.java", "to": "endpoint://POST /api/trading/settle/{tradeNo}", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/adapter/controller/TradingController.java", "to": "endpoint://POST /api/trading/roll-over", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/adapter/controller/TradingController.java", "to": "endpoint://POST /api/trading/close/{tradeNo}", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/adapter/controller/TradingController.java", "to": "endpoint://POST /api/trading/cancel/{tradeNo}", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/adapter/controller/TradingController.java", "to": "file://forex-trading/src/main/java/com/forex/trading/application/service/TradingAppService.java", "type": "depends_on"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/application/service/TradingAppService.java", "to": "class://TradingAppService", "type": "contains"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/application/service/TradingAppService.java", "to": "interface://FxTradeRepository", "type": "depends_on"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/application/service/TradingAppService.java", "to": "class://TradeDomainService", "type": "depends_on"},
+    {"from": "file://forex-trading/src/main/java/com/forex/trading/TradingApplication.java", "to": "class://TradingApplication", "type": "contains"}
+  ]
+}

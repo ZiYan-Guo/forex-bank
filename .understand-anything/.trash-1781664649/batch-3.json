@@ -1,0 +1,198 @@
+{
+  "nodes": [
+    {
+      "id": "file:docker/docker-compose.yml",
+      "type": "file",
+      "name": "Docker Compose 配置",
+      "filePath": "docker/docker-compose.yml",
+      "summary": "Docker Compose 编排文件，定义 MySQL 8.0、Redis 7、Nacos 2.3.2、Seata 1.8.0、RocketMQ 5.1.4 等基础设施服务。",
+      "tags": ["docker", "infrastructure", "dev-environment"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:docker/nacos/conf/application.properties",
+      "type": "file",
+      "name": "Nacos 应用配置",
+      "filePath": "docker/nacos/conf/application.properties",
+      "summary": "Nacos 配置中心的应用配置文件，MySQL 数据源连接配置和安全忽略路径设置。",
+      "tags": ["nacos", "config", "properties"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/pom.xml",
+      "type": "file",
+      "name": "forex-account 模块 POM",
+      "filePath": "forex-account/pom.xml",
+      "summary": "账户管理微服务的 Maven 构建配置，依赖 forex-common-base/security/mybatis、Spring Boot Web、Nacos 注册发现与配置、Redis、Knife4j。",
+      "tags": ["maven", "pom", "account-module"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-ai/pom.xml",
+      "type": "file",
+      "name": "forex-ai 模块 POM",
+      "filePath": "forex-ai/pom.xml",
+      "summary": "AI 智能模块的 Maven 构建配置，依赖与 forex-account 一致的公共模块和 Spring Cloud Alibaba 组件。",
+      "tags": ["maven", "pom", "ai-module"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-auth/pom.xml",
+      "type": "file",
+      "name": "forex-auth 模块 POM",
+      "filePath": "forex-auth/pom.xml",
+      "summary": "认证授权微服务的 Maven 构建配置，额外依赖 Redisson 分布式锁。",
+      "tags": ["maven", "pom", "auth-module"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-bank-web/vite.config.ts",
+      "type": "file",
+      "name": "Vite 构建配置",
+      "filePath": "forex-bank-web/vite.config.ts",
+      "summary": "Vite 构建配置，使用 @vitejs/plugin-vue 插件，配置路径别名 @ 和开发服务器代理（/api → localhost:8080）。",
+      "tags": ["vite", "config", "frontend", "build"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bank-web/env.d.ts",
+      "type": "file",
+      "name": "环境类型声明",
+      "filePath": "forex-bank-web/env.d.ts",
+      "summary": "Vite 环境变量类型声明文件。",
+      "tags": ["typescript", "config", "vite"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bank-web/src/api/auth.ts",
+      "type": "file",
+      "name": "认证 API 封装",
+      "filePath": "forex-bank-web/src/api/auth.ts",
+      "summary": "前端认证 API，封装 login/logout/refresh/me 四个接口调用。",
+      "tags": ["api", "auth", "frontend", "axios"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bank-web/src/api/business.ts",
+      "type": "file",
+      "name": "业务 API 封装",
+      "filePath": "forex-bank-web/src/api/business.ts",
+      "summary": "前端业务 API 聚合文件，封装 tradingApi（外汇买卖）、paymentApi（跨境支付）、settlementApi（国际结算）、riskApi（风险监测）、accountApi（账户管理）、reportingApi（监管报送）、positionApi（敞口）、workflowApi（工作流）等全部业务模块的接口调用。",
+      "tags": ["api", "business", "frontend", "axios", "aggregate"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-bank-web/src/api/customer.ts",
+      "type": "file",
+      "name": "客户 API 封装",
+      "filePath": "forex-bank-web/src/api/customer.ts",
+      "summary": "前端客户管理 API，封装客户 CRUD、风险评级、尽职调查等接口调用。",
+      "tags": ["api", "customer", "frontend", "axios"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bank-web/src/api/exchange.ts",
+      "type": "file",
+      "name": "结售汇 API 封装",
+      "filePath": "forex-bank-web/src/api/exchange.ts",
+      "summary": "前端结售汇 API，封装兑换创建、锁价、确认、取消等接口及汇率查询接口调用。",
+      "tags": ["api", "exchange", "frontend", "axios"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bank-web/src/api/request.ts",
+      "type": "file",
+      "name": "Axios 请求封装",
+      "filePath": "forex-bank-web/src/api/request.ts",
+      "summary": "Axios 请求实例，配置 baseURL /api、30秒超时、请求拦截器（注入 JWT Token 和 X-Request-Id）、响应拦截器（错误处理和 401 自动跳转登录）。",
+      "tags": ["axios", "interceptor", "http", "frontend"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:docker/docker-compose.yml",
+      "target": "file:docker/nacos/conf/application.properties",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-account/pom.xml",
+      "target": "file:pom.xml",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/pom.xml",
+      "target": "file:pom.xml",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-auth/pom.xml",
+      "target": "file:pom.xml",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-bank-web/vite.config.ts",
+      "target": "file:forex-bank-web/tsconfig.json",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bank-web/vite.config.ts",
+      "target": "file:forex-bank-web/package.json",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-bank-web/src/api/auth.ts",
+      "target": "file:forex-bank-web/src/api/request.ts",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "file:forex-bank-web/src/api/business.ts",
+      "target": "file:forex-bank-web/src/api/request.ts",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "file:forex-bank-web/src/api/customer.ts",
+      "target": "file:forex-bank-web/src/api/request.ts",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "file:forex-bank-web/src/api/exchange.ts",
+      "target": "file:forex-bank-web/src/api/request.ts",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "file:forex-account/pom.xml",
+      "target": "file:docker/docker-compose.yml",
+      "type": "depends_on",
+      "direction": "undirected",
+      "weight": 0.4
+    },
+    {
+      "source": "file:forex-auth/pom.xml",
+      "target": "file:docker/docker-compose.yml",
+      "type": "depends_on",
+      "direction": "undirected",
+      "weight": 0.4
+    }
+  ]
+}

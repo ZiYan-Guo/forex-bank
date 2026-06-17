@@ -1,0 +1,310 @@
+{
+  "batchIndex": 32,
+  "module": "forex-bookkeeping, forex-margin, forex-position pom",
+  "nodes": [
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/BookkeepingApplication.java",
+      "type": "file",
+      "name": "BookkeepingApplication.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/BookkeepingApplication.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.bookkeeping.BookkeepingApplication",
+      "type": "class",
+      "name": "BookkeepingApplication",
+      "properties": { "kind": "SpringBootApplication", "package": "com.forex.bookkeeping", "summary": "forex-bookkeeping微服务启动入口" }
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/config/BookkeepingConfig.java",
+      "type": "file",
+      "name": "BookkeepingConfig.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/config/BookkeepingConfig.java", "lang": "java", "note": "文件不存在于磁盘" }
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/JournalEntry.java",
+      "type": "file",
+      "name": "JournalEntry.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/JournalEntry.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.bookkeeping.domain.model.aggregate.JournalEntry",
+      "type": "class",
+      "name": "JournalEntry",
+      "properties": { "kind": "AggregateRoot", "package": "com.forex.bookkeeping.domain.model.aggregate", "summary": "记账分录聚合根，复式记账，状态: DRAFT→POSTED→REVERSED，支持DEBIT/CREDIT方向" }
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/MonthEndClosing.java",
+      "type": "file",
+      "name": "MonthEndClosing.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/MonthEndClosing.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.bookkeeping.domain.model.aggregate.MonthEndClosing",
+      "type": "class",
+      "name": "MonthEndClosing",
+      "properties": { "kind": "AggregateRoot", "package": "com.forex.bookkeeping.domain.model.aggregate", "summary": "月末结账聚合根，生命周期: OPEN→IN_PROGRESS→COMPLETED→LOCKED" }
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/entity/RevaluationEntry.java",
+      "type": "file",
+      "name": "RevaluationEntry.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/entity/RevaluationEntry.java", "lang": "java", "note": "文件不存在于磁盘" }
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/valueobject/EntryDirection.java",
+      "type": "file",
+      "name": "EntryDirection.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/valueobject/EntryDirection.java", "lang": "java", "note": "文件不存在于磁盘" }
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/valueobject/ClosingStatus.java",
+      "type": "file",
+      "name": "ClosingStatus.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/valueobject/ClosingStatus.java", "lang": "java", "note": "文件不存在于磁盘" }
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/JournalEntryRepository.java",
+      "type": "file",
+      "name": "JournalEntryRepository.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/JournalEntryRepository.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.bookkeeping.domain.repository.JournalEntryRepository",
+      "type": "class",
+      "name": "JournalEntryRepository",
+      "properties": { "kind": "RepositoryInterface", "package": "com.forex.bookkeeping.domain.repository", "summary": "记账分录仓储接口" }
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/persistence/JournalEntryPO.java",
+      "type": "file",
+      "name": "JournalEntryPO.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/persistence/JournalEntryPO.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.bookkeeping.infrastructure.persistence.JournalEntryPO",
+      "type": "class",
+      "name": "JournalEntryPO",
+      "properties": { "kind": "PO", "package": "com.forex.bookkeeping.infrastructure.persistence", "summary": "记账分录持久化对象，映射t_journal_entry表" }
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/persistence/ClosingSnapshotPO.java",
+      "type": "file",
+      "name": "ClosingSnapshotPO.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/persistence/ClosingSnapshotPO.java", "lang": "java", "note": "文件不存在于磁盘" }
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/JournalEntryMapper.java",
+      "type": "file",
+      "name": "JournalEntryMapper.java",
+      "properties": { "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/JournalEntryMapper.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.bookkeeping.infrastructure.mapper.JournalEntryMapper",
+      "type": "class",
+      "name": "JournalEntryMapper",
+      "properties": { "kind": "MyBatisMapper", "package": "com.forex.bookkeeping.infrastructure.mapper", "summary": "记账分录MyBatis Mapper，操作t_journal_entry表" }
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/resources/application.yml",
+      "type": "file",
+      "name": "application.yml",
+      "properties": { "path": "forex-bookkeeping/src/main/resources/application.yml", "lang": "yaml", "summary": "forex-bookkeeping配置 (端口8206, MySQL, Redis, Nacos)" }
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "type": "file",
+      "name": "MarginApplication.java",
+      "properties": { "path": "forex-margin/src/main/java/com/forex/margin/MarginApplication.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.margin.MarginApplication",
+      "type": "class",
+      "name": "MarginApplication",
+      "properties": { "kind": "SpringBootApplication", "package": "com.forex.margin", "summary": "forex-margin微服务启动入口" }
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/config/MarginConfig.java",
+      "type": "file",
+      "name": "MarginConfig.java",
+      "properties": { "path": "forex-margin/src/main/java/com/forex/margin/config/MarginConfig.java", "lang": "java", "note": "文件不存在于磁盘" }
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "type": "file",
+      "name": "MarginAccount.java",
+      "properties": { "path": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.margin.domain.model.aggregate.MarginAccount",
+      "type": "class",
+      "name": "MarginAccount",
+      "properties": { "kind": "AggregateRoot", "package": "com.forex.margin.domain.model.aggregate", "summary": "保证金账户聚合根，管理保证金存入/释放/追缴，含水位线计算和水位线评估" }
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginCall.java",
+      "type": "file",
+      "name": "MarginCall.java",
+      "properties": { "path": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginCall.java", "lang": "java", "note": "文件不存在于磁盘" }
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "type": "file",
+      "name": "MarginAccountRepository.java",
+      "properties": { "path": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.margin.domain.repository.MarginAccountRepository",
+      "type": "class",
+      "name": "MarginAccountRepository",
+      "properties": { "kind": "RepositoryInterface", "package": "com.forex.margin.domain.repository", "summary": "保证金账户仓储接口" }
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java",
+      "type": "file",
+      "name": "MarginCallRepository.java",
+      "properties": { "path": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.margin.domain.repository.MarginCallRepository",
+      "type": "class",
+      "name": "MarginCallRepository",
+      "properties": { "kind": "RepositoryInterface", "package": "com.forex.margin.domain.repository", "summary": "保证金追缴仓储接口" }
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java",
+      "type": "file",
+      "name": "MarginAccountMapper.java",
+      "properties": { "path": "forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.margin.infrastructure.mapper.MarginAccountMapper",
+      "type": "class",
+      "name": "MarginAccountMapper",
+      "properties": { "kind": "MyBatisMapper", "package": "com.forex.margin.infrastructure.mapper", "summary": "保证金账户MyBatis Mapper，操作t_margin_account表" }
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java",
+      "type": "file",
+      "name": "MarginAccountPO.java",
+      "properties": { "path": "forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.margin.infrastructure.persistence.MarginAccountPO",
+      "type": "class",
+      "name": "MarginAccountPO",
+      "properties": { "kind": "PO", "package": "com.forex.margin.infrastructure.persistence", "summary": "保证金账户持久化对象，映射t_margin_account表" }
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginCallPO.java",
+      "type": "file",
+      "name": "MarginCallPO.java",
+      "properties": { "path": "forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginCallPO.java", "lang": "java", "note": "文件不存在于磁盘" }
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "type": "file",
+      "name": "MarginAccountRepositoryImpl.java",
+      "properties": { "path": "forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.margin.infrastructure.repository.MarginAccountRepositoryImpl",
+      "type": "class",
+      "name": "MarginAccountRepositoryImpl",
+      "properties": { "kind": "RepositoryImpl", "package": "com.forex.margin.infrastructure.repository", "summary": "保证金账户仓储实现" }
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java",
+      "type": "file",
+      "name": "MarginController.java",
+      "properties": { "path": "forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java", "lang": "java" }
+    },
+    {
+      "id": "com.forex.margin.adapter.controller.MarginController",
+      "type": "class",
+      "name": "MarginController",
+      "properties": { "kind": "RestController", "package": "com.forex.margin.adapter.controller", "summary": "保证金管理控制器，提供创建/追加/释放/存入保证金和分页查询接口" }
+    },
+    {
+      "id": "MarginController.createInitialMargin",
+      "type": "endpoint",
+      "name": "POST /api/margin/create",
+      "properties": { "method": "POST", "path": "/api/margin/create", "summary": "创建初始保证金" }
+    },
+    {
+      "id": "MarginController.callMargin",
+      "type": "endpoint",
+      "name": "POST /api/margin/call",
+      "properties": { "method": "POST", "path": "/api/margin/call", "summary": "追加保证金" }
+    },
+    {
+      "id": "MarginController.releaseMargin",
+      "type": "endpoint",
+      "name": "POST /api/margin/release",
+      "properties": { "method": "POST", "path": "/api/margin/release", "summary": "释放保证金" }
+    },
+    {
+      "id": "MarginController.depositMargin",
+      "type": "endpoint",
+      "name": "POST /api/margin/deposit",
+      "properties": { "method": "POST", "path": "/api/margin/deposit", "summary": "存入保证金" }
+    },
+    {
+      "id": "MarginController.getMarginDetail",
+      "type": "endpoint",
+      "name": "GET /api/margin/{marginNo}",
+      "properties": { "method": "GET", "path": "/api/margin/{marginNo}", "summary": "查询保证金详情" }
+    },
+    {
+      "id": "MarginController.pageQuery",
+      "type": "endpoint",
+      "name": "POST /api/margin/page",
+      "properties": { "method": "POST", "path": "/api/margin/page", "summary": "分页查询保证金" }
+    },
+    {
+      "id": "file:forex-margin/src/main/resources/application.yml",
+      "type": "file",
+      "name": "application.yml",
+      "properties": { "path": "forex-margin/src/main/resources/application.yml", "lang": "yaml", "summary": "forex-margin配置 (端口8204, MySQL, Redis, Nacos)" }
+    },
+    {
+      "id": "file:forex-position/pom.xml",
+      "type": "file",
+      "name": "pom.xml",
+      "properties": { "path": "forex-position/pom.xml", "lang": "xml", "summary": "forex-position Maven POM，依赖common-base/security/mybatis、nacos、knife4j" }
+    }
+  ],
+  "edges": [
+    { "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/BookkeepingApplication.java", "target": "com.forex.bookkeeping.BookkeepingApplication", "type": "contains" },
+    { "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/JournalEntry.java", "target": "com.forex.bookkeeping.domain.model.aggregate.JournalEntry", "type": "contains" },
+    { "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/MonthEndClosing.java", "target": "com.forex.bookkeeping.domain.model.aggregate.MonthEndClosing", "type": "contains" },
+    { "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/JournalEntryRepository.java", "target": "com.forex.bookkeeping.domain.repository.JournalEntryRepository", "type": "contains" },
+    { "source": "com.forex.bookkeeping.domain.repository.JournalEntryRepository", "target": "com.forex.bookkeeping.domain.model.aggregate.JournalEntry", "type": "imports" },
+    { "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/persistence/JournalEntryPO.java", "target": "com.forex.bookkeeping.infrastructure.persistence.JournalEntryPO", "type": "contains" },
+    { "source": "com.forex.bookkeeping.infrastructure.persistence.JournalEntryPO", "target": "table:forex_bookkeeping.t_journal_entry", "type": "related" },
+    { "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/JournalEntryMapper.java", "target": "com.forex.bookkeeping.infrastructure.mapper.JournalEntryMapper", "type": "contains" },
+    { "source": "com.forex.bookkeeping.infrastructure.mapper.JournalEntryMapper", "target": "com.forex.bookkeeping.infrastructure.persistence.JournalEntryPO", "type": "imports" },
+    { "source": "file:forex-margin/src/main/java/com/forex/margin/MarginApplication.java", "target": "com.forex.margin.MarginApplication", "type": "contains" },
+    { "source": "file:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java", "target": "com.forex.margin.domain.model.aggregate.MarginAccount", "type": "contains" },
+    { "source": "file:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java", "target": "com.forex.margin.domain.repository.MarginAccountRepository", "type": "contains" },
+    { "source": "com.forex.margin.domain.repository.MarginAccountRepository", "target": "com.forex.margin.domain.model.aggregate.MarginAccount", "type": "imports" },
+    { "source": "file:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java", "target": "com.forex.margin.domain.repository.MarginCallRepository", "type": "contains" },
+    { "source": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java", "target": "com.forex.margin.infrastructure.mapper.MarginAccountMapper", "type": "contains" },
+    { "source": "com.forex.margin.infrastructure.mapper.MarginAccountMapper", "target": "com.forex.margin.infrastructure.persistence.MarginAccountPO", "type": "imports" },
+    { "source": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java", "target": "com.forex.margin.infrastructure.persistence.MarginAccountPO", "type": "contains" },
+    { "source": "com.forex.margin.infrastructure.persistence.MarginAccountPO", "target": "table:forex_margin.t_margin_account", "type": "related" },
+    { "source": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java", "target": "com.forex.margin.infrastructure.repository.MarginAccountRepositoryImpl", "type": "contains" },
+    { "source": "com.forex.margin.infrastructure.repository.MarginAccountRepositoryImpl", "target": "com.forex.margin.domain.repository.MarginAccountRepository", "type": "imports" },
+    { "source": "com.forex.margin.infrastructure.repository.MarginAccountRepositoryImpl", "target": "com.forex.margin.infrastructure.mapper.MarginAccountMapper", "type": "imports" },
+    { "source": "com.forex.margin.infrastructure.repository.MarginAccountRepositoryImpl", "target": "com.forex.margin.infrastructure.persistence.MarginAccountPO", "type": "imports" },
+    { "source": "com.forex.margin.infrastructure.repository.MarginAccountRepositoryImpl", "target": "com.forex.margin.domain.model.aggregate.MarginAccount", "type": "imports" },
+    { "source": "file:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java", "target": "com.forex.margin.adapter.controller.MarginController", "type": "contains" },
+    { "source": "com.forex.margin.adapter.controller.MarginController", "target": "MarginController.createInitialMargin", "type": "contains" },
+    { "source": "com.forex.margin.adapter.controller.MarginController", "target": "MarginController.callMargin", "type": "contains" },
+    { "source": "com.forex.margin.adapter.controller.MarginController", "target": "MarginController.releaseMargin", "type": "contains" },
+    { "source": "com.forex.margin.adapter.controller.MarginController", "target": "MarginController.depositMargin", "type": "contains" },
+    { "source": "com.forex.margin.adapter.controller.MarginController", "target": "MarginController.getMarginDetail", "type": "contains" },
+    { "source": "com.forex.margin.adapter.controller.MarginController", "target": "MarginController.pageQuery", "type": "contains" },
+    { "source": "com.forex.margin.adapter.controller.MarginController", "target": "com.forex.margin.domain.model.aggregate.MarginAccount", "type": "imports" },
+    { "source": "com.forex.bookkeeping.domain.model.aggregate.JournalEntry", "target": "com.forex.margin.domain.model.aggregate.MarginAccount", "type": "related" }
+  ]
+}

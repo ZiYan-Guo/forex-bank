@@ -1,6 +1,8 @@
 com/forex/risk/adapter/controller/RiskController.class
 com/forex/risk/infrastructure/persistence/RiskMonitorLogPO.class
 com/forex/risk/adapter/dto/RiskReportResp.class
+com/forex/risk/infrastructure/mapper/MonitorRuleMapper.class
+com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.class
 com/forex/risk/infrastructure/config/RocketMqConsumerConfig.class
 com/forex/risk/domain/model/entity/RiskParamConfig.class
 com/forex/risk/domain/model/entity/RiskReport.class
@@ -13,6 +15,7 @@ com/forex/risk/domain/model/valueobject/RiskScore.class
 com/forex/risk/domain/model/valueobject/RiskLevel.class
 com/forex/risk/infrastructure/mapper/RiskMonitorLogMapper.class
 com/forex/risk/adapter/dto/RiskLogResp.class
+com/forex/risk/infrastructure/mapper/SamplingRuleMapper.class
 com/forex/risk/domain/model/query/RiskQuery.class
 com/forex/risk/application/command/GenerateReportCmd.class
 com/forex/risk/domain/repository/RiskParamConfigRepository.class
@@ -21,6 +24,8 @@ com/forex/risk/infrastructure/persistence/RiskReportPO.class
 com/forex/risk/application/command/EvaluateCmd.class
 com/forex/risk/domain/repository/RiskReportRepository.class
 com/forex/risk/adapter/controller/SamplingController.class
+com/forex/risk/infrastructure/repository/MonitorRuleRepositoryImpl.class
+com/forex/risk/infrastructure/persistence/SamplingRulePO.class
 com/forex/risk/infrastructure/event/RiskEventListener.class
 com/forex/risk/domain/repository/MonitorRuleRepository.class
 com/forex/risk/infrastructure/repository/RiskParamConfigRepositoryImpl.class

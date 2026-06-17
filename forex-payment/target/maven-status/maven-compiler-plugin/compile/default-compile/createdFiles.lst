@@ -1,4 +1,5 @@
 com/forex/payment/domain/model/entity/PaymentTemplate.class
+com/forex/payment/infrastructure/mapper/PaymentReconciliationMapper.class
 com/forex/payment/infrastructure/mapper/BlacklistHitMapper.class
 com/forex/payment/infrastructure/persistence/CrossBorderPaymentPO.class
 com/forex/payment/domain/repository/PaymentRepository.class
@@ -7,6 +8,7 @@ com/forex/payment/adapter/dto/PaymentResp.class
 com/forex/payment/infrastructure/mapper/CrossBorderPaymentMapper.class
 com/forex/payment/application/service/BatchResult$FailedItem.class
 com/forex/payment/application/service/BankCodeValidationService.class
+com/forex/payment/infrastructure/repository/ReconciliationRepositoryImpl.class
 com/forex/payment/infrastructure/repository/PaymentRepositoryImpl.class
 com/forex/payment/adapter/dto/AmlCheckReq.class
 com/forex/payment/domain/model/aggregate/CrossBorderPayment.class
@@ -35,4 +37,5 @@ com/forex/payment/domain/repository/ReconciliationRepository.class
 com/forex/payment/adapter/dto/SendPaymentReq.class
 com/forex/payment/domain/event/PaymentSubmittedEvent.class
 com/forex/payment/infrastructure/persistence/BlacklistHitPO.class
+com/forex/payment/infrastructure/persistence/PaymentReconciliationPO.class
 com/forex/payment/domain/model/valueobject/BeneficiaryInfo.class

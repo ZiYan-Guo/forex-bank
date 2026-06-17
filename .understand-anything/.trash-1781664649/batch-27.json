@@ -1,0 +1,479 @@
+{
+  "batchIndex": 27,
+  "domain": "forex-schedule + forex-settlement (adapter layer)",
+  "nodes": [
+    {
+      "id": "file://forex-schedule/pom.xml",
+      "type": "file",
+      "label": "pom.xml (forex-schedule)",
+      "summary": "定时任务模块Maven配置，依赖forex-common、Spring Web、Nacos、Redis、XXL-Job、Hutool、Knife4j",
+      "tags": ["pom", "maven", "forex-schedule"]
+    },
+    {
+      "id": "endpoint://POST /api/schedule/job/add",
+      "type": "endpoint",
+      "label": "POST /api/schedule/job/add",
+      "summary": "添加定时任务，幂等性防重",
+      "tags": ["api", "schedule"]
+    },
+    {
+      "id": "endpoint://PUT /api/schedule/job/update/{id}",
+      "type": "endpoint",
+      "label": "PUT /api/schedule/job/update/{id}",
+      "summary": "更新定时任务",
+      "tags": ["api", "schedule"]
+    },
+    {
+      "id": "endpoint://POST /api/schedule/job/toggle/{id}",
+      "type": "endpoint",
+      "label": "POST /api/schedule/job/toggle/{id}",
+      "summary": "启停定时任务",
+      "tags": ["api", "schedule"]
+    },
+    {
+      "id": "endpoint://POST /api/schedule/job/trigger/{id}",
+      "type": "endpoint",
+      "label": "POST /api/schedule/job/trigger/{id}",
+      "summary": "手动触发任务",
+      "tags": ["api", "schedule"]
+    },
+    {
+      "id": "endpoint://GET /api/schedule/job/{id}",
+      "type": "endpoint",
+      "label": "GET /api/schedule/job/{id}",
+      "summary": "查询任务详情",
+      "tags": ["api", "schedule"]
+    },
+    {
+      "id": "endpoint://POST /api/schedule/job/page",
+      "type": "endpoint",
+      "label": "POST /api/schedule/job/page",
+      "summary": "分页查询任务",
+      "tags": ["api", "schedule"]
+    },
+    {
+      "id": "endpoint://GET /api/schedule/job/{jobId}/logs",
+      "type": "endpoint",
+      "label": "GET /api/schedule/job/{jobId}/logs",
+      "summary": "查询任务执行日志",
+      "tags": ["api", "schedule"]
+    },
+    {
+      "id": "file://forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "type": "file",
+      "label": "ScheduleController.java",
+      "summary": "定时任务REST控制器，提供任务CRUD、启停、触发和日志查询接口",
+      "tags": ["controller", "schedule", "forex-schedule"]
+    },
+    {
+      "id": "class://ScheduleController",
+      "type": "class",
+      "label": "ScheduleController",
+      "summary": "定时任务控制器，@Tag(\"定时任务\") @RequestMapping(\"/api/schedule\")，依赖ScheduleAppService，提供7个REST端点",
+      "tags": ["controller"]
+    },
+    {
+      "id": "file://forex-schedule/src/main/java/com/forex/schedule/adapter/dto/JobLogResp.java",
+      "type": "file",
+      "label": "JobLogResp.java",
+      "summary": "任务日志响应DTO，包含任务执行状态、结果和错误信息",
+      "tags": ["dto", "schedule", "forex-schedule"]
+    },
+    {
+      "id": "file://forex-schedule/src/main/java/com/forex/schedule/adapter/dto/ScheduleJobResp.java",
+      "type": "file",
+      "label": "ScheduleJobResp.java",
+      "summary": "定时任务响应DTO，包含任务名称、分组、Cron表达式和执行状态",
+      "tags": ["dto", "schedule", "forex-schedule"]
+    },
+    {
+      "id": "file://forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "type": "file",
+      "label": "ScheduleAppService.java",
+      "summary": "定时任务应用服务，封装添加/更新/启停/触发任务等业务逻辑，事务管理",
+      "tags": ["service", "application", "schedule", "forex-schedule"]
+    },
+    {
+      "id": "class://ScheduleAppService",
+      "type": "class",
+      "label": "ScheduleAppService",
+      "summary": "定时任务应用服务，依赖ScheduleDomainService/ScheduleJobRepository/JobLogRepository，提供addJob/updateJob/toggleJob/triggerJob等事务方法",
+      "tags": ["service", "application"]
+    },
+    {
+      "id": "file://forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "type": "file",
+      "label": "ScheduleJob.java",
+      "summary": "定时任务聚合根，管理任务创建、启用/禁用、执行记录和Cron表达式校验",
+      "tags": ["aggregate", "schedule", "forex-schedule"]
+    },
+    {
+      "id": "class://ScheduleJob",
+      "type": "class",
+      "label": "ScheduleJob",
+      "summary": "定时任务聚合根，继承BaseAggregate，包含jobName/jobGroup/jobHandler/cronExpression等字段，提供create/reconstitute/enable/disable/recordExecution方法",
+      "tags": ["aggregate"]
+    },
+    {
+      "id": "file://forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/JobLog.java",
+      "type": "file",
+      "label": "JobLog.java",
+      "summary": "任务执行日志聚合根，记录任务每次执行的状态、结果和起止时间",
+      "tags": ["aggregate", "schedule", "log", "forex-schedule"]
+    },
+    {
+      "id": "class://JobLog",
+      "type": "class",
+      "label": "JobLog",
+      "summary": "任务执行日志，实现Serializable，提供create/reconstitute/markSuccess/markFailed方法管理执行状态",
+      "tags": ["aggregate", "log"]
+    },
+    {
+      "id": "file://forex-schedule/src/main/java/com/forex/schedule/domain/repository/ScheduleJobRepository.java",
+      "type": "file",
+      "label": "ScheduleJobRepository.java",
+      "summary": "定时任务仓储接口，定义保存、按ID/处理器查询、查询所有启用任务和分页方法",
+      "tags": ["repository", "schedule", "forex-schedule"]
+    },
+    {
+      "id": "interface://ScheduleJobRepository",
+      "type": "interface",
+      "label": "ScheduleJobRepository",
+      "summary": "定时任务仓储接口，提供save/findById/findByJobHandler/findAllEnabled/pageQuery方法",
+      "tags": ["repository"]
+    },
+    {
+      "id": "file://forex-schedule/src/main/java/com/forex/schedule/domain/repository/JobLogRepository.java",
+      "type": "file",
+      "label": "JobLogRepository.java",
+      "summary": "任务日志仓储接口，定义保存、按ID/任务ID查询和分页方法",
+      "tags": ["repository", "schedule", "log", "forex-schedule"]
+    },
+    {
+      "id": "interface://JobLogRepository",
+      "type": "interface",
+      "label": "JobLogRepository",
+      "summary": "任务日志仓储接口，提供save/findById/findByJobId/pageQuery方法",
+      "tags": ["repository"]
+    },
+    {
+      "id": "file://forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "type": "file",
+      "label": "ScheduleDomainService.java",
+      "summary": "定时任务领域服务，处理任务触发执行、日终结算和对账等核心逻辑",
+      "tags": ["domain-service", "schedule", "forex-schedule"]
+    },
+    {
+      "id": "class://ScheduleDomainService",
+      "type": "class",
+      "label": "ScheduleDomainService",
+      "summary": "定时任务领域服务，依赖ScheduleJobRepository/JobLogRepository，提供triggerJob/executeDailyClosing/executeReconciliation方法",
+      "tags": ["domain-service"]
+    },
+    {
+      "id": "file://forex-schedule/src/main/java/com/forex/schedule/infrastructure/mapper/ScheduleJobMapper.java",
+      "type": "file",
+      "label": "ScheduleJobMapper.java",
+      "summary": "定时任务MyBatis Mapper，定义按处理器、全部启用和动态分页查询SQL",
+      "tags": ["mapper", "mybatis", "schedule", "forex-schedule"]
+    },
+    {
+      "id": "table://t_schedule_job",
+      "type": "table",
+      "label": "t_schedule_job",
+      "summary": "定时任务表，包含job_name/job_group/job_handler/cron_expression/job_desc/status/last_result等字段",
+      "tags": ["table", "mysql"]
+    },
+    {
+      "id": "table://t_job_log",
+      "type": "table",
+      "label": "t_job_log",
+      "summary": "任务执行日志表，包含job_id/job_name/job_handler/start_time/end_time/execute_status等字段",
+      "tags": ["table", "mysql"]
+    },
+    {
+      "id": "file://forex-schedule/src/main/java/com/forex/schedule/infrastructure/persistence/ScheduleJobPO.java",
+      "type": "file",
+      "label": "ScheduleJobPO.java",
+      "summary": "定时任务持久化对象，映射t_schedule_job表",
+      "tags": ["po", "persistence", "schedule", "forex-schedule"]
+    },
+    {
+      "id": "file://forex-schedule/src/main/java/com/forex/schedule/infrastructure/persistence/JobLogPO.java",
+      "type": "file",
+      "label": "JobLogPO.java",
+      "summary": "任务日志持久化对象，映射t_job_log表",
+      "tags": ["po", "persistence", "schedule", "log", "forex-schedule"]
+    },
+    {
+      "id": "file://forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "type": "file",
+      "label": "ScheduleJobRepositoryImpl.java",
+      "summary": "定时任务仓储实现，使用MyBatis Plus和动态SQL分页",
+      "tags": ["repository", "impl", "schedule", "forex-schedule"]
+    },
+    {
+      "id": "class://ScheduleJobRepositoryImpl",
+      "type": "class",
+      "label": "ScheduleJobRepositoryImpl",
+      "summary": "ScheduleJobRepository实现，注入ScheduleJobMapper，实现save/findById/findByJobHandler/findAllEnabled/pageQuery",
+      "tags": ["repository", "impl"]
+    },
+    {
+      "id": "file://forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java",
+      "type": "file",
+      "label": "ScheduleApplication.java",
+      "summary": "定时任务服务Spring Boot启动类，启用服务发现和Mapper扫描，端口8218",
+      "tags": ["application", "spring-boot", "forex-schedule"]
+    },
+    {
+      "id": "class://ScheduleApplication",
+      "type": "class",
+      "label": "ScheduleApplication",
+      "summary": "定时任务服务启动入口，@SpringBootApplication @EnableDiscoveryClient @MapperScan",
+      "tags": ["application"]
+    },
+    {
+      "id": "file://forex-schedule/src/main/resources/application.yml",
+      "type": "file",
+      "label": "application.yml (forex-schedule)",
+      "summary": "定时任务服务配置：端口8218，MySQL(forex_schedule库)、Redis、Nacos、XXL-Job执行器(端口9999)",
+      "tags": ["config", "yaml"]
+    },
+    {
+      "id": "endpoint://POST /api/settlement/collection/create",
+      "type": "endpoint",
+      "label": "POST /api/settlement/collection/create",
+      "summary": "创建跟单托收，幂等性防重",
+      "tags": ["api", "settlement", "collection"]
+    },
+    {
+      "id": "endpoint://GET /api/settlement/collection/{collectionNo}",
+      "type": "endpoint",
+      "label": "GET /api/settlement/collection/{collectionNo}",
+      "summary": "查询托收详情",
+      "tags": ["api", "settlement", "collection"]
+    },
+    {
+      "id": "endpoint://POST /api/settlement/collection/pay/{collectionNo}",
+      "type": "endpoint",
+      "label": "POST /api/settlement/collection/pay/{collectionNo}",
+      "summary": "托收付款，Redis锁防重",
+      "tags": ["api", "settlement", "collection"]
+    },
+    {
+      "id": "endpoint://POST /api/settlement/guarantee/create",
+      "type": "endpoint",
+      "label": "POST /api/settlement/guarantee/create",
+      "summary": "创建国际保函，幂等性防重",
+      "tags": ["api", "settlement", "guarantee"]
+    },
+    {
+      "id": "endpoint://GET /api/settlement/guarantee/{guaranteeNo}",
+      "type": "endpoint",
+      "label": "GET /api/settlement/guarantee/{guaranteeNo}",
+      "summary": "查询保函详情",
+      "tags": ["api", "settlement", "guarantee"]
+    },
+    {
+      "id": "endpoint://POST /api/settlement/guarantee/issue/{guaranteeNo}",
+      "type": "endpoint",
+      "label": "POST /api/settlement/guarantee/issue/{guaranteeNo}",
+      "summary": "开立保函，Redis锁防重",
+      "tags": ["api", "settlement", "guarantee"]
+    },
+    {
+      "id": "endpoint://POST /api/settlement/lc/create",
+      "type": "endpoint",
+      "label": "POST /api/settlement/lc/create",
+      "summary": "创建信用证，幂等性防重",
+      "tags": ["api", "settlement", "lc"]
+    },
+    {
+      "id": "endpoint://GET /api/settlement/lc/{lcNo}",
+      "type": "endpoint",
+      "label": "GET /api/settlement/lc/{lcNo}",
+      "summary": "查询信用证详情",
+      "tags": ["api", "settlement", "lc"]
+    },
+    {
+      "id": "endpoint://POST /api/settlement/lc/page",
+      "type": "endpoint",
+      "label": "POST /api/settlement/lc/page",
+      "summary": "分页查询信用证",
+      "tags": ["api", "settlement", "lc"]
+    },
+    {
+      "id": "endpoint://POST /api/settlement/lc/issue/{lcNo}",
+      "type": "endpoint",
+      "label": "POST /api/settlement/lc/issue/{lcNo}",
+      "summary": "开立信用证，Redis锁防重",
+      "tags": ["api", "settlement", "lc"]
+    },
+    {
+      "id": "endpoint://POST /api/settlement/lc/amend",
+      "type": "endpoint",
+      "label": "POST /api/settlement/lc/amend",
+      "summary": "修改信用证，Redis锁防重",
+      "tags": ["api", "settlement", "lc"]
+    },
+    {
+      "id": "endpoint://POST /api/settlement/lc/present/{lcNo}",
+      "type": "endpoint",
+      "label": "POST /api/settlement/lc/present/{lcNo}",
+      "summary": "信用证交单，Redis锁防重",
+      "tags": ["api", "settlement", "lc"]
+    },
+    {
+      "id": "endpoint://POST /api/settlement/lc/check-docs",
+      "type": "endpoint",
+      "label": "POST /api/settlement/lc/check-docs",
+      "summary": "审单，Redis锁防重",
+      "tags": ["api", "settlement", "lc"]
+    },
+    {
+      "id": "endpoint://POST /api/settlement/lc/accept/{lcNo}",
+      "type": "endpoint",
+      "label": "POST /api/settlement/lc/accept/{lcNo}",
+      "summary": "承兑信用证，Redis锁防重",
+      "tags": ["api", "settlement", "lc"]
+    },
+    {
+      "id": "endpoint://POST /api/settlement/lc/pay/{lcNo}",
+      "type": "endpoint",
+      "label": "POST /api/settlement/lc/pay/{lcNo}",
+      "summary": "信用证付款，Redis锁防重",
+      "tags": ["api", "settlement", "lc"]
+    },
+    {
+      "id": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "type": "file",
+      "label": "CollectionController.java",
+      "summary": "跟单托收REST控制器，提供创建、查询详情和付款接口",
+      "tags": ["controller", "settlement", "collection", "forex-settlement"]
+    },
+    {
+      "id": "class://CollectionController",
+      "type": "class",
+      "label": "CollectionController",
+      "summary": "跟单托收控制器，@Tag(\"跟单托收\") @RequestMapping(\"/api/settlement/collection\")，依赖SettlementAppService",
+      "tags": ["controller"]
+    },
+    {
+      "id": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "type": "file",
+      "label": "GuaranteeController.java",
+      "summary": "国际保函REST控制器，提供创建、查询详情和开立接口",
+      "tags": ["controller", "settlement", "guarantee", "forex-settlement"]
+    },
+    {
+      "id": "class://GuaranteeController",
+      "type": "class",
+      "label": "GuaranteeController",
+      "summary": "国际保函控制器，@Tag(\"国际保函\") @RequestMapping(\"/api/settlement/guarantee\")，依赖SettlementAppService",
+      "tags": ["controller"]
+    },
+    {
+      "id": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "type": "file",
+      "label": "LcController.java",
+      "summary": "信用证管理REST控制器，提供完整LC生命周期管理(创建/查询/开立/修改/交单/审单/承兑/付款)",
+      "tags": ["controller", "settlement", "lc", "forex-settlement"]
+    },
+    {
+      "id": "class://LcController",
+      "type": "class",
+      "label": "LcController",
+      "summary": "信用证控制器，@Tag(\"信用证管理\") @RequestMapping(\"/api/settlement/lc\")，提供10个REST端点覆盖LC全生命周期",
+      "tags": ["controller"]
+    },
+    {
+      "id": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/dto/CollectionReq.java",
+      "type": "file",
+      "label": "CollectionReq.java",
+      "summary": "托收创建请求DTO，包含客户ID、托收类型/方式/金额/币种/付款人信息",
+      "tags": ["dto", "settlement", "collection", "forex-settlement"]
+    },
+    {
+      "id": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/dto/CollectionResp.java",
+      "type": "file",
+      "label": "CollectionResp.java",
+      "summary": "托收响应DTO，包含托收编号、客户信息、银行信息、状态和SWIFT参考号",
+      "tags": ["dto", "settlement", "collection", "forex-settlement"]
+    },
+    {
+      "id": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/dto/GuaranteeReq.java",
+      "type": "file",
+      "label": "GuaranteeReq.java",
+      "summary": "保函创建请求DTO，包含客户ID、保函类型/金额/币种/受益人/有效期/费率",
+      "tags": ["dto", "settlement", "guarantee", "forex-settlement"]
+    },
+    {
+      "id": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/dto/GuaranteeResp.java",
+      "type": "file",
+      "label": "GuaranteeResp.java",
+      "summary": "保函响应DTO，包含保函编号、受益人信息、有效期、手续费和SWIFT参考号",
+      "tags": ["dto", "settlement", "guarantee", "forex-settlement"]
+    },
+    {
+      "id": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/dto/CreateLcReq.java",
+      "type": "file",
+      "label": "CreateLcReq.java",
+      "summary": "信用证创建请求DTO，包含客户ID、类型/方向/金额/币种/申请人/受益人/有效期等信息",
+      "tags": ["dto", "settlement", "lc", "forex-settlement"]
+    },
+    {
+      "id": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/dto/LcResp.java",
+      "type": "file",
+      "label": "LcResp.java",
+      "summary": "信用证响应DTO，包含完整的LC字段(金额/有效期/银行/货物/单据/保证金等)",
+      "tags": ["dto", "settlement", "lc", "forex-settlement"]
+    }
+  ],
+  "edges": [
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java", "to": "class://ScheduleController", "type": "contains"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java", "to": "endpoint://POST /api/schedule/job/add", "type": "contains"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java", "to": "endpoint://PUT /api/schedule/job/update/{id}", "type": "contains"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java", "to": "endpoint://POST /api/schedule/job/toggle/{id}", "type": "contains"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java", "to": "endpoint://POST /api/schedule/job/trigger/{id}", "type": "contains"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java", "to": "endpoint://GET /api/schedule/job/{id}", "type": "contains"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java", "to": "endpoint://POST /api/schedule/job/page", "type": "contains"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java", "to": "endpoint://GET /api/schedule/job/{jobId}/logs", "type": "contains"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java", "to": "file://forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java", "type": "depends_on"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java", "to": "class://ScheduleJob", "type": "contains"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/JobLog.java", "to": "class://JobLog", "type": "contains"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/domain/repository/ScheduleJobRepository.java", "to": "interface://ScheduleJobRepository", "type": "contains"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/domain/repository/JobLogRepository.java", "to": "interface://JobLogRepository", "type": "contains"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java", "to": "class://ScheduleDomainService", "type": "contains"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java", "to": "interface://ScheduleJobRepository", "type": "depends_on"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java", "to": "interface://JobLogRepository", "type": "depends_on"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java", "to": "class://ScheduleAppService", "type": "contains"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java", "to": "class://ScheduleDomainService", "type": "depends_on"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java", "to": "interface://ScheduleJobRepository", "type": "depends_on"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java", "to": "interface://JobLogRepository", "type": "depends_on"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/infrastructure/mapper/ScheduleJobMapper.java", "to": "table://t_schedule_job", "type": "depends_on"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/infrastructure/persistence/ScheduleJobPO.java", "to": "table://t_schedule_job", "type": "maps_to"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/infrastructure/persistence/JobLogPO.java", "to": "table://t_job_log", "type": "maps_to"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java", "to": "class://ScheduleJobRepositoryImpl", "type": "contains"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java", "to": "interface://ScheduleJobRepository", "type": "implements"},
+    {"from": "file://forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java", "to": "class://ScheduleApplication", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java", "to": "class://CollectionController", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java", "to": "endpoint://POST /api/settlement/collection/create", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java", "to": "endpoint://GET /api/settlement/collection/{collectionNo}", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java", "to": "endpoint://POST /api/settlement/collection/pay/{collectionNo}", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java", "to": "class://GuaranteeController", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java", "to": "endpoint://POST /api/settlement/guarantee/create", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java", "to": "endpoint://GET /api/settlement/guarantee/{guaranteeNo}", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java", "to": "endpoint://POST /api/settlement/guarantee/issue/{guaranteeNo}", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java", "to": "class://LcController", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java", "to": "endpoint://POST /api/settlement/lc/create", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java", "to": "endpoint://GET /api/settlement/lc/{lcNo}", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java", "to": "endpoint://POST /api/settlement/lc/page", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java", "to": "endpoint://POST /api/settlement/lc/issue/{lcNo}", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java", "to": "endpoint://POST /api/settlement/lc/amend", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java", "to": "endpoint://POST /api/settlement/lc/present/{lcNo}", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java", "to": "endpoint://POST /api/settlement/lc/check-docs", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java", "to": "endpoint://POST /api/settlement/lc/accept/{lcNo}", "type": "contains"},
+    {"from": "file://forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java", "to": "endpoint://POST /api/settlement/lc/pay/{lcNo}", "type": "contains"}
+  ]
+}

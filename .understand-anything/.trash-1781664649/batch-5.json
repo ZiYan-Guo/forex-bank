@@ -1,0 +1,786 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "type": "file",
+      "name": "AI 模块启动类",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "summary": "Spring Boot AI 模块启动入口，启用服务发现和 MyBatis Mapper 扫描。",
+      "tags": ["spring-boot", "startup", "ai"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai:AiApplication",
+      "type": "class",
+      "name": "AiApplication",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "summary": "AI 模块主应用类，注解 @SpringBootApplication、@EnableDiscoveryClient、@MapperScan。",
+      "tags": ["spring-boot", "application"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "type": "file",
+      "name": "AI 智能客服控制器",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "summary": "AI 智能客服 REST 控制器，提供 RAG 问答、套保推荐、自然语言交易、智能报告生成、会话管理等接口。",
+      "tags": ["controller", "rest", "ai", "chat"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai:AiChatController",
+      "type": "class",
+      "name": "AiChatController",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "summary": "AI 聊天 REST 控制器，依赖 AiAppService 处理智能问答和交易推荐。",
+      "tags": ["controller", "rest", "ai"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "type": "file",
+      "name": "AI 文档审核控制器",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "summary": "AI 文档智能审核 REST 控制器，处理 OCR 识别、单据比对等接口。",
+      "tags": ["controller", "rest", "ai", "document"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "type": "file",
+      "name": "AI 风控控制器",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "summary": "AI 风险管控 REST 控制器，处理反洗钱评估、黑名单模糊匹配、交易网络分析等接口。",
+      "tags": ["controller", "rest", "ai", "risk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "type": "file",
+      "name": "AI 汇率预测控制器",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "summary": "AI 汇率预测 REST 控制器，处理汇率预测和敞口预测接口。",
+      "tags": ["controller", "rest", "ai", "prediction"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java",
+      "type": "file",
+      "name": "聊天消息请求 DTO",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java",
+      "summary": "AI 聊天消息请求 DTO，包含 sessionId 和 question 字段。",
+      "tags": ["dto", "request", "chat"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java",
+      "type": "file",
+      "name": "聊天消息响应 DTO",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java",
+      "summary": "AI 聊天消息响应 DTO。",
+      "tags": ["dto", "response", "chat"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java",
+      "type": "file",
+      "name": "交易推荐响应 DTO",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java",
+      "summary": "AI 套保交易推荐响应 DTO。",
+      "tags": ["dto", "response", "trading"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java",
+      "type": "file",
+      "name": "汇率预测响应 DTO",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java",
+      "summary": "AI 汇率预测响应 DTO。",
+      "tags": ["dto", "response", "rate"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java",
+      "type": "file",
+      "name": "文档审核响应 DTO",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java",
+      "summary": "AI 文档审核响应 DTO。",
+      "tags": ["dto", "response", "document"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java",
+      "type": "file",
+      "name": "风险预警响应 DTO",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java",
+      "summary": "AI 风险预警响应 DTO。",
+      "tags": ["dto", "response", "risk"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "type": "file",
+      "name": "AI 应用服务",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "summary": "AI 应用服务，编排汇率预测、RAG 问答、套保推荐、自然语言交易、报告生成、反洗钱评估、黑名单匹配、交易网络分析、OCR 识别、单据比对、清算修正等智能业务流程。",
+      "tags": ["service", "application", "ai"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:forex-ai:AiAppService",
+      "type": "class",
+      "name": "AiAppService",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "summary": "AI 应用服务，聚合所有 AI 领域能力对外提供统一服务接口。",
+      "tags": ["service", "application", "ai"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "type": "file",
+      "name": "AI 领域服务",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "summary": "AI 领域服务聚合器，注入 RatePredictionEngine、SmartRagService、AmlDetectionEngine、DocumentAuditService、TradingAssistant 等全部 AI 领域服务。",
+      "tags": ["domain", "service", "ai"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai:AiDomainService",
+      "type": "class",
+      "name": "AiDomainService",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "summary": "AI 领域服务，聚合所有 AI 领域服务。",
+      "tags": ["domain", "service"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "type": "file",
+      "name": "反洗钱检测引擎",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "summary": "反洗钱检测领域服务，基于交易金额、频率、国家等维度计算 AML 风险评分（0-1），划分 LOW/MEDIUM/HIGH/PROHIBITED 风险等级并给出处理建议，支持交易模式分析。",
+      "tags": ["domain", "service", "aml", "risk"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai:AmlDetectionEngine",
+      "type": "class",
+      "name": "AmlDetectionEngine",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "summary": "反洗钱检测引擎，评估交易 AML 风险。",
+      "tags": ["domain", "service", "aml"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "type": "file",
+      "name": "智能 RAG 服务",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "summary": "智能 RAG 检索增强生成服务，基于知识库进行问题检索、答案生成和风险评估报告生成。",
+      "tags": ["domain", "service", "rag", "ai"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai:SmartRagService",
+      "type": "class",
+      "name": "SmartRagService",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "summary": "RAG 检索增强生成服务。",
+      "tags": ["domain", "service", "rag"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "type": "file",
+      "name": "交易助手服务",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "summary": "外汇交易 AI 助手，支持自然语言交易解析、套期保值建议（按进出口/投资业务类型和风险偏好）、外汇风险报告生成。",
+      "tags": ["domain", "service", "trading", "ai"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai:TradingAssistant",
+      "type": "class",
+      "name": "TradingAssistant",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "summary": "交易助手，解析自然语言交易指令和推荐套保策略。",
+      "tags": ["domain", "service", "trading"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "type": "file",
+      "name": "文档审核服务",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "summary": "AI 单证审核领域服务，支持三单（发票/合同/报关单）比对审核、OCR 字段提取（发票/提单/箱单/报关单）。",
+      "tags": ["domain", "service", "document", "audit"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai:DocumentAuditService",
+      "type": "class",
+      "name": "DocumentAuditService",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "summary": "单证审核服务，比对贸易单据一致性。",
+      "tags": ["domain", "service", "document"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "type": "file",
+      "name": "汇率预测引擎",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "summary": "汇率预测引擎领域服务，使用指数平滑模型预测汇率走势，计算置信区间和波动率，支持小时/日/周粒度预测。",
+      "tags": ["domain", "service", "prediction", "rate"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai:RatePredictionEngine",
+      "type": "class",
+      "name": "RatePredictionEngine",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "summary": "汇率预测引擎，使用指数平滑算法。",
+      "tags": ["domain", "service", "prediction"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java",
+      "type": "file",
+      "name": "文档审核聚合根",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java",
+      "summary": "文档审核 DDD 聚合根，支持单据一致性判定、差异记录、置信度评分，包含 create/reconstitute/markConsistent/markDiscrepancy 等业务方法。",
+      "tags": ["domain", "aggregate", "document", "ddd"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai:DocumentAudit",
+      "type": "class",
+      "name": "DocumentAudit",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java",
+      "summary": "文档审核聚合根，继承 BaseAggregate。",
+      "tags": ["domain", "aggregate", "ddd"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java",
+      "type": "file",
+      "name": "汇率预测聚合根",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java",
+      "summary": "汇率预测 DDD 聚合根，包含货币对、预测类型（HOURLY/DAILY/WEEKLY）、预测价格、置信区间等，提供 calculateRange/isAccurate 方法。",
+      "tags": ["domain", "aggregate", "prediction", "ddd"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai:RatePrediction",
+      "type": "class",
+      "name": "RatePrediction",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java",
+      "summary": "汇率预测聚合根，继承 BaseAggregate。",
+      "tags": ["domain", "aggregate", "ddd"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java",
+      "type": "file",
+      "name": "AI 风险评估聚合根",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java",
+      "summary": "AI 风险评估 DDD 聚合根，支持 AML/FRAUD/SANCTION 三类风险，LOW/PROHIBITED 四级风险等级，提供 isEscalated/isPassed 判断方法。",
+      "tags": ["domain", "aggregate", "risk", "ddd"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai:RiskAiAssessment",
+      "type": "class",
+      "name": "RiskAiAssessment",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java",
+      "summary": "AI 风险评估聚合根，继承 BaseAggregate。",
+      "tags": ["domain", "aggregate", "ddd"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java",
+      "type": "file",
+      "name": "聊天会话聚合根",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java",
+      "summary": "AI 聊天会话 DDD 聚合根，支持 SUPPORT/TRADING/AUDIT 三种会话类型，ACTIVE/CLOSED 状态管理，包含 addMessage/close/loadMessages 方法。",
+      "tags": ["domain", "aggregate", "chat", "ddd"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai:ChatSession",
+      "type": "class",
+      "name": "ChatSession",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java",
+      "summary": "聊天会话聚合根，继承 BaseAggregate。",
+      "tags": ["domain", "aggregate", "ddd"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java",
+      "type": "file",
+      "name": "聊天消息聚合根",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java",
+      "summary": "AI 聊天消息聚合根，支持 USER/AI/SYSTEM 三种角色，提供 of/reconstitute 工厂方法和角色判断方法。",
+      "tags": ["domain", "aggregate", "message", "ddd"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai:ChatMessage",
+      "type": "class",
+      "name": "ChatMessage",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java",
+      "summary": "聊天消息聚合根，独立于 BaseAggregate 的简单聚合。",
+      "tags": ["domain", "aggregate", "ddd"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java",
+      "type": "file",
+      "name": "聊天消息仓储接口",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java",
+      "summary": "聊天消息 DDD 仓储接口（Port）。",
+      "tags": ["repository", "ddd", "port"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java",
+      "type": "file",
+      "name": "聊天会话仓储接口",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java",
+      "summary": "聊天会话 DDD 仓储接口（Port）。",
+      "tags": ["repository", "ddd", "port"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java",
+      "type": "file",
+      "name": "文档审核仓储接口",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java",
+      "summary": "文档审核 DDD 仓储接口（Port）。",
+      "tags": ["repository", "ddd", "port"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java",
+      "type": "file",
+      "name": "汇率预测仓储接口",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java",
+      "summary": "汇率预测 DDD 仓储接口（Port）。",
+      "tags": ["repository", "ddd", "port"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java",
+      "type": "file",
+      "name": "风险评估仓储接口",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java",
+      "summary": "AI 风险评估 DDD 仓储接口（Port）。",
+      "tags": ["repository", "ddd", "port"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "type": "file",
+      "name": "聊天消息仓储实现",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "summary": "聊天消息仓储的 MyBatis-Plus 实现。",
+      "tags": ["repository", "infrastructure", "mybatis"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "type": "file",
+      "name": "聊天会话仓储实现",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "summary": "聊天会话仓储的 MyBatis-Plus 实现。",
+      "tags": ["repository", "infrastructure", "mybatis"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "type": "file",
+      "name": "文档审核仓储实现",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "summary": "文档审核仓储的 MyBatis-Plus 实现。",
+      "tags": ["repository", "infrastructure", "mybatis"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "type": "file",
+      "name": "汇率预测仓储实现",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "summary": "汇率预测仓储的 MyBatis-Plus 实现。",
+      "tags": ["repository", "infrastructure", "mybatis"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "type": "file",
+      "name": "风险评估仓储实现",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "summary": "AI 风险评估仓储的 MyBatis-Plus 实现。",
+      "tags": ["repository", "infrastructure", "mybatis"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java",
+      "type": "file",
+      "name": "聊天消息 MyBatis Mapper",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java",
+      "summary": "聊天消息 PO 的 MyBatis Mapper。",
+      "tags": ["mybatis", "mapper", "database"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java",
+      "type": "file",
+      "name": "聊天会话 MyBatis Mapper",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java",
+      "summary": "聊天会话 PO 的 MyBatis Mapper。",
+      "tags": ["mybatis", "mapper", "database"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java",
+      "type": "file",
+      "name": "文档审核 MyBatis Mapper",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java",
+      "summary": "文档审核 PO 的 MyBatis Mapper。",
+      "tags": ["mybatis", "mapper", "database"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java",
+      "type": "file",
+      "name": "汇率预测 MyBatis Mapper",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java",
+      "summary": "汇率预测 PO 的 MyBatis Mapper。",
+      "tags": ["mybatis", "mapper", "database"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java",
+      "type": "file",
+      "name": "风险评估 MyBatis Mapper",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java",
+      "summary": "AI 风险评估 PO 的 MyBatis Mapper。",
+      "tags": ["mybatis", "mapper", "database"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatMessagePO.java",
+      "type": "file",
+      "name": "聊天消息持久化对象",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatMessagePO.java",
+      "summary": "聊天消息数据库映射 PO。",
+      "tags": ["po", "mybatis", "persistence"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatSessionPO.java",
+      "type": "file",
+      "name": "聊天会话持久化对象",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatSessionPO.java",
+      "summary": "聊天会话数据库映射 PO。",
+      "tags": ["po", "mybatis", "persistence"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/DocumentAuditPO.java",
+      "type": "file",
+      "name": "文档审核持久化对象",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/DocumentAuditPO.java",
+      "summary": "文档审核数据库映射 PO。",
+      "tags": ["po", "mybatis", "persistence"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RatePredictionPO.java",
+      "type": "file",
+      "name": "汇率预测持久化对象",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RatePredictionPO.java",
+      "summary": "汇率预测数据库映射 PO。",
+      "tags": ["po", "mybatis", "persistence"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RiskAiAssessmentPO.java",
+      "type": "file",
+      "name": "风险评估持久化对象",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RiskAiAssessmentPO.java",
+      "summary": "AI 风险评估数据库映射 PO。",
+      "tags": ["po", "mybatis", "persistence"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "type": "file",
+      "name": "Spring AI 配置",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "summary": "Spring AI 配置类，当自动配置不可用时回退创建 RestTemplate Bean 作为 AI 客户端。",
+      "tags": ["config", "spring", "ai"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "type": "file",
+      "name": "AI 模型提供者配置",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "summary": "AI 模型提供者配置属性类（prefix=forex.ai），配置 provider/defaultModel/embeddingModel，内置 Prediction 和 Risk 子配置。",
+      "tags": ["config", "ai", "model"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "type": "file",
+      "name": "RAG 知识库初始化器",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "summary": "RAG 知识库初始化组件，启动时加载外汇政策、结算规则、信用证流程、反洗钱政策、外汇风险管理、合规审查等知识文档，提供关键词搜索检索能力。",
+      "tags": ["rag", "knowledge-base", "initializer", "ai"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai:KnowledgeBaseInitializer",
+      "type": "class",
+      "name": "KnowledgeBaseInitializer",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "summary": "知识库初始化器，实现 ApplicationRunner。",
+      "tags": ["rag", "knowledge-base"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "target": "class:forex-ai:AiApplication",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "class:forex-ai:AiChatController",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "class:forex-ai:AiAppService",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "target": "class:forex-ai:AiDomainService",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "target": "class:forex-ai:AmlDetectionEngine",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "target": "class:forex-ai:SmartRagService",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "target": "class:forex-ai:TradingAssistant",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "target": "class:forex-ai:DocumentAuditService",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "target": "class:forex-ai:RatePredictionEngine",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java",
+      "target": "class:forex-ai:DocumentAudit",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java",
+      "target": "class:forex-ai:RatePrediction",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java",
+      "target": "class:forex-ai:RiskAiAssessment",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java",
+      "target": "class:forex-ai:ChatSession",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java",
+      "target": "class:forex-ai:ChatMessage",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "target": "class:forex-ai:KnowledgeBaseInitializer",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-ai:AiChatController",
+      "target": "class:forex-ai:AiAppService",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-ai:AiAppService",
+      "target": "class:forex-ai:AiDomainService",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai:AiDomainService",
+      "target": "class:forex-ai:RatePredictionEngine",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai:AiDomainService",
+      "target": "class:forex-ai:SmartRagService",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai:AiDomainService",
+      "target": "class:forex-ai:AmlDetectionEngine",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai:AiDomainService",
+      "target": "class:forex-ai:DocumentAuditService",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai:AiDomainService",
+      "target": "class:forex-ai:TradingAssistant",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai:SmartRagService",
+      "target": "class:forex-ai:KnowledgeBaseInitializer",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-ai:DocumentAuditService",
+      "target": "class:forex-ai:DocumentAudit",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-ai:AmlDetectionEngine",
+      "target": "class:forex-ai:RiskAiAssessment",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-ai:RatePredictionEngine",
+      "target": "class:forex-ai:RatePrediction",
+      "type": "calls",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-ai:ChatSession",
+      "target": "class:forex-ai:ChatMessage",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "type": "related",
+      "direction": "undirected",
+      "weight": 0.5
+    }
+  ]
+}

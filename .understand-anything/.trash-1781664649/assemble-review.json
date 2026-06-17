@@ -1,0 +1,60 @@
+{
+  "issues": [
+    "146 nodes have 'class:__nofilepath__:*' IDs — cannot be linked to source files, likely from batches that lost file path context during truncation (batch16-batch20). These include TradingController, FxTradeMapper, ValuationModel, PaymentDomainService, etc.",
+    "30 distinct edge types across graph — high schema dispersion. 'related', 'related_to', and 'relates_to' are 3 separate types for equivalent semantics. 'maps_to' and 'maps' are also duplicated.",
+    "No cross-module semantic edges exist. forex-account, forex-auth, forex-trading, forex-exchange, forex-clearing, forex-payment, forex-settlement, forex-bookkeeping, forex-hedge-accounting, forex-cashpool, forex-margin, forex-position, forex-valuation, forex-ai, forex-customer, forex-gateway operate as completely isolated subgraphs.",
+    "Frontend module naming split: 'forex-bank-web' used in early batches (lines 75-245), 'forex-web' used in batches 16+ (e.g., forex-web/.../auth.ts). These refer to the same Vue codebase but appear as 2 modules.",
+    "File path truncation: batches 16-20 use '...' notation (e.g., 'forex-ai/.../AiAppService.java'), losing the full source path. This breaks file→file dependency tracing.",
+    "146 file nodes from batches 16-20 use opaque batch IDs ('file:batch16-file-1', etc.) instead of real file paths. These correspond to the __nofilepath__ class nodes.",
+    "Money value object appears independently in both forex-account (forex-account:Money) and forex-exchange (Money) with no edge connecting them despite same domain concept.",
+    "Customer domain split across forex-auth (class:Customer with role/permission context) and forex-customer (CustomerController, CustomerDomainService) with no cross-reference edge.",
+    "forex-bookkeeping module has zero outgoing edges — no connection to forex-account (which generates accounting entries) or forex-trading (which triggers valuations).",
+    "class:forex-account:AccountNumber node has only a 'contains' edge from its file — no other nodes reference it, suggesting it may be unused or the calls edges were missed.",
+    "197 'endpoint' type nodes present but only 42 'exposes' edges — most endpoints are not linked to their owning controllers/classes.",
+    "Identical concepts appear: IssueTracking/IMPROVEMENTS.md as both a file node and referenced in documents edges. LICENSE file has only documents edges but no relationships to other nodes."
+  ],
+  "warnings": [
+    "24 'interface' nodes exist outside the schema — kept as-is by the merge script but may not render correctly in graph visualization.",
+    "22 'vue-component' nodes outside schema — these are valid entities but not formally recognized.",
+    "13 'enum' type nodes outside schema — includes ClsCurrency, ConfirmationFlag, CurrencyEnum, RiskLevelEnum, etc.",
+    "1369 nodes have complexity defaulted to 'moderate' — almost the entire graph lacks meaningful complexity metadata.",
+    "833 edges for 1498 nodes (0.56 edges/node ratio) is low — typical knowledge graphs require 1.5-3 edges/node for meaningful connectivity.",
+    "110 'table' nodes from SQL files are present but only connected via 'contains' from init.sql files — no connections to Java persistence objects (POs).",
+    "graph has 'manages' (10), 'intercepts' (4), 'catches' (1), 'records' (1) edge types — these may be batch-specific and unlikely to match in downstream tools.",
+    "forex-exchange and forex-trading modules both handle FX order/trade lifecycle but have no edges between them despite likely overlapping domains."
+  ],
+  "suggestions": [
+    "Normalize edge type taxonomy: merge related/related_to/relates_to → 'related'; maps_to/maps → 'maps_to' before producing final graph.",
+    "Re-run batch analysis with full file paths preserved — replace '...' truncation with actual paths to eliminate __nofilepath__ placeholder nodes.",
+    "Reconcile frontend module name: unify 'forex-bank-web' and 'forex-web' into a consistent module ID.",
+    "Add cross-module edges: forex-clearing→forex-account (clearing needs account debit/credit), forex-trading→forex-position (trades create positions), forex-exchange→forex-account (exchange settlement), forex-payment→forex-clearing (payments go through clearing).",
+    "Run a deduplication pass on domain concepts (Money, Customer) and add 'implements'/'relates_to' edges between module-specific instances and shared base types.",
+    "Connect forex-bookkeeping to forex-account (AccountOpenedEvent→create journal entry, BalanceChangedEvent→record accounting entry).",
+    "Connect forex-ai domain services (AmlDetectionEngine, TradingAssistant) to the non-AI modules they reference (forex-payment AML, forex-trading recommendations).",
+    "Link 'endpoint' nodes to their controller classes via 'exposes' edges where missing.",
+    "Connect SQL table nodes to Java persistence objects (POs) that map to them — e.g., t_forex_account→ForexAccountPO, t_exchange_order→ExchangeOrderPO."
+  ],
+  "criticalIssues": 4,
+  "orphanCount": 146,
+  "missingConnections": [
+    "forex-account ↔ forex-auth (user ↔ account ownership)",
+    "forex-account ↔ forex-bookkeeping (account transactions → journal entries)",
+    "forex-account ↔ forex-exchange (exchange settlement needs account operations)",
+    "forex-trading ↔ forex-clearing (trades → clearing instructions)",
+    "forex-trading ↔ forex-position (trades update positions)",
+    "forex-trading ↔ forex-margin (trades consume margin)",
+    "forex-trading ↔ forex-valuation (trades need mark-to-market valuation)",
+    "forex-payment ↔ forex-clearing (payment instructions → clearing)",
+    "forex-payment ↔ forex-ai/aml (payment AML checks)",
+    "forex-customer ↔ forex-account (customer → account ownership)",
+    "forex-customer ↔ forex-auth (customer → user login)",
+    "forex-exchange ↔ forex-trading (exchange orders → interbank trades)"
+  ],
+  "needsReanalysis": [
+    "batch-16 (forex-trading, forex-valuation, forex-gateway)",
+    "batch-17 (forex-valuation domain services)",
+    "batch-18 (forex-margin, forex-position)",
+    "batch-19 (forex-payment)",
+    "batch-20 (forex-payment infrastructure, forex-settlement)"
+  ]
+}
