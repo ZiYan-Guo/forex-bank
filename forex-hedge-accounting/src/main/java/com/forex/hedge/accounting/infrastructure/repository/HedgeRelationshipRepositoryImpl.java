@@ -84,7 +84,6 @@ public class HedgeRelationshipRepositoryImpl implements HedgeRelationshipReposit
         po.setRelationshipStatus(hr.getRelationshipStatus());
         po.setEffectivenessRatio(hr.getEffectivenessRatio());
         po.setIfrsStandard(hr.getIfrsStandard());
-        po.setVersion(hr.getVersion());
         return po;
     }
 }

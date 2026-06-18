@@ -80,7 +80,6 @@ public class OverseasLendingRepositoryImpl implements OverseasLendingRepository 
         po.setOutstandingPrincipal(lending.getOutstandingPrincipal());
         po.setTotalInterest(lending.getTotalInterest());
         po.setPoolId(lending.getPoolId());
-        po.setVersion(lending.getVersion());
         return po;
     }
 }

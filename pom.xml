@@ -36,6 +36,8 @@
         <module>forex-ocr</module>
         <module>forex-schedule</module>
         <module>forex-saccr</module>
+        <module>forex-cashpool</module>
+        <module>forex-hedge-accounting</module>
         <module>forex-ai</module>
     </modules>
 
@@ -256,6 +258,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>

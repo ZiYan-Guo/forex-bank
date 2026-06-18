@@ -1,0 +1,13 @@
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/entity/HedgeEffectivenessTest.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/repository/HedgeEffectivenessTestRepository.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/repository/HedgeRelationshipRepository.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/infrastructure/mapper/HedgeEffectivenessTestMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/infrastructure/mapper/HedgeRelationshipMapper.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/infrastructure/persistence/HedgeEffectivenessTestPO.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/infrastructure/persistence/HedgeRelationshipPO.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/infrastructure/repository/HedgeEffectivenessTestRepositoryImpl.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/infrastructure/repository/HedgeRelationshipRepositoryImpl.java

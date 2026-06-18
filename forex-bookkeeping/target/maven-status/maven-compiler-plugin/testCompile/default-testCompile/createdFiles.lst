@@ -1,0 +1,4 @@
+com/forex/bookkeeping/TestApplication.class
+com/forex/bookkeeping/domain/service/BookkeepingDomainServiceTest.class
+com/forex/bookkeeping/infrastructure/repository/MonthEndClosingRepositoryImplTest.class
+com/forex/bookkeeping/domain/model/JournalEntryTest.class

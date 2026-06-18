@@ -69,7 +69,6 @@ public class CashPoolRepositoryImpl implements CashPoolRepository {
         po.setAvailableLimit(pool.getAvailableLimit());
         po.setPoolStatus(pool.getPoolStatus());
         po.setEffectiveDate(pool.getEffectiveDate());
-        po.setVersion(pool.getVersion());
         return po;
     }
 }

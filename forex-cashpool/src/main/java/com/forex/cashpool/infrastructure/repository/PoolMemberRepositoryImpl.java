@@ -66,7 +66,6 @@ public class PoolMemberRepositoryImpl implements PoolMemberRepository {
         po.setSettlementMode(member.getSettlementMode());
         po.setContributionLimit(member.getContributionLimit());
         po.setJoinDate(member.getJoinDate());
-        po.setVersion(member.getVersion());
         return po;
     }
 }
