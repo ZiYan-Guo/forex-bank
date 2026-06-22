@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.settlement.domain.service.CollectionDomainServiceTest" time="0.018" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.settlement.domain.service.CollectionDomainServiceTest" time="0.019" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="/Users/guoziyan/Library/Java/JavaVirtualMachines/temurin-17.0.18/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/target/surefire/surefirebooter-20260622092449196_3.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/target/surefire 2026-06-22T09-24-48_067-jvmRun1 surefire-20260622092449196_1tmp surefire_0-20260622092449196_2tmp"/>
+    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/target/surefire/surefirebooter-20260622141703302_60.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/target/surefire 2026-06-22T14-16-55_163-jvmRun1 surefire-20260622141703302_58tmp surefire_7-20260622141703302_59tmp"/>
     <property name="http.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="!*RepositoryImpl*Test"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/target/surefire/surefirebooter-20260622092449196_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/target/surefire/surefirebooter-20260622141703302_60.jar"/>
     <property name="user.script" value="Hans"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
@@ -60,28 +60,28 @@
     <property name="socksNonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testPay" classname="com.forex.settlement.domain.service.CollectionDomainServiceTest" time="0.012">
-    <system-out><![CDATA[09:24:50.246 [main] INFO com.forex.settlement.domain.service.CollectionDomainService -- 跟单托收已付款: collectionNo=COLL20260601001
+  <testcase name="testPay" classname="com.forex.settlement.domain.service.CollectionDomainServiceTest" time="0.013">
+    <system-out><![CDATA[14:17:04.185 [main] INFO com.forex.settlement.domain.service.CollectionDomainService -- 跟单托收已付款: collectionNo=COLL20260601001
 ]]></system-out>
   </testcase>
   <testcase name="testCreateCollection" classname="com.forex.settlement.domain.service.CollectionDomainServiceTest" time="0.001">
-    <system-out><![CDATA[09:24:50.248 [main] INFO com.forex.settlement.domain.service.CollectionDomainService -- 创建跟单托收: collectionNo=COLL202606220924502929, amount=300000.00 USD
+    <system-out><![CDATA[14:17:04.186 [main] INFO com.forex.settlement.domain.service.CollectionDomainService -- 创建跟单托收: collectionNo=COLL202606221417048777, amount=300000.00 USD
 ]]></system-out>
   </testcase>
   <testcase name="testCreateCollection_DA" classname="com.forex.settlement.domain.service.CollectionDomainServiceTest" time="0.001">
-    <system-out><![CDATA[09:24:50.249 [main] INFO com.forex.settlement.domain.service.CollectionDomainService -- 创建跟单托收: collectionNo=COLL202606220924508273, amount=150000.00 EUR
+    <system-out><![CDATA[14:17:04.187 [main] INFO com.forex.settlement.domain.service.CollectionDomainService -- 创建跟单托收: collectionNo=COLL202606221417048654, amount=150000.00 EUR
 ]]></system-out>
   </testcase>
   <testcase name="testPresentToDrawee" classname="com.forex.settlement.domain.service.CollectionDomainServiceTest" time="0.001">
-    <system-out><![CDATA[09:24:50.250 [main] INFO com.forex.settlement.domain.service.CollectionDomainService -- 跟单托收已向付款人提示: collectionNo=COLL20260601001
+    <system-out><![CDATA[14:17:04.188 [main] INFO com.forex.settlement.domain.service.CollectionDomainService -- 跟单托收已向付款人提示: collectionNo=COLL20260601001
 ]]></system-out>
   </testcase>
   <testcase name="testMarkReceivedDocuments" classname="com.forex.settlement.domain.service.CollectionDomainServiceTest" time="0.001">
-    <system-out><![CDATA[09:24:50.251 [main] INFO com.forex.settlement.domain.service.CollectionDomainService -- 跟单托收已收单: collectionNo=COLL20260601001
+    <system-out><![CDATA[14:17:04.189 [main] INFO com.forex.settlement.domain.service.CollectionDomainService -- 跟单托收已收单: collectionNo=COLL20260601001
 ]]></system-out>
   </testcase>
-  <testcase name="testAccept" classname="com.forex.settlement.domain.service.CollectionDomainServiceTest" time="0.001">
-    <system-out><![CDATA[09:24:50.252 [main] INFO com.forex.settlement.domain.service.CollectionDomainService -- 跟单托收已承兑: collectionNo=COLL20260601001
+  <testcase name="testAccept" classname="com.forex.settlement.domain.service.CollectionDomainServiceTest" time="0.0">
+    <system-out><![CDATA[14:17:04.190 [main] INFO com.forex.settlement.domain.service.CollectionDomainService -- 跟单托收已承兑: collectionNo=COLL20260601001
 ]]></system-out>
   </testcase>
 </testsuite>

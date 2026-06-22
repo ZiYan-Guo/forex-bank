@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.forex.valuation.domain.service.ValuationDomainServiceTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.640 s -- in com.forex.valuation.domain.service.ValuationDomainServiceTest

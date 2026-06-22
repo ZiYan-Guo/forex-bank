@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.risk.application.service.SamplingRuleEngineTest" time="0.551" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.risk.application.service.SamplingRuleEngineTest" time="0.565" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="/Users/guoziyan/Library/Java/JavaVirtualMachines/temurin-17.0.18/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/target/surefire/surefirebooter-20260618091355800_16.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/target/surefire 2026-06-18T09-13-53_720-jvmRun1 surefire-20260618091355800_14tmp surefire_2-20260618091355800_15tmp"/>
+    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/target/surefire/surefirebooter-20260622141705238_87.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/target/surefire 2026-06-22T14-16-55_163-jvmRun1 surefire-20260622141705238_85tmp surefire_9-20260622141705238_86tmp"/>
     <property name="http.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="!*RepositoryImpl*Test"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/target/surefire/surefirebooter-20260618091355800_16.jar"/>
+    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/target/surefire/surefirebooter-20260622141705238_87.jar"/>
     <property name="user.script" value="Hans"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
@@ -60,24 +60,24 @@
     <property name="socksNonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testEvaluateTransaction_NonSamplingRules" classname="com.forex.risk.application.service.SamplingRuleEngineTest" time="0.525">
-    <system-out><![CDATA[09:13:56.567 [main] INFO com.forex.risk.application.service.SamplingRuleEngine -- Evaluating sampling rules: customerId=1001, bizType=FX_PAYMENT, amount=100000 USD, country=US
-09:13:56.570 [main] INFO com.forex.risk.application.service.SamplingRuleEngine -- Sampling evaluation result: matchedRule=NONE, rate=0%
+  <testcase name="testEvaluateTransaction_NonSamplingRules" classname="com.forex.risk.application.service.SamplingRuleEngineTest" time="0.54">
+    <system-out><![CDATA[14:17:06.011 [main] INFO com.forex.risk.application.service.SamplingRuleEngine -- Evaluating sampling rules: customerId=1001, bizType=FX_PAYMENT, amount=100000 USD, country=US
+14:17:06.014 [main] INFO com.forex.risk.application.service.SamplingRuleEngine -- Sampling evaluation result: matchedRule=NONE, rate=0%
 ]]></system-out>
   </testcase>
   <testcase name="testGenerateSamplingTasks" classname="com.forex.risk.application.service.SamplingRuleEngineTest" time="0.007">
-    <system-out><![CDATA[09:13:56.581 [main] INFO com.forex.risk.application.service.SamplingRuleEngine -- Generating sampling tasks for date: 2026-06-01
-09:13:56.587 [main] INFO com.forex.risk.application.service.SamplingRuleEngine -- Generated 5 sampling tasks for 2026-06-01
+    <system-out><![CDATA[14:17:06.025 [main] INFO com.forex.risk.application.service.SamplingRuleEngine -- Generating sampling tasks for date: 2026-06-01
+14:17:06.031 [main] INFO com.forex.risk.application.service.SamplingRuleEngine -- Generated 5 sampling tasks for 2026-06-01
 ]]></system-out>
   </testcase>
-  <testcase name="testEvaluateTransaction_WithSamplingRules" classname="com.forex.risk.application.service.SamplingRuleEngineTest" time="0.002">
-    <system-out><![CDATA[09:13:56.589 [main] INFO com.forex.risk.application.service.SamplingRuleEngine -- Evaluating sampling rules: customerId=1001, bizType=FX_PAYMENT, amount=100000 USD, country=US
-09:13:56.589 [main] INFO com.forex.risk.application.service.SamplingRuleEngine -- Sampling evaluation result: matchedRule=SMP_01, rate=20%
+  <testcase name="testEvaluateTransaction_WithSamplingRules" classname="com.forex.risk.application.service.SamplingRuleEngineTest" time="0.001">
+    <system-out><![CDATA[14:17:06.033 [main] INFO com.forex.risk.application.service.SamplingRuleEngine -- Evaluating sampling rules: customerId=1001, bizType=FX_PAYMENT, amount=100000 USD, country=US
+14:17:06.033 [main] INFO com.forex.risk.application.service.SamplingRuleEngine -- Sampling evaluation result: matchedRule=SMP_01, rate=20%
 ]]></system-out>
   </testcase>
-  <testcase name="testEvaluateTransaction_NoRules" classname="com.forex.risk.application.service.SamplingRuleEngineTest" time="0.001">
-    <system-out><![CDATA[09:13:56.591 [main] INFO com.forex.risk.application.service.SamplingRuleEngine -- Evaluating sampling rules: customerId=1001, bizType=FX_PAYMENT, amount=100000 USD, country=US
-09:13:56.591 [main] INFO com.forex.risk.application.service.SamplingRuleEngine -- Sampling evaluation result: matchedRule=NONE, rate=0%
+  <testcase name="testEvaluateTransaction_NoRules" classname="com.forex.risk.application.service.SamplingRuleEngineTest" time="0.002">
+    <system-out><![CDATA[14:17:06.035 [main] INFO com.forex.risk.application.service.SamplingRuleEngine -- Evaluating sampling rules: customerId=1001, bizType=FX_PAYMENT, amount=100000 USD, country=US
+14:17:06.035 [main] INFO com.forex.risk.application.service.SamplingRuleEngine -- Sampling evaluation result: matchedRule=NONE, rate=0%
 ]]></system-out>
   </testcase>
 </testsuite>
