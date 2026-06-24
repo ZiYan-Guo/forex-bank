@@ -24,6 +24,7 @@ public enum ResultCode {
     EXCHANGE_RATE_EXPIRED(10004, "汇率已过期"),
     ORDER_STATUS_ERROR(10005, "订单状态异常"),
     ACCOUNT_ERROR(10006, "账户异常"),
+    ACCOUNT_NOT_FOUND(10007, "账户不存在"),
 
     REMOTE_CALL_FAIL(20001, "远程调用失败");
 

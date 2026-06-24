@@ -21,6 +21,12 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+      httpclient:
+        connect-timeout: 5000
+        response-timeout: 30s
+        pool:
+          max-idle-timeout: 30s
+          max-life-time: 60s
       routes:
         - id: forex-auth
           uri: lb://forex-auth
@@ -39,6 +45,11 @@ spring:
             - Path=/api/customer/**
           filters:
             - StripPrefix=0
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                key-resolver: "#{@ipKeyResolver}"
         - id: forex-exchange
           uri: lb://forex-exchange
           predicates:
@@ -56,90 +67,165 @@ spring:
             - Path=/api/trading/**
           filters:
             - StripPrefix=0
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                key-resolver: "#{@ipKeyResolver}"
         - id: forex-valuation
           uri: lb://forex-valuation
           predicates:
             - Path=/api/valuation/**
           filters:
             - StripPrefix=0
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                key-resolver: "#{@ipKeyResolver}"
         - id: forex-margin
           uri: lb://forex-margin
           predicates:
             - Path=/api/margin/**
           filters:
             - StripPrefix=0
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                key-resolver: "#{@ipKeyResolver}"
         - id: forex-position
           uri: lb://forex-position
           predicates:
             - Path=/api/position/**
           filters:
             - StripPrefix=0
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                key-resolver: "#{@ipKeyResolver}"
         - id: forex-bookkeeping
           uri: lb://forex-bookkeeping
           predicates:
             - Path=/api/bookkeeping/**
           filters:
             - StripPrefix=0
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                key-resolver: "#{@ipKeyResolver}"
         - id: forex-payment
           uri: lb://forex-payment
           predicates:
             - Path=/api/payment/**
           filters:
             - StripPrefix=0
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                key-resolver: "#{@ipKeyResolver}"
         - id: forex-settlement
           uri: lb://forex-settlement
           predicates:
             - Path=/api/settlement/**
           filters:
             - StripPrefix=0
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                key-resolver: "#{@ipKeyResolver}"
         - id: forex-clearing
           uri: lb://forex-clearing
           predicates:
             - Path=/api/clearing/**
           filters:
             - StripPrefix=0
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                key-resolver: "#{@ipKeyResolver}"
         - id: forex-risk
           uri: lb://forex-risk
           predicates:
             - Path=/api/risk/**
           filters:
             - StripPrefix=0
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                key-resolver: "#{@ipKeyResolver}"
         - id: forex-reporting
           uri: lb://forex-reporting
           predicates:
             - Path=/api/reporting/**
           filters:
             - StripPrefix=0
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                key-resolver: "#{@ipKeyResolver}"
         - id: forex-account
           uri: lb://forex-account
           predicates:
             - Path=/api/account/**
           filters:
             - StripPrefix=0
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1000
+                redis-rate-limiter.burstCapacity: 2000
+                key-resolver: "#{@ipKeyResolver}"
         - id: forex-rate
           uri: lb://forex-rate
           predicates:
             - Path=/api/rate/**
           filters:
             - StripPrefix=0
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 2000
+                redis-rate-limiter.burstCapacity: 4000
+                key-resolver: "#{@ipKeyResolver}"
         - id: forex-workflow
           uri: lb://forex-workflow
           predicates:
             - Path=/api/workflow/**
           filters:
             - StripPrefix=0
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                key-resolver: "#{@ipKeyResolver}"
         - id: forex-notification
           uri: lb://forex-notification
           predicates:
             - Path=/api/notification/**
           filters:
             - StripPrefix=0
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                key-resolver: "#{@ipKeyResolver}"
         - id: forex-ocr
           uri: lb://forex-ocr
           predicates:
             - Path=/api/ocr/**
           filters:
             - StripPrefix=0
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 100
+                redis-rate-limiter.burstCapacity: 200
+                key-resolver: "#{@ipKeyResolver}"
 
   redis:
     host: localhost

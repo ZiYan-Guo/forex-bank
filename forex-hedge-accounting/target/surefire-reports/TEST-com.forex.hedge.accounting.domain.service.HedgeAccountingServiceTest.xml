@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.hedge.accounting.domain.service.HedgeAccountingServiceTest" time="0.055" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.hedge.accounting.domain.service.HedgeAccountingServiceTest" time="0.053" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="/Users/guoziyan/Library/Java/JavaVirtualMachines/temurin-17.0.18/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/target/surefire/surefirebooter-20260624092844980_184.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/target/surefire 2026-06-24T09-28-21_569-jvmRun1 surefire-20260624092844980_182tmp surefire_21-20260624092844980_183tmp"/>
+    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/target/surefire/surefirebooter-20260624101605273_184.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/target/surefire 2026-06-24T10-15-42_070-jvmRun1 surefire-20260624101605273_182tmp surefire_21-20260624101605273_183tmp"/>
     <property name="http.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="!*RepositoryImpl*Test"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/target/surefire/surefirebooter-20260624092844980_184.jar"/>
+    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-hedge-accounting/target/surefire/surefirebooter-20260624101605273_184.jar"/>
     <property name="user.script" value="Hans"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
@@ -61,18 +61,18 @@
     <property name="java.class.version" value="61.0"/>
   </properties>
   <testcase name="testRetrospectiveTest_Pass" classname="com.forex.hedge.accounting.domain.service.HedgeAccountingServiceTest" time="0.013">
-    <system-out><![CDATA[09:28:45.265 [main] INFO com.forex.hedge.accounting.domain.service.HedgeAccountingService -- 执行追溯有效性测试: relationId=HR2026060001
-09:28:45.267 [main] INFO com.forex.hedge.accounting.domain.service.HedgeAccountingService -- 追溯有效性测试结果: relationId=HR2026060001, ratio=0.9083, status=PASS
+    <system-out><![CDATA[10:16:05.562 [main] INFO com.forex.hedge.accounting.domain.service.HedgeAccountingService -- 执行追溯有效性测试: relationId=HR2026060001
+10:16:05.564 [main] INFO com.forex.hedge.accounting.domain.service.HedgeAccountingService -- 追溯有效性测试结果: relationId=HR2026060001, ratio=1.0572, status=PASS
 ]]></system-out>
   </testcase>
-  <testcase name="testProspectiveTest" classname="com.forex.hedge.accounting.domain.service.HedgeAccountingServiceTest" time="0.001">
-    <system-out><![CDATA[09:28:45.274 [main] INFO com.forex.hedge.accounting.domain.service.HedgeAccountingService -- 执行预期有效性测试: relationId=HR2026060001, hedgedItem=Loan Receivable USD 1M
-09:28:45.274 [main] INFO com.forex.hedge.accounting.domain.service.HedgeAccountingService -- 预期有效性测试结果: relationId=HR2026060001, ratio=0.9012
+  <testcase name="testProspectiveTest" classname="com.forex.hedge.accounting.domain.service.HedgeAccountingServiceTest" time="0.002">
+    <system-out><![CDATA[10:16:05.571 [main] INFO com.forex.hedge.accounting.domain.service.HedgeAccountingService -- 执行预期有效性测试: relationId=HR2026060001, hedgedItem=Loan Receivable USD 1M
+10:16:05.571 [main] INFO com.forex.hedge.accounting.domain.service.HedgeAccountingService -- 预期有效性测试结果: relationId=HR2026060001, ratio=1.0293
 ]]></system-out>
   </testcase>
-  <testcase name="testGenerateHedgeEntries" classname="com.forex.hedge.accounting.domain.service.HedgeAccountingServiceTest" time="0.0">
-    <system-out><![CDATA[09:28:45.275 [main] INFO com.forex.hedge.accounting.domain.service.HedgeAccountingService -- 生成套保会计分录: relationId=HR2026060001, fvChange=50000.00, hedgeType=FAIR_VALUE
-09:28:45.275 [main] INFO com.forex.hedge.accounting.domain.service.HedgeAccountingService -- 已生成 2 条套保会计分录
+  <testcase name="testGenerateHedgeEntries" classname="com.forex.hedge.accounting.domain.service.HedgeAccountingServiceTest" time="0.001">
+    <system-out><![CDATA[10:16:05.572 [main] INFO com.forex.hedge.accounting.domain.service.HedgeAccountingService -- 生成套保会计分录: relationId=HR2026060001, fvChange=50000.00, hedgeType=FAIR_VALUE
+10:16:05.572 [main] INFO com.forex.hedge.accounting.domain.service.HedgeAccountingService -- 已生成 2 条套保会计分录
 ]]></system-out>
   </testcase>
 </testsuite>

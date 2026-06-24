@@ -2,6 +2,8 @@ package com.forex.settlement.application.service;
 
 import com.forex.common.base.annotation.RedisLock;
 import com.forex.common.base.dto.PageResp;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 import com.forex.settlement.application.command.AmendLcCmd;
 import com.forex.settlement.application.command.CreateCollectionCmd;
 import com.forex.settlement.application.command.CreateGuaranteeCmd;
@@ -59,7 +61,7 @@ public class SettlementAppService {
 
     public LetterOfCredit getLcDetail(String lcNo) {
         return lcRepository.findByLcNo(lcNo)
-                .orElseThrow(() -> new IllegalArgumentException("信用证不存在: " + lcNo));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "信用证不存在: " + lcNo));
     }
 
     public PageResp<LetterOfCredit> pageQuery(LcQuery query) {
@@ -69,14 +71,14 @@ public class SettlementAppService {
     @RedisLock(key = "#lcNo")
     public void issueLc(String lcNo) {
         LetterOfCredit lc = lcRepository.findByLcNo(lcNo)
-                .orElseThrow(() -> new IllegalArgumentException("信用证不存在: " + lcNo));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "信用证不存在: " + lcNo));
         lcDomainService.issueLc(lc);
     }
 
-    @RedisLock(key = "#lcNo")
+    @RedisLock(key = "#cmd.lcNo")
     public void amendLc(String lcNo, AmendLcCmd cmd) {
         LetterOfCredit lc = lcRepository.findByLcNo(lcNo)
-                .orElseThrow(() -> new IllegalArgumentException("信用证不存在: " + lcNo));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "信用证不存在: " + lcNo));
         lc.amend(cmd.getNewAmount(), cmd.getNewExpiryDate(), null);
         lcRepository.save(lc);
     }
@@ -84,28 +86,28 @@ public class SettlementAppService {
     @RedisLock(key = "#lcNo")
     public void presentDocuments(String lcNo) {
         LetterOfCredit lc = lcRepository.findByLcNo(lcNo)
-                .orElseThrow(() -> new IllegalArgumentException("信用证不存在: " + lcNo));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "信用证不存在: " + lcNo));
         lcDomainService.presentDocuments(lc);
     }
 
     @RedisLock(key = "#lcNo")
     public void checkDocuments(String lcNo, boolean isDiscrepant) {
         LetterOfCredit lc = lcRepository.findByLcNo(lcNo)
-                .orElseThrow(() -> new IllegalArgumentException("信用证不存在: " + lcNo));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "信用证不存在: " + lcNo));
         lcDomainService.checkDocuments(lc, isDiscrepant);
     }
 
     @RedisLock(key = "#lcNo")
     public void acceptLc(String lcNo) {
         LetterOfCredit lc = lcRepository.findByLcNo(lcNo)
-                .orElseThrow(() -> new IllegalArgumentException("信用证不存在: " + lcNo));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "信用证不存在: " + lcNo));
         lcDomainService.acceptLc(lc);
     }
 
     @RedisLock(key = "#lcNo")
     public void payLc(String lcNo) {
         LetterOfCredit lc = lcRepository.findByLcNo(lcNo)
-                .orElseThrow(() -> new IllegalArgumentException("信用证不存在: " + lcNo));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "信用证不存在: " + lcNo));
         lcDomainService.payLc(lc);
     }
 
@@ -129,12 +131,13 @@ public class SettlementAppService {
     @RedisLock(key = "#collectionNo")
     public DocumentaryCollection getCollectionDetail(String collectionNo) {
         return collectionRepository.findByCollectionNo(collectionNo)
-                .orElseThrow(() -> new IllegalArgumentException("托收不存在: " + collectionNo));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "托收不存在: " + collectionNo));
     }
 
+    @RedisLock(key = "#collectionNo")
     public void payCollection(String collectionNo) {
         DocumentaryCollection col = collectionRepository.findByCollectionNo(collectionNo)
-                .orElseThrow(() -> new IllegalArgumentException("托收不存在: " + collectionNo));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "托收不存在: " + collectionNo));
         collectionDomainService.pay(col);
     }
 
@@ -159,12 +162,13 @@ public class SettlementAppService {
     @RedisLock(key = "#guaranteeNo")
     public BankGuarantee getGuaranteeDetail(String guaranteeNo) {
         return guaranteeRepository.findByGuaranteeNo(guaranteeNo)
-                .orElseThrow(() -> new IllegalArgumentException("保函不存在: " + guaranteeNo));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "保函不存在: " + guaranteeNo));
     }
 
+    @RedisLock(key = "#guaranteeNo")
     public void issueGuarantee(String guaranteeNo) {
         BankGuarantee guarantee = guaranteeRepository.findByGuaranteeNo(guaranteeNo)
-                .orElseThrow(() -> new IllegalArgumentException("保函不存在: " + guaranteeNo));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "保函不存在: " + guaranteeNo));
         guaranteeDomainService.issueGuarantee(guarantee);
     }
 }

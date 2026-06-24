@@ -55,15 +55,19 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
                 filterChain.doFilter(request, response);
                 return;
             }
-            if (jwtUtil.validateToken(token)) {
-                Claims claims = jwtUtil.parseToken(token);
-                UserInfo userInfo = new UserInfo();
-                userInfo.setUserId(jwtUtil.getUserId(claims));
-                userInfo.setUsername(jwtUtil.getUsername(claims));
-                userInfo.setRoles(jwtUtil.getRoles(claims));
-                userInfo.setPermissions(jwtUtil.getPermissions(claims));
-                UserContextHolder.set(userInfo);
+            if (!jwtUtil.validateToken(token)) {
+                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                response.setContentType("application/json;charset=UTF-8");
+                response.getWriter().write("{\"code\":401,\"message\":\"无效或过期的令牌\"}");
+                return;
             }
+            Claims claims = jwtUtil.parseToken(token);
+            UserInfo userInfo = new UserInfo();
+            userInfo.setUserId(jwtUtil.getUserId(claims));
+            userInfo.setUsername(jwtUtil.getUsername(claims));
+            userInfo.setRoles(jwtUtil.getRoles(claims));
+            userInfo.setPermissions(jwtUtil.getPermissions(claims));
+            UserContextHolder.set(userInfo);
             filterChain.doFilter(request, response);
         } finally {
             UserContextHolder.clear();

@@ -2,11 +2,14 @@ package com.forex.account.domain.service;
 
 import com.forex.account.domain.model.aggregate.ForexAccount;
 import com.forex.account.domain.model.entity.AccountTransaction;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -15,6 +18,7 @@ import java.time.format.DateTimeFormatter;
 @Slf4j
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class AccountDomainService {
 
     private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("yyyyMMdd");
@@ -56,7 +60,7 @@ public class AccountDomainService {
             account.withdraw(amount);
             balanceAfter = account.getBalance();
         } else {
-            throw new IllegalArgumentException("不支持的交易类型: " + txType);
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "不支持的交易类型: " + txType);
         }
         return AccountTransaction.record(
                 account.getId(),

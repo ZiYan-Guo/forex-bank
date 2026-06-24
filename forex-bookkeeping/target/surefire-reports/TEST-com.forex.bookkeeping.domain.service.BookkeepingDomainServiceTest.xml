@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.bookkeeping.domain.service.BookkeepingDomainServiceTest" time="0.586" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.bookkeeping.domain.service.BookkeepingDomainServiceTest" time="0.57" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="/Users/guoziyan/Library/Java/JavaVirtualMachines/temurin-17.0.18/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/target/surefire/surefirebooter-20260624092832000_52.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/target/surefire 2026-06-24T09-28-21_569-jvmRun1 surefire-20260624092832000_50tmp surefire_6-20260624092832000_51tmp"/>
+    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/target/surefire/surefirebooter-20260624101552577_52.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/target/surefire 2026-06-24T10-15-42_070-jvmRun1 surefire-20260624101552577_50tmp surefire_6-20260624101552577_51tmp"/>
     <property name="http.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="!*RepositoryImpl*Test"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/target/surefire/surefirebooter-20260624092832000_52.jar"/>
+    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/target/surefire/surefirebooter-20260624101552577_52.jar"/>
     <property name="user.script" value="Hans"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
@@ -60,24 +60,24 @@
     <property name="socksNonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testPostEntry" classname="com.forex.bookkeeping.domain.service.BookkeepingDomainServiceTest" time="0.561">
-    <system-out><![CDATA[09:28:32.847 [main] INFO com.forex.bookkeeping.domain.service.BookkeepingDomainService -- Posted journal entry: voucherNo=V2026060001, amount=10000.00 USD
+  <testcase name="testPostEntry" classname="com.forex.bookkeeping.domain.service.BookkeepingDomainServiceTest" time="0.546">
+    <system-out><![CDATA[10:15:53.408 [main] INFO com.forex.bookkeeping.domain.service.BookkeepingDomainService -- Posted journal entry: voucherNo=V2026060001, amount=10000.00 USD
 ]]></system-out>
   </testcase>
-  <testcase name="testReverseEntry_Success" classname="com.forex.bookkeeping.domain.service.BookkeepingDomainServiceTest" time="0.008">
-    <system-out><![CDATA[09:28:32.864 [main] INFO com.forex.bookkeeping.domain.service.BookkeepingDomainService -- Reversed journal entry: originalVoucherNo=V2026060001, reverseVoucherNo=RV20260624092832858366357
+  <testcase name="testReverseEntry_Success" classname="com.forex.bookkeeping.domain.service.BookkeepingDomainServiceTest" time="0.009">
+    <system-out><![CDATA[10:15:53.424 [main] INFO com.forex.bookkeeping.domain.service.BookkeepingDomainService -- Reversed journal entry: originalVoucherNo=V2026060001, reverseVoucherNo=RV20260624101553418802873
 ]]></system-out>
   </testcase>
   <testcase name="testCreateEntry" classname="com.forex.bookkeeping.domain.service.BookkeepingDomainServiceTest" time="0.002">
-    <system-out><![CDATA[09:28:32.866 [main] INFO com.forex.bookkeeping.domain.service.BookkeepingDomainService -- Created journal entry: voucherNo=V2026060001, amount=10000.00 USD, direction=DEBIT
+    <system-out><![CDATA[10:15:53.427 [main] INFO com.forex.bookkeeping.domain.service.BookkeepingDomainService -- Created journal entry: voucherNo=V2026060001, amount=10000.00 USD, direction=DEBIT
 ]]></system-out>
   </testcase>
-  <testcase name="testReverseEntry_NotPosted" classname="com.forex.bookkeeping.domain.service.BookkeepingDomainServiceTest" time="0.003"/>
+  <testcase name="testReverseEntry_NotPosted" classname="com.forex.bookkeeping.domain.service.BookkeepingDomainServiceTest" time="0.001"/>
   <testcase name="testPostEntriesForPeriod" classname="com.forex.bookkeeping.domain.service.BookkeepingDomainServiceTest" time="0.003">
-    <system-out><![CDATA[09:28:32.872 [main] INFO com.forex.bookkeeping.domain.service.BookkeepingDomainService -- Posted journal entry: voucherNo=V2026060001, amount=10000.00 USD
-09:28:32.872 [main] INFO com.forex.bookkeeping.domain.service.BookkeepingDomainService -- Posted journal entry: voucherNo=V2026060001, amount=10000.00 USD
-09:28:32.872 [main] INFO com.forex.bookkeeping.domain.service.BookkeepingDomainService -- Batch posted 2 draft entries for period 202606
+    <system-out><![CDATA[10:15:53.431 [main] INFO com.forex.bookkeeping.domain.service.BookkeepingDomainService -- Posted journal entry: voucherNo=V2026060001, amount=10000.00 USD
+10:15:53.431 [main] INFO com.forex.bookkeeping.domain.service.BookkeepingDomainService -- Posted journal entry: voucherNo=V2026060001, amount=10000.00 USD
+10:15:53.431 [main] INFO com.forex.bookkeeping.domain.service.BookkeepingDomainService -- Batch posted 2 draft entries for period 202606
 ]]></system-out>
   </testcase>
-  <testcase name="testGenerateVoucherNo" classname="com.forex.bookkeeping.domain.service.BookkeepingDomainServiceTest" time="0.001"/>
+  <testcase name="testGenerateVoucherNo" classname="com.forex.bookkeeping.domain.service.BookkeepingDomainServiceTest" time="0.002"/>
 </testsuite>

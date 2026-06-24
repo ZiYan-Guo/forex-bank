@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.schedule.domain.service.ScheduleDomainServiceTest" time="0.636" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.schedule.domain.service.ScheduleDomainServiceTest" time="0.63" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="/Users/guoziyan/Library/Java/JavaVirtualMachines/temurin-17.0.18/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-schedule/target/surefire/surefirebooter-20260624092843334_159.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-schedule/target/surefire 2026-06-24T09-28-21_569-jvmRun1 surefire-20260624092843334_157tmp surefire_18-20260624092843334_158tmp"/>
+    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-schedule/target/surefire/surefirebooter-20260624101603641_159.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-schedule/target/surefire 2026-06-24T10-15-42_070-jvmRun1 surefire-20260624101603641_157tmp surefire_18-20260624101603641_158tmp"/>
     <property name="http.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="!*RepositoryImpl*Test"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-schedule/target/surefire/surefirebooter-20260624092843334_159.jar"/>
+    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-schedule/target/surefire/surefirebooter-20260624101603641_159.jar"/>
     <property name="user.script" value="Hans"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
@@ -60,19 +60,19 @@
     <property name="socksNonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testTriggerJob_Success" classname="com.forex.schedule.domain.service.ScheduleDomainServiceTest" time="0.61">
-    <system-out><![CDATA[09:28:44.191 [main] INFO com.forex.schedule.domain.service.ScheduleDomainService -- 模拟执行任务: handler=dailyCloseHandler
-09:28:44.194 [main] INFO com.forex.schedule.domain.service.ScheduleDomainService -- 任务执行成功: handler=dailyCloseHandler, result={"status":"success","handler":"dailyCloseHandler","time":"2026-06-24T09:28:44.192902"}
+  <testcase name="testTriggerJob_Success" classname="com.forex.schedule.domain.service.ScheduleDomainServiceTest" time="0.602">
+    <system-out><![CDATA[10:16:04.484 [main] INFO com.forex.schedule.domain.service.ScheduleDomainService -- 模拟执行任务: handler=dailyCloseHandler
+10:16:04.489 [main] INFO com.forex.schedule.domain.service.ScheduleDomainService -- 任务执行成功: handler=dailyCloseHandler, result={"status":"success","handler":"dailyCloseHandler","time":"2026-06-24T10:16:04.486994"}
 ]]></system-out>
   </testcase>
-  <testcase name="testTriggerJob_Disabled" classname="com.forex.schedule.domain.service.ScheduleDomainServiceTest" time="0.003"/>
-  <testcase name="testExecuteReconciliation" classname="com.forex.schedule.domain.service.ScheduleDomainServiceTest" time="0.001">
-    <system-out><![CDATA[09:28:44.214 [main] INFO com.forex.schedule.domain.service.ScheduleDomainService -- 执行对账任务
+  <testcase name="testTriggerJob_Disabled" classname="com.forex.schedule.domain.service.ScheduleDomainServiceTest" time="0.004"/>
+  <testcase name="testExecuteReconciliation" classname="com.forex.schedule.domain.service.ScheduleDomainServiceTest" time="0.002">
+    <system-out><![CDATA[10:16:04.511 [main] INFO com.forex.schedule.domain.service.ScheduleDomainService -- 执行对账任务
 ]]></system-out>
   </testcase>
-  <testcase name="testTriggerJob_NotFound" classname="com.forex.schedule.domain.service.ScheduleDomainServiceTest" time="0.002"/>
+  <testcase name="testTriggerJob_NotFound" classname="com.forex.schedule.domain.service.ScheduleDomainServiceTest" time="0.001"/>
   <testcase name="testExecuteDailyClosing" classname="com.forex.schedule.domain.service.ScheduleDomainServiceTest" time="0.002">
-    <system-out><![CDATA[09:28:44.218 [main] INFO com.forex.schedule.domain.service.ScheduleDomainService -- 执行日终结算: date=2026-06-24
+    <system-out><![CDATA[10:16:04.515 [main] INFO com.forex.schedule.domain.service.ScheduleDomainService -- 执行日终结算: date=2026-06-24
 ]]></system-out>
   </testcase>
 </testsuite>

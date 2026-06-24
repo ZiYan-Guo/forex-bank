@@ -15,6 +15,8 @@ import com.forex.account.domain.service.AccountDomainService;
 import com.forex.common.base.annotation.RedisLock;
 import com.forex.common.base.dto.PageReq;
 import com.forex.common.base.dto.PageResp;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 import lombok.RequiredArgsConstructor;
 
@@ -49,19 +51,19 @@ public class AccountAppService {
 
     public void closeAccount(Long accountId) {
         ForexAccount account = accountRepository.findById(accountId)
-                .orElseThrow(() -> new IllegalArgumentException("账户不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.ACCOUNT_NOT_FOUND));
         accountDomainService.closeAccount(account);
         accountRepository.save(account);
     }
 
     public ForexAccount getAccountDetail(Long accountId) {
         return accountRepository.findById(accountId)
-                .orElseThrow(() -> new IllegalArgumentException("账户不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.ACCOUNT_NOT_FOUND));
     }
 
     public ForexAccount getAccountByNo(String accountNo) {
         return accountRepository.findByAccountNo(accountNo)
-                .orElseThrow(() -> new IllegalArgumentException("账户不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.ACCOUNT_NOT_FOUND));
     }
 
     public List<ForexAccount> getCustomerAccounts(Long customerId) {
@@ -77,7 +79,7 @@ public class AccountAppService {
     @RedisLock(key = "#accountId")
     public void deposit(Long accountId, BigDecimal amount, String relatedBizNo, String summary) {
         ForexAccount account = accountRepository.findById(accountId)
-                .orElseThrow(() -> new IllegalArgumentException("账户不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.ACCOUNT_NOT_FOUND));
 
         AccountTransaction tx = accountDomainService.recordTransaction(
                 account, "DEPOSIT", amount, relatedBizNo, "DEPOSIT", summary);
@@ -91,7 +93,7 @@ public class AccountAppService {
     @RedisLock(key = "#accountId")
     public void withdraw(Long accountId, BigDecimal amount, String relatedBizNo, String summary) {
         ForexAccount account = accountRepository.findById(accountId)
-                .orElseThrow(() -> new IllegalArgumentException("账户不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.ACCOUNT_NOT_FOUND));
 
         AccountTransaction tx = accountDomainService.recordTransaction(
                 account, "WITHDRAW", amount, relatedBizNo, "WITHDRAW", summary);
@@ -105,7 +107,7 @@ public class AccountAppService {
     @RedisLock(key = "#accountId")
     public void freeze(Long accountId, BigDecimal amount) {
         ForexAccount account = accountRepository.findById(accountId)
-                .orElseThrow(() -> new IllegalArgumentException("账户不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.ACCOUNT_NOT_FOUND));
         account.freeze(amount);
         accountRepository.save(account);
 
@@ -116,7 +118,7 @@ public class AccountAppService {
     @RedisLock(key = "#accountId")
     public void unfreeze(Long accountId, BigDecimal amount) {
         ForexAccount account = accountRepository.findById(accountId)
-                .orElseThrow(() -> new IllegalArgumentException("账户不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.ACCOUNT_NOT_FOUND));
         account.unfreeze(amount);
         accountRepository.save(account);
 

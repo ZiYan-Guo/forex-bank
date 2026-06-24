@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.forex.reporting.domain.service.ReportingDomainServiceTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.711 s -- in com.forex.reporting.domain.service.ReportingDomainServiceTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.685 s -- in com.forex.reporting.domain.service.ReportingDomainServiceTest

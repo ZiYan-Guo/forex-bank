@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.clearing.application.service.CipsRoutingServiceTest" time="0.058" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.clearing.application.service.CipsRoutingServiceTest" time="0.057" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="/Users/guoziyan/Library/Java/JavaVirtualMachines/temurin-17.0.18/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/target/surefire/surefirebooter-20260624092835584_91.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/target/surefire 2026-06-24T09-28-21_569-jvmRun1 surefire-20260624092835584_89tmp surefire_9-20260624092835584_90tmp"/>
+    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/target/surefire/surefirebooter-20260624101556086_91.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/target/surefire 2026-06-24T10-15-42_070-jvmRun1 surefire-20260624101556086_89tmp surefire_9-20260624101556086_90tmp"/>
     <property name="http.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="!*RepositoryImpl*Test"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/target/surefire/surefirebooter-20260624092835584_91.jar"/>
+    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-clearing/target/surefire/surefirebooter-20260624101556086_91.jar"/>
     <property name="user.script" value="Hans"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
@@ -61,25 +61,25 @@
     <property name="java.class.version" value="61.0"/>
   </properties>
   <testcase name="testResolveByBic_Unknown" classname="com.forex.clearing.application.service.CipsRoutingServiceTest" time="0.009">
-    <system-out><![CDATA[09:28:35.883 [main] INFO com.forex.clearing.application.service.CipsRoutingService -- CIPS routing service initialized with 8 BIC mappings and 4 bank name mappings
-09:28:35.890 [main] WARN com.forex.clearing.application.service.CipsRoutingService -- No CIPS participant found for BIC: CHASUS33
+    <system-out><![CDATA[10:15:56.375 [main] INFO com.forex.clearing.application.service.CipsRoutingService -- CIPS routing service initialized with 8 BIC mappings and 4 bank name mappings
+10:15:56.383 [main] WARN com.forex.clearing.application.service.CipsRoutingService -- No CIPS participant found for BIC: CHASUS33
 ]]></system-out>
   </testcase>
   <testcase name="testResolveByBankName" classname="com.forex.clearing.application.service.CipsRoutingServiceTest" time="0.001">
-    <system-out><![CDATA[09:28:35.896 [main] INFO com.forex.clearing.application.service.CipsRoutingService -- CIPS routing service initialized with 8 BIC mappings and 4 bank name mappings
+    <system-out><![CDATA[10:15:56.388 [main] INFO com.forex.clearing.application.service.CipsRoutingService -- CIPS routing service initialized with 8 BIC mappings and 4 bank name mappings
 ]]></system-out>
   </testcase>
-  <testcase name="testResolveByBic_Known" classname="com.forex.clearing.application.service.CipsRoutingServiceTest" time="0.0">
-    <system-out><![CDATA[09:28:35.897 [main] INFO com.forex.clearing.application.service.CipsRoutingService -- CIPS routing service initialized with 8 BIC mappings and 4 bank name mappings
+  <testcase name="testResolveByBic_Known" classname="com.forex.clearing.application.service.CipsRoutingServiceTest" time="0.001">
+    <system-out><![CDATA[10:15:56.389 [main] INFO com.forex.clearing.application.service.CipsRoutingService -- CIPS routing service initialized with 8 BIC mappings and 4 bank name mappings
 ]]></system-out>
   </testcase>
-  <testcase name="testGetParticipantCount" classname="com.forex.clearing.application.service.CipsRoutingServiceTest" time="0.0">
-    <system-out><![CDATA[09:28:35.898 [main] INFO com.forex.clearing.application.service.CipsRoutingService -- CIPS routing service initialized with 8 BIC mappings and 4 bank name mappings
+  <testcase name="testGetParticipantCount" classname="com.forex.clearing.application.service.CipsRoutingServiceTest" time="0.001">
+    <system-out><![CDATA[10:15:56.390 [main] INFO com.forex.clearing.application.service.CipsRoutingService -- CIPS routing service initialized with 8 BIC mappings and 4 bank name mappings
 ]]></system-out>
   </testcase>
-  <testcase name="testIsCipsParticipant" classname="com.forex.clearing.application.service.CipsRoutingServiceTest" time="0.0">
-    <system-out><![CDATA[09:28:35.898 [main] INFO com.forex.clearing.application.service.CipsRoutingService -- CIPS routing service initialized with 8 BIC mappings and 4 bank name mappings
-09:28:35.899 [main] WARN com.forex.clearing.application.service.CipsRoutingService -- No CIPS participant found for BIC: CHASUS33
+  <testcase name="testIsCipsParticipant" classname="com.forex.clearing.application.service.CipsRoutingServiceTest" time="0.001">
+    <system-out><![CDATA[10:15:56.391 [main] INFO com.forex.clearing.application.service.CipsRoutingService -- CIPS routing service initialized with 8 BIC mappings and 4 bank name mappings
+10:15:56.392 [main] WARN com.forex.clearing.application.service.CipsRoutingService -- No CIPS participant found for BIC: CHASUS33
 ]]></system-out>
   </testcase>
 </testsuite>

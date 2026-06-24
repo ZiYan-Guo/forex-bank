@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="/Users/guoziyan/Library/Java/JavaVirtualMachines/temurin-17.0.18/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ai/target/surefire/surefirebooter-20260624092845318_190.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ai/target/surefire 2026-06-24T09-28-21_569-jvmRun1 surefire-20260624092845318_188tmp surefire_22-20260624092845318_189tmp"/>
+    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ai/target/surefire/surefirebooter-20260624101605613_190.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ai/target/surefire 2026-06-24T10-15-42_070-jvmRun1 surefire-20260624101605613_188tmp surefire_22-20260624101605613_189tmp"/>
     <property name="http.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="!*RepositoryImpl*Test"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ai/target/surefire/surefirebooter-20260624092845318_190.jar"/>
+    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-ai/target/surefire/surefirebooter-20260624101605613_190.jar"/>
     <property name="user.script" value="Hans"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>

@@ -1,0 +1,3228 @@
+{
+  "nodes": [
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "type": "module",
+      "name": "BookkeepingDomainService.java",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "记账领域服务，负责分录的创建、过账、冲销、凭证号生成及期间批量过账等核心记账操作",
+      "tags": [
+        "记账",
+        "领域服务",
+        "分录管理",
+        "过账",
+        "冲销",
+        "凭证号"
+      ],
+      "languageNotes": "使用Spring @Service注解，通过ApplicationEventPublisher发布EntryPostedEvent领域事件，遵循DDD领域服务模式",
+      "sizeLines": 70,
+      "metrics": {
+        "importCount": 11,
+        "exportCount": 6,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:class:BookkeepingDomainService",
+      "type": "class",
+      "name": "BookkeepingDomainService",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "language": "java",
+      "summary": "记账领域服务类，封装分录创建、过账、冲销等核心业务逻辑，作为记账模块的领域服务入口",
+      "tags": [
+        "记账",
+        "领域服务",
+        "DDD",
+        "分录"
+      ],
+      "languageNotes": "Spring @Service，注入JournalEntryRepository和ApplicationEventPublisher",
+      "lineStart": 15,
+      "lineEnd": 70
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:createEntry",
+      "type": "function",
+      "name": "createEntry",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "language": "java",
+      "summary": "创建分录并持久化到数据库，返回包含凭证号的分录聚合",
+      "tags": [
+        "分录创建",
+        "持久化"
+      ],
+      "languageNotes": "参数entry为JournalEntry聚合",
+      "lineStart": 23,
+      "lineEnd": 28
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:postEntry",
+      "type": "function",
+      "name": "postEntry",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "language": "java",
+      "summary": "执行分录过账操作并发布EntryPostedEvent领域事件",
+      "tags": [
+        "过账",
+        "领域事件"
+      ],
+      "languageNotes": "调用entry.post()执行内部过账，随后持久化并发布事件",
+      "lineStart": 30,
+      "lineEnd": 39
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:reverseEntry",
+      "type": "function",
+      "name": "reverseEntry",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "language": "java",
+      "summary": "对已过账分录进行冲销，创建冲销分录并更新原始分录状态",
+      "tags": [
+        "冲销",
+        "分录"
+      ],
+      "languageNotes": "仅允许对已过账(STATUS_POSTED)分录执行冲销，否则抛出BusinessException",
+      "lineStart": 41,
+      "lineEnd": 56
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:generateVoucherNo",
+      "type": "function",
+      "name": "generateVoucherNo",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "language": "java",
+      "summary": "根据前缀生成唯一的凭证编号",
+      "tags": [
+        "凭证号生成",
+        "唯一标识"
+      ],
+      "languageNotes": "通过VoucherNo.generate(prefix)静态方法生成",
+      "lineStart": 58,
+      "lineEnd": 60
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:postEntriesForPeriod",
+      "type": "function",
+      "name": "postEntriesForPeriod",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "language": "java",
+      "summary": "批量过账指定会计期间内的所有草稿分录",
+      "tags": [
+        "批量过账",
+        "会计期间"
+      ],
+      "languageNotes": "查询指定期间和状态的分录列表后逐个调用postEntry",
+      "lineStart": 62,
+      "lineEnd": 69
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "type": "module",
+      "name": "MonthEndClosingService.java",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "月末结转服务，执行会计期间的关账流程，包括分录过账、重估、汇总借贷总额及关账锁定",
+      "tags": [
+        "月末结转",
+        "关账",
+        "会计期间",
+        "重估"
+      ],
+      "languageNotes": "依赖BookkeepingDomainService和RevaluationEntryService完成关账全流程",
+      "sizeLines": 72,
+      "metrics": {
+        "importCount": 10,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java:class:MonthEndClosingService",
+      "type": "class",
+      "name": "MonthEndClosingService",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "language": "java",
+      "summary": "月末结转服务类，管理关账流程的完整生命周期",
+      "tags": [
+        "关账",
+        "月末结转",
+        "会计"
+      ],
+      "languageNotes": "Spring @Service，注入多个Repository及领域服务依赖",
+      "lineStart": 20,
+      "lineEnd": 72
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java:function:executeMonthEndClosing",
+      "type": "function",
+      "name": "executeMonthEndClosing",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "language": "java",
+      "summary": "执行完整的月末关账流程：创建关账记录→过账→重估→汇总→锁账",
+      "tags": [
+        "关账",
+        "重估",
+        "汇总"
+      ],
+      "languageNotes": "集成调用bookkeepingDomainService和revaluationEntryService",
+      "lineStart": 39,
+      "lineEnd": 71
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "type": "module",
+      "name": "RevaluationEntryService.java",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "重估分录服务，根据新旧汇率计算外汇资产/负债的重估差异并生成对应的借/贷分录",
+      "tags": [
+        "重估",
+        "汇率",
+        "外汇",
+        "汇兑损益"
+      ],
+      "languageNotes": "使用预设会计科目常量(ACCT_FX_ASSET等)，按汇率差方向生成不同分录组合",
+      "sizeLines": 102,
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java:class:RevaluationEntryService",
+      "type": "class",
+      "name": "RevaluationEntryService",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "language": "java",
+      "summary": "重估分录服务类，处理外汇货币性项目的期末重估价入账",
+      "tags": [
+        "重估",
+        "汇兑损益",
+        "分录"
+      ],
+      "languageNotes": "Spring @Service，定义外汇资产、外汇负债、汇兑损益三个会计科目常量",
+      "lineStart": 22,
+      "lineEnd": 102
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java:function:generateRevaluationEntries",
+      "type": "function",
+      "name": "generateRevaluationEntries",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "language": "java",
+      "summary": "根据币种、新旧汇率和余额计算重估汇兑差异并生成对应借贷分录列表",
+      "tags": [
+        "重估计算",
+        "汇兑损益",
+        "分录生成"
+      ],
+      "languageNotes": "差值为正时借外汇资产贷汇兑损益，差值为负时借汇兑损益贷外汇负债",
+      "lineStart": 42,
+      "lineEnd": 77
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java:function:batchRevaluation",
+      "type": "function",
+      "name": "batchRevaluation",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "language": "java",
+      "summary": "对多个币种余额批量执行重估，汇总所有币种的重估分录",
+      "tags": [
+        "批量重估",
+        "多币种"
+      ],
+      "languageNotes": "遍历余额Map，对每个币种调用generateRevaluationEntries",
+      "lineStart": 83,
+      "lineEnd": 89
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java:function:generateSuffix",
+      "type": "function",
+      "name": "generateSuffix",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "language": "java",
+      "summary": "生成基于UUID的唯一后缀标识",
+      "tags": [
+        "唯一标识",
+        "UUID"
+      ],
+      "languageNotes": "取UUID前8位大写作为后缀",
+      "lineStart": 91,
+      "lineEnd": 93
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/VoucherTemplateService.java",
+      "type": "module",
+      "name": "VoucherTemplateService.java",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/VoucherTemplateService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "凭证模板服务，管理凭证模板的增删改查，提供标准化记账模板管理能力",
+      "tags": [
+        "凭证模板",
+        "记账模板",
+        "模板管理"
+      ],
+      "languageNotes": "Spring @Service，依赖VoucherTemplateRepository和领域实体VoucherTemplate",
+      "sizeLines": 79
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/VoucherMappingDomainService.java",
+      "type": "module",
+      "name": "VoucherMappingDomainService.java",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/VoucherMappingDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "凭证映射领域服务，管理业务场景到会计科目的凭证映射关系",
+      "tags": [
+        "凭证映射",
+        "会计科目",
+        "映射关系"
+      ],
+      "languageNotes": "Spring @Service，依赖VoucherMappingRepository和聚合VoucherMapping",
+      "sizeLines": 59
+    },
+    {
+      "id": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/listener/EntryPostedEventListener.java",
+      "type": "module",
+      "name": "EntryPostedEventListener.java",
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/listener/EntryPostedEventListener.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "分录过账事件监听器，监听EntryPostedEvent并执行后续处理逻辑",
+      "tags": [
+        "事件监听",
+        "分录过账",
+        "基础设施"
+      ],
+      "languageNotes": "Spring @Component，使用@EventListener注解监听领域事件",
+      "sizeLines": 32
+    },
+    {
+      "id": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "type": "module",
+      "name": "NettingSettlementService.java",
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "轧差结算服务，计算资金池各成员的净头寸并生成轧差结算指令文本",
+      "tags": [
+        "轧差结算",
+        "净头寸",
+        "资金池",
+        "结算指令"
+      ],
+      "languageNotes": "通过成员贡献限额计算净头寸，支持生成含日期和收支方向的结算指令",
+      "sizeLines": 79,
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "id": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java:class:NettingSettlementService",
+      "type": "class",
+      "name": "NettingSettlementService",
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "language": "java",
+      "summary": "轧差结算服务类，处理资金池成员间的净额结算计算",
+      "tags": [
+        "轧差",
+        "结算",
+        "净额"
+      ],
+      "languageNotes": "Spring @Service，纯计算服务无外部依赖注入",
+      "lineStart": 19,
+      "lineEnd": 79
+    },
+    {
+      "id": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java:function:calculateNetPosition",
+      "type": "function",
+      "name": "calculateNetPosition",
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "language": "java",
+      "summary": "计算指定日期各资金池成员的净头寸，返回成员ID到净头寸额的映射",
+      "tags": [
+        "净头寸计算",
+        "敞口"
+      ],
+      "languageNotes": "基于成员贡献限额计算净额，使用Stream reduce汇总",
+      "lineStart": 29,
+      "lineEnd": 49
+    },
+    {
+      "id": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java:function:generateNettingInstruction",
+      "type": "function",
+      "name": "generateNettingInstruction",
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "language": "java",
+      "summary": "根据净头寸生成轧差结算指令文本，包含资金池编号、日期及逐笔收支明细",
+      "tags": [
+        "结算指令",
+        "轧差",
+        "文本生成"
+      ],
+      "languageNotes": "使用StringBuilder拼装结算指令，标注入/出方向",
+      "lineStart": 57,
+      "lineEnd": 78
+    },
+    {
+      "id": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/PoolMonitoringService.java",
+      "type": "module",
+      "name": "PoolMonitoringService.java",
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/PoolMonitoringService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "资金池监控服务，监控资金池余额、成员状态及合规指标",
+      "tags": [
+        "资金池监控",
+        "余额监控",
+        "合规"
+      ],
+      "languageNotes": "Spring @Service，依赖CashPoolRepository和PoolMemberRepository",
+      "sizeLines": 70
+    },
+    {
+      "id": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "type": "module",
+      "name": "CashPoolDomainService.java",
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "资金池领域服务，管理资金池创建、成员管理、海外放款、额度配置及余额管理等核心操作，发布PoolCreatedEvent和MemberAddedToPoolEvent事件",
+      "tags": [
+        "资金池",
+        "领域服务",
+        "成员管理",
+        "额度配置",
+        "海外放款"
+      ],
+      "languageNotes": "Spring @Service，依赖多个Repository和ApplicationEventPublisher，涉及CashPool、OverseasLending、PoolBalance等聚合",
+      "sizeLines": 155
+    },
+    {
+      "id": "forex-clearing/src/main/java/com/forex/clearing/domain/service/AutomatedConfirmationService.java",
+      "type": "module",
+      "name": "AutomatedConfirmationService.java",
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/service/AutomatedConfirmationService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "自动确认服务，对清算指令执行自动匹配确认逻辑",
+      "tags": [
+        "清算",
+        "自动确认",
+        "清算指令"
+      ],
+      "languageNotes": "依赖ClearingInstructionRepository和聚合ClearingInstruction",
+      "sizeLines": 40
+    },
+    {
+      "id": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "type": "module",
+      "name": "HedgeAccountingService.java",
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "套期会计服务，执行套期关系的前瞻性测试、回顾性测试并生成套期分录",
+      "tags": [
+        "套期会计",
+        "有效性测试",
+        "套期分录",
+        "前瞻性",
+        "回顾性"
+      ],
+      "languageNotes": "核心业务逻辑包括80%-125%有效性区间判断和公允价值变动分录生成",
+      "sizeLines": 91,
+      "metrics": {
+        "importCount": 10,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "id": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:class:HedgeAccountingService",
+      "type": "class",
+      "name": "HedgeAccountingService",
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "language": "java",
+      "summary": "套期会计服务类，执行IAS 39/IFRS 9要求的套期有效性测试和分录生成",
+      "tags": [
+        "套期会计",
+        "IFRS9",
+        "有效性测试"
+      ],
+      "languageNotes": "Spring @Service，模拟有效性比率(95%-105%前瞻，85%-125%回顾)",
+      "lineStart": 20,
+      "lineEnd": 91
+    },
+    {
+      "id": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:function:performProspectiveTest",
+      "type": "function",
+      "name": "performProspectiveTest",
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "language": "java",
+      "summary": "执行前瞻性套期有效性测试，验证套期关系预期是否高度有效(95%-105%)",
+      "tags": [
+        "前瞻性测试",
+        "有效性",
+        "模拟"
+      ],
+      "languageNotes": "通过随机数模拟有效性比率，设定95%下限阈值",
+      "lineStart": 31,
+      "lineEnd": 39
+    },
+    {
+      "id": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:function:performRetrospectiveTest",
+      "type": "function",
+      "name": "performRetrospectiveTest",
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "language": "java",
+      "summary": "执行回顾性套期有效性测试，验证历史套期效果是否在80%-125%区间内",
+      "tags": [
+        "回顾性测试",
+        "有效性",
+        "HedgeEffectivenessTest"
+      ],
+      "languageNotes": "测试结果创建HedgeEffectivenessTest实体记录",
+      "lineStart": 48,
+      "lineEnd": 61
+    },
+    {
+      "id": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:function:generateHedgeEntries",
+      "type": "function",
+      "name": "generateHedgeEntries",
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "language": "java",
+      "summary": "根据套期关系和公允价值变动生成套期会计分录列表",
+      "tags": [
+        "套期分录",
+        "公允价值变动"
+      ],
+      "languageNotes": "根据套期类型(公允价值/现金流量)生成不同的分录组合",
+      "lineStart": 71,
+      "lineEnd": 90
+    },
+    {
+      "id": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingDomainService.java",
+      "type": "module",
+      "name": "HedgeAccountingDomainService.java",
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "套期会计领域服务，管理套期关系的创建、修改和查询",
+      "tags": [
+        "套期会计",
+        "领域服务",
+        "套期关系"
+      ],
+      "languageNotes": "Spring @Service，依赖HedgeRelationshipRepository和聚合HedgeRelationship",
+      "sizeLines": 54
+    },
+    {
+      "id": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "type": "module",
+      "name": "MarginDomainService.java",
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "保证金领域服务，管理保证金的创建、动态计算、缴存、追缴和释放，含水位线监控与自动追保触发",
+      "tags": [
+        "保证金",
+        "追缴",
+        "释放",
+        "水位线",
+        "初始保证金"
+      ],
+      "languageNotes": "发布MarginCalledEvent/MarginReleasedEvent领域事件，支持静态和动态保证金计算",
+      "sizeLines": 96,
+      "metrics": {
+        "importCount": 15,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "id": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:class:MarginDomainService",
+      "type": "class",
+      "name": "MarginDomainService",
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "language": "java",
+      "summary": "保证金领域服务类，管理保证金全生命周期(创建、缴存、追缴、释放)",
+      "tags": [
+        "保证金",
+        "生命周期",
+        "DDD"
+      ],
+      "languageNotes": "Spring @Service，注入marginAccountRepository、marginCallRepository和eventPublisher",
+      "lineStart": 19,
+      "lineEnd": 96
+    },
+    {
+      "id": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:createMargin",
+      "type": "function",
+      "name": "createMargin",
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "language": "java",
+      "summary": "创建静态保证金账户，基于固定保证金率和金额",
+      "tags": [
+        "保证金创建",
+        "静态保证金"
+      ],
+      "languageNotes": "使用MarginAccount.create工厂方法创建聚合",
+      "lineStart": 31,
+      "lineEnd": 40
+    },
+    {
+      "id": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:createDynamicMargin",
+      "type": "function",
+      "name": "createDynamicMargin",
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "language": "java",
+      "summary": "创建动态保证金账户，基于名义本金、期限和波动率动态计算所需保证金",
+      "tags": [
+        "动态保证金",
+        "波动率",
+        "名义本金"
+      ],
+      "languageNotes": "通过MarginAccount.calculateRequiredAmount和calculateMarginRate动态计算",
+      "lineStart": 42,
+      "lineEnd": 52
+    },
+    {
+      "id": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:depositWithWaterLevelCheck",
+      "type": "function",
+      "name": "depositWithWaterLevelCheck",
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "language": "java",
+      "summary": "执行保证金缴存并检查水位线，低于安全水位时自动创建追保通知",
+      "tags": [
+        "缴存",
+        "水位线检查",
+        "追保"
+      ],
+      "languageNotes": "水位线需要操作(needsAction)时自动创建MarginCall并保存",
+      "lineStart": 54,
+      "lineEnd": 67
+    },
+    {
+      "id": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:calculateInitialMargin",
+      "type": "function",
+      "name": "calculateInitialMargin",
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "language": "java",
+      "summary": "计算初始保证金金额 = 名义本金 × 保证金率",
+      "tags": [
+        "初始保证金",
+        "计算"
+      ],
+      "languageNotes": "纯计算函数，notional.multiply(rate)",
+      "lineStart": 69,
+      "lineEnd": 74
+    },
+    {
+      "id": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:callMargin",
+      "type": "function",
+      "name": "callMargin",
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "language": "java",
+      "summary": "执行保证金追缴操作并发布MarginCalledEvent领域事件",
+      "tags": [
+        "追缴",
+        "保证金",
+        "领域事件"
+      ],
+      "languageNotes": "调用account.call()后保存并发布事件",
+      "lineStart": 76,
+      "lineEnd": 82
+    },
+    {
+      "id": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:releaseMargin",
+      "type": "function",
+      "name": "releaseMargin",
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "language": "java",
+      "summary": "释放保证金，减少保证金占用并记录释放原因",
+      "tags": [
+        "保证金释放",
+        "解冻"
+      ],
+      "languageNotes": "调用account.release()后持久化变更",
+      "lineStart": 84,
+      "lineEnd": 89
+    },
+    {
+      "id": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:generateMarginNo",
+      "type": "function",
+      "name": "generateMarginNo",
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "language": "java",
+      "summary": "生成格式为MGN-{日期}-{随机数}的唯一保证金编号",
+      "tags": [
+        "编号生成",
+        "保证金编号"
+      ],
+      "languageNotes": "结合当前日期和随机数生成",
+      "lineStart": 91,
+      "lineEnd": 95
+    },
+    {
+      "id": "forex-margin/src/main/java/com/forex/margin/domain/service/WaterLevelMonitorService.java",
+      "type": "module",
+      "name": "WaterLevelMonitorService.java",
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/service/WaterLevelMonitorService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "水位线监控服务，监控保证金账户的水位线状态并触发预警",
+      "tags": [
+        "水位线监控",
+        "保证金",
+        "预警"
+      ],
+      "languageNotes": "Spring @Service，依赖MarginAccount、RiskParameterConfig和MarginWaterLevel",
+      "sizeLines": 53
+    },
+    {
+      "id": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginWaterLevelService.java",
+      "type": "module",
+      "name": "MarginWaterLevelService.java",
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginWaterLevelService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "保证金水位线服务，计算和管理保证金账户的水位线指标",
+      "tags": [
+        "水位线",
+        "保证金",
+        "敞口管理"
+      ],
+      "languageNotes": "Spring @Service，依赖MarginAccount和MarginWaterLevel",
+      "sizeLines": 43
+    },
+    {
+      "id": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "type": "module",
+      "name": "PaymentDomainService.java",
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "支付领域服务，管理跨境支付全流程：创建、提交、审批、反洗钱、发送、取消及费用计算",
+      "tags": [
+        "跨境支付",
+        "SWIFT",
+        "CIPS",
+        "反洗钱",
+        "费用计算"
+      ],
+      "languageNotes": "发布PaymentSubmittedEvent和PaymentSentEvent领域事件，支持SWIFT/CIPS双渠道发送",
+      "sizeLines": 114,
+      "metrics": {
+        "importCount": 11,
+        "exportCount": 9,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "id": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:class:PaymentDomainService",
+      "type": "class",
+      "name": "PaymentDomainService",
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "language": "java",
+      "summary": "支付领域服务类，管理跨境支付聚合的完整生命周期",
+      "tags": [
+        "支付",
+        "跨境",
+        "生命周期"
+      ],
+      "languageNotes": "Spring @Service，注入paymentRepository和eventPublisher",
+      "lineStart": 16,
+      "lineEnd": 114
+    },
+    {
+      "id": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:createPayment",
+      "type": "function",
+      "name": "createPayment",
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "language": "java",
+      "summary": "创建跨境支付单，自动生成支付编号并持久化",
+      "tags": [
+        "支付创建",
+        "编号生成"
+      ],
+      "languageNotes": "通过PaymentNo.generate生成支付编号",
+      "lineStart": 24,
+      "lineEnd": 33
+    },
+    {
+      "id": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:submitPayment",
+      "type": "function",
+      "name": "submitPayment",
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "language": "java",
+      "summary": "提交支付单并发布PaymentSubmittedEvent事件",
+      "tags": [
+        "提交",
+        "支付",
+        "领域事件"
+      ],
+      "languageNotes": "调用payment.submit()执行状态转换后发布事件",
+      "lineStart": 35,
+      "lineEnd": 44
+    },
+    {
+      "id": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:approvePayment",
+      "type": "function",
+      "name": "approvePayment",
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "language": "java",
+      "summary": "审批通过支付单",
+      "tags": [
+        "审批",
+        "通过"
+      ],
+      "languageNotes": "调用payment.approve()后持久化",
+      "lineStart": 46,
+      "lineEnd": 51
+    },
+    {
+      "id": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:processAmlResult",
+      "type": "function",
+      "name": "processAmlResult",
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "language": "java",
+      "summary": "处理反洗钱检查结果，通过则标记通过，拒绝则标记拒绝",
+      "tags": [
+        "反洗钱",
+        "AML",
+        "合规"
+      ],
+      "languageNotes": "根据passed标志调用markAmlCheckPassed或markAmlCheckRejected",
+      "lineStart": 53,
+      "lineEnd": 63
+    },
+    {
+      "id": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:sendPayment",
+      "type": "function",
+      "name": "sendPayment",
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "language": "java",
+      "summary": "发送支付指令，记录SWIFT/CIPS参考号并发布PaymentSentEvent",
+      "tags": [
+        "发送",
+        "SWIFT",
+        "CIPS",
+        "支付"
+      ],
+      "languageNotes": "支持swiftRef和cipsRef双渠道参考号",
+      "lineStart": 65,
+      "lineEnd": 79
+    },
+    {
+      "id": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:cancelPayment",
+      "type": "function",
+      "name": "cancelPayment",
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "language": "java",
+      "summary": "取消支付单并记录取消原因",
+      "tags": [
+        "取消",
+        "支付"
+      ],
+      "languageNotes": "调用payment.cancel(reason)后持久化",
+      "lineStart": 81,
+      "lineEnd": 86
+    },
+    {
+      "id": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:calculateFees",
+      "type": "function",
+      "name": "calculateFees",
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "language": "java",
+      "summary": "根据金额和费用承担方计算支付手续费",
+      "tags": [
+        "费用计算",
+        "手续费"
+      ],
+      "languageNotes": "调用getFeeRate获取费率后计算 amount × feeRate",
+      "lineStart": 88,
+      "lineEnd": 94
+    },
+    {
+      "id": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:calculateSettlementAmount",
+      "type": "function",
+      "name": "calculateSettlementAmount",
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "language": "java",
+      "summary": "根据支付金额和汇率计算结算金额",
+      "tags": [
+        "结算金额",
+        "汇率换算"
+      ],
+      "languageNotes": "payAmount × exchangeRate，参数校验非正数抛异常",
+      "lineStart": 96,
+      "lineEnd": 104
+    },
+    {
+      "id": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:getFeeRate",
+      "type": "function",
+      "name": "getFeeRate",
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "language": "java",
+      "summary": "根据费用承担方(OUR/SHA/BEN)返回对应的费率",
+      "tags": [
+        "费率",
+        "OUR",
+        "SHA",
+        "BEN"
+      ],
+      "languageNotes": "OUR=0.1%, SHA=0.05%, BEN=0%",
+      "lineStart": 106,
+      "lineEnd": 113
+    },
+    {
+      "id": "forex-payment/src/main/java/com/forex/payment/infrastructure/listener/PaymentEventListener.java",
+      "type": "module",
+      "name": "PaymentEventListener.java",
+      "path": "forex-payment/src/main/java/com/forex/payment/infrastructure/listener/PaymentEventListener.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "支付事件监听器，监听PaymentSubmittedEvent和PaymentSentEvent并处理后续逻辑",
+      "tags": [
+        "事件监听",
+        "支付",
+        "基础设施"
+      ],
+      "languageNotes": "Spring @Component，使用@EventListener注解处理支付领域事件",
+      "sizeLines": 34
+    },
+    {
+      "id": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "type": "module",
+      "name": "PositionDomainService.java",
+      "path": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "头寸领域服务，管理外汇头寸的创建、汇总、限额检查、对冲建议及限额配置查询",
+      "tags": [
+        "头寸管理",
+        "限额检查",
+        "对冲建议",
+        "头寸汇总"
+      ],
+      "languageNotes": "发布PositionLimitBreachEvent事件，支持多币种头寸管理和风险预警",
+      "sizeLines": 115,
+      "metrics": {
+        "importCount": 12,
+        "exportCount": 5,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "id": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:class:PositionDomainService",
+      "type": "class",
+      "name": "PositionDomainService",
+      "path": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "language": "java",
+      "summary": "头寸领域服务类，管理外汇敞口的创建、监控和限额管理",
+      "tags": [
+        "头寸",
+        "敞口",
+        "限额"
+      ],
+      "languageNotes": "Spring @Service，注入positionRepository、limitConfigRepository和eventPublisher",
+      "lineStart": 21,
+      "lineEnd": 115
+    },
+    {
+      "id": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:createPosition",
+      "type": "function",
+      "name": "createPosition",
+      "path": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "language": "java",
+      "summary": "创建头寸记录，自动获取限额配置并分配头寸编号",
+      "tags": [
+        "头寸创建",
+        "限额配置"
+      ],
+      "languageNotes": "通过getLimitConfigForCurrency获取对应币种限额",
+      "lineStart": 30,
+      "lineEnd": 38
+    },
+    {
+      "id": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:aggregatePositions",
+      "type": "function",
+      "name": "aggregatePositions",
+      "path": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "language": "java",
+      "summary": "按币对和日期聚合多个头寸为汇总头寸，检查限额使用率",
+      "tags": [
+        "头寸汇总",
+        "聚合",
+        "限额检查"
+      ],
+      "languageNotes": "使用Stream reduce汇总多空金额，生成聚合头寸并检查限额",
+      "lineStart": 44,
+      "lineEnd": 67
+    },
+    {
+      "id": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:checkPositionLimit",
+      "type": "function",
+      "name": "checkPositionLimit",
+      "path": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "language": "java",
+      "summary": "检查头寸限额，超限时发布PositionLimitBreachEvent，接近限额时发出警告",
+      "tags": [
+        "限额检查",
+        "风险预警",
+        "违规"
+      ],
+      "languageNotes": "RISK_BREACH触发事件发布，RISK_WARNING记录警告日志",
+      "lineStart": 73,
+      "lineEnd": 91
+    },
+    {
+      "id": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:getHedgingAdvice",
+      "type": "function",
+      "name": "getHedgingAdvice",
+      "path": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "language": "java",
+      "summary": "根据净头寸方向提供对冲建议(多头/空头/无建议)",
+      "tags": [
+        "对冲建议",
+        "净头寸"
+      ],
+      "languageNotes": "净头寸>0建议SELL，净头寸<0建议BUY，=0无建议",
+      "lineStart": 93,
+      "lineEnd": 98
+    },
+    {
+      "id": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:getLimitConfigForCurrency",
+      "type": "function",
+      "name": "getLimitConfigForCurrency",
+      "path": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "language": "java",
+      "summary": "查询指定币种的限额配置",
+      "tags": [
+        "限额配置",
+        "查询"
+      ],
+      "languageNotes": "通过limitConfigRepository按币种查询",
+      "lineStart": 100,
+      "lineEnd": 104
+    },
+    {
+      "id": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:generatePositionNo",
+      "type": "function",
+      "name": "generatePositionNo",
+      "path": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "language": "java",
+      "summary": "生成格式为POS-{币对}-{日期}-{随机数}的唯一头寸编号",
+      "tags": [
+        "编号生成",
+        "头寸编号"
+      ],
+      "languageNotes": "结合币对、日期和随机数生成唯一标识",
+      "lineStart": 106,
+      "lineEnd": 109
+    },
+    {
+      "id": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:extractCurrency",
+      "type": "function",
+      "name": "extractCurrency",
+      "path": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "language": "java",
+      "summary": "从币对字符串中提取基础货币",
+      "tags": [
+        "币对解析",
+        "货币提取"
+      ],
+      "languageNotes": "按/分隔币对字符串取第一部分",
+      "lineStart": 111,
+      "lineEnd": 114
+    },
+    {
+      "id": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "type": "module",
+      "name": "RateCalculationDomainService.java",
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "汇率计算领域服务，提供交叉汇率计算、点差应用及金额换算等汇率核心计算功能",
+      "tags": [
+        "汇率计算",
+        "交叉汇率",
+        "点差",
+        "金额换算"
+      ],
+      "languageNotes": "纯计算服务无外部依赖，仅依赖java.math.BigDecimal",
+      "sizeLines": 40,
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "id": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:class:RateCalculationDomainService",
+      "type": "class",
+      "name": "RateCalculationDomainService",
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "language": "java",
+      "summary": "汇率计算领域服务类，封装外汇汇率计算的通用数学逻辑",
+      "tags": [
+        "汇率",
+        "计算",
+        "数学"
+      ],
+      "languageNotes": "Spring @Service，纯数学计算类",
+      "lineStart": 8,
+      "lineEnd": 40
+    },
+    {
+      "id": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:function:calculateCrossRate",
+      "type": "function",
+      "name": "calculateCrossRate",
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "language": "java",
+      "summary": "计算交叉汇率 = usdQuoteRate / usdBaseRate",
+      "tags": [
+        "交叉汇率",
+        "USD基准"
+      ],
+      "languageNotes": "参数校验：两汇率必须大于零",
+      "lineStart": 11,
+      "lineEnd": 19
+    },
+    {
+      "id": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:function:applySpread",
+      "type": "function",
+      "name": "applySpread",
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "language": "java",
+      "summary": "在基础汇率上应用买卖点差，返回调整后的汇率",
+      "tags": [
+        "点差",
+        "买卖价差"
+      ],
+      "languageNotes": "spreadAdjust可正可负，基础汇率必须大于零",
+      "lineStart": 21,
+      "lineEnd": 29
+    },
+    {
+      "id": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:function:calculateAmount",
+      "type": "function",
+      "name": "calculateAmount",
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "language": "java",
+      "summary": "根据金额和汇率计算兑换金额 = amount × rate",
+      "tags": [
+        "金额计算",
+        "换算"
+      ],
+      "languageNotes": "参数校验：金额和汇率必须大于零",
+      "lineStart": 31,
+      "lineEnd": 39
+    },
+    {
+      "id": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "type": "module",
+      "name": "ReportingDomainService.java",
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "报表领域服务，管理国际收支、结售汇和资本项目三类报表的创建、批量提交及监管状态流转",
+      "tags": [
+        "报表",
+        "国际收支",
+        "结售汇",
+        "资本项目",
+        "监管报送"
+      ],
+      "languageNotes": "发布ReportSubmittedEvent事件，支持提交/受理/拒绝状态流转，遵循外管报送规范",
+      "sizeLines": 78,
+      "metrics": {
+        "importCount": 13,
+        "exportCount": 8,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "id": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:class:ReportingDomainService",
+      "type": "class",
+      "name": "ReportingDomainService",
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "language": "java",
+      "summary": "报表领域服务类，管理外汇监管报表的创建和报送全流程",
+      "tags": [
+        "报表",
+        "监管",
+        "报送"
+      ],
+      "languageNotes": "Spring @Service，注入三个报表Repository和eventPublisher",
+      "lineStart": 18,
+      "lineEnd": 78
+    },
+    {
+      "id": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:function:createBopReport",
+      "type": "function",
+      "name": "createBopReport",
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "language": "java",
+      "summary": "创建国际收支(BOP)统计报表",
+      "tags": [
+        "国际收支",
+        "BOP"
+      ],
+      "languageNotes": "通过bopReportRepository持久化BopReport聚合",
+      "lineStart": 28,
+      "lineEnd": 32
+    },
+    {
+      "id": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:function:createSettlementReport",
+      "type": "function",
+      "name": "createSettlementReport",
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "language": "java",
+      "summary": "创建结售汇统计报表",
+      "tags": [
+        "结售汇",
+        "结算报表"
+      ],
+      "languageNotes": "通过settlementReportRepository持久化ForexSettlementReport",
+      "lineStart": 34,
+      "lineEnd": 38
+    },
+    {
+      "id": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:function:createCapitalReport",
+      "type": "function",
+      "name": "createCapitalReport",
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "language": "java",
+      "summary": "创建资本项目报表",
+      "tags": [
+        "资本项目",
+        "资本账户"
+      ],
+      "languageNotes": "通过capitalReportRepository持久化CapitalAccountReport",
+      "lineStart": 40,
+      "lineEnd": 44
+    },
+    {
+      "id": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:function:submitReportBatch",
+      "type": "function",
+      "name": "submitReportBatch",
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "language": "java",
+      "summary": "批量提交报表，逐个执行提交并发布ReportSubmittedEvent，空列表抛异常",
+      "tags": [
+        "批量提交",
+        "报表"
+      ],
+      "languageNotes": "遍历报表列表调用report.submit()并发布事件",
+      "lineStart": 46,
+      "lineEnd": 57
+    },
+    {
+      "id": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:function:markAsSubmitted",
+      "type": "function",
+      "name": "markAsSubmitted",
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "language": "java",
+      "summary": "将单张报表标记为已提交并发布事件",
+      "tags": [
+        "状态变更",
+        "已提交"
+      ],
+      "languageNotes": "调用report.submit()后保存并发布ReportSubmittedEvent",
+      "lineStart": 59,
+      "lineEnd": 65
+    },
+    {
+      "id": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:function:markAsAccepted",
+      "type": "function",
+      "name": "markAsAccepted",
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "language": "java",
+      "summary": "将报表标记为监管已受理状态",
+      "tags": [
+        "监管受理",
+        "状态变更"
+      ],
+      "languageNotes": "调用report.accept(ref)设置受理参考号",
+      "lineStart": 67,
+      "lineEnd": 71
+    },
+    {
+      "id": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:function:markAsRejected",
+      "type": "function",
+      "name": "markAsRejected",
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "language": "java",
+      "summary": "将报表标记为监管已拒绝状态并记录拒绝原因",
+      "tags": [
+        "监管拒绝",
+        "状态变更"
+      ],
+      "languageNotes": "调用report.reject(reason)记录拒绝原因",
+      "lineStart": 73,
+      "lineEnd": 77
+    },
+    {
+      "id": "forex-risk/src/main/java/com/forex/risk/domain/service/PricingRiskService.java",
+      "type": "module",
+      "name": "PricingRiskService.java",
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/service/PricingRiskService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "定价风险服务，计算外汇交易的市场定价风险评估结果",
+      "tags": [
+        "定价风险",
+        "市场风险",
+        "风险评估"
+      ],
+      "languageNotes": "Spring @Service，依赖PricingRiskResult聚合和PricingRiskConfig配置实体",
+      "sizeLines": 49
+    },
+    {
+      "id": "forex-risk/src/main/java/com/forex/risk/domain/service/CreditRiskService.java",
+      "type": "module",
+      "name": "CreditRiskService.java",
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/service/CreditRiskService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "信用风险服务，基于信用评级配置计算交易对手的信用风险评估结果",
+      "tags": [
+        "信用风险",
+        "交易对手",
+        "信用评级"
+      ],
+      "languageNotes": "Spring @Service，依赖CreditRiskResult聚合和CreditRatingConfig实体",
+      "sizeLines": 47
+    },
+    {
+      "id": "forex-risk/src/main/java/com/forex/risk/domain/service/SamplingRuleEngine.java",
+      "type": "module",
+      "name": "SamplingRuleEngine.java",
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/service/SamplingRuleEngine.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "抽样规则引擎，管理和执行交易抽样的规则逻辑",
+      "tags": [
+        "抽样",
+        "规则引擎",
+        "风控"
+      ],
+      "languageNotes": "Spring @Service，依赖SamplingRule聚合和SamplingRuleRepository",
+      "sizeLines": 31
+    },
+    {
+      "id": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "type": "module",
+      "name": "LcDomainService.java",
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "信用证领域服务，管理信用证全生命周期：创建、开立、通知、交单、审单、承兑及付款",
+      "tags": [
+        "信用证",
+        "LC",
+        "开立",
+        "审单",
+        "承兑",
+        "付款",
+        "交单"
+      ],
+      "languageNotes": "发布LcIssuedEvent和LcDocCheckedEvent领域事件，遵循UCP600规则",
+      "sizeLines": 76,
+      "metrics": {
+        "importCount": 9,
+        "exportCount": 8,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "id": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:class:LcDomainService",
+      "type": "class",
+      "name": "LcDomainService",
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "language": "java",
+      "summary": "信用证领域服务类，管理信用证从创建到付款的完整生命周期",
+      "tags": [
+        "信用证",
+        "生命周期",
+        "UCP600"
+      ],
+      "languageNotes": "Spring @Service，注入lcRepository和eventPublisher",
+      "lineStart": 13,
+      "lineEnd": 76
+    },
+    {
+      "id": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:function:createLc",
+      "type": "function",
+      "name": "createLc",
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "language": "java",
+      "summary": "创建信用证，自动生成LC编号并持久化",
+      "tags": [
+        "信用证创建",
+        "编号生成"
+      ],
+      "languageNotes": "通过LcNo.generate(lc.getLcType())生成LC编号",
+      "lineStart": 21,
+      "lineEnd": 29
+    },
+    {
+      "id": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:function:issueLc",
+      "type": "function",
+      "name": "issueLc",
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "language": "java",
+      "summary": "开立信用证并发布LcIssuedEvent事件",
+      "tags": [
+        "开立",
+        "信用证",
+        "领域事件"
+      ],
+      "languageNotes": "调用lc.issue()执行开立操作后发布事件",
+      "lineStart": 31,
+      "lineEnd": 38
+    },
+    {
+      "id": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:function:adviseLc",
+      "type": "function",
+      "name": "adviseLc",
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "language": "java",
+      "summary": "通知行通知信用证",
+      "tags": [
+        "通知",
+        "信用证"
+      ],
+      "languageNotes": "调用lc.advise()执行通知操作",
+      "lineStart": 40,
+      "lineEnd": 45
+    },
+    {
+      "id": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:function:presentDocuments",
+      "type": "function",
+      "name": "presentDocuments",
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "language": "java",
+      "summary": "受益人交单，提交信用证项下单据",
+      "tags": [
+        "交单",
+        "单据"
+      ],
+      "languageNotes": "调用lc.presentDocuments()执行交单操作",
+      "lineStart": 47,
+      "lineEnd": 52
+    },
+    {
+      "id": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:function:checkDocuments",
+      "type": "function",
+      "name": "checkDocuments",
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "language": "java",
+      "summary": "审核信用证项下单据，发布LcDocCheckedEvent事件通知审单结果",
+      "tags": [
+        "审单",
+        "单据审核",
+        "不符点"
+      ],
+      "languageNotes": "支持isDiscrepant标识是否存在不符点",
+      "lineStart": 54,
+      "lineEnd": 61
+    },
+    {
+      "id": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:function:acceptLc",
+      "type": "function",
+      "name": "acceptLc",
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "language": "java",
+      "summary": "承兑信用证，确认到期付款承诺",
+      "tags": [
+        "承兑",
+        "信用证"
+      ],
+      "languageNotes": "调用lc.accept()执行承兑操作",
+      "lineStart": 63,
+      "lineEnd": 68
+    },
+    {
+      "id": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:function:payLc",
+      "type": "function",
+      "name": "payLc",
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "language": "java",
+      "summary": "执行信用证付款，完成最终资金交割",
+      "tags": [
+        "付款",
+        "信用证"
+      ],
+      "languageNotes": "调用lc.pay()执行付款操作",
+      "lineStart": 70,
+      "lineEnd": 75
+    },
+    {
+      "id": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "type": "module",
+      "name": "TradeDomainService.java",
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "summary": "交易领域服务，管理外汇交易全生命周期：创建、确认、执行、结算、展期、平仓及远期汇率/掉期计算",
+      "tags": [
+        "外汇交易",
+        "执行",
+        "结算",
+        "展期",
+        "平仓",
+        "远期汇率",
+        "掉期"
+      ],
+      "languageNotes": "发布TradeExecutedEvent和TradeSettledEvent领域事件，支持即期和远期交易",
+      "sizeLines": 91,
+      "metrics": {
+        "importCount": 12,
+        "exportCount": 10,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "id": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:class:TradeDomainService",
+      "type": "class",
+      "name": "TradeDomainService",
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "language": "java",
+      "summary": "交易领域服务类，管理外汇交易从创建到结算的完整生命周期",
+      "tags": [
+        "交易",
+        "生命周期",
+        "FX"
+      ],
+      "languageNotes": "Spring @Service，注入fxTradeRepository和eventPublisher",
+      "lineStart": 17,
+      "lineEnd": 91
+    },
+    {
+      "id": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:createTrade",
+      "type": "function",
+      "name": "createTrade",
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "language": "java",
+      "summary": "创建外汇交易单并持久化",
+      "tags": [
+        "交易创建"
+      ],
+      "languageNotes": "通过fxTradeRepository.save保存FxTrade聚合",
+      "lineStart": 25,
+      "lineEnd": 29
+    },
+    {
+      "id": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:confirmTrade",
+      "type": "function",
+      "name": "confirmTrade",
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "language": "java",
+      "summary": "确认外汇交易",
+      "tags": [
+        "交易确认"
+      ],
+      "languageNotes": "调用trade.confirm()后持久化",
+      "lineStart": 31,
+      "lineEnd": 35
+    },
+    {
+      "id": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:executeTrade",
+      "type": "function",
+      "name": "executeTrade",
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "language": "java",
+      "summary": "执行外汇交易并发布TradeExecutedEvent事件",
+      "tags": [
+        "交易执行",
+        "领域事件"
+      ],
+      "languageNotes": "事件包含交易类型、买卖币种和金额信息",
+      "lineStart": 37,
+      "lineEnd": 44
+    },
+    {
+      "id": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:settleTrade",
+      "type": "function",
+      "name": "settleTrade",
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "language": "java",
+      "summary": "结算外汇交易并发布TradeSettledEvent事件",
+      "tags": [
+        "交易结算",
+        "领域事件"
+      ],
+      "languageNotes": "事件包含结算状态信息",
+      "lineStart": 46,
+      "lineEnd": 52
+    },
+    {
+      "id": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:rollOverTrade",
+      "type": "function",
+      "name": "rollOverTrade",
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "language": "java",
+      "summary": "展期外汇交易，更新起息日和汇率",
+      "tags": [
+        "展期",
+        "远期"
+      ],
+      "languageNotes": "调用trade.rollOver(newDate, newRate)执行展期",
+      "lineStart": 54,
+      "lineEnd": 58
+    },
+    {
+      "id": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:closeOutTrade",
+      "type": "function",
+      "name": "closeOutTrade",
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "language": "java",
+      "summary": "反向平仓，关闭已持仓交易",
+      "tags": [
+        "平仓",
+        "关闭"
+      ],
+      "languageNotes": "调用trade.closeOut()执行平仓",
+      "lineStart": 60,
+      "lineEnd": 64
+    },
+    {
+      "id": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:cancelTrade",
+      "type": "function",
+      "name": "cancelTrade",
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "language": "java",
+      "summary": "取消外汇交易并记录取消原因",
+      "tags": [
+        "取消",
+        "交易"
+      ],
+      "languageNotes": "调用trade.cancel(reason)执行取消",
+      "lineStart": 66,
+      "lineEnd": 70
+    },
+    {
+      "id": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:calculateForwardRate",
+      "type": "function",
+      "name": "calculateForwardRate",
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "language": "java",
+      "summary": "计算远期汇率 = 即期汇率 + 掉期点",
+      "tags": [
+        "远期汇率",
+        "掉期点"
+      ],
+      "languageNotes": "校验即期汇率>0且掉期点不为null，调用points.applyToRate(spotRate)",
+      "lineStart": 72,
+      "lineEnd": 80
+    },
+    {
+      "id": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:calculateSwapAmount",
+      "type": "function",
+      "name": "calculateSwapAmount",
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "language": "java",
+      "summary": "计算掉期交易的买卖差额 = buyAmount - sellAmount",
+      "tags": [
+        "掉期",
+        "差额计算"
+      ],
+      "languageNotes": "校验买卖金额均存在，返回差额",
+      "lineStart": 82,
+      "lineEnd": 90
+    }
+  ],
+  "edges": [
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:class:BookkeepingDomainService",
+      "type": "contains"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:class:BookkeepingDomainService",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:createEntry",
+      "type": "contains"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:class:BookkeepingDomainService",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:postEntry",
+      "type": "contains"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:class:BookkeepingDomainService",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:reverseEntry",
+      "type": "contains"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:class:BookkeepingDomainService",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:generateVoucherNo",
+      "type": "contains"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:class:BookkeepingDomainService",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:postEntriesForPeriod",
+      "type": "contains"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:reverseEntry",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:generateVoucherNo",
+      "type": "calls"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:postEntriesForPeriod",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:postEntry",
+      "type": "calls"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "target": "com.forex.bookkeeping.domain.event.EntryPostedEvent",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "target": "com.forex.bookkeeping.domain.model.aggregate.JournalEntry",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "target": "com.forex.bookkeeping.domain.model.valueobject.JournalEntryId",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "target": "com.forex.bookkeeping.domain.repository.JournalEntryRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "target": "com.forex.common.base.domain.BaseAggregate",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "target": "com.forex.common.base.exception.BusinessException",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "target": "org.springframework.context.ApplicationEventPublisher",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java:class:MonthEndClosingService",
+      "type": "contains"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java:class:MonthEndClosingService",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java:function:executeMonthEndClosing",
+      "type": "contains"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java:function:executeMonthEndClosing",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:postEntriesForPeriod",
+      "type": "calls"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java:function:executeMonthEndClosing",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java:function:batchRevaluation",
+      "type": "calls"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java:function:executeMonthEndClosing",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:createEntry",
+      "type": "calls"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java:function:executeMonthEndClosing",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java:function:postEntry",
+      "type": "calls"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "target": "com.forex.bookkeeping.domain.model.aggregate.JournalEntry",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "target": "com.forex.bookkeeping.domain.model.aggregate.MonthEndClosing",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "target": "com.forex.bookkeeping.domain.repository.JournalEntryRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "target": "com.forex.bookkeeping.domain.repository.MonthEndClosingRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "target": "java.time.LocalDate",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "target": "java.util.List",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java:class:RevaluationEntryService",
+      "type": "contains"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java:class:RevaluationEntryService",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java:function:generateRevaluationEntries",
+      "type": "contains"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java:class:RevaluationEntryService",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java:function:batchRevaluation",
+      "type": "contains"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java:class:RevaluationEntryService",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java:function:generateSuffix",
+      "type": "contains"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java:function:generateRevaluationEntries",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java:function:generateSuffix",
+      "type": "calls"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java:function:batchRevaluation",
+      "target": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java:function:generateRevaluationEntries",
+      "type": "calls"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "target": "com.forex.bookkeeping.domain.model.aggregate.JournalEntry",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "target": "com.forex.bookkeeping.domain.repository.JournalEntryRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "target": "java.math.RoundingMode",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/VoucherTemplateService.java",
+      "target": "com.forex.bookkeeping.domain.model.entity.VoucherTemplate",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/VoucherTemplateService.java",
+      "target": "com.forex.bookkeeping.domain.repository.VoucherTemplateRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/VoucherTemplateService.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/VoucherTemplateService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/VoucherTemplateService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/VoucherMappingDomainService.java",
+      "target": "com.forex.bookkeeping.domain.model.aggregate.VoucherMapping",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/VoucherMappingDomainService.java",
+      "target": "com.forex.bookkeeping.domain.repository.VoucherMappingRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/VoucherMappingDomainService.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/VoucherMappingDomainService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/VoucherMappingDomainService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/listener/EntryPostedEventListener.java",
+      "target": "com.forex.bookkeeping.domain.event.EntryPostedEvent",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/listener/EntryPostedEventListener.java",
+      "target": "com.forex.bookkeeping.domain.model.aggregate.JournalEntry",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/listener/EntryPostedEventListener.java",
+      "target": "com.forex.bookkeeping.domain.repository.JournalEntryRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/listener/EntryPostedEventListener.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/listener/EntryPostedEventListener.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/listener/EntryPostedEventListener.java",
+      "target": "org.springframework.context.event.EventListener",
+      "type": "imports"
+    },
+    {
+      "source": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/listener/EntryPostedEventListener.java",
+      "target": "org.springframework.stereotype.Component",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "target": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java:class:NettingSettlementService",
+      "type": "contains"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java:class:NettingSettlementService",
+      "target": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java:function:calculateNetPosition",
+      "type": "contains"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java:class:NettingSettlementService",
+      "target": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java:function:generateNettingInstruction",
+      "type": "contains"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "target": "com.forex.cashpool.domain.model.entity.PoolMember",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "target": "java.time.LocalDate",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "target": "java.util.HashMap",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "target": "java.util.List",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "target": "java.util.Map",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/PoolMonitoringService.java",
+      "target": "com.forex.cashpool.domain.model.aggregate.CashPool",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/PoolMonitoringService.java",
+      "target": "com.forex.cashpool.domain.model.entity.PoolMember",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/PoolMonitoringService.java",
+      "target": "com.forex.cashpool.domain.repository.CashPoolRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/PoolMonitoringService.java",
+      "target": "com.forex.cashpool.domain.repository.PoolMemberRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/PoolMonitoringService.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/PoolMonitoringService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/PoolMonitoringService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/PoolMonitoringService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/PoolMonitoringService.java",
+      "target": "java.util.List",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/PoolMonitoringService.java",
+      "target": "java.util.Map",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "com.forex.cashpool.domain.event.MemberAddedToPoolEvent",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "com.forex.cashpool.domain.event.PoolCreatedEvent",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "com.forex.cashpool.domain.model.aggregate.CashPool",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "com.forex.cashpool.domain.model.aggregate.OverseasLending",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "com.forex.cashpool.domain.model.aggregate.PoolBalance",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "com.forex.cashpool.domain.model.entity.PoolMember",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "com.forex.cashpool.domain.model.entity.QuotaConfig",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "com.forex.cashpool.domain.model.valueobject.PoolId",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "com.forex.cashpool.domain.repository.CashPoolRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "com.forex.cashpool.domain.repository.LendingRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "com.forex.cashpool.domain.repository.PoolBalanceRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "com.forex.cashpool.domain.repository.PoolMemberRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "com.forex.cashpool.domain.repository.QuotaConfigRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "com.forex.common.base.exception.BusinessException",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "org.springframework.context.ApplicationEventPublisher",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "java.time.LocalDate",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "java.util.List",
+      "type": "imports"
+    },
+    {
+      "source": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+      "target": "java.util.UUID",
+      "type": "imports"
+    },
+    {
+      "source": "forex-clearing/src/main/java/com/forex/clearing/domain/service/AutomatedConfirmationService.java",
+      "target": "com.forex.clearing.domain.model.aggregate.ClearingInstruction",
+      "type": "imports"
+    },
+    {
+      "source": "forex-clearing/src/main/java/com/forex/clearing/domain/service/AutomatedConfirmationService.java",
+      "target": "com.forex.clearing.domain.repository.ClearingInstructionRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-clearing/src/main/java/com/forex/clearing/domain/service/AutomatedConfirmationService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-clearing/src/main/java/com/forex/clearing/domain/service/AutomatedConfirmationService.java",
+      "target": "java.time.LocalDate",
+      "type": "imports"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "target": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:class:HedgeAccountingService",
+      "type": "contains"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:class:HedgeAccountingService",
+      "target": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:function:performProspectiveTest",
+      "type": "contains"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:class:HedgeAccountingService",
+      "target": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:function:performRetrospectiveTest",
+      "type": "contains"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:class:HedgeAccountingService",
+      "target": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:function:generateHedgeEntries",
+      "type": "contains"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "target": "com.forex.hedge.accounting.domain.model.aggregate.HedgeRelationship",
+      "type": "imports"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "target": "com.forex.hedge.accounting.domain.model.entity.HedgeEffectivenessTest",
+      "type": "imports"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "target": "java.math.RoundingMode",
+      "type": "imports"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "target": "java.time.LocalDate",
+      "type": "imports"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "target": "java.util.ArrayList",
+      "type": "imports"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "target": "java.util.List",
+      "type": "imports"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "target": "java.util.Map",
+      "type": "imports"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingDomainService.java",
+      "target": "com.forex.hedge.accounting.domain.model.aggregate.HedgeRelationship",
+      "type": "imports"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingDomainService.java",
+      "target": "com.forex.hedge.accounting.domain.repository.HedgeRelationshipRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingDomainService.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingDomainService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingDomainService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:class:MarginDomainService",
+      "type": "contains"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:class:MarginDomainService",
+      "target": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:createMargin",
+      "type": "contains"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:class:MarginDomainService",
+      "target": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:createDynamicMargin",
+      "type": "contains"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:class:MarginDomainService",
+      "target": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:depositWithWaterLevelCheck",
+      "type": "contains"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:class:MarginDomainService",
+      "target": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:calculateInitialMargin",
+      "type": "contains"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:class:MarginDomainService",
+      "target": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:callMargin",
+      "type": "contains"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:class:MarginDomainService",
+      "target": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:releaseMargin",
+      "type": "contains"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:class:MarginDomainService",
+      "target": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:generateMarginNo",
+      "type": "contains"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:createMargin",
+      "target": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:generateMarginNo",
+      "type": "calls"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:createDynamicMargin",
+      "target": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:generateMarginNo",
+      "type": "calls"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:depositWithWaterLevelCheck",
+      "target": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:function:generateMarginNo",
+      "type": "calls"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "com.forex.margin.domain.event.MarginCalledEvent",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "com.forex.margin.domain.event.MarginReleasedEvent",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "com.forex.margin.domain.model.aggregate.MarginAccount",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "com.forex.margin.domain.model.entity.CollateralHolding",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "com.forex.margin.domain.model.entity.RiskParameterConfig",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "com.forex.margin.domain.model.valueobject.MarginRate",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "com.forex.margin.domain.model.valueobject.MarginWaterLevel",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "com.forex.margin.domain.repository.MarginAccountRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "com.forex.common.base.exception.BusinessException",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "org.springframework.context.ApplicationEventPublisher",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "java.math.RoundingMode",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/WaterLevelMonitorService.java",
+      "target": "com.forex.margin.domain.model.aggregate.MarginAccount",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/WaterLevelMonitorService.java",
+      "target": "com.forex.margin.domain.model.entity.RiskParameterConfig",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/WaterLevelMonitorService.java",
+      "target": "com.forex.margin.domain.model.valueobject.MarginWaterLevel",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/WaterLevelMonitorService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/WaterLevelMonitorService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/WaterLevelMonitorService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/WaterLevelMonitorService.java",
+      "target": "java.math.RoundingMode",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginWaterLevelService.java",
+      "target": "com.forex.margin.domain.model.aggregate.MarginAccount",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginWaterLevelService.java",
+      "target": "com.forex.margin.domain.model.valueobject.MarginWaterLevel",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginWaterLevelService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginWaterLevelService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginWaterLevelService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginWaterLevelService.java",
+      "target": "java.math.RoundingMode",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "target": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:class:PaymentDomainService",
+      "type": "contains"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:class:PaymentDomainService",
+      "target": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:createPayment",
+      "type": "contains"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:class:PaymentDomainService",
+      "target": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:submitPayment",
+      "type": "contains"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:class:PaymentDomainService",
+      "target": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:approvePayment",
+      "type": "contains"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:class:PaymentDomainService",
+      "target": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:processAmlResult",
+      "type": "contains"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:class:PaymentDomainService",
+      "target": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:sendPayment",
+      "type": "contains"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:class:PaymentDomainService",
+      "target": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:cancelPayment",
+      "type": "contains"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:class:PaymentDomainService",
+      "target": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:calculateFees",
+      "type": "contains"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:class:PaymentDomainService",
+      "target": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:calculateSettlementAmount",
+      "type": "contains"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:class:PaymentDomainService",
+      "target": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:getFeeRate",
+      "type": "contains"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:calculateFees",
+      "target": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java:function:getFeeRate",
+      "type": "calls"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "target": "com.forex.payment.domain.event.PaymentSentEvent",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "target": "com.forex.payment.domain.event.PaymentSubmittedEvent",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "target": "com.forex.payment.domain.model.aggregate.CrossBorderPayment",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "target": "com.forex.payment.domain.model.valueobject.PaymentNo",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "target": "com.forex.payment.domain.repository.PaymentRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "target": "org.springframework.context.ApplicationEventPublisher",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "target": "java.math.RoundingMode",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/infrastructure/listener/PaymentEventListener.java",
+      "target": "com.forex.payment.domain.event.PaymentSentEvent",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/infrastructure/listener/PaymentEventListener.java",
+      "target": "com.forex.payment.domain.event.PaymentSubmittedEvent",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/infrastructure/listener/PaymentEventListener.java",
+      "target": "com.forex.payment.domain.model.aggregate.CrossBorderPayment",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/infrastructure/listener/PaymentEventListener.java",
+      "target": "com.forex.payment.domain.repository.PaymentRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/infrastructure/listener/PaymentEventListener.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/infrastructure/listener/PaymentEventListener.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/infrastructure/listener/PaymentEventListener.java",
+      "target": "org.springframework.context.event.EventListener",
+      "type": "imports"
+    },
+    {
+      "source": "forex-payment/src/main/java/com/forex/payment/infrastructure/listener/PaymentEventListener.java",
+      "target": "org.springframework.stereotype.Component",
+      "type": "imports"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "target": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:class:PositionDomainService",
+      "type": "contains"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:class:PositionDomainService",
+      "target": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:createPosition",
+      "type": "contains"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:class:PositionDomainService",
+      "target": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:aggregatePositions",
+      "type": "contains"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:class:PositionDomainService",
+      "target": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:checkPositionLimit",
+      "type": "contains"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:class:PositionDomainService",
+      "target": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:getHedgingAdvice",
+      "type": "contains"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:class:PositionDomainService",
+      "target": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:getLimitConfigForCurrency",
+      "type": "contains"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:class:PositionDomainService",
+      "target": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:generatePositionNo",
+      "type": "contains"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:class:PositionDomainService",
+      "target": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:extractCurrency",
+      "type": "contains"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:createPosition",
+      "target": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:getLimitConfigForCurrency",
+      "type": "calls"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:createPosition",
+      "target": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:generatePositionNo",
+      "type": "calls"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:aggregatePositions",
+      "target": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:extractCurrency",
+      "type": "calls"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:aggregatePositions",
+      "target": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:getLimitConfigForCurrency",
+      "type": "calls"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:checkPositionLimit",
+      "target": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java:function:getLimitConfigForCurrency",
+      "type": "calls"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "target": "com.forex.position.domain.event.PositionLimitBreachEvent",
+      "type": "imports"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "target": "com.forex.position.domain.model.aggregate.Position",
+      "type": "imports"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "target": "com.forex.position.domain.model.entity.PositionLimitConfig",
+      "type": "imports"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "target": "com.forex.position.domain.repository.PositionLimitConfigRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "target": "com.forex.position.domain.repository.PositionRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "target": "org.springframework.context.ApplicationEventPublisher",
+      "type": "imports"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "target": "java.time.LocalDate",
+      "type": "imports"
+    },
+    {
+      "source": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "target": "java.util.List",
+      "type": "imports"
+    },
+    {
+      "source": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "target": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:class:RateCalculationDomainService",
+      "type": "contains"
+    },
+    {
+      "source": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:class:RateCalculationDomainService",
+      "target": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:function:calculateCrossRate",
+      "type": "contains"
+    },
+    {
+      "source": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:class:RateCalculationDomainService",
+      "target": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:function:applySpread",
+      "type": "contains"
+    },
+    {
+      "source": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:class:RateCalculationDomainService",
+      "target": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:function:calculateAmount",
+      "type": "contains"
+    },
+    {
+      "source": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "target": "java.math.RoundingMode",
+      "type": "imports"
+    },
+    {
+      "source": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "target": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:class:ReportingDomainService",
+      "type": "contains"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:class:ReportingDomainService",
+      "target": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:function:createBopReport",
+      "type": "contains"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:class:ReportingDomainService",
+      "target": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:function:createSettlementReport",
+      "type": "contains"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:class:ReportingDomainService",
+      "target": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:function:createCapitalReport",
+      "type": "contains"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:class:ReportingDomainService",
+      "target": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:function:submitReportBatch",
+      "type": "contains"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:class:ReportingDomainService",
+      "target": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:function:markAsSubmitted",
+      "type": "contains"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:class:ReportingDomainService",
+      "target": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:function:markAsAccepted",
+      "type": "contains"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:class:ReportingDomainService",
+      "target": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java:function:markAsRejected",
+      "type": "contains"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "target": "com.forex.common.base.exception.BusinessException",
+      "type": "imports"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "target": "com.forex.reporting.domain.event.ReportSubmittedEvent",
+      "type": "imports"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "target": "com.forex.reporting.domain.model.aggregate.BopReport",
+      "type": "imports"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "target": "com.forex.reporting.domain.model.entity.CapitalAccountReport",
+      "type": "imports"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "target": "com.forex.reporting.domain.model.entity.ForexSettlementReport",
+      "type": "imports"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "target": "com.forex.reporting.domain.repository.BopReportRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "target": "com.forex.reporting.domain.repository.CapitalReportRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "target": "com.forex.reporting.domain.repository.SettlementReportRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "target": "org.springframework.context.ApplicationEventPublisher",
+      "type": "imports"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "target": "java.util.List",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/PricingRiskService.java",
+      "target": "com.forex.risk.domain.model.aggregate.PricingRiskResult",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/PricingRiskService.java",
+      "target": "com.forex.risk.domain.model.entity.PricingRiskConfig",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/PricingRiskService.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/PricingRiskService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/PricingRiskService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/PricingRiskService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/PricingRiskService.java",
+      "target": "java.math.RoundingMode",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/CreditRiskService.java",
+      "target": "com.forex.risk.domain.model.aggregate.CreditRiskResult",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/CreditRiskService.java",
+      "target": "com.forex.risk.domain.model.entity.CreditRatingConfig",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/CreditRiskService.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/CreditRiskService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/CreditRiskService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/CreditRiskService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/SamplingRuleEngine.java",
+      "target": "com.forex.common.base.exception.BusinessException",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/SamplingRuleEngine.java",
+      "target": "com.forex.risk.domain.model.aggregate.SamplingRule",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/SamplingRuleEngine.java",
+      "target": "com.forex.risk.domain.repository.SamplingRuleRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/SamplingRuleEngine.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/SamplingRuleEngine.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/SamplingRuleEngine.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/SamplingRuleEngine.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/SamplingRuleEngine.java",
+      "target": "java.math.RoundingMode",
+      "type": "imports"
+    },
+    {
+      "source": "forex-risk/src/main/java/com/forex/risk/domain/service/SamplingRuleEngine.java",
+      "target": "java.util.List",
+      "type": "imports"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "target": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:class:LcDomainService",
+      "type": "contains"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:class:LcDomainService",
+      "target": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:function:createLc",
+      "type": "contains"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:class:LcDomainService",
+      "target": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:function:issueLc",
+      "type": "contains"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:class:LcDomainService",
+      "target": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:function:adviseLc",
+      "type": "contains"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:class:LcDomainService",
+      "target": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:function:presentDocuments",
+      "type": "contains"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:class:LcDomainService",
+      "target": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:function:checkDocuments",
+      "type": "contains"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:class:LcDomainService",
+      "target": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:function:acceptLc",
+      "type": "contains"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:class:LcDomainService",
+      "target": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java:function:payLc",
+      "type": "contains"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "target": "com.forex.settlement.domain.event.LcDocCheckedEvent",
+      "type": "imports"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "target": "com.forex.settlement.domain.event.LcIssuedEvent",
+      "type": "imports"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "target": "com.forex.settlement.domain.model.aggregate.LetterOfCredit",
+      "type": "imports"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "target": "com.forex.settlement.domain.model.valueobject.LcNo",
+      "type": "imports"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "target": "com.forex.settlement.domain.repository.LcRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "target": "org.springframework.context.ApplicationEventPublisher",
+      "type": "imports"
+    },
+    {
+      "source": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "target": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:class:TradeDomainService",
+      "type": "contains"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:class:TradeDomainService",
+      "target": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:createTrade",
+      "type": "contains"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:class:TradeDomainService",
+      "target": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:confirmTrade",
+      "type": "contains"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:class:TradeDomainService",
+      "target": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:executeTrade",
+      "type": "contains"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:class:TradeDomainService",
+      "target": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:settleTrade",
+      "type": "contains"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:class:TradeDomainService",
+      "target": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:rollOverTrade",
+      "type": "contains"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:class:TradeDomainService",
+      "target": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:closeOutTrade",
+      "type": "contains"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:class:TradeDomainService",
+      "target": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:cancelTrade",
+      "type": "contains"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:class:TradeDomainService",
+      "target": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:calculateForwardRate",
+      "type": "contains"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:class:TradeDomainService",
+      "target": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java:function:calculateSwapAmount",
+      "type": "contains"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "target": "com.forex.common.base.exception.BusinessException",
+      "type": "imports"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "target": "com.forex.trading.domain.event.TradeExecutedEvent",
+      "type": "imports"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "target": "com.forex.trading.domain.event.TradeSettledEvent",
+      "type": "imports"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "target": "com.forex.trading.domain.model.aggregate.FxTrade",
+      "type": "imports"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "target": "com.forex.trading.domain.model.valueobject.SwapPoints",
+      "type": "imports"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "target": "com.forex.trading.domain.repository.FxTradeRepository",
+      "type": "imports"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "target": "lombok.RequiredArgsConstructor",
+      "type": "imports"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "target": "lombok.extern.slf4j.Slf4j",
+      "type": "imports"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "target": "org.springframework.context.ApplicationEventPublisher",
+      "type": "imports"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "target": "org.springframework.stereotype.Service",
+      "type": "imports"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "target": "java.math.BigDecimal",
+      "type": "imports"
+    },
+    {
+      "source": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "target": "java.time.LocalDate",
+      "type": "imports"
+    }
+  ]
+}

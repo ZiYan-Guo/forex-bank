@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="/Users/guoziyan/Library/Java/JavaVirtualMachines/temurin-17.0.18/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/target/surefire/surefirebooter-20260624092830180_40.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/target/surefire 2026-06-24T09-28-21_569-jvmRun1 surefire-20260624092830180_38tmp surefire_4-20260624092830180_39tmp"/>
+    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/target/surefire/surefirebooter-20260624101550561_40.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/target/surefire 2026-06-24T10-15-42_070-jvmRun1 surefire-20260624101550561_38tmp surefire_4-20260624101550561_39tmp"/>
     <property name="http.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="!*RepositoryImpl*Test"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/target/surefire/surefirebooter-20260624092830180_40.jar"/>
+    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/target/surefire/surefirebooter-20260624101550561_40.jar"/>
     <property name="user.script" value="Hans"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
@@ -61,11 +61,11 @@
     <property name="java.class.version" value="61.0"/>
   </properties>
   <testcase name="testCalculateMarginRate_Short" classname="com.forex.margin.domain.model.MarginAccountTest" time="0.01"/>
-  <testcase name="testCalculateMarginRate_Medium" classname="com.forex.margin.domain.model.MarginAccountTest" time="0.001"/>
+  <testcase name="testCalculateMarginRate_Medium" classname="com.forex.margin.domain.model.MarginAccountTest" time="0.0"/>
   <testcase name="testRelease_Partial" classname="com.forex.margin.domain.model.MarginAccountTest" time="0.004"/>
   <testcase name="testRelease_All_LeavesShortfall" classname="com.forex.margin.domain.model.MarginAccountTest" time="0.0"/>
   <testcase name="testDeposit" classname="com.forex.margin.domain.model.MarginAccountTest" time="0.0"/>
   <testcase name="testCalculateMarginRate_Long" classname="com.forex.margin.domain.model.MarginAccountTest" time="0.001"/>
   <testcase name="testCreate" classname="com.forex.margin.domain.model.MarginAccountTest" time="0.0"/>
-  <testcase name="testRelease_ExcessDeposit" classname="com.forex.margin.domain.model.MarginAccountTest" time="0.001"/>
+  <testcase name="testRelease_ExcessDeposit" classname="com.forex.margin.domain.model.MarginAccountTest" time="0.0"/>
 </testsuite>

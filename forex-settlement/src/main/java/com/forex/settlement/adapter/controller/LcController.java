@@ -4,6 +4,7 @@ import com.forex.common.base.annotation.Idempotent;
 import com.forex.common.base.annotation.RedisLock;
 import com.forex.common.base.dto.PageResp;
 import com.forex.common.base.result.R;
+import com.forex.common.security.annotation.RequirePermission;
 import com.forex.settlement.adapter.dto.CreateLcReq;
 import com.forex.settlement.adapter.dto.LcResp;
 import com.forex.settlement.application.command.AmendLcCmd;
@@ -37,6 +38,7 @@ public class LcController {
 
     @Operation(summary = "创建信用证")
     @PostMapping("/create")
+    @RequirePermission("settlement:lc:create")
     @Idempotent(key = "#req.customerId + '_lc_' + T(java.lang.System).currentTimeMillis()")
     public R<LcResp> createLc(@Valid @RequestBody CreateLcReq req) {
         CreateLcCmd cmd = toCmd(req);
@@ -64,6 +66,7 @@ public class LcController {
 
     @Operation(summary = "开立信用证")
     @PostMapping("/issue/{lcNo}")
+    @RequirePermission("settlement:lc:issue")
     @RedisLock(key = "#lcNo")
     public R<LcResp> issue(@PathVariable String lcNo) {
         settlementAppService.issueLc(lcNo);
@@ -73,6 +76,7 @@ public class LcController {
 
     @Operation(summary = "修改信用证")
     @PostMapping("/amend")
+    @RequirePermission("settlement:lc:amend")
     @RedisLock(key = "#cmd.lcNo")
     public R<LcResp> amend(@Valid @RequestBody AmendLcCmd cmd) {
         settlementAppService.amendLc(cmd.getLcNo(), cmd);
@@ -82,6 +86,7 @@ public class LcController {
 
     @Operation(summary = "交单")
     @PostMapping("/present/{lcNo}")
+    @RequirePermission("settlement:lc:present")
     @RedisLock(key = "#lcNo")
     public R<LcResp> presentDocs(@PathVariable String lcNo) {
         settlementAppService.presentDocuments(lcNo);
@@ -91,6 +96,7 @@ public class LcController {
 
     @Operation(summary = "审单")
     @PostMapping("/check-docs")
+    @RequirePermission("settlement:lc:check")
     @RedisLock(key = "#lcNo")
     public R<LcResp> checkDocs(@RequestParam String lcNo, @RequestParam boolean discrepant) {
         settlementAppService.checkDocuments(lcNo, discrepant);
@@ -100,6 +106,7 @@ public class LcController {
 
     @Operation(summary = "承兑")
     @PostMapping("/accept/{lcNo}")
+    @RequirePermission("settlement:lc:accept")
     @RedisLock(key = "#lcNo")
     public R<LcResp> accept(@PathVariable String lcNo) {
         settlementAppService.acceptLc(lcNo);
@@ -109,6 +116,7 @@ public class LcController {
 
     @Operation(summary = "付款")
     @PostMapping("/pay/{lcNo}")
+    @RequirePermission("settlement:lc:pay")
     @RedisLock(key = "#lcNo")
     public R<LcResp> pay(@PathVariable String lcNo) {
         settlementAppService.payLc(lcNo);

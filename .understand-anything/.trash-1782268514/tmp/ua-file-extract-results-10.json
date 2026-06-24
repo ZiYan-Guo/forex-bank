@@ -1,0 +1,3747 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 12,
+  "filesSkipped": [
+    "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/VoucherTemplateService.java",
+    "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/VoucherMappingDomainService.java",
+    "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/listener/EntryPostedEventListener.java",
+    "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/PoolMonitoringService.java",
+    "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/CashPoolDomainService.java",
+    "forex-clearing/src/main/java/com/forex/clearing/domain/service/AutomatedConfirmationService.java",
+    "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingDomainService.java",
+    "forex-margin/src/main/java/com/forex/margin/domain/service/WaterLevelMonitorService.java",
+    "forex-margin/src/main/java/com/forex/margin/domain/service/MarginWaterLevelService.java",
+    "forex-payment/src/main/java/com/forex/payment/infrastructure/listener/PaymentEventListener.java",
+    "forex-risk/src/main/java/com/forex/risk/domain/service/PricingRiskService.java",
+    "forex-risk/src/main/java/com/forex/risk/domain/service/CreditRiskService.java",
+    "forex-risk/src/main/java/com/forex/risk/domain/service/SamplingRuleEngine.java"
+  ],
+  "results": [
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 70,
+      "nonEmptyLines": 56,
+      "functions": [
+        {
+          "name": "createEntry",
+          "startLine": 23,
+          "endLine": 28,
+          "params": [
+            "entry"
+          ]
+        },
+        {
+          "name": "postEntry",
+          "startLine": 30,
+          "endLine": 39,
+          "params": [
+            "entry"
+          ]
+        },
+        {
+          "name": "reverseEntry",
+          "startLine": 41,
+          "endLine": 56,
+          "params": [
+            "original",
+            "reversal"
+          ]
+        },
+        {
+          "name": "generateVoucherNo",
+          "startLine": 58,
+          "endLine": 60,
+          "params": [
+            "prefix"
+          ]
+        },
+        {
+          "name": "postEntriesForPeriod",
+          "startLine": 62,
+          "endLine": 69,
+          "params": [
+            "fiscalPeriod"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookkeepingDomainService",
+          "startLine": 15,
+          "endLine": 70,
+          "methods": [
+            "createEntry",
+            "postEntry",
+            "reverseEntry",
+            "generateVoucherNo",
+            "postEntriesForPeriod"
+          ],
+          "properties": [
+            "journalEntryRepository",
+            "eventPublisher"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createEntry",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "postEntry",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "reverseEntry",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "generateVoucherNo",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "postEntriesForPeriod",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "BookkeepingDomainService",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createEntry",
+          "callee": "journalEntryRepository.save",
+          "lineNumber": 24
+        },
+        {
+          "caller": "createEntry",
+          "callee": "log.info",
+          "lineNumber": 25
+        },
+        {
+          "caller": "createEntry",
+          "callee": "saved.getVoucherNo",
+          "lineNumber": 26
+        },
+        {
+          "caller": "createEntry",
+          "callee": "saved.getAmount",
+          "lineNumber": 26
+        },
+        {
+          "caller": "createEntry",
+          "callee": "saved.getCurrency",
+          "lineNumber": 26
+        },
+        {
+          "caller": "createEntry",
+          "callee": "saved.getEntryDirection",
+          "lineNumber": 26
+        },
+        {
+          "caller": "postEntry",
+          "callee": "entry.post",
+          "lineNumber": 31
+        },
+        {
+          "caller": "postEntry",
+          "callee": "journalEntryRepository.save",
+          "lineNumber": 32
+        },
+        {
+          "caller": "postEntry",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 34
+        },
+        {
+          "caller": "postEntry",
+          "callee": "new EntryPostedEvent",
+          "lineNumber": 34
+        },
+        {
+          "caller": "postEntry",
+          "callee": "entry.getId",
+          "lineNumber": 35
+        },
+        {
+          "caller": "postEntry",
+          "callee": "entry.getVoucherNo",
+          "lineNumber": 35
+        },
+        {
+          "caller": "postEntry",
+          "callee": "entry.getAmount",
+          "lineNumber": 35
+        },
+        {
+          "caller": "postEntry",
+          "callee": "log.info",
+          "lineNumber": 37
+        },
+        {
+          "caller": "postEntry",
+          "callee": "entry.getVoucherNo",
+          "lineNumber": 38
+        },
+        {
+          "caller": "postEntry",
+          "callee": "entry.getAmount",
+          "lineNumber": 38
+        },
+        {
+          "caller": "postEntry",
+          "callee": "entry.getCurrency",
+          "lineNumber": 38
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "JournalEntry.STATUS_POSTED.equals",
+          "lineNumber": 42
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "original.getEntryStatus",
+          "lineNumber": 42
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "new BusinessException",
+          "lineNumber": 43
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "generateVoucherNo",
+          "lineNumber": 46
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "reversal.reverse",
+          "lineNumber": 47
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "journalEntryRepository.save",
+          "lineNumber": 49
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "original.reverse",
+          "lineNumber": 50
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "journalEntryRepository.save",
+          "lineNumber": 51
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "log.info",
+          "lineNumber": 53
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "original.getVoucherNo",
+          "lineNumber": 54
+        },
+        {
+          "caller": "generateVoucherNo",
+          "callee": "VoucherNo.generate(prefix).getValue",
+          "lineNumber": 59
+        },
+        {
+          "caller": "generateVoucherNo",
+          "callee": "VoucherNo.generate",
+          "lineNumber": 59
+        },
+        {
+          "caller": "postEntriesForPeriod",
+          "callee": "journalEntryRepository.findByStatusAndPeriod",
+          "lineNumber": 63
+        },
+        {
+          "caller": "postEntriesForPeriod",
+          "callee": "postEntry",
+          "lineNumber": 66
+        },
+        {
+          "caller": "postEntriesForPeriod",
+          "callee": "log.info",
+          "lineNumber": 68
+        },
+        {
+          "caller": "postEntriesForPeriod",
+          "callee": "draftEntries.size",
+          "lineNumber": 68
+        }
+      ],
+      "metrics": {
+        "importCount": 11,
+        "exportCount": 6,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 72,
+      "nonEmptyLines": 62,
+      "functions": [
+        {
+          "name": "executeMonthEndClosing",
+          "startLine": 39,
+          "endLine": 71,
+          "params": [
+            "fiscalPeriod",
+            "balances"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MonthEndClosingService",
+          "startLine": 20,
+          "endLine": 72,
+          "methods": [
+            "executeMonthEndClosing"
+          ],
+          "properties": [
+            "journalEntryRepository",
+            "monthEndClosingRepository",
+            "bookkeepingDomainService",
+            "revaluationEntryService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "executeMonthEndClosing",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "MonthEndClosingService",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "MonthEndClosing.create",
+          "lineNumber": 41
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "LocalDate.now",
+          "lineNumber": 41
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "closing.start",
+          "lineNumber": 42
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "monthEndClosingRepository.save",
+          "lineNumber": 43
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "bookkeepingDomainService.postEntriesForPeriod",
+          "lineNumber": 45
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "closing.addAuditEntry",
+          "lineNumber": 46
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "balances.isEmpty",
+          "lineNumber": 48
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "revaluationEntryService.batchRevaluation",
+          "lineNumber": 49
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "bookkeepingDomainService.createEntry",
+          "lineNumber": 51
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "bookkeepingDomainService.postEntry",
+          "lineNumber": 52
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "closing.addAuditEntry",
+          "lineNumber": 54
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "revalEntries.size",
+          "lineNumber": 54
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "closing.addAuditEntry",
+          "lineNumber": 56
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "closing.setTotalDebits",
+          "lineNumber": 59
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "journalEntryRepository.sumByDirection",
+          "lineNumber": 59
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "closing.setTotalCredits",
+          "lineNumber": 60
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "journalEntryRepository.sumByDirection",
+          "lineNumber": 60
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "closing.addAuditEntry",
+          "lineNumber": 61
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "closing.getTotalDebits",
+          "lineNumber": 61
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "closing.getTotalCredits",
+          "lineNumber": 62
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "closing.complete",
+          "lineNumber": 64
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "closing.lock",
+          "lineNumber": 65
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "monthEndClosingRepository.save",
+          "lineNumber": 66
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "log.info",
+          "lineNumber": 68
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "closing.getTotalDebits",
+          "lineNumber": 69
+        },
+        {
+          "caller": "executeMonthEndClosing",
+          "callee": "closing.getTotalCredits",
+          "lineNumber": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 10,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 102,
+      "nonEmptyLines": 93,
+      "functions": [
+        {
+          "name": "generateRevaluationEntries",
+          "startLine": 42,
+          "endLine": 77,
+          "params": [
+            "currency",
+            "oldRate",
+            "newRate",
+            "balance"
+          ]
+        },
+        {
+          "name": "batchRevaluation",
+          "startLine": 83,
+          "endLine": 89,
+          "params": [
+            "balances"
+          ]
+        },
+        {
+          "name": "generateSuffix",
+          "startLine": 91,
+          "endLine": 93,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RevaluationEntryService",
+          "startLine": 22,
+          "endLine": 102,
+          "methods": [
+            "generateRevaluationEntries",
+            "batchRevaluation",
+            "generateSuffix"
+          ],
+          "properties": [
+            "journalEntryRepository",
+            "ACCT_FX_ASSET",
+            "ACCT_FX_LIABILITY",
+            "ACCT_EXCHANGE_GAIN_LOSS"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "generateRevaluationEntries",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "batchRevaluation",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "RevaluationEntryService",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "balance.multiply",
+          "lineNumber": 44
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "balance.multiply",
+          "lineNumber": 45
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "newCny.subtract",
+          "lineNumber": 46
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "LocalDate.now().format",
+          "lineNumber": 47
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "LocalDate.now",
+          "lineNumber": 47
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "DateTimeFormatter.ofPattern",
+          "lineNumber": 47
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "new ArrayList<>",
+          "lineNumber": 50
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "diff.compareTo",
+          "lineNumber": 51
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "generateSuffix",
+          "lineNumber": 52
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "JournalEntry.create",
+          "lineNumber": 53
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "LocalDate.now",
+          "lineNumber": 53
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "JournalEntry.create",
+          "lineNumber": 57
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "LocalDate.now",
+          "lineNumber": 57
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "entries.add",
+          "lineNumber": 61
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "entries.add",
+          "lineNumber": 62
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "diff.compareTo",
+          "lineNumber": 63
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "generateSuffix",
+          "lineNumber": 64
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "JournalEntry.create",
+          "lineNumber": 65
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "LocalDate.now",
+          "lineNumber": 65
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "diff.abs",
+          "lineNumber": 66
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "JournalEntry.create",
+          "lineNumber": 69
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "LocalDate.now",
+          "lineNumber": 69
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "diff.abs",
+          "lineNumber": 70
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "entries.add",
+          "lineNumber": 73
+        },
+        {
+          "caller": "generateRevaluationEntries",
+          "callee": "entries.add",
+          "lineNumber": 74
+        },
+        {
+          "caller": "batchRevaluation",
+          "callee": "new ArrayList<>",
+          "lineNumber": 84
+        },
+        {
+          "caller": "batchRevaluation",
+          "callee": "allEntries.addAll",
+          "lineNumber": 86
+        },
+        {
+          "caller": "batchRevaluation",
+          "callee": "generateRevaluationEntries",
+          "lineNumber": 86
+        },
+        {
+          "caller": "generateSuffix",
+          "callee": "UUID.randomUUID().toString().replace(\"-\", \"\").substring(0, 8).toUpperCase",
+          "lineNumber": 92
+        },
+        {
+          "caller": "generateSuffix",
+          "callee": "UUID.randomUUID().toString().replace(\"-\", \"\").substring",
+          "lineNumber": 92
+        },
+        {
+          "caller": "generateSuffix",
+          "callee": "UUID.randomUUID().toString().replace",
+          "lineNumber": 92
+        },
+        {
+          "caller": "generateSuffix",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 92
+        },
+        {
+          "caller": "generateSuffix",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 92
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 79,
+      "nonEmptyLines": 65,
+      "functions": [
+        {
+          "name": "calculateNetPosition",
+          "startLine": 29,
+          "endLine": 49,
+          "params": [
+            "members",
+            "date"
+          ]
+        },
+        {
+          "name": "generateNettingInstruction",
+          "startLine": 57,
+          "endLine": 78,
+          "params": [
+            "netPositions",
+            "poolId",
+            "date"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "NettingSettlementService",
+          "startLine": 19,
+          "endLine": 79,
+          "methods": [
+            "calculateNetPosition",
+            "generateNettingInstruction"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "calculateNetPosition",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "generateNettingInstruction",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "NettingSettlementService",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "calculateNetPosition",
+          "callee": "log.info",
+          "lineNumber": 30
+        },
+        {
+          "caller": "calculateNetPosition",
+          "callee": "members.size",
+          "lineNumber": 30
+        },
+        {
+          "caller": "calculateNetPosition",
+          "callee": "new HashMap<>",
+          "lineNumber": 31
+        },
+        {
+          "caller": "calculateNetPosition",
+          "callee": "members.isEmpty",
+          "lineNumber": 33
+        },
+        {
+          "caller": "calculateNetPosition",
+          "callee": "log.warn",
+          "lineNumber": 34
+        },
+        {
+          "caller": "calculateNetPosition",
+          "callee": "member.getContributionLimit",
+          "lineNumber": 39
+        },
+        {
+          "caller": "calculateNetPosition",
+          "callee": "netPositions.put",
+          "lineNumber": 40
+        },
+        {
+          "caller": "calculateNetPosition",
+          "callee": "member.getMemberAccountId",
+          "lineNumber": 40
+        },
+        {
+          "caller": "calculateNetPosition",
+          "callee": "netPositions.values().stream().reduce",
+          "lineNumber": 43
+        },
+        {
+          "caller": "calculateNetPosition",
+          "callee": "netPositions.values().stream",
+          "lineNumber": 43
+        },
+        {
+          "caller": "calculateNetPosition",
+          "callee": "netPositions.values",
+          "lineNumber": 43
+        },
+        {
+          "caller": "calculateNetPosition",
+          "callee": "log.info",
+          "lineNumber": 45
+        },
+        {
+          "caller": "calculateNetPosition",
+          "callee": "netPositions.size",
+          "lineNumber": 46
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "log.info",
+          "lineNumber": 58
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "netPositions.size",
+          "lineNumber": 59
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "new StringBuilder",
+          "lineNumber": 61
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "instruction.append",
+          "lineNumber": 62
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "instruction.append(\"资金池编号: \").append(poolId).append",
+          "lineNumber": 63
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "instruction.append(\"资金池编号: \").append",
+          "lineNumber": 63
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "instruction.append",
+          "lineNumber": 63
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "instruction.append(\"结算日期: \").append(date).append",
+          "lineNumber": 64
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "instruction.append(\"结算日期: \").append",
+          "lineNumber": 64
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "instruction.append",
+          "lineNumber": 64
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "instruction.append",
+          "lineNumber": 65
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "netPositions.entrySet",
+          "lineNumber": 67
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "entry.getKey",
+          "lineNumber": 68
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "entry.getValue",
+          "lineNumber": 69
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "netPosition.compareTo",
+          "lineNumber": 70
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "instruction.append",
+          "lineNumber": 71
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "String.format",
+          "lineNumber": 71
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "netPosition.abs",
+          "lineNumber": 72
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "instruction.append",
+          "lineNumber": 75
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "log.info",
+          "lineNumber": 76
+        },
+        {
+          "caller": "generateNettingInstruction",
+          "callee": "instruction.toString",
+          "lineNumber": 77
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 91,
+      "nonEmptyLines": 85,
+      "functions": [
+        {
+          "name": "performProspectiveTest",
+          "startLine": 31,
+          "endLine": 39,
+          "params": [
+            "relation"
+          ]
+        },
+        {
+          "name": "performRetrospectiveTest",
+          "startLine": 48,
+          "endLine": 61,
+          "params": [
+            "relation"
+          ]
+        },
+        {
+          "name": "generateHedgeEntries",
+          "startLine": 71,
+          "endLine": 90,
+          "params": [
+            "relation",
+            "fairValueChange"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "HedgeAccountingService",
+          "startLine": 20,
+          "endLine": 91,
+          "methods": [
+            "performProspectiveTest",
+            "performRetrospectiveTest",
+            "generateHedgeEntries"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "performProspectiveTest",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "performRetrospectiveTest",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "generateHedgeEntries",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "HedgeAccountingService",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "performProspectiveTest",
+          "callee": "log.info",
+          "lineNumber": 32
+        },
+        {
+          "caller": "performProspectiveTest",
+          "callee": "relation.getRelationId",
+          "lineNumber": 33
+        },
+        {
+          "caller": "performProspectiveTest",
+          "callee": "relation.getHedgedItem",
+          "lineNumber": 33
+        },
+        {
+          "caller": "performProspectiveTest",
+          "callee": "new BigDecimal(\"0.95\").multiply",
+          "lineNumber": 34
+        },
+        {
+          "caller": "performProspectiveTest",
+          "callee": "new BigDecimal",
+          "lineNumber": 34
+        },
+        {
+          "caller": "performProspectiveTest",
+          "callee": "new BigDecimal",
+          "lineNumber": 35
+        },
+        {
+          "caller": "performProspectiveTest",
+          "callee": "String.valueOf",
+          "lineNumber": 35
+        },
+        {
+          "caller": "performProspectiveTest",
+          "callee": "Math.random",
+          "lineNumber": 35
+        },
+        {
+          "caller": "performProspectiveTest",
+          "callee": "ratio.setScale",
+          "lineNumber": 36
+        },
+        {
+          "caller": "performProspectiveTest",
+          "callee": "log.info",
+          "lineNumber": 37
+        },
+        {
+          "caller": "performProspectiveTest",
+          "callee": "relation.getRelationId",
+          "lineNumber": 37
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "log.info",
+          "lineNumber": 49
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "relation.getRelationId",
+          "lineNumber": 49
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "new BigDecimal(\"0.85\").add",
+          "lineNumber": 50
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "new BigDecimal",
+          "lineNumber": 50
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "new BigDecimal",
+          "lineNumber": 51
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "String.valueOf",
+          "lineNumber": 51
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "Math.random",
+          "lineNumber": 51
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "ratio.setScale",
+          "lineNumber": 52
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "result.compareTo",
+          "lineNumber": 53
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "new BigDecimal",
+          "lineNumber": 53
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "result.compareTo",
+          "lineNumber": 54
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "new BigDecimal",
+          "lineNumber": 54
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "log.info",
+          "lineNumber": 56
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "relation.getRelationId",
+          "lineNumber": 57
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "new HedgeEffectivenessTest",
+          "lineNumber": 58
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "relation.getRelationId",
+          "lineNumber": 59
+        },
+        {
+          "caller": "performRetrospectiveTest",
+          "callee": "LocalDate.now",
+          "lineNumber": 59
+        },
+        {
+          "caller": "generateHedgeEntries",
+          "callee": "log.info",
+          "lineNumber": 73
+        },
+        {
+          "caller": "generateHedgeEntries",
+          "callee": "relation.getRelationId",
+          "lineNumber": 74
+        },
+        {
+          "caller": "generateHedgeEntries",
+          "callee": "relation.getHedgeType",
+          "lineNumber": 74
+        },
+        {
+          "caller": "generateHedgeEntries",
+          "callee": "new ArrayList<>",
+          "lineNumber": 75
+        },
+        {
+          "caller": "generateHedgeEntries",
+          "callee": "entries.add",
+          "lineNumber": 76
+        },
+        {
+          "caller": "generateHedgeEntries",
+          "callee": "Map.of",
+          "lineNumber": 76
+        },
+        {
+          "caller": "generateHedgeEntries",
+          "callee": "relation.getHedgeType",
+          "lineNumber": 77
+        },
+        {
+          "caller": "generateHedgeEntries",
+          "callee": "entries.add",
+          "lineNumber": 82
+        },
+        {
+          "caller": "generateHedgeEntries",
+          "callee": "Map.of",
+          "lineNumber": 82
+        },
+        {
+          "caller": "generateHedgeEntries",
+          "callee": "relation.getHedgeType",
+          "lineNumber": 83
+        },
+        {
+          "caller": "generateHedgeEntries",
+          "callee": "log.info",
+          "lineNumber": 88
+        },
+        {
+          "caller": "generateHedgeEntries",
+          "callee": "entries.size",
+          "lineNumber": 88
+        }
+      ],
+      "metrics": {
+        "importCount": 10,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 96,
+      "nonEmptyLines": 82,
+      "functions": [
+        {
+          "name": "createMargin",
+          "startLine": 31,
+          "endLine": 40,
+          "params": [
+            "customerId",
+            "tradeId",
+            "marginType",
+            "marginCurrency",
+            "requiredAmount",
+            "marginRate",
+            "collateralType"
+          ]
+        },
+        {
+          "name": "createDynamicMargin",
+          "startLine": 42,
+          "endLine": 52,
+          "params": [
+            "customerId",
+            "tradeId",
+            "notional",
+            "tenorMonths",
+            "volatilityPct",
+            "marginCurrency",
+            "collateralType"
+          ]
+        },
+        {
+          "name": "depositWithWaterLevelCheck",
+          "startLine": 54,
+          "endLine": 67,
+          "params": [
+            "account",
+            "amount"
+          ]
+        },
+        {
+          "name": "calculateInitialMargin",
+          "startLine": 69,
+          "endLine": 74,
+          "params": [
+            "notional",
+            "rate"
+          ]
+        },
+        {
+          "name": "callMargin",
+          "startLine": 76,
+          "endLine": 82,
+          "params": [
+            "account",
+            "additionalAmount"
+          ]
+        },
+        {
+          "name": "releaseMargin",
+          "startLine": 84,
+          "endLine": 89,
+          "params": [
+            "account",
+            "amount",
+            "reason"
+          ]
+        },
+        {
+          "name": "generateMarginNo",
+          "startLine": 91,
+          "endLine": 95,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MarginDomainService",
+          "startLine": 19,
+          "endLine": 96,
+          "methods": [
+            "createMargin",
+            "createDynamicMargin",
+            "depositWithWaterLevelCheck",
+            "calculateInitialMargin",
+            "callMargin",
+            "releaseMargin",
+            "generateMarginNo"
+          ],
+          "properties": [
+            "DATE_FORMAT",
+            "MARGIN_NO_PREFIX",
+            "marginAccountRepository",
+            "marginCallRepository",
+            "eventPublisher"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createMargin",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "createDynamicMargin",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "depositWithWaterLevelCheck",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "calculateInitialMargin",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "callMargin",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "releaseMargin",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "MarginDomainService",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createMargin",
+          "callee": "MarginAccount.create",
+          "lineNumber": 34
+        },
+        {
+          "caller": "createMargin",
+          "callee": "generateMarginNo",
+          "lineNumber": 36
+        },
+        {
+          "caller": "createMargin",
+          "callee": "account.assignMarginNo",
+          "lineNumber": 37
+        },
+        {
+          "caller": "createMargin",
+          "callee": "log.info",
+          "lineNumber": 38
+        },
+        {
+          "caller": "createDynamicMargin",
+          "callee": "MarginAccount.calculateRequiredAmount",
+          "lineNumber": 46
+        },
+        {
+          "caller": "createDynamicMargin",
+          "callee": "MarginAccount.calculateMarginRate",
+          "lineNumber": 47
+        },
+        {
+          "caller": "createDynamicMargin",
+          "callee": "MarginAccount.create",
+          "lineNumber": 48
+        },
+        {
+          "caller": "createDynamicMargin",
+          "callee": "account.assignMarginNo",
+          "lineNumber": 50
+        },
+        {
+          "caller": "createDynamicMargin",
+          "callee": "generateMarginNo",
+          "lineNumber": 50
+        },
+        {
+          "caller": "depositWithWaterLevelCheck",
+          "callee": "account.deposit",
+          "lineNumber": 55
+        },
+        {
+          "caller": "depositWithWaterLevelCheck",
+          "callee": "account.assignMarginNo",
+          "lineNumber": 56
+        },
+        {
+          "caller": "depositWithWaterLevelCheck",
+          "callee": "account.getMarginNo",
+          "lineNumber": 56
+        },
+        {
+          "caller": "depositWithWaterLevelCheck",
+          "callee": "account.getMarginNo",
+          "lineNumber": 56
+        },
+        {
+          "caller": "depositWithWaterLevelCheck",
+          "callee": "generateMarginNo",
+          "lineNumber": 56
+        },
+        {
+          "caller": "depositWithWaterLevelCheck",
+          "callee": "account.checkWaterLevel",
+          "lineNumber": 58
+        },
+        {
+          "caller": "depositWithWaterLevelCheck",
+          "callee": "account.setWaterLevel",
+          "lineNumber": 59
+        },
+        {
+          "caller": "depositWithWaterLevelCheck",
+          "callee": "level.getLevel",
+          "lineNumber": 59
+        },
+        {
+          "caller": "depositWithWaterLevelCheck",
+          "callee": "level.needsAction",
+          "lineNumber": 61
+        },
+        {
+          "caller": "depositWithWaterLevelCheck",
+          "callee": "new MarginCall",
+          "lineNumber": 62
+        },
+        {
+          "caller": "depositWithWaterLevelCheck",
+          "callee": "account.getId",
+          "lineNumber": 62
+        },
+        {
+          "caller": "depositWithWaterLevelCheck",
+          "callee": "account.getMarginNo",
+          "lineNumber": 62
+        },
+        {
+          "caller": "depositWithWaterLevelCheck",
+          "callee": "account.getShortfallAmount",
+          "lineNumber": 63
+        },
+        {
+          "caller": "depositWithWaterLevelCheck",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 63
+        },
+        {
+          "caller": "depositWithWaterLevelCheck",
+          "callee": "marginCallRepository.save",
+          "lineNumber": 64
+        },
+        {
+          "caller": "calculateInitialMargin",
+          "callee": "notional.multiply",
+          "lineNumber": 73
+        },
+        {
+          "caller": "callMargin",
+          "callee": "account.call",
+          "lineNumber": 77
+        },
+        {
+          "caller": "callMargin",
+          "callee": "marginAccountRepository.save",
+          "lineNumber": 78
+        },
+        {
+          "caller": "callMargin",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 79
+        },
+        {
+          "caller": "callMargin",
+          "callee": "new MarginCalledEvent",
+          "lineNumber": 79
+        },
+        {
+          "caller": "callMargin",
+          "callee": "account.getId",
+          "lineNumber": 79
+        },
+        {
+          "caller": "callMargin",
+          "callee": "log.info",
+          "lineNumber": 80
+        },
+        {
+          "caller": "callMargin",
+          "callee": "account.getMarginNo",
+          "lineNumber": 80
+        },
+        {
+          "caller": "releaseMargin",
+          "callee": "account.release",
+          "lineNumber": 85
+        },
+        {
+          "caller": "releaseMargin",
+          "callee": "marginAccountRepository.save",
+          "lineNumber": 86
+        },
+        {
+          "caller": "releaseMargin",
+          "callee": "log.info",
+          "lineNumber": 87
+        },
+        {
+          "caller": "releaseMargin",
+          "callee": "account.getMarginNo",
+          "lineNumber": 87
+        },
+        {
+          "caller": "generateMarginNo",
+          "callee": "LocalDate.now().format",
+          "lineNumber": 92
+        },
+        {
+          "caller": "generateMarginNo",
+          "callee": "LocalDate.now",
+          "lineNumber": 92
+        },
+        {
+          "caller": "generateMarginNo",
+          "callee": "String.format",
+          "lineNumber": 93
+        },
+        {
+          "caller": "generateMarginNo",
+          "callee": "Math.random",
+          "lineNumber": 93
+        }
+      ],
+      "metrics": {
+        "importCount": 15,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 114,
+      "nonEmptyLines": 92,
+      "functions": [
+        {
+          "name": "createPayment",
+          "startLine": 24,
+          "endLine": 33,
+          "params": [
+            "payment"
+          ]
+        },
+        {
+          "name": "submitPayment",
+          "startLine": 35,
+          "endLine": 44,
+          "params": [
+            "payment"
+          ]
+        },
+        {
+          "name": "approvePayment",
+          "startLine": 46,
+          "endLine": 51,
+          "params": [
+            "payment"
+          ]
+        },
+        {
+          "name": "processAmlResult",
+          "startLine": 53,
+          "endLine": 63,
+          "params": [
+            "payment",
+            "passed",
+            "reason"
+          ]
+        },
+        {
+          "name": "sendPayment",
+          "startLine": 65,
+          "endLine": 79,
+          "params": [
+            "payment",
+            "swiftRef",
+            "cipsRef"
+          ]
+        },
+        {
+          "name": "cancelPayment",
+          "startLine": 81,
+          "endLine": 86,
+          "params": [
+            "payment",
+            "reason"
+          ]
+        },
+        {
+          "name": "calculateFees",
+          "startLine": 88,
+          "endLine": 94,
+          "params": [
+            "amount",
+            "chargeBearer"
+          ]
+        },
+        {
+          "name": "calculateSettlementAmount",
+          "startLine": 96,
+          "endLine": 104,
+          "params": [
+            "payAmount",
+            "exchangeRate"
+          ]
+        },
+        {
+          "name": "getFeeRate",
+          "startLine": 106,
+          "endLine": 113,
+          "params": [
+            "chargeBearer"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PaymentDomainService",
+          "startLine": 16,
+          "endLine": 114,
+          "methods": [
+            "createPayment",
+            "submitPayment",
+            "approvePayment",
+            "processAmlResult",
+            "sendPayment",
+            "cancelPayment",
+            "calculateFees",
+            "calculateSettlementAmount",
+            "getFeeRate"
+          ],
+          "properties": [
+            "paymentRepository",
+            "eventPublisher"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createPayment",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "submitPayment",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "approvePayment",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "processAmlResult",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "sendPayment",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "cancelPayment",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "calculateFees",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "calculateSettlementAmount",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "PaymentDomainService",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createPayment",
+          "callee": "PaymentNo.generate(payment.getPaymentDirection()).getValue",
+          "lineNumber": 25
+        },
+        {
+          "caller": "createPayment",
+          "callee": "PaymentNo.generate",
+          "lineNumber": 25
+        },
+        {
+          "caller": "createPayment",
+          "callee": "payment.getPaymentDirection",
+          "lineNumber": 25
+        },
+        {
+          "caller": "createPayment",
+          "callee": "payment.setPaymentNo",
+          "lineNumber": 26
+        },
+        {
+          "caller": "createPayment",
+          "callee": "paymentRepository.save",
+          "lineNumber": 28
+        },
+        {
+          "caller": "createPayment",
+          "callee": "log.info",
+          "lineNumber": 30
+        },
+        {
+          "caller": "createPayment",
+          "callee": "saved.getPaymentNo",
+          "lineNumber": 31
+        },
+        {
+          "caller": "createPayment",
+          "callee": "saved.getPayAmount",
+          "lineNumber": 31
+        },
+        {
+          "caller": "createPayment",
+          "callee": "saved.getPayCurrency",
+          "lineNumber": 31
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "payment.submit",
+          "lineNumber": 36
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "paymentRepository.save",
+          "lineNumber": 37
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 39
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "new PaymentSubmittedEvent",
+          "lineNumber": 39
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "payment.getId",
+          "lineNumber": 40
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "payment.getPaymentNo",
+          "lineNumber": 40
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "payment.getPayAmount",
+          "lineNumber": 41
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "payment.getPayCurrency",
+          "lineNumber": 41
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "log.info",
+          "lineNumber": 43
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "payment.getPaymentNo",
+          "lineNumber": 43
+        },
+        {
+          "caller": "approvePayment",
+          "callee": "payment.approve",
+          "lineNumber": 47
+        },
+        {
+          "caller": "approvePayment",
+          "callee": "paymentRepository.save",
+          "lineNumber": 48
+        },
+        {
+          "caller": "approvePayment",
+          "callee": "log.info",
+          "lineNumber": 50
+        },
+        {
+          "caller": "approvePayment",
+          "callee": "payment.getPaymentNo",
+          "lineNumber": 50
+        },
+        {
+          "caller": "processAmlResult",
+          "callee": "payment.markAmlCheckPassed",
+          "lineNumber": 55
+        },
+        {
+          "caller": "processAmlResult",
+          "callee": "payment.markAmlCheckRejected",
+          "lineNumber": 57
+        },
+        {
+          "caller": "processAmlResult",
+          "callee": "paymentRepository.save",
+          "lineNumber": 59
+        },
+        {
+          "caller": "processAmlResult",
+          "callee": "log.info",
+          "lineNumber": 61
+        },
+        {
+          "caller": "processAmlResult",
+          "callee": "payment.getPaymentNo",
+          "lineNumber": 62
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "payment.send",
+          "lineNumber": 66
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "swiftRef.isBlank",
+          "lineNumber": 67
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "payment.updateSwiftRef",
+          "lineNumber": 68
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "cipsRef.isBlank",
+          "lineNumber": 70
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "payment.setCipsRef",
+          "lineNumber": 71
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "paymentRepository.save",
+          "lineNumber": 73
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 75
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "new PaymentSentEvent",
+          "lineNumber": 75
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "payment.getId",
+          "lineNumber": 76
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "payment.getPaymentNo",
+          "lineNumber": 76
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "payment.getSwiftRef",
+          "lineNumber": 76
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "log.info",
+          "lineNumber": 78
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "payment.getPaymentNo",
+          "lineNumber": 78
+        },
+        {
+          "caller": "cancelPayment",
+          "callee": "payment.cancel",
+          "lineNumber": 82
+        },
+        {
+          "caller": "cancelPayment",
+          "callee": "paymentRepository.save",
+          "lineNumber": 83
+        },
+        {
+          "caller": "cancelPayment",
+          "callee": "log.info",
+          "lineNumber": 85
+        },
+        {
+          "caller": "cancelPayment",
+          "callee": "payment.getPaymentNo",
+          "lineNumber": 85
+        },
+        {
+          "caller": "calculateFees",
+          "callee": "amount.compareTo",
+          "lineNumber": 89
+        },
+        {
+          "caller": "calculateFees",
+          "callee": "new IllegalArgumentException",
+          "lineNumber": 90
+        },
+        {
+          "caller": "calculateFees",
+          "callee": "getFeeRate",
+          "lineNumber": 92
+        },
+        {
+          "caller": "calculateFees",
+          "callee": "amount.multiply(feeRate).setScale",
+          "lineNumber": 93
+        },
+        {
+          "caller": "calculateFees",
+          "callee": "amount.multiply",
+          "lineNumber": 93
+        },
+        {
+          "caller": "calculateSettlementAmount",
+          "callee": "payAmount.compareTo",
+          "lineNumber": 97
+        },
+        {
+          "caller": "calculateSettlementAmount",
+          "callee": "new IllegalArgumentException",
+          "lineNumber": 98
+        },
+        {
+          "caller": "calculateSettlementAmount",
+          "callee": "exchangeRate.compareTo",
+          "lineNumber": 100
+        },
+        {
+          "caller": "calculateSettlementAmount",
+          "callee": "new IllegalArgumentException",
+          "lineNumber": 101
+        },
+        {
+          "caller": "calculateSettlementAmount",
+          "callee": "payAmount.multiply(exchangeRate).setScale",
+          "lineNumber": 103
+        },
+        {
+          "caller": "calculateSettlementAmount",
+          "callee": "payAmount.multiply",
+          "lineNumber": 103
+        },
+        {
+          "caller": "getFeeRate",
+          "callee": "\"OUR\".equalsIgnoreCase",
+          "lineNumber": 107
+        },
+        {
+          "caller": "getFeeRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 108
+        },
+        {
+          "caller": "getFeeRate",
+          "callee": "\"SHA\".equalsIgnoreCase",
+          "lineNumber": 109
+        },
+        {
+          "caller": "getFeeRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 110
+        },
+        {
+          "caller": "getFeeRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 112
+        }
+      ],
+      "metrics": {
+        "importCount": 11,
+        "exportCount": 9,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 115,
+      "nonEmptyLines": 99,
+      "functions": [
+        {
+          "name": "createPosition",
+          "startLine": 30,
+          "endLine": 38,
+          "params": [
+            "currencyPair",
+            "positionType",
+            "positionCurrency",
+            "traderId",
+            "branchCode"
+          ]
+        },
+        {
+          "name": "aggregatePositions",
+          "startLine": 44,
+          "endLine": 67,
+          "params": [
+            "currencyPair",
+            "date"
+          ]
+        },
+        {
+          "name": "checkPositionLimit",
+          "startLine": 73,
+          "endLine": 91,
+          "params": [
+            "position"
+          ]
+        },
+        {
+          "name": "getHedgingAdvice",
+          "startLine": 93,
+          "endLine": 98,
+          "params": [
+            "pos"
+          ]
+        },
+        {
+          "name": "getLimitConfigForCurrency",
+          "startLine": 100,
+          "endLine": 104,
+          "params": [
+            "currency"
+          ]
+        },
+        {
+          "name": "generatePositionNo",
+          "startLine": 106,
+          "endLine": 109,
+          "params": [
+            "currencyPair"
+          ]
+        },
+        {
+          "name": "extractCurrency",
+          "startLine": 111,
+          "endLine": 114,
+          "params": [
+            "currencyPair"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PositionDomainService",
+          "startLine": 21,
+          "endLine": 115,
+          "methods": [
+            "createPosition",
+            "aggregatePositions",
+            "checkPositionLimit",
+            "getHedgingAdvice",
+            "getLimitConfigForCurrency",
+            "generatePositionNo",
+            "extractCurrency"
+          ],
+          "properties": [
+            "positionRepository",
+            "limitConfigRepository",
+            "eventPublisher"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createPosition",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "aggregatePositions",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "checkPositionLimit",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "getHedgingAdvice",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "PositionDomainService",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createPosition",
+          "callee": "getLimitConfigForCurrency",
+          "lineNumber": 32
+        },
+        {
+          "caller": "createPosition",
+          "callee": "config.getLimitAmount",
+          "lineNumber": 33
+        },
+        {
+          "caller": "createPosition",
+          "callee": "Position.create",
+          "lineNumber": 34
+        },
+        {
+          "caller": "createPosition",
+          "callee": "LocalDate.now",
+          "lineNumber": 35
+        },
+        {
+          "caller": "createPosition",
+          "callee": "position.assignPositionNo",
+          "lineNumber": 36
+        },
+        {
+          "caller": "createPosition",
+          "callee": "generatePositionNo",
+          "lineNumber": 36
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "positionRepository.findByCurrencyPairAndDate",
+          "lineNumber": 45
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "Position.create",
+          "lineNumber": 46
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "extractCurrency",
+          "lineNumber": 47
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "aggregated.assignPositionNo",
+          "lineNumber": 48
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "currencyPair.replace",
+          "lineNumber": 48
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "positions.stream()\n                .map(Position::getLongAmount).reduce",
+          "lineNumber": 50
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "positions.stream().map",
+          "lineNumber": 50
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "positions.stream",
+          "lineNumber": 50
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "positions.stream()\n                .map(Position::getShortAmount).reduce",
+          "lineNumber": 52
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "positions.stream().map",
+          "lineNumber": 52
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "positions.stream",
+          "lineNumber": 52
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "totalLong.compareTo",
+          "lineNumber": 55
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "aggregated.addLong",
+          "lineNumber": 55
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "totalShort.compareTo",
+          "lineNumber": 56
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "aggregated.addShort",
+          "lineNumber": 56
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "getLimitConfigForCurrency",
+          "lineNumber": 58
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "extractCurrency",
+          "lineNumber": 58
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "aggregated.assignPositionNo",
+          "lineNumber": 60
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "aggregated.getPositionNo",
+          "lineNumber": 60
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "aggregated.checkLimit",
+          "lineNumber": 61
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "config.getWarningPct",
+          "lineNumber": 61
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "log.info",
+          "lineNumber": 64
+        },
+        {
+          "caller": "aggregatePositions",
+          "callee": "aggregated.getNetPosition",
+          "lineNumber": 65
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "getLimitConfigForCurrency",
+          "lineNumber": 74
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "position.getPositionCurrency",
+          "lineNumber": 74
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "position.checkLimit",
+          "lineNumber": 76
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "config.getWarningPct",
+          "lineNumber": 76
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "position.checkLimit",
+          "lineNumber": 78
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "positionRepository.save",
+          "lineNumber": 80
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "Position.RISK_BREACH.equals",
+          "lineNumber": 82
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "position.getRiskLevel",
+          "lineNumber": 82
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 83
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "new PositionLimitBreachEvent",
+          "lineNumber": 83
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "position.getId",
+          "lineNumber": 84
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "position.getPositionLimit",
+          "lineNumber": 84
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "position.getLimitUsagePct",
+          "lineNumber": 84
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "log.warn",
+          "lineNumber": 85
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "position.getPositionNo",
+          "lineNumber": 86
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "position.getPositionCurrency",
+          "lineNumber": 86
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "position.getLimitUsagePct",
+          "lineNumber": 86
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "Position.RISK_WARNING.equals",
+          "lineNumber": 87
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "position.getRiskLevel",
+          "lineNumber": 87
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "log.warn",
+          "lineNumber": 88
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "position.getPositionNo",
+          "lineNumber": 89
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "position.getPositionCurrency",
+          "lineNumber": 89
+        },
+        {
+          "caller": "checkPositionLimit",
+          "callee": "position.getLimitUsagePct",
+          "lineNumber": 89
+        },
+        {
+          "caller": "getHedgingAdvice",
+          "callee": "pos.getNetPosition",
+          "lineNumber": 94
+        },
+        {
+          "caller": "getHedgingAdvice",
+          "callee": "pos.getNetPosition().compareTo",
+          "lineNumber": 94
+        },
+        {
+          "caller": "getHedgingAdvice",
+          "callee": "pos.getNetPosition",
+          "lineNumber": 94
+        },
+        {
+          "caller": "getHedgingAdvice",
+          "callee": "pos.getNetPosition().compareTo",
+          "lineNumber": 97
+        },
+        {
+          "caller": "getHedgingAdvice",
+          "callee": "pos.getNetPosition",
+          "lineNumber": 97
+        },
+        {
+          "caller": "getLimitConfigForCurrency",
+          "callee": "limitConfigRepository.findByCurrency",
+          "lineNumber": 102
+        },
+        {
+          "caller": "getLimitConfigForCurrency",
+          "callee": "configs.isEmpty",
+          "lineNumber": 103
+        },
+        {
+          "caller": "getLimitConfigForCurrency",
+          "callee": "configs.get",
+          "lineNumber": 103
+        },
+        {
+          "caller": "generatePositionNo",
+          "callee": "LocalDate.now().format",
+          "lineNumber": 107
+        },
+        {
+          "caller": "generatePositionNo",
+          "callee": "LocalDate.now",
+          "lineNumber": 107
+        },
+        {
+          "caller": "generatePositionNo",
+          "callee": "java.time.format.DateTimeFormatter.ofPattern",
+          "lineNumber": 107
+        },
+        {
+          "caller": "generatePositionNo",
+          "callee": "String.format",
+          "lineNumber": 108
+        },
+        {
+          "caller": "generatePositionNo",
+          "callee": "Math.random",
+          "lineNumber": 108
+        },
+        {
+          "caller": "extractCurrency",
+          "callee": "currencyPair.contains",
+          "lineNumber": 112
+        },
+        {
+          "caller": "extractCurrency",
+          "callee": "currencyPair.split",
+          "lineNumber": 113
+        }
+      ],
+      "metrics": {
+        "importCount": 12,
+        "exportCount": 5,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 40,
+      "nonEmptyLines": 34,
+      "functions": [
+        {
+          "name": "calculateCrossRate",
+          "startLine": 11,
+          "endLine": 19,
+          "params": [
+            "usdBaseRate",
+            "usdQuoteRate"
+          ]
+        },
+        {
+          "name": "applySpread",
+          "startLine": 21,
+          "endLine": 29,
+          "params": [
+            "baseRate",
+            "spreadAdjust"
+          ]
+        },
+        {
+          "name": "calculateAmount",
+          "startLine": 31,
+          "endLine": 39,
+          "params": [
+            "amount",
+            "rate"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RateCalculationDomainService",
+          "startLine": 8,
+          "endLine": 40,
+          "methods": [
+            "calculateCrossRate",
+            "applySpread",
+            "calculateAmount"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "calculateCrossRate",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "applySpread",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "calculateAmount",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "RateCalculationDomainService",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "calculateCrossRate",
+          "callee": "usdBaseRate.compareTo",
+          "lineNumber": 12
+        },
+        {
+          "caller": "calculateCrossRate",
+          "callee": "new IllegalArgumentException",
+          "lineNumber": 13
+        },
+        {
+          "caller": "calculateCrossRate",
+          "callee": "usdQuoteRate.compareTo",
+          "lineNumber": 15
+        },
+        {
+          "caller": "calculateCrossRate",
+          "callee": "new IllegalArgumentException",
+          "lineNumber": 16
+        },
+        {
+          "caller": "calculateCrossRate",
+          "callee": "usdQuoteRate.divide",
+          "lineNumber": 18
+        },
+        {
+          "caller": "applySpread",
+          "callee": "baseRate.compareTo",
+          "lineNumber": 22
+        },
+        {
+          "caller": "applySpread",
+          "callee": "new IllegalArgumentException",
+          "lineNumber": 23
+        },
+        {
+          "caller": "applySpread",
+          "callee": "new IllegalArgumentException",
+          "lineNumber": 26
+        },
+        {
+          "caller": "applySpread",
+          "callee": "baseRate.add",
+          "lineNumber": 28
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "amount.compareTo",
+          "lineNumber": 32
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "new IllegalArgumentException",
+          "lineNumber": 33
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "rate.compareTo",
+          "lineNumber": 35
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "new IllegalArgumentException",
+          "lineNumber": 36
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "amount.multiply(rate).setScale",
+          "lineNumber": 38
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "amount.multiply",
+          "lineNumber": 38
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 78,
+      "nonEmptyLines": 67,
+      "functions": [
+        {
+          "name": "createBopReport",
+          "startLine": 28,
+          "endLine": 32,
+          "params": [
+            "report"
+          ]
+        },
+        {
+          "name": "createSettlementReport",
+          "startLine": 34,
+          "endLine": 38,
+          "params": [
+            "report"
+          ]
+        },
+        {
+          "name": "createCapitalReport",
+          "startLine": 40,
+          "endLine": 44,
+          "params": [
+            "report"
+          ]
+        },
+        {
+          "name": "submitReportBatch",
+          "startLine": 46,
+          "endLine": 57,
+          "params": [
+            "reports"
+          ]
+        },
+        {
+          "name": "markAsSubmitted",
+          "startLine": 59,
+          "endLine": 65,
+          "params": [
+            "report"
+          ]
+        },
+        {
+          "name": "markAsAccepted",
+          "startLine": 67,
+          "endLine": 71,
+          "params": [
+            "report",
+            "ref"
+          ]
+        },
+        {
+          "name": "markAsRejected",
+          "startLine": 73,
+          "endLine": 77,
+          "params": [
+            "report",
+            "reason"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ReportingDomainService",
+          "startLine": 18,
+          "endLine": 78,
+          "methods": [
+            "createBopReport",
+            "createSettlementReport",
+            "createCapitalReport",
+            "submitReportBatch",
+            "markAsSubmitted",
+            "markAsAccepted",
+            "markAsRejected"
+          ],
+          "properties": [
+            "bopReportRepository",
+            "settlementReportRepository",
+            "capitalReportRepository",
+            "eventPublisher"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createBopReport",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "createSettlementReport",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "createCapitalReport",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "submitReportBatch",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "markAsSubmitted",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "markAsAccepted",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "markAsRejected",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "ReportingDomainService",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createBopReport",
+          "callee": "bopReportRepository.save",
+          "lineNumber": 29
+        },
+        {
+          "caller": "createBopReport",
+          "callee": "log.info",
+          "lineNumber": 30
+        },
+        {
+          "caller": "createBopReport",
+          "callee": "saved.getReportNo",
+          "lineNumber": 30
+        },
+        {
+          "caller": "createSettlementReport",
+          "callee": "settlementReportRepository.save",
+          "lineNumber": 35
+        },
+        {
+          "caller": "createSettlementReport",
+          "callee": "log.info",
+          "lineNumber": 36
+        },
+        {
+          "caller": "createSettlementReport",
+          "callee": "saved.getReportNo",
+          "lineNumber": 36
+        },
+        {
+          "caller": "createCapitalReport",
+          "callee": "capitalReportRepository.save",
+          "lineNumber": 41
+        },
+        {
+          "caller": "createCapitalReport",
+          "callee": "log.info",
+          "lineNumber": 42
+        },
+        {
+          "caller": "createCapitalReport",
+          "callee": "saved.getReportNo",
+          "lineNumber": 42
+        },
+        {
+          "caller": "submitReportBatch",
+          "callee": "reports.isEmpty",
+          "lineNumber": 47
+        },
+        {
+          "caller": "submitReportBatch",
+          "callee": "new BusinessException",
+          "lineNumber": 48
+        },
+        {
+          "caller": "submitReportBatch",
+          "callee": "report.submit",
+          "lineNumber": 51
+        },
+        {
+          "caller": "submitReportBatch",
+          "callee": "bopReportRepository.save",
+          "lineNumber": 52
+        },
+        {
+          "caller": "submitReportBatch",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 53
+        },
+        {
+          "caller": "submitReportBatch",
+          "callee": "new ReportSubmittedEvent",
+          "lineNumber": 53
+        },
+        {
+          "caller": "submitReportBatch",
+          "callee": "report.getId",
+          "lineNumber": 54
+        },
+        {
+          "caller": "submitReportBatch",
+          "callee": "report.getReportNo",
+          "lineNumber": 54
+        },
+        {
+          "caller": "submitReportBatch",
+          "callee": "report.getReportType",
+          "lineNumber": 54
+        },
+        {
+          "caller": "submitReportBatch",
+          "callee": "log.info",
+          "lineNumber": 56
+        },
+        {
+          "caller": "submitReportBatch",
+          "callee": "reports.size",
+          "lineNumber": 56
+        },
+        {
+          "caller": "markAsSubmitted",
+          "callee": "report.submit",
+          "lineNumber": 60
+        },
+        {
+          "caller": "markAsSubmitted",
+          "callee": "bopReportRepository.save",
+          "lineNumber": 61
+        },
+        {
+          "caller": "markAsSubmitted",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 62
+        },
+        {
+          "caller": "markAsSubmitted",
+          "callee": "new ReportSubmittedEvent",
+          "lineNumber": 62
+        },
+        {
+          "caller": "markAsSubmitted",
+          "callee": "report.getId",
+          "lineNumber": 63
+        },
+        {
+          "caller": "markAsSubmitted",
+          "callee": "report.getReportNo",
+          "lineNumber": 63
+        },
+        {
+          "caller": "markAsSubmitted",
+          "callee": "report.getReportType",
+          "lineNumber": 63
+        },
+        {
+          "caller": "markAsSubmitted",
+          "callee": "log.info",
+          "lineNumber": 64
+        },
+        {
+          "caller": "markAsSubmitted",
+          "callee": "report.getReportNo",
+          "lineNumber": 64
+        },
+        {
+          "caller": "markAsAccepted",
+          "callee": "report.accept",
+          "lineNumber": 68
+        },
+        {
+          "caller": "markAsAccepted",
+          "callee": "bopReportRepository.save",
+          "lineNumber": 69
+        },
+        {
+          "caller": "markAsAccepted",
+          "callee": "log.info",
+          "lineNumber": 70
+        },
+        {
+          "caller": "markAsAccepted",
+          "callee": "report.getReportNo",
+          "lineNumber": 70
+        },
+        {
+          "caller": "markAsRejected",
+          "callee": "report.reject",
+          "lineNumber": 74
+        },
+        {
+          "caller": "markAsRejected",
+          "callee": "bopReportRepository.save",
+          "lineNumber": 75
+        },
+        {
+          "caller": "markAsRejected",
+          "callee": "log.info",
+          "lineNumber": 76
+        },
+        {
+          "caller": "markAsRejected",
+          "callee": "report.getReportNo",
+          "lineNumber": 76
+        }
+      ],
+      "metrics": {
+        "importCount": 13,
+        "exportCount": 8,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 56,
+      "functions": [
+        {
+          "name": "createLc",
+          "startLine": 21,
+          "endLine": 29,
+          "params": [
+            "lc"
+          ]
+        },
+        {
+          "name": "issueLc",
+          "startLine": 31,
+          "endLine": 38,
+          "params": [
+            "lc"
+          ]
+        },
+        {
+          "name": "adviseLc",
+          "startLine": 40,
+          "endLine": 45,
+          "params": [
+            "lc"
+          ]
+        },
+        {
+          "name": "presentDocuments",
+          "startLine": 47,
+          "endLine": 52,
+          "params": [
+            "lc"
+          ]
+        },
+        {
+          "name": "checkDocuments",
+          "startLine": 54,
+          "endLine": 61,
+          "params": [
+            "lc",
+            "isDiscrepant"
+          ]
+        },
+        {
+          "name": "acceptLc",
+          "startLine": 63,
+          "endLine": 68,
+          "params": [
+            "lc"
+          ]
+        },
+        {
+          "name": "payLc",
+          "startLine": 70,
+          "endLine": 75,
+          "params": [
+            "lc"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "LcDomainService",
+          "startLine": 13,
+          "endLine": 76,
+          "methods": [
+            "createLc",
+            "issueLc",
+            "adviseLc",
+            "presentDocuments",
+            "checkDocuments",
+            "acceptLc",
+            "payLc"
+          ],
+          "properties": [
+            "lcRepository",
+            "eventPublisher"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createLc",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "issueLc",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "adviseLc",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "presentDocuments",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "checkDocuments",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "acceptLc",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "payLc",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "LcDomainService",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createLc",
+          "callee": "LcNo.generate(lc.getLcType()).getValue",
+          "lineNumber": 22
+        },
+        {
+          "caller": "createLc",
+          "callee": "LcNo.generate",
+          "lineNumber": 22
+        },
+        {
+          "caller": "createLc",
+          "callee": "lc.getLcType",
+          "lineNumber": 22
+        },
+        {
+          "caller": "createLc",
+          "callee": "lc.setLcNo",
+          "lineNumber": 23
+        },
+        {
+          "caller": "createLc",
+          "callee": "lcRepository.save",
+          "lineNumber": 25
+        },
+        {
+          "caller": "createLc",
+          "callee": "log.info",
+          "lineNumber": 27
+        },
+        {
+          "caller": "createLc",
+          "callee": "saved.getLcNo",
+          "lineNumber": 27
+        },
+        {
+          "caller": "createLc",
+          "callee": "saved.getLcAmount",
+          "lineNumber": 27
+        },
+        {
+          "caller": "createLc",
+          "callee": "saved.getLcCurrency",
+          "lineNumber": 27
+        },
+        {
+          "caller": "issueLc",
+          "callee": "lc.issue",
+          "lineNumber": 32
+        },
+        {
+          "caller": "issueLc",
+          "callee": "lcRepository.save",
+          "lineNumber": 33
+        },
+        {
+          "caller": "issueLc",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 35
+        },
+        {
+          "caller": "issueLc",
+          "callee": "new LcIssuedEvent",
+          "lineNumber": 35
+        },
+        {
+          "caller": "issueLc",
+          "callee": "lc.getId",
+          "lineNumber": 35
+        },
+        {
+          "caller": "issueLc",
+          "callee": "lc.getLcNo",
+          "lineNumber": 35
+        },
+        {
+          "caller": "issueLc",
+          "callee": "lc.getLcAmount",
+          "lineNumber": 35
+        },
+        {
+          "caller": "issueLc",
+          "callee": "log.info",
+          "lineNumber": 37
+        },
+        {
+          "caller": "issueLc",
+          "callee": "lc.getLcNo",
+          "lineNumber": 37
+        },
+        {
+          "caller": "adviseLc",
+          "callee": "lc.advise",
+          "lineNumber": 41
+        },
+        {
+          "caller": "adviseLc",
+          "callee": "lcRepository.save",
+          "lineNumber": 42
+        },
+        {
+          "caller": "adviseLc",
+          "callee": "log.info",
+          "lineNumber": 44
+        },
+        {
+          "caller": "adviseLc",
+          "callee": "lc.getLcNo",
+          "lineNumber": 44
+        },
+        {
+          "caller": "presentDocuments",
+          "callee": "lc.presentDocuments",
+          "lineNumber": 48
+        },
+        {
+          "caller": "presentDocuments",
+          "callee": "lcRepository.save",
+          "lineNumber": 49
+        },
+        {
+          "caller": "presentDocuments",
+          "callee": "log.info",
+          "lineNumber": 51
+        },
+        {
+          "caller": "presentDocuments",
+          "callee": "lc.getLcNo",
+          "lineNumber": 51
+        },
+        {
+          "caller": "checkDocuments",
+          "callee": "lc.checkDocuments",
+          "lineNumber": 55
+        },
+        {
+          "caller": "checkDocuments",
+          "callee": "lcRepository.save",
+          "lineNumber": 56
+        },
+        {
+          "caller": "checkDocuments",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 58
+        },
+        {
+          "caller": "checkDocuments",
+          "callee": "new LcDocCheckedEvent",
+          "lineNumber": 58
+        },
+        {
+          "caller": "checkDocuments",
+          "callee": "lc.getId",
+          "lineNumber": 58
+        },
+        {
+          "caller": "checkDocuments",
+          "callee": "lc.getLcNo",
+          "lineNumber": 58
+        },
+        {
+          "caller": "checkDocuments",
+          "callee": "log.info",
+          "lineNumber": 60
+        },
+        {
+          "caller": "checkDocuments",
+          "callee": "lc.getLcNo",
+          "lineNumber": 60
+        },
+        {
+          "caller": "acceptLc",
+          "callee": "lc.accept",
+          "lineNumber": 64
+        },
+        {
+          "caller": "acceptLc",
+          "callee": "lcRepository.save",
+          "lineNumber": 65
+        },
+        {
+          "caller": "acceptLc",
+          "callee": "log.info",
+          "lineNumber": 67
+        },
+        {
+          "caller": "acceptLc",
+          "callee": "lc.getLcNo",
+          "lineNumber": 67
+        },
+        {
+          "caller": "payLc",
+          "callee": "lc.pay",
+          "lineNumber": 71
+        },
+        {
+          "caller": "payLc",
+          "callee": "lcRepository.save",
+          "lineNumber": 72
+        },
+        {
+          "caller": "payLc",
+          "callee": "log.info",
+          "lineNumber": 74
+        },
+        {
+          "caller": "payLc",
+          "callee": "lc.getLcNo",
+          "lineNumber": 74
+        }
+      ],
+      "metrics": {
+        "importCount": 9,
+        "exportCount": 8,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 91,
+      "nonEmptyLines": 78,
+      "functions": [
+        {
+          "name": "createTrade",
+          "startLine": 25,
+          "endLine": 29,
+          "params": [
+            "trade"
+          ]
+        },
+        {
+          "name": "confirmTrade",
+          "startLine": 31,
+          "endLine": 35,
+          "params": [
+            "trade"
+          ]
+        },
+        {
+          "name": "executeTrade",
+          "startLine": 37,
+          "endLine": 44,
+          "params": [
+            "trade"
+          ]
+        },
+        {
+          "name": "settleTrade",
+          "startLine": 46,
+          "endLine": 52,
+          "params": [
+            "trade"
+          ]
+        },
+        {
+          "name": "rollOverTrade",
+          "startLine": 54,
+          "endLine": 58,
+          "params": [
+            "trade",
+            "newDate",
+            "newRate"
+          ]
+        },
+        {
+          "name": "closeOutTrade",
+          "startLine": 60,
+          "endLine": 64,
+          "params": [
+            "trade"
+          ]
+        },
+        {
+          "name": "cancelTrade",
+          "startLine": 66,
+          "endLine": 70,
+          "params": [
+            "trade",
+            "reason"
+          ]
+        },
+        {
+          "name": "calculateForwardRate",
+          "startLine": 72,
+          "endLine": 80,
+          "params": [
+            "spotRate",
+            "points"
+          ]
+        },
+        {
+          "name": "calculateSwapAmount",
+          "startLine": 82,
+          "endLine": 90,
+          "params": [
+            "trade"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TradeDomainService",
+          "startLine": 17,
+          "endLine": 91,
+          "methods": [
+            "createTrade",
+            "confirmTrade",
+            "executeTrade",
+            "settleTrade",
+            "rollOverTrade",
+            "closeOutTrade",
+            "cancelTrade",
+            "calculateForwardRate",
+            "calculateSwapAmount"
+          ],
+          "properties": [
+            "fxTradeRepository",
+            "eventPublisher"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createTrade",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "confirmTrade",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "executeTrade",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "settleTrade",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "rollOverTrade",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "closeOutTrade",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "cancelTrade",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "calculateForwardRate",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "calculateSwapAmount",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "TradeDomainService",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createTrade",
+          "callee": "fxTradeRepository.save",
+          "lineNumber": 26
+        },
+        {
+          "caller": "createTrade",
+          "callee": "log.info",
+          "lineNumber": 27
+        },
+        {
+          "caller": "createTrade",
+          "callee": "saved.getTradeNo",
+          "lineNumber": 27
+        },
+        {
+          "caller": "confirmTrade",
+          "callee": "trade.confirm",
+          "lineNumber": 32
+        },
+        {
+          "caller": "confirmTrade",
+          "callee": "fxTradeRepository.save",
+          "lineNumber": 33
+        },
+        {
+          "caller": "confirmTrade",
+          "callee": "log.info",
+          "lineNumber": 34
+        },
+        {
+          "caller": "confirmTrade",
+          "callee": "trade.getTradeNo",
+          "lineNumber": 34
+        },
+        {
+          "caller": "executeTrade",
+          "callee": "trade.execute",
+          "lineNumber": 38
+        },
+        {
+          "caller": "executeTrade",
+          "callee": "fxTradeRepository.save",
+          "lineNumber": 39
+        },
+        {
+          "caller": "executeTrade",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 40
+        },
+        {
+          "caller": "executeTrade",
+          "callee": "new TradeExecutedEvent",
+          "lineNumber": 40
+        },
+        {
+          "caller": "executeTrade",
+          "callee": "trade.getId",
+          "lineNumber": 41
+        },
+        {
+          "caller": "executeTrade",
+          "callee": "trade.getTradeNo",
+          "lineNumber": 41
+        },
+        {
+          "caller": "executeTrade",
+          "callee": "trade.getTradeType",
+          "lineNumber": 41
+        },
+        {
+          "caller": "executeTrade",
+          "callee": "trade.getBuyAmount",
+          "lineNumber": 42
+        },
+        {
+          "caller": "executeTrade",
+          "callee": "trade.getBuyCurrency",
+          "lineNumber": 42
+        },
+        {
+          "caller": "executeTrade",
+          "callee": "trade.getSellCurrency",
+          "lineNumber": 42
+        },
+        {
+          "caller": "executeTrade",
+          "callee": "log.info",
+          "lineNumber": 43
+        },
+        {
+          "caller": "executeTrade",
+          "callee": "trade.getTradeNo",
+          "lineNumber": 43
+        },
+        {
+          "caller": "settleTrade",
+          "callee": "trade.settle",
+          "lineNumber": 47
+        },
+        {
+          "caller": "settleTrade",
+          "callee": "fxTradeRepository.save",
+          "lineNumber": 48
+        },
+        {
+          "caller": "settleTrade",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 49
+        },
+        {
+          "caller": "settleTrade",
+          "callee": "new TradeSettledEvent",
+          "lineNumber": 49
+        },
+        {
+          "caller": "settleTrade",
+          "callee": "trade.getId",
+          "lineNumber": 50
+        },
+        {
+          "caller": "settleTrade",
+          "callee": "trade.getTradeNo",
+          "lineNumber": 50
+        },
+        {
+          "caller": "settleTrade",
+          "callee": "trade.getSettlementStatus",
+          "lineNumber": 50
+        },
+        {
+          "caller": "settleTrade",
+          "callee": "log.info",
+          "lineNumber": 51
+        },
+        {
+          "caller": "settleTrade",
+          "callee": "trade.getTradeNo",
+          "lineNumber": 51
+        },
+        {
+          "caller": "rollOverTrade",
+          "callee": "trade.rollOver",
+          "lineNumber": 55
+        },
+        {
+          "caller": "rollOverTrade",
+          "callee": "fxTradeRepository.save",
+          "lineNumber": 56
+        },
+        {
+          "caller": "rollOverTrade",
+          "callee": "log.info",
+          "lineNumber": 57
+        },
+        {
+          "caller": "rollOverTrade",
+          "callee": "trade.getTradeNo",
+          "lineNumber": 57
+        },
+        {
+          "caller": "closeOutTrade",
+          "callee": "trade.closeOut",
+          "lineNumber": 61
+        },
+        {
+          "caller": "closeOutTrade",
+          "callee": "fxTradeRepository.save",
+          "lineNumber": 62
+        },
+        {
+          "caller": "closeOutTrade",
+          "callee": "log.info",
+          "lineNumber": 63
+        },
+        {
+          "caller": "closeOutTrade",
+          "callee": "trade.getTradeNo",
+          "lineNumber": 63
+        },
+        {
+          "caller": "cancelTrade",
+          "callee": "trade.cancel",
+          "lineNumber": 67
+        },
+        {
+          "caller": "cancelTrade",
+          "callee": "fxTradeRepository.save",
+          "lineNumber": 68
+        },
+        {
+          "caller": "cancelTrade",
+          "callee": "log.info",
+          "lineNumber": 69
+        },
+        {
+          "caller": "cancelTrade",
+          "callee": "trade.getTradeNo",
+          "lineNumber": 69
+        },
+        {
+          "caller": "calculateForwardRate",
+          "callee": "new BusinessException",
+          "lineNumber": 74
+        },
+        {
+          "caller": "calculateForwardRate",
+          "callee": "new BusinessException",
+          "lineNumber": 77
+        },
+        {
+          "caller": "calculateForwardRate",
+          "callee": "points.applyToRate",
+          "lineNumber": 79
+        },
+        {
+          "caller": "calculateSwapAmount",
+          "callee": "new BusinessException",
+          "lineNumber": 84
+        },
+        {
+          "caller": "calculateSwapAmount",
+          "callee": "trade.getBuyAmount",
+          "lineNumber": 86
+        },
+        {
+          "caller": "calculateSwapAmount",
+          "callee": "trade.getSellAmount",
+          "lineNumber": 86
+        },
+        {
+          "caller": "calculateSwapAmount",
+          "callee": "trade.getBuyAmount().subtract",
+          "lineNumber": 89
+        },
+        {
+          "caller": "calculateSwapAmount",
+          "callee": "trade.getBuyAmount",
+          "lineNumber": 89
+        },
+        {
+          "caller": "calculateSwapAmount",
+          "callee": "trade.getSellAmount",
+          "lineNumber": 89
+        }
+      ],
+      "metrics": {
+        "importCount": 12,
+        "exportCount": 10,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    }
+  ]
+}

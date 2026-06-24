@@ -4,6 +4,7 @@ import com.forex.common.base.annotation.Idempotent;
 import com.forex.common.base.annotation.RedisLock;
 import com.forex.common.base.dto.PageResp;
 import com.forex.common.base.result.R;
+import com.forex.common.security.annotation.RequirePermission;
 import com.forex.exchange.adapter.dto.AmountCalcReq;
 import com.forex.exchange.adapter.dto.CreateOrderReq;
 import com.forex.exchange.adapter.dto.OrderResp;
@@ -44,6 +45,7 @@ public class ExchangeController {
 
     @Operation(summary = "创建订单")
     @PostMapping("/create")
+    @RequirePermission("exchange:create")
     @Idempotent(key = "#req.customerId + '_' + #req.orderType + '_create'")
     public R<OrderResp> createOrder(@Valid @RequestBody CreateOrderReq req) {
         CreateOrderCmd cmd = toCreateCmd(req);
@@ -60,6 +62,7 @@ public class ExchangeController {
 
     @Operation(summary = "锁汇")
     @PostMapping("/lock-rate")
+    @RequirePermission("exchange:lock-rate")
     @RedisLock(key = "'exchange:lock:'+#req.orderNo")
     public R<OrderResp> lockRate(@Valid @RequestBody RateLockReq req) {
         ExchangeOrder order = exchangeAppService.lockRate(req.getOrderNo(), req.getConfirmedRate());
@@ -68,6 +71,7 @@ public class ExchangeController {
 
     @Operation(summary = "确认订单")
     @PostMapping("/confirm/{orderNo}")
+    @RequirePermission("exchange:confirm")
     @RedisLock(key = "'exchange:confirm:'+#orderNo")
     public R<OrderResp> confirmOrder(@PathVariable String orderNo) {
         ExchangeOrder order = exchangeAppService.confirmOrder(orderNo);
@@ -76,6 +80,7 @@ public class ExchangeController {
 
     @Operation(summary = "取消订单")
     @PostMapping("/cancel")
+    @RequirePermission("exchange:cancel")
     @RedisLock(key = "'exchange:cancel:'+#cmd.orderNo")
     @Idempotent(key = "#cmd.orderNo + '_cancel'")
     public R<Void> cancelOrder(@Valid @RequestBody CancelOrderCmd cmd) {
@@ -85,6 +90,7 @@ public class ExchangeController {
 
     @Operation(summary = "冲正订单")
     @PostMapping("/reverse/{orderNo}")
+    @RequirePermission("exchange:reverse")
     @RedisLock(key = "'exchange:reverse:'+#orderNo")
     public R<Void> reverseOrder(@PathVariable String orderNo) {
         exchangeAppService.reverseOrder(orderNo);

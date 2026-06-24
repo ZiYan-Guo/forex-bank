@@ -14,6 +14,7 @@ import com.forex.common.base.annotation.RedisLock;
 import com.forex.common.base.dto.PageReq;
 import com.forex.common.base.dto.PageResp;
 import com.forex.common.base.result.R;
+import com.forex.common.security.annotation.RequirePermission;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -40,6 +41,7 @@ public class AccountController {
 
     @Operation(summary = "开立账户")
     @PostMapping("/open")
+    @RequirePermission("account:open")
     @Idempotent(key = "#req.customerId + '_' + #req.currency + '_open'")
     public R<AccountResp> openAccount(@Valid @RequestBody OpenAccountReq req) {
         OpenAccountCmd cmd = new OpenAccountCmd();
@@ -55,6 +57,7 @@ public class AccountController {
 
     @Operation(summary = "关闭账户")
     @PostMapping("/close/{id}")
+    @RequirePermission("account:close")
     @RedisLock(key = "#id")
     public R<Void> closeAccount(@PathVariable Long id) {
         accountAppService.closeAccount(id);
@@ -87,6 +90,7 @@ public class AccountController {
 
     @Operation(summary = "存款")
     @PostMapping("/deposit")
+    @RequirePermission("account:deposit")
     @RedisLock(key = "#req.accountId")
     @Idempotent(key = "#req.relatedBizNo")
     public R<AccountResp> deposit(@Valid @RequestBody AccountOperationReq req) {
@@ -98,6 +102,7 @@ public class AccountController {
 
     @Operation(summary = "取款")
     @PostMapping("/withdraw")
+    @RequirePermission("account:withdraw")
     @RedisLock(key = "#req.accountId")
     @Idempotent(key = "#req.relatedBizNo")
     public R<AccountResp> withdraw(@Valid @RequestBody AccountOperationReq req) {
@@ -109,6 +114,7 @@ public class AccountController {
 
     @Operation(summary = "冻结金额")
     @PostMapping("/freeze")
+    @RequirePermission("account:freeze")
     @RedisLock(key = "#req.accountId")
     public R<AccountResp> freeze(@Valid @RequestBody AccountOperationReq req) {
         accountAppService.freeze(req.getAccountId(), req.getAmount());
@@ -118,6 +124,7 @@ public class AccountController {
 
     @Operation(summary = "解冻金额")
     @PostMapping("/unfreeze")
+    @RequirePermission("account:unfreeze")
     @RedisLock(key = "#req.accountId")
     public R<AccountResp> unfreeze(@Valid @RequestBody AccountOperationReq req) {
         accountAppService.unfreeze(req.getAccountId(), req.getAmount());

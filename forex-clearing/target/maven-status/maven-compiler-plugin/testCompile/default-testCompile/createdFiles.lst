@@ -1,3 +1,4 @@
+com/forex/clearing/application/service/RouteOptimizationServiceTest.class
 com/forex/clearing/domain/service/ClearingDomainServiceTest.class
 com/forex/clearing/domain/service/PvpSettlementServiceTest.class
 com/forex/clearing/domain/service/NettingServiceTest.class

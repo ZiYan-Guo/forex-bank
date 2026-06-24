@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.position.domain.service.PositionDomainServiceTest" time="0.614" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.position.domain.service.PositionDomainServiceTest" time="0.643" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="/Users/guoziyan/Library/Java/JavaVirtualMachines/temurin-17.0.18/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/target/surefire/surefirebooter-20260624092831090_46.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/target/surefire 2026-06-24T09-28-21_569-jvmRun1 surefire-20260624092831090_44tmp surefire_5-20260624092831090_45tmp"/>
+    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/target/surefire/surefirebooter-20260624101551625_46.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/target/surefire 2026-06-24T10-15-42_070-jvmRun1 surefire-20260624101551625_44tmp surefire_5-20260624101551625_45tmp"/>
     <property name="http.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="!*RepositoryImpl*Test"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/target/surefire/surefirebooter-20260624092831090_46.jar"/>
+    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/target/surefire/surefirebooter-20260624101551625_46.jar"/>
     <property name="user.script" value="Hans"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
@@ -60,20 +60,20 @@
     <property name="socksNonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testGetHedgingAdvice_Flat" classname="com.forex.position.domain.service.PositionDomainServiceTest" time="0.56"/>
-  <testcase name="testGetHedgingAdvice_Long" classname="com.forex.position.domain.service.PositionDomainServiceTest" time="0.001"/>
-  <testcase name="testCheckPositionLimit_Breach" classname="com.forex.position.domain.service.PositionDomainServiceTest" time="0.02">
-    <system-out><![CDATA[09:28:31.928 [main] WARN com.forex.position.domain.service.PositionDomainService -- Position limit breach: positionNo=POS20260601000001, currency=USD, usage=500.0000%
+  <testcase name="testGetHedgingAdvice_Flat" classname="com.forex.position.domain.service.PositionDomainServiceTest" time="0.584"/>
+  <testcase name="testGetHedgingAdvice_Long" classname="com.forex.position.domain.service.PositionDomainServiceTest" time="0.002"/>
+  <testcase name="testCheckPositionLimit_Breach" classname="com.forex.position.domain.service.PositionDomainServiceTest" time="0.024">
+    <system-out><![CDATA[10:15:52.489 [main] WARN com.forex.position.domain.service.PositionDomainService -- Position limit breach: positionNo=POS20260601000001, currency=USD, usage=500.0000%
 ]]></system-out>
   </testcase>
-  <testcase name="testCheckPositionLimit_Warning" classname="com.forex.position.domain.service.PositionDomainServiceTest" time="0.003">
-    <system-out><![CDATA[09:28:31.937 [main] WARN com.forex.position.domain.service.PositionDomainService -- Position limit warning: positionNo=POS20260601000002, currency=USD, usage=50.0000%
+  <testcase name="testCheckPositionLimit_Warning" classname="com.forex.position.domain.service.PositionDomainServiceTest" time="0.002">
+    <system-out><![CDATA[10:15:52.500 [main] WARN com.forex.position.domain.service.PositionDomainService -- Position limit warning: positionNo=POS20260601000002, currency=USD, usage=50.0000%
 ]]></system-out>
   </testcase>
-  <testcase name="testGetHedgingAdvice_Short" classname="com.forex.position.domain.service.PositionDomainServiceTest" time="0.001"/>
-  <testcase name="testAggregatePositions" classname="com.forex.position.domain.service.PositionDomainServiceTest" time="0.003">
-    <system-out><![CDATA[09:28:31.943 [main] INFO com.forex.position.domain.service.PositionDomainService -- Aggregated positions for USD/CNY on 2026-06-24: long=150000, short=70000, net=80000
+  <testcase name="testGetHedgingAdvice_Short" classname="com.forex.position.domain.service.PositionDomainServiceTest" time="0.002"/>
+  <testcase name="testAggregatePositions" classname="com.forex.position.domain.service.PositionDomainServiceTest" time="0.004">
+    <system-out><![CDATA[10:15:52.507 [main] INFO com.forex.position.domain.service.PositionDomainService -- Aggregated positions for USD/CNY on 2026-06-24: long=150000, short=70000, net=80000
 ]]></system-out>
   </testcase>
-  <testcase name="testCreatePosition" classname="com.forex.position.domain.service.PositionDomainServiceTest" time="0.006"/>
+  <testcase name="testCreatePosition" classname="com.forex.position.domain.service.PositionDomainServiceTest" time="0.005"/>
 </testsuite>

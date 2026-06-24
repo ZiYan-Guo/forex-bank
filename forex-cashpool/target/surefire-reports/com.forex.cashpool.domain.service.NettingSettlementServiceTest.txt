@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.forex.cashpool.domain.service.NettingSettlementServiceTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 s -- in com.forex.cashpool.domain.service.NettingSettlementServiceTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.060 s -- in com.forex.cashpool.domain.service.NettingSettlementServiceTest

@@ -4,6 +4,7 @@ import com.forex.common.base.annotation.Idempotent;
 import com.forex.common.base.annotation.RedisLock;
 import com.forex.common.base.dto.PageResp;
 import com.forex.common.base.result.R;
+import com.forex.common.security.annotation.RequirePermission;
 import com.forex.trading.adapter.dto.CreateTradeReq;
 import com.forex.trading.adapter.dto.RollOverReq;
 import com.forex.trading.adapter.dto.TradeResp;
@@ -36,6 +37,7 @@ public class TradingController {
 
     @Operation(summary = "创建即期交易")
     @PostMapping("/spot")
+    @RequirePermission("trading:create")
     @Idempotent(key = "#req.customerId + '_spot_' + #req.buyCurrency + #req.sellCurrency")
     public R<TradeResp> createSpot(@Valid @RequestBody CreateTradeReq req) {
         FxTrade trade = tradingAppService.createSpotTrade(toCmd(req));
@@ -44,6 +46,7 @@ public class TradingController {
 
     @Operation(summary = "创建远期交易")
     @PostMapping("/forward")
+    @RequirePermission("trading:create")
     @Idempotent(key = "#req.customerId + '_forward_' + #req.buyCurrency + #req.sellCurrency")
     public R<TradeResp> createForward(@Valid @RequestBody CreateTradeReq req) {
         FxTrade trade = tradingAppService.createForwardTrade(toCmd(req));
@@ -52,6 +55,7 @@ public class TradingController {
 
     @Operation(summary = "创建掉期交易")
     @PostMapping("/swap")
+    @RequirePermission("trading:create")
     @Idempotent(key = "#req.customerId + '_swap_' + #req.buyCurrency + #req.sellCurrency")
     public R<TradeResp> createSwap(@Valid @RequestBody CreateTradeReq req) {
         FxTrade trade = tradingAppService.createSwapTrade(toCmd(req));
@@ -60,6 +64,7 @@ public class TradingController {
 
     @Operation(summary = "创建期权交易")
     @PostMapping("/option")
+    @RequirePermission("trading:create")
     @Idempotent(key = "#req.customerId + '_option_' + #req.buyCurrency + #req.sellCurrency")
     public R<TradeResp> createOption(@Valid @RequestBody CreateTradeReq req) {
         FxTrade trade = tradingAppService.createOptionTrade(toCmd(req));
@@ -87,6 +92,7 @@ public class TradingController {
 
     @Operation(summary = "确认交易")
     @PostMapping("/confirm/{tradeNo}")
+    @RequirePermission("trading:confirm")
     @RedisLock(key = "#tradeNo")
     public R<TradeResp> confirm(@PathVariable String tradeNo) {
         tradingAppService.confirmTrade(tradeNo);
@@ -96,6 +102,7 @@ public class TradingController {
 
     @Operation(summary = "执行交易")
     @PostMapping("/execute/{tradeNo}")
+    @RequirePermission("trading:execute")
     @RedisLock(key = "#tradeNo")
     public R<TradeResp> execute(@PathVariable String tradeNo) {
         tradingAppService.executeTrade(tradeNo);
@@ -105,6 +112,7 @@ public class TradingController {
 
     @Operation(summary = "结算交易")
     @PostMapping("/settle/{tradeNo}")
+    @RequirePermission("trading:settle")
     @RedisLock(key = "#tradeNo")
     public R<TradeResp> settle(@PathVariable String tradeNo) {
         tradingAppService.settleTrade(tradeNo);
@@ -114,6 +122,7 @@ public class TradingController {
 
     @Operation(summary = "展期交易")
     @PostMapping("/roll-over")
+    @RequirePermission("trading:roll-over")
     @RedisLock(key = "#req.tradeNo")
     public R<TradeResp> rollOver(@Valid @RequestBody RollOverReq req) {
         tradingAppService.rollOverTrade(req.getTradeNo(), req.getNewMaturityDate(), req.getNewRate());
@@ -123,6 +132,7 @@ public class TradingController {
 
     @Operation(summary = "平仓交易")
     @PostMapping("/close/{tradeNo}")
+    @RequirePermission("trading:close")
     @RedisLock(key = "#tradeNo")
     public R<TradeResp> closeOut(@PathVariable String tradeNo) {
         tradingAppService.closeOutTrade(tradeNo);
@@ -132,6 +142,7 @@ public class TradingController {
 
     @Operation(summary = "取消交易")
     @PostMapping("/cancel/{tradeNo}")
+    @RequirePermission("trading:cancel")
     @RedisLock(key = "#tradeNo")
     public R<Void> cancel(@PathVariable String tradeNo, @RequestParam String reason) {
         tradingAppService.cancelTrade(tradeNo, reason);

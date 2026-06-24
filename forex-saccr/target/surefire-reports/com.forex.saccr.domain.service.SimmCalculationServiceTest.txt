@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.forex.saccr.domain.service.SimmCalculationServiceTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 s -- in com.forex.saccr.domain.service.SimmCalculationServiceTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s -- in com.forex.saccr.domain.service.SimmCalculationServiceTest

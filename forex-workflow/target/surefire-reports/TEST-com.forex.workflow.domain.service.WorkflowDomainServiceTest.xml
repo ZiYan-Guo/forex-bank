@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.workflow.domain.service.WorkflowDomainServiceTest" time="0.627" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.workflow.domain.service.WorkflowDomainServiceTest" time="0.588" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="/Users/guoziyan/Library/Java/JavaVirtualMachines/temurin-17.0.18/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/target/surefire/surefirebooter-20260624092840319_141.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/target/surefire 2026-06-24T09-28-21_569-jvmRun1 surefire-20260624092840319_139tmp surefire_15-20260624092840319_140tmp"/>
+    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/target/surefire/surefirebooter-20260624101600778_141.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/target/surefire 2026-06-24T10-15-42_070-jvmRun1 surefire-20260624101600778_139tmp surefire_15-20260624101600778_140tmp"/>
     <property name="http.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="!*RepositoryImpl*Test"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/target/surefire/surefirebooter-20260624092840319_141.jar"/>
+    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-workflow/target/surefire/surefirebooter-20260624101600778_141.jar"/>
     <property name="user.script" value="Hans"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
@@ -60,18 +60,18 @@
     <property name="socksNonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testCompleteTask_Rejected" classname="com.forex.workflow.domain.service.WorkflowDomainServiceTest" time="0.602">
-    <system-out><![CDATA[09:28:41.199 [main] INFO com.forex.workflow.domain.service.WorkflowDomainService -- 工作流任务处理完成: taskId=WF002, result=REJECTED
+  <testcase name="testCompleteTask_Rejected" classname="com.forex.workflow.domain.service.WorkflowDomainServiceTest" time="0.564">
+    <system-out><![CDATA[10:16:01.615 [main] INFO com.forex.workflow.domain.service.WorkflowDomainService -- 工作流任务处理完成: taskId=WF002, result=REJECTED
 ]]></system-out>
   </testcase>
   <testcase name="testGetTask_NotFound" classname="com.forex.workflow.domain.service.WorkflowDomainServiceTest" time="0.002"/>
-  <testcase name="testGetTask" classname="com.forex.workflow.domain.service.WorkflowDomainServiceTest" time="0.002"/>
-  <testcase name="testStartProcess" classname="com.forex.workflow.domain.service.WorkflowDomainServiceTest" time="0.004">
-    <system-out><![CDATA[09:28:41.217 [main] INFO com.forex.workflow.domain.service.WorkflowDomainService -- 工作流任务创建成功: taskId=WF219EE4515EBF4A659B96F1B8, bizType=LOAN_APPROVAL, bizNo=LN001
+  <testcase name="testGetTask" classname="com.forex.workflow.domain.service.WorkflowDomainServiceTest" time="0.001"/>
+  <testcase name="testStartProcess" classname="com.forex.workflow.domain.service.WorkflowDomainServiceTest" time="0.005">
+    <system-out><![CDATA[10:16:01.631 [main] INFO com.forex.workflow.domain.service.WorkflowDomainService -- 工作流任务创建成功: taskId=WFF1BBD469404B4C0B8405485B, bizType=LOAN_APPROVAL, bizNo=LN001
 ]]></system-out>
   </testcase>
   <testcase name="testCompleteTask_Approved" classname="com.forex.workflow.domain.service.WorkflowDomainServiceTest" time="0.001">
-    <system-out><![CDATA[09:28:41.222 [main] INFO com.forex.workflow.domain.service.WorkflowDomainService -- 工作流任务处理完成: taskId=WF001, result=APPROVED
+    <system-out><![CDATA[10:16:01.636 [main] INFO com.forex.workflow.domain.service.WorkflowDomainService -- 工作流任务处理完成: taskId=WF001, result=APPROVED
 ]]></system-out>
   </testcase>
 </testsuite>

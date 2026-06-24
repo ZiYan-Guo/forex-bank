@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.notification.domain.service.NotificationDomainServiceTest" time="0.797" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.notification.domain.service.NotificationDomainServiceTest" time="0.699" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="/Users/guoziyan/Library/Java/JavaVirtualMachines/temurin-17.0.18/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-notification/target/surefire/surefirebooter-20260624092841288_147.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-notification/target/surefire 2026-06-24T09-28-21_569-jvmRun1 surefire-20260624092841288_145tmp surefire_16-20260624092841288_146tmp"/>
+    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-notification/target/surefire/surefirebooter-20260624101601699_147.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-notification/target/surefire 2026-06-24T10-15-42_070-jvmRun1 surefire-20260624101601699_145tmp surefire_16-20260624101601699_146tmp"/>
     <property name="http.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="!*RepositoryImpl*Test"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-notification/target/surefire/surefirebooter-20260624092841288_147.jar"/>
+    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-notification/target/surefire/surefirebooter-20260624101601699_147.jar"/>
     <property name="user.script" value="Hans"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
@@ -60,20 +60,20 @@
     <property name="socksNonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testCreateNotice" classname="com.forex.notification.domain.service.NotificationDomainServiceTest" time="0.747">
-    <system-out><![CDATA[09:28:42.278 [main] INFO com.forex.notification.domain.service.NotificationDomainService -- 公告创建成功: id=0, title=null, noticeType=null
+  <testcase name="testCreateNotice" classname="com.forex.notification.domain.service.NotificationDomainServiceTest" time="0.651">
+    <system-out><![CDATA[10:16:02.591 [main] INFO com.forex.notification.domain.service.NotificationDomainService -- 公告创建成功: id=0, title=null, noticeType=null
 ]]></system-out>
   </testcase>
   <testcase name="testPublishNotice" classname="com.forex.notification.domain.service.NotificationDomainServiceTest" time="0.003">
-    <system-out><![CDATA[09:28:42.299 [main] INFO com.forex.notification.domain.service.NotificationDomainService -- 公告发布成功: id=0, title=null
+    <system-out><![CDATA[10:16:02.610 [main] INFO com.forex.notification.domain.service.NotificationDomainService -- 公告发布成功: id=0, title=null
 ]]></system-out>
   </testcase>
-  <testcase name="testSendNotification_Success" classname="com.forex.notification.domain.service.NotificationDomainServiceTest" time="0.024">
-    <system-out><![CDATA[09:28:42.324 [main] INFO com.forex.notification.domain.service.NotificationDomainService -- 通知发送成功: id=0, notifyType=null, bizNo=null
+  <testcase name="testSendNotification_Success" classname="com.forex.notification.domain.service.NotificationDomainServiceTest" time="0.023">
+    <system-out><![CDATA[10:16:02.634 [main] INFO com.forex.notification.domain.service.NotificationDomainService -- 通知发送成功: id=0, notifyType=null, bizNo=null
 ]]></system-out>
   </testcase>
-  <testcase name="testSendNotification_Failure" classname="com.forex.notification.domain.service.NotificationDomainServiceTest" time="0.003">
-    <system-out><![CDATA[09:28:42.329 [main] ERROR com.forex.notification.domain.service.NotificationDomainService -- 通知发送失败: notifyType=null, bizNo=null, error=SMTP error
+  <testcase name="testSendNotification_Failure" classname="com.forex.notification.domain.service.NotificationDomainServiceTest" time="0.004">
+    <system-out><![CDATA[10:16:02.639 [main] ERROR com.forex.notification.domain.service.NotificationDomainService -- 通知发送失败: notifyType=null, bizNo=null, error=SMTP error
 ]]></system-out>
   </testcase>
 </testsuite>

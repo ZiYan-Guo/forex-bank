@@ -4,10 +4,12 @@ import com.forex.common.base.annotation.Idempotent;
 import com.forex.common.base.annotation.RedisLock;
 import com.forex.common.base.dto.PageResp;
 import com.forex.common.base.result.R;
+import com.forex.common.security.annotation.RequirePermission;
 import com.forex.risk.adapter.dto.RiskLogResp;
 import com.forex.risk.adapter.dto.RiskReportResp;
 import com.forex.risk.application.command.EvaluateCmd;
 import com.forex.risk.application.command.GenerateReportCmd;
+import jakarta.validation.Valid;
 import com.forex.risk.application.service.RiskAppService;
 import com.forex.risk.domain.model.aggregate.RiskMonitorLog;
 import com.forex.risk.domain.model.entity.RiskReport;
@@ -37,13 +39,15 @@ public class RiskController {
 
     @Operation(summary = "交易风险评估")
     @PostMapping("/evaluate")
-    public R<RiskLogResp> evaluate(@RequestBody EvaluateCmd cmd) {
+    @RequirePermission("risk:evaluate")
+    public R<RiskLogResp> evaluate(@Valid @RequestBody EvaluateCmd cmd) {
         RiskMonitorLog log = riskAppService.evaluateTransaction(cmd);
         return R.ok(toRiskLogResp(log));
     }
 
     @Operation(summary = "创建风险日志")
     @PostMapping("/log/create")
+    @RequirePermission("risk:log")
     @Idempotent(key = "#log.customerId + '_' + #log.bizType + '_' + #log.bizNo + '_log'")
     public R<RiskLogResp> createLog(@RequestBody RiskMonitorLog log) {
         RiskMonitorLog result = riskAppService.createRiskLog(log);
@@ -70,13 +74,15 @@ public class RiskController {
 
     @Operation(summary = "生成风险报告")
     @PostMapping("/report/generate")
-    public R<RiskReportResp> generateReport(@RequestBody GenerateReportCmd cmd) {
+    @RequirePermission("risk:report")
+    public R<RiskReportResp> generateReport(@Valid @RequestBody GenerateReportCmd cmd) {
         RiskReport report = riskAppService.generateReport(cmd);
         return R.ok("报告生成成功", toRiskReportResp(report));
     }
 
     @Operation(summary = "提交风险报告")
     @PostMapping("/report/submit/{reportNo}")
+    @RequirePermission("risk:report")
     @RedisLock(key = "'risk:submit:' + #reportNo")
     public R<Void> submitReport(@PathVariable String reportNo) {
         riskAppService.submitReport(reportNo);

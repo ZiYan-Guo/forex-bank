@@ -4,6 +4,7 @@ import com.forex.common.base.annotation.Idempotent;
 import com.forex.common.base.annotation.RedisLock;
 import com.forex.common.base.dto.PageResp;
 import com.forex.common.base.result.R;
+import com.forex.common.security.annotation.RequirePermission;
 import com.forex.payment.adapter.dto.AmlCheckReq;
 import com.forex.payment.adapter.dto.CreatePaymentReq;
 import com.forex.payment.adapter.dto.GpiUpdateReq;
@@ -50,6 +51,7 @@ public class PaymentController {
 
     @Operation(summary = "创建汇出支付")
     @PostMapping("/outward")
+    @RequirePermission("payment:create")
     @Idempotent(key = "#req.customerId + '_outward_' + T(java.lang.System).currentTimeMillis()")
     public R<PaymentResp> createOutwardPayment(@Valid @RequestBody CreatePaymentReq req) {
         CreatePaymentCmd cmd = toCmd(req);
@@ -59,6 +61,7 @@ public class PaymentController {
 
     @Operation(summary = "创建汇入支付")
     @PostMapping("/inward")
+    @RequirePermission("payment:create")
     @Idempotent(key = "#req.customerId + '_inward_' + T(java.lang.System).currentTimeMillis()")
     public R<PaymentResp> createInwardPayment(@Valid @RequestBody CreatePaymentReq req) {
         CreatePaymentCmd cmd = toCmd(req);
@@ -87,6 +90,7 @@ public class PaymentController {
 
     @Operation(summary = "提交支付")
     @PostMapping("/submit/{paymentNo}")
+    @RequirePermission("payment:submit")
     @RedisLock(key = "#paymentNo")
     public R<PaymentResp> submitPayment(@PathVariable String paymentNo) {
         paymentAppService.submitPayment(paymentNo);
@@ -96,6 +100,7 @@ public class PaymentController {
 
     @Operation(summary = "审批支付")
     @PostMapping("/approve/{paymentNo}")
+    @RequirePermission("payment:approve")
     @RedisLock(key = "#paymentNo")
     public R<PaymentResp> approvePayment(@PathVariable String paymentNo) {
         paymentAppService.approvePayment(paymentNo);
@@ -105,6 +110,7 @@ public class PaymentController {
 
     @Operation(summary = "反洗钱检查处理")
     @PostMapping("/aml-check")
+    @RequirePermission("payment:aml")
     @RedisLock(key = "#req.paymentNo")
     public R<Void> processAmlCheck(@Valid @RequestBody AmlCheckReq req) {
         paymentAppService.processAmlCheck(req.getPaymentNo(), req.getPassed(), req.getReason());
@@ -113,6 +119,7 @@ public class PaymentController {
 
     @Operation(summary = "发送支付")
     @PostMapping("/send")
+    @RequirePermission("payment:send")
     @RedisLock(key = "#req.paymentNo")
     @Idempotent(key = "#req.paymentNo + '_send'")
     public R<PaymentResp> sendPayment(@Valid @RequestBody SendPaymentReq req) {
@@ -127,6 +134,7 @@ public class PaymentController {
 
     @Operation(summary = "取消支付")
     @PostMapping("/cancel/{paymentNo}")
+    @RequirePermission("payment:cancel")
     @RedisLock(key = "#paymentNo")
     public R<Void> cancelPayment(@PathVariable String paymentNo, @RequestParam String reason) {
         paymentAppService.cancelPayment(paymentNo, reason);
@@ -135,6 +143,7 @@ public class PaymentController {
 
     @Operation(summary = "更新GPI状态")
     @PutMapping("/gpi-status")
+    @RequirePermission("payment:gpi-update")
     public R<PaymentResp> updateGpiStatus(@Valid @RequestBody GpiUpdateReq req) {
         CrossBorderPayment payment = paymentAppService.updateGpiStatus(
                 req.getPaymentNo(), req.getGpiStatus(), req.getTrackingId());

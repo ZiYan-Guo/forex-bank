@@ -5,6 +5,7 @@ import com.forex.settlement.domain.repository.CollectionRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -14,6 +15,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @Slf4j
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class CollectionDomainService {
 
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
