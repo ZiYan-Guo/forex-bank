@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.59" tests="11" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.668" tests="11" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="/Users/guoziyan/Library/Java/JavaVirtualMachines/temurin-17.0.18/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/target/surefire/surefirebooter-20260622141702426_50.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/target/surefire 2026-06-22T14-16-55_163-jvmRun1 surefire-20260622141702426_48tmp surefire_6-20260622141702426_49tmp"/>
+    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/target/surefire/surefirebooter-20260624092832933_59.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/target/surefire 2026-06-24T09-28-21_569-jvmRun1 surefire-20260624092832933_57tmp surefire_7-20260624092832933_58tmp"/>
     <property name="http.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="!*RepositoryImpl*Test"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/target/surefire/surefirebooter-20260622141702426_50.jar"/>
+    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-payment/target/surefire/surefirebooter-20260624092832933_59.jar"/>
     <property name="user.script" value="Hans"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
@@ -60,36 +60,36 @@
     <property name="socksNonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testCancelPayment" classname="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.551">
-    <system-out><![CDATA[14:17:03.220 [main] INFO com.forex.payment.domain.service.PaymentDomainService -- 跨境支付已取消: paymentNo=null, reason=Customer request
+  <testcase name="testCancelPayment" classname="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.63">
+    <system-out><![CDATA[09:28:33.870 [main] INFO com.forex.payment.domain.service.PaymentDomainService -- 跨境支付已取消: paymentNo=null, reason=Customer request
 ]]></system-out>
   </testcase>
   <testcase name="testCalculateSettlementAmount" classname="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.002"/>
-  <testcase name="testSendPayment" classname="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.005">
-    <system-out><![CDATA[14:17:03.234 [main] INFO com.forex.payment.domain.service.PaymentDomainService -- 跨境支付已发送: paymentNo=null, swiftRef=S20260601001
+  <testcase name="testSendPayment" classname="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.007">
+    <system-out><![CDATA[09:28:33.881 [main] INFO com.forex.payment.domain.service.PaymentDomainService -- 跨境支付已发送: paymentNo=null, swiftRef=S20260601001
 ]]></system-out>
   </testcase>
   <testcase name="testProcessAmlResult_Passed" classname="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.002">
-    <system-out><![CDATA[14:17:03.240 [main] INFO com.forex.payment.domain.service.PaymentDomainService -- 反洗钱检查结果: paymentNo=null, passed=true, reason=OK
+    <system-out><![CDATA[09:28:33.888 [main] INFO com.forex.payment.domain.service.PaymentDomainService -- 反洗钱检查结果: paymentNo=null, passed=true, reason=OK
 ]]></system-out>
   </testcase>
   <testcase name="testApprovePayment" classname="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.002">
-    <system-out><![CDATA[14:17:03.242 [main] INFO com.forex.payment.domain.service.PaymentDomainService -- 跨境支付已审批: paymentNo=null
+    <system-out><![CDATA[09:28:33.890 [main] INFO com.forex.payment.domain.service.PaymentDomainService -- 跨境支付已审批: paymentNo=null
 ]]></system-out>
   </testcase>
-  <testcase name="testCreatePayment" classname="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.005">
-    <system-out><![CDATA[14:17:03.246 [main] INFO com.forex.payment.domain.service.PaymentDomainService -- 创建跨境支付: paymentNo=PMTOUT202606221417034967, amount=10000.00 USD
+  <testcase name="testCreatePayment" classname="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.007">
+    <system-out><![CDATA[09:28:33.897 [main] INFO com.forex.payment.domain.service.PaymentDomainService -- 创建跨境支付: paymentNo=PMTOUT202606240928331687, amount=10000.00 USD
 ]]></system-out>
   </testcase>
-  <testcase name="testProcessAmlResult_Rejected" classname="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.002">
-    <system-out><![CDATA[14:17:03.249 [main] INFO com.forex.payment.domain.service.PaymentDomainService -- 反洗钱检查结果: paymentNo=null, passed=false, reason=HIT
+  <testcase name="testProcessAmlResult_Rejected" classname="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.001">
+    <system-out><![CDATA[09:28:33.900 [main] INFO com.forex.payment.domain.service.PaymentDomainService -- 反洗钱检查结果: paymentNo=null, passed=false, reason=HIT
 ]]></system-out>
   </testcase>
   <testcase name="testSubmitPayment" classname="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.002">
-    <system-out><![CDATA[14:17:03.251 [main] INFO com.forex.payment.domain.service.PaymentDomainService -- 跨境支付已提交: paymentNo=null
+    <system-out><![CDATA[09:28:33.902 [main] INFO com.forex.payment.domain.service.PaymentDomainService -- 跨境支付已提交: paymentNo=null
 ]]></system-out>
   </testcase>
   <testcase name="testCalculateFees_OUR" classname="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.001"/>
   <testcase name="testCalculateFees_SHA" classname="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.001"/>
-  <testcase name="testCalculateSettlementAmount_ZeroAmount" classname="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.001"/>
+  <testcase name="testCalculateSettlementAmount_ZeroAmount" classname="com.forex.payment.domain.service.PaymentDomainServiceTest" time="0.003"/>
 </testsuite>

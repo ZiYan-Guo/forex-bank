@@ -1,1 +1,5 @@
+com/forex/clearing/domain/service/ClearingDomainServiceTest.class
 com/forex/clearing/domain/service/PvpSettlementServiceTest.class
+com/forex/clearing/domain/service/NettingServiceTest.class
+com/forex/clearing/domain/service/ClsSessionServiceTest.class
+com/forex/clearing/application/service/CipsRoutingServiceTest.class

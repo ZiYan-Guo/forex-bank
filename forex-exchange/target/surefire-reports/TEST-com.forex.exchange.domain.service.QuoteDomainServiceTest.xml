@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.exchange.domain.service.QuoteDomainServiceTest" time="0.568" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.exchange.domain.service.QuoteDomainServiceTest" time="0.494" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="/Users/guoziyan/Library/Java/JavaVirtualMachines/temurin-17.0.18/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-exchange/target/surefire/surefirebooter-20260622141655361_3.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-exchange/target/surefire 2026-06-22T14-16-55_163-jvmRun1 surefire-20260622141655361_1tmp surefire_0-20260622141655361_2tmp"/>
+    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-exchange/target/surefire/surefirebooter-20260624092825588_6.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-exchange/target/surefire 2026-06-24T09-28-21_569-jvmRun1 surefire-20260624092825588_4tmp surefire_1-20260624092825588_5tmp"/>
     <property name="http.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="!*RepositoryImpl*Test"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-exchange/target/surefire/surefirebooter-20260622141655361_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-exchange/target/surefire/surefirebooter-20260624092825588_6.jar"/>
     <property name="user.script" value="Hans"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
@@ -60,10 +60,10 @@
     <property name="socksNonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testIsQuoteValid_Null" classname="com.forex.exchange.domain.service.QuoteDomainServiceTest" time="0.532"/>
+  <testcase name="testIsQuoteValid_Null" classname="com.forex.exchange.domain.service.QuoteDomainServiceTest" time="0.47"/>
   <testcase name="testIsQuoteValid_True" classname="com.forex.exchange.domain.service.QuoteDomainServiceTest" time="0.002"/>
-  <testcase name="testCreateQuote" classname="com.forex.exchange.domain.service.QuoteDomainServiceTest" time="0.016">
-    <system-out><![CDATA[14:16:56.178 [main] INFO com.forex.exchange.domain.service.QuoteDomainService -- Created exchange quote for customer: 1001, pair: USD/CNY
+  <testcase name="testCreateQuote" classname="com.forex.exchange.domain.service.QuoteDomainServiceTest" time="0.014">
+    <system-out><![CDATA[09:28:26.505 [main] INFO com.forex.exchange.domain.service.QuoteDomainService -- Created exchange quote for customer: 1001, pair: USD/CNY
 ]]></system-out>
   </testcase>
   <testcase name="testIsQuoteValid_NullExpireTime" classname="com.forex.exchange.domain.service.QuoteDomainServiceTest" time="0.001"/>

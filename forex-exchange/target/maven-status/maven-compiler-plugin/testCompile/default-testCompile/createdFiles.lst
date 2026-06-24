@@ -1,2 +1,3 @@
 com/forex/exchange/domain/service/QuoteDomainServiceTest.class
+com/forex/exchange/application/service/EnterpriseQuoteServiceTest.class
 com/forex/exchange/domain/service/ExchangeDomainServiceTest.class

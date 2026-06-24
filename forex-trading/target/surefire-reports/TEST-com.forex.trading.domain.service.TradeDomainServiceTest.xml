@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.596" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.568" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="/Users/guoziyan/Library/Java/JavaVirtualMachines/temurin-17.0.18/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-trading/target/surefire/surefirebooter-20260622141657859_12.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-trading/target/surefire 2026-06-22T14-16-55_163-jvmRun1 surefire-20260622141657859_10tmp surefire_1-20260622141657859_11tmp"/>
+    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-trading/target/surefire/surefirebooter-20260624092828144_17.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-trading/target/surefire 2026-06-24T09-28-21_569-jvmRun1 surefire-20260624092828144_15tmp surefire_2-20260624092828144_16tmp"/>
     <property name="http.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="!*RepositoryImpl*Test"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-trading/target/surefire/surefirebooter-20260622141657859_12.jar"/>
+    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-trading/target/surefire/surefirebooter-20260624092828144_17.jar"/>
     <property name="user.script" value="Hans"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
@@ -60,35 +60,35 @@
     <property name="socksNonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testConfirmTrade" classname="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.561">
-    <system-out><![CDATA[14:16:58.677 [main] INFO com.forex.trading.domain.service.TradeDomainService -- Confirmed fx trade: TRD2026060100001
+  <testcase name="testConfirmTrade" classname="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.538">
+    <system-out><![CDATA[09:28:29.007 [main] INFO com.forex.trading.domain.service.TradeDomainService -- Confirmed fx trade: TRD2026060100001
 ]]></system-out>
   </testcase>
-  <testcase name="testCreateTrade" classname="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.005">
-    <system-out><![CDATA[14:16:58.689 [main] INFO com.forex.trading.domain.service.TradeDomainService -- Created fx trade: TRD2026060100001
+  <testcase name="testCreateTrade" classname="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.006">
+    <system-out><![CDATA[09:28:29.013 [main] INFO com.forex.trading.domain.service.TradeDomainService -- Created fx trade: TRD2026060100001
 ]]></system-out>
   </testcase>
   <testcase name="testCalculateForwardRate" classname="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.002"/>
-  <testcase name="testCloseOutTrade" classname="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.002">
-    <system-out><![CDATA[14:16:58.697 [main] INFO com.forex.trading.domain.service.TradeDomainService -- Closed out fx trade: TRD2026060100001
+  <testcase name="testCloseOutTrade" classname="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.001">
+    <system-out><![CDATA[09:28:29.022 [main] INFO com.forex.trading.domain.service.TradeDomainService -- Closed out fx trade: TRD2026060100001
 ]]></system-out>
   </testcase>
-  <testcase name="testCalculateSwapAmount" classname="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.002"/>
+  <testcase name="testCalculateSwapAmount" classname="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.001"/>
   <testcase name="testExecuteTrade" classname="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.002">
-    <system-out><![CDATA[14:16:58.701 [main] INFO com.forex.trading.domain.service.TradeDomainService -- Executed fx trade: TRD2026060100001
+    <system-out><![CDATA[09:28:29.026 [main] INFO com.forex.trading.domain.service.TradeDomainService -- Executed fx trade: TRD2026060100001
 ]]></system-out>
   </testcase>
-  <testcase name="testCalculateSwapAmount_NoAmounts" classname="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.001"/>
-  <testcase name="testRollOverTrade" classname="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.001">
-    <system-out><![CDATA[14:16:58.705 [main] INFO com.forex.trading.domain.service.TradeDomainService -- Rolled over fx trade: TRD2026060100001, newDate: 2026-07-22, newRate: 7.3000
+  <testcase name="testCalculateSwapAmount_NoAmounts" classname="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.002"/>
+  <testcase name="testRollOverTrade" classname="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.002">
+    <system-out><![CDATA[09:28:29.030 [main] INFO com.forex.trading.domain.service.TradeDomainService -- Rolled over fx trade: TRD2026060100001, newDate: 2026-07-24, newRate: 7.3000
 ]]></system-out>
   </testcase>
   <testcase name="testSettleTrade" classname="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.002">
-    <system-out><![CDATA[14:16:58.706 [main] INFO com.forex.trading.domain.service.TradeDomainService -- Settled fx trade: TRD2026060100001
+    <system-out><![CDATA[09:28:29.032 [main] INFO com.forex.trading.domain.service.TradeDomainService -- Settled fx trade: TRD2026060100001
 ]]></system-out>
   </testcase>
   <testcase name="testCancelTrade" classname="com.forex.trading.domain.service.TradeDomainServiceTest" time="0.001">
-    <system-out><![CDATA[14:16:58.708 [main] INFO com.forex.trading.domain.service.TradeDomainService -- Cancelled fx trade: TRD2026060100001, reason: Customer request
+    <system-out><![CDATA[09:28:29.035 [main] INFO com.forex.trading.domain.service.TradeDomainService -- Cancelled fx trade: TRD2026060100001, reason: Customer request
 ]]></system-out>
   </testcase>
 </testsuite>

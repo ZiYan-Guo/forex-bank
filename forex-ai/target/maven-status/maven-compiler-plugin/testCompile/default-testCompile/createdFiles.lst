@@ -1,0 +1,4 @@
+com/forex/ai/domain/service/DocumentAuditServiceTest.class
+com/forex/ai/domain/service/RatePredictionEngineTest.class
+com/forex/ai/domain/service/SmartRagServiceTest.class
+com/forex/ai/domain/service/AmlDetectionEngineTest.class

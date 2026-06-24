@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CN"/>
     <property name="sun.boot.library.path" value="/Users/guoziyan/Library/Java/JavaVirtualMachines/temurin-17.0.18/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/target/surefire/surefirebooter-20260622141706403_97.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/target/surefire 2026-06-22T14-16-55_163-jvmRun1 surefire-20260622141706403_95tmp surefire_11-20260622141706403_96tmp"/>
+    <property name="sun.java.command" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/target/surefire/surefirebooter-20260624092844617_168.jar /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/target/surefire 2026-06-24T09-28-21_569-jvmRun1 surefire-20260624092844617_166tmp surefire_20-20260624092844617_167tmp"/>
     <property name="http.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="!*RepositoryImpl*Test"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/target/surefire/surefirebooter-20260622141706403_97.jar"/>
+    <property name="surefire.real.class.path" value="/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/target/surefire/surefirebooter-20260624092844617_168.jar"/>
     <property name="user.script" value="Hans"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|localhost|*.localhost|local|*.local|crashlytics.com|*.crashlytics.com|&lt;local&gt;|*.&lt;local&gt;"/>
@@ -61,43 +61,43 @@
     <property name="java.class.version" value="61.0"/>
   </properties>
   <testcase name="testCalculateLendingLimit_Zero" classname="com.forex.cashpool.domain.service.QuotaCalculationEngineTest" time="0.001">
-    <system-out><![CDATA[14:17:06.700 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 计算境外放款额度: netAssets=0
-14:17:06.700 [main] WARN com.forex.cashpool.domain.service.QuotaCalculationEngine -- 净资产无效或非正数，放款额度返回0, netAssets=0
+    <system-out><![CDATA[09:28:44.930 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 计算境外放款额度: netAssets=0
+09:28:44.931 [main] WARN com.forex.cashpool.domain.service.QuotaCalculationEngine -- 净资产无效或非正数，放款额度返回0, netAssets=0
 ]]></system-out>
   </testcase>
   <testcase name="testCalculateLendingLimit_Valid" classname="com.forex.cashpool.domain.service.QuotaCalculationEngineTest" time="0.001">
-    <system-out><![CDATA[14:17:06.700 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 计算境外放款额度: netAssets=5000000.00
-14:17:06.700 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 放款额度计算完成: 4000000.00
+    <system-out><![CDATA[09:28:44.931 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 计算境外放款额度: netAssets=5000000.00
+09:28:44.931 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 放款额度计算完成: 4000000.00
 ]]></system-out>
   </testcase>
   <testcase name="testCalculateUsagePct_ZeroTotal" classname="com.forex.cashpool.domain.service.QuotaCalculationEngineTest" time="0.0">
-    <system-out><![CDATA[14:17:06.701 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 计算额度使用率: used=100.00, total=0
-14:17:06.701 [main] WARN com.forex.cashpool.domain.service.QuotaCalculationEngine -- 总额度为0或null，使用率返回0
+    <system-out><![CDATA[09:28:44.932 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 计算额度使用率: used=100.00, total=0
+09:28:44.932 [main] WARN com.forex.cashpool.domain.service.QuotaCalculationEngine -- 总额度为0或null，使用率返回0
 ]]></system-out>
   </testcase>
   <testcase name="testCalculateUsagePct" classname="com.forex.cashpool.domain.service.QuotaCalculationEngineTest" time="0.0">
-    <system-out><![CDATA[14:17:06.702 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 计算额度使用率: used=250000.00, total=1000000.00
-14:17:06.702 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 额度使用率计算完成: 25.0000%
+    <system-out><![CDATA[09:28:44.933 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 计算额度使用率: used=250000.00, total=1000000.00
+09:28:44.933 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 额度使用率计算完成: 25.0000%
 ]]></system-out>
   </testcase>
-  <testcase name="testCalculateDebtLimit_Null" classname="com.forex.cashpool.domain.service.QuotaCalculationEngineTest" time="0.0">
-    <system-out><![CDATA[14:17:06.703 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 计算外债额度: netAssets=null
-14:17:06.703 [main] WARN com.forex.cashpool.domain.service.QuotaCalculationEngine -- 净资产无效或非正数，外债额度返回0, netAssets=null
+  <testcase name="testCalculateDebtLimit_Null" classname="com.forex.cashpool.domain.service.QuotaCalculationEngineTest" time="0.001">
+    <system-out><![CDATA[09:28:44.933 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 计算外债额度: netAssets=null
+09:28:44.933 [main] WARN com.forex.cashpool.domain.service.QuotaCalculationEngine -- 净资产无效或非正数，外债额度返回0, netAssets=null
 ]]></system-out>
   </testcase>
-  <testcase name="testCalculateDebtLimit_Zero" classname="com.forex.cashpool.domain.service.QuotaCalculationEngineTest" time="0.001">
-    <system-out><![CDATA[14:17:06.704 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 计算外债额度: netAssets=0
-14:17:06.704 [main] WARN com.forex.cashpool.domain.service.QuotaCalculationEngine -- 净资产无效或非正数，外债额度返回0, netAssets=0
+  <testcase name="testCalculateDebtLimit_Zero" classname="com.forex.cashpool.domain.service.QuotaCalculationEngineTest" time="0.0">
+    <system-out><![CDATA[09:28:44.934 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 计算外债额度: netAssets=0
+09:28:44.934 [main] WARN com.forex.cashpool.domain.service.QuotaCalculationEngine -- 净资产无效或非正数，外债额度返回0, netAssets=0
 ]]></system-out>
   </testcase>
-  <testcase name="testCalculateDebtLimit_Valid" classname="com.forex.cashpool.domain.service.QuotaCalculationEngineTest" time="0.0">
-    <system-out><![CDATA[14:17:06.704 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 计算外债额度: netAssets=1000000.00
-14:17:06.704 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 外债额度计算完成: 3500000.00
+  <testcase name="testCalculateDebtLimit_Valid" classname="com.forex.cashpool.domain.service.QuotaCalculationEngineTest" time="0.001">
+    <system-out><![CDATA[09:28:44.935 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 计算外债额度: netAssets=1000000.00
+09:28:44.935 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 外债额度计算完成: 3500000.00
 ]]></system-out>
   </testcase>
-  <testcase name="testCalculateUsagePct_NullTotal" classname="com.forex.cashpool.domain.service.QuotaCalculationEngineTest" time="0.0">
-    <system-out><![CDATA[14:17:06.705 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 计算额度使用率: used=100.00, total=null
-14:17:06.705 [main] WARN com.forex.cashpool.domain.service.QuotaCalculationEngine -- 总额度为0或null，使用率返回0
+  <testcase name="testCalculateUsagePct_NullTotal" classname="com.forex.cashpool.domain.service.QuotaCalculationEngineTest" time="0.001">
+    <system-out><![CDATA[09:28:44.936 [main] INFO com.forex.cashpool.domain.service.QuotaCalculationEngine -- 计算额度使用率: used=100.00, total=null
+09:28:44.936 [main] WARN com.forex.cashpool.domain.service.QuotaCalculationEngine -- 总额度为0或null，使用率返回0
 ]]></system-out>
   </testcase>
 </testsuite>
