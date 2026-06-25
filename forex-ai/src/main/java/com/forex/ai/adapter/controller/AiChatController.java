@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "AI智能客服")
 @RestController
@@ -23,6 +24,7 @@ public class AiChatController {
     private final AiAppService aiAppService;
 
     @Operation(summary = "RAG智能问答")
+    @RequirePermission("ai:query")
     @PostMapping("/query")
     public R<Map<String, Object>> chatQuery(@Valid @RequestBody ChatMessageReq req) {
         String sessionId = req.getSessionId();
@@ -34,6 +36,7 @@ public class AiChatController {
     }
 
     @Operation(summary = "套保推荐")
+    @RequirePermission("ai:recommend")
     @PostMapping("/recommend")
     public R<Map<String, Object>> recommendHedging(@RequestBody Map<String, Object> req) {
         String customerId = (String) req.getOrDefault("customerId", "001");
@@ -43,6 +46,7 @@ public class AiChatController {
     }
 
     @Operation(summary = "自然语言交易")
+    @RequirePermission("ai:nl-trade")
     @PostMapping("/nl-trade")
     public R<Map<String, Object>> nlTrade(@RequestBody Map<String, Object> req) {
         String input = (String) req.get("input");
@@ -50,6 +54,7 @@ public class AiChatController {
     }
 
     @Operation(summary = "智能报告生成")
+    @RequirePermission("ai:generate")
     @PostMapping("/report/generate")
     public R<Map<String, Object>> generateReport(@RequestBody Map<String, Object> req) {
         String customerId = (String) req.getOrDefault("customerId", "001");
@@ -59,6 +64,7 @@ public class AiChatController {
     }
 
     @Operation(summary = "创建会话")
+    @RequirePermission("ai:create")
     @PostMapping("/session/create")
     public R<Map<String, String>> createSession(@RequestBody Map<String, String> req) {
         String sessionType = req.getOrDefault("sessionType", "SUPPORT");

@@ -2,6 +2,10 @@ package com.forex.settlement.domain.service;
 
 import com.forex.settlement.domain.model.entity.BankGuarantee;
 import com.forex.settlement.domain.repository.GuaranteeRepository;
+
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -29,6 +33,12 @@ public class GuaranteeDomainService {
                                            LocalDate effectiveDate, LocalDate expiryDate,
                                            LocalDate claimExpiryDate, String counterGuaranteeNo,
                                            String guaranteeFormat, Long operatorId, String remark) {
+        if (customerId == null) {
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "客户ID不能为空");
+        }
+        if (guaranteeAmount == null || guaranteeAmount.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "保函金额必须大于0");
+        }
         String guaranteeNo = generateGuaranteeNo();
         BankGuarantee g = new BankGuarantee(null, guaranteeNo, customerId,
                 guaranteeType, guaranteeAmount, guaranteeCurrency, beneficiaryInfo,

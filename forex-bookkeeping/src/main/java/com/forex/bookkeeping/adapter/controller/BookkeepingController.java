@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "簿记核算")
 @RestController
@@ -41,6 +42,7 @@ public class BookkeepingController {
     private final MonthEndClosingService monthEndClosingService;
 
     @Operation(summary = "创建记账分录")
+    @RequirePermission("bookkeeping:create")
     @PostMapping("/entry/create")
     @Idempotent(key = "#cmd.bizNo + '_entry_create'")
     public R<EntryResp> createEntry(@Valid @RequestBody CreateEntryCmd cmd) {
@@ -49,6 +51,7 @@ public class BookkeepingController {
     }
 
     @Operation(summary = "过账")
+    @RequirePermission("bookkeeping:post")
     @PostMapping("/entry/post/{voucherNo}")
     @RedisLock(key = "#voucherNo")
     public R<Void> postEntry(@PathVariable String voucherNo) {
@@ -57,6 +60,7 @@ public class BookkeepingController {
     }
 
     @Operation(summary = "冲正")
+    @RequirePermission("bookkeeping:reverse")
     @PostMapping("/entry/reverse/{voucherNo}")
     @RedisLock(key = "#voucherNo")
     public R<EntryResp> reverseEntry(@PathVariable String voucherNo,
@@ -73,6 +77,7 @@ public class BookkeepingController {
     }
 
     @Operation(summary = "分页查询记账分录")
+    @RequirePermission("bookkeeping:page")
     @PostMapping("/entry/page")
     public R<PageResp<EntryResp>> pageQuery(@Valid @RequestBody JournalQuery query) {
         PageResp<JournalEntry> page = bookkeepingAppService.pageQuery(query);
@@ -85,6 +90,7 @@ public class BookkeepingController {
     }
 
     @Operation(summary = "生成外币重估分录")
+    @RequirePermission("bookkeeping:revaluation")
     @PostMapping("/revaluation")
     public R<List<EntryResp>> revaluation(@RequestBody Map<String, Object> request) {
         @SuppressWarnings("unchecked")
@@ -103,6 +109,7 @@ public class BookkeepingController {
     }
 
     @Operation(summary = "月末结账")
+    @RequirePermission("bookkeeping:month-end")
     @PostMapping("/closing/month-end/{fiscalPeriod}")
     public R<MonthEndClosing> monthEndClosing(@PathVariable String fiscalPeriod,
                                                @RequestBody(required = false) List<RevaluationEntryService.FxBalance> balances) {
@@ -111,6 +118,7 @@ public class BookkeepingController {
     }
 
     @Operation(summary = "日终批量过账")
+    @RequirePermission("bookkeeping:closing")
     @PostMapping("/closing/{date}")
     public R<Void> dailyClosing(@PathVariable LocalDate date) {
         bookkeepingAppService.dailyClosing(date);

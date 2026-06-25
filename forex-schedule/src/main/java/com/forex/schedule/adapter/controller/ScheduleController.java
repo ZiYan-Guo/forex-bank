@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "定时任务")
 @RestController
@@ -37,6 +38,7 @@ public class ScheduleController {
     private final ScheduleAppService scheduleAppService;
 
     @Operation(summary = "添加定时任务")
+    @RequirePermission("schedule:add")
     @PostMapping("/job/add")
     @Idempotent(key = "'schedule:job:add:' + #cmd.jobHandler", expireSeconds = 10)
     public R<ScheduleJobResp> addJob(@Valid @RequestBody JobCmd cmd) {
@@ -45,6 +47,7 @@ public class ScheduleController {
     }
 
     @Operation(summary = "更新定时任务")
+    @RequirePermission("schedule:update")
     @PutMapping("/job/update/{id}")
     public R<ScheduleJobResp> updateJob(@PathVariable Long id, @Valid @RequestBody JobCmd cmd) {
         ScheduleJob job = scheduleAppService.updateJob(id, cmd);
@@ -52,6 +55,7 @@ public class ScheduleController {
     }
 
     @Operation(summary = "启停定时任务")
+    @RequirePermission("schedule:toggle")
     @PostMapping("/job/toggle/{id}")
     public R<Void> toggleJob(@PathVariable Long id) {
         scheduleAppService.toggleJob(id);
@@ -59,6 +63,7 @@ public class ScheduleController {
     }
 
     @Operation(summary = "手动触发任务")
+    @RequirePermission("schedule:trigger")
     @PostMapping("/job/trigger/{id}")
     public R<Void> triggerJob(@PathVariable Long id) {
         scheduleAppService.triggerJob(id);
@@ -73,6 +78,7 @@ public class ScheduleController {
     }
 
     @Operation(summary = "分页查询任务")
+    @RequirePermission("schedule:page")
     @PostMapping("/job/page")
     public R<PageResp<ScheduleJobResp>> pageQuery(@RequestBody JobQuery query) {
         PageResp<ScheduleJob> pageResp = scheduleAppService.pageQuery(query);

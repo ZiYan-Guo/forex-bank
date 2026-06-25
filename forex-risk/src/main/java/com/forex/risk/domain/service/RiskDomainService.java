@@ -14,11 +14,13 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
 /** Risk monitoring domain service. Evaluates transactions against enabled rules. 风险监测领域服务。 */
+@Transactional
 public class RiskDomainService {
 
     private final RiskMonitorLogRepository riskMonitorLogRepository;

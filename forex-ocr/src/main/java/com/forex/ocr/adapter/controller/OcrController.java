@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "OCR识别")
 @RestController
@@ -33,6 +34,7 @@ public class OcrController {
     private final OcrAppService ocrAppService;
 
     @Operation(summary = "上传单据")
+    @RequirePermission("ocr:upload")
     @PostMapping("/upload")
     public R<OcrTaskResp> upload(@RequestParam("docType") String docType,
                                   @RequestParam("file") MultipartFile file) {
@@ -42,6 +44,7 @@ public class OcrController {
     }
 
     @Operation(summary = "处理OCR识别")
+    @RequirePermission("ocr:process")
     @PostMapping("/process/{taskId}")
     public R<OcrTaskResp> process(@PathVariable String taskId) {
         OcrTask task = ocrAppService.processOcr(taskId);
@@ -56,6 +59,7 @@ public class OcrController {
     }
 
     @Operation(summary = "分页查询OCR任务")
+    @RequirePermission("ocr:page")
     @PostMapping("/page")
     public R<PageResp<OcrTaskResp>> pageQuery(@RequestBody OcrQuery query) {
         PageResp<OcrTask> pageResp = ocrAppService.pageQuery(query);

@@ -6,8 +6,10 @@ import java.math.RoundingMode;
 import org.springframework.stereotype.Service;
 
 import com.forex.rate.domain.model.aggregate.ExchangeRate;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class RatePublishDomainService {
 
     private static final BigDecimal MAX_REASONABLE_RATE = new BigDecimal("10000");

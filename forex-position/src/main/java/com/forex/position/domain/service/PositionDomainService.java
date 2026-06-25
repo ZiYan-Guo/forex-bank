@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Position domain service. Manages position lifecycle, aggregation and limit checking.
@@ -21,6 +22,7 @@ import java.util.List;
 @Slf4j
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class PositionDomainService {
 
     private final PositionRepository positionRepository;

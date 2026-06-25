@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "AI智能风控")
 @RestController
@@ -19,6 +20,7 @@ public class AiRiskController {
     private final AiAppService aiAppService;
 
     @Operation(summary = "AI反洗钱评估")
+    @RequirePermission("ai:evaluate")
     @PostMapping("/aml/evaluate")
     public R<Map<String, Object>> amlEvaluate(@RequestBody Map<String, Object> req) {
         String customerId = req.get("customerId") != null ? req.get("customerId").toString() : "001";
@@ -27,6 +29,7 @@ public class AiRiskController {
     }
 
     @Operation(summary = "黑名单模糊匹配")
+    @RequirePermission("ai:fuzzy")
     @PostMapping("/blacklist/fuzzy")
     public R<Map<String, Object>> fuzzyMatchBlacklist(@RequestBody Map<String, Object> req) {
         String name = (String) req.getOrDefault("name", "");

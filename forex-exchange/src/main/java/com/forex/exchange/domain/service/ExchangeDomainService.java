@@ -11,11 +11,13 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
 /** Exchange order domain service. Core business logic for forex exchange lifecycle. 结售汇领域服务。 */
+@Transactional
 public class ExchangeDomainService {
 
     private final ExchangeOrderRepository exchangeOrderRepository;

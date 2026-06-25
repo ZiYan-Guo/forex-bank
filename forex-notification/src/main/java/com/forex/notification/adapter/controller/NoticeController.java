@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "公告管理")
 @RestController
@@ -34,6 +35,7 @@ public class NoticeController {
     private final NotificationAppService notificationAppService;
 
     @Operation(summary = "创建公告")
+    @RequirePermission("notification:create")
     @PostMapping("/create")
     public R<NoticeResp> create(@Valid @RequestBody CreateNoticeReq req) {
         CreateNoticeCmd cmd = new CreateNoticeCmd();
@@ -47,6 +49,7 @@ public class NoticeController {
     }
 
     @Operation(summary = "发布公告")
+    @RequirePermission("notification:publish")
     @PutMapping("/publish/{id}")
     public R<NoticeResp> publish(@PathVariable Long id) {
         Notice notice = notificationAppService.publishNotice(id);
@@ -61,6 +64,7 @@ public class NoticeController {
     }
 
     @Operation(summary = "分页查询公告")
+    @RequirePermission("notification:page")
     @PostMapping("/page")
     public R<PageResp<NoticeResp>> pageQuery(@RequestBody NoticeQuery query) {
         PageResp<Notice> pageResp = notificationAppService.pageQueryNotice(query);

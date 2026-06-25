@@ -14,10 +14,12 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.ThreadLocalRandom;
+import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class CustomerDomainService {
 
     private final CustomerRepository customerRepository;

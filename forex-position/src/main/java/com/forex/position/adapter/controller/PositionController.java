@@ -27,6 +27,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "敞口管理")
 @RestController
@@ -38,6 +39,7 @@ public class PositionController {
     private final ExposureAnalysisService exposureAnalysisService;
 
     @Operation(summary = "创建头寸")
+    @RequirePermission("position:create")
     @PostMapping("/create")
     public R<PositionResp> createPosition(@RequestBody PositionCmd cmd) {
         Position position = positionAppService.createPosition(cmd);
@@ -45,6 +47,7 @@ public class PositionController {
     }
 
     @Operation(summary = "更新头寸")
+    @RequirePermission("position:update")
     @PutMapping("/update/{id}")
     public R<PositionResp> updatePosition(@PathVariable Long id,
                                            @RequestParam(required = false) BigDecimal longAmt,
@@ -61,6 +64,7 @@ public class PositionController {
     }
 
     @Operation(summary = "分页查询头寸")
+    @RequirePermission("position:page")
     @PostMapping("/page")
     public R<PageResp<PositionResp>> pageQuery(@RequestBody PositionQuery query) {
         PageResp<Position> page = positionAppService.pageQuery(query);
@@ -72,6 +76,7 @@ public class PositionController {
     }
 
     @Operation(summary = "汇总头寸")
+    @RequirePermission("position:aggregate")
     @PostMapping("/aggregate")
     public R<PositionResp> aggregatePositions(@RequestParam LocalDate date,
                                                @RequestParam String ccyPair) {
@@ -87,6 +92,7 @@ public class PositionController {
     }
 
     @Operation(summary = "多维度敞口分析")
+    @RequirePermission("position:multi-dim")
     @PostMapping("/analysis/multi-dim")
     public R<ExposureAnalysisService.ExposureAnalysisResult> multiDimAnalysis(
             @RequestBody Map<String, Object> request) {
@@ -103,6 +109,7 @@ public class PositionController {
     }
 
     @Operation(summary = "到期日阶梯分析")
+    @RequirePermission("position:maturity-ladder")
     @PostMapping("/analysis/maturity-ladder")
     public R<ExposureAnalysisService.MaturityLadder> maturityLadder(
             @RequestBody Map<String, Object> request) {
@@ -112,6 +119,7 @@ public class PositionController {
     }
 
     @Operation(summary = "敞口热力图")
+    @RequirePermission("position:heatmap")
     @PostMapping("/analysis/heatmap")
     public R<ExposureAnalysisService.HeatmapData> heatmap(
             @RequestBody Map<String, Object> request) {

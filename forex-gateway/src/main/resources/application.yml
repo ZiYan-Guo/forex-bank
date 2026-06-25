@@ -239,7 +239,7 @@ spring:
 
 forex:
   security:
-    jwt-secret: FxBkSys-2026-Prod-Secret-K3y-Must-Be-At-Least-32-Chars-Long-Enough-For-HS256-Signing!
+    jwt-secret: ${JWT_SECRET:forex-dev-secret-change-in-production-env-min-32-chars}
   gateway:
     ignore-auth-urls:
       - /api/auth/login

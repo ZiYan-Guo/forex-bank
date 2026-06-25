@@ -6,11 +6,13 @@ import com.forex.common.base.dto.PageResp;
 import com.forex.common.base.result.R;
 import com.forex.common.security.annotation.RequirePermission;
 import com.forex.settlement.adapter.dto.CreateLcReq;
+import com.forex.settlement.adapter.dto.LcPageQuery;
 import com.forex.settlement.adapter.dto.LcResp;
 import com.forex.settlement.application.command.AmendLcCmd;
 import com.forex.settlement.application.command.CreateLcCmd;
 import com.forex.settlement.application.service.SettlementAppService;
 import com.forex.settlement.domain.model.aggregate.LetterOfCredit;
+import com.forex.settlement.domain.model.query.LcQuery;
 import com.forex.settlement.domain.model.query.LcQuery;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -55,7 +57,8 @@ public class LcController {
 
     @Operation(summary = "分页查询信用证")
     @PostMapping("/page")
-    public R<PageResp<LcResp>> pageQuery(@RequestBody LcQuery query) {
+    public R<PageResp<LcResp>> pageQuery(@RequestBody LcPageQuery req) {
+        LcQuery query = toLcQuery(req);
         PageResp<LetterOfCredit> page = settlementAppService.pageQuery(query);
         List<LcResp> respList = page.getRecords().stream()
                 .map(this::toResp)
@@ -122,6 +125,19 @@ public class LcController {
         settlementAppService.payLc(lcNo);
         LetterOfCredit lc = settlementAppService.getLcDetail(lcNo);
         return R.ok("信用证已付款", toResp(lc));
+    }
+
+    private LcQuery toLcQuery(LcPageQuery req) {
+        LcQuery query = new LcQuery();
+        query.setPageNum(req.getPageNum());
+        query.setPageSize(req.getPageSize());
+        query.setLcNo(req.getLcNo());
+        query.setCustomerId(req.getCustomerId());
+        query.setLcType(req.getLcType());
+        query.setLcStatus(req.getLcStatus());
+        query.setStartDate(req.getStartDate());
+        query.setEndDate(req.getEndDate());
+        return query;
     }
 
     private CreateLcCmd toCmd(CreateLcReq req) {

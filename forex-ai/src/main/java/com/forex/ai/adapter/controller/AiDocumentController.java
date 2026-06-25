@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "AI智能审单")
 @RestController
@@ -18,6 +19,7 @@ public class AiDocumentController {
     private final AiAppService aiAppService;
 
     @Operation(summary = "单据上传识别")
+    @RequirePermission("ai:upload")
     @PostMapping("/ocr/upload")
     public R<Map<String, Object>> ocrUpload(@RequestBody Map<String, Object> req) {
         String docType = (String) req.getOrDefault("docType", "INVOICE");
@@ -26,6 +28,7 @@ public class AiDocumentController {
     }
 
     @Operation(summary = "三单比对")
+    @RequirePermission("ai:compare")
     @PostMapping("/audit/compare")
     public R<Map<String, Object>> auditCompare(@RequestBody Map<String, Object> req) {
         String invoiceId = (String) req.getOrDefault("invoiceId", "");
@@ -35,6 +38,7 @@ public class AiDocumentController {
     }
 
     @Operation(summary = "清算差异修正")
+    @RequirePermission("ai:correction")
     @PostMapping("/clearing/correction")
     public R<Map<String, Object>> clearingCorrection(@RequestBody Map<String, Object> req) {
         String clearingId = (String) req.getOrDefault("clearingId", "");

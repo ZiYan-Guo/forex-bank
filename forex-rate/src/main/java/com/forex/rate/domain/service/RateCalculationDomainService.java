@@ -4,8 +4,10 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class RateCalculationDomainService {
 
     public BigDecimal calculateCrossRate(BigDecimal usdBaseRate, BigDecimal usdQuoteRate) {

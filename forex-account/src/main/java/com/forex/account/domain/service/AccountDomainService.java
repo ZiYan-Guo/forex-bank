@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.concurrent.ThreadLocalRandom;
 
 @Slf4j
 @Service
@@ -51,6 +52,9 @@ public class AccountDomainService {
     public AccountTransaction recordTransaction(ForexAccount account, String txType,
                                                  BigDecimal amount, String relatedBizNo,
                                                  String relatedBizType, String summary) {
+        if (!"NORMAL".equals(account.getAccountStatus())) {
+            throw new BusinessException(ResultCode.ACCOUNT_ERROR, "账户状态异常，当前状态: " + account.getAccountStatus());
+        }
         BigDecimal balanceBefore = account.getBalance();
         BigDecimal balanceAfter;
         if ("DEPOSIT".equals(txType)) {
@@ -78,7 +82,7 @@ public class AccountDomainService {
 
     private String generateAccountNo(String currency) {
         String datePart = LocalDate.now().format(DATE_FORMAT);
-        String suffix = String.format("%08d", (long) (Math.random() * 100_000_000));
+        String suffix = String.format("%08d", ThreadLocalRandom.current().nextInt(100_000_000));
         return ACCOUNT_NO_PREFIX + datePart + currency + suffix;
     }
 }

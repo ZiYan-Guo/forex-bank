@@ -5,6 +5,9 @@ import com.forex.settlement.domain.event.LcIssuedEvent;
 import com.forex.settlement.domain.model.aggregate.LetterOfCredit;
 import com.forex.settlement.domain.model.valueobject.LcNo;
 import com.forex.settlement.domain.repository.LcRepository;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;
@@ -74,5 +77,12 @@ public class LcDomainService {
         lcRepository.save(lc);
 
         log.info("信用证已付款: lcNo={}", lc.getLcNo());
+    }
+
+    public void amendLc(LetterOfCredit lc, BigDecimal newAmount, LocalDate newExpiryDate) {
+        lc.amend(newAmount, newExpiryDate, null);
+        lcRepository.save(lc);
+
+        log.info("信用证已修改: lcNo={}, newAmount={}, newExpiryDate={}", lc.getLcNo(), newAmount, newExpiryDate);
     }
 }

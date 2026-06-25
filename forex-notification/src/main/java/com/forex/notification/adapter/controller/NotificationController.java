@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "通知管理")
 @RestController
@@ -33,6 +34,7 @@ public class NotificationController {
     private final NotificationAppService notificationAppService;
 
     @Operation(summary = "发送通知")
+    @RequirePermission("notification:send")
     @PostMapping("/send")
     public R<NotificationResp> send(@Valid @RequestBody SendNotificationReq req) {
         SendNotificationCmd cmd = new SendNotificationCmd();
@@ -55,6 +57,7 @@ public class NotificationController {
     }
 
     @Operation(summary = "分页查询通知")
+    @RequirePermission("notification:page")
     @PostMapping("/page")
     public R<PageResp<NotificationResp>> pageQuery(@RequestBody NotifyQuery query) {
         PageResp<Notification> pageResp = notificationAppService.pageQueryNotification(query);

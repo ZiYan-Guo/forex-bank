@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "SA-CCR计量")
 @RestController
@@ -35,6 +36,7 @@ public class SaccrController {
     private final SaccrAppService saccrAppService;
 
     @Operation(summary = "计算SA-CCR风险敞口")
+    @RequirePermission("saccr:calculate")
     @PostMapping("/calculate")
     public R<SaccrResultResp> calculate(@RequestBody CalculateCmd cmd) {
         SaccrResult result = saccrAppService.calculateSaccr(cmd);
@@ -42,6 +44,7 @@ public class SaccrController {
     }
 
     @Operation(summary = "计算ISDA SIMM保证金")
+    @RequirePermission("saccr:calculate")
     @PostMapping("/simm/calculate")
     public R<SimmResultResp> calculateSimm(@RequestBody SimmCalculateCmd cmd) {
         SimmResult result = saccrAppService.calculateSimm(cmd);
@@ -63,6 +66,7 @@ public class SaccrController {
     }
 
     @Operation(summary = "分页查询SA-CCR结果")
+    @RequirePermission("saccr:page")
     @PostMapping("/result/page")
     public R<PageResp<SaccrResultResp>> pageQuery(@RequestBody SaccrQuery query) {
         PageResp<SaccrResult> page = saccrAppService.pageQuerySaccr(query);
@@ -73,6 +77,7 @@ public class SaccrController {
     }
 
     @Operation(summary = "分页查询SIMM结果")
+    @RequirePermission("saccr:page")
     @PostMapping("/simm/result/page")
     public R<PageResp<SimmResultResp>> pageQuerySimm(@RequestBody SimmQuery query) {
         PageResp<SimmResult> page = saccrAppService.pageQuerySimm(query);

@@ -7,6 +7,7 @@ import com.forex.common.base.result.R;
 import com.forex.common.security.annotation.RequirePermission;
 import com.forex.exchange.adapter.dto.AmountCalcReq;
 import com.forex.exchange.adapter.dto.CreateOrderReq;
+import com.forex.exchange.adapter.dto.ExchangeOrderPageQuery;
 import com.forex.exchange.adapter.dto.OrderResp;
 import com.forex.exchange.adapter.dto.QuoteReq;
 import com.forex.exchange.adapter.dto.QuoteResp;
@@ -17,6 +18,7 @@ import com.forex.exchange.domain.model.query.ExchangeOrderQuery;
 import com.forex.exchange.application.service.ExchangeAppService;
 import com.forex.exchange.domain.model.aggregate.ExchangeOrder;
 import com.forex.exchange.domain.model.entity.ExchangeQuote;
+import com.forex.exchange.domain.model.query.ExchangeOrderQuery;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -106,7 +108,8 @@ public class ExchangeController {
 
     @Operation(summary = "分页查询订单")
     @PostMapping("/page")
-    public R<PageResp<OrderResp>> pageQuery(@RequestBody ExchangeOrderQuery query) {
+    public R<PageResp<OrderResp>> pageQuery(@RequestBody ExchangeOrderPageQuery req) {
+        ExchangeOrderQuery query = toExchangeQuery(req);
         PageResp<ExchangeOrder> page = exchangeAppService.pageQuery(query);
         List<OrderResp> respList = page.getRecords().stream()
                 .map(this::toOrderResp)
@@ -133,6 +136,20 @@ public class ExchangeController {
         BigDecimal result = exchangeAppService.calculateAmount(
                 req.getAmount(), req.getBaseCurrency(), req.getQuoteCurrency(), req.getDealType());
         return R.ok(result);
+    }
+
+    private ExchangeOrderQuery toExchangeQuery(ExchangeOrderPageQuery req) {
+        ExchangeOrderQuery query = new ExchangeOrderQuery();
+        query.setPageNum(req.getPageNum());
+        query.setPageSize(req.getPageSize());
+        query.setCustomerId(req.getCustomerId());
+        query.setOrderNo(req.getOrderNo());
+        query.setOrderType(req.getOrderType());
+        query.setDealType(req.getDealType());
+        query.setOrderStatus(req.getOrderStatus());
+        query.setBaseCurrency(req.getBaseCurrency());
+        query.setQuoteCurrency(req.getQuoteCurrency());
+        return query;
     }
 
     private CreateOrderCmd toCreateCmd(CreateOrderReq req) {

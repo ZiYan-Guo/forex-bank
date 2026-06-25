@@ -32,6 +32,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "客户管理")
 @RestController
@@ -42,6 +43,7 @@ public class CustomerController {
     private final CustomerAppService customerAppService;
 
     @Operation(summary = "创建客户")
+    @RequirePermission("customer:create")
     @PostMapping("/create")
     public R<CustomerResp> create(@Valid @RequestBody CustomerReq req) {
         CreateCustomerCmd cmd = new CreateCustomerCmd();
@@ -61,6 +63,7 @@ public class CustomerController {
     }
 
     @Operation(summary = "更新客户信息")
+    @RequirePermission("customer:update")
     @PutMapping("/update")
     public R<CustomerResp> update(@Valid @RequestBody CustomerReq req) {
         UpdateCustomerCmd cmd = new UpdateCustomerCmd();
@@ -87,6 +90,7 @@ public class CustomerController {
     }
 
     @Operation(summary = "分页查询客户")
+    @RequirePermission("customer:page")
     @PostMapping("/page")
     public R<PageResp<CustomerResp>> pageQuery(@RequestBody CustomerQuery query) {
         PageResp<CustomerListDTO> pageResp = customerAppService.pageQuery(query);
@@ -99,6 +103,7 @@ public class CustomerController {
     }
 
     @Operation(summary = "更新客户风险等级")
+    @RequirePermission("customer:risk-level")
     @PutMapping("/risk-level")
     @RedisLock(key = "'customer:riskLevel:' + #cmd.customerId")
     @Idempotent(key = "'customer:riskLevel:' + #cmd.customerId", expireSeconds = 30)
@@ -108,6 +113,7 @@ public class CustomerController {
     }
 
     @Operation(summary = "校验信用额度")
+    @RequirePermission("customer:check-credit")
     @PostMapping("/check-credit")
     public R<Boolean> checkCredit(@Valid @RequestBody CreditCheckReq req) {
         boolean available = customerAppService.checkCredit(
@@ -116,6 +122,7 @@ public class CustomerController {
     }
 
     @Operation(summary = "扣减信用额度")
+    @RequirePermission("customer:deduct-credit")
     @PostMapping("/deduct-credit")
     @RedisLock(key = "'customer:credit:deduct:' + #req.customerId")
     public R<Void> deductCredit(@Valid @RequestBody CreditCheckReq req) {
@@ -124,6 +131,7 @@ public class CustomerController {
     }
 
     @Operation(summary = "执行尽职调查")
+    @RequirePermission("customer:due-diligence")
     @PutMapping("/due-diligence/{id}")
     public R<Void> performDueDiligence(@PathVariable Long id) {
         customerAppService.performDueDiligence(id);

@@ -22,6 +22,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.UUID;
 import java.util.stream.Collectors;
+import com.forex.common.security.annotation.RequirePermission;
 
 /**
  * CIPS management controller providing message generation, routing lookup and statistics.
@@ -42,6 +43,7 @@ public class CipsController {
      * 生成 CIPS.111 客户汇款报文。
      */
     @Operation(summary = "生成CIPS.111客户汇款报文")
+    @RequirePermission("clearing:111")
     @PostMapping("/message/generate/111")
     public R<String> generateCips111(@RequestBody Map<String, Object> req) {
         log.info("POST /message/generate/111 start: {}", req);
@@ -65,6 +67,7 @@ public class CipsController {
      * 生成 CIPS.112 支付状态报告。
      */
     @Operation(summary = "生成CIPS.112支付状态报告")
+    @RequirePermission("clearing:112")
     @PostMapping("/message/generate/112")
     public R<String> generateCips112(@RequestBody Map<String, Object> req) {
         log.info("POST /message/generate/112 start: {}", req);
@@ -81,6 +84,7 @@ public class CipsController {
      * 生成 CIPS.113 退汇报文。
      */
     @Operation(summary = "生成CIPS.113退汇报文")
+    @RequirePermission("clearing:113")
     @PostMapping("/message/generate/113")
     public R<String> generateCips113(@RequestBody Map<String, Object> req) {
         log.info("POST /message/generate/113 start: {}", req);

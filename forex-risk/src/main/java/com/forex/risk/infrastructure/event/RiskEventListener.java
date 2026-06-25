@@ -6,6 +6,9 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.event.TransactionPhase;
+import org.springframework.transaction.event.TransactionalEventListener;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -28,7 +31,8 @@ public class RiskEventListener {
      * Handle margin call events - create risk evaluation log.
      * 处理保证金追缴事件 - 自动创建风险评估日志。
      */
-    @EventListener
+    @TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)
+    @Transactional
     public void onMarginCalled(Object marginCalledEvent) {
         try {
             String logNo = "RK" + UUID.randomUUID().toString().replace("-", "").substring(0, 16).toUpperCase();
@@ -45,7 +49,8 @@ public class RiskEventListener {
         }
     }
 
-    @EventListener
+    @TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)
+    @Transactional
     public void onPositionBreach(Object positionBreachEvent) {
         try {
             String logNo = "RK" + UUID.randomUUID().toString().replace("-", "").substring(0, 16).toUpperCase();
@@ -62,7 +67,8 @@ public class RiskEventListener {
         }
     }
 
-    @EventListener
+    @TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)
+    @Transactional
     public void onLargePayment(Object paymentEvent) {
         try {
             String bizNo = extractBizNo(paymentEvent);

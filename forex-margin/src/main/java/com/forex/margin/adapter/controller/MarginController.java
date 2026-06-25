@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
 import java.util.List;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "保证金管理")
 @RestController
@@ -37,6 +38,7 @@ public class MarginController {
     private final MarginAppService marginAppService;
 
     @Operation(summary = "创建初始保证金")
+    @RequirePermission("margin:create")
     @PostMapping("/create")
     @Idempotent(key = "#cmd.customerId + '_margin_create'")
     public R<MarginResp> createInitialMargin(@Valid @RequestBody CreateMarginCmd cmd) {
@@ -46,6 +48,7 @@ public class MarginController {
     }
 
     @Operation(summary = "追加保证金")
+    @RequirePermission("margin:call")
     @PostMapping("/call")
     @RedisLock(key = "'margin:call:'+#marginNo")
     @Idempotent(key = "#marginNo + '_call'")
@@ -55,6 +58,7 @@ public class MarginController {
     }
 
     @Operation(summary = "释放保证金")
+    @RequirePermission("margin:release")
     @PostMapping("/release")
     @RedisLock(key = "'margin:release:'+#marginNo")
     @Idempotent(key = "#marginNo + '_release'")
@@ -66,6 +70,7 @@ public class MarginController {
     }
 
     @Operation(summary = "存入保证金")
+    @RequirePermission("margin:deposit")
     @PostMapping("/deposit")
     @RedisLock(key = "'margin:deposit:'+#marginNo")
     @Idempotent(key = "#marginNo + '_deposit'")
@@ -82,6 +87,7 @@ public class MarginController {
     }
 
     @Operation(summary = "分页查询保证金")
+    @RequirePermission("margin:page")
     @PostMapping("/page")
     public R<PageResp<MarginResp>> pageQuery(@RequestBody MarginQuery query) {
         PageResp<MarginAccount> page = marginAppService.pageQuery(query);

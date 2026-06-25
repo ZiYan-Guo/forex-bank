@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "国际保函")
 @RestController
@@ -30,6 +31,7 @@ public class GuaranteeController {
     private final SettlementAppService settlementAppService;
 
     @Operation(summary = "创建保函")
+    @RequirePermission("settlement:create")
     @PostMapping("/create")
     @Idempotent(key = "#req.customerId + '_guar_' + T(java.lang.System).currentTimeMillis()")
     public R<GuaranteeResp> create(@Valid @RequestBody GuaranteeReq req) {
@@ -46,6 +48,7 @@ public class GuaranteeController {
     }
 
     @Operation(summary = "开立保函")
+    @RequirePermission("settlement:issue")
     @PostMapping("/issue/{guaranteeNo}")
     @RedisLock(key = "#guaranteeNo")
     public R<GuaranteeResp> issue(@PathVariable String guaranteeNo) {

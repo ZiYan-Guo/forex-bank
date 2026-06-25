@@ -23,6 +23,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "交易确认")
 @RestController
@@ -35,6 +36,7 @@ public class ConfirmationController {
     private final TradeConfirmationRepository confirmationRepository;
 
     @Operation(summary = "发起交易确认")
+    @RequirePermission("clearing:initiate")
     @PostMapping("/initiate")
     public R<TradeConfirmation> initiate(@RequestBody Map<String, Object> req) {
         String tradeNo = (String) req.get("tradeNo");
@@ -58,6 +60,7 @@ public class ConfirmationController {
     }
 
     @Operation(summary = "分页查询确认记录")
+    @RequirePermission("clearing:page")
     @PostMapping("/page")
     public R<PageResp<TradeConfirmation>> page(@RequestBody Map<String, Object> req) {
         List<TradeConfirmation> all = confirmationRepository.findAll();
@@ -71,6 +74,7 @@ public class ConfirmationController {
     }
 
     @Operation(summary = "重试失败确认")
+    @RequirePermission("clearing:retry")
     @PostMapping("/retry")
     public R<Void> retry() {
         automatedConfirmationService.retryFailedConfirmations();
@@ -78,6 +82,7 @@ public class ConfirmationController {
     }
 
     @Operation(summary = "人工干预确认")
+    @RequirePermission("clearing:resolve")
     @PostMapping("/resolve/{confirmId}")
     public R<Void> resolve(@PathVariable String confirmId,
                             @RequestBody Map<String, Object> req) {

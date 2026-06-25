@@ -2,6 +2,10 @@ package com.forex.settlement.domain.service;
 
 import com.forex.settlement.domain.model.entity.DocumentaryCollection;
 import com.forex.settlement.domain.repository.CollectionRepository;
+
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -28,6 +32,12 @@ public class CollectionDomainService {
                                                     String draweeInfo, String remittingBank,
                                                     String collectingBank, String documentsList,
                                                     Long operatorId, String remark) {
+        if (customerId == null) {
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "客户ID不能为空");
+        }
+        if (collectionAmount == null || collectionAmount.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "托收金额必须大于0");
+        }
         String collectionNo = generateCollectionNo();
         DocumentaryCollection col = new DocumentaryCollection(null, collectionNo, customerId,
                 collectionType, collectionForm, collectionAmount, collectionCurrency,

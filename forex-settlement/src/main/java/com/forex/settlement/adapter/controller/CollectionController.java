@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "跟单托收")
 @RestController
@@ -30,6 +31,7 @@ public class CollectionController {
     private final SettlementAppService settlementAppService;
 
     @Operation(summary = "创建托收")
+    @RequirePermission("settlement:create")
     @PostMapping("/create")
     @Idempotent(key = "#req.customerId + '_col_' + T(java.lang.System).currentTimeMillis()")
     public R<CollectionResp> create(@Valid @RequestBody CollectionReq req) {
@@ -46,6 +48,7 @@ public class CollectionController {
     }
 
     @Operation(summary = "托收付款")
+    @RequirePermission("settlement:pay")
     @PostMapping("/pay/{collectionNo}")
     @RedisLock(key = "#collectionNo")
     public R<CollectionResp> pay(@PathVariable String collectionNo) {

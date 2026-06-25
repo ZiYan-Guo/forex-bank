@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import com.forex.common.security.annotation.RequirePermission;
 
 /**
  * Capital account facilitation sampling inspection controller.
@@ -46,6 +47,7 @@ public class SamplingController {
      * 评估交易是否命中抽查规则，返回抽查比例。
      */
     @Operation(summary = "评估交易抽查规则")
+    @RequirePermission("risk:evaluate")
     @PostMapping("/evaluate")
     public R<Map<String, Object>> evaluate(@RequestBody Map<String, Object> body) {
         Long customerId = body.get("customerId") != null
@@ -79,6 +81,7 @@ public class SamplingController {
      * 根据日期生成抽查任务。
      */
     @Operation(summary = "生成抽查任务")
+    @RequirePermission("risk:generate")
     @PostMapping("/tasks/generate")
     public R<Map<String, Object>> generateTasks(@RequestBody Map<String, Object> body) {
         log.info("Generate sampling tasks request: {}", body);
@@ -117,6 +120,7 @@ public class SamplingController {
      * 将抽查任务标记为已完成并记录检查结果。
      */
     @Operation(summary = "完成抽查任务")
+    @RequirePermission("risk:complete")
     @PutMapping("/tasks/{taskId}/complete")
     public R<Map<String, Object>> completeTask(@PathVariable String taskId,
                                                 @RequestBody Map<String, String> body) {

@@ -5,7 +5,9 @@ import com.forex.common.base.annotation.RedisLock;
 import com.forex.common.base.dto.PageResp;
 import com.forex.common.base.result.R;
 import com.forex.common.security.annotation.RequirePermission;
+import com.forex.risk.adapter.dto.CreateRiskLogReq;
 import com.forex.risk.adapter.dto.RiskLogResp;
+import com.forex.risk.adapter.dto.RiskPageQuery;
 import com.forex.risk.adapter.dto.RiskReportResp;
 import com.forex.risk.application.command.EvaluateCmd;
 import com.forex.risk.application.command.GenerateReportCmd;
@@ -48,8 +50,13 @@ public class RiskController {
     @Operation(summary = "创建风险日志")
     @PostMapping("/log/create")
     @RequirePermission("risk:log")
-    @Idempotent(key = "#log.customerId + '_' + #log.bizType + '_' + #log.bizNo + '_log'")
-    public R<RiskLogResp> createLog(@RequestBody RiskMonitorLog log) {
+    @Idempotent(key = "#req.customerId + '_' + #req.bizType + '_' + #req.bizNo + '_log'")
+    public R<RiskLogResp> createLog(@Valid @RequestBody CreateRiskLogReq req) {
+        RiskMonitorLog log = RiskMonitorLog.create(
+                null, req.getCustomerId(), req.getBizType(), req.getBizNo(),
+                req.getTransactionAmount(), req.getTransactionCurrency(), req.getTransactionTime(),
+                req.getMonitorRuleCode(), req.getMonitorRuleName(), req.getRiskCategory(),
+                req.getRiskLevel(), req.getRiskScore());
         RiskMonitorLog result = riskAppService.createRiskLog(log);
         return R.ok(toRiskLogResp(result));
     }
@@ -63,7 +70,8 @@ public class RiskController {
 
     @Operation(summary = "分页查询风险日志")
     @PostMapping("/log/page")
-    public R<PageResp<RiskLogResp>> pageQuery(@RequestBody RiskQuery query) {
+    public R<PageResp<RiskLogResp>> pageQuery(@RequestBody RiskPageQuery req) {
+        RiskQuery query = toRiskQuery(req);
         PageResp<RiskMonitorLog> page = riskAppService.pageQuery(query);
         List<RiskLogResp> respList = page.getRecords().stream()
                 .map(this::toRiskLogResp)
@@ -94,6 +102,20 @@ public class RiskController {
     public R<RiskReportResp> getReport(@PathVariable String reportNo) {
         RiskReport report = riskAppService.getRiskReport(reportNo);
         return R.ok(toRiskReportResp(report));
+    }
+
+    private RiskQuery toRiskQuery(RiskPageQuery req) {
+        RiskQuery query = new RiskQuery();
+        query.setPageNum(req.getPageNum());
+        query.setPageSize(req.getPageSize());
+        query.setCustomerId(req.getCustomerId());
+        query.setBizType(req.getBizType());
+        query.setRiskCategory(req.getRiskCategory());
+        query.setRiskLevel(req.getRiskLevel());
+        query.setCheckResult(req.getCheckResult());
+        query.setStartDate(req.getStartDate());
+        query.setEndDate(req.getEndDate());
+        return query;
     }
 
     private RiskLogResp toRiskLogResp(RiskMonitorLog log) {

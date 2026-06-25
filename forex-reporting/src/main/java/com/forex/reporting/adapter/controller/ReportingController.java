@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "监管报送")
 @RestController
@@ -39,6 +40,7 @@ public class ReportingController {
     private final ReportingAppService reportingAppService;
 
     @Operation(summary = "创建国际收支申报")
+    @RequirePermission("reporting:create")
     @PostMapping("/bop/create")
     @Idempotent(key = "#cmd.transactionNo + '_bop'")
     public R<BopReportResp> createBopReport(@RequestBody BopReportCmd cmd) {
@@ -47,6 +49,7 @@ public class ReportingController {
     }
 
     @Operation(summary = "创建结售汇统计申报")
+    @RequirePermission("reporting:create")
     @PostMapping("/settlement/create")
     @Idempotent(key = "#cmd.exchangeOrderNo + '_settlement'")
     public R<SettlementReportResp> createSettlementReport(@RequestBody SettlementReportCmd cmd) {
@@ -55,6 +58,7 @@ public class ReportingController {
     }
 
     @Operation(summary = "创建资本项目申报")
+    @RequirePermission("reporting:create")
     @PostMapping("/capital/create")
     @Idempotent(key = "#cmd.accountNo + '_' + #cmd.transactionType + '_capital'")
     public R<Void> createCapitalReport(@RequestBody CapitalReportCmd cmd) {
@@ -63,6 +67,7 @@ public class ReportingController {
     }
 
     @Operation(summary = "批量提交申报")
+    @RequirePermission("reporting:submit")
     @PostMapping("/batch/submit")
     @RedisLock(key = "'reporting:batch:submit:' + #reportType")
     public R<Void> submitBatch(@RequestParam String reportType, @RequestBody List<String> reportNos) {
@@ -78,6 +83,7 @@ public class ReportingController {
     }
 
     @Operation(summary = "分页查询BOP申报")
+    @RequirePermission("reporting:page")
     @PostMapping("/bop/page")
     public R<PageResp<BopReportResp>> pageQuery(@RequestBody ReportQuery query) {
         PageResp<BopReport> page = reportingAppService.pageQuery(query);

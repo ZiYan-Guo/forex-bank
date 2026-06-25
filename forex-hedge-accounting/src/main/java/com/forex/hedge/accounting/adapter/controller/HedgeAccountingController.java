@@ -14,6 +14,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.util.*;
+import com.forex.common.security.annotation.RequirePermission;
 
 /**
  * 套保会计控制器.
@@ -40,6 +41,7 @@ public class HedgeAccountingController {
      * Create a new hedge relationship.
      */
     @Operation(summary = "创建套期关系")
+    @RequirePermission("hedge:create")
     @PostMapping("/relationship/create")
     public R<Map<String, Object>> createRelationship(@RequestBody Map<String, Object> request) {
         log.info("创建套期关系请求: {}", request);
@@ -85,6 +87,7 @@ public class HedgeAccountingController {
      * Designate a hedge relationship.
      */
     @Operation(summary = "正式指定套期关系")
+    @RequirePermission("hedge:designate")
     @PostMapping("/relationship/{relationId}/designate")
     public R<Map<String, Object>> designate(@PathVariable String relationId) {
         log.info("指定套期关系: relationId={}", relationId);
@@ -103,6 +106,7 @@ public class HedgeAccountingController {
      * Perform prospective effectiveness test.
      */
     @Operation(summary = "执行预期有效性测试")
+    @RequirePermission("hedge:prospective")
     @PostMapping("/test/prospective")
     public R<Map<String, Object>> prospectiveTest(@RequestBody Map<String, Object> request) {
         String relationId = (String) request.get("relationId");
@@ -136,6 +140,7 @@ public class HedgeAccountingController {
      * Perform retrospective effectiveness test.
      */
     @Operation(summary = "执行追溯有效性测试")
+    @RequirePermission("hedge:retrospective")
     @PostMapping("/test/retrospective")
     public R<Map<String, Object>> retrospectiveTest(@RequestBody Map<String, Object> request) {
         String relationId = (String) request.get("relationId");
@@ -167,6 +172,7 @@ public class HedgeAccountingController {
      * Generate hedge accounting journal entries.
      */
     @Operation(summary = "生成套保会计分录")
+    @RequirePermission("hedge:generate")
     @PostMapping("/entries/generate")
     public R<Map<String, Object>> generateEntries(@RequestBody Map<String, Object> request) {
         String relationId = (String) request.get("relationId");

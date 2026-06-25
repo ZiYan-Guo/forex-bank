@@ -26,6 +26,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import com.forex.common.security.annotation.RequirePermission;
 
 /**
  * 资金池管理控制器 - 负责资金池创建、成员管理、额度计算等HTTP接口
@@ -45,6 +46,7 @@ public class CashPoolController {
      * Create cash pool - Initialize pool master account and return pool info
      */
     @Operation(summary = "创建资金池")
+    @RequirePermission("cashpool:create")
     @PostMapping("/create")
     public R<Map<String, Object>> createPool(@RequestBody Map<String, Object> req) {
         log.info("创建资金池请求: {}", req);
@@ -97,6 +99,7 @@ public class CashPoolController {
      * Add member to cash pool - Add specified account as pool member
      */
     @Operation(summary = "添加资金池成员")
+    @RequirePermission("cashpool:add")
     @PostMapping("/member/add")
     public R<Map<String, Object>> addMember(@RequestBody Map<String, Object> req) {
         log.info("添加资金池成员请求: {}", req);
@@ -148,6 +151,7 @@ public class CashPoolController {
      * Calculate quota - Calculate debt limit and lending limit based on net assets
      */
     @Operation(summary = "计算额度")
+    @RequirePermission("cashpool:calculate")
     @PostMapping("/quota/calculate")
     public R<Map<String, Object>> calculateQuota(@RequestBody Map<String, Object> req) {
         BigDecimal netAssets = new BigDecimal(req.getOrDefault("netAssets", 0).toString());

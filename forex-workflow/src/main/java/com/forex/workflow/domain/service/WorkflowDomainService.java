@@ -13,10 +13,12 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class WorkflowDomainService {
 
     private final WorkflowTaskRepository workflowTaskRepository;

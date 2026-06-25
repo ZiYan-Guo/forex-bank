@@ -25,7 +25,7 @@ public class SecurityHeadersFilter implements GlobalFilter, Ordered {
         HttpHeaders headers = exchange.getResponse().getHeaders();
         headers.add("X-Content-Type-Options", "nosniff");
         headers.add("X-Frame-Options", "DENY");
-        headers.add("X-XSS-Protection", "1; mode=block");
+        headers.add("Content-Security-Policy", "default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'");
         headers.add("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
         headers.add("Referrer-Policy", "strict-origin-when-cross-origin");
         headers.add("Cache-Control", "no-store, no-cache, must-revalidate, private");

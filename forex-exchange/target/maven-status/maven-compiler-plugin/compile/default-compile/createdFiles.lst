@@ -1,3 +1,4 @@
+com/forex/exchange/adapter/dto/ExchangeOrderPageQuery.class
 com/forex/exchange/application/command/CreateOrderCmd.class
 com/forex/exchange/adapter/dto/RateLockReq.class
 com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.class

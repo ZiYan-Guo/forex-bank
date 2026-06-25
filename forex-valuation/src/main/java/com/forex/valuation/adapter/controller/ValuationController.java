@@ -26,6 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDate;
 import java.util.List;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "衍生品估值")
 @RestController
@@ -48,6 +49,7 @@ public class ValuationController {
     }
 
     @Operation(summary = "计算估值")
+    @RequirePermission("valuation:calculate")
     @PostMapping("/calculate")
     public R<ValuationResp> calculateValuation(@RequestBody CalculateValuationCmd cmd) {
         ValuationResult result = valuationAppService.calculateValuation(cmd.getTradeId());
@@ -55,6 +57,7 @@ public class ValuationController {
     }
 
     @Operation(summary = "重新计算所有估值")
+    @RequirePermission("valuation:recalculate")
     @PostMapping("/recalculate/{date}")
     public R<Void> recalculate(@PathVariable LocalDate date) {
         valuationAppService.recalculateAll(date);
@@ -62,6 +65,7 @@ public class ValuationController {
     }
 
     @Operation(summary = "计算损益归因")
+    @RequirePermission("valuation:attribution")
     @PostMapping("/pnl/attribution")
     public R<PnlAttributionResp> calculateAttribution(@RequestBody CalculateValuationCmd cmd) {
         LocalDate today = cmd.getValuationDate() != null ? cmd.getValuationDate() : LocalDate.now();

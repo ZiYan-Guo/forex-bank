@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "清算管理")
 @RestController
@@ -34,6 +35,7 @@ public class ClearingController {
     private final ClearingAppService clearingAppService;
 
     @Operation(summary = "生成清算指令")
+    @RequirePermission("clearing:generate")
     @PostMapping("/generate")
     @Idempotent(key = "#cmd.bizNo + '_clearing_generate'")
     public R<ClearingResp> generate(@Valid @RequestBody GenerateClearingCmd cmd) {
@@ -42,6 +44,7 @@ public class ClearingController {
     }
 
     @Operation(summary = "发送清算指令")
+    @RequirePermission("clearing:send")
     @PostMapping("/send/{instructionNo}")
     @RedisLock(key = "#instructionNo")
     public R<Void> send(@PathVariable String instructionNo) {
@@ -50,6 +53,7 @@ public class ClearingController {
     }
 
     @Operation(summary = "确认回执")
+    @RequirePermission("clearing:ack")
     @PostMapping("/ack/{instructionNo}")
     @RedisLock(key = "#instructionNo")
     public R<Void> acknowledge(@PathVariable String instructionNo,
@@ -59,6 +63,7 @@ public class ClearingController {
     }
 
     @Operation(summary = "结算")
+    @RequirePermission("clearing:settle")
     @PostMapping("/settle/{instructionNo}")
     @RedisLock(key = "#instructionNo")
     public R<Void> settle(@PathVariable String instructionNo) {
@@ -67,6 +72,7 @@ public class ClearingController {
     }
 
     @Operation(summary = "取消清算指令")
+    @RequirePermission("clearing:cancel")
     @PostMapping("/cancel/{instructionNo}")
     @RedisLock(key = "#instructionNo")
     public R<Void> cancel(@PathVariable String instructionNo,
@@ -83,6 +89,7 @@ public class ClearingController {
     }
 
     @Operation(summary = "分页查询清算指令")
+    @RequirePermission("clearing:page")
     @PostMapping("/page")
     public R<PageResp<ClearingResp>> pageQuery(@Valid @RequestBody ClearingQuery query) {
         PageResp<ClearingInstruction> page = clearingAppService.pageQuery(query);

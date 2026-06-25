@@ -7,6 +7,7 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/src/main/java/com/forex/settlement/adapter/dto/CreateLcReq.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/src/main/java/com/forex/settlement/adapter/dto/GuaranteeReq.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/src/main/java/com/forex/settlement/adapter/dto/GuaranteeResp.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/src/main/java/com/forex/settlement/adapter/dto/LcPageQuery.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/src/main/java/com/forex/settlement/adapter/dto/LcResp.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/src/main/java/com/forex/settlement/application/command/AmendLcCmd.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-settlement/src/main/java/com/forex/settlement/application/command/CreateCollectionCmd.java

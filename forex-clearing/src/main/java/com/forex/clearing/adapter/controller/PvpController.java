@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "PVP结算")
 @RestController
@@ -38,6 +39,7 @@ public class PvpController {
     private final ClsSessionRepository clsSessionRepository;
 
     @Operation(summary = "创建PVP结算对")
+    @RequirePermission("clearing:create")
     @PostMapping("/pair/create")
     public R<PvpSettlementPair> createPvpPair(Long payInstructionId, Long receiveInstructionId) {
         PvpSettlementPair pair = pvpSettlementService.createPvpPair(payInstructionId, receiveInstructionId);
@@ -45,6 +47,7 @@ public class PvpController {
     }
 
     @Operation(summary = "执行PVP结算")
+    @RequirePermission("clearing:settle")
     @PostMapping("/pair/{pairId}/settle")
     public R<Void> executePvpSettlement(@PathVariable String pairId) {
         pvpSettlementService.executePvpSettlement(pairId);
@@ -60,6 +63,7 @@ public class PvpController {
     }
 
     @Operation(summary = "排期CLS结算场次")
+    @RequirePermission("clearing:schedule")
     @PostMapping("/cls/session/schedule")
     public R<ClsSession> scheduleClsSession() {
         ClsSession session = clsSessionService.scheduleSession(LocalDate.now());
@@ -67,6 +71,7 @@ public class PvpController {
     }
 
     @Operation(summary = "开启Pay-In窗口")
+    @RequirePermission("clearing:open")
     @PostMapping("/cls/session/{sessionId}/open")
     public R<Void> openPayInWindow(@PathVariable String sessionId) {
         clsSessionService.openPayInWindow(sessionId);
@@ -74,6 +79,7 @@ public class PvpController {
     }
 
     @Operation(summary = "关闭Pay-In窗口")
+    @RequirePermission("clearing:close")
     @PostMapping("/cls/session/{sessionId}/close")
     public R<Void> closePayInWindow(@PathVariable String sessionId) {
         clsSessionService.closePayInWindow(sessionId);
@@ -89,6 +95,7 @@ public class PvpController {
     }
 
     @Operation(summary = "计算双边净额")
+    @RequirePermission("clearing:calculate")
     @PostMapping("/netting/calculate")
     public R<List<NettingPosition>> calculateBilateralNetting(List<Long> instructionIds) {
         List<NettingPosition> positions = List.of();

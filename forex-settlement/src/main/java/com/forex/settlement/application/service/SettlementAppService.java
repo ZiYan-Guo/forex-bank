@@ -79,8 +79,7 @@ public class SettlementAppService {
     public void amendLc(String lcNo, AmendLcCmd cmd) {
         LetterOfCredit lc = lcRepository.findByLcNo(lcNo)
                 .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "信用证不存在: " + lcNo));
-        lc.amend(cmd.getNewAmount(), cmd.getNewExpiryDate(), null);
-        lcRepository.save(lc);
+        lcDomainService.amendLc(lc, cmd.getNewAmount(), cmd.getNewExpiryDate());
     }
 
     @RedisLock(key = "#lcNo")

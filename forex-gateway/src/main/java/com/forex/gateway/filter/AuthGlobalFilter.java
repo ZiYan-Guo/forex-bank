@@ -76,10 +76,10 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
             List<String> permissions = jwtUtil.getPermissions(claims);
 
             ServerHttpRequest request = exchange.getRequest().mutate()
-                    .header(USER_ID_HEADER, String.valueOf(userId))
-                    .header(USER_NAME_HEADER, username)
-                    .header(USER_ROLES_HEADER, String.join(",", roles))
-                    .header(USER_PERMISSIONS_HEADER, String.join(",", permissions))
+                    .header(USER_ID_HEADER, userId != null ? String.valueOf(userId) : "")
+                    .header(USER_NAME_HEADER, username != null ? username : "")
+                    .header(USER_ROLES_HEADER, roles != null ? String.join(",", roles) : "")
+                    .header(USER_PERMISSIONS_HEADER, permissions != null ? String.join(",", permissions) : "")
                     .build();
 
             return chain.filter(exchange.mutate().request(request).build());

@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Map;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "结算追踪")
 @RestController
@@ -31,6 +32,7 @@ public class TrackerController {
     private final SettlementTrackerRepository trackerRepository;
 
     @Operation(summary = "创建结算追踪")
+    @RequirePermission("clearing:create")
     @PostMapping("/create")
     public R<SettlementTracker> create(@RequestBody Map<String, Object> req) {
         String paymentNo = (String) req.get("paymentNo");
@@ -41,6 +43,7 @@ public class TrackerController {
     }
 
     @Operation(summary = "更新追踪状态")
+    @RequirePermission("clearing:status")
     @PutMapping("/{trackingId}/status")
     public R<Void> updateStatus(@PathVariable String trackingId,
                                  @RequestBody Map<String, Object> req) {

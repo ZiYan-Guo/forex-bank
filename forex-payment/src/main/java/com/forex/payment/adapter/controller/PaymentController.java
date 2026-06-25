@@ -5,11 +5,17 @@ import com.forex.common.base.annotation.RedisLock;
 import com.forex.common.base.dto.PageResp;
 import com.forex.common.base.result.R;
 import com.forex.common.security.annotation.RequirePermission;
+import com.forex.payment.adapter.dto.AddressValidateReq;
 import com.forex.payment.adapter.dto.AmlCheckReq;
+import com.forex.payment.adapter.dto.BatchSubmitReq;
 import com.forex.payment.adapter.dto.CreatePaymentReq;
+import com.forex.payment.adapter.dto.FeeCalculateReq;
 import com.forex.payment.adapter.dto.GpiUpdateReq;
+import com.forex.payment.adapter.dto.IbanValidateReq;
+import com.forex.payment.adapter.dto.PaymentPageQuery;
 import com.forex.payment.adapter.dto.PaymentResp;
 import com.forex.payment.adapter.dto.SendPaymentReq;
+import com.forex.payment.adapter.dto.SwiftValidateReq;
 import com.forex.payment.application.command.CreatePaymentCmd;
 import com.forex.payment.application.command.SendPaymentCmd;
 import com.forex.payment.domain.model.dto.PaymentQuery;
@@ -17,6 +23,7 @@ import com.forex.payment.application.service.BankCodeValidationService;
 import com.forex.payment.application.service.BatchPaymentService;
 import com.forex.payment.application.service.PaymentAppService;
 import com.forex.payment.domain.model.aggregate.CrossBorderPayment;
+import com.forex.payment.domain.model.dto.PaymentQuery;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -78,7 +85,8 @@ public class PaymentController {
 
     @Operation(summary = "分页查询支付")
     @PostMapping("/page")
-    public R<PageResp<PaymentResp>> pageQuery(@RequestBody PaymentQuery query) {
+    public R<PageResp<PaymentResp>> pageQuery(@RequestBody PaymentPageQuery req) {
+        PaymentQuery query = toPaymentQuery(req);
         PageResp<CrossBorderPayment> page = paymentAppService.pageQuery(query);
         List<PaymentResp> respList = page.getRecords().stream()
                 .map(this::toResp)
@@ -178,68 +186,45 @@ public class PaymentController {
 
     @Operation(summary = "批量提交支付")
     @PostMapping("/batch/submit")
-    public R<Map<String, Object>> batchSubmit(@RequestBody Map<String, Object> body) {
-        String channel = (String) body.get("channel");
-        @SuppressWarnings("unchecked")
-        List<Map<String, Object>> payments = (List<Map<String, Object>>) body.get("payments");
+    @RequirePermission("payment:submit")
+    public R<Map<String, Object>> batchSubmit(@Valid @RequestBody BatchSubmitReq req) {
         List<CreatePaymentCmd> commands = new ArrayList<>();
-        for (Map<String, Object> p : payments) {
-            CreatePaymentCmd cmd = new CreatePaymentCmd();
-            cmd.setCustomerId(p.get("customerId") != null
-                    ? Long.valueOf(p.get("customerId").toString()) : null);
-            cmd.setPaymentType((String) p.get("paymentType"));
-            cmd.setPayAmount(p.get("payAmount") != null
-                    ? new BigDecimal(p.get("payAmount").toString()) : null);
-            cmd.setPayCurrency((String) p.get("payCurrency"));
-            cmd.setBeneficiaryName((String) p.get("beneficiaryName"));
-            cmd.setBeneficiaryAccount((String) p.get("beneficiaryAccount"));
-            cmd.setBeneficiaryBank((String) p.get("beneficiaryBank"));
-            cmd.setBeneficiarySwift((String) p.get("beneficiarySwift"));
-            cmd.setBeneficiaryCountry((String) p.get("beneficiaryCountry"));
-            cmd.setReceivingBankCode((String) p.get("receivingBankCode"));
-            cmd.setPaymentPurpose((String) p.get("paymentPurpose"));
-            cmd.setChargeBearer((String) p.get("chargeBearer"));
-            commands.add(cmd);
+        for (CreatePaymentReq p : req.getPayments()) {
+            commands.add(toCmd(p));
         }
-        return R.ok(Map.of("channel", channel, "successCount",
-                batchPaymentService.processBatch(commands, channel).getSuccessCount()));
+        return R.ok(Map.of("channel", req.getChannel(), "successCount",
+                batchPaymentService.processBatch(commands, req.getChannel()).getSuccessCount()));
     }
 
     @Operation(summary = "验证SWIFT/BIC代码")
     @PostMapping("/validate/swift")
-    public R<Map<String, Object>> validateSwift(@RequestBody Map<String, String> body) {
-        String swiftCode = body.get("swiftCode");
-        boolean valid = bankCodeValidationService.validateSwiftCode(swiftCode);
-        String completed = bankCodeValidationService.autoCompleteBic(swiftCode, null);
-        return R.ok(Map.of("swiftCode", swiftCode, "valid", valid, "completed", completed != null ? completed : ""));
+    public R<Map<String, Object>> validateSwift(@Valid @RequestBody SwiftValidateReq req) {
+        boolean valid = bankCodeValidationService.validateSwiftCode(req.getSwiftCode());
+        String completed = bankCodeValidationService.autoCompleteBic(req.getSwiftCode(), null);
+        return R.ok(Map.of("swiftCode", req.getSwiftCode(), "valid", valid, "completed", completed != null ? completed : ""));
     }
 
     @Operation(summary = "验证IBAN")
     @PostMapping("/validate/iban")
-    public R<Map<String, Object>> validateIban(@RequestBody Map<String, String> body) {
-        String iban = body.get("iban");
-        boolean valid = bankCodeValidationService.validateIban(iban);
-        return R.ok(Map.of("iban", iban, "valid", valid));
+    public R<Map<String, Object>> validateIban(@Valid @RequestBody IbanValidateReq req) {
+        boolean valid = bankCodeValidationService.validateIban(req.getIban());
+        return R.ok(Map.of("iban", req.getIban(), "valid", valid));
     }
 
     @Operation(summary = "计算渠道费用")
     @PostMapping("/fee/calculate")
-    public R<Map<String, Object>> calculateFee(@RequestBody Map<String, Object> body) {
-        String channel = (String) body.get("channel");
-        String chargeBearer = (String) body.get("chargeBearer");
-        BigDecimal amount = body.get("amount") != null
-                ? new BigDecimal(body.get("amount").toString()) : BigDecimal.ZERO;
-        BigDecimal fee = bankCodeValidationService.calculateFee(channel, chargeBearer, amount);
-        return R.ok(Map.of("channel", channel, "chargeBearer", chargeBearer, "amount", amount, "fee", fee));
+    public R<Map<String, Object>> calculateFee(@Valid @RequestBody FeeCalculateReq req) {
+        BigDecimal fee = bankCodeValidationService.calculateFee(req.getChannel(), req.getChargeBearer(), req.getAmount());
+        return R.ok(Map.of("channel", req.getChannel(), "chargeBearer", req.getChargeBearer(), "amount", req.getAmount(), "fee", fee));
     }
 
     @Operation(summary = "校验结构化地址")
     @PostMapping("/validate/address")
-    public R<Map<String, Object>> validateAddress(@RequestBody Map<String, String> req) {
+    public R<Map<String, Object>> validateAddress(@Valid @RequestBody AddressValidateReq req) {
         List<String> missing = new ArrayList<>();
-        if (isBlank(req.get("country"))) missing.add("country");
-        if (isBlank(req.get("city"))) missing.add("city");
-        if (isBlank(req.get("streetName")) && isBlank(req.get("buildingNumber"))) missing.add("streetOrBuilding");
+        if (isBlank(req.getCountry())) missing.add("country");
+        if (isBlank(req.getCity())) missing.add("city");
+        if (isBlank(req.getStreetName()) && isBlank(req.getBuildingNumber())) missing.add("streetOrBuilding");
 
         Map<String, Object> result = new LinkedHashMap<>();
         result.put("valid", missing.isEmpty());
@@ -249,6 +234,23 @@ public class PaymentController {
     }
 
     private boolean isBlank(String s) { return s == null || s.isBlank(); }
+
+    private PaymentQuery toPaymentQuery(PaymentPageQuery req) {
+        PaymentQuery query = new PaymentQuery();
+        query.setPageNum(req.getPageNum());
+        query.setPageSize(req.getPageSize());
+        query.setPaymentNo(req.getPaymentNo());
+        query.setCustomerId(req.getCustomerId());
+        query.setPaymentDirection(req.getPaymentDirection());
+        query.setPaymentType(req.getPaymentType());
+        query.setPayCurrency(req.getPayCurrency());
+        query.setPaymentStatus(req.getPaymentStatus());
+        query.setChargeBearer(req.getChargeBearer());
+        query.setStartDate(req.getStartDate());
+        query.setEndDate(req.getEndDate());
+        query.setKeyword(req.getKeyword());
+        return query;
+    }
 
     private PaymentResp toResp(CrossBorderPayment payment) {
         PaymentResp resp = new PaymentResp();

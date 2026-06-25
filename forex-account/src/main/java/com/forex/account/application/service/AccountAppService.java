@@ -37,6 +37,7 @@ public class AccountAppService {
     private final TransactionRepository transactionRepository;
     private final ApplicationEventPublisher eventPublisher;
 
+    @RedisLock(key = "'open:' + #cmd.customerId + '_' + #cmd.currency")
     public ForexAccount openAccount(OpenAccountCmd cmd) {
         ForexAccount account = accountDomainService.openAccount(
                 cmd.getCustomerId(), cmd.getAccountType(), cmd.getCurrency(),
@@ -49,6 +50,7 @@ public class AccountAppService {
         return saved;
     }
 
+    @RedisLock(key = "#accountId")
     public void closeAccount(Long accountId) {
         ForexAccount account = accountRepository.findById(accountId)
                 .orElseThrow(() -> new BusinessException(ResultCode.ACCOUNT_NOT_FOUND));

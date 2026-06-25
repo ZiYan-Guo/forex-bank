@@ -6,9 +6,12 @@ import com.forex.common.security.util.UserInfo;
 
 import io.jsonwebtoken.Claims;
 
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+import org.springframework.util.AntPathMatcher;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -18,34 +21,39 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
+@Slf4j
 @Component
-/**
- * Token authentication filter for Spring MVC (non-Gateway) services.
- * Validates JWT and sets UserContext. Provides defense-in-depth when Gateway is bypassed.
- * Spring MVC用鉴权过滤器，自验证JWT并设置用户上下文。网关被绕过时的纵深防御。
- */
 @Order(Ordered.HIGHEST_PRECEDENCE + 10)
 public class TokenAuthenticationFilter extends OncePerRequestFilter {
 
     private static final String TOKEN_HEADER = "Authorization";
     private static final String TOKEN_PREFIX = "Bearer ";
-    private static final String USER_ID_HEADER = "X-User-Id";
-    private static final String USER_NAME_HEADER = "X-User-Name";
-    private static final String USER_ROLES_HEADER = "X-User-Roles";
-    private static final String USER_PERMISSIONS_HEADER = "X-User-Permissions";
+
+    private static final List<String> SKIP_URLS = Arrays.asList(
+            "/actuator/health",
+            "/actuator/info",
+            "/v3/api-docs",
+            "/swagger-resources",
+            "/webjars",
+            "/doc.html"
+    );
 
     private final JwtUtil jwtUtil;
+    private final AntPathMatcher pathMatcher = new AntPathMatcher();
 
     public TokenAuthenticationFilter(JwtUtil jwtUtil) {
         this.jwtUtil = jwtUtil;
     }
 
-    /**
-     * Filter each request - extract token, validate JWT, set ThreadLocal context.
-     * 每个请求过滤：提取token，校验JWT，设置线程级上下文。
-     */
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        String path = request.getRequestURI();
+        return SKIP_URLS.stream().anyMatch(p -> pathMatcher.match(p, path));
+    }
+
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {
@@ -69,6 +77,11 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
             userInfo.setPermissions(jwtUtil.getPermissions(claims));
             UserContextHolder.set(userInfo);
             filterChain.doFilter(request, response);
+        } catch (Exception e) {
+            log.warn("Token解析失败: {}", e.getMessage());
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            response.setContentType("application/json;charset=UTF-8");
+            response.getWriter().write("{\"code\":401,\"message\":\"无效或过期的令牌\"}");
         } finally {
             UserContextHolder.clear();
         }

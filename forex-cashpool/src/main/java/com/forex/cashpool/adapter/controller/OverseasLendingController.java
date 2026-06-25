@@ -24,6 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import com.forex.common.security.annotation.RequirePermission;
 
 /**
  * 境外放款控制器 - 负责境外放款合同的创建、审批、还款、查询等HTTP接口
@@ -41,6 +42,7 @@ public class OverseasLendingController {
      * Create overseas lending contract - Initialize contract, set status to DRAFT
      */
     @Operation(summary = "创建境外放款合同")
+    @RequirePermission("cashpool:create")
     @PostMapping("/create")
     public R<Map<String, Object>> createLending(@RequestBody Map<String, Object> req) {
         log.info("创建境外放款合同请求: {}", req);
@@ -79,6 +81,7 @@ public class OverseasLendingController {
      * Approve lending contract - Change contract status from SUBMITTED to APPROVED
      */
     @Operation(summary = "审批放款合同")
+    @RequirePermission("cashpool:approve")
     @PutMapping("/approve/{contractNo}")
     public R<Map<String, Object>> approveLending(@PathVariable String contractNo) {
         log.info("审批境外放款合同, contractNo: {}", contractNo);
@@ -95,6 +98,7 @@ public class OverseasLendingController {
      * Record repayment - Record repayment amount, reduce outstanding principal
      */
     @Operation(summary = "还款处理")
+    @RequirePermission("cashpool:repay")
     @PostMapping("/repay/{contractNo}")
     public R<Map<String, Object>> recordRepayment(@PathVariable String contractNo,
                                                    @RequestBody Map<String, Object> req) {
@@ -146,6 +150,7 @@ public class OverseasLendingController {
      * Paged query for lending contracts - Support paged query with filter conditions
      */
     @Operation(summary = "分页查询放款合同")
+    @RequirePermission("cashpool:page")
     @PostMapping("/page")
     public R<Map<String, Object>> queryLendingPage(@RequestBody Map<String, Object> req) {
         log.info("分页查询境外放款合同, 请求参数: {}", req);

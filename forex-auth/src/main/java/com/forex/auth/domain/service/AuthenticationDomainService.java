@@ -12,11 +12,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
+import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
 /** User authentication domain service. 用户认证领域服务。 */
+@Transactional
 public class AuthenticationDomainService {
 
     private static final int BCRYPT_ROUNDS = 12;

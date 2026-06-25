@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
 import java.util.Map;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "路由优选")
 @RestController
@@ -23,6 +24,7 @@ public class RouteController {
     private final RouteOptimizationService routeOptimizationService;
 
     @Operation(summary = "优化结算路由")
+    @RequirePermission("clearing:optimize")
     @PostMapping("/optimize")
     public R<SettlementRoute> optimize(@RequestBody Map<String, Object> body) {
         String payCurrency = (String) body.get("payCurrency");

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.util.*;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "AI汇率预测")
 @RestController
@@ -20,6 +21,7 @@ public class AiPredictionController {
     private final AiAppService aiAppService;
 
     @Operation(summary = "汇率预测")
+    @RequirePermission("ai:rate")
     @PostMapping("/rate")
     public R<Map<String, Object>> predictRate(@RequestBody Map<String, Object> req) {
         String currencyPair = (String) req.getOrDefault("currencyPair", "USD/CNY");
@@ -38,6 +40,7 @@ public class AiPredictionController {
     }
 
     @Operation(summary = "敞口预测")
+    @RequirePermission("ai:exposure")
     @PostMapping("/exposure")
     public R<List<Map<String, Object>>> predictExposure(@RequestBody Map<String, Object> req) {
         return R.ok(List.of(
@@ -53,6 +56,7 @@ public class AiPredictionController {
     }
 
     @Operation(summary = "更新预警配置")
+    @RequirePermission("ai:config")
     @PutMapping("/alert/config")
     public R<Void> updateAlertConfig(@RequestBody Map<String, Object> config) {
         return R.okMsg("预警配置已更新");

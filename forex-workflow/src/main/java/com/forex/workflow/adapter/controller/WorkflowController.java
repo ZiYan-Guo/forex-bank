@@ -26,6 +26,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import com.forex.common.security.annotation.RequirePermission;
 
 @Tag(name = "工作流管理")
 @RestController
@@ -36,6 +37,7 @@ public class WorkflowController {
     private final WorkflowAppService workflowAppService;
 
     @Operation(summary = "启动工作流")
+    @RequirePermission("workflow:start")
     @PostMapping("/start")
     @Idempotent(key = "'workflow:start:' + #req.bizNo", expireSeconds = 30)
     public R<WorkflowTaskResp> start(@Valid @RequestBody StartProcessReq req) {
@@ -51,6 +53,7 @@ public class WorkflowController {
     }
 
     @Operation(summary = "完成任务")
+    @RequirePermission("workflow:complete")
     @PostMapping("/complete/{taskId}")
     @RedisLock(key = "'workflow:complete:' + #taskId")
     public R<WorkflowTaskResp> complete(@PathVariable String taskId,
@@ -67,6 +70,7 @@ public class WorkflowController {
     }
 
     @Operation(summary = "分页查询任务")
+    @RequirePermission("workflow:page")
     @PostMapping("/task/page")
     public R<PageResp<WorkflowTaskResp>> pageQuery(@RequestBody WorkflowQuery query) {
         PageResp<WorkflowTask> pageResp = workflowAppService.pageQuery(query);

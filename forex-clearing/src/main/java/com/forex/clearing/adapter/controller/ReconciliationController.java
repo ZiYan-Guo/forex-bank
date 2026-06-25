@@ -21,6 +21,7 @@ import java.time.LocalDate;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import com.forex.common.security.annotation.RequirePermission;
 
 /**
  * Reconciliation controller for trade matching and SWIFT message generation.
@@ -36,6 +37,7 @@ public class ReconciliationController {
     private final SwiftMessageGenerator swiftMessageGenerator;
 
     @Operation(summary = "从CFETS导入交易确认数据")
+    @RequirePermission("clearing:import")
     @PostMapping("/cfets/import")
     public R<List<TradeConfirmation>> importFromCfets(@RequestParam(required = false) String tradeDate) {
         LocalDate date = tradeDate != null ? LocalDate.parse(tradeDate) : LocalDate.now();
@@ -43,12 +45,14 @@ public class ReconciliationController {
     }
 
     @Operation(summary = "自动匹配确认")
+    @RequirePermission("clearing:match")
     @PostMapping("/match")
     public R<String> autoMatch(@RequestBody Map<String, Object> req) {
         return R.ok("matching completed");
     }
 
     @Operation(summary = "SWIFT报文预览")
+    @RequirePermission("clearing:preview")
     @PostMapping("/swift/preview")
     public R<String> previewSwift(@RequestBody Map<String, Object> req) {
         String tradeNo = (String) req.getOrDefault("tradeNo", "FX0001");
@@ -59,6 +63,7 @@ public class ReconciliationController {
     }
 
     @Operation(summary = "手动MT→MX报文转换")
+    @RequirePermission("clearing:convert")
     @PostMapping("/convert")
     public R<Map<String, Object>> convertMessage(@RequestBody Map<String, String> req) {
         String sourceType = req.getOrDefault("sourceType", "MT103");

@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.TimeUnit;
+import com.forex.common.security.annotation.RequirePermission;
 
 /**
  * Authentication REST controller. Provides login, logout, token refresh and user info endpoints.
@@ -50,6 +51,7 @@ public class AuthController {
      * 登录接口。限流10次/60秒，5次失败锁定15分钟。
      */
     @Operation(summary = "用户登录")
+    @RequirePermission("auth:login")
     @PostMapping("/login")
     @RateLimit(key = "'login:ip:'", limit = 10, windowSeconds = 60)
     public R<TokenResp> login(@Valid @RequestBody LoginReq req) {
@@ -92,6 +94,7 @@ public class AuthController {
      * 刷新令牌，每次签发新的refresh token。
      */
     @Operation(summary = "刷新令牌")
+    @RequirePermission("auth:refresh")
     @PostMapping("/refresh")
     @RateLimit(key = "'refresh:ip:'", limit = 20, windowSeconds = 60)
     public R<TokenResp> refresh(@RequestHeader("Authorization") String authHeader) {
@@ -123,6 +126,7 @@ public class AuthController {
      * 登出，令牌加入黑名单。
      */
     @Operation(summary = "用户登出")
+    @RequirePermission("auth:logout")
     @PostMapping("/logout")
     public R<Void> logout(@RequestHeader("Authorization") String authHeader) {
         String token = authHeader.replace("Bearer ", "");

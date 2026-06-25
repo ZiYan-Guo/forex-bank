@@ -25,6 +25,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicLong;
+import com.forex.common.security.annotation.RequirePermission;
 
 /**
  * Payment scenario template controller.
@@ -114,6 +115,7 @@ public class PaymentTemplateController {
      * 创建新的支付场景模板。
      */
     @Operation(summary = "创建场景模板")
+    @RequirePermission("payment:create")
     @PostMapping("/create")
     public R<Map<String, Object>> createTemplate(@RequestBody Map<String, Object> body) {
         String templateName = (String) body.get("templateName");
@@ -187,6 +189,7 @@ public class PaymentTemplateController {
      * 更新支付模板。
      */
     @Operation(summary = "更新模板")
+    @RequirePermission("payment:write")
     @PutMapping("/{templateCode}")
     public R<Map<String, Object>> updateTemplate(@PathVariable String templateCode,
                                                   @RequestBody Map<String, Object> body) {
@@ -216,6 +219,7 @@ public class PaymentTemplateController {
      * 删除自定义模板（公开模板不可删除）。
      */
     @Operation(summary = "删除模板")
+    @RequirePermission("payment:write")
     @DeleteMapping("/{templateCode}")
     public R<Void> deleteTemplate(@PathVariable String templateCode) {
         log.info("Deleting template: templateCode={}", templateCode);

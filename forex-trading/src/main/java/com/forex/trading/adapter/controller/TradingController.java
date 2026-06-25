@@ -7,10 +7,12 @@ import com.forex.common.base.result.R;
 import com.forex.common.security.annotation.RequirePermission;
 import com.forex.trading.adapter.dto.CreateTradeReq;
 import com.forex.trading.adapter.dto.RollOverReq;
+import com.forex.trading.adapter.dto.TradePageQuery;
 import com.forex.trading.adapter.dto.TradeResp;
 import com.forex.trading.application.command.CreateTradeCmd;
 import com.forex.trading.application.service.TradingAppService;
 import com.forex.trading.domain.model.aggregate.FxTrade;
+import com.forex.trading.domain.model.query.TradeQuery;
 import com.forex.trading.domain.model.query.TradeQuery;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -80,7 +82,8 @@ public class TradingController {
 
     @Operation(summary = "分页查询交易")
     @PostMapping("/page")
-    public R<PageResp<TradeResp>> pageQuery(@RequestBody TradeQuery query) {
+    public R<PageResp<TradeResp>> pageQuery(@RequestBody TradePageQuery req) {
+        TradeQuery query = toTradeQuery(req);
         PageResp<FxTrade> page = tradingAppService.pageQuery(query);
         PageResp<TradeResp> result = PageResp.of(
                 page.getTotal(),
@@ -147,6 +150,20 @@ public class TradingController {
     public R<Void> cancel(@PathVariable String tradeNo, @RequestParam String reason) {
         tradingAppService.cancelTrade(tradeNo, reason);
         return R.okMsg("交易已取消");
+    }
+
+    private TradeQuery toTradeQuery(TradePageQuery req) {
+        TradeQuery query = new TradeQuery();
+        query.setPageNum(req.getPageNum());
+        query.setPageSize(req.getPageSize());
+        query.setTradeNo(req.getTradeNo());
+        query.setCustomerId(req.getCustomerId());
+        query.setTradeType(req.getTradeType());
+        query.setTradeStatus(req.getTradeStatus());
+        query.setDealType(req.getDealType());
+        query.setStartDate(req.getStartDate());
+        query.setEndDate(req.getEndDate());
+        return query;
     }
 
     private CreateTradeCmd toCmd(CreateTradeReq req) {

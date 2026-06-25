@@ -11,11 +11,13 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
 /** Derivative valuation domain service. Calculates fair value and P&L. 衍生品估值领域服务。 */
+@Transactional
 public class ValuationDomainService {
 
     private final ValuationResultRepository valuationResultRepository;
