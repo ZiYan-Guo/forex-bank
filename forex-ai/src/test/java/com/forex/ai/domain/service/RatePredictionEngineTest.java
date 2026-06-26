@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import com.forex.common.base.exception.BusinessException;
 
 class RatePredictionEngineTest {
 
@@ -35,7 +36,7 @@ class RatePredictionEngineTest {
     @Test
     @DisplayName("Predict throws for less than 2 data points")
     void testPredict_InsufficientData() {
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(BusinessException.class,
                 () -> engine.predict("EUR/USD", "DAILY", List.of(new BigDecimal("1.10"))));
     }
 

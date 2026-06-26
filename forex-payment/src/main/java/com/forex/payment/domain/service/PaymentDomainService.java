@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import org.springframework.transaction.annotation.Transactional;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Slf4j
 @Service
@@ -89,7 +91,7 @@ public class PaymentDomainService {
 
     public BigDecimal calculateFees(BigDecimal amount, String chargeBearer) {
         if (amount == null || amount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("金额必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "金额必须大于0");
         }
         BigDecimal feeRate = getFeeRate(chargeBearer);
         return amount.multiply(feeRate).setScale(2, RoundingMode.HALF_UP);
@@ -97,10 +99,10 @@ public class PaymentDomainService {
 
     public BigDecimal calculateSettlementAmount(BigDecimal payAmount, BigDecimal exchangeRate) {
         if (payAmount == null || payAmount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("支付金额必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "支付金额必须大于0");
         }
         if (exchangeRate == null || exchangeRate.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("汇率必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "汇率必须大于0");
         }
         return payAmount.multiply(exchangeRate).setScale(2, RoundingMode.HALF_UP);
     }

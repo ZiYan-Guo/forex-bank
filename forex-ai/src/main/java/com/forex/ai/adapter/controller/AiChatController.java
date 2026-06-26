@@ -14,6 +14,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 import com.forex.common.security.annotation.RequirePermission;
+import com.forex.ai.adapter.dto.CreateSessionReq;
+import com.forex.ai.adapter.dto.GenerateAiReportReq;
+import com.forex.ai.adapter.dto.NlTradeReq;
+import com.forex.ai.adapter.dto.HedgingRecommendReq;
 
 @Tag(name = "AI智能客服")
 @RestController

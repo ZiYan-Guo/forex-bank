@@ -4,6 +4,7 @@ import com.forex.ai.domain.repository.*;
 import com.forex.ai.domain.service.AiDomainService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -11,6 +12,7 @@ import java.util.*;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class AiAppService {
 
     private final AiDomainService aiDomainService;

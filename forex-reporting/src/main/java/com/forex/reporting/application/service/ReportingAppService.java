@@ -21,6 +21,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.UUID;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Service
 @RequiredArgsConstructor
@@ -74,14 +76,14 @@ public class ReportingAppService {
     public void submitBatch(String reportType, List<String> reportNos) {
         for (String reportNo : reportNos) {
             BopReport report = bopReportRepository.findByReportNo(reportNo)
-                    .orElseThrow(() -> new IllegalArgumentException("申报报告不存在: " + reportNo));
+                    .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "申报报告不存在: " + reportNo));
             reportingDomainService.markAsSubmitted(report);
         }
     }
 
     public BopReport getBopReport(String reportNo) {
         return bopReportRepository.findByReportNo(reportNo)
-                .orElseThrow(() -> new IllegalArgumentException("BOP申报不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "BOP申报不存在"));
     }
 
     public PageResp<BopReport> pageQuery(ReportQuery query) {

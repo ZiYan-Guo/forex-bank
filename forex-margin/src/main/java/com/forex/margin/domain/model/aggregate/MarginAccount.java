@@ -6,6 +6,8 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 /** Margin account aggregate root. 保证金账户聚合根。 */
@@ -72,7 +74,7 @@ public class MarginAccount extends BaseAggregate {
 
     public void partialPay(BigDecimal amount) {
         if (amount == null || amount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("存入金额必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "存入金额必须大于0");
         }
         this.depositedAmount = this.depositedAmount.add(amount);
         this.shortfallAmount = calculateShortfall();
@@ -82,7 +84,7 @@ public class MarginAccount extends BaseAggregate {
 
     public void cancel(String reason) {
         if (!"PENDING".equals(this.status) && !"CALLED".equals(this.status)) {
-            throw new IllegalArgumentException("只有待缴或追缴状态的保证金才能取消");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "只有待缴或追缴状态的保证金才能取消");
         }
         this.status = "CANCELLED";
         this.releaseReason = reason;
@@ -131,7 +133,7 @@ public class MarginAccount extends BaseAggregate {
     /** Deposit margin. Transitions to SUFFICIENT when fully covered. 存入保证金。 */
     public void deposit(BigDecimal amount) {
         if (amount == null || amount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("存入保证金金额必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "存入保证金金额必须大于0");
         }
         this.depositedAmount = this.depositedAmount.add(amount);
         this.shortfallAmount = calculateShortfall();
@@ -144,13 +146,13 @@ public class MarginAccount extends BaseAggregate {
     /** Release margin. Only allowed when sufficient. Validates remaining shortfall. 释放保证金，需足额。 */
     public void release(BigDecimal amount, String reason) {
         if (amount == null || amount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("释放保证金金额必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "释放保证金金额必须大于0");
         }
         if (this.depositedAmount.compareTo(amount) < 0) {
-            throw new IllegalArgumentException("已存保证金不足，无法释放");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "已存保证金不足，无法释放");
         }
         if (!"SUFFICIENT".equals(this.status) && !"PAID".equals(this.status)) {
-            throw new IllegalArgumentException("只有足额保证金才能释放");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "只有足额保证金才能释放");
         }
         this.depositedAmount = this.depositedAmount.subtract(amount);
         this.shortfallAmount = calculateShortfall();
@@ -166,7 +168,7 @@ public class MarginAccount extends BaseAggregate {
     /** Issue margin call for additional amount. 追缴保证金。 */
     public void call(BigDecimal additionalAmount) {
         if (additionalAmount == null || additionalAmount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("追加保证金金额必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "追加保证金金额必须大于0");
         }
         this.requiredAmount = this.requiredAmount.add(additionalAmount);
         this.shortfallAmount = calculateShortfall();
@@ -194,16 +196,16 @@ public class MarginAccount extends BaseAggregate {
     @Override
     protected void validate() {
         if (customerId == null) {
-            throw new IllegalArgumentException("客户ID不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "客户ID不能为空");
         }
         if (marginType == null || marginType.isBlank()) {
-            throw new IllegalArgumentException("保证金类型不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "保证金类型不能为空");
         }
         if (marginCurrency == null || marginCurrency.isBlank()) {
-            throw new IllegalArgumentException("保证金币种不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "保证金币种不能为空");
         }
         if (requiredAmount == null || requiredAmount.compareTo(BigDecimal.ZERO) < 0) {
-            throw new IllegalArgumentException("保证金要求金额不能为负数");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "保证金要求金额不能为负数");
         }
     }
 }

@@ -6,6 +6,8 @@ import com.forex.common.base.domain.BaseValueObject;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 @AllArgsConstructor
@@ -22,11 +24,11 @@ public class CurrencyPair extends BaseValueObject {
 
     public static CurrencyPair parse(String pair) {
         if (pair == null || pair.isBlank()) {
-            throw new IllegalArgumentException("Currency pair must not be blank");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "Currency pair must not be blank");
         }
         String[] parts = pair.split("_");
         if (parts.length != 2) {
-            throw new IllegalArgumentException("Invalid currency pair format: " + pair + ", expected format: BASE_QUOTE (e.g. USD_CNY)");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "Invalid currency pair format: " + pair + ", expected format: BASE_QUOTE (e.g. USD_CNY)");
         }
         return new CurrencyPair(parts[0].toUpperCase(), parts[1].toUpperCase());
     }

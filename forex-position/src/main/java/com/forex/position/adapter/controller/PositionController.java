@@ -7,6 +7,7 @@ import com.forex.position.application.command.PositionCmd;
 import com.forex.position.application.service.ExposureAnalysisService;
 import com.forex.position.application.service.PositionAppService;
 import com.forex.position.domain.model.aggregate.Position;
+import com.forex.position.adapter.dto.PositionPageQuery;
 import com.forex.position.domain.model.query.PositionQuery;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -28,6 +29,9 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import com.forex.common.security.annotation.RequirePermission;
+import com.forex.position.adapter.dto.HeatmapReq;
+import com.forex.position.adapter.dto.MaturityLadderReq;
+import com.forex.position.adapter.dto.MultiDimAnalysisReq;
 
 @Tag(name = "敞口管理")
 @RestController
@@ -66,7 +70,16 @@ public class PositionController {
     @Operation(summary = "分页查询头寸")
     @RequirePermission("position:page")
     @PostMapping("/page")
-    public R<PageResp<PositionResp>> pageQuery(@RequestBody PositionQuery query) {
+    public R<PageResp<PositionResp>> pageQuery(@RequestBody PositionPageQuery req) {
+        PositionQuery query = new PositionQuery();
+        query.setPageNum(req.getPageNum());
+        query.setPageSize(req.getPageSize());
+        query.setCurrencyPair(req.getCurrencyPair());
+        query.setPositionType(req.getPositionType());
+        query.setPositionCurrency(req.getPositionCurrency());
+        query.setPositionDate(req.getPositionDate());
+        query.setRiskLevel(req.getRiskLevel());
+        query.setTraderId(req.getTraderId());
         PageResp<Position> page = positionAppService.pageQuery(query);
         List<PositionResp> respList = page.getRecords().stream()
                 .map(this::toPositionResp)
@@ -95,12 +108,10 @@ public class PositionController {
     @RequirePermission("position:multi-dim")
     @PostMapping("/analysis/multi-dim")
     public R<ExposureAnalysisService.ExposureAnalysisResult> multiDimAnalysis(
-            @RequestBody Map<String, Object> request) {
-        LocalDate date = LocalDate.parse((String) request.get("date"));
-        @SuppressWarnings("unchecked")
-        List<String> dimensions = (List<String>) request.get("dimensions");
-        @SuppressWarnings("unchecked")
-        List<String> currencies = (List<String>) request.get("currencies");
+            @RequestBody MultiDimAnalysisReq request) {
+        LocalDate date = LocalDate.parse(request.getDate());
+        List<String> dimensions = request.getDimensions();
+        List<String> currencies = request.getCurrencies();
         ExposureAnalysisService.ExposureAnalysisResult result = exposureAnalysisService.analyze(
                 date,
                 dimensions.toArray(new String[0]),
@@ -110,20 +121,20 @@ public class PositionController {
 
     @Operation(summary = "到期日阶梯分析")
     @RequirePermission("position:maturity-ladder")
-    @PostMapping("/analysis/maturity-ladder")
+     @PostMapping("/analysis/maturity-ladder")
     public R<ExposureAnalysisService.MaturityLadder> maturityLadder(
-            @RequestBody Map<String, Object> request) {
-        LocalDate date = LocalDate.parse((String) request.get("date"));
+            @RequestBody MaturityLadderReq request) {
+        LocalDate date = LocalDate.parse(request.getDate());
         ExposureAnalysisService.MaturityLadder result = exposureAnalysisService.analyzeMaturityLadder(date);
         return R.ok(result);
     }
 
     @Operation(summary = "敞口热力图")
     @RequirePermission("position:heatmap")
-    @PostMapping("/analysis/heatmap")
+     @PostMapping("/analysis/heatmap")
     public R<ExposureAnalysisService.HeatmapData> heatmap(
-            @RequestBody Map<String, Object> request) {
-        LocalDate date = LocalDate.parse((String) request.get("date"));
+            @RequestBody HeatmapReq request) {
+        LocalDate date = LocalDate.parse(request.getDate());
         ExposureAnalysisService.HeatmapData result = exposureAnalysisService.generateHeatmap(date);
         return R.ok(result);
     }

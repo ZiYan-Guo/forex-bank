@@ -5,6 +5,8 @@ import com.forex.common.base.domain.BaseAggregate;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class Customer extends BaseAggregate {
@@ -123,10 +125,10 @@ public class Customer extends BaseAggregate {
     @Override
     protected void validate() {
         if (customerName == null || customerName.isBlank()) {
-            throw new IllegalArgumentException("客户名称不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "客户名称不能为空");
         }
         if (customerType == null) {
-            throw new IllegalArgumentException("客户类型不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "客户类型不能为空");
         }
     }
 }

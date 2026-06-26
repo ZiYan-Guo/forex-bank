@@ -1,6 +1,8 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/BookkeepingApplication.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/dto/EntryResp.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/dto/JournalPageQuery.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/dto/RevaluationReq.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/command/CreateEntryCmd.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/event/EntryPostedEvent.java

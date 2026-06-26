@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.math.BigDecimal;
 import java.util.Map;
 import com.forex.common.security.annotation.RequirePermission;
+import com.forex.clearing.adapter.dto.RouteOptimizeReq;
 
 @Tag(name = "路由优选")
 @RestController
@@ -26,12 +27,12 @@ public class RouteController {
     @Operation(summary = "优化结算路由")
     @RequirePermission("clearing:optimize")
     @PostMapping("/optimize")
-    public R<SettlementRoute> optimize(@RequestBody Map<String, Object> body) {
-        String payCurrency = (String) body.get("payCurrency");
-        String receiveCurrency = (String) body.get("receiveCurrency");
-        BigDecimal amount = body.get("amount") != null
-                ? new BigDecimal(body.get("amount").toString()) : BigDecimal.ZERO;
-        String country = (String) body.get("country");
+    public R<SettlementRoute> optimize(@RequestBody RouteOptimizeReq body) {
+        String payCurrency = (String) body.getReceiveCurrency();
+        String receiveCurrency = (String) body.getAmount();
+        BigDecimal amount = body.getPayCurrency() != null
+                ? new BigDecimal(body.getPayCurrency().toString()) : BigDecimal.ZERO;
+        String country = (String) body.getCountry();
         SettlementRoute route = routeOptimizationService.optimizeRoute(
                 payCurrency, receiveCurrency, amount, country);
         return R.ok(route);

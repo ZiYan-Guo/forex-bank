@@ -6,6 +6,8 @@ import lombok.Getter;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class OcrTask extends BaseAggregate {
@@ -79,10 +81,10 @@ public class OcrTask extends BaseAggregate {
     @Override
     protected void validate() {
         if (docType == null || docType.isBlank()) {
-            throw new IllegalArgumentException("单据类型不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "单据类型不能为空");
         }
         if (fileName == null || fileName.isBlank()) {
-            throw new IllegalArgumentException("文件名不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "文件名不能为空");
         }
     }
 }

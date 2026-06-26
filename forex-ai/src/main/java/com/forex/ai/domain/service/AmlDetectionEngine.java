@@ -10,9 +10,11 @@ import org.springframework.stereotype.Service;
 import com.forex.ai.domain.model.aggregate.RiskAiAssessment;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Slf4j
+@Transactional
 public class AmlDetectionEngine {
 
     public RiskAiAssessment evaluateTransaction(Long customerId, String bizNo, BigDecimal amount,

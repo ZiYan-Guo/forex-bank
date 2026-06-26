@@ -15,6 +15,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.ThreadLocalRandom;
 import org.springframework.transaction.annotation.Transactional;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Slf4j
 @Service
@@ -28,7 +30,7 @@ public class CustomerDomainService {
     public Customer createCustomer(CustomerRegInfo info) {
         if (info.getCertType() != null && info.getCertNo() != null
                 && customerRepository.existsByCertNo(info.getCertType(), info.getCertNo())) {
-            throw new IllegalArgumentException("证件信息已存在");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "证件信息已存在");
         }
 
         String customerNo = generateCustomerNo();

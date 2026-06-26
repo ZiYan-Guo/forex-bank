@@ -7,6 +7,8 @@ import java.util.UUID;
 import com.forex.common.base.domain.BaseAggregate;
 
 import lombok.Getter;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class DocumentAudit extends BaseAggregate {
@@ -74,7 +76,7 @@ public class DocumentAudit extends BaseAggregate {
 
     public void markDiscrepancy(String detail) {
         if (detail == null || detail.isBlank()) {
-            throw new IllegalArgumentException("discrepancy detail must not be blank");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "discrepancy detail must not be blank");
         }
         this.isConsistent = false;
         this.discrepancyDetail = detail;
@@ -99,10 +101,10 @@ public class DocumentAudit extends BaseAggregate {
     @Override
     protected void validate() {
         if (bizNo == null || bizNo.isBlank()) {
-            throw new IllegalArgumentException("bizNo must not be blank");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "bizNo must not be blank");
         }
         if (docType == null || docType.isBlank()) {
-            throw new IllegalArgumentException("docType must not be blank");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "docType must not be blank");
         }
     }
 }

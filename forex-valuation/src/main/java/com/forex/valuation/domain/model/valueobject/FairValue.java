@@ -5,6 +5,8 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class FairValue extends BaseValueObject {
@@ -13,7 +15,7 @@ public class FairValue extends BaseValueObject {
 
     private FairValue(BigDecimal value) {
         if (value == null) {
-            throw new IllegalArgumentException("公允价值不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "公允价值不能为空");
         }
         this.value = value;
     }
@@ -28,14 +30,14 @@ public class FairValue extends BaseValueObject {
 
     public FairValue add(FairValue other) {
         if (other == null) {
-            throw new IllegalArgumentException("加数不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "加数不能为空");
         }
         return new FairValue(this.value.add(other.value));
     }
 
     public FairValue subtract(FairValue other) {
         if (other == null) {
-            throw new IllegalArgumentException("减数不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "减数不能为空");
         }
         return new FairValue(this.value.subtract(other.value));
     }

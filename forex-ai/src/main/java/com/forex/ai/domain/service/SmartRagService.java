@@ -9,10 +9,12 @@ import com.forex.ai.infrastructure.rag.KnowledgeBaseInitializer;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Slf4j
 @RequiredArgsConstructor
+@Transactional
 public class SmartRagService {
 
     private final KnowledgeBaseInitializer knowledgeBaseInitializer;

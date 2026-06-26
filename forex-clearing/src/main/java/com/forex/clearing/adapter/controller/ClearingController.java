@@ -4,6 +4,7 @@ import com.forex.clearing.adapter.dto.ClearingResp;
 import com.forex.clearing.application.command.GenerateClearingCmd;
 import com.forex.clearing.application.service.ClearingAppService;
 import com.forex.clearing.domain.model.aggregate.ClearingInstruction;
+import com.forex.clearing.adapter.dto.ClearingPageQuery;
 import com.forex.clearing.domain.model.query.ClearingQuery;
 import com.forex.common.base.annotation.Idempotent;
 import com.forex.common.base.annotation.RedisLock;
@@ -91,7 +92,19 @@ public class ClearingController {
     @Operation(summary = "分页查询清算指令")
     @RequirePermission("clearing:page")
     @PostMapping("/page")
-    public R<PageResp<ClearingResp>> pageQuery(@Valid @RequestBody ClearingQuery query) {
+    public R<PageResp<ClearingResp>> pageQuery(@Valid @RequestBody ClearingPageQuery req) {
+        ClearingQuery query = new ClearingQuery();
+        query.setPageNum(req.getPageNum());
+        query.setPageSize(req.getPageSize());
+        query.setInstructionNo(req.getInstructionNo());
+        query.setClearingChannel(req.getClearingChannel());
+        query.setInstructionStatus(req.getInstructionStatus());
+        query.setValueDate(req.getValueDate());
+        query.setBizType(req.getBizType());
+        query.setBizNo(req.getBizNo());
+        query.setSettlementType(req.getSettlementType());
+        query.setStartDate(req.getStartDate());
+        query.setEndDate(req.getEndDate());
         PageResp<ClearingInstruction> page = clearingAppService.pageQuery(query);
         List<ClearingResp> respList = page.getRecords().stream()
                 .map(this::toClearingResp)

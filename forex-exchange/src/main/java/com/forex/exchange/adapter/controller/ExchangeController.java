@@ -18,7 +18,6 @@ import com.forex.exchange.domain.model.query.ExchangeOrderQuery;
 import com.forex.exchange.application.service.ExchangeAppService;
 import com.forex.exchange.domain.model.aggregate.ExchangeOrder;
 import com.forex.exchange.domain.model.entity.ExchangeQuote;
-import com.forex.exchange.domain.model.query.ExchangeOrderQuery;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

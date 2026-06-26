@@ -13,7 +13,6 @@ import com.forex.settlement.application.command.CreateLcCmd;
 import com.forex.settlement.application.service.SettlementAppService;
 import com.forex.settlement.domain.model.aggregate.LetterOfCredit;
 import com.forex.settlement.domain.model.query.LcQuery;
-import com.forex.settlement.domain.model.query.LcQuery;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

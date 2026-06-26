@@ -8,6 +8,7 @@ import com.forex.margin.adapter.dto.MarginResp;
 import com.forex.margin.application.command.CreateMarginCmd;
 import com.forex.margin.application.service.MarginAppService;
 import com.forex.margin.domain.model.aggregate.MarginAccount;
+import com.forex.margin.adapter.dto.MarginPageQuery;
 import com.forex.margin.domain.model.query.MarginQuery;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -89,7 +90,15 @@ public class MarginController {
     @Operation(summary = "分页查询保证金")
     @RequirePermission("margin:page")
     @PostMapping("/page")
-    public R<PageResp<MarginResp>> pageQuery(@RequestBody MarginQuery query) {
+    public R<PageResp<MarginResp>> pageQuery(@RequestBody MarginPageQuery req) {
+        MarginQuery query = new MarginQuery();
+        query.setPageNum(req.getPageNum());
+        query.setPageSize(req.getPageSize());
+        query.setCustomerId(req.getCustomerId());
+        query.setTradeId(req.getTradeId());
+        query.setMarginNo(req.getMarginNo());
+        query.setMarginType(req.getMarginType());
+        query.setStatus(req.getStatus());
         PageResp<MarginAccount> page = marginAppService.pageQuery(query);
         List<MarginResp> respList = page.getRecords().stream()
                 .map(this::toMarginResp)

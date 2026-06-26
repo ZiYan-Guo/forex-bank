@@ -25,6 +25,8 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import com.forex.common.security.annotation.RequirePermission;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Tag(name = "PVP结算")
 @RestController
@@ -58,7 +60,7 @@ public class PvpController {
     @GetMapping("/pair/{pairId}")
     public R<PvpSettlementPair> getPvpPairDetail(@PathVariable String pairId) {
         PvpSettlementPair pair = pvpSettlementRepository.findByPairId(pairId)
-                .orElseThrow(() -> new IllegalArgumentException("PVP pair not found"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "PVP pair not found"));
         return R.ok(pair);
     }
 
@@ -90,7 +92,7 @@ public class PvpController {
     @GetMapping("/cls/session/today")
     public R<ClsSession> getTodaySession() {
         ClsSession session = clsSessionRepository.findBySettlementDate(LocalDate.now())
-                .orElseThrow(() -> new IllegalArgumentException("No CLS session for today"));
+                .orElseThrow(() -> new BusinessException(ResultCode.VALIDATE_FAIL, "No CLS session for today"));
         return R.ok(session);
     }
 

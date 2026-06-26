@@ -5,6 +5,8 @@ import com.forex.common.base.domain.BaseAggregate;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class ScheduleJob extends BaseAggregate {
@@ -74,13 +76,13 @@ public class ScheduleJob extends BaseAggregate {
     @Override
     protected void validate() {
         if (jobName == null || jobName.isBlank()) {
-            throw new IllegalArgumentException("任务名称不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "任务名称不能为空");
         }
         if (jobHandler == null || jobHandler.isBlank()) {
-            throw new IllegalArgumentException("任务处理器不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "任务处理器不能为空");
         }
         if (cronExpression == null || cronExpression.isBlank()) {
-            throw new IllegalArgumentException("Cron表达式不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "Cron表达式不能为空");
         }
     }
 }

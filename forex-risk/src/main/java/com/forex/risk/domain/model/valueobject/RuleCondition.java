@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 @NoArgsConstructor
@@ -28,7 +30,7 @@ public class RuleCondition extends BaseValueObject {
         try {
             return OBJECT_MAPPER.readValue(json, RuleCondition.class);
         } catch (Exception e) {
-            throw new IllegalArgumentException("Failed to parse RuleCondition from JSON: " + json, e);
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "Failed to parse RuleCondition from JSON: " + json, e);
         }
     }
 

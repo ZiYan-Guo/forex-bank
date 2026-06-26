@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Service
 @RequiredArgsConstructor
@@ -32,28 +34,28 @@ public class MarginAppService {
     @Transactional
     public MarginAccount callMargin(String marginNo, BigDecimal amount) {
         MarginAccount account = marginAccountRepository.findByMarginNo(marginNo)
-                .orElseThrow(() -> new IllegalArgumentException("保证金账户不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "保证金账户不存在"));
         return marginDomainService.callMargin(account, amount);
     }
 
     @Transactional
     public MarginAccount releaseMargin(String marginNo, BigDecimal amount, String reason) {
         MarginAccount account = marginAccountRepository.findByMarginNo(marginNo)
-                .orElseThrow(() -> new IllegalArgumentException("保证金账户不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "保证金账户不存在"));
         return marginDomainService.releaseMargin(account, amount, reason);
     }
 
     @Transactional
     public MarginAccount depositMargin(String marginNo, BigDecimal amount) {
         MarginAccount account = marginAccountRepository.findByMarginNo(marginNo)
-                .orElseThrow(() -> new IllegalArgumentException("保证金账户不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "保证金账户不存在"));
         account.deposit(amount);
         return marginAccountRepository.save(account);
     }
 
     public MarginAccount getMarginDetail(String marginNo) {
         return marginAccountRepository.findByMarginNo(marginNo)
-                .orElseThrow(() -> new IllegalArgumentException("保证金账户不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "保证金账户不存在"));
     }
 
     public PageResp<MarginAccount> pageQuery(MarginQuery query) {

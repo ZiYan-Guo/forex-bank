@@ -24,6 +24,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Service
 @RequiredArgsConstructor
@@ -58,7 +60,7 @@ public class CustomerAppService {
     @Transactional
     public Customer updateCustomer(UpdateCustomerCmd cmd) {
         Customer customer = customerRepository.findById(CustomerId.of(cmd.getCustomerId()))
-                .orElseThrow(() -> new IllegalArgumentException("客户不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "客户不存在"));
         if (cmd.getCustomerName() != null) {
             // update fields would go here
         }
@@ -69,20 +71,20 @@ public class CustomerAppService {
     @Transactional
     public void updateRiskLevel(Long customerId, Integer newLevel, String reason) {
         Customer customer = customerRepository.findById(CustomerId.of(customerId))
-                .orElseThrow(() -> new IllegalArgumentException("客户不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "客户不存在"));
         customerDomainService.updateRiskLevel(customer, newLevel, reason);
     }
 
     @Transactional
     public void performDueDiligence(Long customerId) {
         Customer customer = customerRepository.findById(CustomerId.of(customerId))
-                .orElseThrow(() -> new IllegalArgumentException("客户不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "客户不存在"));
         customerDomainService.performDueDiligence(customer);
     }
 
     public CustomerDetailDTO getCustomerDetail(Long customerId) {
         Customer customer = customerRepository.findById(CustomerId.of(customerId))
-                .orElseThrow(() -> new IllegalArgumentException("客户不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "客户不存在"));
         List<CreditLimit> limits = creditLimitRepository.findByCustomerId(customerId);
         return toDetailDTO(customer, limits);
     }

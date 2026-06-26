@@ -14,6 +14,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import org.springframework.transaction.annotation.Transactional;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Slf4j
 @Service
@@ -39,14 +41,14 @@ public class WorkflowDomainService {
 
     public WorkflowTask completeTask(String taskId, String approveResult, String comment) {
         WorkflowTask task = workflowTaskRepository.findByTaskId(taskId)
-                .orElseThrow(() -> new IllegalArgumentException("任务不存在: " + taskId));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "任务不存在: " + taskId));
 
         if ("APPROVED".equals(approveResult)) {
             task.approve(comment);
         } else if ("REJECTED".equals(approveResult)) {
             task.reject(comment);
         } else {
-            throw new IllegalArgumentException("不支持的审批结果: " + approveResult);
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "不支持的审批结果: " + approveResult);
         }
 
         WorkflowTask saved = workflowTaskRepository.save(task);
@@ -56,7 +58,7 @@ public class WorkflowDomainService {
 
     public WorkflowTask getTask(String taskId) {
         return workflowTaskRepository.findByTaskId(taskId)
-                .orElseThrow(() -> new IllegalArgumentException("任务不存在: " + taskId));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "任务不存在: " + taskId));
     }
 
     public List<WorkflowTask> getTasksByAssignee(String assignee) {

@@ -5,6 +5,8 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class PaymentChannel extends BaseValueObject {
@@ -21,7 +23,7 @@ public class PaymentChannel extends BaseValueObject {
                           BigDecimal exchangeRateMargin, String cutOffTime, boolean sameDaySettlement,
                           BigDecimal maxAmount) {
         if (channelCode == null || channelCode.isBlank()) {
-            throw new IllegalArgumentException("渠道代码不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "渠道代码不能为空");
         }
         this.channelCode = channelCode;
         this.channelName = channelName;

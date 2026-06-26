@@ -7,10 +7,14 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.stereotype.Service;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
+import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class ConfirmationWorkflowService {
 
     private final TradeConfirmationRepository confirmationRepository;
@@ -22,7 +26,7 @@ public class ConfirmationWorkflowService {
      */
     public void resolveIntervention(String confirmId, String action, String comment, Long operatorId) {
         TradeConfirmation cfm = confirmationRepository.findByConfirmId(confirmId)
-                .orElseThrow(() -> new IllegalArgumentException("Confirmation not found"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "Confirmation not found"));
         cfm.resolve(action, comment);
         confirmationRepository.save(cfm);
         log.info("Confirmation resolved: confirmId={}, action={}, operator={}", confirmId, action, operatorId);

@@ -1,3 +1,4 @@
+com/forex/reporting/adapter/dto/ReportPageQuery.class
 com/forex/reporting/infrastructure/repository/CapitalReportRepositoryImpl.class
 com/forex/reporting/application/service/ReportingAppService.class
 com/forex/reporting/application/command/CapitalReportCmd.class

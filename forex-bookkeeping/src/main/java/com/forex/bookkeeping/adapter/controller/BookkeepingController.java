@@ -5,6 +5,7 @@ import com.forex.bookkeeping.application.command.CreateEntryCmd;
 import com.forex.bookkeeping.application.service.BookkeepingAppService;
 import com.forex.bookkeeping.domain.model.aggregate.JournalEntry;
 import com.forex.bookkeeping.domain.model.aggregate.MonthEndClosing;
+import com.forex.bookkeeping.adapter.dto.JournalPageQuery;
 import com.forex.bookkeeping.domain.model.query.JournalQuery;
 import com.forex.bookkeeping.domain.service.MonthEndClosingService;
 import com.forex.bookkeeping.domain.service.RevaluationEntryService;
@@ -30,6 +31,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import com.forex.common.security.annotation.RequirePermission;
+import com.forex.bookkeeping.adapter.dto.RevaluationReq;
 
 @Tag(name = "簿记核算")
 @RestController
@@ -79,7 +81,20 @@ public class BookkeepingController {
     @Operation(summary = "分页查询记账分录")
     @RequirePermission("bookkeeping:page")
     @PostMapping("/entry/page")
-    public R<PageResp<EntryResp>> pageQuery(@Valid @RequestBody JournalQuery query) {
+    public R<PageResp<EntryResp>> pageQuery(@Valid @RequestBody JournalPageQuery req) {
+        JournalQuery query = new JournalQuery();
+        query.setPageNum(req.getPageNum());
+        query.setPageSize(req.getPageSize());
+        query.setVoucherNo(req.getVoucherNo());
+        query.setVoucherDate(req.getVoucherDate());
+        query.setFiscalPeriod(req.getFiscalPeriod());
+        query.setBizType(req.getBizType());
+        query.setEntryStatus(req.getEntryStatus());
+        query.setAccountCode(req.getAccountCode());
+        query.setEntryDirection(req.getEntryDirection());
+        query.setCurrency(req.getCurrency());
+        query.setStartDate(req.getStartDate());
+        query.setEndDate(req.getEndDate());
         PageResp<JournalEntry> page = bookkeepingAppService.pageQuery(query);
         List<EntryResp> respList = page.getRecords().stream()
                 .map(this::toEntryResp)
@@ -92,15 +107,14 @@ public class BookkeepingController {
     @Operation(summary = "生成外币重估分录")
     @RequirePermission("bookkeeping:revaluation")
     @PostMapping("/revaluation")
-    public R<List<EntryResp>> revaluation(@RequestBody Map<String, Object> request) {
-        @SuppressWarnings("unchecked")
-        List<Map<String, Object>> currencies = (List<Map<String, Object>>) request.get("currencies");
+    public R<List<EntryResp>> revaluation(@RequestBody RevaluationReq request) {
+        List<RevaluationReq.CurrencyBalance> currencies = request.getCurrencies();
         List<RevaluationEntryService.FxBalance> balances = currencies.stream().map(m -> {
             RevaluationEntryService.FxBalance b = new RevaluationEntryService.FxBalance();
-            b.setCurrency((String) m.get("currency"));
-            b.setOldRate(new java.math.BigDecimal(m.get("oldRate").toString()));
-            b.setNewRate(new java.math.BigDecimal(m.get("newRate").toString()));
-            b.setBalance(new java.math.BigDecimal(m.get("balance").toString()));
+            b.setCurrency(m.getCurrency());
+            b.setOldRate(m.getOldRate());
+            b.setNewRate(m.getNewRate());
+            b.setBalance(m.getBalance());
             return b;
         }).toList();
         List<JournalEntry> entries = revaluationEntryService.batchRevaluation(balances);

@@ -78,7 +78,7 @@ public class AuthController {
             resp.setRealName(jwtUtil.getUsername(claims));
 
             return R.ok("登录成功", resp);
-        } catch (IllegalArgumentException e) {
+        } catch (BusinessException e) {
             int attempts = recordLoginAttempt(req.getUsername());
             if (attempts >= MAX_LOGIN_ATTEMPTS) {
                 lockAccount(req.getUsername());

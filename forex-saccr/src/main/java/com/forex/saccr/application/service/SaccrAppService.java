@@ -17,9 +17,13 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class SaccrAppService {
 
     private final SaccrCalculationService saccrCalculationService;
@@ -46,12 +50,12 @@ public class SaccrAppService {
 
     public SaccrResult getSaccrResult(String calcNo) {
         return saccrResultRepository.findByCalcNo(calcNo)
-                .orElseThrow(() -> new IllegalArgumentException("SA-CCR计算结果不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "SA-CCR计算结果不存在"));
     }
 
     public SimmResult getSimmResult(String calcNo) {
         return simmResultRepository.findByCalcNo(calcNo)
-                .orElseThrow(() -> new IllegalArgumentException("SIMM计算结果不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "SIMM计算结果不存在"));
     }
 
     public PageResp<SaccrResult> pageQuerySaccr(SaccrQuery query) {

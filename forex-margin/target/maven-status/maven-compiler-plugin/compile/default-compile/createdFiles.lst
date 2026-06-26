@@ -2,6 +2,7 @@ com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.class
 com/forex/margin/domain/repository/MarginCallRepository.class
 com/forex/margin/infrastructure/mapper/MarginAccountMapper.class
 com/forex/margin/domain/model/valueobject/CollateralInfo.class
+com/forex/margin/adapter/dto/MarginPageQuery.class
 com/forex/margin/domain/model/valueobject/WaterLevel.class
 com/forex/margin/domain/model/entity/MarginCall.class
 com/forex/margin/application/command/CreateMarginCmd.class

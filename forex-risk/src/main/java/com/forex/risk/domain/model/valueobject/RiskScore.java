@@ -5,6 +5,8 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class RiskScore extends BaseValueObject {
@@ -13,7 +15,7 @@ public class RiskScore extends BaseValueObject {
 
     private RiskScore(BigDecimal value) {
         if (value == null || value.compareTo(BigDecimal.ZERO) < 0) {
-            throw new IllegalArgumentException("风险评分不能为空且不能为负数");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "风险评分不能为空且不能为负数");
         }
         this.value = value;
     }

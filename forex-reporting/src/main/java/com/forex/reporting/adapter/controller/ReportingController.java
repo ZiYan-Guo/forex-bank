@@ -13,6 +13,7 @@ import com.forex.reporting.application.service.ReportingAppService;
 import com.forex.reporting.domain.model.aggregate.BopReport;
 import com.forex.reporting.domain.model.entity.CapitalAccountReport;
 import com.forex.reporting.domain.model.entity.ForexSettlementReport;
+import com.forex.reporting.adapter.dto.ReportPageQuery;
 import com.forex.reporting.domain.model.query.ReportQuery;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -85,7 +86,15 @@ public class ReportingController {
     @Operation(summary = "分页查询BOP申报")
     @RequirePermission("reporting:page")
     @PostMapping("/bop/page")
-    public R<PageResp<BopReportResp>> pageQuery(@RequestBody ReportQuery query) {
+    public R<PageResp<BopReportResp>> pageQuery(@RequestBody ReportPageQuery req) {
+        ReportQuery query = new ReportQuery();
+        query.setPageNum(req.getPageNum());
+        query.setPageSize(req.getPageSize());
+        query.setCustomerId(req.getCustomerId());
+        query.setReportType(req.getReportType());
+        query.setReportStatus(req.getReportStatus());
+        query.setTransactionDate(req.getTransactionDate());
+        query.setTransactionNo(req.getTransactionNo());
         PageResp<BopReport> page = reportingAppService.pageQuery(query);
         List<BopReportResp> respList = page.getRecords().stream()
                 .map(this::toBopReportResp)

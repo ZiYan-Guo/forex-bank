@@ -19,6 +19,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Service
 @RequiredArgsConstructor
@@ -96,7 +98,7 @@ public class ExchangeAppService {
 
     public ExchangeOrder getOrderDetail(String orderNo) {
         return exchangeOrderRepository.findByOrderNo(orderNo)
-                .orElseThrow(() -> new IllegalArgumentException("订单不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "订单不存在"));
     }
 
     public PageResp<ExchangeOrder> pageQuery(ExchangeOrderQuery query) {
@@ -107,7 +109,7 @@ public class ExchangeAppService {
     @Transactional
     public ExchangeOrder lockRate(String orderNo, BigDecimal confirmedRate) {
         ExchangeOrder order = exchangeOrderRepository.findByOrderNo(orderNo)
-                .orElseThrow(() -> new IllegalArgumentException("订单不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "订单不存在"));
         exchangeDomainService.lockRate(order, confirmedRate, 300);
         return exchangeOrderRepository.findByOrderNo(orderNo).orElse(order);
     }
@@ -116,7 +118,7 @@ public class ExchangeAppService {
     @Transactional
     public ExchangeOrder confirmOrder(String orderNo) {
         ExchangeOrder order = exchangeOrderRepository.findByOrderNo(orderNo)
-                .orElseThrow(() -> new IllegalArgumentException("订单不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "订单不存在"));
         BigDecimal rate = "BUY".equals(order.getDealType())
                 ? (order.getAskRate() != null ? order.getAskRate() : BigDecimal.ZERO)
                 : (order.getBidRate() != null ? order.getBidRate() : BigDecimal.ZERO);
@@ -127,14 +129,14 @@ public class ExchangeAppService {
     @Transactional
     public void cancelOrder(String orderNo, String reason) {
         ExchangeOrder order = exchangeOrderRepository.findByOrderNo(orderNo)
-                .orElseThrow(() -> new IllegalArgumentException("订单不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "订单不存在"));
         exchangeDomainService.cancelOrder(order, reason);
     }
 
     @Transactional
     public void reverseOrder(String orderNo) {
         ExchangeOrder order = exchangeOrderRepository.findByOrderNo(orderNo)
-                .orElseThrow(() -> new IllegalArgumentException("订单不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "订单不存在"));
         exchangeDomainService.reverseOrder(order);
     }
 

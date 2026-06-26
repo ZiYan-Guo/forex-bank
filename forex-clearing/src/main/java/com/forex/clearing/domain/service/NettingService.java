@@ -11,10 +11,12 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class NettingService {
 
     public List<NettingPosition> calculateBilateralNetting(List<ClearingInstruction> instructions) {

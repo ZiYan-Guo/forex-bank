@@ -16,6 +16,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
+import com.forex.common.base.exception.BusinessException;
 
 @ExtendWith(MockitoExtension.class)
 class WorkflowDomainServiceTest {
@@ -79,7 +80,7 @@ class WorkflowDomainServiceTest {
     @DisplayName("Get task throws when not found")
     void testGetTask_NotFound() {
         when(workflowTaskRepository.findByTaskId("NONEXIST")).thenReturn(Optional.empty());
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(BusinessException.class,
                 () -> workflowDomainService.getTask("NONEXIST"));
     }
 

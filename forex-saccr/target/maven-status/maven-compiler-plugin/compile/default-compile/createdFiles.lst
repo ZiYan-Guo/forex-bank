@@ -12,10 +12,12 @@ com/forex/saccr/domain/model/query/SaccrQuery.class
 com/forex/saccr/domain/repository/SaccrResultRepository.class
 com/forex/saccr/infrastructure/persistence/SimmResultPO.class
 com/forex/saccr/domain/repository/SimmResultRepository.class
+com/forex/saccr/adapter/dto/SimmPageQuery.class
 com/forex/saccr/adapter/dto/CalculateCmd.class
 com/forex/saccr/infrastructure/repository/SimmResultRepositoryImpl.class
 com/forex/saccr/SaccrApplication.class
 com/forex/saccr/domain/model/aggregate/SaccrResult.class
+com/forex/saccr/adapter/dto/SaccrPageQuery.class
 com/forex/saccr/infrastructure/repository/SaccrResultRepositoryImpl.class
 com/forex/saccr/adapter/controller/SaccrController.class
 com/forex/saccr/domain/service/SaccrCalculationService.class

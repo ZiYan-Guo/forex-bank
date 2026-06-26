@@ -10,10 +10,14 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
+import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class SettlementTrackerService {
 
     private final SettlementTrackerRepository trackerRepository;
@@ -26,14 +30,14 @@ public class SettlementTrackerService {
 
     public void updateStatus(String trackingId, String newStatus) {
         SettlementTracker tracker = trackerRepository.findByTrackingId(trackingId)
-                .orElseThrow(() -> new IllegalArgumentException("Tracker not found"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "Tracker not found"));
         tracker.transitionTo(newStatus);
         trackerRepository.save(tracker);
     }
 
     public void markException(String trackingId, String reason, String detail) {
         SettlementTracker tracker = trackerRepository.findByTrackingId(trackingId)
-                .orElseThrow(() -> new IllegalArgumentException("Tracker not found"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "Tracker not found"));
         tracker.markException(reason, detail);
         trackerRepository.save(tracker);
     }

@@ -19,9 +19,13 @@ import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
 
 import lombok.RequiredArgsConstructor;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class RateAppService {
 
     private final ExchangeRateRepository exchangeRateRepository;
@@ -40,7 +44,7 @@ public class RateAppService {
             return cached;
         }
         ExchangeRate rate = exchangeRateRepository.findLatestByCurrencyPair(currencyPair)
-                .orElseThrow(() -> new IllegalArgumentException("Rate not found for: " + currencyPair));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "Rate not found for: " + currencyPair));
         rateCache.put(currencyPair, rate);
         return rate;
     }
@@ -71,7 +75,7 @@ public class RateAppService {
         ExchangeRate directRate = null;
         try {
             directRate = getRate(directPair);
-        } catch (IllegalArgumentException ignored) {
+        } catch (BusinessException ignored) {
         }
 
         if (directRate != null) {
@@ -81,7 +85,7 @@ public class RateAppService {
         ExchangeRate reverseRate = null;
         try {
             reverseRate = getRate(reversePair);
-        } catch (IllegalArgumentException ignored) {
+        } catch (BusinessException ignored) {
         }
 
         if (reverseRate != null) {
@@ -97,7 +101,7 @@ public class RateAppService {
 
     public void publishToChannels(Long rateId) {
         ExchangeRate rate = exchangeRateRepository.findById(rateId)
-                .orElseThrow(() -> new IllegalArgumentException("Rate not found: " + rateId));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "Rate not found: " + rateId));
         ratePublishDomainService.validateRate(rate);
     }
 }

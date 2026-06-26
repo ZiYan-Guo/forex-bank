@@ -23,7 +23,6 @@ import com.forex.payment.application.service.BankCodeValidationService;
 import com.forex.payment.application.service.BatchPaymentService;
 import com.forex.payment.application.service.PaymentAppService;
 import com.forex.payment.domain.model.aggregate.CrossBorderPayment;
-import com.forex.payment.domain.model.dto.PaymentQuery;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

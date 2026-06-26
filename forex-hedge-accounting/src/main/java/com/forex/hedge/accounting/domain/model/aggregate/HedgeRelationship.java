@@ -5,6 +5,8 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 /**
  * 套期关系聚合根.
@@ -141,16 +143,16 @@ public class HedgeRelationship extends BaseAggregate {
     @Override
     protected void validate() {
         if (relationId == null || relationId.isBlank()) {
-            throw new IllegalArgumentException("套期关系编号不能为空 / relationId must not be blank");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "套期关系编号不能为空 / relationId must not be blank");
         }
         if (customerId == null) {
-            throw new IllegalArgumentException("客户ID不能为空 / customerId must not be null");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "客户ID不能为空 / customerId must not be null");
         }
         if (hedgeType == null || hedgeType.isBlank()) {
-            throw new IllegalArgumentException("套期类型不能为空 / hedgeType must not be blank");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "套期类型不能为空 / hedgeType must not be blank");
         }
         if (hedgedAmount != null && hedgedAmount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("被套期金额必须大于0 / hedgedAmount must be positive");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "被套期金额必须大于0 / hedgedAmount must be positive");
         }
     }
 }

@@ -13,7 +13,6 @@ import com.forex.trading.application.command.CreateTradeCmd;
 import com.forex.trading.application.service.TradingAppService;
 import com.forex.trading.domain.model.aggregate.FxTrade;
 import com.forex.trading.domain.model.query.TradeQuery;
-import com.forex.trading.domain.model.query.TradeQuery;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

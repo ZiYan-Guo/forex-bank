@@ -18,6 +18,7 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;
+import com.forex.common.base.exception.BusinessException;
 
 @ExtendWith(MockitoExtension.class)
 class AuthenticationDomainServiceTest {
@@ -56,7 +57,7 @@ class AuthenticationDomainServiceTest {
                 "test@example.com", "13800138000");
         when(userRepository.findByUsername("testuser")).thenReturn(Optional.of(user));
 
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(BusinessException.class,
                 () -> authService.authenticate("testuser", "WrongPass"));
     }
 
@@ -70,7 +71,7 @@ class AuthenticationDomainServiceTest {
         user.disable();
         when(userRepository.findByUsername("testuser")).thenReturn(Optional.of(user));
 
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(BusinessException.class,
                 () -> authService.authenticate("testuser", rawPassword));
     }
 
@@ -78,7 +79,7 @@ class AuthenticationDomainServiceTest {
     @DisplayName("Authenticate non-existent username throws")
     void testAuthenticate_UserNotFound() {
         when(userRepository.findByUsername("unknown")).thenReturn(Optional.empty());
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(BusinessException.class,
                 () -> authService.authenticate("unknown", "any"));
     }
 

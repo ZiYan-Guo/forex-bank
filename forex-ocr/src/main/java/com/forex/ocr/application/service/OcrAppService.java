@@ -10,6 +10,8 @@ import lombok.RequiredArgsConstructor;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Service
 @RequiredArgsConstructor
@@ -25,13 +27,13 @@ public class OcrAppService {
     @Transactional
     public OcrTask processOcr(String taskId) {
         OcrTask task = ocrTaskRepository.findByTaskId(taskId)
-                .orElseThrow(() -> new IllegalArgumentException("OCR任务不存在: " + taskId));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "OCR任务不存在: " + taskId));
         return ocrDomainService.processOcr(task.getId());
     }
 
     public OcrTask getOcrResult(String taskId) {
         OcrTask task = ocrTaskRepository.findByTaskId(taskId)
-                .orElseThrow(() -> new IllegalArgumentException("OCR任务不存在: " + taskId));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "OCR任务不存在: " + taskId));
         return ocrDomainService.getResult(task.getId());
     }
 

@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.*;
+import com.forex.common.base.exception.BusinessException;
 
 class RatePublishDomainServiceTest {
 
@@ -46,7 +47,7 @@ class RatePublishDomainServiceTest {
         ExchangeRate rate = ExchangeRate.create("USD/CNY", "USD", "CNY",
                 new BigDecimal("7.2400"), new BigDecimal("7.2410"), "Reuters");
 
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(BusinessException.class,
                 () -> service.publishRate(rate, "ONLINE", new BigDecimal("0.0100")));
     }
 

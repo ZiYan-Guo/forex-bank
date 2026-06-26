@@ -22,6 +22,9 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import com.forex.common.security.annotation.RequirePermission;
+import com.forex.clearing.adapter.dto.ReconcileConvertReq;
+import com.forex.clearing.adapter.dto.ReconcilePreviewReq;
+import com.forex.clearing.adapter.dto.ReconcileAutoMatchReq;
 
 /**
  * Reconciliation controller for trade matching and SWIFT message generation.
@@ -47,15 +50,15 @@ public class ReconciliationController {
     @Operation(summary = "自动匹配确认")
     @RequirePermission("clearing:match")
     @PostMapping("/match")
-    public R<String> autoMatch(@RequestBody Map<String, Object> req) {
+    public R<String> autoMatch(@RequestBody ReconcileAutoMatchReq req) {
         return R.ok("matching completed");
     }
 
     @Operation(summary = "SWIFT报文预览")
     @RequirePermission("clearing:preview")
     @PostMapping("/swift/preview")
-    public R<String> previewSwift(@RequestBody Map<String, Object> req) {
-        String tradeNo = (String) req.getOrDefault("tradeNo", "FX0001");
+    public R<String> previewSwift(@RequestBody ReconcilePreviewReq req) {
+        String tradeNo = req.getTradeNo() != null ? req.getTradeNo() : "FX0001";
         String msg = swiftMessageGenerator.generateMT300(tradeNo, "USD",
                 new BigDecimal("100000"), "CNY", new BigDecimal("725360"),
                 new BigDecimal("7.2536"), LocalDate.now(), "BKCHCNBJ");

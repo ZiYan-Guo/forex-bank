@@ -7,6 +7,8 @@ import java.util.UUID;
 import com.forex.common.base.domain.BaseAggregate;
 
 import lombok.Getter;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class RiskAiAssessment extends BaseAggregate {
@@ -87,13 +89,13 @@ public class RiskAiAssessment extends BaseAggregate {
     @Override
     protected void validate() {
         if (customerId == null) {
-            throw new IllegalArgumentException("customerId must not be null");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "customerId must not be null");
         }
         if (riskType == null || riskType.isBlank()) {
-            throw new IllegalArgumentException("riskType must not be blank");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "riskType must not be blank");
         }
         if (riskScore == null) {
-            throw new IllegalArgumentException("riskScore must not be null");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "riskScore must not be null");
         }
     }
 }

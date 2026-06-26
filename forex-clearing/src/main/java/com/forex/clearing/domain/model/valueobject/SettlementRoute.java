@@ -6,6 +6,8 @@ import lombok.Getter;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class SettlementRoute extends BaseValueObject {
@@ -22,7 +24,7 @@ public class SettlementRoute extends BaseValueObject {
                            int estimatedHours, BigDecimal routeScore, String recommendation,
                            List<String> intermediaryBanks) {
         if (routeId == null || routeId.isBlank()) {
-            throw new IllegalArgumentException("路由ID不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "路由ID不能为空");
         }
         this.routeId = routeId;
         this.channelCode = channelCode;

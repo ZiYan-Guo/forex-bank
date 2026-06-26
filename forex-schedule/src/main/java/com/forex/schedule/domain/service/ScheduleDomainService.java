@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import org.springframework.transaction.annotation.Transactional;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Slf4j
 @Service
@@ -24,7 +26,7 @@ public class ScheduleDomainService {
 
     public JobLog triggerJob(String jobHandler) {
         ScheduleJob job = scheduleJobRepository.findByJobHandler(jobHandler)
-                .orElseThrow(() -> new IllegalArgumentException("任务不存在: " + jobHandler));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "任务不存在: " + jobHandler));
 
         if (!"ENABLED".equals(job.getStatus())) {
             throw new IllegalStateException("任务已禁用: " + jobHandler);

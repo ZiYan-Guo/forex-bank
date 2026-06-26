@@ -16,6 +16,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.UUID;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Service
 @RequiredArgsConstructor
@@ -46,7 +48,7 @@ public class TradingAppService {
 
     public FxTrade getTradeDetail(String tradeNo) {
         return fxTradeRepository.findByTradeNo(tradeNo)
-                .orElseThrow(() -> new IllegalArgumentException("交易不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "交易不存在"));
     }
 
     public PageResp<FxTrade> pageQuery(TradeQuery query) {

@@ -1,5 +1,6 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/MarginApplication.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/adapter/dto/MarginPageQuery.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/adapter/dto/MarginResp.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/application/command/CreateMarginCmd.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java

@@ -17,6 +17,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
+import com.forex.common.base.exception.BusinessException;
 
 @ExtendWith(MockitoExtension.class)
 class ScheduleDomainServiceTest {
@@ -64,7 +65,7 @@ class ScheduleDomainServiceTest {
         when(scheduleJobRepository.findByJobHandler("unknown"))
                 .thenReturn(Optional.empty());
 
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(BusinessException.class,
                 () -> scheduleDomainService.triggerJob("unknown"));
     }
 

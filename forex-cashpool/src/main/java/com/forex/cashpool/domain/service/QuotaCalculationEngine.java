@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 额度计算引擎 - 实现外债额度、放款额度、使用率等核心计算逻辑
@@ -17,6 +18,7 @@ import java.math.RoundingMode;
 @Slf4j
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class QuotaCalculationEngine {
 
     private static final BigDecimal MACRO_PRUDENTIAL_FACTOR_DEBT = new BigDecimal("3.5");

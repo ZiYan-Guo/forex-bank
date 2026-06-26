@@ -17,9 +17,13 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class RiskAppService {
 
     private final RiskDomainService riskDomainService;
@@ -43,7 +47,7 @@ public class RiskAppService {
 
     public RiskMonitorLog getRiskLog(String logNo) {
         return riskMonitorLogRepository.findByLogNo(logNo)
-                .orElseThrow(() -> new IllegalArgumentException("风险日志不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "风险日志不存在"));
     }
 
     public PageResp<RiskMonitorLog> pageQuery(RiskQuery query) {
@@ -57,13 +61,13 @@ public class RiskAppService {
 
     public RiskReport getRiskReport(String reportNo) {
         return riskReportRepository.findByReportNo(reportNo)
-                .orElseThrow(() -> new IllegalArgumentException("风险报告不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "风险报告不存在"));
     }
 
     @RedisLock(key = "'risk:submit:' + #reportNo")
     public void submitReport(String reportNo) {
         RiskReport report = riskReportRepository.findByReportNo(reportNo)
-                .orElseThrow(() -> new IllegalArgumentException("风险报告不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "风险报告不存在"));
         riskDomainService.submitReport(report);
     }
 }

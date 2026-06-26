@@ -5,6 +5,8 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class PositionAmount extends BaseValueObject {
@@ -13,7 +15,7 @@ public class PositionAmount extends BaseValueObject {
 
     private PositionAmount(BigDecimal amount) {
         if (amount == null) {
-            throw new IllegalArgumentException("头寸金额不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "头寸金额不能为空");
         }
         this.amount = amount;
     }
@@ -28,14 +30,14 @@ public class PositionAmount extends BaseValueObject {
 
     public PositionAmount add(PositionAmount other) {
         if (other == null) {
-            throw new IllegalArgumentException("加数不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "加数不能为空");
         }
         return new PositionAmount(this.amount.add(other.amount));
     }
 
     public PositionAmount subtract(PositionAmount other) {
         if (other == null) {
-            throw new IllegalArgumentException("减数不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "减数不能为空");
         }
         return new PositionAmount(this.amount.subtract(other.amount));
     }

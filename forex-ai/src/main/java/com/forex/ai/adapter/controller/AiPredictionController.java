@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.*;
 import com.forex.common.security.annotation.RequirePermission;
+import com.forex.ai.adapter.dto.AlertConfigReq;
+import com.forex.ai.adapter.dto.PredictExposureReq;
+import com.forex.ai.adapter.dto.PredictRateReq;
 
 @Tag(name = "AI汇率预测")
 @RestController
@@ -58,7 +61,7 @@ public class AiPredictionController {
     @Operation(summary = "更新预警配置")
     @RequirePermission("ai:config")
     @PutMapping("/alert/config")
-    public R<Void> updateAlertConfig(@RequestBody Map<String, Object> config) {
+    public R<Void> updateAlertConfig(@RequestBody AlertConfigReq config) {
         return R.okMsg("预警配置已更新");
     }
 }

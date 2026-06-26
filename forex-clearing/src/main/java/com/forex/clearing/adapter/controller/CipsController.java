@@ -6,6 +6,7 @@ import com.forex.common.base.result.R;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -23,6 +24,9 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.stream.Collectors;
 import com.forex.common.security.annotation.RequirePermission;
+import com.forex.clearing.adapter.dto.Cips113Req;
+import com.forex.clearing.adapter.dto.Cips112Req;
+import com.forex.clearing.adapter.dto.Cips111Req;
 
 /**
  * CIPS management controller providing message generation, routing lookup and statistics.
@@ -45,17 +49,17 @@ public class CipsController {
     @Operation(summary = "生成CIPS.111客户汇款报文")
     @RequirePermission("clearing:111")
     @PostMapping("/message/generate/111")
-    public R<String> generateCips111(@RequestBody Map<String, Object> req) {
+    public R<String> generateCips111(@Valid @RequestBody Cips111Req req) {
         log.info("POST /message/generate/111 start: {}", req);
-        String msgId = (String) req.getOrDefault("msgId", UUID.randomUUID().toString());
-        String debtorName = (String) req.get("debtorName");
-        String debtorAcct = (String) req.get("debtorAcct");
-        String creditorName = (String) req.get("creditorName");
-        String creditorAcct = (String) req.get("creditorAcct");
-        String creditorCipsId = (String) req.get("creditorCipsId");
-        String currency = (String) req.getOrDefault("currency", "CNY");
-        BigDecimal amount = new BigDecimal(req.getOrDefault("amount", "0.00").toString());
-        String remittanceInfo = (String) req.getOrDefault("remittanceInfo", "");
+        String msgId = req.getMsgId() != null ? req.getMsgId() : UUID.randomUUID().toString();
+        String debtorName = req.getDebtorName();
+        String debtorAcct = req.getDebtorAcct();
+        String creditorName = req.getCreditorName();
+        String creditorAcct = req.getCreditorAcct();
+        String creditorCipsId = req.getCreditorCipsId();
+        String currency = req.getCurrency() != null ? req.getCurrency() : "CNY";
+        BigDecimal amount = req.getAmount() != null ? req.getAmount() : BigDecimal.ZERO;
+        String remittanceInfo = req.getRemittanceInfo() != null ? req.getRemittanceInfo() : "";
         String message = cipsMessageGenerator.generateCips111(msgId, debtorName, debtorAcct,
                 creditorName, creditorAcct, creditorCipsId, currency, amount, remittanceInfo);
         log.info("POST /message/generate/111 completed: msgId={}", msgId);
@@ -69,11 +73,11 @@ public class CipsController {
     @Operation(summary = "生成CIPS.112支付状态报告")
     @RequirePermission("clearing:112")
     @PostMapping("/message/generate/112")
-    public R<String> generateCips112(@RequestBody Map<String, Object> req) {
+    public R<String> generateCips112(@Valid @RequestBody Cips112Req req) {
         log.info("POST /message/generate/112 start: {}", req);
-        String originalMsgId = (String) req.get("originalMsgId");
-        String status = (String) req.getOrDefault("status", "ACSC");
-        String reason = (String) req.getOrDefault("reason", "AC01");
+        String originalMsgId = req.getOriginalMsgId();
+        String status = req.getStatus() != null ? req.getStatus() : "ACSC";
+        String reason = req.getReason() != null ? req.getReason() : "AC01";
         String message = cipsMessageGenerator.generateCips112(originalMsgId, status, reason);
         log.info("POST /message/generate/112 completed: originalMsgId={}, status={}", originalMsgId, status);
         return R.ok(message);
@@ -86,11 +90,11 @@ public class CipsController {
     @Operation(summary = "生成CIPS.113退汇报文")
     @RequirePermission("clearing:113")
     @PostMapping("/message/generate/113")
-    public R<String> generateCips113(@RequestBody Map<String, Object> req) {
+    public R<String> generateCips113(@Valid @RequestBody Cips113Req req) {
         log.info("POST /message/generate/113 start: {}", req);
-        String originalMsgId = (String) req.get("originalMsgId");
-        String returnReason = (String) req.getOrDefault("returnReason", "AC01");
-        BigDecimal returnAmount = new BigDecimal(req.getOrDefault("returnAmount", "0.00").toString());
+        String originalMsgId = req.getOriginalMsgId();
+        String returnReason = req.getReturnReason() != null ? req.getReturnReason() : "AC01";
+        BigDecimal returnAmount = req.getReturnAmount() != null ? req.getReturnAmount() : BigDecimal.ZERO;
         String message = cipsMessageGenerator.generateCips113(originalMsgId, returnReason, returnAmount);
         log.info("POST /message/generate/113 completed: originalMsgId={}", originalMsgId);
         return R.ok(message);

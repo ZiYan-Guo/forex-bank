@@ -5,6 +5,8 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class ClearingAmount extends BaseValueObject {
@@ -14,10 +16,10 @@ public class ClearingAmount extends BaseValueObject {
 
     private ClearingAmount(BigDecimal amount, String currency) {
         if (amount == null) {
-            throw new IllegalArgumentException("金额不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "金额不能为空");
         }
         if (currency == null || currency.isBlank()) {
-            throw new IllegalArgumentException("币种不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "币种不能为空");
         }
         this.amount = amount;
         this.currency = currency;

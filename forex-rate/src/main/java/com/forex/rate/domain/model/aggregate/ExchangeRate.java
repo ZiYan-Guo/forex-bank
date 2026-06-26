@@ -9,6 +9,8 @@ import java.time.LocalDateTime;
 import com.forex.common.base.domain.BaseAggregate;
 
 import lombok.Getter;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class ExchangeRate extends BaseAggregate {
@@ -65,13 +67,13 @@ public class ExchangeRate extends BaseAggregate {
     @Override
     protected void validate() {
         if (currencyPair == null || currencyPair.isBlank()) {
-            throw new IllegalArgumentException("currencyPair must not be blank");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "currencyPair must not be blank");
         }
         if (bidRate == null || bidRate.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("bidRate must be greater than 0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "bidRate must be greater than 0");
         }
         if (askRate == null || askRate.compareTo(bidRate) <= 0) {
-            throw new IllegalArgumentException("askRate must be greater than bidRate");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "askRate must be greater than bidRate");
         }
     }
 }

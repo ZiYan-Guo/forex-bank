@@ -6,6 +6,8 @@ import lombok.Getter;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 /**
  * Cross-border payment aggregate root. Tracks international wire transfers through the full
@@ -211,7 +213,7 @@ public class CrossBorderPayment extends BaseAggregate {
      */
     public void updateSwiftRef(String ref) {
         if (ref == null || ref.isBlank()) {
-            throw new IllegalArgumentException("SWIFT参考号不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "SWIFT参考号不能为空");
         }
         this.swiftRef = ref;
         markUpdated();
@@ -222,7 +224,7 @@ public class CrossBorderPayment extends BaseAggregate {
      */
     public void updateGpiStatus(String status) {
         if (status == null || status.isBlank()) {
-            throw new IllegalArgumentException("GPI状态不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "GPI状态不能为空");
         }
         this.gpiStatus = status;
         markUpdated();
@@ -278,7 +280,7 @@ public class CrossBorderPayment extends BaseAggregate {
 
     public void setPaymentNo(String paymentNo) {
         if (paymentNo == null || paymentNo.isBlank()) {
-            throw new IllegalArgumentException("支付编号不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "支付编号不能为空");
         }
         this.paymentNo = paymentNo;
     }
@@ -291,16 +293,16 @@ public class CrossBorderPayment extends BaseAggregate {
     @Override
     protected void validate() {
         if (customerId == null) {
-            throw new IllegalArgumentException("客户ID不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "客户ID不能为空");
         }
         if (paymentDirection == null || paymentDirection.isBlank()) {
-            throw new IllegalArgumentException("支付方向不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "支付方向不能为空");
         }
         if (payAmount == null || payAmount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("支付金额必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "支付金额必须大于0");
         }
         if (payCurrency == null || payCurrency.isBlank()) {
-            throw new IllegalArgumentException("支付币种不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "支付币种不能为空");
         }
     }
 }

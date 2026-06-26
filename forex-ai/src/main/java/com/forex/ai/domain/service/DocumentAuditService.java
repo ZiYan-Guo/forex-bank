@@ -9,9 +9,11 @@ import org.springframework.stereotype.Service;
 import com.forex.ai.domain.model.aggregate.DocumentAudit;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Slf4j
+@Transactional
 public class DocumentAuditService {
 
     public DocumentAudit compareDocuments(String invoiceOcr, String contractOcr, String customsOcr) {

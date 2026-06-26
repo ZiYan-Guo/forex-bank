@@ -5,6 +5,8 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class ValuationResult extends BaseAggregate {
@@ -78,13 +80,13 @@ public class ValuationResult extends BaseAggregate {
     @Override
     protected void validate() {
         if (tradeId == null) {
-            throw new IllegalArgumentException("交易ID不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "交易ID不能为空");
         }
         if (currencyPair == null || currencyPair.isBlank()) {
-            throw new IllegalArgumentException("货币对不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "货币对不能为空");
         }
         if (valuationMethod == null || valuationMethod.isBlank()) {
-            throw new IllegalArgumentException("估值方法不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "估值方法不能为空");
         }
     }
 }

@@ -13,9 +13,13 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class PositionAppService {
 
     private final PositionRepository positionRepository;
@@ -36,7 +40,7 @@ public class PositionAppService {
 
     public Position updatePosition(Long id, BigDecimal longAmt, BigDecimal shortAmt) {
         Position position = positionRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("头寸不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "头寸不存在"));
         if (longAmt != null) {
             position.addLong(longAmt);
         }
@@ -49,7 +53,7 @@ public class PositionAppService {
 
     public Position getPositionDetail(String positionNo) {
         return positionRepository.findByPositionNo(positionNo)
-                .orElseThrow(() -> new IllegalArgumentException("头寸不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "头寸不存在"));
     }
 
     public PageResp<Position> pageQuery(PositionQuery query) {

@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 import com.forex.common.security.annotation.RequirePermission;
+import com.forex.ai.adapter.dto.FuzzyMatchReq;
+import com.forex.ai.adapter.dto.AmlEvaluateReq;
 
 @Tag(name = "AI智能风控")
 @RestController

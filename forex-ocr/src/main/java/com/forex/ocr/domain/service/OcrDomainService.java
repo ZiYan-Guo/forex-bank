@@ -10,6 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Slf4j
 @Service
@@ -29,7 +31,7 @@ public class OcrDomainService {
 
     public OcrTask processOcr(Long taskId) {
         OcrTask task = ocrTaskRepository.findById(taskId)
-                .orElseThrow(() -> new IllegalArgumentException("OCR任务不存在: " + taskId));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "OCR任务不存在: " + taskId));
 
         if (!"UPLOADED".equals(task.getStatus())) {
             throw new IllegalStateException("OCR任务状态不允许处理: " + task.getStatus());
@@ -56,7 +58,7 @@ public class OcrDomainService {
 
     public OcrTask getResult(Long taskId) {
         return ocrTaskRepository.findById(taskId)
-                .orElseThrow(() -> new IllegalArgumentException("OCR任务不存在: " + taskId));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "OCR任务不存在: " + taskId));
     }
 
     private String simulateOcr(OcrTask task) {

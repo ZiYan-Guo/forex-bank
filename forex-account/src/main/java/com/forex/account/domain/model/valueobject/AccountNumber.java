@@ -5,6 +5,8 @@ import com.forex.common.base.domain.BaseValueObject;
 import lombok.Getter;
 
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class AccountNumber extends BaseValueObject {
@@ -13,7 +15,7 @@ public class AccountNumber extends BaseValueObject {
 
     private AccountNumber(String accountNo) {
         if (accountNo == null || accountNo.isBlank()) {
-            throw new IllegalArgumentException("账号不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "账号不能为空");
         }
         this.accountNo = accountNo;
     }

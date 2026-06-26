@@ -15,6 +15,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Service
 @RequiredArgsConstructor
@@ -39,7 +41,7 @@ public class ScheduleAppService {
     @Transactional
     public ScheduleJob updateJob(Long id, JobCmd cmd) {
         ScheduleJob job = scheduleJobRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("任务不存在: " + id));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "任务不存在: " + id));
 
         ScheduleJob updated = ScheduleJob.create(
                 cmd.getJobName(),
@@ -54,7 +56,7 @@ public class ScheduleAppService {
     @Transactional
     public void toggleJob(Long id) {
         ScheduleJob job = scheduleJobRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("任务不存在: " + id));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "任务不存在: " + id));
 
         if ("ENABLED".equals(job.getStatus())) {
             job.disable();
@@ -66,13 +68,13 @@ public class ScheduleAppService {
 
     public void triggerJob(Long id) {
         ScheduleJob job = scheduleJobRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("任务不存在: " + id));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "任务不存在: " + id));
         scheduleDomainService.triggerJob(job.getJobHandler());
     }
 
     public ScheduleJob getJob(Long id) {
         return scheduleJobRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("任务不存在: " + id));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "任务不存在: " + id));
     }
 
     public PageResp<ScheduleJob> pageQuery(JobQuery query) {

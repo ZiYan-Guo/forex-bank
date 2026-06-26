@@ -5,6 +5,8 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class TradeAmount extends BaseValueObject {
@@ -19,10 +21,10 @@ public class TradeAmount extends BaseValueObject {
 
     public static TradeAmount of(BigDecimal amount, String currency) {
         if (amount == null) {
-            throw new IllegalArgumentException("金额不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "金额不能为空");
         }
         if (currency == null || currency.isBlank()) {
-            throw new IllegalArgumentException("货币不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "货币不能为空");
         }
         return new TradeAmount(amount, currency);
     }
@@ -39,14 +41,14 @@ public class TradeAmount extends BaseValueObject {
 
     public TradeAmount multiply(BigDecimal rate) {
         if (rate == null) {
-            throw new IllegalArgumentException("汇率不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "汇率不能为空");
         }
         return new TradeAmount(this.amount.multiply(rate), this.currency);
     }
 
     private void assertSameCurrency(TradeAmount other) {
         if (!this.currency.equals(other.currency)) {
-            throw new IllegalArgumentException("货币不匹配: " + this.currency + " vs " + other.currency);
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "货币不匹配: " + this.currency + " vs " + other.currency);
         }
     }
 

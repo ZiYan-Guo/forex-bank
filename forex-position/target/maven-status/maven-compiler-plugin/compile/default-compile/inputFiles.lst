@@ -1,5 +1,9 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/PositionApplication.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/adapter/controller/PositionController.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/adapter/dto/HeatmapReq.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/adapter/dto/MaturityLadderReq.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/adapter/dto/MultiDimAnalysisReq.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/adapter/dto/PositionPageQuery.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/adapter/dto/PositionResp.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/application/command/PositionCmd.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-position/src/main/java/com/forex/position/application/service/ExposureAnalysisService.java

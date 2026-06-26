@@ -1,6 +1,7 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/adapter/controller/ReportingController.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/adapter/dto/BopReportResp.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/adapter/dto/ReportPageQuery.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/adapter/dto/SettlementReportResp.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/application/command/BopReportCmd.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-reporting/src/main/java/com/forex/reporting/application/command/CapitalReportCmd.java

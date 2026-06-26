@@ -15,6 +15,8 @@ import lombok.RequiredArgsConstructor;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Service
 @RequiredArgsConstructor
@@ -53,18 +55,18 @@ public class NotificationAppService {
     @Transactional
     public Notice publishNotice(Long id) {
         Notice notice = noticeRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("公告不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "公告不存在"));
         return notificationDomainService.publishNotice(notice);
     }
 
     public Notification getNotificationDetail(Long id) {
         return notificationRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("通知不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "通知不存在"));
     }
 
     public Notice getNoticeDetail(Long id) {
         return noticeRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("公告不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "公告不存在"));
     }
 
     public PageResp<Notification> pageQueryNotification(NotifyQuery query) {

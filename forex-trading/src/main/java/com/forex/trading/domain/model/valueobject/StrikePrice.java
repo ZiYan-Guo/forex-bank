@@ -5,6 +5,8 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class StrikePrice extends BaseValueObject {
@@ -17,10 +19,10 @@ public class StrikePrice extends BaseValueObject {
 
     public static StrikePrice of(BigDecimal value) {
         if (value == null) {
-            throw new IllegalArgumentException("执行价不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "执行价不能为空");
         }
         if (value.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("执行价必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "执行价必须大于0");
         }
         return new StrikePrice(value);
     }

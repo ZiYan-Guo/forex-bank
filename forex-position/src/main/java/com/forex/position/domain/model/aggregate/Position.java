@@ -5,6 +5,8 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 /** Foreign exchange position aggregate root. 外汇敞口聚合根。 */
@@ -86,7 +88,7 @@ public class Position extends BaseAggregate {
     /** Add long/short position amount. 增加多头/空头。 */
     public void addLong(BigDecimal amount) {
         if (amount == null || amount.compareTo(BigDecimal.ZERO) < 0) {
-            throw new IllegalArgumentException("多头金额不能为负数");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "多头金额不能为负数");
         }
         this.longAmount = this.longAmount.add(amount);
         calculateNetPosition();
@@ -96,7 +98,7 @@ public class Position extends BaseAggregate {
     /** Add long/short position amount. 增加多头/空头。 */
     public void addShort(BigDecimal amount) {
         if (amount == null || amount.compareTo(BigDecimal.ZERO) < 0) {
-            throw new IllegalArgumentException("空头金额不能为负数");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "空头金额不能为负数");
         }
         this.shortAmount = this.shortAmount.add(amount);
         calculateNetPosition();
@@ -165,13 +167,13 @@ public class Position extends BaseAggregate {
     @Override
     protected void validate() {
         if (currencyPair == null || currencyPair.isBlank()) {
-            throw new IllegalArgumentException("货币对不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "货币对不能为空");
         }
         if (positionType == null || positionType.isBlank()) {
-            throw new IllegalArgumentException("头寸类型不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "头寸类型不能为空");
         }
         if (positionCurrency == null || positionCurrency.isBlank()) {
-            throw new IllegalArgumentException("头寸币种不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "头寸币种不能为空");
         }
     }
 }

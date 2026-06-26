@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.Set;
 import org.springframework.transaction.annotation.Transactional;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Slf4j
 @Service
@@ -27,14 +29,14 @@ public class AuthenticationDomainService {
     /** Authenticate user credentials. Uses BCrypt(12 rounds) for password verification. 使用BCrypt(12轮)验证密码。 */
     public User authenticate(String username, String rawPassword) {
         User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new IllegalArgumentException("用户名或密码错误"));
+                .orElseThrow(() -> new BusinessException(ResultCode.VALIDATE_FAIL, "用户名或密码错误"));
 
         if (!user.isActive()) {
-            throw new IllegalArgumentException("账户已被禁用");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "账户已被禁用");
         }
 
         if (!BCrypt.checkpw(rawPassword, user.getPassword())) {
-            throw new IllegalArgumentException("用户名或密码错误");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "用户名或密码错误");
         }
 
         Set<Role> roles = userRepository.findRolesByUserId(user.getId());

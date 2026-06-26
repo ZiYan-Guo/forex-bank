@@ -8,6 +8,8 @@ import java.util.UUID;
 import com.forex.common.base.domain.BaseAggregate;
 
 import lombok.Getter;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class RatePrediction extends BaseAggregate {
@@ -90,16 +92,16 @@ public class RatePrediction extends BaseAggregate {
     @Override
     protected void validate() {
         if (currencyPair == null || currencyPair.isBlank()) {
-            throw new IllegalArgumentException("currencyPair must not be blank");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "currencyPair must not be blank");
         }
         if (predType == null || predType.isBlank()) {
-            throw new IllegalArgumentException("predType must not be blank");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "predType must not be blank");
         }
         if (predictedRate == null || predictedRate.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("predictedRate must be greater than 0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "predictedRate must be greater than 0");
         }
         if (lowerBound != null && upperBound != null && lowerBound.compareTo(upperBound) > 0) {
-            throw new IllegalArgumentException("lowerBound must not exceed upperBound");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "lowerBound must not exceed upperBound");
         }
     }
 }

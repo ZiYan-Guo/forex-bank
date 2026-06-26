@@ -11,6 +11,8 @@ import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 /**
  * 资金池聚合根 - 管理资金池生命周期、成员关系与额度状态
@@ -89,10 +91,10 @@ public class CashPool extends BaseAggregate {
      */
     public void addMember(PoolMember member) {
         if (member == null) {
-            throw new IllegalArgumentException("资金池成员不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "资金池成员不能为空");
         }
         if (!this.poolId.equals(member.getPoolId())) {
-            throw new IllegalArgumentException("成员所属资金池编号不匹配");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "成员所属资金池编号不匹配");
         }
         this.members.add(member);
         recalculateLimits();
@@ -162,19 +164,19 @@ public class CashPool extends BaseAggregate {
     @Override
     protected void validate() {
         if (poolId == null || poolId.isBlank()) {
-            throw new IllegalArgumentException("资金池编号不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "资金池编号不能为空");
         }
         if (mainAccountId == null) {
-            throw new IllegalArgumentException("主账户ID不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "主账户ID不能为空");
         }
         if (poolCurrency == null || poolCurrency.isBlank()) {
-            throw new IllegalArgumentException("资金池币种不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "资金池币种不能为空");
         }
         if (totalLimit == null || totalLimit.compareTo(BigDecimal.ZERO) < 0) {
-            throw new IllegalArgumentException("总额度不能为负数");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "总额度不能为负数");
         }
         if (effectiveDate == null) {
-            throw new IllegalArgumentException("生效日期不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "生效日期不能为空");
         }
     }
 }

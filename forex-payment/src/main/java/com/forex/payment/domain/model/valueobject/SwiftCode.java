@@ -4,6 +4,8 @@ import com.forex.common.base.domain.BaseValueObject;
 import lombok.Getter;
 
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class SwiftCode extends BaseValueObject {
@@ -12,11 +14,11 @@ public class SwiftCode extends BaseValueObject {
 
     private SwiftCode(String code) {
         if (code == null || code.isBlank()) {
-            throw new IllegalArgumentException("SWIFT代码不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "SWIFT代码不能为空");
         }
         String trimmed = code.trim().toUpperCase();
         if (trimmed.length() != 8 && trimmed.length() != 11) {
-            throw new IllegalArgumentException("SWIFT代码长度必须为8位或11位: " + code);
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "SWIFT代码长度必须为8位或11位: " + code);
         }
         this.code = trimmed;
     }

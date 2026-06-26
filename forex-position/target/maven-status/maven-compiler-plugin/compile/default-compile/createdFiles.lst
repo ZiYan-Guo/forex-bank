@@ -1,5 +1,6 @@
 com/forex/position/infrastructure/persistence/PositionPO.class
 com/forex/position/infrastructure/repository/PositionRepositoryImpl.class
+com/forex/position/adapter/dto/PositionPageQuery.class
 com/forex/position/infrastructure/mapper/PositionMapper.class
 com/forex/position/adapter/controller/PositionController.class
 com/forex/position/domain/model/entity/PositionLimitConfig.class
@@ -16,9 +17,12 @@ com/forex/position/domain/repository/PositionRepository.class
 com/forex/position/domain/model/aggregate/Position.class
 com/forex/position/application/service/ExposureAnalysisService$ExposureAnalysisResult.class
 com/forex/position/infrastructure/persistence/PositionLimitConfigPO.class
+com/forex/position/adapter/dto/MaturityLadderReq.class
 com/forex/position/domain/service/PositionDomainService.class
+com/forex/position/adapter/dto/HeatmapReq.class
 com/forex/position/domain/repository/PositionLimitConfigRepository.class
 com/forex/position/infrastructure/repository/PositionLimitConfigRepositoryImpl.class
+com/forex/position/adapter/dto/MultiDimAnalysisReq.class
 com/forex/position/PositionApplication.class
 com/forex/position/domain/model/query/PositionQuery.class
 com/forex/position/adapter/dto/PositionResp.class

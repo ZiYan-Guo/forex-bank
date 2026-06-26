@@ -11,10 +11,14 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.UUID;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
+import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class PvpSettlementService {
 
     private final PvpSettlementRepository pairRepository;
@@ -33,7 +37,7 @@ public class PvpSettlementService {
 
     public void executePvpSettlement(String pairId) {
         PvpSettlementPair pair = pairRepository.findByPairId(pairId)
-                .orElseThrow(() -> new IllegalArgumentException("PVP pair not found"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "PVP pair not found"));
         pair.attempt();
         try {
             ClearingInstruction payLeg = load(pair.getPayInstructionId());

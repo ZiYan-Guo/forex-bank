@@ -5,6 +5,8 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class Money extends BaseValueObject {
@@ -41,7 +43,7 @@ public class Money extends BaseValueObject {
 
     private void assertSameCurrency(Money other) {
         if (!this.currency.equals(other.currency)) {
-            throw new IllegalArgumentException("Currency mismatch: " + this.currency + " vs " + other.currency);
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "Currency mismatch: " + this.currency + " vs " + other.currency);
         }
     }
 

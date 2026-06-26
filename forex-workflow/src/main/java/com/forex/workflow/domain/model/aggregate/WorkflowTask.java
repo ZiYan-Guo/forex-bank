@@ -6,6 +6,8 @@ import lombok.Getter;
 
 import java.time.LocalDateTime;
 import java.util.Map;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class WorkflowTask extends BaseAggregate {
@@ -113,16 +115,16 @@ public class WorkflowTask extends BaseAggregate {
     @Override
     protected void validate() {
         if (taskId == null || taskId.isBlank()) {
-            throw new IllegalArgumentException("任务ID不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "任务ID不能为空");
         }
         if (bizType == null || bizType.isBlank()) {
-            throw new IllegalArgumentException("业务类型不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "业务类型不能为空");
         }
         if (bizNo == null || bizNo.isBlank()) {
-            throw new IllegalArgumentException("业务编号不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "业务编号不能为空");
         }
         if (title == null || title.isBlank()) {
-            throw new IllegalArgumentException("任务标题不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "任务标题不能为空");
         }
     }
 }

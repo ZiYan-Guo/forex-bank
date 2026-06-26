@@ -5,6 +5,8 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class PnlAttribution extends BaseAggregate {
@@ -98,10 +100,10 @@ public class PnlAttribution extends BaseAggregate {
     @Override
     protected void validate() {
         if (tradeId == null) {
-            throw new IllegalArgumentException("交易ID不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "交易ID不能为空");
         }
         if (attribDate == null) {
-            throw new IllegalArgumentException("归因日期不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "归因日期不能为空");
         }
     }
 }

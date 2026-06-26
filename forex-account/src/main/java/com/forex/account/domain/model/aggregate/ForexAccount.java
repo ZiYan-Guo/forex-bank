@@ -8,6 +8,8 @@ import lombok.Getter;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class ForexAccount extends BaseAggregate {
@@ -83,7 +85,7 @@ public class ForexAccount extends BaseAggregate {
 
     public void deposit(BigDecimal amount) {
         if (amount == null || amount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("存入金额必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "存入金额必须大于0");
         }
         this.balance = this.balance.add(amount);
         this.availableBalance = calculateAvailableBalance();
@@ -92,11 +94,11 @@ public class ForexAccount extends BaseAggregate {
 
     public void withdraw(BigDecimal amount) {
         if (amount == null || amount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("取款金额必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "取款金额必须大于0");
         }
         BigDecimal available = calculateAvailableBalance();
         if (available.compareTo(amount) < 0) {
-            throw new IllegalArgumentException("可用余额不足");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "可用余额不足");
         }
         this.balance = this.balance.subtract(amount);
         this.availableBalance = calculateAvailableBalance();
@@ -105,11 +107,11 @@ public class ForexAccount extends BaseAggregate {
 
     public void freeze(BigDecimal amount) {
         if (amount == null || amount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("冻结金额必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "冻结金额必须大于0");
         }
         BigDecimal available = calculateAvailableBalance();
         if (available.compareTo(amount) < 0) {
-            throw new IllegalArgumentException("可用余额不足，无法冻结");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "可用余额不足，无法冻结");
         }
         this.frozenAmount = this.frozenAmount.add(amount);
         this.availableBalance = calculateAvailableBalance();
@@ -118,10 +120,10 @@ public class ForexAccount extends BaseAggregate {
 
     public void unfreeze(BigDecimal amount) {
         if (amount == null || amount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("解冻金额必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "解冻金额必须大于0");
         }
         if (this.frozenAmount.compareTo(amount) < 0) {
-            throw new IllegalArgumentException("冻结金额不足，无法解冻");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "冻结金额不足，无法解冻");
         }
         this.frozenAmount = this.frozenAmount.subtract(amount);
         this.availableBalance = calculateAvailableBalance();
@@ -154,13 +156,13 @@ public class ForexAccount extends BaseAggregate {
     @Override
     protected void validate() {
         if (customerId == null) {
-            throw new IllegalArgumentException("客户ID不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "客户ID不能为空");
         }
         if (currency == null || currency.isBlank()) {
-            throw new IllegalArgumentException("币种不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "币种不能为空");
         }
         if (CurrencyEnum.fromCode(currency) == null) {
-            throw new IllegalArgumentException("无效的币种: " + currency);
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "无效的币种: " + currency);
         }
     }
 }

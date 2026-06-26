@@ -7,6 +7,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 import java.util.concurrent.ThreadLocalRandom;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class PaymentNo extends BaseValueObject {
@@ -17,7 +19,7 @@ public class PaymentNo extends BaseValueObject {
 
     private PaymentNo(String value) {
         if (value == null || value.isBlank()) {
-            throw new IllegalArgumentException("支付编号不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "支付编号不能为空");
         }
         this.value = value;
     }
@@ -28,7 +30,7 @@ public class PaymentNo extends BaseValueObject {
 
     public static PaymentNo generate(String direction) {
         if (direction == null || direction.isBlank()) {
-            throw new IllegalArgumentException("支付方向不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "支付方向不能为空");
         }
         String prefix = "INWARD".equalsIgnoreCase(direction) ? "PMTIN" : "PMTOUT";
         String datePart = LocalDateTime.now().format(DATE_FORMATTER);

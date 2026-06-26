@@ -4,6 +4,8 @@ import com.forex.common.base.domain.BaseValueObject;
 import lombok.Getter;
 
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class BopCode extends BaseValueObject {
@@ -12,7 +14,7 @@ public class BopCode extends BaseValueObject {
 
     private BopCode(String value) {
         if (value == null || value.isBlank()) {
-            throw new IllegalArgumentException("国际收支申报代码不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "国际收支申报代码不能为空");
         }
         this.value = value;
     }

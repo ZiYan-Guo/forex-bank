@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Slf4j
 @Service
@@ -29,7 +31,7 @@ public class CreditCheckDomainService {
     public void deductCredit(Long customerId, String limitType, String currency, BigDecimal amount) {
         CreditLimit limit = creditLimitRepository
                 .findByCustomerAndType(customerId, limitType, currency)
-                .orElseThrow(() -> new IllegalArgumentException("信用额度不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "信用额度不存在"));
 
         limit.deduct(amount);
         creditLimitRepository.save(limit);
@@ -42,7 +44,7 @@ public class CreditCheckDomainService {
     public void releaseCredit(Long customerId, String limitType, String currency, BigDecimal amount) {
         CreditLimit limit = creditLimitRepository
                 .findByCustomerAndType(customerId, limitType, currency)
-                .orElseThrow(() -> new IllegalArgumentException("信用额度不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "信用额度不存在"));
 
         limit.release(amount);
         creditLimitRepository.save(limit);

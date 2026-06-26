@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 import com.forex.common.security.annotation.RequirePermission;
+import com.forex.ai.adapter.dto.ClearingCorrectionReq;
+import com.forex.ai.adapter.dto.AuditCompareReq;
+import com.forex.ai.adapter.dto.OcrUploadReq;
 
 @Tag(name = "AI智能审单")
 @RestController

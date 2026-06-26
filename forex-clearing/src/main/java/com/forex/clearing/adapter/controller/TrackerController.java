@@ -21,6 +21,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.Map;
 import com.forex.common.security.annotation.RequirePermission;
+import com.forex.clearing.adapter.dto.UpdateTrackerStatusReq;
+import com.forex.clearing.adapter.dto.CreateTrackerReq;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Tag(name = "结算追踪")
 @RestController
@@ -34,10 +38,10 @@ public class TrackerController {
     @Operation(summary = "创建结算追踪")
     @RequirePermission("clearing:create")
     @PostMapping("/create")
-    public R<SettlementTracker> create(@RequestBody Map<String, Object> req) {
-        String paymentNo = (String) req.get("paymentNo");
-        String instructionNo = (String) req.get("instructionNo");
-        String channel = (String) req.get("channel");
+    public R<SettlementTracker> create(@RequestBody CreateTrackerReq req) {
+        String paymentNo = (String) req.getPaymentNo();
+        String instructionNo = (String) req.getChannel();
+        String channel = (String) req.getInstructionNo();
         SettlementTracker tracker = trackerService.createTracker(paymentNo, instructionNo, channel);
         return R.ok("追踪已创建", tracker);
     }
@@ -46,8 +50,8 @@ public class TrackerController {
     @RequirePermission("clearing:status")
     @PutMapping("/{trackingId}/status")
     public R<Void> updateStatus(@PathVariable String trackingId,
-                                 @RequestBody Map<String, Object> req) {
-        String newStatus = (String) req.get("status");
+                                 @RequestBody UpdateTrackerStatusReq req) {
+        String newStatus = (String) req.getStatus();
         trackerService.updateStatus(trackingId, newStatus);
         return R.okMsg("状态已更新");
     }
@@ -56,7 +60,7 @@ public class TrackerController {
     @GetMapping("/{trackingId}")
     public R<SettlementTracker> getDetail(@PathVariable String trackingId) {
         SettlementTracker tracker = trackerRepository.findByTrackingId(trackingId)
-                .orElseThrow(() -> new IllegalArgumentException("追踪记录不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "追踪记录不存在"));
         return R.ok(tracker);
     }
 

@@ -6,6 +6,8 @@ import lombok.Getter;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class CollateralInfo extends BaseValueObject {
@@ -17,13 +19,13 @@ public class CollateralInfo extends BaseValueObject {
 
     private CollateralInfo(String collateralType, BigDecimal marketValue, BigDecimal haircutPct) {
         if (collateralType == null || collateralType.isBlank()) {
-            throw new IllegalArgumentException("担保品类型不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "担保品类型不能为空");
         }
         if (marketValue == null || marketValue.compareTo(BigDecimal.ZERO) < 0) {
-            throw new IllegalArgumentException("市场价值不能为负数");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "市场价值不能为负数");
         }
         if (haircutPct == null || haircutPct.compareTo(BigDecimal.ZERO) < 0) {
-            throw new IllegalArgumentException("折扣率不能为负数");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "折扣率不能为负数");
         }
         this.collateralType = collateralType;
         this.marketValue = marketValue;

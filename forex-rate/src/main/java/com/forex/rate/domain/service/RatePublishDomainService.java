@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import com.forex.rate.domain.model.aggregate.ExchangeRate;
 import org.springframework.transaction.annotation.Transactional;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Service
 @Transactional
@@ -17,14 +19,14 @@ public class RatePublishDomainService {
 
     public ExchangeRate publishRate(ExchangeRate rate, String channelCode, BigDecimal spreadAdjust) {
         if (rate == null) {
-            throw new IllegalArgumentException("rate must not be null");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "rate must not be null");
         }
         if (channelCode == null || channelCode.isBlank()) {
-            throw new IllegalArgumentException("channelCode must not be blank");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "channelCode must not be blank");
         }
         if (spreadAdjust != null) {
             if (spreadAdjust.compareTo(rate.getAskRate().subtract(rate.getBidRate())) > 0) {
-                throw new IllegalArgumentException("spreadAdjust must not exceed current spread");
+                throw new BusinessException(ResultCode.VALIDATE_FAIL, "spreadAdjust must not exceed current spread");
             }
             BigDecimal adjustedBid = rate.getBidRate().add(spreadAdjust.divide(new BigDecimal("2"), 8, RoundingMode.HALF_UP));
             BigDecimal adjustedAsk = rate.getAskRate().subtract(spreadAdjust.divide(new BigDecimal("2"), 8, RoundingMode.HALF_UP));

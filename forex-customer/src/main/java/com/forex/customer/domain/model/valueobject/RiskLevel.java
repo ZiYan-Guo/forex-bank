@@ -5,6 +5,8 @@ import com.forex.common.base.domain.BaseValueObject;
 import lombok.Getter;
 
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class RiskLevel extends BaseValueObject {
@@ -18,10 +20,10 @@ public class RiskLevel extends BaseValueObject {
 
     private RiskLevel(Integer level) {
         if (level == null) {
-            throw new IllegalArgumentException("风险等级不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "风险等级不能为空");
         }
         if (level != LOW && level != MEDIUM && level != HIGH && level != PROHIBITED) {
-            throw new IllegalArgumentException("无效的风险等级: " + level);
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "无效的风险等级: " + level);
         }
         this.level = level;
     }

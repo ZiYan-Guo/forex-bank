@@ -12,9 +12,13 @@ import org.springframework.stereotype.Service;
 import com.forex.ai.domain.model.aggregate.RatePrediction;
 
 import lombok.extern.slf4j.Slf4j;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Slf4j
+@Transactional
 public class RatePredictionEngine {
 
     private static final MathContext MATH_CTX = new MathContext(8, RoundingMode.HALF_UP);
@@ -23,7 +27,7 @@ public class RatePredictionEngine {
     public RatePrediction predict(String currencyPair, String predType,
                                    List<BigDecimal> historicalRates) {
         if (historicalRates == null || historicalRates.size() < 2) {
-            throw new IllegalArgumentException("historicalRates must have at least 2 data points");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "historicalRates must have at least 2 data points");
         }
         BigDecimal predictedRate = exponentialSmoothing(historicalRates, ALPHA_DEFAULT);
         BigDecimal volatility = calculateVolatility(historicalRates);

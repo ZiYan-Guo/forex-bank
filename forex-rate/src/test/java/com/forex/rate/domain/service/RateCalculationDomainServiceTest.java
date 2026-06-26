@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.*;
+import com.forex.common.base.exception.BusinessException;
 
 class RateCalculationDomainServiceTest {
 
@@ -22,7 +23,7 @@ class RateCalculationDomainServiceTest {
     @Test
     @DisplayName("Calculate cross rate throws for zero base rate")
     void testCalculateCrossRate_ZeroBase() {
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(BusinessException.class,
                 () -> service.calculateCrossRate(BigDecimal.ZERO, new BigDecimal("0.92")));
     }
 
@@ -50,14 +51,14 @@ class RateCalculationDomainServiceTest {
     @Test
     @DisplayName("Calculate amount throws for zero amount")
     void testCalculateAmount_ZeroAmount() {
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(BusinessException.class,
                 () -> service.calculateAmount(BigDecimal.ZERO, new BigDecimal("7.24")));
     }
 
     @Test
     @DisplayName("Calculate amount throws for zero rate")
     void testCalculateAmount_ZeroRate() {
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(BusinessException.class,
                 () -> service.calculateAmount(new BigDecimal("1000.00"), BigDecimal.ZERO));
     }
 }

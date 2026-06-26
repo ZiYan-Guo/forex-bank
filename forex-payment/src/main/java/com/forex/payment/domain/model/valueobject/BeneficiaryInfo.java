@@ -4,6 +4,8 @@ import com.forex.common.base.domain.BaseValueObject;
 import lombok.Getter;
 
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class BeneficiaryInfo extends BaseValueObject {
@@ -18,10 +20,10 @@ public class BeneficiaryInfo extends BaseValueObject {
     private BeneficiaryInfo(String name, String accountNo, String bankName,
                             String bankSwiftCode, PostalAddress postalAddress, String country) {
         if (name == null || name.isBlank()) {
-            throw new IllegalArgumentException("收款人名称不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "收款人名称不能为空");
         }
         if (accountNo == null || accountNo.isBlank()) {
-            throw new IllegalArgumentException("收款人账号不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "收款人账号不能为空");
         }
         this.name = name;
         this.accountNo = accountNo;

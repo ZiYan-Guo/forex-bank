@@ -6,6 +6,8 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class CreditLimit extends BaseEntity {
@@ -38,7 +40,7 @@ public class CreditLimit extends BaseEntity {
 
     public void deduct(BigDecimal amount) {
         if (amount == null || amount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("扣减金额必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "扣减金额必须大于0");
         }
         if (!isAvailable()) {
             throw new IllegalStateException("信用额度不可用");
@@ -55,7 +57,7 @@ public class CreditLimit extends BaseEntity {
 
     public void release(BigDecimal amount) {
         if (amount == null || amount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("释放金额必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "释放金额必须大于0");
         }
         if (this.usedLimit.compareTo(amount) < 0) {
             throw new IllegalStateException("释放金额超过已用额度");

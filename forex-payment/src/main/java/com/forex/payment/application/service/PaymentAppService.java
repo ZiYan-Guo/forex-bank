@@ -19,6 +19,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Service
 @RequiredArgsConstructor
@@ -82,7 +84,7 @@ public class PaymentAppService {
 
     public CrossBorderPayment getPaymentDetail(String paymentNo) {
         return paymentRepository.findByPaymentNo(paymentNo)
-                .orElseThrow(() -> new IllegalArgumentException("支付记录不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "支付记录不存在"));
     }
 
     public PageResp<CrossBorderPayment> pageQuery(PaymentQuery query) {
@@ -103,28 +105,28 @@ public class PaymentAppService {
     @Transactional
     public void submitPayment(String paymentNo) {
         CrossBorderPayment payment = paymentRepository.findByPaymentNo(paymentNo)
-                .orElseThrow(() -> new IllegalArgumentException("支付记录不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "支付记录不存在"));
         paymentDomainService.submitPayment(payment);
     }
 
     @Transactional
     public void approvePayment(String paymentNo) {
         CrossBorderPayment payment = paymentRepository.findByPaymentNo(paymentNo)
-                .orElseThrow(() -> new IllegalArgumentException("支付记录不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "支付记录不存在"));
         paymentDomainService.approvePayment(payment);
     }
 
     @Transactional
     public void processAmlCheck(String paymentNo, boolean passed, String reason) {
         CrossBorderPayment payment = paymentRepository.findByPaymentNo(paymentNo)
-                .orElseThrow(() -> new IllegalArgumentException("支付记录不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "支付记录不存在"));
         paymentDomainService.processAmlResult(payment, passed, reason);
     }
 
     @Transactional
     public CrossBorderPayment sendPayment(String paymentNo, String swiftRef, String cipsRef) {
         CrossBorderPayment payment = paymentRepository.findByPaymentNo(paymentNo)
-                .orElseThrow(() -> new IllegalArgumentException("支付记录不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "支付记录不存在"));
         paymentDomainService.sendPayment(payment, swiftRef, cipsRef);
         return payment;
     }
@@ -132,13 +134,13 @@ public class PaymentAppService {
     @Transactional
     public void cancelPayment(String paymentNo, String reason) {
         CrossBorderPayment payment = paymentRepository.findByPaymentNo(paymentNo)
-                .orElseThrow(() -> new IllegalArgumentException("支付记录不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "支付记录不存在"));
         paymentDomainService.cancelPayment(payment, reason);
     }
 
     public CrossBorderPayment updateGpiStatus(String paymentNo, String gpiStatus, String trackingId) {
         CrossBorderPayment payment = paymentRepository.findByPaymentNo(paymentNo)
-                .orElseThrow(() -> new IllegalArgumentException("支付记录不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "支付记录不存在"));
         payment.updateGpiStatus(gpiStatus);
         if (trackingId != null && !trackingId.isBlank()) {
             payment.setCipsRef(null);

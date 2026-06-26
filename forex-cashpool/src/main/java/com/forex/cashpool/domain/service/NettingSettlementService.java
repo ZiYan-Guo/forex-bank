@@ -11,6 +11,7 @@ import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 轧差结算服务 - 计算资金池成员间的净头寸并生成轧差指令
@@ -18,6 +19,7 @@ import java.util.Map;
  */
 @Slf4j
 @Service
+@Transactional
 public class NettingSettlementService {
 
     /**

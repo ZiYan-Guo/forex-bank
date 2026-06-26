@@ -7,6 +7,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 import java.util.concurrent.ThreadLocalRandom;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class ReportNo extends BaseValueObject {
@@ -17,7 +19,7 @@ public class ReportNo extends BaseValueObject {
 
     private ReportNo(String value) {
         if (value == null || value.isBlank()) {
-            throw new IllegalArgumentException("申报编号不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "申报编号不能为空");
         }
         this.value = value;
     }

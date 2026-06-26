@@ -7,6 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 /**
  * 境外放款聚合根 - 管理境外放款合同生命周期与还款处理
@@ -120,13 +122,13 @@ public class OverseasLending extends BaseAggregate {
      */
     public void recordRepayment(BigDecimal amount) {
         if (amount == null || amount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("还款金额必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "还款金额必须大于0");
         }
         if (!"ACTIVE".equals(this.loanStatus) && !"OVERDUE".equals(this.loanStatus)) {
             throw new IllegalStateException("当前合同状态为 " + this.loanStatus + "，无法进行还款");
         }
         if (amount.compareTo(outstandingPrincipal) > 0) {
-            throw new IllegalArgumentException("还款金额超过未偿还本金，还款金额: " + amount
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "还款金额超过未偿还本金，还款金额: " + amount
                     + "，未偿还本金: " + outstandingPrincipal);
         }
         this.outstandingPrincipal = this.outstandingPrincipal.subtract(amount);
@@ -173,31 +175,31 @@ public class OverseasLending extends BaseAggregate {
     @Override
     protected void validate() {
         if (contractNo == null || contractNo.isBlank()) {
-            throw new IllegalArgumentException("合同编号不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "合同编号不能为空");
         }
         if (customerId == null) {
-            throw new IllegalArgumentException("客户ID不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "客户ID不能为空");
         }
         if (loanAmount == null || loanAmount.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("放款金额必须大于0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "放款金额必须大于0");
         }
         if (loanCurrency == null || loanCurrency.isBlank()) {
-            throw new IllegalArgumentException("放款币种不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "放款币种不能为空");
         }
         if (interestRate == null || interestRate.compareTo(BigDecimal.ZERO) < 0) {
-            throw new IllegalArgumentException("利率不能为负数");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "利率不能为负数");
         }
         if (startDate == null) {
-            throw new IllegalArgumentException("放款日期不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "放款日期不能为空");
         }
         if (endDate == null) {
-            throw new IllegalArgumentException("到期日期不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "到期日期不能为空");
         }
         if (endDate.isBefore(startDate)) {
-            throw new IllegalArgumentException("到期日期不能早于放款日期");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "到期日期不能早于放款日期");
         }
         if (repaymentMethod == null || repaymentMethod.isBlank()) {
-            throw new IllegalArgumentException("还款方式不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "还款方式不能为空");
         }
     }
 }

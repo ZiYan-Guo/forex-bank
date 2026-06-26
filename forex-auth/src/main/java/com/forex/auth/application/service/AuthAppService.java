@@ -13,10 +13,14 @@ import org.springframework.util.DigestUtils;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
 /** Auth application service. Orchestrates login, token refresh, and logout. 认证应用服务。编排登录/刷新/登出用例。 */
+@Transactional
 public class AuthAppService {
 
     private final AuthenticationDomainService authDomainService;
@@ -43,7 +47,7 @@ public class AuthAppService {
     /** Refresh access token. Checks blacklist before issuing new token. 刷新令牌，检查黑名单后签发新令牌。 */
     public String refreshToken(String refreshToken) {
         if (isTokenBlacklisted(refreshToken)) {
-            throw new IllegalArgumentException("Token 已失效");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "Token 已失效");
         }
         var claims = jwtUtil.parseToken(refreshToken);
         Long userId = jwtUtil.getUserId(claims);

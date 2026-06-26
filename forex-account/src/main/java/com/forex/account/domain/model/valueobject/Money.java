@@ -6,6 +6,8 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.Objects;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class Money extends BaseValueObject {
@@ -15,10 +17,10 @@ public class Money extends BaseValueObject {
 
     private Money(BigDecimal amount, String currency) {
         if (amount == null) {
-            throw new IllegalArgumentException("金额不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "金额不能为空");
         }
         if (currency == null || currency.isBlank()) {
-            throw new IllegalArgumentException("币种不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "币种不能为空");
         }
         this.amount = amount;
         this.currency = currency;
@@ -34,20 +36,20 @@ public class Money extends BaseValueObject {
 
     public Money add(Money other) {
         if (other == null) {
-            throw new IllegalArgumentException("加数不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "加数不能为空");
         }
         if (!this.currency.equals(other.currency)) {
-            throw new IllegalArgumentException("币种不一致，不能相加: " + this.currency + " vs " + other.currency);
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "币种不一致，不能相加: " + this.currency + " vs " + other.currency);
         }
         return new Money(this.amount.add(other.amount), this.currency);
     }
 
     public Money subtract(Money other) {
         if (other == null) {
-            throw new IllegalArgumentException("减数不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "减数不能为空");
         }
         if (!this.currency.equals(other.currency)) {
-            throw new IllegalArgumentException("币种不一致，不能相减: " + this.currency + " vs " + other.currency);
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "币种不一致，不能相减: " + this.currency + " vs " + other.currency);
         }
         return new Money(this.amount.subtract(other.amount), this.currency);
     }
@@ -58,10 +60,10 @@ public class Money extends BaseValueObject {
 
     public boolean isGreaterThan(Money other) {
         if (other == null) {
-            throw new IllegalArgumentException("比较对象不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "比较对象不能为空");
         }
         if (!this.currency.equals(other.currency)) {
-            throw new IllegalArgumentException("币种不一致，不能比较");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "币种不一致，不能比较");
         }
         return this.amount.compareTo(other.amount) > 0;
     }

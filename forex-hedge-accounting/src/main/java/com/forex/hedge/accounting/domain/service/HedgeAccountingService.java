@@ -11,6 +11,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 套保会计领域服务.
@@ -19,6 +20,7 @@ import java.util.Map;
  */
 @Slf4j
 @Service
+@Transactional
 public class HedgeAccountingService {
 
     /**

@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Slf4j
 @Service
@@ -24,7 +26,7 @@ public class ValuationModelRegistry {
     public ValuationModel getModel(ValuationModelType type) {
         ValuationModel model = modelMap.get(type);
         if (model == null) {
-            throw new IllegalArgumentException("No valuation model found for type: " + type);
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "No valuation model found for type: " + type);
         }
         return model;
     }

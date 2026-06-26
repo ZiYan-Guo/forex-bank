@@ -6,6 +6,8 @@ import lombok.Getter;
 
 import java.time.LocalDateTime;
 import java.util.Set;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 /**
  * User aggregate root. Represents a system user with authentication info, roles and permissions.
@@ -116,10 +118,10 @@ public class User extends BaseAggregate {
     @Override
     protected void validate() {
         if (username == null || username.isBlank()) {
-            throw new IllegalArgumentException("用户名不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "用户名不能为空");
         }
         if (password == null || password.isBlank()) {
-            throw new IllegalArgumentException("密码不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "密码不能为空");
         }
     }
 }

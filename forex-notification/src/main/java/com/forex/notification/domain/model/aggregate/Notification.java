@@ -5,6 +5,8 @@ import com.forex.common.base.domain.BaseAggregate;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class Notification extends BaseAggregate {
@@ -85,13 +87,13 @@ public class Notification extends BaseAggregate {
     @Override
     protected void validate() {
         if (title == null || title.isBlank()) {
-            throw new IllegalArgumentException("通知标题不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "通知标题不能为空");
         }
         if (content == null || content.isBlank()) {
-            throw new IllegalArgumentException("通知内容不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "通知内容不能为空");
         }
         if (notifyType == null || notifyType.isBlank()) {
-            throw new IllegalArgumentException("通知类型不能为空");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "通知类型不能为空");
         }
     }
 }

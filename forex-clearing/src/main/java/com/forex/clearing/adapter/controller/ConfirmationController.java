@@ -24,6 +24,11 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import com.forex.common.security.annotation.RequirePermission;
+import com.forex.clearing.adapter.dto.ResolveConfirmationReq;
+import com.forex.clearing.adapter.dto.ConfirmationPageQuery;
+import com.forex.clearing.adapter.dto.InitiateConfirmationReq;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Tag(name = "交易确认")
 @RestController
@@ -38,14 +43,14 @@ public class ConfirmationController {
     @Operation(summary = "发起交易确认")
     @RequirePermission("clearing:initiate")
     @PostMapping("/initiate")
-    public R<TradeConfirmation> initiate(@RequestBody Map<String, Object> req) {
-        String tradeNo = (String) req.get("tradeNo");
-        String tradeType = (String) req.get("tradeType");
-        String currencyPair = (String) req.get("currencyPair");
-        BigDecimal amount = new BigDecimal(req.get("amount").toString());
-        BigDecimal rate = new BigDecimal(req.get("rate").toString());
-        LocalDate valueDate = LocalDate.parse((String) req.get("valueDate"));
-        String counterparty = (String) req.get("counterparty");
+    public R<TradeConfirmation> initiate(@RequestBody InitiateConfirmationReq req) {
+        String tradeNo = (String) req.getAmount();
+        String tradeType = (String) req.getRate();
+        String currencyPair = (String) req.getTradeType();
+        BigDecimal amount = new BigDecimal(req.getValueDate().toString());
+        BigDecimal rate = new BigDecimal(req.getTradeNo().toString());
+        LocalDate valueDate = LocalDate.parse((String) req.getCurrencyPair());
+        String counterparty = (String) req.getCounterparty();
         TradeConfirmation cfm = automatedConfirmationService.initiateConfirmation(
                 tradeNo, tradeType, currencyPair, amount, rate, valueDate, counterparty);
         return R.ok("确认已发起", cfm);
@@ -55,17 +60,17 @@ public class ConfirmationController {
     @GetMapping("/{confirmId}")
     public R<TradeConfirmation> getDetail(@PathVariable String confirmId) {
         TradeConfirmation cfm = confirmationRepository.findByConfirmId(confirmId)
-                .orElseThrow(() -> new IllegalArgumentException("确认记录不存在"));
+                .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "确认记录不存在"));
         return R.ok(cfm);
     }
 
     @Operation(summary = "分页查询确认记录")
     @RequirePermission("clearing:page")
     @PostMapping("/page")
-    public R<PageResp<TradeConfirmation>> page(@RequestBody Map<String, Object> req) {
+    public R<PageResp<TradeConfirmation>> page(@RequestBody ConfirmationPageQuery req) {
         List<TradeConfirmation> all = confirmationRepository.findAll();
-        int pageNum = req.get("pageNum") != null ? ((Number) req.get("pageNum")).intValue() : 1;
-        int pageSize = req.get("pageSize") != null ? ((Number) req.get("pageSize")).intValue() : 20;
+        int pageNum = req.getPageNum() != null ? req.getPageNum() : 1;
+        int pageSize = req.getPageSize() != null ? req.getPageSize() : 20;
         List<TradeConfirmation> records = all.stream()
                 .skip((long) (pageNum - 1) * pageSize)
                 .limit(pageSize)
@@ -85,11 +90,10 @@ public class ConfirmationController {
     @RequirePermission("clearing:resolve")
     @PostMapping("/resolve/{confirmId}")
     public R<Void> resolve(@PathVariable String confirmId,
-                            @RequestBody Map<String, Object> req) {
-        String action = (String) req.get("action");
-        String comment = (String) req.get("comment");
-        Long operatorId = req.get("operatorId") != null
-                ? ((Number) req.get("operatorId")).longValue() : 0L;
+                            @RequestBody ResolveConfirmationReq req) {
+        String action = req.getAction();
+        String comment = req.getComment();
+        Long operatorId = req.getOperatorId();
         confirmationWorkflowService.resolveIntervention(confirmId, action, comment, operatorId);
         return R.okMsg("人工干预已完成");
     }

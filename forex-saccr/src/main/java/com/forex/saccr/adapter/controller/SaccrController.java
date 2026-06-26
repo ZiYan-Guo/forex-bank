@@ -9,6 +9,8 @@ import com.forex.saccr.adapter.dto.SimmResultResp;
 import com.forex.saccr.application.service.SaccrAppService;
 import com.forex.saccr.domain.model.aggregate.SaccrResult;
 import com.forex.saccr.domain.model.aggregate.SimmResult;
+import com.forex.saccr.adapter.dto.SaccrPageQuery;
+import com.forex.saccr.adapter.dto.SimmPageQuery;
 import com.forex.saccr.domain.model.query.SaccrQuery;
 import com.forex.saccr.domain.model.query.SimmQuery;
 
@@ -68,7 +70,14 @@ public class SaccrController {
     @Operation(summary = "分页查询SA-CCR结果")
     @RequirePermission("saccr:page")
     @PostMapping("/result/page")
-    public R<PageResp<SaccrResultResp>> pageQuery(@RequestBody SaccrQuery query) {
+    public R<PageResp<SaccrResultResp>> pageQuery(@RequestBody SaccrPageQuery req) {
+        SaccrQuery query = new SaccrQuery();
+        query.setPageNum(req.getPageNum());
+        query.setPageSize(req.getPageSize());
+        query.setTradeId(req.getTradeId());
+        query.setTradeNo(req.getTradeNo());
+        query.setCounterPartyId(req.getCounterPartyId());
+        query.setCalcMethod(req.getCalcMethod());
         PageResp<SaccrResult> page = saccrAppService.pageQuerySaccr(query);
         List<SaccrResultResp> respList = page.getRecords().stream()
                 .map(this::toSaccrResultResp)
@@ -79,7 +88,13 @@ public class SaccrController {
     @Operation(summary = "分页查询SIMM结果")
     @RequirePermission("saccr:page")
     @PostMapping("/simm/result/page")
-    public R<PageResp<SimmResultResp>> pageQuerySimm(@RequestBody SimmQuery query) {
+    public R<PageResp<SimmResultResp>> pageQuerySimm(@RequestBody SimmPageQuery req) {
+        SimmQuery query = new SimmQuery();
+        query.setPageNum(req.getPageNum());
+        query.setPageSize(req.getPageSize());
+        query.setTradeId(req.getTradeId());
+        query.setTradeNo(req.getTradeNo());
+        query.setCalcMethod(req.getCalcMethod());
         PageResp<SimmResult> page = saccrAppService.pageQuerySimm(query);
         List<SimmResultResp> respList = page.getRecords().stream()
                 .map(this::toSimmResultResp)

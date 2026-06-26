@@ -8,6 +8,8 @@ import java.util.UUID;
 import com.forex.common.base.domain.BaseAggregate;
 
 import lombok.Getter;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class ChatSession extends BaseAggregate {
@@ -66,7 +68,7 @@ public class ChatSession extends BaseAggregate {
 
     public void addMessage(ChatMessage msg) {
         if (msg == null) {
-            throw new IllegalArgumentException("message must not be null");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "message must not be null");
         }
         if (CLOSED.equals(this.status)) {
             throw new IllegalStateException("Cannot add message to a closed session");
@@ -94,10 +96,10 @@ public class ChatSession extends BaseAggregate {
     @Override
     protected void validate() {
         if (sessionType == null || sessionType.isBlank()) {
-            throw new IllegalArgumentException("sessionType must not be blank");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "sessionType must not be blank");
         }
         if (userId == null || userId.isBlank()) {
-            throw new IllegalArgumentException("userId must not be blank");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "userId must not be blank");
         }
     }
 }

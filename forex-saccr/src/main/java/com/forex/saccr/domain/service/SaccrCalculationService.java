@@ -7,10 +7,12 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class SaccrCalculationService {
 
     private static final BigDecimal ALPHA = new BigDecimal("1.4");

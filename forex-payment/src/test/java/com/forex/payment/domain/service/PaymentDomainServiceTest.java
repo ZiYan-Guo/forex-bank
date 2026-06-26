@@ -21,6 +21,7 @@ import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
+import com.forex.common.base.exception.BusinessException;
 
 @ExtendWith(MockitoExtension.class)
 class PaymentDomainServiceTest {
@@ -150,7 +151,7 @@ class PaymentDomainServiceTest {
     @Test
     @DisplayName("Calculate settlement amount throws when amount is zero")
     void testCalculateSettlementAmount_ZeroAmount() {
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(BusinessException.class,
                 () -> paymentDomainService.calculateSettlementAmount(BigDecimal.ZERO, new BigDecimal("7.24")));
     }
 }

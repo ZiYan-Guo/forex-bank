@@ -6,6 +6,8 @@ import java.util.Objects;
 import com.forex.common.base.domain.BaseValueObject;
 
 import lombok.Getter;
+import com.forex.common.base.exception.BusinessException;
+import com.forex.common.base.result.ResultCode;
 
 @Getter
 public class RateValue extends BaseValueObject {
@@ -16,7 +18,7 @@ public class RateValue extends BaseValueObject {
 
     private RateValue(BigDecimal value) {
         if (value == null || value.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("Rate value must be greater than 0");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "Rate value must be greater than 0");
         }
         this.value = value;
     }
@@ -27,7 +29,7 @@ public class RateValue extends BaseValueObject {
 
     public RateValue addSpread(BigDecimal spread) {
         if (spread == null) {
-            throw new IllegalArgumentException("Spread must not be null");
+            throw new BusinessException(ResultCode.VALIDATE_FAIL, "Spread must not be null");
         }
         return new RateValue(this.value.add(spread));
     }
