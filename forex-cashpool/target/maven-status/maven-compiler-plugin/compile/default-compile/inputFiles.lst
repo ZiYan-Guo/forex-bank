@@ -1,6 +1,12 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/src/main/java/com/forex/cashpool/CashpoolApplication.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/src/main/java/com/forex/cashpool/adapter/dto/AddMemberReq.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/src/main/java/com/forex/cashpool/adapter/dto/CalculateQuotaReq.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/src/main/java/com/forex/cashpool/adapter/dto/CreateLendingReq.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/src/main/java/com/forex/cashpool/adapter/dto/CreatePoolReq.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/src/main/java/com/forex/cashpool/adapter/dto/LendingPageQuery.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/src/main/java/com/forex/cashpool/adapter/dto/RecordRepaymentReq.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-cashpool/src/main/java/com/forex/cashpool/domain/model/entity/PoolMember.java

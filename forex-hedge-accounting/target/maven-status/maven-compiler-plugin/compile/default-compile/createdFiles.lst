@@ -1,11 +1,14 @@
+com/forex/hedge/accounting/adapter/dto/CreateHedgeReq.class
 com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.class
 com/forex/hedge/accounting/domain/repository/HedgeEffectivenessTestRepository.class
 com/forex/hedge/accounting/infrastructure/mapper/HedgeEffectivenessTestMapper.class
 com/forex/hedge/accounting/domain/service/HedgeAccountingService.class
+com/forex/hedge/accounting/adapter/dto/GenerateHedgeEntriesReq.class
 com/forex/hedge/accounting/domain/repository/HedgeRelationshipRepository.class
 com/forex/hedge/accounting/infrastructure/repository/HedgeRelationshipRepositoryImpl.class
 com/forex/hedge/accounting/infrastructure/persistence/HedgeEffectivenessTestPO.class
 com/forex/hedge/accounting/infrastructure/mapper/HedgeRelationshipMapper.class
+com/forex/hedge/accounting/adapter/dto/EffectivenessTestReq.class
 com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.class
 com/forex/hedge/accounting/infrastructure/repository/HedgeEffectivenessTestRepositoryImpl.class
 com/forex/hedge/accounting/HedgeAccountingApplication.class

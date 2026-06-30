@@ -1,10 +1,13 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/RiskApplication.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/adapter/controller/RiskController.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/adapter/dto/CreateRiskLogReq.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/adapter/dto/RiskLogResp.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/adapter/dto/RiskPageQuery.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/adapter/dto/RiskReportResp.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/application/command/EvaluateCmd.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/application/command/GenerateReportCmd.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-risk/src/main/java/com/forex/risk/application/service/RiskAppService.java

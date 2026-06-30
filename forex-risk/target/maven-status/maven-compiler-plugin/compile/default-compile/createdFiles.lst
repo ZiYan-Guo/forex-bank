@@ -9,6 +9,7 @@ com/forex/risk/domain/model/entity/RiskParamConfig.class
 com/forex/risk/domain/model/entity/RiskReport.class
 com/forex/risk/domain/model/entity/SamplingRule.class
 com/forex/risk/infrastructure/repository/RiskReportRepositoryImpl.class
+com/forex/risk/adapter/dto/CompleteTaskReq.class
 com/forex/risk/domain/event/RiskAlertEvent.class
 com/forex/risk/infrastructure/persistence/RiskParamConfigPO.class
 com/forex/risk/domain/repository/RiskMonitorLogRepository.class
@@ -22,6 +23,7 @@ com/forex/risk/application/command/GenerateReportCmd.class
 com/forex/risk/domain/repository/RiskParamConfigRepository.class
 com/forex/risk/domain/model/aggregate/RiskMonitorLog.class
 com/forex/risk/adapter/dto/CreateRiskLogReq.class
+com/forex/risk/adapter/dto/SamplingEvaluateReq.class
 com/forex/risk/infrastructure/persistence/RiskReportPO.class
 com/forex/risk/application/command/EvaluateCmd.class
 com/forex/risk/domain/repository/RiskReportRepository.class
@@ -36,6 +38,7 @@ com/forex/risk/domain/model/valueobject/RuleCondition.class
 com/forex/risk/RiskApplication.class
 com/forex/risk/infrastructure/mapper/RiskParamConfigMapper.class
 com/forex/risk/application/service/SamplingRuleEngine.class
+com/forex/risk/adapter/dto/GenerateSamplingReq.class
 com/forex/risk/infrastructure/repository/RiskMonitorLogRepositoryImpl.class
 com/forex/risk/infrastructure/mapper/RiskReportMapper.class
 com/forex/risk/application/service/RiskAppService.class

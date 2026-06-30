@@ -1,7 +1,9 @@
+com/forex/payment/adapter/dto/UpdateTemplateReq.class
 com/forex/payment/infrastructure/mapper/PaymentReconciliationMapper.class
 com/forex/payment/infrastructure/mapper/BlacklistHitMapper.class
 com/forex/payment/infrastructure/persistence/CrossBorderPaymentPO.class
 com/forex/payment/infrastructure/mapper/CrossBorderPaymentMapper.class
+com/forex/payment/adapter/dto/CreateTemplateReq.class
 com/forex/payment/application/service/BankCodeValidationService.class
 com/forex/payment/adapter/dto/BatchSubmitReq.class
 com/forex/payment/infrastructure/repository/ReconciliationRepositoryImpl.class
