@@ -1,0 +1,2514 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ClearingResp.java",
+      "totalLines": 88,
+      "nonEmptyLines": 59,
+      "classes": [
+        {
+          "name": "ClearingResp",
+          "startLine": 11,
+          "endLine": 88,
+          "methods": [],
+          "properties": [
+            "id",
+            "instructionNo",
+            "bizType",
+            "bizNo",
+            "clearingChannel",
+            "nostroAccount",
+            "counterPartyAccount",
+            "payCurrency",
+            "payAmount",
+            "receiveCurrency",
+            "receiveAmount",
+            "valueDate",
+            "settlementDate",
+            "settlementType",
+            "instructionStatus",
+            "swiftRef",
+            "cipsRef",
+            "nostroBalanceBefore",
+            "nostroBalanceAfter",
+            "sendTime",
+            "ackTime",
+            "settleTime",
+            "operatorId",
+            "remark",
+            "createTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ClearingResp",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/command/GenerateClearingCmd.java",
+      "totalLines": 38,
+      "nonEmptyLines": 24,
+      "classes": [
+        {
+          "name": "GenerateClearingCmd",
+          "startLine": 11,
+          "endLine": 38,
+          "methods": [],
+          "properties": [
+            "bizType",
+            "bizNo",
+            "clearingChannel",
+            "nostroAccount",
+            "payAmount",
+            "payCurrency",
+            "receiveCurrency",
+            "receiveAmount",
+            "valueDate",
+            "settlementDate"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GenerateClearingCmd",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/dto/InternalTrade.java",
+      "totalLines": 21,
+      "nonEmptyLines": 18,
+      "classes": [
+        {
+          "name": "InternalTrade",
+          "startLine": 13,
+          "endLine": 21,
+          "methods": [],
+          "properties": [
+            "tradeNo",
+            "currencyPair",
+            "amount",
+            "valueDate",
+            "counterparty"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "InternalTrade",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "totalLines": 49,
+      "nonEmptyLines": 39,
+      "functions": [
+        {
+          "name": "addMatched",
+          "startLine": 19,
+          "endLine": 21,
+          "params": [
+            "externalRef",
+            "internalRef"
+          ]
+        },
+        {
+          "name": "addUnmatched",
+          "startLine": 23,
+          "endLine": 25,
+          "params": [
+            "type",
+            "refNo",
+            "reason"
+          ]
+        },
+        {
+          "name": "getMatchedCount",
+          "startLine": 27,
+          "endLine": 29,
+          "params": []
+        },
+        {
+          "name": "getUnmatchedCount",
+          "startLine": 31,
+          "endLine": 33,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ReconciliationResult",
+          "startLine": 13,
+          "endLine": 49,
+          "methods": [
+            "addMatched",
+            "addUnmatched",
+            "getMatchedCount",
+            "getUnmatchedCount"
+          ],
+          "properties": [
+            "matched",
+            "unmatched"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "addMatched",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "addUnmatched",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "getMatchedCount",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "getUnmatchedCount",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "ReconciliationResult",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/dto/TradeConfirmation.java",
+      "totalLines": 23,
+      "nonEmptyLines": 20,
+      "classes": [
+        {
+          "name": "TradeConfirmation",
+          "startLine": 13,
+          "endLine": 23,
+          "methods": [],
+          "properties": [
+            "refNo",
+            "currencyPair",
+            "direction",
+            "amount",
+            "rate",
+            "valueDate",
+            "counterparty"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "TradeConfirmation",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/AutomatedConfirmationService.java",
+      "totalLines": 76,
+      "nonEmptyLines": 64,
+      "functions": [
+        {
+          "name": "initiateConfirmation",
+          "startLine": 30,
+          "endLine": 46,
+          "params": [
+            "tradeNo",
+            "tradeType",
+            "currencyPair",
+            "amount",
+            "rate",
+            "valueDate",
+            "counterparty"
+          ]
+        },
+        {
+          "name": "determineFlag",
+          "startLine": 48,
+          "endLine": 50,
+          "params": [
+            "tradeType"
+          ]
+        },
+        {
+          "name": "matchViaCentralized",
+          "startLine": 52,
+          "endLine": 55,
+          "params": [
+            "cfm"
+          ]
+        },
+        {
+          "name": "matchViaBilateral",
+          "startLine": 57,
+          "endLine": 60,
+          "params": [
+            "cfm"
+          ]
+        },
+        {
+          "name": "retryFailedConfirmations",
+          "startLine": 66,
+          "endLine": 75,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "AutomatedConfirmationService",
+          "startLine": 17,
+          "endLine": 76,
+          "methods": [
+            "initiateConfirmation",
+            "determineFlag",
+            "matchViaCentralized",
+            "matchViaBilateral",
+            "retryFailedConfirmations"
+          ],
+          "properties": [
+            "confirmationRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "initiateConfirmation",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "retryFailedConfirmations",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "AutomatedConfirmationService",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 10,
+        "exportCount": 3,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsMessageGenerator.java",
+      "totalLines": 111,
+      "nonEmptyLines": 105,
+      "functions": [
+        {
+          "name": "generateCips111",
+          "startLine": 25,
+          "endLine": 59,
+          "params": [
+            "msgId",
+            "debtorName",
+            "debtorAcct",
+            "creditorName",
+            "creditorAcct",
+            "creditorCipsId",
+            "currency",
+            "amount",
+            "remittanceInfo"
+          ]
+        },
+        {
+          "name": "generateCips112",
+          "startLine": 65,
+          "endLine": 84,
+          "params": [
+            "originalMsgId",
+            "status",
+            "reason"
+          ]
+        },
+        {
+          "name": "generateCips113",
+          "startLine": 90,
+          "endLine": 110,
+          "params": [
+            "originalMsgId",
+            "returnReason",
+            "returnAmount"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CipsMessageGenerator",
+          "startLine": 17,
+          "endLine": 111,
+          "methods": [
+            "generateCips111",
+            "generateCips112",
+            "generateCips113"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "generateCips111",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "generateCips112",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "generateCips113",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "CipsMessageGenerator",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsRoutingService.java",
+      "totalLines": 72,
+      "nonEmptyLines": 63,
+      "functions": [
+        {
+          "name": "CipsRoutingService",
+          "startLine": 23,
+          "endLine": 39,
+          "params": []
+        },
+        {
+          "name": "resolveByBic",
+          "startLine": 45,
+          "endLine": 55,
+          "params": [
+            "bicCode"
+          ]
+        },
+        {
+          "name": "resolveByBankName",
+          "startLine": 58,
+          "endLine": 61,
+          "params": [
+            "bankName"
+          ]
+        },
+        {
+          "name": "isCipsParticipant",
+          "startLine": 64,
+          "endLine": 66,
+          "params": [
+            "bicCode"
+          ]
+        },
+        {
+          "name": "getParticipantCount",
+          "startLine": 69,
+          "endLine": 71,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CipsRoutingService",
+          "startLine": 14,
+          "endLine": 72,
+          "methods": [
+            "CipsRoutingService",
+            "resolveByBic",
+            "resolveByBankName",
+            "isCipsParticipant",
+            "getParticipantCount"
+          ],
+          "properties": [
+            "bicToCipsId",
+            "bankNameToCipsId"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CipsRoutingService",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "resolveByBic",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "resolveByBankName",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "isCipsParticipant",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "getParticipantCount",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "CipsRoutingService",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 6,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/ClearingAppService.java",
+      "totalLines": 79,
+      "nonEmptyLines": 66,
+      "functions": [
+        {
+          "name": "generateInstruction",
+          "startLine": 25,
+          "endLine": 36,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "sendInstruction",
+          "startLine": 38,
+          "endLine": 44,
+          "params": [
+            "instructionNo"
+          ]
+        },
+        {
+          "name": "acknowledgeInstruction",
+          "startLine": 46,
+          "endLine": 52,
+          "params": [
+            "instructionNo",
+            "swiftRef"
+          ]
+        },
+        {
+          "name": "settleInstruction",
+          "startLine": 54,
+          "endLine": 60,
+          "params": [
+            "instructionNo"
+          ]
+        },
+        {
+          "name": "cancelInstruction",
+          "startLine": 62,
+          "endLine": 69,
+          "params": [
+            "instructionNo",
+            "reason"
+          ]
+        },
+        {
+          "name": "getInstructionDetail",
+          "startLine": 71,
+          "endLine": 74,
+          "params": [
+            "instructionNo"
+          ]
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 76,
+          "endLine": 78,
+          "params": [
+            "query"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ClearingAppService",
+          "startLine": 17,
+          "endLine": 79,
+          "methods": [
+            "generateInstruction",
+            "sendInstruction",
+            "acknowledgeInstruction",
+            "settleInstruction",
+            "cancelInstruction",
+            "getInstructionDetail",
+            "pageQuery"
+          ],
+          "properties": [
+            "clearingDomainService",
+            "clearingInstructionRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "generateInstruction",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "sendInstruction",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "acknowledgeInstruction",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "settleInstruction",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "cancelInstruction",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "getInstructionDetail",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "ClearingAppService",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 11,
+        "exportCount": 8,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/ConfirmationWorkflowService.java",
+      "totalLines": 34,
+      "nonEmptyLines": 28,
+      "functions": [
+        {
+          "name": "resolveIntervention",
+          "startLine": 27,
+          "endLine": 33,
+          "params": [
+            "confirmId",
+            "action",
+            "comment",
+            "operatorId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ConfirmationWorkflowService",
+          "startLine": 14,
+          "endLine": 34,
+          "methods": [
+            "resolveIntervention"
+          ],
+          "properties": [
+            "confirmationRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "resolveIntervention",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "ConfirmationWorkflowService",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/MtMxConverter.java",
+      "totalLines": 83,
+      "nonEmptyLines": 75,
+      "functions": [
+        {
+          "name": "mt103ToPain001",
+          "startLine": 32,
+          "endLine": 52,
+          "params": [
+            "mt103Message"
+          ]
+        },
+        {
+          "name": "mt202ToPacs009",
+          "startLine": 54,
+          "endLine": 71,
+          "params": [
+            "mt202Message"
+          ]
+        },
+        {
+          "name": "parseAddress",
+          "startLine": 73,
+          "endLine": 82,
+          "params": [
+            "unstructured"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MtMxConverter",
+          "startLine": 12,
+          "endLine": 83,
+          "methods": [
+            "mt103ToPain001",
+            "mt202ToPacs009",
+            "parseAddress"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "mt103ToPain001",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "mt202ToPacs009",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "parseAddress",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "MtMxConverter",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/RouteOptimizationService.java",
+      "totalLines": 58,
+      "nonEmptyLines": 50,
+      "functions": [
+        {
+          "name": "optimizeRoute",
+          "startLine": 18,
+          "endLine": 36,
+          "params": [
+            "payCurrency",
+            "receiveCurrency",
+            "amount",
+            "counterpartyCountry"
+          ]
+        },
+        {
+          "name": "scoreChannel",
+          "startLine": 38,
+          "endLine": 44,
+          "params": [
+            "ch",
+            "amount",
+            "country"
+          ]
+        },
+        {
+          "name": "isBeforeCutOff",
+          "startLine": 46,
+          "endLine": 48,
+          "params": [
+            "cutOffTime"
+          ]
+        },
+        {
+          "name": "loadAvailableChannels",
+          "startLine": 50,
+          "endLine": 57,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RouteOptimizationService",
+          "startLine": 13,
+          "endLine": 58,
+          "methods": [
+            "optimizeRoute",
+            "scoreChannel",
+            "isBeforeCutOff",
+            "loadAvailableChannels"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "optimizeRoute",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "RouteOptimizationService",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 2,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/SettlementTrackerService.java",
+      "totalLines": 50,
+      "nonEmptyLines": 40,
+      "functions": [
+        {
+          "name": "createTracker",
+          "startLine": 25,
+          "endLine": 29,
+          "params": [
+            "paymentNo",
+            "instructionNo",
+            "channel"
+          ]
+        },
+        {
+          "name": "updateStatus",
+          "startLine": 31,
+          "endLine": 36,
+          "params": [
+            "trackingId",
+            "newStatus"
+          ]
+        },
+        {
+          "name": "markException",
+          "startLine": 38,
+          "endLine": 43,
+          "params": [
+            "trackingId",
+            "reason",
+            "detail"
+          ]
+        },
+        {
+          "name": "findOverdue",
+          "startLine": 45,
+          "endLine": 49,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SettlementTrackerService",
+          "startLine": 17,
+          "endLine": 50,
+          "methods": [
+            "createTracker",
+            "updateStatus",
+            "markException",
+            "findOverdue"
+          ],
+          "properties": [
+            "trackerRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createTracker",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "updateStatus",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "markException",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "findOverdue",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "SettlementTrackerService",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/SwiftMessageGenerator.java",
+      "totalLines": 133,
+      "nonEmptyLines": 125,
+      "functions": [
+        {
+          "name": "generateMT300",
+          "startLine": 24,
+          "endLine": 47,
+          "params": [
+            "tradeNo",
+            "boughtCcy",
+            "boughtAmt",
+            "soldCcy",
+            "soldAmt",
+            "rate",
+            "valueDate",
+            "counterpartyBic"
+          ]
+        },
+        {
+          "name": "generateMT202",
+          "startLine": 53,
+          "endLine": 70,
+          "params": [
+            "refNo",
+            "currency",
+            "amount",
+            "valueDate",
+            "senderBic",
+            "receiverBic"
+          ]
+        },
+        {
+          "name": "generatePacs008",
+          "startLine": 76,
+          "endLine": 110,
+          "params": [
+            "msgId",
+            "debtorName",
+            "debtorAcct",
+            "creditorName",
+            "creditorAcct",
+            "creditorBic",
+            "currency",
+            "amount",
+            "remittanceInfo",
+            "debtorCountry",
+            "debtorCity",
+            "debtorStreet",
+            "creditorCountry",
+            "creditorCity",
+            "creditorStreet"
+          ]
+        },
+        {
+          "name": "generatePostalAddress",
+          "startLine": 112,
+          "endLine": 132,
+          "params": [
+            "country",
+            "city",
+            "street"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SwiftMessageGenerator",
+          "startLine": 16,
+          "endLine": 133,
+          "methods": [
+            "generateMT300",
+            "generateMT202",
+            "generatePacs008",
+            "generatePostalAddress"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "generateMT300",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "generateMT202",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "generatePacs008",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "SwiftMessageGenerator",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/TradeConfirmationService.java",
+      "totalLines": 86,
+      "nonEmptyLines": 75,
+      "functions": [
+        {
+          "name": "importFromCfets",
+          "startLine": 33,
+          "endLine": 41,
+          "params": [
+            "tradeDate"
+          ]
+        },
+        {
+          "name": "autoMatch",
+          "startLine": 49,
+          "endLine": 77,
+          "params": [
+            "external",
+            "internal"
+          ]
+        },
+        {
+          "name": "isMatch",
+          "startLine": 79,
+          "endLine": 85,
+          "params": [
+            "ext",
+            "internal"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TradeConfirmationService",
+          "startLine": 23,
+          "endLine": 86,
+          "methods": [
+            "importFromCfets",
+            "autoMatch",
+            "isMatch"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "importFromCfets",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "autoMatch",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "TradeConfirmationService",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 10,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/ClearingApplication.java",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ClearingApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "ClearingApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/event/InstructionSentEvent.java",
+      "totalLines": 24,
+      "nonEmptyLines": 19,
+      "functions": [
+        {
+          "name": "InstructionSentEvent",
+          "startLine": 13,
+          "endLine": 18,
+          "params": [
+            "instructionId",
+            "instructionNo",
+            "clearingChannel"
+          ]
+        },
+        {
+          "name": "eventName",
+          "startLine": 20,
+          "endLine": 23,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "InstructionSentEvent",
+          "startLine": 6,
+          "endLine": 24,
+          "methods": [
+            "InstructionSentEvent",
+            "eventName"
+          ],
+          "properties": [
+            "instructionId",
+            "instructionNo",
+            "clearingChannel"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "InstructionSentEvent",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "eventName",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "InstructionSentEvent",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "totalLines": 229,
+      "nonEmptyLines": 214,
+      "functions": [
+        {
+          "name": "ClearingInstruction",
+          "startLine": 61,
+          "endLine": 63,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 68,
+          "endLine": 91,
+          "params": [
+            "bizType",
+            "bizNo",
+            "clearingChannel",
+            "nostroAccount",
+            "counterPartyAccount",
+            "payCurrency",
+            "payAmount",
+            "receiveCurrency",
+            "receiveAmount",
+            "valueDate",
+            "settlementType",
+            "operatorId",
+            "remark"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 96,
+          "endLine": 135,
+          "params": [
+            "id",
+            "instructionNo",
+            "bizType",
+            "bizNo",
+            "clearingChannel",
+            "nostroAccount",
+            "counterPartyAccount",
+            "payCurrency",
+            "payAmount",
+            "receiveCurrency",
+            "receiveAmount",
+            "valueDate",
+            "settlementDate",
+            "settlementType",
+            "instructionStatus",
+            "swiftRef",
+            "cipsRef",
+            "nostroBalanceBefore",
+            "nostroBalanceAfter",
+            "sendTime",
+            "ackTime",
+            "settleTime",
+            "operatorId",
+            "remark"
+          ]
+        },
+        {
+          "name": "generate",
+          "startLine": 140,
+          "endLine": 148,
+          "params": [
+            "instructionNo",
+            "nostroBalanceBefore"
+          ]
+        },
+        {
+          "name": "send",
+          "startLine": 153,
+          "endLine": 160,
+          "params": []
+        },
+        {
+          "name": "acknowledge",
+          "startLine": 165,
+          "endLine": 173,
+          "params": [
+            "swiftRef"
+          ]
+        },
+        {
+          "name": "settle",
+          "startLine": 178,
+          "endLine": 187,
+          "params": [
+            "nostroBalanceAfter"
+          ]
+        },
+        {
+          "name": "cancel",
+          "startLine": 192,
+          "endLine": 202,
+          "params": [
+            "reason"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 204,
+          "endLine": 228,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ClearingInstruction",
+          "startLine": 16,
+          "endLine": 229,
+          "methods": [
+            "ClearingInstruction",
+            "create",
+            "reconstitute",
+            "generate",
+            "send",
+            "acknowledge",
+            "settle",
+            "cancel",
+            "validate"
+          ],
+          "properties": [
+            "CHANNEL_SWIFT",
+            "CHANNEL_CIPS",
+            "CHANNEL_CFXPS",
+            "CHANNEL_LOCAL",
+            "STATUS_DRAFT",
+            "STATUS_GENERATED",
+            "STATUS_SENT",
+            "STATUS_ACKNOWLEDGED",
+            "STATUS_SETTLED",
+            "STATUS_CANCELLED",
+            "id",
+            "instructionNo",
+            "bizType",
+            "bizNo",
+            "clearingChannel",
+            "nostroAccount",
+            "counterPartyAccount",
+            "payCurrency",
+            "payAmount",
+            "receiveCurrency",
+            "receiveAmount",
+            "valueDate",
+            "settlementDate",
+            "settlementType",
+            "instructionStatus",
+            "swiftRef",
+            "cipsRef",
+            "nostroBalanceBefore",
+            "nostroBalanceAfter",
+            "sendTime",
+            "ackTime",
+            "settleTime",
+            "operatorId",
+            "remark"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CHANNEL_SWIFT",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "CHANNEL_CIPS",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "CHANNEL_CFXPS",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "CHANNEL_LOCAL",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_DRAFT",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_GENERATED",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_SENT",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_ACKNOWLEDGED",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_SETTLED",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_CANCELLED",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "create",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "generate",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "send",
+          "line": 153,
+          "isDefault": false
+        },
+        {
+          "name": "acknowledge",
+          "line": 165,
+          "isDefault": false
+        },
+        {
+          "name": "settle",
+          "line": 178,
+          "isDefault": false
+        },
+        {
+          "name": "cancel",
+          "line": 192,
+          "isDefault": false
+        },
+        {
+          "name": "ClearingInstruction",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 18,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClsSession.java",
+      "totalLines": 111,
+      "nonEmptyLines": 98,
+      "functions": [
+        {
+          "name": "ClsSession",
+          "startLine": 32,
+          "endLine": 34,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 36,
+          "endLine": 46,
+          "params": [
+            "sessionId",
+            "settlementDate"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 48,
+          "endLine": 65,
+          "params": [
+            "id",
+            "sessionId",
+            "settlementDate",
+            "payInWindowStart",
+            "payInWindowEnd",
+            "sessionStatus",
+            "totalPayInSum",
+            "totalPayOutSum",
+            "netPosition",
+            "positionJson"
+          ]
+        },
+        {
+          "name": "openPayIn",
+          "startLine": 67,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "closePayIn",
+          "startLine": 76,
+          "endLine": 83,
+          "params": []
+        },
+        {
+          "name": "calculateNetPositions",
+          "startLine": 85,
+          "endLine": 91,
+          "params": []
+        },
+        {
+          "name": "completeSettlement",
+          "startLine": 93,
+          "endLine": 100,
+          "params": []
+        },
+        {
+          "name": "validate",
+          "startLine": 102,
+          "endLine": 110,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ClsSession",
+          "startLine": 11,
+          "endLine": 111,
+          "methods": [
+            "ClsSession",
+            "create",
+            "reconstitute",
+            "openPayIn",
+            "closePayIn",
+            "calculateNetPositions",
+            "completeSettlement",
+            "validate"
+          ],
+          "properties": [
+            "STATUS_SCHEDULED",
+            "STATUS_PAY_IN_OPEN",
+            "STATUS_PAY_IN_CLOSED",
+            "STATUS_CALCULATING",
+            "STATUS_PAY_OUT_READY",
+            "STATUS_COMPLETED",
+            "id",
+            "sessionId",
+            "settlementDate",
+            "payInWindowStart",
+            "payInWindowEnd",
+            "sessionStatus",
+            "totalPayInSum",
+            "totalPayOutSum",
+            "netPosition",
+            "positionJson"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "STATUS_SCHEDULED",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_PAY_IN_OPEN",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_PAY_IN_CLOSED",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_CALCULATING",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_PAY_OUT_READY",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_COMPLETED",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "create",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "openPayIn",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "closePayIn",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "calculateNetPositions",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "completeSettlement",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "ClsSession",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 13,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/PvpSettlementPair.java",
+      "totalLines": 125,
+      "nonEmptyLines": 113,
+      "functions": [
+        {
+          "name": "PvpSettlementPair",
+          "startLine": 34,
+          "endLine": 36,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 38,
+          "endLine": 57,
+          "params": [
+            "pairId",
+            "payInstructionId",
+            "payInstructionNo",
+            "receiveInstructionId",
+            "receiveInstructionNo",
+            "payCurrency",
+            "payAmount",
+            "receiveCurrency",
+            "receiveAmount",
+            "settlementDate"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 59,
+          "endLine": 82,
+          "params": [
+            "id",
+            "pairId",
+            "payInstructionId",
+            "payInstructionNo",
+            "receiveInstructionId",
+            "receiveInstructionNo",
+            "payCurrency",
+            "payAmount",
+            "receiveCurrency",
+            "receiveAmount",
+            "settlementDate",
+            "status",
+            "failureReason",
+            "settledAt"
+          ]
+        },
+        {
+          "name": "attempt",
+          "startLine": 84,
+          "endLine": 90,
+          "params": []
+        },
+        {
+          "name": "settle",
+          "startLine": 92,
+          "endLine": 99,
+          "params": []
+        },
+        {
+          "name": "fail",
+          "startLine": 101,
+          "endLine": 108,
+          "params": [
+            "reason"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 110,
+          "endLine": 124,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PvpSettlementPair",
+          "startLine": 11,
+          "endLine": 125,
+          "methods": [
+            "PvpSettlementPair",
+            "create",
+            "reconstitute",
+            "attempt",
+            "settle",
+            "fail",
+            "validate"
+          ],
+          "properties": [
+            "STATUS_PAIRED",
+            "STATUS_ATTEMPTED",
+            "STATUS_SETTLED",
+            "STATUS_FAILED",
+            "id",
+            "pairId",
+            "payInstructionId",
+            "payInstructionNo",
+            "receiveInstructionId",
+            "receiveInstructionNo",
+            "payCurrency",
+            "payAmount",
+            "receiveCurrency",
+            "receiveAmount",
+            "settlementDate",
+            "status",
+            "failureReason",
+            "settledAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "STATUS_PAIRED",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_ATTEMPTED",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_SETTLED",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_FAILED",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "create",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "attempt",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "settle",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "fail",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "PvpSettlementPair",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 10,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementBatch.java",
+      "totalLines": 93,
+      "nonEmptyLines": 81,
+      "functions": [
+        {
+          "name": "SettlementBatch",
+          "startLine": 26,
+          "endLine": 28,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 30,
+          "endLine": 40,
+          "params": [
+            "batchNo",
+            "batchDate",
+            "clearingChannel"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 42,
+          "endLine": 56,
+          "params": [
+            "id",
+            "batchNo",
+            "batchDate",
+            "clearingChannel",
+            "totalCount",
+            "totalAmount",
+            "netAmount",
+            "batchStatus"
+          ]
+        },
+        {
+          "name": "addInstruction",
+          "startLine": 58,
+          "endLine": 68,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "close",
+          "startLine": 70,
+          "endLine": 76,
+          "params": []
+        },
+        {
+          "name": "settle",
+          "startLine": 78,
+          "endLine": 85,
+          "params": [
+            "netAmount"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 87,
+          "endLine": 92,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SettlementBatch",
+          "startLine": 10,
+          "endLine": 93,
+          "methods": [
+            "SettlementBatch",
+            "create",
+            "reconstitute",
+            "addInstruction",
+            "close",
+            "settle",
+            "validate"
+          ],
+          "properties": [
+            "STATUS_OPEN",
+            "STATUS_CLOSED",
+            "STATUS_SETTLED",
+            "id",
+            "batchNo",
+            "batchDate",
+            "clearingChannel",
+            "totalCount",
+            "totalAmount",
+            "netAmount",
+            "batchStatus"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "STATUS_OPEN",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_CLOSED",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_SETTLED",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "create",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "addInstruction",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "close",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "settle",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "SettlementBatch",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 9,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementTracker.java",
+      "totalLines": 121,
+      "nonEmptyLines": 108,
+      "functions": [
+        {
+          "name": "SettlementTracker",
+          "startLine": 38,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 42,
+          "endLine": 54,
+          "params": [
+            "trackingId",
+            "paymentNo",
+            "instructionNo",
+            "currentStatus",
+            "channel"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 56,
+          "endLine": 73,
+          "params": [
+            "id",
+            "trackingId",
+            "paymentNo",
+            "instructionNo",
+            "currentStatus",
+            "statusChangedAt",
+            "channel",
+            "gpiStatus",
+            "exceptionReason",
+            "exceptionDetail"
+          ]
+        },
+        {
+          "name": "transitionTo",
+          "startLine": 75,
+          "endLine": 87,
+          "params": [
+            "newStatus"
+          ]
+        },
+        {
+          "name": "markException",
+          "startLine": 89,
+          "endLine": 99,
+          "params": [
+            "reason",
+            "detail"
+          ]
+        },
+        {
+          "name": "isOverdue",
+          "startLine": 101,
+          "endLine": 104,
+          "params": []
+        },
+        {
+          "name": "validate",
+          "startLine": 106,
+          "endLine": 120,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SettlementTracker",
+          "startLine": 11,
+          "endLine": 121,
+          "methods": [
+            "SettlementTracker",
+            "create",
+            "reconstitute",
+            "transitionTo",
+            "markException",
+            "isOverdue",
+            "validate"
+          ],
+          "properties": [
+            "STATUS_PENDING_SEND",
+            "STATUS_SENT",
+            "STATUS_IN_CLEARING",
+            "STATUS_ACKNOWLEDGED",
+            "STATUS_SETTLED",
+            "STATUS_FUNDS_CREDITED",
+            "STATUS_EXCEPTION",
+            "VALID_STATUSES",
+            "id",
+            "trackingId",
+            "paymentNo",
+            "instructionNo",
+            "currentStatus",
+            "statusChangedAt",
+            "channel",
+            "gpiStatus",
+            "exceptionReason",
+            "exceptionDetail"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "STATUS_PENDING_SEND",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_SENT",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_IN_CLEARING",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_ACKNOWLEDGED",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_SETTLED",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_FUNDS_CREDITED",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_EXCEPTION",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "create",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "transitionTo",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "markException",
+          "line": 89,
+          "isDefault": false
+        },
+        {
+          "name": "isOverdue",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "SettlementTracker",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 13,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/TradeConfirmation.java",
+      "totalLines": 160,
+      "nonEmptyLines": 146,
+      "functions": [
+        {
+          "name": "TradeConfirmation",
+          "startLine": 40,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 44,
+          "endLine": 63,
+          "params": [
+            "confirmId",
+            "tradeNo",
+            "tradeType",
+            "confirmFlag",
+            "currencyPair",
+            "direction",
+            "amount",
+            "rate",
+            "valueDate",
+            "counterparty"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 65,
+          "endLine": 94,
+          "params": [
+            "id",
+            "confirmId",
+            "tradeNo",
+            "tradeType",
+            "confirmFlag",
+            "currencyPair",
+            "direction",
+            "amount",
+            "rate",
+            "valueDate",
+            "counterparty",
+            "matchStatus",
+            "externalRef",
+            "discrepancyDetail",
+            "retryCount",
+            "nextRetryAt",
+            "resolutionAction",
+            "resolutionComment"
+          ]
+        },
+        {
+          "name": "startMatching",
+          "startLine": 96,
+          "endLine": 102,
+          "params": []
+        },
+        {
+          "name": "markMatched",
+          "startLine": 104,
+          "endLine": 111,
+          "params": []
+        },
+        {
+          "name": "markDiscrepancy",
+          "startLine": 113,
+          "endLine": 121,
+          "params": [
+            "detail",
+            "externalRef"
+          ]
+        },
+        {
+          "name": "resolve",
+          "startLine": 123,
+          "endLine": 131,
+          "params": [
+            "action",
+            "comment"
+          ]
+        },
+        {
+          "name": "incrementRetry",
+          "startLine": 133,
+          "endLine": 143,
+          "params": []
+        },
+        {
+          "name": "validate",
+          "startLine": 145,
+          "endLine": 159,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "TradeConfirmation",
+          "startLine": 12,
+          "endLine": 160,
+          "methods": [
+            "TradeConfirmation",
+            "create",
+            "reconstitute",
+            "startMatching",
+            "markMatched",
+            "markDiscrepancy",
+            "resolve",
+            "incrementRetry",
+            "validate"
+          ],
+          "properties": [
+            "STATUS_UNMATCHED",
+            "STATUS_MATCHING",
+            "STATUS_MATCHED",
+            "STATUS_DISCREPANCY",
+            "STATUS_MANUALLY_RESOLVED",
+            "id",
+            "confirmId",
+            "tradeNo",
+            "tradeType",
+            "confirmFlag",
+            "currencyPair",
+            "direction",
+            "amount",
+            "rate",
+            "valueDate",
+            "counterparty",
+            "matchStatus",
+            "externalRef",
+            "discrepancyDetail",
+            "retryCount",
+            "nextRetryAt",
+            "resolutionAction",
+            "resolutionComment"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "STATUS_UNMATCHED",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_MATCHING",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_MATCHED",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_DISCREPANCY",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_MANUALLY_RESOLVED",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "create",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "startMatching",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "markMatched",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "markDiscrepancy",
+          "line": 113,
+          "isDefault": false
+        },
+        {
+          "name": "resolve",
+          "line": 123,
+          "isDefault": false
+        },
+        {
+          "name": "incrementRetry",
+          "line": 133,
+          "isDefault": false
+        },
+        {
+          "name": "TradeConfirmation",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 13,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/query/ClearingQuery.java",
+      "totalLines": 22,
+      "nonEmptyLines": 18,
+      "classes": [
+        {
+          "name": "ClearingQuery",
+          "startLine": 9,
+          "endLine": 22,
+          "methods": [],
+          "properties": [
+            "instructionNo",
+            "clearingChannel",
+            "instructionStatus",
+            "valueDate",
+            "bizType",
+            "bizNo",
+            "settlementType",
+            "startDate",
+            "endDate"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ClearingQuery",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ClearingAmount.java",
+      "totalLines": 48,
+      "nonEmptyLines": 39,
+      "functions": [
+        {
+          "name": "ClearingAmount",
+          "startLine": 17,
+          "endLine": 26,
+          "params": [
+            "amount",
+            "currency"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 28,
+          "endLine": 30,
+          "params": [
+            "amount",
+            "currency"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 32,
+          "endLine": 37,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 39,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "toString",
+          "startLine": 44,
+          "endLine": 47,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ClearingAmount",
+          "startLine": 11,
+          "endLine": 48,
+          "methods": [
+            "ClearingAmount",
+            "of",
+            "equals",
+            "hashCode",
+            "toString"
+          ],
+          "properties": [
+            "amount",
+            "currency"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "ClearingAmount",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    }
+  ]
+}

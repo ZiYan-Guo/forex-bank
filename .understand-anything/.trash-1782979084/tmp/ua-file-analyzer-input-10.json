@@ -1,0 +1,460 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "sizeLines": 70,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "sizeLines": 52,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "sizeLines": 102,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/JournalEntryMapper.java",
+      "sizeLines": 45,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/persistence/JournalEntryPO.java",
+      "sizeLines": 35,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/repository/JournalEntryRepositoryImpl.java",
+      "sizeLines": 123,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/resources/application.yml",
+      "sizeLines": 45,
+      "language": "yaml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-cashpool/pom.xml",
+      "sizeLines": 55,
+      "language": "xml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "sizeLines": 190,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "sizeLines": 174,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/CashpoolApplication.java",
+      "sizeLines": 21,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java",
+      "sizeLines": 180,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java",
+      "sizeLines": 203,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/entity/PoolMember.java",
+      "sizeLines": 39,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "sizeLines": 79,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "sizeLines": 75,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/resources/application.yml",
+      "sizeLines": 45,
+      "language": "yaml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-clearing/pom.xml",
+      "sizeLines": 55,
+      "language": "xml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "sizeLines": 161,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ClearingController.java",
+      "sizeLines": 125,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ConfirmationController.java",
+      "sizeLines": 91,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/PvpController.java",
+      "sizeLines": 97,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "sizeLines": 86,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/RouteController.java",
+      "sizeLines": 37,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/TrackerController.java",
+      "sizeLines": 65,
+      "language": "java",
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java": [
+      "import com.forex.bookkeeping.domain.event.EntryPostedEvent;",
+      "import com.forex.bookkeeping.domain.model.aggregate.JournalEntry;",
+      "import com.forex.bookkeeping.domain.model.valueobject.VoucherNo;",
+      "import com.forex.bookkeeping.domain.repository.JournalEntryRepository;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.context.ApplicationEventPublisher;",
+      "import org.springframework.stereotype.Service;",
+      "import java.util.List;"
+    ],
+    "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java": [
+      "import com.forex.bookkeeping.domain.model.aggregate.JournalEntry;",
+      "import com.forex.bookkeeping.domain.model.aggregate.MonthEndClosing;",
+      "import com.forex.bookkeeping.domain.repository.JournalEntryRepository;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import java.time.LocalDate;",
+      "import java.util.List;"
+    ],
+    "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java": [
+      "import com.forex.bookkeeping.domain.model.aggregate.JournalEntry;",
+      "import com.forex.bookkeeping.domain.repository.JournalEntryRepository;",
+      "import lombok.Data;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.format.DateTimeFormatter;",
+      "import java.util.ArrayList;",
+      "import java.util.List;",
+      "import java.util.UUID;"
+    ],
+    "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/JournalEntryMapper.java": [
+      "import com.forex.bookkeeping.domain.model.query.JournalQuery;",
+      "import com.forex.bookkeeping.infrastructure.persistence.JournalEntryPO;",
+      "import com.forex.common.mybatis.base.BaseMapperExt;",
+      "import com.baomidou.mybatisplus.extension.plugins.pagination.Page;",
+      "import org.apache.ibatis.annotations.Mapper;",
+      "import org.apache.ibatis.annotations.Param;",
+      "import org.apache.ibatis.annotations.Select;",
+      "import java.util.List;"
+    ],
+    "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/persistence/JournalEntryPO.java": [
+      "import com.forex.common.mybatis.base.BasePO;",
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/repository/JournalEntryRepositoryImpl.java": [
+      "import com.forex.bookkeeping.domain.model.aggregate.JournalEntry;",
+      "import com.forex.bookkeeping.domain.model.query.JournalQuery;",
+      "import com.forex.bookkeeping.domain.repository.JournalEntryRepository;",
+      "import com.forex.bookkeeping.infrastructure.mapper.JournalEntryMapper;",
+      "import com.forex.bookkeeping.infrastructure.persistence.JournalEntryPO;",
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.baomidou.mybatisplus.extension.plugins.pagination.Page;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Repository;",
+      "import java.math.BigDecimal;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-bookkeeping/src/main/resources/application.yml": [],
+    "forex-cashpool/pom.xml": [],
+    "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java": [
+      "import com.forex.cashpool.domain.model.aggregate.CashPool;",
+      "import com.forex.cashpool.domain.model.entity.PoolMember;",
+      "import com.forex.cashpool.domain.service.QuotaCalculationEngine;",
+      "import com.forex.common.base.result.R;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.web.bind.annotation.GetMapping;",
+      "import org.springframework.web.bind.annotation.PathVariable;",
+      "import org.springframework.web.bind.annotation.PostMapping;",
+      "import org.springframework.web.bind.annotation.RequestBody;",
+      "import org.springframework.web.bind.annotation.RequestMapping;",
+      "import org.springframework.web.bind.annotation.RequestParam;",
+      "import org.springframework.web.bind.annotation.RestController;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.util.ArrayList;",
+      "import java.util.HashMap;",
+      "import java.util.List;"
+    ],
+    "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java": [
+      "import com.forex.cashpool.domain.model.aggregate.OverseasLending;",
+      "import com.forex.common.base.result.R;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.web.bind.annotation.GetMapping;",
+      "import org.springframework.web.bind.annotation.PathVariable;",
+      "import org.springframework.web.bind.annotation.PostMapping;",
+      "import org.springframework.web.bind.annotation.PutMapping;",
+      "import org.springframework.web.bind.annotation.RequestBody;",
+      "import org.springframework.web.bind.annotation.RequestMapping;",
+      "import org.springframework.web.bind.annotation.RestController;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.util.ArrayList;",
+      "import java.util.HashMap;",
+      "import java.util.List;",
+      "import java.util.Map;",
+      "import java.util.UUID;"
+    ],
+    "forex-cashpool/src/main/java/com/forex/cashpool/CashpoolApplication.java": [
+      "import org.mybatis.spring.annotation.MapperScan;",
+      "import org.springframework.boot.SpringApplication;",
+      "import org.springframework.boot.autoconfigure.SpringBootApplication;",
+      "import org.springframework.cloud.client.discovery.EnableDiscoveryClient;"
+    ],
+    "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java": [
+      "import com.forex.cashpool.domain.model.entity.PoolMember;",
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import lombok.Getter;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import java.math.BigDecimal;",
+      "import java.math.RoundingMode;",
+      "import java.time.LocalDate;",
+      "import java.util.ArrayList;",
+      "import java.util.List;"
+    ],
+    "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java": [
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import lombok.Getter;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;"
+    ],
+    "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/entity/PoolMember.java": [
+      "import com.forex.common.base.domain.BaseEntity;",
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Getter;",
+      "import lombok.NoArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;"
+    ],
+    "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java": [
+      "import com.forex.cashpool.domain.model.entity.PoolMember;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.util.HashMap;",
+      "import java.util.List;",
+      "import java.util.Map;"
+    ],
+    "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java": [
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import java.math.BigDecimal;",
+      "import java.math.RoundingMode;"
+    ],
+    "forex-cashpool/src/main/resources/application.yml": [],
+    "forex-clearing/pom.xml": [],
+    "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java": [
+      "import com.forex.clearing.application.service.CipsMessageGenerator;",
+      "import com.forex.clearing.application.service.CipsRoutingService;",
+      "import com.forex.common.base.result.R;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.web.bind.annotation.GetMapping;",
+      "import org.springframework.web.bind.annotation.PathVariable;",
+      "import org.springframework.web.bind.annotation.PostMapping;",
+      "import org.springframework.web.bind.annotation.RequestBody;",
+      "import org.springframework.web.bind.annotation.RequestMapping;",
+      "import org.springframework.web.bind.annotation.RestController;",
+      "import java.math.BigDecimal;",
+      "import java.util.LinkedHashMap;",
+      "import java.util.Map;",
+      "import java.util.UUID;",
+      "import java.util.stream.Collectors;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ClearingController.java": [
+      "import com.forex.clearing.adapter.dto.ClearingResp;",
+      "import com.forex.clearing.application.command.GenerateClearingCmd;",
+      "import com.forex.clearing.application.service.ClearingAppService;",
+      "import com.forex.clearing.domain.model.aggregate.ClearingInstruction;",
+      "import com.forex.clearing.domain.model.query.ClearingQuery;",
+      "import com.forex.common.base.annotation.Idempotent;",
+      "import com.forex.common.base.annotation.RedisLock;",
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.common.base.result.R;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import jakarta.validation.Valid;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.web.bind.annotation.GetMapping;",
+      "import org.springframework.web.bind.annotation.PathVariable;",
+      "import org.springframework.web.bind.annotation.PostMapping;",
+      "import org.springframework.web.bind.annotation.RequestBody;",
+      "import org.springframework.web.bind.annotation.RequestMapping;",
+      "import org.springframework.web.bind.annotation.RestController;",
+      "import java.util.List;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ConfirmationController.java": [
+      "import com.forex.clearing.application.service.AutomatedConfirmationService;",
+      "import com.forex.clearing.application.service.ConfirmationWorkflowService;",
+      "import com.forex.clearing.domain.model.aggregate.TradeConfirmation;",
+      "import com.forex.clearing.domain.repository.TradeConfirmationRepository;",
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.common.base.result.R;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.web.bind.annotation.GetMapping;",
+      "import org.springframework.web.bind.annotation.PathVariable;",
+      "import org.springframework.web.bind.annotation.PostMapping;",
+      "import org.springframework.web.bind.annotation.RequestBody;",
+      "import org.springframework.web.bind.annotation.RequestMapping;",
+      "import org.springframework.web.bind.annotation.RestController;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.util.List;",
+      "import java.util.Map;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/PvpController.java": [
+      "import com.forex.clearing.domain.model.aggregate.ClsSession;",
+      "import com.forex.clearing.domain.model.aggregate.PvpSettlementPair;",
+      "import com.forex.clearing.domain.model.valueobject.NettingPosition;",
+      "import com.forex.clearing.domain.service.ClsSessionService;",
+      "import com.forex.clearing.domain.service.NettingService;",
+      "import com.forex.clearing.domain.service.PvpSettlementService;",
+      "import com.forex.clearing.domain.repository.ClsSessionRepository;",
+      "import com.forex.clearing.domain.repository.PvpSettlementRepository;",
+      "import com.forex.common.base.result.R;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.web.bind.annotation.GetMapping;",
+      "import org.springframework.web.bind.annotation.PathVariable;",
+      "import org.springframework.web.bind.annotation.PostMapping;",
+      "import org.springframework.web.bind.annotation.RequestMapping;",
+      "import org.springframework.web.bind.annotation.RestController;",
+      "import java.time.LocalDate;",
+      "import java.util.List;",
+      "import java.util.Map;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java": [
+      "import com.forex.clearing.application.dto.TradeConfirmation;",
+      "import com.forex.clearing.application.service.SwiftMessageGenerator;",
+      "import com.forex.clearing.application.service.TradeConfirmationService;",
+      "import com.forex.common.base.result.R;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.web.bind.annotation.PostMapping;",
+      "import org.springframework.web.bind.annotation.RequestBody;",
+      "import org.springframework.web.bind.annotation.RequestMapping;",
+      "import org.springframework.web.bind.annotation.RequestParam;",
+      "import org.springframework.web.bind.annotation.RestController;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.util.LinkedHashMap;",
+      "import java.util.List;",
+      "import java.util.Map;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/RouteController.java": [
+      "import com.forex.clearing.application.service.RouteOptimizationService;",
+      "import com.forex.clearing.domain.model.valueobject.SettlementRoute;",
+      "import com.forex.common.base.result.R;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.web.bind.annotation.PostMapping;",
+      "import org.springframework.web.bind.annotation.RequestBody;",
+      "import org.springframework.web.bind.annotation.RequestMapping;",
+      "import org.springframework.web.bind.annotation.RestController;",
+      "import java.math.BigDecimal;",
+      "import java.util.Map;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/TrackerController.java": [
+      "import com.forex.clearing.application.service.SettlementTrackerService;",
+      "import com.forex.clearing.domain.model.aggregate.SettlementTracker;",
+      "import com.forex.clearing.domain.repository.SettlementTrackerRepository;",
+      "import com.forex.common.base.result.R;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.web.bind.annotation.GetMapping;",
+      "import org.springframework.web.bind.annotation.PathVariable;",
+      "import org.springframework.web.bind.annotation.PostMapping;",
+      "import org.springframework.web.bind.annotation.PutMapping;",
+      "import org.springframework.web.bind.annotation.RequestBody;",
+      "import org.springframework.web.bind.annotation.RequestMapping;",
+      "import org.springframework.web.bind.annotation.RestController;",
+      "import java.util.List;",
+      "import java.util.Map;"
+    ]
+  }
+}

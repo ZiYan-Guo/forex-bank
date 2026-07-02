@@ -1,0 +1,368 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "sizeLines": 132,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerQuery.java",
+      "sizeLines": 18,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java",
+      "sizeLines": 26,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "sizeLines": 80,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java",
+      "sizeLines": 58,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java",
+      "sizeLines": 36,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "sizeLines": 98,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java",
+      "sizeLines": 17,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java",
+      "sizeLines": 25,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java",
+      "sizeLines": 53,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java",
+      "sizeLines": 85,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CreditLimitMapper.java",
+      "sizeLines": 20,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerMapper.java",
+      "sizeLines": 83,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerQuotaMapper.java",
+      "sizeLines": 10,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CreditLimitPO.java",
+      "sizeLines": 27,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerPO.java",
+      "sizeLines": 42,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerQuotaPO.java",
+      "sizeLines": 23,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java",
+      "sizeLines": 80,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "sizeLines": 120,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/resources/application.yml",
+      "sizeLines": 45,
+      "language": "yaml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-exchange/pom.xml",
+      "sizeLines": 55,
+      "language": "xml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "sizeLines": 189,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/AmountCalcReq.java",
+      "sizeLines": 24,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/CreateOrderReq.java",
+      "sizeLines": 58,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/OrderResp.java",
+      "sizeLines": 95,
+      "language": "java",
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java": [
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import lombok.Getter;",
+      "import java.time.LocalDateTime;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import com.forex.common.base.result.ResultCode;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerQuery.java": [
+      "import lombok.Data;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java": [
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Data;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java": [
+      "import com.forex.common.base.domain.BaseEntity;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import com.forex.common.base.result.ResultCode;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java": [
+      "import com.forex.common.base.domain.BaseEntity;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import com.forex.common.base.result.ResultCode;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java": [
+      "import com.forex.common.base.domain.BaseValueObject;",
+      "import lombok.Getter;",
+      "import java.util.Objects;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import com.forex.common.base.result.ResultCode;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java": [
+      "import com.forex.common.base.domain.BaseValueObject;",
+      "import lombok.Getter;",
+      "import java.util.Objects;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import com.forex.common.base.result.ResultCode;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java": [
+      "import com.forex.customer.domain.model.entity.CreditLimit;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java": [
+      "import com.forex.common.base.dto.PageReq;",
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.customer.domain.model.aggregate.Customer;",
+      "import com.forex.customer.domain.model.dto.CustomerQuery;",
+      "import com.forex.customer.domain.model.valueobject.CustomerId;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java": [
+      "import com.forex.customer.domain.model.entity.CreditLimit;",
+      "import com.forex.customer.domain.repository.CreditLimitRepository;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import org.springframework.transaction.annotation.Transactional;",
+      "import java.math.BigDecimal;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import com.forex.common.base.result.ResultCode;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java": [
+      "import com.forex.customer.domain.event.CustomerCreatedEvent;",
+      "import com.forex.customer.domain.model.aggregate.Customer;",
+      "import com.forex.customer.domain.model.dto.CustomerRegInfo;",
+      "import com.forex.customer.domain.repository.CustomerRepository;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.context.ApplicationEventPublisher;",
+      "import org.springframework.stereotype.Service;",
+      "import java.time.LocalDateTime;",
+      "import java.time.format.DateTimeFormatter;",
+      "import java.util.concurrent.ThreadLocalRandom;",
+      "import org.springframework.transaction.annotation.Transactional;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import com.forex.common.base.result.ResultCode;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CreditLimitMapper.java": [
+      "import com.forex.common.mybatis.base.BaseMapperExt;",
+      "import com.forex.customer.infrastructure.persistence.CreditLimitPO;",
+      "import org.apache.ibatis.annotations.Mapper;",
+      "import org.apache.ibatis.annotations.Param;",
+      "import org.apache.ibatis.annotations.Select;",
+      "import java.util.List;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerMapper.java": [
+      "import com.forex.common.mybatis.base.BaseMapperExt;",
+      "import com.forex.customer.domain.model.dto.CustomerQuery;",
+      "import com.forex.customer.infrastructure.persistence.CustomerPO;",
+      "import com.baomidou.mybatisplus.extension.plugins.pagination.Page;",
+      "import org.apache.ibatis.annotations.Mapper;",
+      "import org.apache.ibatis.annotations.Param;",
+      "import org.apache.ibatis.annotations.Select;",
+      "import java.util.List;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerQuotaMapper.java": [
+      "import com.forex.common.mybatis.base.BaseMapperExt;",
+      "import com.forex.customer.infrastructure.persistence.CustomerQuotaPO;",
+      "import org.apache.ibatis.annotations.Mapper;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CreditLimitPO.java": [
+      "import com.forex.common.mybatis.base.BasePO;",
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerPO.java": [
+      "import com.forex.common.mybatis.base.BasePO;",
+      "import com.baomidou.mybatisplus.annotation.TableField;",
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerQuotaPO.java": [
+      "import com.forex.common.mybatis.base.BasePO;",
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;",
+      "import java.math.BigDecimal;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java": [
+      "import com.forex.customer.domain.model.entity.CreditLimit;",
+      "import com.forex.customer.domain.repository.CreditLimitRepository;",
+      "import com.forex.customer.infrastructure.mapper.CreditLimitMapper;",
+      "import com.forex.customer.infrastructure.persistence.CreditLimitPO;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Repository;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java": [
+      "import com.forex.common.base.dto.PageReq;",
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.customer.domain.model.aggregate.Customer;",
+      "import com.forex.customer.domain.model.dto.CustomerQuery;",
+      "import com.forex.customer.domain.model.valueobject.CustomerId;",
+      "import com.forex.customer.domain.repository.CustomerRepository;",
+      "import com.forex.customer.infrastructure.mapper.CustomerMapper;",
+      "import com.forex.customer.infrastructure.persistence.CustomerPO;",
+      "import com.baomidou.mybatisplus.extension.plugins.pagination.Page;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Repository;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-customer/src/main/resources/application.yml": [],
+    "forex-exchange/pom.xml": [],
+    "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java": [
+      "import com.forex.common.base.annotation.Idempotent;",
+      "import com.forex.common.base.annotation.RedisLock;",
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.common.base.result.R;",
+      "import com.forex.common.security.annotation.RequirePermission;",
+      "import com.forex.exchange.adapter.dto.AmountCalcReq;",
+      "import com.forex.exchange.adapter.dto.CreateOrderReq;",
+      "import com.forex.exchange.adapter.dto.ExchangeOrderPageQuery;",
+      "import com.forex.exchange.adapter.dto.OrderResp;",
+      "import com.forex.exchange.adapter.dto.QuoteReq;",
+      "import com.forex.exchange.adapter.dto.QuoteResp;",
+      "import com.forex.exchange.adapter.dto.RateLockReq;",
+      "import com.forex.exchange.application.command.CancelOrderCmd;",
+      "import com.forex.exchange.application.command.CreateOrderCmd;",
+      "import com.forex.exchange.domain.model.query.ExchangeOrderQuery;",
+      "import com.forex.exchange.application.service.ExchangeAppService;",
+      "import com.forex.exchange.domain.model.aggregate.ExchangeOrder;",
+      "import com.forex.exchange.domain.model.entity.ExchangeQuote;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import jakarta.validation.Valid;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.web.bind.annotation.GetMapping;",
+      "import org.springframework.web.bind.annotation.PathVariable;",
+      "import org.springframework.web.bind.annotation.PostMapping;",
+      "import org.springframework.web.bind.annotation.RequestBody;",
+      "import org.springframework.web.bind.annotation.RequestMapping;",
+      "import org.springframework.web.bind.annotation.RestController;",
+      "import java.math.BigDecimal;",
+      "import java.util.List;"
+    ],
+    "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/AmountCalcReq.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;"
+    ],
+    "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/CreateOrderReq.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import jakarta.validation.constraints.DecimalMin;",
+      "import jakarta.validation.constraints.NotBlank;",
+      "import jakarta.validation.constraints.NotNull;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;"
+    ],
+    "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/OrderResp.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;"
+    ]
+  }
+}

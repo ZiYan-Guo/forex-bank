@@ -1,0 +1,229 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ClearingResp.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/application/command/GenerateClearingCmd.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/application/dto/InternalTrade.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/application/dto/TradeConfirmation.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/application/service/AutomatedConfirmationService.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsMessageGenerator.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsRoutingService.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/application/service/ClearingAppService.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/application/service/ConfirmationWorkflowService.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/application/service/MtMxConverter.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/application/service/RouteOptimizationService.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/application/service/SettlementTrackerService.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/application/service/SwiftMessageGenerator.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/application/service/TradeConfirmationService.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/ClearingApplication.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/domain/event/InstructionSentEvent.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClsSession.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/PvpSettlementPair.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementBatch.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementTracker.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/TradeConfirmation.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/query/ClearingQuery.java"},
+    {"path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ClearingAmount.java"}
+  ],
+  "batchImportData": {
+    "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ClearingResp.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/application/command/GenerateClearingCmd.java": [
+      "import jakarta.validation.constraints.NotBlank;",
+      "import jakarta.validation.constraints.NotNull;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/application/dto/InternalTrade.java": [
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java": [
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Data;",
+      "import java.util.ArrayList;",
+      "import java.util.List;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/application/dto/TradeConfirmation.java": [
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/application/service/AutomatedConfirmationService.java": [
+      "import com.forex.clearing.domain.model.aggregate.TradeConfirmation;",
+      "import com.forex.clearing.domain.model.valueobject.ConfirmationFlag;",
+      "import com.forex.clearing.domain.repository.TradeConfirmationRepository;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.util.List;",
+      "import java.util.UUID;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsMessageGenerator.java": [
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;",
+      "import java.time.format.DateTimeFormatter;",
+      "import java.util.UUID;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsRoutingService.java": [
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import java.util.Map;",
+      "import java.util.concurrent.ConcurrentHashMap;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/application/service/ClearingAppService.java": [
+      "import com.forex.clearing.application.command.GenerateClearingCmd;",
+      "import com.forex.clearing.domain.model.aggregate.ClearingInstruction;",
+      "import com.forex.clearing.domain.model.query.ClearingQuery;",
+      "import com.forex.clearing.domain.repository.ClearingInstructionRepository;",
+      "import com.forex.clearing.domain.service.ClearingDomainService;",
+      "import com.forex.common.base.annotation.RedisLock;",
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Service;",
+      "import org.springframework.transaction.annotation.Transactional;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/application/service/ConfirmationWorkflowService.java": [
+      "import com.forex.clearing.domain.model.aggregate.TradeConfirmation;",
+      "import com.forex.clearing.domain.repository.TradeConfirmationRepository;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/application/service/MtMxConverter.java": [
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.format.DateTimeFormatter;",
+      "import java.util.LinkedHashMap;",
+      "import java.util.Map;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/application/service/RouteOptimizationService.java": [
+      "import com.forex.clearing.domain.model.valueobject.PaymentChannel;",
+      "import com.forex.clearing.domain.model.valueobject.SettlementRoute;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import java.math.BigDecimal;",
+      "import java.util.List;",
+      "import java.util.UUID;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/application/service/SettlementTrackerService.java": [
+      "import com.forex.clearing.domain.model.aggregate.SettlementTracker;",
+      "import com.forex.clearing.domain.repository.SettlementTrackerRepository;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import java.util.List;",
+      "import java.util.UUID;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/application/service/SwiftMessageGenerator.java": [
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;",
+      "import java.time.format.DateTimeFormatter;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/application/service/TradeConfirmationService.java": [
+      "import com.forex.clearing.application.dto.InternalTrade;",
+      "import com.forex.clearing.application.dto.ReconciliationResult;",
+      "import com.forex.clearing.application.dto.TradeConfirmation;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.util.ArrayList;",
+      "import java.util.List;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/ClearingApplication.java": [
+      "import org.mybatis.spring.annotation.MapperScan;",
+      "import org.springframework.boot.SpringApplication;",
+      "import org.springframework.boot.autoconfigure.SpringBootApplication;",
+      "import org.springframework.cloud.client.discovery.EnableDiscoveryClient;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/domain/event/InstructionSentEvent.java": [
+      "import com.forex.common.base.domain.BaseDomainEvent;",
+      "import lombok.Getter;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java": [
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClsSession.java": [
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/PvpSettlementPair.java": [
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementBatch.java": [
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementTracker.java": [
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import lombok.Getter;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;",
+      "import java.util.Set;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/TradeConfirmation.java": [
+      "import com.forex.clearing.domain.model.valueobject.ConfirmationFlag;",
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/domain/model/query/ClearingQuery.java": [
+      "import com.forex.common.base.dto.PageReq;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;",
+      "import java.time.LocalDate;"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ClearingAmount.java": [
+      "import com.forex.common.base.domain.BaseValueObject;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;",
+      "import java.util.Objects;"
+    ]
+  }
+}

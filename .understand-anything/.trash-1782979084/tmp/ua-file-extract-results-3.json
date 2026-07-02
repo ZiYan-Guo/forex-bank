@@ -1,0 +1,3299 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "docker/docker-compose.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 128,
+      "nonEmptyLines": 120,
+      "sections": [
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "services",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "volumes",
+          "level": 1,
+          "line": 122
+        },
+        {
+          "heading": "networks",
+          "level": 1,
+          "line": 126
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "docker/nacos/conf/application.properties",
+      "language": "properties",
+      "fileCategory": "config",
+      "totalLines": 7,
+      "nonEmptyLines": 7,
+      "metrics": {}
+    },
+    {
+      "path": "forex-account/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 55,
+      "nonEmptyLines": 55,
+      "metrics": {}
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AccountApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "AccountApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 186,
+      "nonEmptyLines": 166,
+      "functions": [
+        {
+          "name": "openAccount",
+          "startLine": 42,
+          "endLine": 56,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "closeAccount",
+          "startLine": 58,
+          "endLine": 65,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getById",
+          "startLine": 67,
+          "endLine": 72,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getByAccountNo",
+          "startLine": 74,
+          "endLine": 79,
+          "params": [
+            "accountNo"
+          ]
+        },
+        {
+          "name": "getCustomerAccounts",
+          "startLine": 81,
+          "endLine": 89,
+          "params": [
+            "customerId"
+          ]
+        },
+        {
+          "name": "deposit",
+          "startLine": 91,
+          "endLine": 101,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "withdraw",
+          "startLine": 103,
+          "endLine": 113,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "freeze",
+          "startLine": 115,
+          "endLine": 123,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "unfreeze",
+          "startLine": 125,
+          "endLine": 133,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "getTransactions",
+          "startLine": 135,
+          "endLine": 146,
+          "params": [
+            "accountId",
+            "pageReq"
+          ]
+        },
+        {
+          "name": "toAccountResp",
+          "startLine": 148,
+          "endLine": 167,
+          "params": [
+            "account"
+          ]
+        },
+        {
+          "name": "toTransactionResp",
+          "startLine": 169,
+          "endLine": 185,
+          "params": [
+            "tx"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AccountController",
+          "startLine": 34,
+          "endLine": 186,
+          "methods": [
+            "openAccount",
+            "closeAccount",
+            "getById",
+            "getByAccountNo",
+            "getCustomerAccounts",
+            "deposit",
+            "withdraw",
+            "freeze",
+            "unfreeze",
+            "getTransactions",
+            "toAccountResp",
+            "toTransactionResp"
+          ],
+          "properties": [
+            "accountAppService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "openAccount",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "closeAccount",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "getById",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "getByAccountNo",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "getCustomerAccounts",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "deposit",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "withdraw",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "freeze",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "unfreeze",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "getTransactions",
+          "line": 135,
+          "isDefault": false
+        },
+        {
+          "name": "AccountController",
+          "line": 34,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "openAccount",
+          "callee": "new OpenAccountCmd",
+          "lineNumber": 47
+        },
+        {
+          "caller": "openAccount",
+          "callee": "cmd.setCustomerId",
+          "lineNumber": 48
+        },
+        {
+          "caller": "openAccount",
+          "callee": "req.getCustomerId",
+          "lineNumber": 48
+        },
+        {
+          "caller": "openAccount",
+          "callee": "cmd.setAccountType",
+          "lineNumber": 49
+        },
+        {
+          "caller": "openAccount",
+          "callee": "req.getAccountType",
+          "lineNumber": 49
+        },
+        {
+          "caller": "openAccount",
+          "callee": "cmd.setCurrency",
+          "lineNumber": 50
+        },
+        {
+          "caller": "openAccount",
+          "callee": "req.getCurrency",
+          "lineNumber": 50
+        },
+        {
+          "caller": "openAccount",
+          "callee": "cmd.setAccountName",
+          "lineNumber": 51
+        },
+        {
+          "caller": "openAccount",
+          "callee": "req.getAccountName",
+          "lineNumber": 51
+        },
+        {
+          "caller": "openAccount",
+          "callee": "cmd.setOpenBranch",
+          "lineNumber": 52
+        },
+        {
+          "caller": "openAccount",
+          "callee": "req.getOpenBranch",
+          "lineNumber": 52
+        },
+        {
+          "caller": "openAccount",
+          "callee": "accountAppService.openAccount",
+          "lineNumber": 54
+        },
+        {
+          "caller": "openAccount",
+          "callee": "R.ok",
+          "lineNumber": 55
+        },
+        {
+          "caller": "openAccount",
+          "callee": "toAccountResp",
+          "lineNumber": 55
+        },
+        {
+          "caller": "closeAccount",
+          "callee": "accountAppService.closeAccount",
+          "lineNumber": 63
+        },
+        {
+          "caller": "closeAccount",
+          "callee": "R.okMsg",
+          "lineNumber": 64
+        },
+        {
+          "caller": "getById",
+          "callee": "accountAppService.getAccountDetail",
+          "lineNumber": 70
+        },
+        {
+          "caller": "getById",
+          "callee": "R.ok",
+          "lineNumber": 71
+        },
+        {
+          "caller": "getById",
+          "callee": "toAccountResp",
+          "lineNumber": 71
+        },
+        {
+          "caller": "getByAccountNo",
+          "callee": "accountAppService.getAccountByNo",
+          "lineNumber": 77
+        },
+        {
+          "caller": "getByAccountNo",
+          "callee": "R.ok",
+          "lineNumber": 78
+        },
+        {
+          "caller": "getByAccountNo",
+          "callee": "toAccountResp",
+          "lineNumber": 78
+        },
+        {
+          "caller": "getCustomerAccounts",
+          "callee": "accountAppService.getCustomerAccounts",
+          "lineNumber": 84
+        },
+        {
+          "caller": "getCustomerAccounts",
+          "callee": "accounts.stream()\n                .map(this::toAccountResp).toList",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getCustomerAccounts",
+          "callee": "accounts.stream().map",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getCustomerAccounts",
+          "callee": "accounts.stream",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getCustomerAccounts",
+          "callee": "R.ok",
+          "lineNumber": 88
+        },
+        {
+          "caller": "deposit",
+          "callee": "accountAppService.deposit",
+          "lineNumber": 97
+        },
+        {
+          "caller": "deposit",
+          "callee": "req.getAccountId",
+          "lineNumber": 97
+        },
+        {
+          "caller": "deposit",
+          "callee": "req.getAmount",
+          "lineNumber": 97
+        },
+        {
+          "caller": "deposit",
+          "callee": "req.getRelatedBizNo",
+          "lineNumber": 98
+        },
+        {
+          "caller": "deposit",
+          "callee": "req.getSummary",
+          "lineNumber": 98
+        },
+        {
+          "caller": "deposit",
+          "callee": "accountAppService.getAccountDetail",
+          "lineNumber": 99
+        },
+        {
+          "caller": "deposit",
+          "callee": "req.getAccountId",
+          "lineNumber": 99
+        },
+        {
+          "caller": "deposit",
+          "callee": "R.ok",
+          "lineNumber": 100
+        },
+        {
+          "caller": "deposit",
+          "callee": "toAccountResp",
+          "lineNumber": 100
+        },
+        {
+          "caller": "withdraw",
+          "callee": "accountAppService.withdraw",
+          "lineNumber": 109
+        },
+        {
+          "caller": "withdraw",
+          "callee": "req.getAccountId",
+          "lineNumber": 109
+        },
+        {
+          "caller": "withdraw",
+          "callee": "req.getAmount",
+          "lineNumber": 109
+        },
+        {
+          "caller": "withdraw",
+          "callee": "req.getRelatedBizNo",
+          "lineNumber": 110
+        },
+        {
+          "caller": "withdraw",
+          "callee": "req.getSummary",
+          "lineNumber": 110
+        },
+        {
+          "caller": "withdraw",
+          "callee": "accountAppService.getAccountDetail",
+          "lineNumber": 111
+        },
+        {
+          "caller": "withdraw",
+          "callee": "req.getAccountId",
+          "lineNumber": 111
+        },
+        {
+          "caller": "withdraw",
+          "callee": "R.ok",
+          "lineNumber": 112
+        },
+        {
+          "caller": "withdraw",
+          "callee": "toAccountResp",
+          "lineNumber": 112
+        },
+        {
+          "caller": "freeze",
+          "callee": "accountAppService.freeze",
+          "lineNumber": 120
+        },
+        {
+          "caller": "freeze",
+          "callee": "req.getAccountId",
+          "lineNumber": 120
+        },
+        {
+          "caller": "freeze",
+          "callee": "req.getAmount",
+          "lineNumber": 120
+        },
+        {
+          "caller": "freeze",
+          "callee": "accountAppService.getAccountDetail",
+          "lineNumber": 121
+        },
+        {
+          "caller": "freeze",
+          "callee": "req.getAccountId",
+          "lineNumber": 121
+        },
+        {
+          "caller": "freeze",
+          "callee": "R.ok",
+          "lineNumber": 122
+        },
+        {
+          "caller": "freeze",
+          "callee": "toAccountResp",
+          "lineNumber": 122
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "accountAppService.unfreeze",
+          "lineNumber": 130
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "req.getAccountId",
+          "lineNumber": 130
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "req.getAmount",
+          "lineNumber": 130
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "accountAppService.getAccountDetail",
+          "lineNumber": 131
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "req.getAccountId",
+          "lineNumber": 131
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "R.ok",
+          "lineNumber": 132
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "toAccountResp",
+          "lineNumber": 132
+        },
+        {
+          "caller": "getTransactions",
+          "callee": "accountAppService.getTransactions",
+          "lineNumber": 139
+        },
+        {
+          "caller": "getTransactions",
+          "callee": "page.getRecords().stream()\n                .map(this::toTransactionResp).toList",
+          "lineNumber": 140
+        },
+        {
+          "caller": "getTransactions",
+          "callee": "page.getRecords().stream().map",
+          "lineNumber": 140
+        },
+        {
+          "caller": "getTransactions",
+          "callee": "page.getRecords().stream",
+          "lineNumber": 140
+        },
+        {
+          "caller": "getTransactions",
+          "callee": "page.getRecords",
+          "lineNumber": 140
+        },
+        {
+          "caller": "getTransactions",
+          "callee": "PageResp.of",
+          "lineNumber": 143
+        },
+        {
+          "caller": "getTransactions",
+          "callee": "page.getTotal",
+          "lineNumber": 144
+        },
+        {
+          "caller": "getTransactions",
+          "callee": "page.getPageNum",
+          "lineNumber": 144
+        },
+        {
+          "caller": "getTransactions",
+          "callee": "page.getPageSize",
+          "lineNumber": 144
+        },
+        {
+          "caller": "getTransactions",
+          "callee": "R.ok",
+          "lineNumber": 145
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "new AccountResp",
+          "lineNumber": 149
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "resp.setId",
+          "lineNumber": 150
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "account.getId",
+          "lineNumber": 150
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "resp.setAccountNo",
+          "lineNumber": 151
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "account.getAccountNo",
+          "lineNumber": 151
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "resp.setCustomerId",
+          "lineNumber": 152
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "account.getCustomerId",
+          "lineNumber": 152
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "resp.setAccountType",
+          "lineNumber": 153
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "account.getAccountType",
+          "lineNumber": 153
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "resp.setCurrency",
+          "lineNumber": 154
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "account.getCurrency",
+          "lineNumber": 154
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "resp.setAccountName",
+          "lineNumber": 155
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "account.getAccountName",
+          "lineNumber": 155
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "resp.setBalance",
+          "lineNumber": 156
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "account.getBalance",
+          "lineNumber": 156
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "resp.setFrozenAmount",
+          "lineNumber": 157
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "account.getFrozenAmount",
+          "lineNumber": 157
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "resp.setAvailableBalance",
+          "lineNumber": 158
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "account.getAvailableBalance",
+          "lineNumber": 158
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "resp.setOpenDate",
+          "lineNumber": 159
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "account.getOpenDate",
+          "lineNumber": 159
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "resp.setOpenBranch",
+          "lineNumber": 160
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "account.getOpenBranch",
+          "lineNumber": 160
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "resp.setAccountStatus",
+          "lineNumber": 161
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "account.getAccountStatus",
+          "lineNumber": 161
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "resp.setInterestRate",
+          "lineNumber": 162
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "account.getInterestRate",
+          "lineNumber": 162
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "resp.setIsInterestBearing",
+          "lineNumber": 163
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "account.getIsInterestBearing",
+          "lineNumber": 163
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "resp.setCentralBankReportStatus",
+          "lineNumber": 164
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "account.getCentralBankReportStatus",
+          "lineNumber": 164
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "resp.setLastReportTime",
+          "lineNumber": 165
+        },
+        {
+          "caller": "toAccountResp",
+          "callee": "account.getLastReportTime",
+          "lineNumber": 165
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "new TransactionResp",
+          "lineNumber": 170
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "resp.setId",
+          "lineNumber": 171
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "tx.getId",
+          "lineNumber": 171
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "resp.setTransactionNo",
+          "lineNumber": 172
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "tx.getTransactionNo",
+          "lineNumber": 172
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "resp.setAccountId",
+          "lineNumber": 173
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "tx.getAccountId",
+          "lineNumber": 173
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "resp.setAccountNo",
+          "lineNumber": 174
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "tx.getAccountNo",
+          "lineNumber": 174
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "resp.setTransactionType",
+          "lineNumber": 175
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "tx.getTransactionType",
+          "lineNumber": 175
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "resp.setAmount",
+          "lineNumber": 176
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "tx.getAmount",
+          "lineNumber": 176
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "resp.setCurrency",
+          "lineNumber": 177
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "tx.getCurrency",
+          "lineNumber": 177
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "resp.setBalanceBefore",
+          "lineNumber": 178
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "tx.getBalanceBefore",
+          "lineNumber": 178
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "resp.setBalanceAfter",
+          "lineNumber": 179
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "tx.getBalanceAfter",
+          "lineNumber": 179
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "resp.setRelatedBizNo",
+          "lineNumber": 180
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "tx.getRelatedBizNo",
+          "lineNumber": 180
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "resp.setRelatedBizType",
+          "lineNumber": 181
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "tx.getRelatedBizType",
+          "lineNumber": 181
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "resp.setTransactionTime",
+          "lineNumber": 182
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "tx.getTransactionTime",
+          "lineNumber": 182
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "resp.setSummary",
+          "lineNumber": 183
+        },
+        {
+          "caller": "toTransactionResp",
+          "callee": "tx.getSummary",
+          "lineNumber": 183
+        }
+      ],
+      "metrics": {
+        "importCount": 20,
+        "exportCount": 11,
+        "functionCount": 12,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/adapter/dto/AccountOperationReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 28,
+      "nonEmptyLines": 20,
+      "classes": [
+        {
+          "name": "AccountOperationReq",
+          "startLine": 11,
+          "endLine": 28,
+          "methods": [],
+          "properties": [
+            "accountId",
+            "amount",
+            "relatedBizNo",
+            "summary"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AccountOperationReq",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/adapter/dto/AccountResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 64,
+      "nonEmptyLines": 43,
+      "classes": [
+        {
+          "name": "AccountResp",
+          "startLine": 11,
+          "endLine": 64,
+          "methods": [],
+          "properties": [
+            "id",
+            "accountNo",
+            "customerId",
+            "accountType",
+            "currency",
+            "accountName",
+            "balance",
+            "frozenAmount",
+            "availableBalance",
+            "openDate",
+            "openBranch",
+            "accountStatus",
+            "interestRate",
+            "isInterestBearing",
+            "centralBankReportStatus",
+            "lastReportTime",
+            "createTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AccountResp",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/adapter/dto/OpenAccountReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 22,
+      "classes": [
+        {
+          "name": "OpenAccountReq",
+          "startLine": 9,
+          "endLine": 30,
+          "methods": [],
+          "properties": [
+            "customerId",
+            "accountType",
+            "currency",
+            "accountName",
+            "openBranch"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OpenAccountReq",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/adapter/dto/TransactionResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 34,
+      "classes": [
+        {
+          "name": "TransactionResp",
+          "startLine": 10,
+          "endLine": 51,
+          "methods": [],
+          "properties": [
+            "id",
+            "transactionNo",
+            "accountId",
+            "accountNo",
+            "transactionType",
+            "amount",
+            "currency",
+            "balanceBefore",
+            "balanceAfter",
+            "relatedBizNo",
+            "relatedBizType",
+            "transactionTime",
+            "summary"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "TransactionResp",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/command/AccountOperationCmd.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "AccountOperationCmd",
+          "startLine": 10,
+          "endLine": 23,
+          "methods": [],
+          "properties": [
+            "accountId",
+            "amount",
+            "relatedBizNo",
+            "summary"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AccountOperationCmd",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/command/OpenAccountCmd.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "OpenAccountCmd",
+          "startLine": 8,
+          "endLine": 24,
+          "methods": [],
+          "properties": [
+            "customerId",
+            "accountType",
+            "currency",
+            "accountName",
+            "openBranch"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OpenAccountCmd",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/query/AccountDetailDTO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 29,
+      "nonEmptyLines": 25,
+      "classes": [
+        {
+          "name": "AccountDetailDTO",
+          "startLine": 9,
+          "endLine": 29,
+          "methods": [],
+          "properties": [
+            "id",
+            "accountNo",
+            "customerId",
+            "accountType",
+            "currency",
+            "accountName",
+            "balance",
+            "frozenAmount",
+            "availableBalance",
+            "openDate",
+            "openBranch",
+            "accountStatus",
+            "interestRate",
+            "isInterestBearing",
+            "centralBankReportStatus",
+            "lastReportTime",
+            "createTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AccountDetailDTO",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/query/AccountQuery.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 12,
+      "classes": [
+        {
+          "name": "AccountQuery",
+          "startLine": 8,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "customerId",
+            "accountNo",
+            "accountStatus",
+            "currency"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AccountQuery",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/query/TransactionDTO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 20,
+      "classes": [
+        {
+          "name": "TransactionDTO",
+          "startLine": 8,
+          "endLine": 24,
+          "methods": [],
+          "properties": [
+            "id",
+            "transactionNo",
+            "accountId",
+            "accountNo",
+            "transactionType",
+            "amount",
+            "currency",
+            "balanceBefore",
+            "balanceAfter",
+            "relatedBizNo",
+            "relatedBizType",
+            "transactionTime",
+            "summary"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "TransactionDTO",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 130,
+      "nonEmptyLines": 106,
+      "functions": [
+        {
+          "name": "openAccount",
+          "startLine": 40,
+          "endLine": 51,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "closeAccount",
+          "startLine": 53,
+          "endLine": 59,
+          "params": [
+            "accountId"
+          ]
+        },
+        {
+          "name": "getAccountDetail",
+          "startLine": 61,
+          "endLine": 64,
+          "params": [
+            "accountId"
+          ]
+        },
+        {
+          "name": "getAccountByNo",
+          "startLine": 66,
+          "endLine": 69,
+          "params": [
+            "accountNo"
+          ]
+        },
+        {
+          "name": "getCustomerAccounts",
+          "startLine": 71,
+          "endLine": 73,
+          "params": [
+            "customerId"
+          ]
+        },
+        {
+          "name": "getTransactions",
+          "startLine": 75,
+          "endLine": 79,
+          "params": [
+            "accountId",
+            "pageReq"
+          ]
+        },
+        {
+          "name": "deposit",
+          "startLine": 81,
+          "endLine": 93,
+          "params": [
+            "accountId",
+            "amount",
+            "relatedBizNo",
+            "summary"
+          ]
+        },
+        {
+          "name": "withdraw",
+          "startLine": 95,
+          "endLine": 107,
+          "params": [
+            "accountId",
+            "amount",
+            "relatedBizNo",
+            "summary"
+          ]
+        },
+        {
+          "name": "freeze",
+          "startLine": 109,
+          "endLine": 118,
+          "params": [
+            "accountId",
+            "amount"
+          ]
+        },
+        {
+          "name": "unfreeze",
+          "startLine": 120,
+          "endLine": 129,
+          "params": [
+            "accountId",
+            "amount"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AccountAppService",
+          "startLine": 30,
+          "endLine": 130,
+          "methods": [
+            "openAccount",
+            "closeAccount",
+            "getAccountDetail",
+            "getAccountByNo",
+            "getCustomerAccounts",
+            "getTransactions",
+            "deposit",
+            "withdraw",
+            "freeze",
+            "unfreeze"
+          ],
+          "properties": [
+            "accountDomainService",
+            "accountRepository",
+            "transactionRepository",
+            "eventPublisher"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "openAccount",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "closeAccount",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "getAccountDetail",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "getAccountByNo",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "getCustomerAccounts",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "getTransactions",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "deposit",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "withdraw",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "freeze",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "unfreeze",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "AccountAppService",
+          "line": 30,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "openAccount",
+          "callee": "accountDomainService.openAccount",
+          "lineNumber": 42
+        },
+        {
+          "caller": "openAccount",
+          "callee": "cmd.getCustomerId",
+          "lineNumber": 43
+        },
+        {
+          "caller": "openAccount",
+          "callee": "cmd.getAccountType",
+          "lineNumber": 43
+        },
+        {
+          "caller": "openAccount",
+          "callee": "cmd.getCurrency",
+          "lineNumber": 43
+        },
+        {
+          "caller": "openAccount",
+          "callee": "cmd.getAccountName",
+          "lineNumber": 44
+        },
+        {
+          "caller": "openAccount",
+          "callee": "cmd.getOpenBranch",
+          "lineNumber": 44
+        },
+        {
+          "caller": "openAccount",
+          "callee": "accountRepository.save",
+          "lineNumber": 45
+        },
+        {
+          "caller": "openAccount",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 47
+        },
+        {
+          "caller": "openAccount",
+          "callee": "new AccountOpenedEvent",
+          "lineNumber": 47
+        },
+        {
+          "caller": "openAccount",
+          "callee": "saved.getId",
+          "lineNumber": 48
+        },
+        {
+          "caller": "openAccount",
+          "callee": "saved.getAccountNo",
+          "lineNumber": 48
+        },
+        {
+          "caller": "openAccount",
+          "callee": "saved.getCustomerId",
+          "lineNumber": 48
+        },
+        {
+          "caller": "openAccount",
+          "callee": "saved.getCurrency",
+          "lineNumber": 48
+        },
+        {
+          "caller": "closeAccount",
+          "callee": "accountRepository.findById(accountId).orElseThrow",
+          "lineNumber": 55
+        },
+        {
+          "caller": "closeAccount",
+          "callee": "accountRepository.findById",
+          "lineNumber": 55
+        },
+        {
+          "caller": "closeAccount",
+          "callee": "new BusinessException",
+          "lineNumber": 56
+        },
+        {
+          "caller": "closeAccount",
+          "callee": "accountDomainService.closeAccount",
+          "lineNumber": 57
+        },
+        {
+          "caller": "closeAccount",
+          "callee": "accountRepository.save",
+          "lineNumber": 58
+        },
+        {
+          "caller": "getAccountDetail",
+          "callee": "accountRepository.findById(accountId).orElseThrow",
+          "lineNumber": 62
+        },
+        {
+          "caller": "getAccountDetail",
+          "callee": "accountRepository.findById",
+          "lineNumber": 62
+        },
+        {
+          "caller": "getAccountDetail",
+          "callee": "new BusinessException",
+          "lineNumber": 63
+        },
+        {
+          "caller": "getAccountByNo",
+          "callee": "accountRepository.findByAccountNo(accountNo).orElseThrow",
+          "lineNumber": 67
+        },
+        {
+          "caller": "getAccountByNo",
+          "callee": "accountRepository.findByAccountNo",
+          "lineNumber": 67
+        },
+        {
+          "caller": "getAccountByNo",
+          "callee": "new BusinessException",
+          "lineNumber": 68
+        },
+        {
+          "caller": "getCustomerAccounts",
+          "callee": "accountRepository.findByCustomerId",
+          "lineNumber": 72
+        },
+        {
+          "caller": "getTransactions",
+          "callee": "transactionRepository.findByAccountId",
+          "lineNumber": 76
+        },
+        {
+          "caller": "getTransactions",
+          "callee": "transactionRepository.countByAccountId",
+          "lineNumber": 77
+        },
+        {
+          "caller": "getTransactions",
+          "callee": "PageResp.of",
+          "lineNumber": 78
+        },
+        {
+          "caller": "getTransactions",
+          "callee": "pageReq.getPageNum",
+          "lineNumber": 78
+        },
+        {
+          "caller": "getTransactions",
+          "callee": "pageReq.getPageSize",
+          "lineNumber": 78
+        },
+        {
+          "caller": "deposit",
+          "callee": "accountRepository.findById(accountId).orElseThrow",
+          "lineNumber": 83
+        },
+        {
+          "caller": "deposit",
+          "callee": "accountRepository.findById",
+          "lineNumber": 83
+        },
+        {
+          "caller": "deposit",
+          "callee": "new BusinessException",
+          "lineNumber": 84
+        },
+        {
+          "caller": "deposit",
+          "callee": "accountDomainService.recordTransaction",
+          "lineNumber": 86
+        },
+        {
+          "caller": "deposit",
+          "callee": "accountRepository.save",
+          "lineNumber": 88
+        },
+        {
+          "caller": "deposit",
+          "callee": "transactionRepository.save",
+          "lineNumber": 89
+        },
+        {
+          "caller": "deposit",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 91
+        },
+        {
+          "caller": "deposit",
+          "callee": "new BalanceChangedEvent",
+          "lineNumber": 91
+        },
+        {
+          "caller": "deposit",
+          "callee": "account.getId",
+          "lineNumber": 92
+        },
+        {
+          "caller": "deposit",
+          "callee": "account.getAccountNo",
+          "lineNumber": 92
+        },
+        {
+          "caller": "deposit",
+          "callee": "account.getBalance",
+          "lineNumber": 92
+        },
+        {
+          "caller": "withdraw",
+          "callee": "accountRepository.findById(accountId).orElseThrow",
+          "lineNumber": 97
+        },
+        {
+          "caller": "withdraw",
+          "callee": "accountRepository.findById",
+          "lineNumber": 97
+        },
+        {
+          "caller": "withdraw",
+          "callee": "new BusinessException",
+          "lineNumber": 98
+        },
+        {
+          "caller": "withdraw",
+          "callee": "accountDomainService.recordTransaction",
+          "lineNumber": 100
+        },
+        {
+          "caller": "withdraw",
+          "callee": "accountRepository.save",
+          "lineNumber": 102
+        },
+        {
+          "caller": "withdraw",
+          "callee": "transactionRepository.save",
+          "lineNumber": 103
+        },
+        {
+          "caller": "withdraw",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 105
+        },
+        {
+          "caller": "withdraw",
+          "callee": "new BalanceChangedEvent",
+          "lineNumber": 105
+        },
+        {
+          "caller": "withdraw",
+          "callee": "account.getId",
+          "lineNumber": 106
+        },
+        {
+          "caller": "withdraw",
+          "callee": "account.getAccountNo",
+          "lineNumber": 106
+        },
+        {
+          "caller": "withdraw",
+          "callee": "account.getBalance",
+          "lineNumber": 106
+        },
+        {
+          "caller": "freeze",
+          "callee": "accountRepository.findById(accountId).orElseThrow",
+          "lineNumber": 111
+        },
+        {
+          "caller": "freeze",
+          "callee": "accountRepository.findById",
+          "lineNumber": 111
+        },
+        {
+          "caller": "freeze",
+          "callee": "new BusinessException",
+          "lineNumber": 112
+        },
+        {
+          "caller": "freeze",
+          "callee": "account.freeze",
+          "lineNumber": 113
+        },
+        {
+          "caller": "freeze",
+          "callee": "accountRepository.save",
+          "lineNumber": 114
+        },
+        {
+          "caller": "freeze",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 116
+        },
+        {
+          "caller": "freeze",
+          "callee": "new BalanceChangedEvent",
+          "lineNumber": 116
+        },
+        {
+          "caller": "freeze",
+          "callee": "account.getId",
+          "lineNumber": 117
+        },
+        {
+          "caller": "freeze",
+          "callee": "account.getAccountNo",
+          "lineNumber": 117
+        },
+        {
+          "caller": "freeze",
+          "callee": "account.getBalance",
+          "lineNumber": 117
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "accountRepository.findById(accountId).orElseThrow",
+          "lineNumber": 122
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "accountRepository.findById",
+          "lineNumber": 122
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "new BusinessException",
+          "lineNumber": 123
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "account.unfreeze",
+          "lineNumber": 124
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "accountRepository.save",
+          "lineNumber": 125
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 127
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "new BalanceChangedEvent",
+          "lineNumber": 127
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "account.getId",
+          "lineNumber": 128
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "account.getAccountNo",
+          "lineNumber": 128
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "account.getBalance",
+          "lineNumber": 128
+        }
+      ],
+      "metrics": {
+        "importCount": 20,
+        "exportCount": 11,
+        "functionCount": 10,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 21,
+      "functions": [
+        {
+          "name": "AccountOpenedEvent",
+          "startLine": 15,
+          "endLine": 21,
+          "params": [
+            "accountId",
+            "accountNo",
+            "customerId",
+            "currency"
+          ]
+        },
+        {
+          "name": "eventName",
+          "startLine": 23,
+          "endLine": 26,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "AccountOpenedEvent",
+          "startLine": 7,
+          "endLine": 27,
+          "methods": [
+            "AccountOpenedEvent",
+            "eventName"
+          ],
+          "properties": [
+            "accountId",
+            "accountNo",
+            "customerId",
+            "currency"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AccountOpenedEvent",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "eventName",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "AccountOpenedEvent",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 32,
+      "nonEmptyLines": 25,
+      "functions": [
+        {
+          "name": "BalanceChangedEvent",
+          "startLine": 18,
+          "endLine": 26,
+          "params": [
+            "accountId",
+            "accountNo",
+            "amount",
+            "txType",
+            "balanceAfter"
+          ]
+        },
+        {
+          "name": "eventName",
+          "startLine": 28,
+          "endLine": 31,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "BalanceChangedEvent",
+          "startLine": 9,
+          "endLine": 32,
+          "methods": [
+            "BalanceChangedEvent",
+            "eventName"
+          ],
+          "properties": [
+            "accountId",
+            "accountNo",
+            "amount",
+            "txType",
+            "balanceAfter"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "BalanceChangedEvent",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "eventName",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "BalanceChangedEvent",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 168,
+      "nonEmptyLines": 150,
+      "functions": [
+        {
+          "name": "ForexAccount",
+          "startLine": 34,
+          "endLine": 36,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 38,
+          "endLine": 56,
+          "params": [
+            "customerId",
+            "accountType",
+            "currency",
+            "accountName",
+            "openBranch"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 58,
+          "endLine": 84,
+          "params": [
+            "id",
+            "accountNo",
+            "customerId",
+            "accountType",
+            "currency",
+            "accountName",
+            "balance",
+            "frozenAmount",
+            "availableBalance",
+            "openDate",
+            "openBranch",
+            "accountStatus",
+            "interestRate",
+            "isInterestBearing",
+            "centralBankReportStatus",
+            "lastReportTime"
+          ]
+        },
+        {
+          "name": "deposit",
+          "startLine": 86,
+          "endLine": 93,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "withdraw",
+          "startLine": 95,
+          "endLine": 106,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "freeze",
+          "startLine": 108,
+          "endLine": 119,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "unfreeze",
+          "startLine": 121,
+          "endLine": 131,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "close",
+          "startLine": 133,
+          "endLine": 136,
+          "params": []
+        },
+        {
+          "name": "calculateAvailableBalance",
+          "startLine": 138,
+          "endLine": 140,
+          "params": []
+        },
+        {
+          "name": "assignAccountNo",
+          "startLine": 142,
+          "endLine": 144,
+          "params": [
+            "accountNo"
+          ]
+        },
+        {
+          "name": "setFrozen",
+          "startLine": 146,
+          "endLine": 149,
+          "params": []
+        },
+        {
+          "name": "setNormal",
+          "startLine": 151,
+          "endLine": 154,
+          "params": []
+        },
+        {
+          "name": "validate",
+          "startLine": 156,
+          "endLine": 167,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ForexAccount",
+          "startLine": 14,
+          "endLine": 168,
+          "methods": [
+            "ForexAccount",
+            "create",
+            "reconstitute",
+            "deposit",
+            "withdraw",
+            "freeze",
+            "unfreeze",
+            "close",
+            "calculateAvailableBalance",
+            "assignAccountNo",
+            "setFrozen",
+            "setNormal",
+            "validate"
+          ],
+          "properties": [
+            "id",
+            "accountNo",
+            "customerId",
+            "accountType",
+            "currency",
+            "accountName",
+            "balance",
+            "frozenAmount",
+            "availableBalance",
+            "openDate",
+            "openBranch",
+            "accountStatus",
+            "interestRate",
+            "isInterestBearing",
+            "centralBankReportStatus",
+            "lastReportTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "deposit",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "withdraw",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "freeze",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "unfreeze",
+          "line": 121,
+          "isDefault": false
+        },
+        {
+          "name": "close",
+          "line": 133,
+          "isDefault": false
+        },
+        {
+          "name": "calculateAvailableBalance",
+          "line": 138,
+          "isDefault": false
+        },
+        {
+          "name": "assignAccountNo",
+          "line": 142,
+          "isDefault": false
+        },
+        {
+          "name": "setFrozen",
+          "line": 146,
+          "isDefault": false
+        },
+        {
+          "name": "setNormal",
+          "line": 151,
+          "isDefault": false
+        },
+        {
+          "name": "ForexAccount",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new ForexAccount",
+          "lineNumber": 40
+        },
+        {
+          "caller": "create",
+          "callee": "LocalDate.now",
+          "lineNumber": 49
+        },
+        {
+          "caller": "create",
+          "callee": "account.validate",
+          "lineNumber": 54
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new ForexAccount",
+          "lineNumber": 66
+        },
+        {
+          "caller": "deposit",
+          "callee": "amount.compareTo",
+          "lineNumber": 87
+        },
+        {
+          "caller": "deposit",
+          "callee": "new BusinessException",
+          "lineNumber": 88
+        },
+        {
+          "caller": "deposit",
+          "callee": "this.balance.add",
+          "lineNumber": 90
+        },
+        {
+          "caller": "deposit",
+          "callee": "calculateAvailableBalance",
+          "lineNumber": 91
+        },
+        {
+          "caller": "deposit",
+          "callee": "markUpdated",
+          "lineNumber": 92
+        },
+        {
+          "caller": "withdraw",
+          "callee": "amount.compareTo",
+          "lineNumber": 96
+        },
+        {
+          "caller": "withdraw",
+          "callee": "new BusinessException",
+          "lineNumber": 97
+        },
+        {
+          "caller": "withdraw",
+          "callee": "calculateAvailableBalance",
+          "lineNumber": 99
+        },
+        {
+          "caller": "withdraw",
+          "callee": "available.compareTo",
+          "lineNumber": 100
+        },
+        {
+          "caller": "withdraw",
+          "callee": "new BusinessException",
+          "lineNumber": 101
+        },
+        {
+          "caller": "withdraw",
+          "callee": "this.balance.subtract",
+          "lineNumber": 103
+        },
+        {
+          "caller": "withdraw",
+          "callee": "calculateAvailableBalance",
+          "lineNumber": 104
+        },
+        {
+          "caller": "withdraw",
+          "callee": "markUpdated",
+          "lineNumber": 105
+        },
+        {
+          "caller": "freeze",
+          "callee": "amount.compareTo",
+          "lineNumber": 109
+        },
+        {
+          "caller": "freeze",
+          "callee": "new BusinessException",
+          "lineNumber": 110
+        },
+        {
+          "caller": "freeze",
+          "callee": "calculateAvailableBalance",
+          "lineNumber": 112
+        },
+        {
+          "caller": "freeze",
+          "callee": "available.compareTo",
+          "lineNumber": 113
+        },
+        {
+          "caller": "freeze",
+          "callee": "new BusinessException",
+          "lineNumber": 114
+        },
+        {
+          "caller": "freeze",
+          "callee": "this.frozenAmount.add",
+          "lineNumber": 116
+        },
+        {
+          "caller": "freeze",
+          "callee": "calculateAvailableBalance",
+          "lineNumber": 117
+        },
+        {
+          "caller": "freeze",
+          "callee": "markUpdated",
+          "lineNumber": 118
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "amount.compareTo",
+          "lineNumber": 122
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "new BusinessException",
+          "lineNumber": 123
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "this.frozenAmount.compareTo",
+          "lineNumber": 125
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "new BusinessException",
+          "lineNumber": 126
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "this.frozenAmount.subtract",
+          "lineNumber": 128
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "calculateAvailableBalance",
+          "lineNumber": 129
+        },
+        {
+          "caller": "unfreeze",
+          "callee": "markUpdated",
+          "lineNumber": 130
+        },
+        {
+          "caller": "close",
+          "callee": "markUpdated",
+          "lineNumber": 135
+        },
+        {
+          "caller": "calculateAvailableBalance",
+          "callee": "this.balance.subtract",
+          "lineNumber": 139
+        },
+        {
+          "caller": "setFrozen",
+          "callee": "markUpdated",
+          "lineNumber": 148
+        },
+        {
+          "caller": "setNormal",
+          "callee": "markUpdated",
+          "lineNumber": 153
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 159
+        },
+        {
+          "caller": "validate",
+          "callee": "currency.isBlank",
+          "lineNumber": 161
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 162
+        },
+        {
+          "caller": "validate",
+          "callee": "CurrencyEnum.fromCode",
+          "lineNumber": 164
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 165
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 12,
+        "functionCount": 13,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 52,
+      "nonEmptyLines": 46,
+      "functions": [
+        {
+          "name": "record",
+          "startLine": 32,
+          "endLine": 51,
+          "params": [
+            "accountId",
+            "accountNo",
+            "transactionType",
+            "amount",
+            "currency",
+            "balanceBefore",
+            "balanceAfter",
+            "relatedBizNo",
+            "relatedBizType",
+            "summary"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AccountTransaction",
+          "startLine": 13,
+          "endLine": 52,
+          "methods": [
+            "record"
+          ],
+          "properties": [
+            "id",
+            "transactionNo",
+            "accountId",
+            "accountNo",
+            "transactionType",
+            "amount",
+            "currency",
+            "balanceBefore",
+            "balanceAfter",
+            "relatedBizNo",
+            "relatedBizType",
+            "transactionTime",
+            "summary"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "record",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "AccountTransaction",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "record",
+          "callee": "new AccountTransaction",
+          "lineNumber": 37
+        },
+        {
+          "caller": "record",
+          "callee": "UUID.randomUUID().toString().replace(\"-\", \"\").substring",
+          "lineNumber": 38
+        },
+        {
+          "caller": "record",
+          "callee": "UUID.randomUUID().toString().replace",
+          "lineNumber": 38
+        },
+        {
+          "caller": "record",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 38
+        },
+        {
+          "caller": "record",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 38
+        },
+        {
+          "caller": "record",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 29,
+      "functions": [
+        {
+          "name": "AccountNumber",
+          "startLine": 16,
+          "endLine": 21,
+          "params": [
+            "accountNo"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 23,
+          "endLine": 25,
+          "params": [
+            "accountNo"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 27,
+          "endLine": 32,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 34,
+          "endLine": 37,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "AccountNumber",
+          "startLine": 11,
+          "endLine": 38,
+          "methods": [
+            "AccountNumber",
+            "of",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "accountNo"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "AccountNumber",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AccountNumber",
+          "callee": "accountNo.isBlank",
+          "lineNumber": 17
+        },
+        {
+          "caller": "AccountNumber",
+          "callee": "new BusinessException",
+          "lineNumber": 18
+        },
+        {
+          "caller": "of",
+          "callee": "new AccountNumber",
+          "lineNumber": 24
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 31
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 82,
+      "nonEmptyLines": 68,
+      "functions": [
+        {
+          "name": "Money",
+          "startLine": 18,
+          "endLine": 27,
+          "params": [
+            "amount",
+            "currency"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 29,
+          "endLine": 31,
+          "params": [
+            "amount",
+            "currency"
+          ]
+        },
+        {
+          "name": "zero",
+          "startLine": 33,
+          "endLine": 35,
+          "params": [
+            "currency"
+          ]
+        },
+        {
+          "name": "add",
+          "startLine": 37,
+          "endLine": 45,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "subtract",
+          "startLine": 47,
+          "endLine": 55,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "isPositive",
+          "startLine": 57,
+          "endLine": 59,
+          "params": []
+        },
+        {
+          "name": "isGreaterThan",
+          "startLine": 61,
+          "endLine": 69,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 71,
+          "endLine": 76,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 78,
+          "endLine": 81,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "Money",
+          "startLine": 12,
+          "endLine": 82,
+          "methods": [
+            "Money",
+            "of",
+            "zero",
+            "add",
+            "subtract",
+            "isPositive",
+            "isGreaterThan",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "amount",
+            "currency"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "zero",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "add",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "subtract",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "isPositive",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "isGreaterThan",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "Money",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Money",
+          "callee": "new BusinessException",
+          "lineNumber": 20
+        },
+        {
+          "caller": "Money",
+          "callee": "currency.isBlank",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Money",
+          "callee": "new BusinessException",
+          "lineNumber": 23
+        },
+        {
+          "caller": "of",
+          "callee": "new Money",
+          "lineNumber": 30
+        },
+        {
+          "caller": "zero",
+          "callee": "new Money",
+          "lineNumber": 34
+        },
+        {
+          "caller": "add",
+          "callee": "new BusinessException",
+          "lineNumber": 39
+        },
+        {
+          "caller": "add",
+          "callee": "this.currency.equals",
+          "lineNumber": 41
+        },
+        {
+          "caller": "add",
+          "callee": "new BusinessException",
+          "lineNumber": 42
+        },
+        {
+          "caller": "add",
+          "callee": "new Money",
+          "lineNumber": 44
+        },
+        {
+          "caller": "add",
+          "callee": "this.amount.add",
+          "lineNumber": 44
+        },
+        {
+          "caller": "subtract",
+          "callee": "new BusinessException",
+          "lineNumber": 49
+        },
+        {
+          "caller": "subtract",
+          "callee": "this.currency.equals",
+          "lineNumber": 51
+        },
+        {
+          "caller": "subtract",
+          "callee": "new BusinessException",
+          "lineNumber": 52
+        },
+        {
+          "caller": "subtract",
+          "callee": "new Money",
+          "lineNumber": 54
+        },
+        {
+          "caller": "subtract",
+          "callee": "this.amount.subtract",
+          "lineNumber": 54
+        },
+        {
+          "caller": "isPositive",
+          "callee": "amount.compareTo",
+          "lineNumber": 58
+        },
+        {
+          "caller": "isGreaterThan",
+          "callee": "new BusinessException",
+          "lineNumber": 63
+        },
+        {
+          "caller": "isGreaterThan",
+          "callee": "this.currency.equals",
+          "lineNumber": 65
+        },
+        {
+          "caller": "isGreaterThan",
+          "callee": "new BusinessException",
+          "lineNumber": 66
+        },
+        {
+          "caller": "isGreaterThan",
+          "callee": "this.amount.compareTo",
+          "lineNumber": 68
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 75
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 75
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 80
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 9,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "AccountRepository",
+          "startLine": 10,
+          "endLine": 21,
+          "methods": [
+            "save",
+            "findById",
+            "findByAccountNo",
+            "findByCustomerId",
+            "pageQuery"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AccountRepository",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "TransactionRepository",
+          "startLine": 9,
+          "endLine": 18,
+          "methods": [
+            "save",
+            "findByAccountId",
+            "findByTransactionNo",
+            "countByAccountId"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "TransactionRepository",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 88,
+      "nonEmptyLines": 76,
+      "functions": [
+        {
+          "name": "openAccount",
+          "startLine": 28,
+          "endLine": 35,
+          "params": [
+            "customerId",
+            "accountType",
+            "currency",
+            "accountName",
+            "openBranch"
+          ]
+        },
+        {
+          "name": "closeAccount",
+          "startLine": 37,
+          "endLine": 40,
+          "params": [
+            "account"
+          ]
+        },
+        {
+          "name": "freezeAccount",
+          "startLine": 42,
+          "endLine": 45,
+          "params": [
+            "account"
+          ]
+        },
+        {
+          "name": "unfreezeAccount",
+          "startLine": 47,
+          "endLine": 50,
+          "params": [
+            "account"
+          ]
+        },
+        {
+          "name": "recordTransaction",
+          "startLine": 52,
+          "endLine": 81,
+          "params": [
+            "account",
+            "txType",
+            "amount",
+            "relatedBizNo",
+            "relatedBizType",
+            "summary"
+          ]
+        },
+        {
+          "name": "generateAccountNo",
+          "startLine": 83,
+          "endLine": 87,
+          "params": [
+            "currency"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AccountDomainService",
+          "startLine": 19,
+          "endLine": 88,
+          "methods": [
+            "openAccount",
+            "closeAccount",
+            "freezeAccount",
+            "unfreezeAccount",
+            "recordTransaction",
+            "generateAccountNo"
+          ],
+          "properties": [
+            "DATE_FORMAT",
+            "ACCOUNT_NO_PREFIX"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "openAccount",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "closeAccount",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "freezeAccount",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "unfreezeAccount",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "recordTransaction",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "AccountDomainService",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "openAccount",
+          "callee": "ForexAccount.create",
+          "lineNumber": 30
+        },
+        {
+          "caller": "openAccount",
+          "callee": "generateAccountNo",
+          "lineNumber": 31
+        },
+        {
+          "caller": "openAccount",
+          "callee": "account.assignAccountNo",
+          "lineNumber": 32
+        },
+        {
+          "caller": "openAccount",
+          "callee": "log.info",
+          "lineNumber": 33
+        },
+        {
+          "caller": "closeAccount",
+          "callee": "account.close",
+          "lineNumber": 38
+        },
+        {
+          "caller": "closeAccount",
+          "callee": "log.info",
+          "lineNumber": 39
+        },
+        {
+          "caller": "closeAccount",
+          "callee": "account.getAccountNo",
+          "lineNumber": 39
+        },
+        {
+          "caller": "freezeAccount",
+          "callee": "account.setFrozen",
+          "lineNumber": 43
+        },
+        {
+          "caller": "freezeAccount",
+          "callee": "log.info",
+          "lineNumber": 44
+        },
+        {
+          "caller": "freezeAccount",
+          "callee": "account.getAccountNo",
+          "lineNumber": 44
+        },
+        {
+          "caller": "unfreezeAccount",
+          "callee": "account.setNormal",
+          "lineNumber": 48
+        },
+        {
+          "caller": "unfreezeAccount",
+          "callee": "log.info",
+          "lineNumber": 49
+        },
+        {
+          "caller": "unfreezeAccount",
+          "callee": "account.getAccountNo",
+          "lineNumber": 49
+        },
+        {
+          "caller": "recordTransaction",
+          "callee": "\"NORMAL\".equals",
+          "lineNumber": 55
+        },
+        {
+          "caller": "recordTransaction",
+          "callee": "account.getAccountStatus",
+          "lineNumber": 55
+        },
+        {
+          "caller": "recordTransaction",
+          "callee": "new BusinessException",
+          "lineNumber": 56
+        },
+        {
+          "caller": "recordTransaction",
+          "callee": "account.getAccountStatus",
+          "lineNumber": 56
+        },
+        {
+          "caller": "recordTransaction",
+          "callee": "account.getBalance",
+          "lineNumber": 58
+        },
+        {
+          "caller": "recordTransaction",
+          "callee": "\"DEPOSIT\".equals",
+          "lineNumber": 60
+        },
+        {
+          "caller": "recordTransaction",
+          "callee": "account.deposit",
+          "lineNumber": 61
+        },
+        {
+          "caller": "recordTransaction",
+          "callee": "account.getBalance",
+          "lineNumber": 62
+        },
+        {
+          "caller": "recordTransaction",
+          "callee": "\"WITHDRAW\".equals",
+          "lineNumber": 63
+        },
+        {
+          "caller": "recordTransaction",
+          "callee": "account.withdraw",
+          "lineNumber": 64
+        },
+        {
+          "caller": "recordTransaction",
+          "callee": "account.getBalance",
+          "lineNumber": 65
+        },
+        {
+          "caller": "recordTransaction",
+          "callee": "new BusinessException",
+          "lineNumber": 67
+        },
+        {
+          "caller": "recordTransaction",
+          "callee": "AccountTransaction.record",
+          "lineNumber": 69
+        },
+        {
+          "caller": "recordTransaction",
+          "callee": "account.getId",
+          "lineNumber": 70
+        },
+        {
+          "caller": "recordTransaction",
+          "callee": "account.getAccountNo",
+          "lineNumber": 71
+        },
+        {
+          "caller": "recordTransaction",
+          "callee": "account.getCurrency",
+          "lineNumber": 74
+        },
+        {
+          "caller": "generateAccountNo",
+          "callee": "LocalDate.now().format",
+          "lineNumber": 84
+        },
+        {
+          "caller": "generateAccountNo",
+          "callee": "LocalDate.now",
+          "lineNumber": 84
+        },
+        {
+          "caller": "generateAccountNo",
+          "callee": "String.format",
+          "lineNumber": 85
+        },
+        {
+          "caller": "generateAccountNo",
+          "callee": "ThreadLocalRandom.current().nextInt",
+          "lineNumber": 85
+        },
+        {
+          "caller": "generateAccountNo",
+          "callee": "ThreadLocalRandom.current",
+          "lineNumber": 85
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "AccountTransactionMapper",
+          "startLine": 13,
+          "endLine": 23,
+          "methods": [
+            "selectByAccountId",
+            "selectByTransactionNo"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AccountTransactionMapper",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

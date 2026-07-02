@@ -1,0 +1,2223 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "forex-bank-web/src/views/reporting/ReportingConsole.vue",
+      "language": "vue",
+      "fileCategory": "code",
+      "totalLines": 172,
+      "nonEmptyLines": 158,
+      "metrics": {}
+    },
+    {
+      "path": "forex-bank-web/src/views/risk/EnterpriseRiskDashboard.vue",
+      "language": "vue",
+      "fileCategory": "code",
+      "totalLines": 219,
+      "nonEmptyLines": 204,
+      "metrics": {}
+    },
+    {
+      "path": "forex-bank-web/src/views/risk/RiskMonitor.vue",
+      "language": "vue",
+      "fileCategory": "code",
+      "totalLines": 146,
+      "nonEmptyLines": 130,
+      "metrics": {}
+    },
+    {
+      "path": "forex-bank-web/src/views/risk/SamplingRuleConfig.vue",
+      "language": "vue",
+      "fileCategory": "code",
+      "totalLines": 277,
+      "nonEmptyLines": 254,
+      "metrics": {}
+    },
+    {
+      "path": "forex-bank-web/src/views/schedule/JobManagement.vue",
+      "language": "vue",
+      "fileCategory": "code",
+      "totalLines": 184,
+      "nonEmptyLines": 161,
+      "metrics": {}
+    },
+    {
+      "path": "forex-bank-web/src/views/settlement/BankGuarantee.vue",
+      "language": "vue",
+      "fileCategory": "code",
+      "totalLines": 183,
+      "nonEmptyLines": 167,
+      "metrics": {}
+    },
+    {
+      "path": "forex-bank-web/src/views/settlement/DocumentaryCollection.vue",
+      "language": "vue",
+      "fileCategory": "code",
+      "totalLines": 175,
+      "nonEmptyLines": 161,
+      "metrics": {}
+    },
+    {
+      "path": "forex-bank-web/src/views/settlement/LetterOfCredit.vue",
+      "language": "vue",
+      "fileCategory": "code",
+      "totalLines": 278,
+      "nonEmptyLines": 256,
+      "metrics": {}
+    },
+    {
+      "path": "forex-bank-web/src/views/trading/TradingList.vue",
+      "language": "vue",
+      "fileCategory": "code",
+      "totalLines": 209,
+      "nonEmptyLines": 190,
+      "metrics": {}
+    },
+    {
+      "path": "forex-bank-web/src/views/valuation/PnlAttribution.vue",
+      "language": "vue",
+      "fileCategory": "code",
+      "totalLines": 166,
+      "nonEmptyLines": 150,
+      "metrics": {}
+    },
+    {
+      "path": "forex-bank-web/src/views/valuation/ValuationList.vue",
+      "language": "vue",
+      "fileCategory": "code",
+      "totalLines": 116,
+      "nonEmptyLines": 102,
+      "metrics": {}
+    },
+    {
+      "path": "forex-bank-web/src/views/workflow/WorkflowList.vue",
+      "language": "vue",
+      "fileCategory": "code",
+      "totalLines": 183,
+      "nonEmptyLines": 163,
+      "metrics": {}
+    },
+    {
+      "path": "forex-bank-web/vite.config.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 16,
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "forex-bookkeeping/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 55,
+      "nonEmptyLines": 55,
+      "metrics": {}
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 163,
+      "nonEmptyLines": 147,
+      "functions": [
+        {
+          "name": "createEntry",
+          "startLine": 46,
+          "endLine": 53,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "postEntry",
+          "startLine": 55,
+          "endLine": 62,
+          "params": [
+            "voucherNo"
+          ]
+        },
+        {
+          "name": "reverseEntry",
+          "startLine": 64,
+          "endLine": 72,
+          "params": [
+            "voucherNo",
+            "reason"
+          ]
+        },
+        {
+          "name": "getEntry",
+          "startLine": 74,
+          "endLine": 79,
+          "params": [
+            "voucherNo"
+          ]
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 81,
+          "endLine": 105,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "revaluation",
+          "startLine": 107,
+          "endLine": 123,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "monthEndClosing",
+          "startLine": 125,
+          "endLine": 132,
+          "params": [
+            "fiscalPeriod",
+            "balances"
+          ]
+        },
+        {
+          "name": "dailyClosing",
+          "startLine": 134,
+          "endLine": 140,
+          "params": [
+            "date"
+          ]
+        },
+        {
+          "name": "toEntryResp",
+          "startLine": 142,
+          "endLine": 162,
+          "params": [
+            "entry"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookkeepingController",
+          "startLine": 36,
+          "endLine": 163,
+          "methods": [
+            "createEntry",
+            "postEntry",
+            "reverseEntry",
+            "getEntry",
+            "pageQuery",
+            "revaluation",
+            "monthEndClosing",
+            "dailyClosing",
+            "toEntryResp"
+          ],
+          "properties": [
+            "bookkeepingAppService",
+            "revaluationEntryService",
+            "monthEndClosingService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createEntry",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "postEntry",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "reverseEntry",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "getEntry",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "revaluation",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "monthEndClosing",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "dailyClosing",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "BookkeepingController",
+          "line": 36,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createEntry",
+          "callee": "bookkeepingAppService.createJournalEntry",
+          "lineNumber": 51
+        },
+        {
+          "caller": "createEntry",
+          "callee": "R.ok",
+          "lineNumber": 52
+        },
+        {
+          "caller": "createEntry",
+          "callee": "toEntryResp",
+          "lineNumber": 52
+        },
+        {
+          "caller": "postEntry",
+          "callee": "bookkeepingAppService.postEntry",
+          "lineNumber": 60
+        },
+        {
+          "caller": "postEntry",
+          "callee": "R.okMsg",
+          "lineNumber": 61
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "bookkeepingAppService.reverseEntry",
+          "lineNumber": 70
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "R.ok",
+          "lineNumber": 71
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "toEntryResp",
+          "lineNumber": 71
+        },
+        {
+          "caller": "getEntry",
+          "callee": "bookkeepingAppService.getEntryDetail",
+          "lineNumber": 77
+        },
+        {
+          "caller": "getEntry",
+          "callee": "R.ok",
+          "lineNumber": 78
+        },
+        {
+          "caller": "getEntry",
+          "callee": "toEntryResp",
+          "lineNumber": 78
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "new JournalQuery",
+          "lineNumber": 85
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.setPageNum",
+          "lineNumber": 86
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "req.getPageNum",
+          "lineNumber": 86
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.setPageSize",
+          "lineNumber": 87
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "req.getPageSize",
+          "lineNumber": 87
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.setVoucherNo",
+          "lineNumber": 88
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "req.getVoucherNo",
+          "lineNumber": 88
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.setVoucherDate",
+          "lineNumber": 89
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "req.getVoucherDate",
+          "lineNumber": 89
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.setFiscalPeriod",
+          "lineNumber": 90
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "req.getFiscalPeriod",
+          "lineNumber": 90
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.setBizType",
+          "lineNumber": 91
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "req.getBizType",
+          "lineNumber": 91
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.setEntryStatus",
+          "lineNumber": 92
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "req.getEntryStatus",
+          "lineNumber": 92
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.setAccountCode",
+          "lineNumber": 93
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "req.getAccountCode",
+          "lineNumber": 93
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.setEntryDirection",
+          "lineNumber": 94
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "req.getEntryDirection",
+          "lineNumber": 94
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.setCurrency",
+          "lineNumber": 95
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "req.getCurrency",
+          "lineNumber": 95
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.setStartDate",
+          "lineNumber": 96
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "req.getStartDate",
+          "lineNumber": 96
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.setEndDate",
+          "lineNumber": 97
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "req.getEndDate",
+          "lineNumber": 97
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "bookkeepingAppService.pageQuery",
+          "lineNumber": 98
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getRecords().stream()\n                .map(this::toEntryResp).toList",
+          "lineNumber": 99
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getRecords().stream().map",
+          "lineNumber": 99
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getRecords().stream",
+          "lineNumber": 99
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getRecords",
+          "lineNumber": 99
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "PageResp.of",
+          "lineNumber": 102
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getTotal",
+          "lineNumber": 103
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getPageNum",
+          "lineNumber": 103
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getPageSize",
+          "lineNumber": 103
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "R.ok",
+          "lineNumber": 104
+        },
+        {
+          "caller": "revaluation",
+          "callee": "request.getCurrencies",
+          "lineNumber": 111
+        },
+        {
+          "caller": "revaluation",
+          "callee": "currencies.stream().map(m -> {\n            RevaluationEntryService.FxBalance b = new RevaluationEntryService.FxBalance();\n            b.setCurrency(m.getCurrency());\n            b.setOldRate(m.getOldRate());\n            b.setNewRate(m.getNewRate());\n            b.setBalance(m.getBalance());\n            return b;\n        }).toList",
+          "lineNumber": 112
+        },
+        {
+          "caller": "revaluation",
+          "callee": "currencies.stream().map",
+          "lineNumber": 112
+        },
+        {
+          "caller": "revaluation",
+          "callee": "currencies.stream",
+          "lineNumber": 112
+        },
+        {
+          "caller": "revaluation",
+          "callee": "new RevaluationEntryService.FxBalance",
+          "lineNumber": 113
+        },
+        {
+          "caller": "revaluation",
+          "callee": "b.setCurrency",
+          "lineNumber": 114
+        },
+        {
+          "caller": "revaluation",
+          "callee": "m.getCurrency",
+          "lineNumber": 114
+        },
+        {
+          "caller": "revaluation",
+          "callee": "b.setOldRate",
+          "lineNumber": 115
+        },
+        {
+          "caller": "revaluation",
+          "callee": "m.getOldRate",
+          "lineNumber": 115
+        },
+        {
+          "caller": "revaluation",
+          "callee": "b.setNewRate",
+          "lineNumber": 116
+        },
+        {
+          "caller": "revaluation",
+          "callee": "m.getNewRate",
+          "lineNumber": 116
+        },
+        {
+          "caller": "revaluation",
+          "callee": "b.setBalance",
+          "lineNumber": 117
+        },
+        {
+          "caller": "revaluation",
+          "callee": "m.getBalance",
+          "lineNumber": 117
+        },
+        {
+          "caller": "revaluation",
+          "callee": "revaluationEntryService.batchRevaluation",
+          "lineNumber": 120
+        },
+        {
+          "caller": "revaluation",
+          "callee": "entries.stream().map(this::toEntryResp).toList",
+          "lineNumber": 121
+        },
+        {
+          "caller": "revaluation",
+          "callee": "entries.stream().map",
+          "lineNumber": 121
+        },
+        {
+          "caller": "revaluation",
+          "callee": "entries.stream",
+          "lineNumber": 121
+        },
+        {
+          "caller": "revaluation",
+          "callee": "R.ok",
+          "lineNumber": 122
+        },
+        {
+          "caller": "monthEndClosing",
+          "callee": "monthEndClosingService.executeMonthEndClosing",
+          "lineNumber": 130
+        },
+        {
+          "caller": "monthEndClosing",
+          "callee": "R.ok",
+          "lineNumber": 131
+        },
+        {
+          "caller": "dailyClosing",
+          "callee": "bookkeepingAppService.dailyClosing",
+          "lineNumber": 138
+        },
+        {
+          "caller": "dailyClosing",
+          "callee": "R.okMsg",
+          "lineNumber": 139
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "new EntryResp",
+          "lineNumber": 143
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setId",
+          "lineNumber": 144
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getId",
+          "lineNumber": 144
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setVoucherNo",
+          "lineNumber": 145
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getVoucherNo",
+          "lineNumber": 145
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setVoucherDate",
+          "lineNumber": 146
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getVoucherDate",
+          "lineNumber": 146
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setFiscalPeriod",
+          "lineNumber": 147
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getFiscalPeriod",
+          "lineNumber": 147
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setBizType",
+          "lineNumber": 148
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getBizType",
+          "lineNumber": 148
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setBizNo",
+          "lineNumber": 149
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getBizNo",
+          "lineNumber": 149
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setCurrency",
+          "lineNumber": 150
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getCurrency",
+          "lineNumber": 150
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setAmount",
+          "lineNumber": 151
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getAmount",
+          "lineNumber": 151
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setEntryDirection",
+          "lineNumber": 152
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getEntryDirection",
+          "lineNumber": 152
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setAccountCode",
+          "lineNumber": 153
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getAccountCode",
+          "lineNumber": 153
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setAccountName",
+          "lineNumber": 154
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getAccountName",
+          "lineNumber": 154
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setOppositeAccountCode",
+          "lineNumber": 155
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getOppositeAccountCode",
+          "lineNumber": 155
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setSummary",
+          "lineNumber": 156
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getSummary",
+          "lineNumber": 156
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setEntryStatus",
+          "lineNumber": 157
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getEntryStatus",
+          "lineNumber": 157
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setReversedVoucherNo",
+          "lineNumber": 158
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getReversedVoucherNo",
+          "lineNumber": 158
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setPostedTime",
+          "lineNumber": 159
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getPostedTime",
+          "lineNumber": 159
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "resp.setOperatorId",
+          "lineNumber": 160
+        },
+        {
+          "caller": "toEntryResp",
+          "callee": "entry.getOperatorId",
+          "lineNumber": 160
+        }
+      ],
+      "metrics": {
+        "importCount": 20,
+        "exportCount": 9,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/dto/EntryResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 67,
+      "nonEmptyLines": 45,
+      "classes": [
+        {
+          "name": "EntryResp",
+          "startLine": 11,
+          "endLine": 67,
+          "methods": [],
+          "properties": [
+            "id",
+            "voucherNo",
+            "voucherDate",
+            "fiscalPeriod",
+            "bizType",
+            "bizNo",
+            "currency",
+            "amount",
+            "entryDirection",
+            "accountCode",
+            "accountName",
+            "oppositeAccountCode",
+            "summary",
+            "entryStatus",
+            "reversedVoucherNo",
+            "postedTime",
+            "operatorId",
+            "createTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "EntryResp",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/command/CreateEntryCmd.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 25,
+      "classes": [
+        {
+          "name": "CreateEntryCmd",
+          "startLine": 11,
+          "endLine": 38,
+          "methods": [],
+          "properties": [
+            "voucherDate",
+            "bizType",
+            "bizNo",
+            "currency",
+            "amount",
+            "entryDirection",
+            "accountCode",
+            "oppositeAccountCode",
+            "summary"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CreateEntryCmd",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 95,
+      "nonEmptyLines": 76,
+      "functions": [
+        {
+          "name": "createJournalEntry",
+          "startLine": 29,
+          "endLine": 42,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "postEntry",
+          "startLine": 44,
+          "endLine": 49,
+          "params": [
+            "voucherNo"
+          ]
+        },
+        {
+          "name": "reverseEntry",
+          "startLine": 51,
+          "endLine": 70,
+          "params": [
+            "voucherNo",
+            "reason"
+          ]
+        },
+        {
+          "name": "getEntryDetail",
+          "startLine": 72,
+          "endLine": 75,
+          "params": [
+            "voucherNo"
+          ]
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 77,
+          "endLine": 79,
+          "params": [
+            "query"
+          ]
+        },
+        {
+          "name": "dailyClosing",
+          "startLine": 81,
+          "endLine": 94,
+          "params": [
+            "date"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookkeepingAppService",
+          "startLine": 21,
+          "endLine": 95,
+          "methods": [
+            "createJournalEntry",
+            "postEntry",
+            "reverseEntry",
+            "getEntryDetail",
+            "pageQuery",
+            "dailyClosing"
+          ],
+          "properties": [
+            "bookkeepingDomainService",
+            "journalEntryRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createJournalEntry",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "postEntry",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "reverseEntry",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "getEntryDetail",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "dailyClosing",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "BookkeepingAppService",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createJournalEntry",
+          "callee": "bookkeepingDomainService.generateVoucherNo",
+          "lineNumber": 30
+        },
+        {
+          "caller": "createJournalEntry",
+          "callee": "String.format",
+          "lineNumber": 31
+        },
+        {
+          "caller": "createJournalEntry",
+          "callee": "cmd.getVoucherDate().getYear",
+          "lineNumber": 31
+        },
+        {
+          "caller": "createJournalEntry",
+          "callee": "cmd.getVoucherDate",
+          "lineNumber": 31
+        },
+        {
+          "caller": "createJournalEntry",
+          "callee": "cmd.getVoucherDate().getMonthValue",
+          "lineNumber": 32
+        },
+        {
+          "caller": "createJournalEntry",
+          "callee": "cmd.getVoucherDate",
+          "lineNumber": 32
+        },
+        {
+          "caller": "createJournalEntry",
+          "callee": "JournalEntry.create",
+          "lineNumber": 34
+        },
+        {
+          "caller": "createJournalEntry",
+          "callee": "cmd.getVoucherDate",
+          "lineNumber": 35
+        },
+        {
+          "caller": "createJournalEntry",
+          "callee": "cmd.getBizType",
+          "lineNumber": 36
+        },
+        {
+          "caller": "createJournalEntry",
+          "callee": "cmd.getBizNo",
+          "lineNumber": 36
+        },
+        {
+          "caller": "createJournalEntry",
+          "callee": "cmd.getCurrency",
+          "lineNumber": 36
+        },
+        {
+          "caller": "createJournalEntry",
+          "callee": "cmd.getAmount",
+          "lineNumber": 37
+        },
+        {
+          "caller": "createJournalEntry",
+          "callee": "cmd.getEntryDirection",
+          "lineNumber": 37
+        },
+        {
+          "caller": "createJournalEntry",
+          "callee": "cmd.getAccountCode",
+          "lineNumber": 37
+        },
+        {
+          "caller": "createJournalEntry",
+          "callee": "cmd.getOppositeAccountCode",
+          "lineNumber": 38
+        },
+        {
+          "caller": "createJournalEntry",
+          "callee": "cmd.getSummary",
+          "lineNumber": 39
+        },
+        {
+          "caller": "createJournalEntry",
+          "callee": "bookkeepingDomainService.createEntry",
+          "lineNumber": 41
+        },
+        {
+          "caller": "postEntry",
+          "callee": "journalEntryRepository.findByVoucherNo(voucherNo).orElseThrow",
+          "lineNumber": 46
+        },
+        {
+          "caller": "postEntry",
+          "callee": "journalEntryRepository.findByVoucherNo",
+          "lineNumber": 46
+        },
+        {
+          "caller": "postEntry",
+          "callee": "new BusinessException",
+          "lineNumber": 47
+        },
+        {
+          "caller": "postEntry",
+          "callee": "bookkeepingDomainService.postEntry",
+          "lineNumber": 48
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "journalEntryRepository.findByVoucherNo(voucherNo).orElseThrow",
+          "lineNumber": 53
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "journalEntryRepository.findByVoucherNo",
+          "lineNumber": 53
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "new BusinessException",
+          "lineNumber": 54
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "bookkeepingDomainService.generateVoucherNo",
+          "lineNumber": 56
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "String.format",
+          "lineNumber": 57
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "LocalDate.now().getYear",
+          "lineNumber": 58
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "LocalDate.now",
+          "lineNumber": 58
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "LocalDate.now().getMonthValue",
+          "lineNumber": 58
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "LocalDate.now",
+          "lineNumber": 58
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "JournalEntry.create",
+          "lineNumber": 60
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "LocalDate.now",
+          "lineNumber": 61
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "original.getBizType",
+          "lineNumber": 62
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "original.getBizNo",
+          "lineNumber": 62
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "original.getCurrency",
+          "lineNumber": 62
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "original.getAmount",
+          "lineNumber": 63
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "JournalEntry.DIRECTION_DEBIT.equals",
+          "lineNumber": 64
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "original.getEntryDirection",
+          "lineNumber": 64
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "original.getAccountCode",
+          "lineNumber": 66
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "original.getOppositeAccountCode",
+          "lineNumber": 66
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "original.getVoucherNo",
+          "lineNumber": 67
+        },
+        {
+          "caller": "reverseEntry",
+          "callee": "bookkeepingDomainService.reverseEntry",
+          "lineNumber": 69
+        },
+        {
+          "caller": "getEntryDetail",
+          "callee": "journalEntryRepository.findByVoucherNo(voucherNo).orElseThrow",
+          "lineNumber": 73
+        },
+        {
+          "caller": "getEntryDetail",
+          "callee": "journalEntryRepository.findByVoucherNo",
+          "lineNumber": 73
+        },
+        {
+          "caller": "getEntryDetail",
+          "callee": "new BusinessException",
+          "lineNumber": 74
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "journalEntryRepository.pageQuery",
+          "lineNumber": 78
+        },
+        {
+          "caller": "dailyClosing",
+          "callee": "new JournalQuery",
+          "lineNumber": 82
+        },
+        {
+          "caller": "dailyClosing",
+          "callee": "query.setVoucherDate",
+          "lineNumber": 83
+        },
+        {
+          "caller": "dailyClosing",
+          "callee": "query.setEntryStatus",
+          "lineNumber": 84
+        },
+        {
+          "caller": "dailyClosing",
+          "callee": "query.setPageNum",
+          "lineNumber": 85
+        },
+        {
+          "caller": "dailyClosing",
+          "callee": "query.setPageSize",
+          "lineNumber": 86
+        },
+        {
+          "caller": "dailyClosing",
+          "callee": "journalEntryRepository.pageQuery",
+          "lineNumber": 88
+        },
+        {
+          "caller": "dailyClosing",
+          "callee": "page.getRecords",
+          "lineNumber": 89
+        },
+        {
+          "caller": "dailyClosing",
+          "callee": "bookkeepingDomainService.postEntry",
+          "lineNumber": 92
+        }
+      ],
+      "metrics": {
+        "importCount": 14,
+        "exportCount": 7,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/BookkeepingApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BookkeepingApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "BookkeepingApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/event/EntryPostedEvent.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 20,
+      "functions": [
+        {
+          "name": "EntryPostedEvent",
+          "startLine": 15,
+          "endLine": 20,
+          "params": [
+            "entryId",
+            "voucherNo",
+            "amount"
+          ]
+        },
+        {
+          "name": "eventName",
+          "startLine": 22,
+          "endLine": 25,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "EntryPostedEvent",
+          "startLine": 8,
+          "endLine": 26,
+          "methods": [
+            "EntryPostedEvent",
+            "eventName"
+          ],
+          "properties": [
+            "entryId",
+            "voucherNo",
+            "amount"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "EntryPostedEvent",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "eventName",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "EntryPostedEvent",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/JournalEntry.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 163,
+      "nonEmptyLines": 151,
+      "functions": [
+        {
+          "name": "JournalEntry",
+          "startLine": 49,
+          "endLine": 51,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 56,
+          "endLine": 78,
+          "params": [
+            "voucherNo",
+            "voucherDate",
+            "fiscalPeriod",
+            "bizType",
+            "bizNo",
+            "currency",
+            "amount",
+            "entryDirection",
+            "accountCode",
+            "accountName",
+            "oppositeAccountCode",
+            "summary",
+            "operatorId"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 83,
+          "endLine": 110,
+          "params": [
+            "id",
+            "voucherNo",
+            "voucherDate",
+            "fiscalPeriod",
+            "bizType",
+            "bizNo",
+            "currency",
+            "amount",
+            "entryDirection",
+            "accountCode",
+            "accountName",
+            "oppositeAccountCode",
+            "summary",
+            "entryStatus",
+            "reversedVoucherNo",
+            "postedTime",
+            "operatorId"
+          ]
+        },
+        {
+          "name": "post",
+          "startLine": 115,
+          "endLine": 122,
+          "params": []
+        },
+        {
+          "name": "reverse",
+          "startLine": 127,
+          "endLine": 134,
+          "params": [
+            "reverseVoucherNo"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 136,
+          "endLine": 162,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "JournalEntry",
+          "startLine": 16,
+          "endLine": 163,
+          "methods": [
+            "JournalEntry",
+            "create",
+            "reconstitute",
+            "post",
+            "reverse",
+            "validate"
+          ],
+          "properties": [
+            "DIRECTION_DEBIT",
+            "DIRECTION_CREDIT",
+            "STATUS_DRAFT",
+            "STATUS_POSTED",
+            "STATUS_REVERSED",
+            "id",
+            "voucherNo",
+            "voucherDate",
+            "fiscalPeriod",
+            "bizType",
+            "bizNo",
+            "currency",
+            "amount",
+            "entryDirection",
+            "accountCode",
+            "accountName",
+            "oppositeAccountCode",
+            "summary",
+            "entryStatus",
+            "reversedVoucherNo",
+            "postedTime",
+            "operatorId"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DIRECTION_DEBIT",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "DIRECTION_CREDIT",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_DRAFT",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_POSTED",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_REVERSED",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "create",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "post",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "reverse",
+          "line": 127,
+          "isDefault": false
+        },
+        {
+          "name": "JournalEntry",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new JournalEntry",
+          "lineNumber": 61
+        },
+        {
+          "caller": "create",
+          "callee": "entry.validate",
+          "lineNumber": 76
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new JournalEntry",
+          "lineNumber": 91
+        },
+        {
+          "caller": "post",
+          "callee": "STATUS_DRAFT.equals",
+          "lineNumber": 116
+        },
+        {
+          "caller": "post",
+          "callee": "new BusinessException",
+          "lineNumber": 117
+        },
+        {
+          "caller": "post",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 120
+        },
+        {
+          "caller": "post",
+          "callee": "markUpdated",
+          "lineNumber": 121
+        },
+        {
+          "caller": "reverse",
+          "callee": "STATUS_POSTED.equals",
+          "lineNumber": 128
+        },
+        {
+          "caller": "reverse",
+          "callee": "new BusinessException",
+          "lineNumber": 129
+        },
+        {
+          "caller": "reverse",
+          "callee": "markUpdated",
+          "lineNumber": 133
+        },
+        {
+          "caller": "validate",
+          "callee": "voucherNo.isBlank",
+          "lineNumber": 138
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 139
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 142
+        },
+        {
+          "caller": "validate",
+          "callee": "bizType.isBlank",
+          "lineNumber": 144
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 145
+        },
+        {
+          "caller": "validate",
+          "callee": "currency.isBlank",
+          "lineNumber": 147
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 148
+        },
+        {
+          "caller": "validate",
+          "callee": "amount.compareTo",
+          "lineNumber": 150
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 151
+        },
+        {
+          "caller": "validate",
+          "callee": "entryDirection.isBlank",
+          "lineNumber": 153
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 154
+        },
+        {
+          "caller": "validate",
+          "callee": "DIRECTION_DEBIT.equals",
+          "lineNumber": 156
+        },
+        {
+          "caller": "validate",
+          "callee": "DIRECTION_CREDIT.equals",
+          "lineNumber": 156
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 157
+        },
+        {
+          "caller": "validate",
+          "callee": "accountCode.isBlank",
+          "lineNumber": 159
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 160
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 10,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/MonthEndClosing.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 127,
+      "nonEmptyLines": 112,
+      "functions": [
+        {
+          "name": "MonthEndClosing",
+          "startLine": 35,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 39,
+          "endLine": 52,
+          "params": [
+            "fiscalPeriod",
+            "closingDate",
+            "operatorId"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 54,
+          "endLine": 71,
+          "params": [
+            "id",
+            "closingId",
+            "fiscalPeriod",
+            "closingDate",
+            "closingStatus",
+            "checklistJson",
+            "auditTrail",
+            "totalDebits",
+            "totalCredits",
+            "operatorId"
+          ]
+        },
+        {
+          "name": "start",
+          "startLine": 73,
+          "endLine": 79,
+          "params": []
+        },
+        {
+          "name": "complete",
+          "startLine": 81,
+          "endLine": 88,
+          "params": [
+            "checklist"
+          ]
+        },
+        {
+          "name": "lock",
+          "startLine": 90,
+          "endLine": 96,
+          "params": []
+        },
+        {
+          "name": "addAuditEntry",
+          "startLine": 98,
+          "endLine": 106,
+          "params": [
+            "entry"
+          ]
+        },
+        {
+          "name": "setTotalDebits",
+          "startLine": 108,
+          "endLine": 111,
+          "params": [
+            "totalDebits"
+          ]
+        },
+        {
+          "name": "setTotalCredits",
+          "startLine": 113,
+          "endLine": 116,
+          "params": [
+            "totalCredits"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 118,
+          "endLine": 126,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MonthEndClosing",
+          "startLine": 16,
+          "endLine": 127,
+          "methods": [
+            "MonthEndClosing",
+            "create",
+            "reconstitute",
+            "start",
+            "complete",
+            "lock",
+            "addAuditEntry",
+            "setTotalDebits",
+            "setTotalCredits",
+            "validate"
+          ],
+          "properties": [
+            "STATUS_OPEN",
+            "STATUS_IN_PROGRESS",
+            "STATUS_COMPLETED",
+            "STATUS_LOCKED",
+            "id",
+            "closingId",
+            "fiscalPeriod",
+            "closingDate",
+            "closingStatus",
+            "checklistJson",
+            "auditTrail",
+            "totalDebits",
+            "totalCredits",
+            "operatorId"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "STATUS_OPEN",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_IN_PROGRESS",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_COMPLETED",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_LOCKED",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "create",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "start",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "complete",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "lock",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "addAuditEntry",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "setTotalDebits",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "setTotalCredits",
+          "line": 113,
+          "isDefault": false
+        },
+        {
+          "name": "MonthEndClosing",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new MonthEndClosing",
+          "lineNumber": 40
+        },
+        {
+          "caller": "create",
+          "callee": "System.currentTimeMillis",
+          "lineNumber": 41
+        },
+        {
+          "caller": "create",
+          "callee": "closing.validate",
+          "lineNumber": 50
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new MonthEndClosing",
+          "lineNumber": 59
+        },
+        {
+          "caller": "start",
+          "callee": "STATUS_OPEN.equals",
+          "lineNumber": 74
+        },
+        {
+          "caller": "start",
+          "callee": "new BusinessException",
+          "lineNumber": 75
+        },
+        {
+          "caller": "start",
+          "callee": "markUpdated",
+          "lineNumber": 78
+        },
+        {
+          "caller": "complete",
+          "callee": "STATUS_IN_PROGRESS.equals",
+          "lineNumber": 82
+        },
+        {
+          "caller": "complete",
+          "callee": "new BusinessException",
+          "lineNumber": 83
+        },
+        {
+          "caller": "complete",
+          "callee": "markUpdated",
+          "lineNumber": 87
+        },
+        {
+          "caller": "lock",
+          "callee": "STATUS_COMPLETED.equals",
+          "lineNumber": 91
+        },
+        {
+          "caller": "lock",
+          "callee": "new BusinessException",
+          "lineNumber": 92
+        },
+        {
+          "caller": "lock",
+          "callee": "markUpdated",
+          "lineNumber": 95
+        },
+        {
+          "caller": "addAuditEntry",
+          "callee": "LocalDateTime.now().toString",
+          "lineNumber": 99
+        },
+        {
+          "caller": "addAuditEntry",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 99
+        },
+        {
+          "caller": "addAuditEntry",
+          "callee": "this.auditTrail.isEmpty",
+          "lineNumber": 100
+        },
+        {
+          "caller": "addAuditEntry",
+          "callee": "markUpdated",
+          "lineNumber": 105
+        },
+        {
+          "caller": "setTotalDebits",
+          "callee": "markUpdated",
+          "lineNumber": 110
+        },
+        {
+          "caller": "setTotalCredits",
+          "callee": "markUpdated",
+          "lineNumber": 115
+        },
+        {
+          "caller": "validate",
+          "callee": "fiscalPeriod.isBlank",
+          "lineNumber": 120
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 121
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 124
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 13,
+        "functionCount": 10,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/query/JournalQuery.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 19,
+      "classes": [
+        {
+          "name": "JournalQuery",
+          "startLine": 9,
+          "endLine": 23,
+          "methods": [],
+          "properties": [
+            "voucherNo",
+            "voucherDate",
+            "fiscalPeriod",
+            "bizType",
+            "entryStatus",
+            "accountCode",
+            "entryDirection",
+            "currency",
+            "startDate",
+            "endDate"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "JournalQuery",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/valueobject/VoucherNo.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 29,
+      "functions": [
+        {
+          "name": "VoucherNo",
+          "startLine": 16,
+          "endLine": 18,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "generate",
+          "startLine": 20,
+          "endLine": 24,
+          "params": [
+            "prefix"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 26,
+          "endLine": 31,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 33,
+          "endLine": 36,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "VoucherNo",
+          "startLine": 11,
+          "endLine": 37,
+          "methods": [
+            "VoucherNo",
+            "generate",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "generate",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "VoucherNo",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "generate",
+          "callee": "LocalDateTime.now().format",
+          "lineNumber": 21
+        },
+        {
+          "caller": "generate",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 21
+        },
+        {
+          "caller": "generate",
+          "callee": "DateTimeFormatter.ofPattern",
+          "lineNumber": 21
+        },
+        {
+          "caller": "generate",
+          "callee": "String.format",
+          "lineNumber": 22
+        },
+        {
+          "caller": "generate",
+          "callee": "ThreadLocalRandom.current().nextInt",
+          "lineNumber": 22
+        },
+        {
+          "caller": "generate",
+          "callee": "ThreadLocalRandom.current",
+          "lineNumber": 22
+        },
+        {
+          "caller": "generate",
+          "callee": "new VoucherNo",
+          "lineNumber": 23
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 30
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/JournalEntryRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "JournalEntryRepository",
+          "startLine": 11,
+          "endLine": 26,
+          "methods": [
+            "save",
+            "findById",
+            "findByVoucherNo",
+            "findByBizNo",
+            "pageQuery",
+            "sumByDirection",
+            "findByStatusAndPeriod"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "JournalEntryRepository",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

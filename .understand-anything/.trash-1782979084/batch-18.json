@@ -1,0 +1,2193 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java",
+      "type": "file",
+      "name": "ExchangeQuoteRepositoryImpl.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java",
+      "summary": "外汇报价仓储实现类，将 ExchangeQuote 领域对象与 ExchangeQuotePO 持久化对象相互转换，提供报价保存和最新报价查询功能。",
+      "tags": [
+        "仓储实现",
+        "持久化",
+        "报价"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java:ExchangeQuoteRepositoryImpl",
+      "type": "class",
+      "name": "ExchangeQuoteRepositoryImpl",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java",
+      "summary": "外汇报价仓储实现，提供 save 持久化和 findLatestQuote 最新报价查询，内部进行领域对象与 PO 双向映射。",
+      "tags": [
+        "仓储实现",
+        "持久化"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java:save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java",
+      "summary": "ExchangeQuoteRepositoryImpl 的方法 save",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java:findLatestQuote",
+      "type": "function",
+      "name": "findLatestQuote",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java",
+      "summary": "ExchangeQuoteRepositoryImpl 的方法 findLatestQuote",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java:toDomain",
+      "type": "function",
+      "name": "toDomain",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java",
+      "summary": "ExchangeQuoteRepositoryImpl 的方法 toDomain",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java:toPO",
+      "type": "function",
+      "name": "toPO",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java",
+      "summary": "ExchangeQuoteRepositoryImpl 的方法 toPO",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "config:forex-exchange/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-exchange/src/main/resources/application.yml",
+      "summary": "forex-exchange 外汇交易服务的应用配置，定义端口8201、MySQL数据源、Redis、Nacos服务发现与配置中心、MyBatis-Plus逻辑删除和Knife4j文档。",
+      "tags": [
+        "配置",
+        "外汇交易"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "config:forex-gateway/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-gateway/pom.xml",
+      "summary": "网关微服务 Maven 构建配置，依赖 Spring Cloud Gateway 路由网关、Nacos 服务发现/配置、Sentinel 熔断限流、forex-common-security 安全模块和 Redis Reactive 响应式连接。",
+      "tags": [
+        "maven",
+        "网关",
+        "依赖管理"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-gateway/src/main/java/com/forex/gateway/config/CorsConfig.java",
+      "type": "file",
+      "name": "CorsConfig.java",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/config/CorsConfig.java",
+      "summary": "CORS 跨域配置类，使用响应式 WebFilter 实现跨域请求处理，定义允许的请求头、HTTP方法和来源，支持 OPTIONS 预检请求。",
+      "tags": [
+        "配置",
+        "CORS",
+        "跨域"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-gateway/src/main/java/com/forex/gateway/config/CorsConfig.java:CorsConfig",
+      "type": "class",
+      "name": "CorsConfig",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/config/CorsConfig.java",
+      "summary": "CORS 跨域配置类，通过 WebFilter Bean 为所有响应添加跨域访问控制头。",
+      "tags": [
+        "配置",
+        "CORS"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-gateway/src/main/java/com/forex/gateway/config/CorsConfig.java:corsFilter",
+      "type": "function",
+      "name": "corsFilter",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/config/CorsConfig.java",
+      "summary": "CorsConfig 的方法 corsFilter",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-gateway/src/main/java/com/forex/gateway/config/RateLimitConfig.java",
+      "type": "file",
+      "name": "RateLimitConfig.java",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/config/RateLimitConfig.java",
+      "summary": "网关限流键解析器配置，基于客户端 IP 地址(RemoteAddress)生成限流键，供 Sentinel Gateway 限流规则使用。",
+      "tags": [
+        "配置",
+        "限流",
+        "IP解析"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-gateway/src/main/java/com/forex/gateway/config/RateLimitConfig.java:RateLimitConfig",
+      "type": "class",
+      "name": "RateLimitConfig",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/config/RateLimitConfig.java",
+      "summary": "限流键解析器配置，提供基于客户端 IP 的 KeyResolver Bean。",
+      "tags": [
+        "配置",
+        "限流"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-gateway/src/main/java/com/forex/gateway/config/RateLimitConfig.java:ipKeyResolver",
+      "type": "function",
+      "name": "ipKeyResolver",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/config/RateLimitConfig.java",
+      "summary": "RateLimitConfig 的方法 ipKeyResolver",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java",
+      "type": "file",
+      "name": "AuthGlobalFilter.java",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java",
+      "summary": "网关全局认证过滤器，实现 GlobalFilter 接口，从请求头提取 Bearer JWT 令牌、校验有效性后将用户ID/用户名/角色/权限注入下游请求头，支持配置白名单 URL 跳过认证。",
+      "tags": [
+        "过滤器",
+        "全局认证",
+        "JWT",
+        "网关"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:AuthGlobalFilter",
+      "type": "class",
+      "name": "AuthGlobalFilter",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java",
+      "summary": "全局 JWT 认证过滤器，提取 Bearer 令牌、校验解析后注入用户信息头到下游。",
+      "tags": [
+        "过滤器",
+        "认证",
+        "JWT"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:filter",
+      "type": "function",
+      "name": "filter",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java",
+      "summary": "AuthGlobalFilter 的方法 filter",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:isIgnoreUrl",
+      "type": "function",
+      "name": "isIgnoreUrl",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java",
+      "summary": "AuthGlobalFilter 的方法 isIgnoreUrl",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:extractToken",
+      "type": "function",
+      "name": "extractToken",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java",
+      "summary": "AuthGlobalFilter 的方法 extractToken",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:setIgnoreAuthUrls",
+      "type": "function",
+      "name": "setIgnoreAuthUrls",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java",
+      "summary": "AuthGlobalFilter 的方法 setIgnoreAuthUrls",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:getOrder",
+      "type": "function",
+      "name": "getOrder",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java",
+      "summary": "AuthGlobalFilter 的方法 getOrder",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java",
+      "type": "file",
+      "name": "SecurityHeadersFilter.java",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java",
+      "summary": "网关安全响应头过滤器，为每个响应注入 XSS 防护(nosniff)、点击劫持防护(DENY)、内容安全策略(CSP)、HSTS 强制 HTTPS、Referrer-Policy 和缓存控制等安全头。",
+      "tags": [
+        "过滤器",
+        "安全",
+        "响应头",
+        "网关"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java:SecurityHeadersFilter",
+      "type": "class",
+      "name": "SecurityHeadersFilter",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java",
+      "summary": "安全响应头过滤器，注入 XSS/点击劫持/CSP/HSTS 等安全防护头。",
+      "tags": [
+        "过滤器",
+        "安全"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java:filter",
+      "type": "function",
+      "name": "filter",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java",
+      "summary": "SecurityHeadersFilter 的方法 filter",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java:getOrder",
+      "type": "function",
+      "name": "getOrder",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java",
+      "summary": "SecurityHeadersFilter 的方法 getOrder",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-gateway/src/main/java/com/forex/gateway/GatewayApplication.java",
+      "type": "file",
+      "name": "GatewayApplication.java",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/GatewayApplication.java",
+      "summary": "网关微服务启动类，使用 @EnableDiscoveryClient 启用 Nacos 服务发现，基于 Spring Cloud Gateway 提供 API 网关入口。",
+      "tags": [
+        "启动类",
+        "SpringBoot",
+        "网关"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-gateway/src/main/java/com/forex/gateway/GatewayApplication.java:GatewayApplication",
+      "type": "class",
+      "name": "GatewayApplication",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/GatewayApplication.java",
+      "summary": "网关微服务 Spring Boot 启动类。",
+      "tags": [
+        "启动类",
+        "网关"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-gateway/src/main/java/com/forex/gateway/GatewayApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-gateway/src/main/java/com/forex/gateway/GatewayApplication.java",
+      "summary": "GatewayApplication 的方法 main",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "config:forex-gateway/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-gateway/src/main/resources/application.yml",
+      "summary": "网关核心配置文件，定义 18 个微服务路由规则(含 auth/customer/exchange/trading/valuation/margin/position/bookkeeping/payment/settlement/clearing/risk/reporting/account/rate/workflow/notification/ocr)，各路由配置 Sentinel 限流参数，设置 JWT 密钥、Redis 连接和认证白名单 URL。",
+      "tags": [
+        "配置",
+        "网关",
+        "路由",
+        "限流"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "config:forex-hedge-accounting/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-hedge-accounting/pom.xml",
+      "summary": "套保会计微服务 Maven 构建配置，依赖 forex-common-base/security/mybatis 公共模块、Spring Boot Web、Nacos 服务发现和 Knife4j API 文档。",
+      "tags": [
+        "maven",
+        "套保会计",
+        "依赖管理"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java",
+      "type": "file",
+      "name": "HedgeAccountingController.java",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java",
+      "summary": "套保会计 REST 控制器，提供套期关系创建/查询/指定、预期/追溯有效性测试、会计分录生成和客户套期有效性报告等接口，所有写操作需权限校验。",
+      "tags": [
+        "controller",
+        "套保会计",
+        "REST"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:HedgeAccountingController",
+      "type": "class",
+      "name": "HedgeAccountingController",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java",
+      "summary": "套保会计控制器，管理套期关系全生命周期、有效性测试和分录生成。",
+      "tags": [
+        "controller",
+        "套保会计"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:createRelationship",
+      "type": "function",
+      "name": "createRelationship",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java",
+      "summary": "HedgeAccountingController 的方法 createRelationship",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:getRelationship",
+      "type": "function",
+      "name": "getRelationship",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java",
+      "summary": "HedgeAccountingController 的方法 getRelationship",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:designate",
+      "type": "function",
+      "name": "designate",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java",
+      "summary": "HedgeAccountingController 的方法 designate",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:prospectiveTest",
+      "type": "function",
+      "name": "prospectiveTest",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java",
+      "summary": "HedgeAccountingController 的方法 prospectiveTest",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:retrospectiveTest",
+      "type": "function",
+      "name": "retrospectiveTest",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java",
+      "summary": "HedgeAccountingController 的方法 retrospectiveTest",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:generateEntries",
+      "type": "function",
+      "name": "generateEntries",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java",
+      "summary": "HedgeAccountingController 的方法 generateEntries",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:generateReport",
+      "type": "function",
+      "name": "generateReport",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java",
+      "summary": "HedgeAccountingController 的方法 generateReport",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:toMap",
+      "type": "function",
+      "name": "toMap",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java",
+      "summary": "HedgeAccountingController 的方法 toMap",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java",
+      "type": "file",
+      "name": "HedgeRelationship.java",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java",
+      "summary": "套期关系聚合根，遵循 IFRS9/ASC815 准则，封装公允价值/现金流量/净投资三类套期，支持指定(designate)、标记有效/无效(markEffective/markIneffective)、取消指定(deDesignate)等业务操作和内变校验。",
+      "tags": [
+        "聚合根",
+        "DDD",
+        "套期关系",
+        "IFRS9"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:HedgeRelationship",
+      "type": "class",
+      "name": "HedgeRelationship",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java",
+      "summary": "套期关系聚合根，IFRS9 准则下的套期业务核心模型。",
+      "tags": [
+        "聚合根",
+        "套期",
+        "IFRS9"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java",
+      "summary": "HedgeRelationship 的方法 create",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:reconstitute",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java",
+      "summary": "HedgeRelationship 的方法 reconstitute",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:designate",
+      "type": "function",
+      "name": "designate",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java",
+      "summary": "HedgeRelationship 的方法 designate",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:markEffective",
+      "type": "function",
+      "name": "markEffective",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java",
+      "summary": "HedgeRelationship 的方法 markEffective",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:markIneffective",
+      "type": "function",
+      "name": "markIneffective",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java",
+      "summary": "HedgeRelationship 的方法 markIneffective",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:deDesignate",
+      "type": "function",
+      "name": "deDesignate",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java",
+      "summary": "HedgeRelationship 的方法 deDesignate",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:recordIneffectiveness",
+      "type": "function",
+      "name": "recordIneffectiveness",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java",
+      "summary": "HedgeRelationship 的方法 recordIneffectiveness",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:validate",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java",
+      "summary": "HedgeRelationship 的方法 validate",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/entity/HedgeEffectivenessTest.java",
+      "type": "file",
+      "name": "HedgeEffectivenessTest.java",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/entity/HedgeEffectivenessTest.java",
+      "summary": "套期有效性测试实体，记录测试类型(预期/追溯)、测试方法(美元抵补法/回归/变动减少)、结果比率和 PASS/FAIL 状态，提供 isPassed() 判断方法。",
+      "tags": [
+        "实体",
+        "DDD",
+        "有效性测试"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/entity/HedgeEffectivenessTest.java:HedgeEffectivenessTest",
+      "type": "class",
+      "name": "HedgeEffectivenessTest",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/entity/HedgeEffectivenessTest.java",
+      "summary": "套期有效性测试实体，记录测试结果比率和 PASS/FAIL 判断。",
+      "tags": [
+        "实体",
+        "有效性测试"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/entity/HedgeEffectivenessTest.java:isPassed",
+      "type": "function",
+      "name": "isPassed",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/entity/HedgeEffectivenessTest.java",
+      "summary": "HedgeEffectivenessTest 的方法 isPassed",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "type": "file",
+      "name": "HedgeAccountingService.java",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "summary": "套保会计领域服务，实现预期和追溯有效性测试(美元抵补法比较公允价值变动)、套保会计分录生成(公允价值变动借记/套期工具重估贷记)。",
+      "tags": [
+        "领域服务",
+        "DDD",
+        "有效性测试",
+        "会计分录"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:HedgeAccountingService",
+      "type": "class",
+      "name": "HedgeAccountingService",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "summary": "套保会计领域服务，执行有效性测试和生成套保分录。",
+      "tags": [
+        "领域服务",
+        "有效性测试"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:performProspectiveTest",
+      "type": "function",
+      "name": "performProspectiveTest",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "summary": "HedgeAccountingService 的方法 performProspectiveTest",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:performRetrospectiveTest",
+      "type": "function",
+      "name": "performRetrospectiveTest",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "summary": "HedgeAccountingService 的方法 performRetrospectiveTest",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:generateHedgeEntries",
+      "type": "function",
+      "name": "generateHedgeEntries",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "summary": "HedgeAccountingService 的方法 generateHedgeEntries",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "type": "file",
+      "name": "HedgeAccountingApplication.java",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "summary": "套保会计微服务 Spring Boot 启动类，启用 Nacos 服务发现和 MyBatis Mapper 扫描。",
+      "tags": [
+        "启动类",
+        "SpringBoot",
+        "套保会计"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java:HedgeAccountingApplication",
+      "type": "class",
+      "name": "HedgeAccountingApplication",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "summary": "套保会计微服务启动类。",
+      "tags": [
+        "启动类",
+        "套保会计"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "summary": "HedgeAccountingApplication 的方法 main",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "config:forex-hedge-accounting/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-hedge-accounting/src/main/resources/application.yml",
+      "summary": "forex-hedge-accounting 套保会计服务的应用配置，定义端口8220、MySQL 数据源、Redis、Nacos 服务发现与配置中心、MyBatis-Plus 逻辑删除和 Knife4j API 文档。",
+      "tags": [
+        "配置",
+        "套保会计"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "config:forex-margin/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-margin/pom.xml",
+      "summary": "保证金微服务 Maven 构建配置，依赖 forex-common-base/security/mybatis 公共模块、Spring Boot Web、Nacos 服务发现和 Knife4j API 文档。",
+      "tags": [
+        "maven",
+        "保证金",
+        "依赖管理"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java",
+      "type": "file",
+      "name": "MarginController.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java",
+      "summary": "保证金 REST 控制器，提供初始保证金创建(带幂等)、追加/释放/存入保证金(带Redis分布式锁)和分页查询接口，集成 @RequirePermission 权限校验、@Idempotent 幂等和 @RedisLock 分布式锁注解。",
+      "tags": [
+        "controller",
+        "保证金",
+        "REST"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:MarginController",
+      "type": "class",
+      "name": "MarginController",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java",
+      "summary": "保证金管理控制器，提供创建/追缴/释放/存入保证金及分页查询 REST API。",
+      "tags": [
+        "controller",
+        "保证金"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:createInitialMargin",
+      "type": "function",
+      "name": "createInitialMargin",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java",
+      "summary": "MarginController 的方法 createInitialMargin",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:callMargin",
+      "type": "function",
+      "name": "callMargin",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java",
+      "summary": "MarginController 的方法 callMargin",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:releaseMargin",
+      "type": "function",
+      "name": "releaseMargin",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java",
+      "summary": "MarginController 的方法 releaseMargin",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:depositMargin",
+      "type": "function",
+      "name": "depositMargin",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java",
+      "summary": "MarginController 的方法 depositMargin",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:getMarginDetail",
+      "type": "function",
+      "name": "getMarginDetail",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java",
+      "summary": "MarginController 的方法 getMarginDetail",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java",
+      "summary": "MarginController 的方法 pageQuery",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:toMarginResp",
+      "type": "function",
+      "name": "toMarginResp",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java",
+      "summary": "MarginController 的方法 toMarginResp",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/adapter/dto/MarginResp.java",
+      "type": "file",
+      "name": "MarginResp.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/adapter/dto/MarginResp.java",
+      "summary": "保证金响应 DTO，包含保证金编号、客户/交易ID、保证金类型/币种、应交/已存/差额金额、保证金率、催缴/到期时间、状态、抵押品类型和释放原因等完整字段。",
+      "tags": [
+        "dto",
+        "响应",
+        "保证金"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/adapter/dto/MarginResp.java:MarginResp",
+      "type": "class",
+      "name": "MarginResp",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/adapter/dto/MarginResp.java",
+      "summary": "保证金响应 DTO，返回保证金账户完整业务字段。",
+      "tags": [
+        "dto",
+        "响应"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/application/command/CreateMarginCmd.java",
+      "type": "file",
+      "name": "CreateMarginCmd.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/application/command/CreateMarginCmd.java",
+      "summary": "创建保证金应用命令，含客户ID、交易ID、名义本金、保证金率和币种字段，全部字段 @NotNull 校验。",
+      "tags": [
+        "command",
+        "应用层",
+        "CQRS"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/application/command/CreateMarginCmd.java:CreateMarginCmd",
+      "type": "class",
+      "name": "CreateMarginCmd",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/application/command/CreateMarginCmd.java",
+      "summary": "创建保证金命令对象。",
+      "tags": [
+        "command",
+        "CQRS"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java",
+      "type": "file",
+      "name": "MarginAppService.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java",
+      "summary": "保证金应用服务，编排 MarginAccountRepository 和 MarginDomainService，实现初始保证金创建、追加(call)/释放(release)/存入(deposit)保证金、详情查询和分页查询等用例，所有写操作加 @Transactional 事务。",
+      "tags": [
+        "应用服务",
+        "用例编排",
+        "事务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:MarginAppService",
+      "type": "class",
+      "name": "MarginAppService",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java",
+      "summary": "保证金应用服务，编排仓储与领域服务实现保证金全流程用例。",
+      "tags": [
+        "应用服务",
+        "事务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:createInitialMargin",
+      "type": "function",
+      "name": "createInitialMargin",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java",
+      "summary": "MarginAppService 的方法 createInitialMargin",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:callMargin",
+      "type": "function",
+      "name": "callMargin",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java",
+      "summary": "MarginAppService 的方法 callMargin",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:releaseMargin",
+      "type": "function",
+      "name": "releaseMargin",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java",
+      "summary": "MarginAppService 的方法 releaseMargin",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:depositMargin",
+      "type": "function",
+      "name": "depositMargin",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java",
+      "summary": "MarginAppService 的方法 depositMargin",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:getMarginDetail",
+      "type": "function",
+      "name": "getMarginDetail",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java",
+      "summary": "MarginAppService 的方法 getMarginDetail",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java",
+      "summary": "MarginAppService 的方法 pageQuery",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/domain/event/MarginCalledEvent.java",
+      "type": "file",
+      "name": "MarginCalledEvent.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/event/MarginCalledEvent.java",
+      "summary": "保证金追缴领域事件，继承 BaseDomainEvent，携带 marginId 和 callAmount 追缴金额，事件名称 MarginCalled。",
+      "tags": [
+        "领域事件",
+        "DDD"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/domain/event/MarginCalledEvent.java:MarginCalledEvent",
+      "type": "class",
+      "name": "MarginCalledEvent",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/event/MarginCalledEvent.java",
+      "summary": "保证金追缴领域事件。",
+      "tags": [
+        "领域事件"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/event/MarginCalledEvent.java:eventName",
+      "type": "function",
+      "name": "eventName",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/event/MarginCalledEvent.java",
+      "summary": "MarginCalledEvent 的方法 eventName",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "type": "file",
+      "name": "MarginAccount.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "保证金账户聚合根，封装初始保证金计算(含期限和波动率调整)、存入/释放/追缴保证金、水位线检查(WaterLevel)、差额计算(calculateShortfall)、部分支付和取消等完整业务规则和内变校验。",
+      "tags": [
+        "聚合根",
+        "DDD",
+        "保证金",
+        "业务规则"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "type": "class",
+      "name": "MarginAccount",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "保证金账户聚合根，封装保证金计算、存入、释放、追缴、水位线评估等核心业务规则。",
+      "tags": [
+        "聚合根",
+        "保证金",
+        "业务规则"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "MarginAccount 的方法 create",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:calculateMarginRate",
+      "type": "function",
+      "name": "calculateMarginRate",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "MarginAccount 的方法 calculateMarginRate",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:calculateRequiredAmount",
+      "type": "function",
+      "name": "calculateRequiredAmount",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "MarginAccount 的方法 calculateRequiredAmount",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:pay",
+      "type": "function",
+      "name": "pay",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "MarginAccount 的方法 pay",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:partialPay",
+      "type": "function",
+      "name": "partialPay",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "MarginAccount 的方法 partialPay",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:cancel",
+      "type": "function",
+      "name": "cancel",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "MarginAccount 的方法 cancel",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:checkWaterLevel",
+      "type": "function",
+      "name": "checkWaterLevel",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "MarginAccount 的方法 checkWaterLevel",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:getDepositRatio",
+      "type": "function",
+      "name": "getDepositRatio",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "MarginAccount 的方法 getDepositRatio",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:reconstitute",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "MarginAccount 的方法 reconstitute",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:deposit",
+      "type": "function",
+      "name": "deposit",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "MarginAccount 的方法 deposit",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:release",
+      "type": "function",
+      "name": "release",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "MarginAccount 的方法 release",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:call",
+      "type": "function",
+      "name": "call",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "MarginAccount 的方法 call",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:calculateShortfall",
+      "type": "function",
+      "name": "calculateShortfall",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "MarginAccount 的方法 calculateShortfall",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:assignMarginNo",
+      "type": "function",
+      "name": "assignMarginNo",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "MarginAccount 的方法 assignMarginNo",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:setWaterLevel",
+      "type": "function",
+      "name": "setWaterLevel",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "MarginAccount 的方法 setWaterLevel",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:validate",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "summary": "MarginAccount 的方法 validate",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java",
+      "type": "file",
+      "name": "MarginCall.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java",
+      "summary": "保证金追缴实体，记录追缴类型(callType)、金额、追缴日期和响应状态，提供 respond() 方法记录响应。",
+      "tags": [
+        "实体",
+        "DDD",
+        "追缴"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java:MarginCall",
+      "type": "class",
+      "name": "MarginCall",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java",
+      "summary": "保证金追缴实体，记录追缴详情和响应。",
+      "tags": [
+        "实体",
+        "追缴"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java:respond",
+      "type": "function",
+      "name": "respond",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java",
+      "summary": "MarginCall 的方法 respond",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/domain/model/query/MarginQuery.java",
+      "type": "file",
+      "name": "MarginQuery.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/query/MarginQuery.java",
+      "summary": "保证金分页查询条件，继承 PageReq，支持按客户ID、交易ID、保证金编号、保证金类型和状态过滤。",
+      "tags": [
+        "query",
+        "分页",
+        "CQRS"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/domain/model/query/MarginQuery.java:MarginQuery",
+      "type": "class",
+      "name": "MarginQuery",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/query/MarginQuery.java",
+      "summary": "保证金分页查询条件对象。",
+      "tags": [
+        "query",
+        "分页"
+      ],
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java",
+      "target": "class:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java:ExchangeQuoteRepositoryImpl",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 ExchangeQuoteRepositoryImpl 类"
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java:ExchangeQuoteRepositoryImpl",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java:save",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 save 方法"
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java:ExchangeQuoteRepositoryImpl",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java:findLatestQuote",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 findLatestQuote 方法"
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java:ExchangeQuoteRepositoryImpl",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java:toDomain",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 toDomain 方法"
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java:ExchangeQuoteRepositoryImpl",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java:toPO",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 toPO 方法"
+    },
+    {
+      "source": "file:forex-gateway/src/main/java/com/forex/gateway/config/CorsConfig.java",
+      "target": "class:forex-gateway/src/main/java/com/forex/gateway/config/CorsConfig.java:CorsConfig",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 CorsConfig 类"
+    },
+    {
+      "source": "class:forex-gateway/src/main/java/com/forex/gateway/config/CorsConfig.java:CorsConfig",
+      "target": "function:forex-gateway/src/main/java/com/forex/gateway/config/CorsConfig.java:corsFilter",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 corsFilter 方法"
+    },
+    {
+      "source": "file:forex-gateway/src/main/java/com/forex/gateway/config/RateLimitConfig.java",
+      "target": "class:forex-gateway/src/main/java/com/forex/gateway/config/RateLimitConfig.java:RateLimitConfig",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 RateLimitConfig 类"
+    },
+    {
+      "source": "class:forex-gateway/src/main/java/com/forex/gateway/config/RateLimitConfig.java:RateLimitConfig",
+      "target": "function:forex-gateway/src/main/java/com/forex/gateway/config/RateLimitConfig.java:ipKeyResolver",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 ipKeyResolver 方法"
+    },
+    {
+      "source": "file:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java",
+      "target": "class:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:AuthGlobalFilter",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 AuthGlobalFilter 类"
+    },
+    {
+      "source": "class:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:AuthGlobalFilter",
+      "target": "function:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:filter",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 filter 方法"
+    },
+    {
+      "source": "class:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:AuthGlobalFilter",
+      "target": "function:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:isIgnoreUrl",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 isIgnoreUrl 方法"
+    },
+    {
+      "source": "class:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:AuthGlobalFilter",
+      "target": "function:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:extractToken",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 extractToken 方法"
+    },
+    {
+      "source": "class:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:AuthGlobalFilter",
+      "target": "function:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:setIgnoreAuthUrls",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 setIgnoreAuthUrls 方法"
+    },
+    {
+      "source": "class:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:AuthGlobalFilter",
+      "target": "function:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java:getOrder",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 getOrder 方法"
+    },
+    {
+      "source": "file:forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java",
+      "target": "class:forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java:SecurityHeadersFilter",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 SecurityHeadersFilter 类"
+    },
+    {
+      "source": "class:forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java:SecurityHeadersFilter",
+      "target": "function:forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java:filter",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 filter 方法"
+    },
+    {
+      "source": "class:forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java:SecurityHeadersFilter",
+      "target": "function:forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java:getOrder",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 getOrder 方法"
+    },
+    {
+      "source": "file:forex-gateway/src/main/java/com/forex/gateway/GatewayApplication.java",
+      "target": "class:forex-gateway/src/main/java/com/forex/gateway/GatewayApplication.java:GatewayApplication",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 GatewayApplication 类"
+    },
+    {
+      "source": "class:forex-gateway/src/main/java/com/forex/gateway/GatewayApplication.java:GatewayApplication",
+      "target": "function:forex-gateway/src/main/java/com/forex/gateway/GatewayApplication.java:main",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 main 方法"
+    },
+    {
+      "source": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:HedgeAccountingController",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 HedgeAccountingController 类"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:HedgeAccountingController",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:createRelationship",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 createRelationship 方法"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:HedgeAccountingController",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:getRelationship",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 getRelationship 方法"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:HedgeAccountingController",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:designate",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 designate 方法"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:HedgeAccountingController",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:prospectiveTest",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 prospectiveTest 方法"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:HedgeAccountingController",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:retrospectiveTest",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 retrospectiveTest 方法"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:HedgeAccountingController",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:generateEntries",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 generateEntries 方法"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:HedgeAccountingController",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:generateReport",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 generateReport 方法"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:HedgeAccountingController",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:toMap",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 toMap 方法"
+    },
+    {
+      "source": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:HedgeRelationship",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 HedgeRelationship 类"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:HedgeRelationship",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:create",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 create 方法"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:HedgeRelationship",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:reconstitute",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 reconstitute 方法"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:HedgeRelationship",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:designate",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 designate 方法"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:HedgeRelationship",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:markEffective",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 markEffective 方法"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:HedgeRelationship",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:markIneffective",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 markIneffective 方法"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:HedgeRelationship",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:deDesignate",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 deDesignate 方法"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:HedgeRelationship",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:recordIneffectiveness",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 recordIneffectiveness 方法"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:HedgeRelationship",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:validate",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 validate 方法"
+    },
+    {
+      "source": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/entity/HedgeEffectivenessTest.java",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/entity/HedgeEffectivenessTest.java:HedgeEffectivenessTest",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 HedgeEffectivenessTest 类"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/entity/HedgeEffectivenessTest.java:HedgeEffectivenessTest",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/entity/HedgeEffectivenessTest.java:isPassed",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 isPassed 方法"
+    },
+    {
+      "source": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:HedgeAccountingService",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 HedgeAccountingService 类"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:HedgeAccountingService",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:performProspectiveTest",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 performProspectiveTest 方法"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:HedgeAccountingService",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:performRetrospectiveTest",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 performRetrospectiveTest 方法"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:HedgeAccountingService",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:generateHedgeEntries",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 generateHedgeEntries 方法"
+    },
+    {
+      "source": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java:HedgeAccountingApplication",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 HedgeAccountingApplication 类"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java:HedgeAccountingApplication",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java:main",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 main 方法"
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:MarginController",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 MarginController 类"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:MarginController",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:createInitialMargin",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 createInitialMargin 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:MarginController",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:callMargin",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 callMargin 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:MarginController",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:releaseMargin",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 releaseMargin 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:MarginController",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:depositMargin",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 depositMargin 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:MarginController",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:getMarginDetail",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 getMarginDetail 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:MarginController",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:pageQuery",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 pageQuery 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:MarginController",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:toMarginResp",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 toMarginResp 方法"
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/adapter/dto/MarginResp.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/adapter/dto/MarginResp.java:MarginResp",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 MarginResp 类"
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/application/command/CreateMarginCmd.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/application/command/CreateMarginCmd.java:CreateMarginCmd",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 CreateMarginCmd 类"
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:MarginAppService",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 MarginAppService 类"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:MarginAppService",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:createInitialMargin",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 createInitialMargin 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:MarginAppService",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:callMargin",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 callMargin 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:MarginAppService",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:releaseMargin",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 releaseMargin 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:MarginAppService",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:depositMargin",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 depositMargin 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:MarginAppService",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:getMarginDetail",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 getMarginDetail 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:MarginAppService",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:pageQuery",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 pageQuery 方法"
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/event/MarginCalledEvent.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/event/MarginCalledEvent.java:MarginCalledEvent",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 MarginCalledEvent 类"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/event/MarginCalledEvent.java:MarginCalledEvent",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/event/MarginCalledEvent.java:eventName",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 eventName 方法"
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 MarginAccount 类"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:create",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 create 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:calculateMarginRate",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 calculateMarginRate 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:calculateRequiredAmount",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 calculateRequiredAmount 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:pay",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 pay 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:partialPay",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 partialPay 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:cancel",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 cancel 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:checkWaterLevel",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 checkWaterLevel 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:getDepositRatio",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 getDepositRatio 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:reconstitute",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 reconstitute 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:deposit",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 deposit 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:release",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 release 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:call",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 call 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:calculateShortfall",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 calculateShortfall 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:assignMarginNo",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 assignMarginNo 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:setWaterLevel",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 setWaterLevel 方法"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:validate",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 validate 方法"
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java:MarginCall",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 MarginCall 类"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java:MarginCall",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java:respond",
+      "type": "contains",
+      "weight": 1,
+      "summary": "类包含 respond 方法"
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/model/query/MarginQuery.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/query/MarginQuery.java:MarginQuery",
+      "type": "contains",
+      "weight": 1,
+      "summary": "文件包含 MarginQuery 类"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:HedgeAccountingController",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:HedgeRelationship",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "HedgeAccountingController 引用 HedgeRelationship"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:HedgeAccountingController",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/entity/HedgeEffectivenessTest.java:HedgeEffectivenessTest",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "HedgeAccountingController 引用 HedgeEffectivenessTest"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java:HedgeAccountingController",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:HedgeAccountingService",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "HedgeAccountingController 引用 HedgeAccountingService"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:HedgeAccountingService",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java:HedgeRelationship",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "HedgeAccountingService 引用 HedgeRelationship"
+    },
+    {
+      "source": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java:HedgeAccountingService",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/entity/HedgeEffectivenessTest.java:HedgeEffectivenessTest",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "HedgeAccountingService 引用 HedgeEffectivenessTest"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:MarginController",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/adapter/dto/MarginResp.java:MarginResp",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "MarginController 引用 MarginResp"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:MarginController",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/application/command/CreateMarginCmd.java:CreateMarginCmd",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "MarginController 引用 CreateMarginCmd"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:MarginController",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:MarginAppService",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "MarginController 引用 MarginAppService"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:MarginController",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "MarginController 引用 MarginAccount"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java:MarginController",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/query/MarginQuery.java:MarginQuery",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "MarginController 引用 MarginQuery"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:MarginAppService",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/application/command/CreateMarginCmd.java:CreateMarginCmd",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "MarginAppService 引用 CreateMarginCmd"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:MarginAppService",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "MarginAppService 引用 MarginAccount"
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java:MarginAppService",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/query/MarginQuery.java:MarginQuery",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "MarginAppService 引用 MarginQuery"
+    },
+    {
+      "source": "config:forex-gateway/pom.xml",
+      "target": "file:forex-gateway/src/main/java/com/forex/gateway/config/CorsConfig.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-gateway pom.xml 管理 CorsConfig.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-gateway/pom.xml",
+      "target": "file:forex-gateway/src/main/java/com/forex/gateway/config/RateLimitConfig.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-gateway pom.xml 管理 RateLimitConfig.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-gateway/pom.xml",
+      "target": "file:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-gateway pom.xml 管理 AuthGlobalFilter.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-gateway/pom.xml",
+      "target": "file:forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-gateway pom.xml 管理 SecurityHeadersFilter.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-gateway/pom.xml",
+      "target": "file:forex-gateway/src/main/java/com/forex/gateway/GatewayApplication.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-gateway pom.xml 管理 GatewayApplication.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-gateway/pom.xml",
+      "target": "file:forex-gateway/src/main/resources/application.yml",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-gateway pom.xml 管理 application.yml 所属模块依赖"
+    },
+    {
+      "source": "config:forex-hedge-accounting/pom.xml",
+      "target": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-hedge-accounting pom.xml 管理 HedgeAccountingController.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-hedge-accounting/pom.xml",
+      "target": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-hedge-accounting pom.xml 管理 HedgeRelationship.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-hedge-accounting/pom.xml",
+      "target": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/entity/HedgeEffectivenessTest.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-hedge-accounting pom.xml 管理 HedgeEffectivenessTest.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-hedge-accounting/pom.xml",
+      "target": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-hedge-accounting pom.xml 管理 HedgeAccountingService.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-hedge-accounting/pom.xml",
+      "target": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-hedge-accounting pom.xml 管理 HedgeAccountingApplication.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-hedge-accounting/pom.xml",
+      "target": "file:forex-hedge-accounting/src/main/resources/application.yml",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-hedge-accounting pom.xml 管理 application.yml 所属模块依赖"
+    },
+    {
+      "source": "config:forex-margin/pom.xml",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-margin pom.xml 管理 MarginController.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-margin/pom.xml",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/adapter/dto/MarginResp.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-margin pom.xml 管理 MarginResp.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-margin/pom.xml",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/application/command/CreateMarginCmd.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-margin pom.xml 管理 CreateMarginCmd.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-margin/pom.xml",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-margin pom.xml 管理 MarginAppService.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-margin/pom.xml",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/domain/event/MarginCalledEvent.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-margin pom.xml 管理 MarginCalledEvent.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-margin/pom.xml",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-margin pom.xml 管理 MarginAccount.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-margin/pom.xml",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-margin pom.xml 管理 MarginCall.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-margin/pom.xml",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/domain/model/query/MarginQuery.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-margin pom.xml 管理 MarginQuery.java 所属模块依赖"
+    },
+    {
+      "source": "config:forex-exchange/src/main/resources/application.yml",
+      "target": "file:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "application.yml 配置 forex-exchange 模块的服务参数"
+    },
+    {
+      "source": "config:forex-gateway/src/main/resources/application.yml",
+      "target": "file:forex-gateway/src/main/java/com/forex/gateway/config/CorsConfig.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "application.yml 配置 forex-gateway 模块的服务参数"
+    },
+    {
+      "source": "config:forex-gateway/src/main/resources/application.yml",
+      "target": "file:forex-gateway/src/main/java/com/forex/gateway/config/RateLimitConfig.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "application.yml 配置 forex-gateway 模块的服务参数"
+    },
+    {
+      "source": "config:forex-gateway/src/main/resources/application.yml",
+      "target": "file:forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "application.yml 配置 forex-gateway 模块的服务参数"
+    },
+    {
+      "source": "config:forex-gateway/src/main/resources/application.yml",
+      "target": "file:forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "application.yml 配置 forex-gateway 模块的服务参数"
+    },
+    {
+      "source": "config:forex-gateway/src/main/resources/application.yml",
+      "target": "file:forex-gateway/src/main/java/com/forex/gateway/GatewayApplication.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "application.yml 配置 forex-gateway 模块的服务参数"
+    },
+    {
+      "source": "config:forex-hedge-accounting/src/main/resources/application.yml",
+      "target": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "application.yml 配置 forex-hedge-accounting 模块的服务参数"
+    },
+    {
+      "source": "config:forex-hedge-accounting/src/main/resources/application.yml",
+      "target": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "application.yml 配置 forex-hedge-accounting 模块的服务参数"
+    },
+    {
+      "source": "config:forex-hedge-accounting/src/main/resources/application.yml",
+      "target": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/entity/HedgeEffectivenessTest.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "application.yml 配置 forex-hedge-accounting 模块的服务参数"
+    },
+    {
+      "source": "config:forex-hedge-accounting/src/main/resources/application.yml",
+      "target": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "application.yml 配置 forex-hedge-accounting 模块的服务参数"
+    },
+    {
+      "source": "config:forex-hedge-accounting/src/main/resources/application.yml",
+      "target": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "application.yml 配置 forex-hedge-accounting 模块的服务参数"
+    }
+  ]
+}

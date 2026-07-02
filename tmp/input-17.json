@@ -1,0 +1,155 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/QuoteReq.java",
+      "sizeLines": 19,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/QuoteResp.java",
+      "sizeLines": 28,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/RateLockReq.java",
+      "sizeLines": 18,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/application/command/CancelOrderCmd.java",
+      "sizeLines": 15,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/application/command/CreateOrderCmd.java",
+      "sizeLines": 37,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/application/service/EnterpriseQuoteService.java",
+      "sizeLines": 49,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "sizeLines": 158,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/event/OrderCancelledEvent.java",
+      "sizeLines": 24,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/event/OrderConfirmedEvent.java",
+      "sizeLines": 28,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "sizeLines": 250,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/entity/ExchangeQuote.java",
+      "sizeLines": 37,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/query/ExchangeOrderQuery.java",
+      "sizeLines": 18,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/CurrencyPair.java",
+      "sizeLines": 38,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java",
+      "sizeLines": 59,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/OrderNo.java",
+      "sizeLines": 37,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/repository/ExchangeOrderRepository.java",
+      "sizeLines": 21,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/repository/ExchangeQuoteRepository.java",
+      "sizeLines": 12,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/service/ExchangeDomainService.java",
+      "sizeLines": 74,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/service/QuoteDomainService.java",
+      "sizeLines": 41,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/ExchangeApplication.java",
+      "sizeLines": 15,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/mapper/ExchangeOrderMapper.java",
+      "sizeLines": 49,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/mapper/ExchangeQuoteMapper.java",
+      "sizeLines": 20,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/persistence/ExchangeOrderPO.java",
+      "sizeLines": 45,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/persistence/ExchangeQuotePO.java",
+      "sizeLines": 27,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeOrderRepositoryImpl.java",
+      "sizeLines": 126,
+      "language": "java",
+      "fileCategory": "code"
+    }
+  ]
+}

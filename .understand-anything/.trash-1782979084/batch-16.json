@@ -1,0 +1,2434 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "type": "file",
+      "name": "Customer.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "summary": "Customer - create、reconstitute、updateRiskLevel",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "type": "class",
+      "name": "Customer",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "summary": "Customer - Customer - create、reconstitute、updateRiskLevel",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "type": "function",
+      "name": "Customer",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "summary": "Customer()",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "summary": "create(customerNo, customerType, customerName, englishName, certType, certNo, countryCode, address, contactPerson, contactPhone, email, riskLevel, riskReason, crossBorderPlatformId, remark)",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:reconstitute",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "summary": "reconstitute(id, customerNo, customerType, customerName, englishName, certType, certNo, countryCode, address, contactPerson, contactPhone, email, riskLevel, riskReason, dueDiligenceStatus, dueDiligenceDate, crossBorderPlatformId, status, remark)",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:updateRiskLevel",
+      "type": "function",
+      "name": "updateRiskLevel",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "summary": "updateRiskLevel(newLevel, reason)",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:enable",
+      "type": "function",
+      "name": "enable",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "summary": "enable()",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:disable",
+      "type": "function",
+      "name": "disable",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "summary": "disable()",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:completeDueDiligence",
+      "type": "function",
+      "name": "completeDueDiligence",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "summary": "completeDueDiligence()",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:isActive",
+      "type": "function",
+      "name": "isActive",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "summary": "isActive()",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:isDueDiligenceCompleted",
+      "type": "function",
+      "name": "isDueDiligenceCompleted",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "summary": "isDueDiligenceCompleted()",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:validate",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "summary": "validate()",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerQuery.java",
+      "type": "file",
+      "name": "CustomerQuery.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerQuery.java",
+      "summary": "CustomerQuery - CustomerQuery",
+      "tags": [
+        "DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerQuery.java:CustomerQuery",
+      "type": "class",
+      "name": "CustomerQuery",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerQuery.java",
+      "summary": "CustomerQuery - CustomerQuery - CustomerQuery",
+      "tags": [
+        "DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java",
+      "type": "file",
+      "name": "CustomerRegInfo.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java",
+      "summary": "CustomerRegInfo - CustomerRegInfo",
+      "tags": [
+        "DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java:CustomerRegInfo",
+      "type": "class",
+      "name": "CustomerRegInfo",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java",
+      "summary": "CustomerRegInfo - CustomerRegInfo - CustomerRegInfo",
+      "tags": [
+        "DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "type": "file",
+      "name": "CreditLimit.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "summary": "CreditLimit - CreditLimit、deduct、release",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:CreditLimit",
+      "type": "class",
+      "name": "CreditLimit",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "summary": "CreditLimit - CreditLimit - CreditLimit、deduct、release",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:CreditLimit",
+      "type": "function",
+      "name": "CreditLimit",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "summary": "CreditLimit(id, customerId, limitType, currency, totalLimit, usedLimit, availableLimit, effectiveDate, expireDate, status)",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:deduct",
+      "type": "function",
+      "name": "deduct",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "summary": "deduct(amount)",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:release",
+      "type": "function",
+      "name": "release",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "summary": "release(amount)",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:isAvailable",
+      "type": "function",
+      "name": "isAvailable",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "summary": "isAvailable()",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:isExpired",
+      "type": "function",
+      "name": "isExpired",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "summary": "isExpired()",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:hasSufficientLimit",
+      "type": "function",
+      "name": "hasSufficientLimit",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "summary": "hasSufficientLimit(amount)",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java",
+      "type": "file",
+      "name": "CustomerQuota.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java",
+      "summary": "CustomerQuota - CustomerQuota、deduct、release",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:CustomerQuota",
+      "type": "class",
+      "name": "CustomerQuota",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java",
+      "summary": "CustomerQuota - CustomerQuota - CustomerQuota、deduct、release",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:CustomerQuota",
+      "type": "function",
+      "name": "CustomerQuota",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java",
+      "summary": "CustomerQuota(id, customerId, quotaYear, quotaType, quotaAmount, usedAmount, currency)",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:deduct",
+      "type": "function",
+      "name": "deduct",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java",
+      "summary": "deduct(amount)",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:release",
+      "type": "function",
+      "name": "release",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java",
+      "summary": "release(amount)",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:getAvailable",
+      "type": "function",
+      "name": "getAvailable",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java",
+      "summary": "getAvailable()",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:isExceeded",
+      "type": "function",
+      "name": "isExceeded",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java",
+      "summary": "isExceeded(amount)",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java",
+      "type": "file",
+      "name": "CustomerId.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java",
+      "summary": "CustomerId - of、equals、hashCode",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java:CustomerId",
+      "type": "class",
+      "name": "CustomerId",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java",
+      "summary": "CustomerId - CustomerId - of、equals、hashCode",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java:CustomerId",
+      "type": "function",
+      "name": "CustomerId",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java",
+      "summary": "CustomerId(value)",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java",
+      "summary": "of(value)",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java",
+      "summary": "equals(o)",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java",
+      "summary": "hashCode()",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "type": "file",
+      "name": "RiskLevel.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "RiskLevel - LOW、MEDIUM、HIGH",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "type": "class",
+      "name": "RiskLevel",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "RiskLevel - RiskLevel - LOW、MEDIUM、HIGH",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "type": "function",
+      "name": "RiskLevel",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "RiskLevel(level)",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "of(level)",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:low",
+      "type": "function",
+      "name": "low",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "low()",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:medium",
+      "type": "function",
+      "name": "medium",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "medium()",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:high",
+      "type": "function",
+      "name": "high",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "high()",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:prohibited",
+      "type": "function",
+      "name": "prohibited",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "prohibited()",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:upgrade",
+      "type": "function",
+      "name": "upgrade",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "upgrade()",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:downgrade",
+      "type": "function",
+      "name": "downgrade",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "downgrade()",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:isLow",
+      "type": "function",
+      "name": "isLow",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "isLow()",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:isMedium",
+      "type": "function",
+      "name": "isMedium",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "isMedium()",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:isHigh",
+      "type": "function",
+      "name": "isHigh",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "isHigh()",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:isProhibited",
+      "type": "function",
+      "name": "isProhibited",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "isProhibited()",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "equals(o)",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "hashCode()",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:toString",
+      "type": "function",
+      "name": "toString",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "summary": "toString()",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java",
+      "type": "file",
+      "name": "CreditLimitRepository.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java",
+      "summary": "CreditLimitRepository - CreditLimitRepository",
+      "tags": [
+        "仓储接口"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java:CreditLimitRepository",
+      "type": "class",
+      "name": "CreditLimitRepository",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java",
+      "summary": "CreditLimitRepository - CreditLimitRepository - CreditLimitRepository",
+      "tags": [
+        "仓储接口"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java",
+      "type": "file",
+      "name": "CustomerRepository.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java",
+      "summary": "CustomerRepository - CustomerRepository",
+      "tags": [
+        "仓储接口"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java:CustomerRepository",
+      "type": "class",
+      "name": "CustomerRepository",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java",
+      "summary": "CustomerRepository - CustomerRepository - CustomerRepository",
+      "tags": [
+        "仓储接口"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java",
+      "type": "file",
+      "name": "CreditCheckDomainService.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java",
+      "summary": "CreditCheckDomainService - checkCreditAvailability、deductCredit、releaseCredit",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:CreditCheckDomainService",
+      "type": "class",
+      "name": "CreditCheckDomainService",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java",
+      "summary": "CreditCheckDomainService - CreditCheckDomainService - checkCreditAvailability、deductCredit、releaseCredit",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:checkCreditAvailability",
+      "type": "function",
+      "name": "checkCreditAvailability",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java",
+      "summary": "checkCreditAvailability(customerId, limitType, currency, amount)",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:deductCredit",
+      "type": "function",
+      "name": "deductCredit",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java",
+      "summary": "deductCredit(customerId, limitType, currency, amount)",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:releaseCredit",
+      "type": "function",
+      "name": "releaseCredit",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java",
+      "summary": "releaseCredit(customerId, limitType, currency, amount)",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java",
+      "type": "file",
+      "name": "CustomerDomainService.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java",
+      "summary": "CustomerDomainService - createCustomer、updateRiskLevel、performDueDiligence",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:CustomerDomainService",
+      "type": "class",
+      "name": "CustomerDomainService",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java",
+      "summary": "CustomerDomainService - CustomerDomainService - createCustomer、updateRiskLevel、performDueDiligence",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:createCustomer",
+      "type": "function",
+      "name": "createCustomer",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java",
+      "summary": "createCustomer(info)",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:updateRiskLevel",
+      "type": "function",
+      "name": "updateRiskLevel",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java",
+      "summary": "updateRiskLevel(customer, newLevel, reason)",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:performDueDiligence",
+      "type": "function",
+      "name": "performDueDiligence",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java",
+      "summary": "performDueDiligence(customer)",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:generateCustomerNo",
+      "type": "function",
+      "name": "generateCustomerNo",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java",
+      "summary": "generateCustomerNo()",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CreditLimitMapper.java",
+      "type": "file",
+      "name": "CreditLimitMapper.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CreditLimitMapper.java",
+      "summary": "CreditLimitMapper - CreditLimitMapper",
+      "tags": [
+        "Mapper"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CreditLimitMapper.java:CreditLimitMapper",
+      "type": "class",
+      "name": "CreditLimitMapper",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CreditLimitMapper.java",
+      "summary": "CreditLimitMapper - CreditLimitMapper - CreditLimitMapper",
+      "tags": [
+        "Mapper"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerMapper.java",
+      "type": "file",
+      "name": "CustomerMapper.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerMapper.java",
+      "summary": "CustomerMapper - CustomerMapper",
+      "tags": [
+        "Mapper"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerMapper.java:CustomerMapper",
+      "type": "class",
+      "name": "CustomerMapper",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerMapper.java",
+      "summary": "CustomerMapper - CustomerMapper - CustomerMapper",
+      "tags": [
+        "Mapper"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerQuotaMapper.java",
+      "type": "file",
+      "name": "CustomerQuotaMapper.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerQuotaMapper.java",
+      "summary": "CustomerQuotaMapper - CustomerQuotaMapper",
+      "tags": [
+        "Mapper"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerQuotaMapper.java:CustomerQuotaMapper",
+      "type": "class",
+      "name": "CustomerQuotaMapper",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerQuotaMapper.java",
+      "summary": "CustomerQuotaMapper - CustomerQuotaMapper - CustomerQuotaMapper",
+      "tags": [
+        "Mapper"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CreditLimitPO.java",
+      "type": "file",
+      "name": "CreditLimitPO.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CreditLimitPO.java",
+      "summary": "CreditLimitPO - CreditLimitPO",
+      "tags": [
+        "PO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CreditLimitPO.java:CreditLimitPO",
+      "type": "class",
+      "name": "CreditLimitPO",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CreditLimitPO.java",
+      "summary": "CreditLimitPO - CreditLimitPO - CreditLimitPO",
+      "tags": [
+        "PO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerPO.java",
+      "type": "file",
+      "name": "CustomerPO.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerPO.java",
+      "summary": "CustomerPO - CustomerPO",
+      "tags": [
+        "PO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerPO.java:CustomerPO",
+      "type": "class",
+      "name": "CustomerPO",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerPO.java",
+      "summary": "CustomerPO - CustomerPO - CustomerPO",
+      "tags": [
+        "PO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerQuotaPO.java",
+      "type": "file",
+      "name": "CustomerQuotaPO.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerQuotaPO.java",
+      "summary": "CustomerQuotaPO - CustomerQuotaPO",
+      "tags": [
+        "PO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerQuotaPO.java:CustomerQuotaPO",
+      "type": "class",
+      "name": "CustomerQuotaPO",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerQuotaPO.java",
+      "summary": "CustomerQuotaPO - CustomerQuotaPO - CustomerQuotaPO",
+      "tags": [
+        "PO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java",
+      "type": "file",
+      "name": "CreditLimitRepositoryImpl.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java",
+      "summary": "CreditLimitRepositoryImpl - save、findById、findByCustomerId",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:CreditLimitRepositoryImpl",
+      "type": "class",
+      "name": "CreditLimitRepositoryImpl",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java",
+      "summary": "CreditLimitRepositoryImpl - CreditLimitRepositoryImpl - save、findById、findByCustomerId",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java",
+      "summary": "save(limit)",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:findById",
+      "type": "function",
+      "name": "findById",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java",
+      "summary": "findById(id)",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:findByCustomerId",
+      "type": "function",
+      "name": "findByCustomerId",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java",
+      "summary": "findByCustomerId(customerId)",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:findByCustomerAndType",
+      "type": "function",
+      "name": "findByCustomerAndType",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java",
+      "summary": "findByCustomerAndType(customerId, limitType, currency)",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:toDomain",
+      "type": "function",
+      "name": "toDomain",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java",
+      "summary": "toDomain(po)",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:toPO",
+      "type": "function",
+      "name": "toPO",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java",
+      "summary": "toPO(limit)",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "type": "file",
+      "name": "CustomerRepositoryImpl.java",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "summary": "CustomerRepositoryImpl - save、findById、findByCustomerNo",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:CustomerRepositoryImpl",
+      "type": "class",
+      "name": "CustomerRepositoryImpl",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "summary": "CustomerRepositoryImpl - CustomerRepositoryImpl - save、findById、findByCustomerNo",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "summary": "save(customer)",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:findById",
+      "type": "function",
+      "name": "findById",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "summary": "findById(id)",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:findByCustomerNo",
+      "type": "function",
+      "name": "findByCustomerNo",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "summary": "findByCustomerNo(customerNo)",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:findByCondition",
+      "type": "function",
+      "name": "findByCondition",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "summary": "findByCondition(query)",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:existsByCertNo",
+      "type": "function",
+      "name": "existsByCertNo",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "summary": "existsByCertNo(certType, certNo)",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "summary": "pageQuery(pageReq)",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:toDomain",
+      "type": "function",
+      "name": "toDomain",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "summary": "toDomain(po)",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:toPO",
+      "type": "function",
+      "name": "toPO",
+      "filePath": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "summary": "toPO(customer)",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-customer/src/main/resources/application.yml",
+      "type": "file",
+      "name": "application.yml",
+      "filePath": "forex-customer/src/main/resources/application.yml",
+      "summary": "application配置文件",
+      "tags": [
+        "配置"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "config:forex-customer/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application",
+      "filePath": "forex-customer/src/main/resources/application.yml",
+      "summary": "application配置文件",
+      "tags": [
+        "配置"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-exchange/pom.xml",
+      "type": "file",
+      "name": "pom.xml",
+      "filePath": "forex-exchange/pom.xml",
+      "summary": "pom配置文件",
+      "tags": [
+        "Maven"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "config:forex-exchange/pom.xml",
+      "type": "config",
+      "name": "pom",
+      "filePath": "forex-exchange/pom.xml",
+      "summary": "pom配置文件",
+      "tags": [
+        "Maven"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "type": "file",
+      "name": "ExchangeController.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "summary": "ExchangeController - createOrder、lockRate、confirmOrder",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:ExchangeController",
+      "type": "class",
+      "name": "ExchangeController",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "summary": "ExchangeController - ExchangeController - createOrder、lockRate、confirmOrder",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:createOrder",
+      "type": "function",
+      "name": "createOrder",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "summary": "createOrder(req)",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:lockRate",
+      "type": "function",
+      "name": "lockRate",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "summary": "lockRate(req)",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:confirmOrder",
+      "type": "function",
+      "name": "confirmOrder",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "summary": "confirmOrder(orderNo)",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:cancelOrder",
+      "type": "function",
+      "name": "cancelOrder",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "summary": "cancelOrder(cmd)",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:reverseOrder",
+      "type": "function",
+      "name": "reverseOrder",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "summary": "reverseOrder(orderNo)",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:getOrderDetail",
+      "type": "function",
+      "name": "getOrderDetail",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "summary": "getOrderDetail(orderNo)",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "summary": "pageQuery(req)",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:getQuote",
+      "type": "function",
+      "name": "getQuote",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "summary": "getQuote(req)",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:calculateAmount",
+      "type": "function",
+      "name": "calculateAmount",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "summary": "calculateAmount(req)",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:toExchangeQuery",
+      "type": "function",
+      "name": "toExchangeQuery",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "summary": "toExchangeQuery(req)",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:toCreateCmd",
+      "type": "function",
+      "name": "toCreateCmd",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "summary": "toCreateCmd(req)",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:toOrderResp",
+      "type": "function",
+      "name": "toOrderResp",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "summary": "toOrderResp(order)",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:toQuoteResp",
+      "type": "function",
+      "name": "toQuoteResp",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "summary": "toQuoteResp(quote)",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/AmountCalcReq.java",
+      "type": "file",
+      "name": "AmountCalcReq.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/AmountCalcReq.java",
+      "summary": "AmountCalcReq - AmountCalcReq",
+      "tags": [
+        "DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/AmountCalcReq.java:AmountCalcReq",
+      "type": "class",
+      "name": "AmountCalcReq",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/AmountCalcReq.java",
+      "summary": "AmountCalcReq - AmountCalcReq - AmountCalcReq",
+      "tags": [
+        "DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/CreateOrderReq.java",
+      "type": "file",
+      "name": "CreateOrderReq.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/CreateOrderReq.java",
+      "summary": "CreateOrderReq - CreateOrderReq",
+      "tags": [
+        "DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/CreateOrderReq.java:CreateOrderReq",
+      "type": "class",
+      "name": "CreateOrderReq",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/CreateOrderReq.java",
+      "summary": "CreateOrderReq - CreateOrderReq - CreateOrderReq",
+      "tags": [
+        "DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/OrderResp.java",
+      "type": "file",
+      "name": "OrderResp.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/OrderResp.java",
+      "summary": "OrderResp - OrderResp",
+      "tags": [
+        "DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/OrderResp.java:OrderResp",
+      "type": "class",
+      "name": "OrderResp",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/OrderResp.java",
+      "summary": "OrderResp - OrderResp - OrderResp",
+      "tags": [
+        "DTO"
+      ],
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:reconstitute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:updateRiskLevel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:enable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:disable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:completeDueDiligence",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:isActive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:isDueDiligenceCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:create",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:validate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerQuery.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerQuery.java:CustomerQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java:CustomerRegInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:CreditLimit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:CreditLimit",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:CreditLimit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:CreditLimit",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:deduct",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:CreditLimit",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:release",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:CreditLimit",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:isAvailable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:CreditLimit",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:isExpired",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:CreditLimit",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:hasSufficientLimit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:deduct",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:isAvailable",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:deduct",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:isExpired",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:hasSufficientLimit",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:isAvailable",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:hasSufficientLimit",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:isExpired",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:CustomerQuota",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:CustomerQuota",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:CustomerQuota",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:CustomerQuota",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:deduct",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:CustomerQuota",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:release",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:CustomerQuota",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:getAvailable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:CustomerQuota",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:isExceeded",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:deduct",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:isExceeded",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:isExceeded",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java:getAvailable",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java:CustomerId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java:CustomerId",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java:CustomerId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java:CustomerId",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java:CustomerId",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java:CustomerId",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:low",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:medium",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:high",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:prohibited",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:upgrade",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:downgrade",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:isLow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:isMedium",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:isHigh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:isProhibited",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java:toString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java:CreditLimitRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:CreditLimit",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java:CustomerRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java:CustomerId",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:CreditCheckDomainService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:CreditCheckDomainService",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:checkCreditAvailability",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:CreditCheckDomainService",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:deductCredit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:CreditCheckDomainService",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:releaseCredit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:CreditLimit",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java:CreditLimitRepository",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:checkCreditAvailability",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:findByCustomerAndType",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:checkCreditAvailability",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:hasSufficientLimit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:deductCredit",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:findByCustomerAndType",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:deductCredit",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:deduct",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:releaseCredit",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:findByCustomerAndType",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java:releaseCredit",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:release",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:CustomerDomainService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:CustomerDomainService",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:createCustomer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:CustomerDomainService",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:updateRiskLevel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:CustomerDomainService",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:performDueDiligence",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:CustomerDomainService",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:generateCustomerNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java:CustomerRegInfo",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java:CustomerRepository",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:createCustomer",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:existsByCertNo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:createCustomer",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:generateCustomerNo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:performDueDiligence",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:isDueDiligenceCompleted",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java:performDueDiligence",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:completeDueDiligence",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CreditLimitMapper.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CreditLimitMapper.java:CreditLimitMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CreditLimitMapper.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CreditLimitPO.java:CreditLimitPO",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerMapper.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerMapper.java:CustomerMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerMapper.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerPO.java:CustomerPO",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerQuotaMapper.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerQuotaMapper.java:CustomerQuotaMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerQuotaMapper.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerQuotaPO.java:CustomerQuotaPO",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CreditLimitPO.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CreditLimitPO.java:CreditLimitPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerPO.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerPO.java:CustomerPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerQuotaPO.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerQuotaPO.java:CustomerQuotaPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:CreditLimitRepositoryImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:CreditLimitRepositoryImpl",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:CreditLimitRepositoryImpl",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:findById",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:CreditLimitRepositoryImpl",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:findByCustomerId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:CreditLimitRepositoryImpl",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:findByCustomerAndType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:CreditLimitRepositoryImpl",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:toDomain",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:CreditLimitRepositoryImpl",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:toPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java:CreditLimit",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java:CreditLimitRepository",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CreditLimitMapper.java:CreditLimitMapper",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CreditLimitPO.java:CreditLimitPO",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:save",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:toPO",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:save",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:toDomain",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java:CreditLimitRepositoryImpl",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java:CreditLimitRepository",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:CustomerRepositoryImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:CustomerRepositoryImpl",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:CustomerRepositoryImpl",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:findById",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:CustomerRepositoryImpl",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:findByCustomerNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:CustomerRepositoryImpl",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:findByCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:CustomerRepositoryImpl",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:existsByCertNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:CustomerRepositoryImpl",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:CustomerRepositoryImpl",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:toDomain",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:CustomerRepositoryImpl",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:toPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java:Customer",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java:CustomerId",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java:CustomerRepository",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerMapper.java:CustomerMapper",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerPO.java:CustomerPO",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:save",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:toPO",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:save",
+      "target": "function:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:toDomain",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java:CustomerRepositoryImpl",
+      "target": "class:forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java:CustomerRepository",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:forex-customer/src/main/resources/application.yml",
+      "target": "config:forex-customer/src/main/resources/application.yml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-exchange/pom.xml",
+      "target": "config:forex-exchange/pom.xml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "target": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:ExchangeController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:ExchangeController",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:createOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:ExchangeController",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:lockRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:ExchangeController",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:confirmOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:ExchangeController",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:cancelOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:ExchangeController",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:reverseOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:ExchangeController",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:getOrderDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:ExchangeController",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:ExchangeController",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:getQuote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:ExchangeController",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:calculateAmount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:ExchangeController",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:toExchangeQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:ExchangeController",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:toCreateCmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:ExchangeController",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:toOrderResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:ExchangeController",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:toQuoteResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "target": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/AmountCalcReq.java:AmountCalcReq",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "target": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/CreateOrderReq.java:CreateOrderReq",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "target": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/OrderResp.java:OrderResp",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:createOrder",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:toCreateCmd",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:createOrder",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:toOrderResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:lockRate",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:toOrderResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:confirmOrder",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:toOrderResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:getOrderDetail",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:toOrderResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:pageQuery",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:toExchangeQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:getQuote",
+      "target": "function:forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java:toQuoteResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/AmountCalcReq.java",
+      "target": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/AmountCalcReq.java:AmountCalcReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/CreateOrderReq.java",
+      "target": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/CreateOrderReq.java:CreateOrderReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/OrderResp.java",
+      "target": "class:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/OrderResp.java:OrderResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

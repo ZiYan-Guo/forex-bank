@@ -1,0 +1,2428 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/QuoteReq.java",
+      "type": "file",
+      "name": "QuoteReq.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/QuoteReq.java",
+      "summary": "结售汇模块，QuoteReq.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 1.09
+    },
+    {
+      "id": "class:QuoteReq",
+      "type": "dto",
+      "name": "QuoteReq",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/QuoteReq.java",
+      "summary": "报价请求DTO，包含客户ID和货币对",
+      "tags": [
+        "java",
+        "code",
+        "dto"
+      ],
+      "complexity": 0.9
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/QuoteResp.java",
+      "type": "file",
+      "name": "QuoteResp.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/QuoteResp.java",
+      "summary": "结售汇模块，QuoteResp.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 1.78
+    },
+    {
+      "id": "class:QuoteResp",
+      "type": "dto",
+      "name": "QuoteResp",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/QuoteResp.java",
+      "summary": "报价响应DTO，包含买入价、卖出价、中间价和有效期",
+      "tags": [
+        "java",
+        "code",
+        "dto"
+      ],
+      "complexity": 1.5
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/adapter/dto/RateLockReq.java",
+      "type": "file",
+      "name": "RateLockReq.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/RateLockReq.java",
+      "summary": "结售汇模块，RateLockReq.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 0.78
+    },
+    {
+      "id": "class:RateLockReq",
+      "type": "dto",
+      "name": "RateLockReq",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/RateLockReq.java",
+      "summary": "锁汇请求DTO，包含订单号和确认汇率",
+      "tags": [
+        "java",
+        "code",
+        "dto"
+      ],
+      "complexity": 0.6
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/application/command/CancelOrderCmd.java",
+      "type": "file",
+      "name": "CancelOrderCmd.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/command/CancelOrderCmd.java",
+      "summary": "结售汇模块，CancelOrderCmd.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 0.75
+    },
+    {
+      "id": "class:CancelOrderCmd",
+      "type": "command",
+      "name": "CancelOrderCmd",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/command/CancelOrderCmd.java",
+      "summary": "取消订单命令，包含订单号和取消原因",
+      "tags": [
+        "java",
+        "code",
+        "command"
+      ],
+      "complexity": 0.6
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/application/command/CreateOrderCmd.java",
+      "type": "file",
+      "name": "CreateOrderCmd.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/command/CreateOrderCmd.java",
+      "summary": "结售汇模块，CreateOrderCmd.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 3.97
+    },
+    {
+      "id": "class:CreateOrderCmd",
+      "type": "command",
+      "name": "CreateOrderCmd",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/command/CreateOrderCmd.java",
+      "summary": "创建订单命令，包含客户ID、币种、金额、类型等必要参数和校验规则",
+      "tags": [
+        "java",
+        "code",
+        "command"
+      ],
+      "complexity": 3.6
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/application/service/EnterpriseQuoteService.java",
+      "type": "file",
+      "name": "EnterpriseQuoteService.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/EnterpriseQuoteService.java",
+      "summary": "结售汇模块，EnterpriseQuoteService.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 1.79
+    },
+    {
+      "id": "class:EnterpriseQuoteService",
+      "type": "service",
+      "name": "EnterpriseQuoteService",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/EnterpriseQuoteService.java",
+      "summary": "企业多级报价服务，根据客户交易量和信用等级提供三级定制化报价",
+      "tags": [
+        "java",
+        "code",
+        "service"
+      ],
+      "complexity": 0.5
+    },
+    {
+      "id": "function:EnterpriseQuoteService.getEnterpriseQuote",
+      "type": "function",
+      "name": "getEnterpriseQuote",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/EnterpriseQuoteService.java",
+      "summary": "EnterpriseQuoteService的方法getEnterpriseQuote",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.09
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "type": "file",
+      "name": "ExchangeAppService.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "summary": "结售汇模块，ExchangeAppService.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 19.68
+    },
+    {
+      "id": "class:ExchangeAppService",
+      "type": "service",
+      "name": "ExchangeAppService",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "summary": "结售汇应用服务，编排即期/远期/挂单创建、锁汇、确认、取消、冲正等业务流程",
+      "tags": [
+        "java",
+        "code",
+        "service"
+      ],
+      "complexity": 7.7
+    },
+    {
+      "id": "function:ExchangeAppService.createSpotOrder",
+      "type": "function",
+      "name": "createSpotOrder",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "summary": "ExchangeAppService的方法createSpotOrder",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeAppService.createForwardOrder",
+      "type": "function",
+      "name": "createForwardOrder",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "summary": "ExchangeAppService的方法createForwardOrder",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeAppService.createPendingOrder",
+      "type": "function",
+      "name": "createPendingOrder",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "summary": "ExchangeAppService的方法createPendingOrder",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeAppService.applyOrderDefaults",
+      "type": "function",
+      "name": "applyOrderDefaults",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "summary": "ExchangeAppService的方法applyOrderDefaults",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.07
+    },
+    {
+      "id": "function:ExchangeAppService.calculateValueDate",
+      "type": "function",
+      "name": "calculateValueDate",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "summary": "ExchangeAppService的方法calculateValueDate",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeAppService.getOrderDetail",
+      "type": "function",
+      "name": "getOrderDetail",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "summary": "ExchangeAppService的方法getOrderDetail",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeAppService.pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "summary": "ExchangeAppService的方法pageQuery",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeAppService.lockRate",
+      "type": "function",
+      "name": "lockRate",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "summary": "ExchangeAppService的方法lockRate",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.07
+    },
+    {
+      "id": "function:ExchangeAppService.confirmOrder",
+      "type": "function",
+      "name": "confirmOrder",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "summary": "ExchangeAppService的方法confirmOrder",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeAppService.cancelOrder",
+      "type": "function",
+      "name": "cancelOrder",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "summary": "ExchangeAppService的方法cancelOrder",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.07
+    },
+    {
+      "id": "function:ExchangeAppService.reverseOrder",
+      "type": "function",
+      "name": "reverseOrder",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "summary": "ExchangeAppService的方法reverseOrder",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeAppService.getQuote",
+      "type": "function",
+      "name": "getQuote",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "summary": "ExchangeAppService的方法getQuote",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.08
+    },
+    {
+      "id": "function:ExchangeAppService.calculateAmount",
+      "type": "function",
+      "name": "calculateAmount",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "summary": "ExchangeAppService的方法calculateAmount",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.09
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/domain/event/OrderCancelledEvent.java",
+      "type": "file",
+      "name": "OrderCancelledEvent.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/event/OrderCancelledEvent.java",
+      "summary": "结售汇模块，OrderCancelledEvent.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 2.44
+    },
+    {
+      "id": "class:OrderCancelledEvent",
+      "type": "event",
+      "name": "OrderCancelledEvent",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/event/OrderCancelledEvent.java",
+      "summary": "订单取消事件，记录取消的订单ID、编号和原因",
+      "tags": [
+        "java",
+        "code",
+        "event"
+      ],
+      "complexity": 1.4
+    },
+    {
+      "id": "function:OrderCancelledEvent.eventName",
+      "type": "function",
+      "name": "eventName",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/event/OrderCancelledEvent.java",
+      "summary": "OrderCancelledEvent的方法eventName",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.05
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/domain/event/OrderConfirmedEvent.java",
+      "type": "file",
+      "name": "OrderConfirmedEvent.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/event/OrderConfirmedEvent.java",
+      "summary": "结售汇模块，OrderConfirmedEvent.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 2.78
+    },
+    {
+      "id": "class:OrderConfirmedEvent",
+      "type": "event",
+      "name": "OrderConfirmedEvent",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/event/OrderConfirmedEvent.java",
+      "summary": "订单确认事件，记录成交汇率和计算后的结算金额",
+      "tags": [
+        "java",
+        "code",
+        "event"
+      ],
+      "complexity": 1.7
+    },
+    {
+      "id": "function:OrderConfirmedEvent.eventName",
+      "type": "function",
+      "name": "eventName",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/event/OrderConfirmedEvent.java",
+      "summary": "OrderConfirmedEvent的方法eventName",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.05
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "type": "file",
+      "name": "ExchangeOrder.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "summary": "结售汇模块，ExchangeOrder.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 27.2
+    },
+    {
+      "id": "class:ExchangeOrder",
+      "type": "aggregate",
+      "name": "ExchangeOrder",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "summary": "结售汇订单聚合根，管理即期、远期和挂单的完整生命周期",
+      "tags": [
+        "java",
+        "code",
+        "aggregate"
+      ],
+      "complexity": 14.3
+    },
+    {
+      "id": "function:ExchangeOrder.create",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "summary": "ExchangeOrder的方法create",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.12
+    },
+    {
+      "id": "function:ExchangeOrder.reconstitute",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "summary": "ExchangeOrder的方法reconstitute",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.31
+    },
+    {
+      "id": "function:ExchangeOrder.confirm",
+      "type": "function",
+      "name": "confirm",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "summary": "ExchangeOrder的方法confirm",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeOrder.lockRate",
+      "type": "function",
+      "name": "lockRate",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "summary": "ExchangeOrder的方法lockRate",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.07
+    },
+    {
+      "id": "function:ExchangeOrder.assignRate",
+      "type": "function",
+      "name": "assignRate",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "summary": "ExchangeOrder的方法assignRate",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.08
+    },
+    {
+      "id": "function:ExchangeOrder.assignDates",
+      "type": "function",
+      "name": "assignDates",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "summary": "ExchangeOrder的方法assignDates",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.07
+    },
+    {
+      "id": "function:ExchangeOrder.assignAccountInfo",
+      "type": "function",
+      "name": "assignAccountInfo",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "summary": "ExchangeOrder的方法assignAccountInfo",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.09
+    },
+    {
+      "id": "function:ExchangeOrder.assignRemark",
+      "type": "function",
+      "name": "assignRemark",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "summary": "ExchangeOrder的方法assignRemark",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeOrder.cancel",
+      "type": "function",
+      "name": "cancel",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "summary": "ExchangeOrder的方法cancel",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeOrder.markReversed",
+      "type": "function",
+      "name": "markReversed",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "summary": "ExchangeOrder的方法markReversed",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.05
+    },
+    {
+      "id": "function:ExchangeOrder.calculateSettleAmount",
+      "type": "function",
+      "name": "calculateSettleAmount",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "summary": "ExchangeOrder的方法calculateSettleAmount",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.05
+    },
+    {
+      "id": "function:ExchangeOrder.isRateExpired",
+      "type": "function",
+      "name": "isRateExpired",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "summary": "ExchangeOrder的方法isRateExpired",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.05
+    },
+    {
+      "id": "function:ExchangeOrder.validate",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "summary": "ExchangeOrder的方法validate",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.05
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/domain/model/entity/ExchangeQuote.java",
+      "type": "file",
+      "name": "ExchangeQuote.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/entity/ExchangeQuote.java",
+      "summary": "结售汇模块，ExchangeQuote.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 3.37
+    },
+    {
+      "id": "class:ExchangeQuote",
+      "type": "entity",
+      "name": "ExchangeQuote",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/entity/ExchangeQuote.java",
+      "summary": "汇率报价实体，包含买入价、卖出价、中间价和有效期",
+      "tags": [
+        "java",
+        "code",
+        "entity"
+      ],
+      "complexity": 3
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/domain/model/query/ExchangeOrderQuery.java",
+      "type": "file",
+      "name": "ExchangeOrderQuery.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/query/ExchangeOrderQuery.java",
+      "summary": "结售汇模块，ExchangeOrderQuery.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 2.28
+    },
+    {
+      "id": "class:ExchangeOrderQuery",
+      "type": "query",
+      "name": "ExchangeOrderQuery",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/query/ExchangeOrderQuery.java",
+      "summary": "订单查询对象，继承 PageReq，支持按客户、类型、状态等多条件筛选",
+      "tags": [
+        "java",
+        "code",
+        "query"
+      ],
+      "complexity": 2.1
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/CurrencyPair.java",
+      "type": "file",
+      "name": "CurrencyPair.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/CurrencyPair.java",
+      "summary": "结售汇模块，CurrencyPair.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 6.18
+    },
+    {
+      "id": "class:CurrencyPair",
+      "type": "value-object",
+      "name": "CurrencyPair",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/CurrencyPair.java",
+      "summary": "货币对值对象，由基础货币和报价货币组成，支持符号输出",
+      "tags": [
+        "java",
+        "code",
+        "value-object"
+      ],
+      "complexity": 2.6
+    },
+    {
+      "id": "function:CurrencyPair.of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/CurrencyPair.java",
+      "summary": "CurrencyPair的方法of",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.07
+    },
+    {
+      "id": "function:CurrencyPair.symbol",
+      "type": "function",
+      "name": "symbol",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/CurrencyPair.java",
+      "summary": "CurrencyPair的方法symbol",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.05
+    },
+    {
+      "id": "function:CurrencyPair.equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/CurrencyPair.java",
+      "summary": "CurrencyPair的方法equals",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:CurrencyPair.hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/CurrencyPair.java",
+      "summary": "CurrencyPair的方法hashCode",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.05
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java",
+      "type": "file",
+      "name": "Money.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java",
+      "summary": "结售汇模块，Money.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 11.59
+    },
+    {
+      "id": "class:Money",
+      "type": "value-object",
+      "name": "Money",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java",
+      "summary": "金额值对象，包含金额和币种，支持算术运算和币种一致性校验",
+      "tags": [
+        "java",
+        "code",
+        "value-object"
+      ],
+      "complexity": 4.6
+    },
+    {
+      "id": "function:Money.of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java",
+      "summary": "Money的方法of",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.07
+    },
+    {
+      "id": "function:Money.zero",
+      "type": "function",
+      "name": "zero",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java",
+      "summary": "Money的方法zero",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:Money.add",
+      "type": "function",
+      "name": "add",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java",
+      "summary": "Money的方法add",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:Money.subtract",
+      "type": "function",
+      "name": "subtract",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java",
+      "summary": "Money的方法subtract",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:Money.multiply",
+      "type": "function",
+      "name": "multiply",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java",
+      "summary": "Money的方法multiply",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:Money.assertSameCurrency",
+      "type": "function",
+      "name": "assertSameCurrency",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java",
+      "summary": "Money的方法assertSameCurrency",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:Money.equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java",
+      "summary": "Money的方法equals",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:Money.hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java",
+      "summary": "Money的方法hashCode",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.05
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/OrderNo.java",
+      "type": "file",
+      "name": "OrderNo.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/OrderNo.java",
+      "summary": "结售汇模块，OrderNo.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 4.57
+    },
+    {
+      "id": "class:OrderNo",
+      "type": "value-object",
+      "name": "OrderNo",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/OrderNo.java",
+      "summary": "订单编号值对象，由前缀+时间戳+随机数生成唯一编号",
+      "tags": [
+        "java",
+        "code",
+        "value-object"
+      ],
+      "complexity": 1.8
+    },
+    {
+      "id": "function:OrderNo.generate",
+      "type": "function",
+      "name": "generate",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/OrderNo.java",
+      "summary": "OrderNo的方法generate",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:OrderNo.equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/OrderNo.java",
+      "summary": "OrderNo的方法equals",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:OrderNo.hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/OrderNo.java",
+      "summary": "OrderNo的方法hashCode",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.05
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/domain/repository/ExchangeOrderRepository.java",
+      "type": "file",
+      "name": "ExchangeOrderRepository.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/repository/ExchangeOrderRepository.java",
+      "summary": "结售汇模块，ExchangeOrderRepository.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 2.71
+    },
+    {
+      "id": "class:ExchangeOrderRepository",
+      "type": "repository",
+      "name": "ExchangeOrderRepository",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/repository/ExchangeOrderRepository.java",
+      "summary": "订单仓储接口，定义订单的增删改查和分页查询",
+      "tags": [
+        "java",
+        "code",
+        "repository"
+      ],
+      "complexity": 2.5
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/domain/repository/ExchangeQuoteRepository.java",
+      "type": "file",
+      "name": "ExchangeQuoteRepository.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/repository/ExchangeQuoteRepository.java",
+      "summary": "结售汇模块，ExchangeQuoteRepository.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 1.12
+    },
+    {
+      "id": "class:ExchangeQuoteRepository",
+      "type": "repository",
+      "name": "ExchangeQuoteRepository",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/repository/ExchangeQuoteRepository.java",
+      "summary": "报价仓储接口，定义报价的保存和最新报价查询",
+      "tags": [
+        "java",
+        "code",
+        "repository"
+      ],
+      "complexity": 1
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/domain/service/ExchangeDomainService.java",
+      "type": "file",
+      "name": "ExchangeDomainService.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/service/ExchangeDomainService.java",
+      "summary": "结售汇模块，ExchangeDomainService.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 9.14
+    },
+    {
+      "id": "class:ExchangeDomainService",
+      "type": "domain-service",
+      "name": "ExchangeDomainService",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/service/ExchangeDomainService.java",
+      "summary": "结售汇领域服务，核心业务逻辑：创建、确认、锁汇、取消、冲正及结算金额计算",
+      "tags": [
+        "java",
+        "code",
+        "domain-service"
+      ],
+      "complexity": 3.6
+    },
+    {
+      "id": "function:ExchangeDomainService.createOrder",
+      "type": "function",
+      "name": "createOrder",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/service/ExchangeDomainService.java",
+      "summary": "ExchangeDomainService的方法createOrder",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeDomainService.confirmOrder",
+      "type": "function",
+      "name": "confirmOrder",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/service/ExchangeDomainService.java",
+      "summary": "ExchangeDomainService的方法confirmOrder",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.07
+    },
+    {
+      "id": "function:ExchangeDomainService.lockRate",
+      "type": "function",
+      "name": "lockRate",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/service/ExchangeDomainService.java",
+      "summary": "ExchangeDomainService的方法lockRate",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.08
+    },
+    {
+      "id": "function:ExchangeDomainService.cancelOrder",
+      "type": "function",
+      "name": "cancelOrder",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/service/ExchangeDomainService.java",
+      "summary": "ExchangeDomainService的方法cancelOrder",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.07
+    },
+    {
+      "id": "function:ExchangeDomainService.reverseOrder",
+      "type": "function",
+      "name": "reverseOrder",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/service/ExchangeDomainService.java",
+      "summary": "ExchangeDomainService的方法reverseOrder",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeDomainService.calculateSettleAmount",
+      "type": "function",
+      "name": "calculateSettleAmount",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/service/ExchangeDomainService.java",
+      "summary": "ExchangeDomainService的方法calculateSettleAmount",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.08
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/domain/service/QuoteDomainService.java",
+      "type": "file",
+      "name": "QuoteDomainService.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/service/QuoteDomainService.java",
+      "summary": "结售汇模块，QuoteDomainService.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 3.31
+    },
+    {
+      "id": "class:QuoteDomainService",
+      "type": "domain-service",
+      "name": "QuoteDomainService",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/service/QuoteDomainService.java",
+      "summary": "报价领域服务，创建汇率报价并校验报价有效性",
+      "tags": [
+        "java",
+        "code",
+        "domain-service"
+      ],
+      "complexity": 1.3
+    },
+    {
+      "id": "function:QuoteDomainService.createQuote",
+      "type": "function",
+      "name": "createQuote",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/service/QuoteDomainService.java",
+      "summary": "QuoteDomainService的方法createQuote",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.11
+    },
+    {
+      "id": "function:QuoteDomainService.isQuoteValid",
+      "type": "function",
+      "name": "isQuoteValid",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/domain/service/QuoteDomainService.java",
+      "summary": "QuoteDomainService的方法isQuoteValid",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/ExchangeApplication.java",
+      "type": "file",
+      "name": "ExchangeApplication.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/ExchangeApplication.java",
+      "summary": "结售汇模块，ExchangeApplication.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 1.45
+    },
+    {
+      "id": "class:ExchangeApplication",
+      "type": "application",
+      "name": "ExchangeApplication",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/ExchangeApplication.java",
+      "summary": "Exchange 模块启动入口，启用服务发现和 Mapper 扫描",
+      "tags": [
+        "java",
+        "code",
+        "application"
+      ],
+      "complexity": 0.5
+    },
+    {
+      "id": "function:ExchangeApplication.main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/ExchangeApplication.java",
+      "summary": "ExchangeApplication的方法main",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/infrastructure/mapper/ExchangeOrderMapper.java",
+      "type": "file",
+      "name": "ExchangeOrderMapper.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/mapper/ExchangeOrderMapper.java",
+      "summary": "结售汇模块，ExchangeOrderMapper.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 4.39
+    },
+    {
+      "id": "class:ExchangeOrderMapper",
+      "type": "mapper",
+      "name": "ExchangeOrderMapper",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/mapper/ExchangeOrderMapper.java",
+      "summary": "订单 MyBatis 映射器，提供按订单号/客户ID查询和动态分页",
+      "tags": [
+        "java",
+        "code",
+        "mapper"
+      ],
+      "complexity": 1.5
+    },
+    {
+      "id": "function:ExchangeOrderMapper.selectByOrderNo",
+      "type": "function",
+      "name": "selectByOrderNo",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/mapper/ExchangeOrderMapper.java",
+      "summary": "ExchangeOrderMapper的方法selectByOrderNo",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeOrderMapper.selectByCustomerId",
+      "type": "function",
+      "name": "selectByCustomerId",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/mapper/ExchangeOrderMapper.java",
+      "summary": "ExchangeOrderMapper的方法selectByCustomerId",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeOrderMapper.pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/mapper/ExchangeOrderMapper.java",
+      "summary": "ExchangeOrderMapper的方法pageQuery",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.07
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/infrastructure/mapper/ExchangeQuoteMapper.java",
+      "type": "file",
+      "name": "ExchangeQuoteMapper.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/mapper/ExchangeQuoteMapper.java",
+      "summary": "结售汇模块，ExchangeQuoteMapper.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 1.5
+    },
+    {
+      "id": "class:ExchangeQuoteMapper",
+      "type": "mapper",
+      "name": "ExchangeQuoteMapper",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/mapper/ExchangeQuoteMapper.java",
+      "summary": "报价 MyBatis 映射器，获取指定货币对的最新报价",
+      "tags": [
+        "java",
+        "code",
+        "mapper"
+      ],
+      "complexity": 0.5
+    },
+    {
+      "id": "function:ExchangeQuoteMapper.selectLatestQuote",
+      "type": "function",
+      "name": "selectLatestQuote",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/mapper/ExchangeQuoteMapper.java",
+      "summary": "ExchangeQuoteMapper的方法selectLatestQuote",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.08
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/infrastructure/persistence/ExchangeOrderPO.java",
+      "type": "file",
+      "name": "ExchangeOrderPO.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/persistence/ExchangeOrderPO.java",
+      "summary": "结售汇模块，ExchangeOrderPO.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 8.25
+    },
+    {
+      "id": "class:ExchangeOrderPO",
+      "type": "po",
+      "name": "ExchangeOrderPO",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/persistence/ExchangeOrderPO.java",
+      "summary": "订单持久化对象，映射 t_exchange_order 表，继承 BasePO",
+      "tags": [
+        "java",
+        "code",
+        "po"
+      ],
+      "complexity": 7.8
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/infrastructure/persistence/ExchangeQuotePO.java",
+      "type": "file",
+      "name": "ExchangeQuotePO.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/persistence/ExchangeQuotePO.java",
+      "summary": "结售汇模块，ExchangeQuotePO.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 3.27
+    },
+    {
+      "id": "class:ExchangeQuotePO",
+      "type": "po",
+      "name": "ExchangeQuotePO",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/persistence/ExchangeQuotePO.java",
+      "summary": "报价持久化对象，映射 t_exchange_quote 表",
+      "tags": [
+        "java",
+        "code",
+        "po"
+      ],
+      "complexity": 3
+    },
+    {
+      "id": "file:forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeOrderRepositoryImpl.java",
+      "type": "file",
+      "name": "ExchangeOrderRepositoryImpl.java",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeOrderRepositoryImpl.java",
+      "summary": "结售汇模块，ExchangeOrderRepositoryImpl.java",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 10.66
+    },
+    {
+      "id": "class:ExchangeOrderRepositoryImpl",
+      "type": "repository-impl",
+      "name": "ExchangeOrderRepositoryImpl",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeOrderRepositoryImpl.java",
+      "summary": "订单仓储实现，封装 MyBatis-Plus CRUD 操作，完成 PO 与领域对象双向转换",
+      "tags": [
+        "java",
+        "code",
+        "repository-impl"
+      ],
+      "complexity": 3.8
+    },
+    {
+      "id": "function:ExchangeOrderRepositoryImpl.save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeOrderRepositoryImpl.java",
+      "summary": "ExchangeOrderRepositoryImpl的方法save",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeOrderRepositoryImpl.findById",
+      "type": "function",
+      "name": "findById",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeOrderRepositoryImpl.java",
+      "summary": "ExchangeOrderRepositoryImpl的方法findById",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeOrderRepositoryImpl.findByOrderNo",
+      "type": "function",
+      "name": "findByOrderNo",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeOrderRepositoryImpl.java",
+      "summary": "ExchangeOrderRepositoryImpl的方法findByOrderNo",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeOrderRepositoryImpl.findByCustomerId",
+      "type": "function",
+      "name": "findByCustomerId",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeOrderRepositoryImpl.java",
+      "summary": "ExchangeOrderRepositoryImpl的方法findByCustomerId",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeOrderRepositoryImpl.pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeOrderRepositoryImpl.java",
+      "summary": "ExchangeOrderRepositoryImpl的方法pageQuery",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeOrderRepositoryImpl.toDomain",
+      "type": "function",
+      "name": "toDomain",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeOrderRepositoryImpl.java",
+      "summary": "ExchangeOrderRepositoryImpl的方法toDomain",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    },
+    {
+      "id": "function:ExchangeOrderRepositoryImpl.toPO",
+      "type": "function",
+      "name": "toPO",
+      "filePath": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeOrderRepositoryImpl.java",
+      "summary": "ExchangeOrderRepositoryImpl的方法toPO",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.06
+    }
+  ],
+  "edges": [
+    {
+      "source": "class:QuoteResp",
+      "target": "class:BigDecimal",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:QuoteResp",
+      "target": "class:LocalDateTime",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:RateLockReq",
+      "target": "class:BigDecimal",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:CreateOrderCmd",
+      "target": "class:BigDecimal",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:CreateOrderCmd",
+      "target": "class:LocalDate",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:EnterpriseQuoteService",
+      "target": "class:BigDecimal",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:EnterpriseQuoteService",
+      "target": "class:LinkedHashMap",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:EnterpriseQuoteService",
+      "target": "class:List",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:EnterpriseQuoteService",
+      "target": "class:Map",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeAppService",
+      "target": "class:PageResp",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeAppService",
+      "target": "class:CancelOrderCmd",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeAppService",
+      "target": "class:CreateOrderCmd",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeAppService",
+      "target": "class:ExchangeOrderQuery",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeAppService",
+      "target": "class:ExchangeOrder",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeAppService",
+      "target": "class:ExchangeQuote",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeAppService",
+      "target": "class:ExchangeOrderRepository",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeAppService",
+      "target": "class:ExchangeQuoteRepository",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeAppService",
+      "target": "class:ExchangeDomainService",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeAppService",
+      "target": "class:QuoteDomainService",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeAppService",
+      "target": "class:BigDecimal",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeAppService",
+      "target": "class:RoundingMode",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeAppService",
+      "target": "class:LocalDate",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeAppService",
+      "target": "class:BusinessException",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeAppService",
+      "target": "class:ResultCode",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:ExchangeAppService.createSpotOrder",
+      "target": "function:ExchangeOrder.create",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.createSpotOrder",
+      "target": "function:ExchangeDomainService.createOrder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.createSpotOrder",
+      "target": "function:ExchangeOrderRepository.findByOrderNo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.createSpotOrder",
+      "target": "function:ExchangeAppService.applyOrderDefaults",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.createForwardOrder",
+      "target": "function:ExchangeOrder.create",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.createForwardOrder",
+      "target": "function:ExchangeDomainService.createOrder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.createForwardOrder",
+      "target": "function:ExchangeOrderRepository.findByOrderNo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.createForwardOrder",
+      "target": "function:ExchangeAppService.applyOrderDefaults",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.createPendingOrder",
+      "target": "function:ExchangeOrder.create",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.createPendingOrder",
+      "target": "function:ExchangeDomainService.createOrder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.createPendingOrder",
+      "target": "function:ExchangeOrderRepository.findByOrderNo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.createPendingOrder",
+      "target": "function:ExchangeAppService.applyOrderDefaults",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.getOrderDetail",
+      "target": "function:ExchangeOrderRepository.findByOrderNo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.pageQuery",
+      "target": "function:ExchangeOrderRepository.pageQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.lockRate",
+      "target": "function:ExchangeOrderRepository.findByOrderNo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.lockRate",
+      "target": "function:ExchangeDomainService.lockRate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.confirmOrder",
+      "target": "function:ExchangeOrderRepository.findByOrderNo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.confirmOrder",
+      "target": "function:ExchangeDomainService.confirmOrder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.cancelOrder",
+      "target": "function:ExchangeOrderRepository.findByOrderNo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.cancelOrder",
+      "target": "function:ExchangeDomainService.cancelOrder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.reverseOrder",
+      "target": "function:ExchangeOrderRepository.findByOrderNo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.reverseOrder",
+      "target": "function:ExchangeDomainService.reverseOrder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.getQuote",
+      "target": "function:ExchangeQuoteRepository.findLatestQuote",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeAppService.calculateAmount",
+      "target": "function:ExchangeAppService.getQuote",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:OrderCancelledEvent",
+      "target": "class:BaseDomainEvent",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:OrderConfirmedEvent",
+      "target": "class:BaseDomainEvent",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:OrderConfirmedEvent",
+      "target": "class:BigDecimal",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrder",
+      "target": "class:BaseAggregate",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrder",
+      "target": "class:BusinessException",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrder",
+      "target": "class:Money",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrder",
+      "target": "class:OrderNo",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrder",
+      "target": "class:BigDecimal",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrder",
+      "target": "class:LocalDate",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrder",
+      "target": "class:LocalDateTime",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:ExchangeOrder.create",
+      "target": "function:OrderNo.generate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeOrder.create",
+      "target": "function:ExchangeOrder.validate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeOrder.confirm",
+      "target": "function:ExchangeOrder.calculateSettleAmount",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeOrder.validate",
+      "target": "class:BusinessException",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:ExchangeQuote",
+      "target": "class:BaseEntity",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeQuote",
+      "target": "class:BigDecimal",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeQuote",
+      "target": "class:LocalDateTime",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderQuery",
+      "target": "class:PageReq",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:CurrencyPair",
+      "target": "class:BaseValueObject",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:CurrencyPair",
+      "target": "class:Objects",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Money",
+      "target": "class:BaseValueObject",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Money",
+      "target": "class:BigDecimal",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Money",
+      "target": "class:Objects",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Money",
+      "target": "class:BusinessException",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Money",
+      "target": "class:ResultCode",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:Money.add",
+      "target": "function:Money.assertSameCurrency",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Money.subtract",
+      "target": "function:Money.assertSameCurrency",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Money.assertSameCurrency",
+      "target": "class:BusinessException",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:Money.assertSameCurrency",
+      "target": "class:ResultCode",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:OrderNo",
+      "target": "class:BaseValueObject",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:OrderNo",
+      "target": "class:LocalDateTime",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:OrderNo",
+      "target": "class:DateTimeFormatter",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:OrderNo",
+      "target": "class:Objects",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:OrderNo",
+      "target": "class:ThreadLocalRandom",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderRepository",
+      "target": "class:PageResp",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderRepository",
+      "target": "class:ExchangeOrder",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderRepository",
+      "target": "class:ExchangeOrderQuery",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderRepository",
+      "target": "class:List",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderRepository",
+      "target": "class:Optional",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeQuoteRepository",
+      "target": "class:ExchangeQuote",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeQuoteRepository",
+      "target": "class:Optional",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeDomainService",
+      "target": "class:BusinessException",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeDomainService",
+      "target": "class:OrderCancelledEvent",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeDomainService",
+      "target": "class:OrderConfirmedEvent",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeDomainService",
+      "target": "class:ExchangeOrder",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeDomainService",
+      "target": "class:ExchangeOrderRepository",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeDomainService",
+      "target": "class:BigDecimal",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:ExchangeDomainService.createOrder",
+      "target": "function:ExchangeOrderRepository.save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeDomainService.confirmOrder",
+      "target": "function:ExchangeOrder.isRateExpired",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeDomainService.confirmOrder",
+      "target": "function:ExchangeDomainService.calculateSettleAmount",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeDomainService.confirmOrder",
+      "target": "function:ExchangeOrder.confirm",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeDomainService.confirmOrder",
+      "target": "function:ExchangeOrderRepository.save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeDomainService.confirmOrder",
+      "target": "function:ApplicationEventPublisher.publishEvent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeDomainService.lockRate",
+      "target": "function:ExchangeOrder.lockRate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeDomainService.lockRate",
+      "target": "function:ExchangeOrderRepository.save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeDomainService.cancelOrder",
+      "target": "function:ExchangeOrder.cancel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeDomainService.cancelOrder",
+      "target": "function:ExchangeOrderRepository.save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeDomainService.cancelOrder",
+      "target": "function:ApplicationEventPublisher.publishEvent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeDomainService.reverseOrder",
+      "target": "function:ExchangeOrder.markReversed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeDomainService.reverseOrder",
+      "target": "function:ExchangeOrderRepository.save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:QuoteDomainService",
+      "target": "class:ExchangeQuote",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:QuoteDomainService",
+      "target": "class:ExchangeQuoteRepository",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:QuoteDomainService",
+      "target": "class:BigDecimal",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:QuoteDomainService",
+      "target": "class:RoundingMode",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:QuoteDomainService",
+      "target": "class:LocalDateTime",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:QuoteDomainService.createQuote",
+      "target": "function:ExchangeQuoteRepository.save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:QuoteDomainService.isQuoteValid",
+      "target": "class:ExchangeQuote",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:ExchangeApplication",
+      "target": "class:MapperScan",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderMapper",
+      "target": "class:BaseMapperExt",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderMapper",
+      "target": "class:ExchangeOrderPO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderMapper",
+      "target": "class:List",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeQuoteMapper",
+      "target": "class:ExchangeQuotePO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderPO",
+      "target": "class:BasePO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderPO",
+      "target": "class:BigDecimal",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderPO",
+      "target": "class:LocalDate",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderPO",
+      "target": "class:LocalDateTime",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeQuotePO",
+      "target": "class:BigDecimal",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeQuotePO",
+      "target": "class:LocalDateTime",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderRepositoryImpl",
+      "target": "class:PageResp",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderRepositoryImpl",
+      "target": "class:ExchangeOrderQuery",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderRepositoryImpl",
+      "target": "class:ExchangeOrder",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderRepositoryImpl",
+      "target": "class:ExchangeOrderRepository",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderRepositoryImpl",
+      "target": "class:ExchangeOrderMapper",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderRepositoryImpl",
+      "target": "class:ExchangeOrderPO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderRepositoryImpl",
+      "target": "class:List",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ExchangeOrderRepositoryImpl",
+      "target": "class:Optional",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:ExchangeOrderRepositoryImpl.save",
+      "target": "function:ExchangeOrderRepositoryImpl.toPO",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeOrderRepositoryImpl.save",
+      "target": "function:ExchangeOrderMapper.insert",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeOrderRepositoryImpl.save",
+      "target": "function:ExchangeOrderMapper.updateById",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeOrderRepositoryImpl.save",
+      "target": "function:ExchangeOrderRepositoryImpl.toDomain",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeOrderRepositoryImpl.findById",
+      "target": "function:ExchangeOrderMapper.selectById",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeOrderRepositoryImpl.findById",
+      "target": "function:ExchangeOrderRepositoryImpl.toDomain",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeOrderRepositoryImpl.findByOrderNo",
+      "target": "function:ExchangeOrderMapper.selectByOrderNo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeOrderRepositoryImpl.findByOrderNo",
+      "target": "function:ExchangeOrderRepositoryImpl.toDomain",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeOrderRepositoryImpl.findByCustomerId",
+      "target": "function:ExchangeOrderMapper.selectByCustomerId",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeOrderRepositoryImpl.findByCustomerId",
+      "target": "function:ExchangeOrderRepositoryImpl.toDomain",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeOrderRepositoryImpl.pageQuery",
+      "target": "function:ExchangeOrderMapper.pageQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeOrderRepositoryImpl.pageQuery",
+      "target": "function:ExchangeOrderRepositoryImpl.toDomain",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ExchangeOrderRepositoryImpl.toDomain",
+      "target": "function:ExchangeOrder.reconstitute",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

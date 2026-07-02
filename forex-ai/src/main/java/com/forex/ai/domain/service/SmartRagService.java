@@ -1,67 +1,36 @@
 package com.forex.ai.domain.service;
 
-import java.util.List;
-
-import org.springframework.stereotype.Service;
-
-import com.forex.ai.domain.model.aggregate.RiskAiAssessment;
-import com.forex.ai.infrastructure.rag.KnowledgeBaseInitializer;
-
+import com.forex.ai.infrastructure.llm.DeepSeekChatClient;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.stereotype.Service;
 
-@Service
+import java.util.*;
+
 @Slf4j
+@Service
 @RequiredArgsConstructor
-@Transactional
 public class SmartRagService {
 
-    private final KnowledgeBaseInitializer knowledgeBaseInitializer;
+    private final DeepSeekChatClient chatClient;
 
-    public String answerQuery(String userQuestion, String context) {
-        log.info("RAG answering question: {}", userQuestion);
-        List<String> relevantDocs = knowledgeBaseInitializer.searchRelevant(userQuestion, 3);
+    public Map<String, Object> search(String query) {
+        Map<String, Object> result = new LinkedHashMap<>();
 
-        StringBuilder answer = new StringBuilder();
-        answer.append("Based on the knowledge base:\n\n");
-        for (int i = 0; i < relevantDocs.size(); i++) {
-            answer.append("**Reference ").append(i + 1).append(":** ")
-                    .append(relevantDocs.get(i)).append("\n\n");
-        }
-        if (context != null && !context.isBlank()) {
-            answer.append("**Context:** ").append(context).append("\n\n");
-        }
-        answer.append("**Answer:** ").append(generateAnswer(userQuestion, relevantDocs));
-        return answer.toString();
-    }
+        String systemPrompt = """
+            你是一个外汇银行业务专家助手。你的知识涵盖：
+            - 外汇管理条例
+            - 跨境支付与清算规则
+            - 信用证、托收、保函等国际结算业务流程
+            - 反洗钱合规要求
+            - 外汇风险管理
+            - 贵金属交易规则
+            请基于以上知识回答用户问题。
+            """;
 
-    public String generateReport(List<RiskAiAssessment> assessments, String reportType) {
-        if (assessments == null || assessments.isEmpty()) {
-            return "无评估数据，无法生成报告。";
-        }
-        StringBuilder report = new StringBuilder();
-        report.append("## ").append(reportType).append(" Report\n\n");
-        report.append("评估总数: ").append(assessments.size()).append("\n\n");
-
-        long highCount = assessments.stream().filter(RiskAiAssessment::isEscalated).count();
-        report.append("需关注项: ").append(highCount).append("\n\n");
-
-        for (RiskAiAssessment assessment : assessments) {
-            report.append("- [").append(assessment.getRiskLevel()).append("] ")
-                    .append(assessment.getBizNo()).append(": ")
-                    .append(assessment.getAiAnalysis()).append("\n");
-        }
-        return report.toString();
-    }
-
-    private String generateAnswer(String question, List<String> relevantDocs) {
-        if (question.contains("外汇") || question.contains("forex")) {
-            return "根据外汇管理规定，需严格遵守客户尽职调查和交易监控要求。";
-        }
-        if (question.contains("反洗钱") || question.contains("AML")) {
-            return "根据反洗钱规定，大额和可疑交易需在规定时限内上报。";
-        }
-        return "根据相关政策和规定，建议参照最近的外汇业务操作指引执行。";
+        String answer = chatClient.chat(systemPrompt, query);
+        result.put("answer", answer);
+        result.put("query", query);
+        return result;
     }
 }

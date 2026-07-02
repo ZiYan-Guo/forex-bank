@@ -1,0 +1,3107 @@
+{
+  "nodes": [
+    {
+      "id": "file:docker/docker-compose.yml",
+      "type": "config",
+      "name": "docker-compose.yml",
+      "filePath": "docker/docker-compose.yml",
+      "summary": "Docker Compose 编排文件，定义 MySQL、Redis、Nacos 等基础设施服务及网络、数据卷。",
+      "tags": [
+        "docker",
+        "部署",
+        "基础设施"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:docker/nacos/conf/application.properties",
+      "type": "config",
+      "name": "application.properties",
+      "filePath": "docker/nacos/conf/application.properties",
+      "summary": "Nacos 配置中心的应用配置文件，设置数据源等启动参数。",
+      "tags": [
+        "nacos",
+        "配置",
+        "注册中心"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-account/pom.xml",
+      "summary": "forex-account 账户微服务的 Maven 构建配置，声明依赖与父模块。",
+      "tags": [
+        "maven",
+        "构建",
+        "依赖管理"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "type": "file",
+      "name": "AccountApplication.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "summary": "账户服务 Spring Boot 启动类，启用服务发现与 MyBatis Mapper 扫描。",
+      "tags": [
+        "启动类",
+        "SpringBoot",
+        "微服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/AccountApplication.java:AccountApplication",
+      "type": "class",
+      "name": "AccountApplication",
+      "filePath": "forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "summary": "账户服务 Spring Boot 启动类，启用服务发现与 MyBatis Mapper 扫描。",
+      "tags": [
+        "启动类",
+        "SpringBoot",
+        "微服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/AccountApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "summary": "方法 main(args)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "type": "file",
+      "name": "AccountController.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "summary": "账户 REST 控制器，提供开户、销户、存取款、冻结解冻、查询交易等 HTTP 接口，并将领域对象转换为响应 DTO。",
+      "tags": [
+        "controller",
+        "REST",
+        "适配层"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:AccountController",
+      "type": "class",
+      "name": "AccountController",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "summary": "账户 REST 控制器，提供开户、销户、存取款、冻结解冻、查询交易等 HTTP 接口，并将领域对象转换为响应 DTO。",
+      "tags": [
+        "controller",
+        "REST",
+        "适配层"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:openAccount",
+      "type": "function",
+      "name": "openAccount",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "summary": "方法 openAccount(req)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:closeAccount",
+      "type": "function",
+      "name": "closeAccount",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "summary": "方法 closeAccount(id)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getById",
+      "type": "function",
+      "name": "getById",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "summary": "方法 getById(id)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getByAccountNo",
+      "type": "function",
+      "name": "getByAccountNo",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "summary": "方法 getByAccountNo(accountNo)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getCustomerAccounts",
+      "type": "function",
+      "name": "getCustomerAccounts",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "summary": "方法 getCustomerAccounts(customerId)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:deposit",
+      "type": "function",
+      "name": "deposit",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "summary": "方法 deposit(req)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:withdraw",
+      "type": "function",
+      "name": "withdraw",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "summary": "方法 withdraw(req)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:freeze",
+      "type": "function",
+      "name": "freeze",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "summary": "方法 freeze(req)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:unfreeze",
+      "type": "function",
+      "name": "unfreeze",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "summary": "方法 unfreeze(req)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getTransactions",
+      "type": "function",
+      "name": "getTransactions",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "summary": "方法 getTransactions(accountId, pageReq)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:toAccountResp",
+      "type": "function",
+      "name": "toAccountResp",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "summary": "方法 toAccountResp(account)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:toTransactionResp",
+      "type": "function",
+      "name": "toTransactionResp",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "summary": "方法 toTransactionResp(tx)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/adapter/dto/AccountOperationReq.java",
+      "type": "file",
+      "name": "AccountOperationReq.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/dto/AccountOperationReq.java",
+      "summary": "账户操作（存款/取款/冻结）请求 DTO，含金额与业务关联号校验。",
+      "tags": [
+        "dto",
+        "请求",
+        "校验"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/adapter/dto/AccountOperationReq.java:AccountOperationReq",
+      "type": "class",
+      "name": "AccountOperationReq",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/dto/AccountOperationReq.java",
+      "summary": "账户操作（存款/取款/冻结）请求 DTO，含金额与业务关联号校验。",
+      "tags": [
+        "dto",
+        "请求",
+        "校验"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/adapter/dto/AccountResp.java",
+      "type": "file",
+      "name": "AccountResp.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/dto/AccountResp.java",
+      "summary": "账户信息响应 DTO，返回账户余额、状态、利率等完整字段。",
+      "tags": [
+        "dto",
+        "响应"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/adapter/dto/AccountResp.java:AccountResp",
+      "type": "class",
+      "name": "AccountResp",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/dto/AccountResp.java",
+      "summary": "账户信息响应 DTO，返回账户余额、状态、利率等完整字段。",
+      "tags": [
+        "dto",
+        "响应"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/adapter/dto/OpenAccountReq.java",
+      "type": "file",
+      "name": "OpenAccountReq.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/dto/OpenAccountReq.java",
+      "summary": "开户请求 DTO，包含客户号、账户类型、币种等字段及校验。",
+      "tags": [
+        "dto",
+        "请求",
+        "开户"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/adapter/dto/OpenAccountReq.java:OpenAccountReq",
+      "type": "class",
+      "name": "OpenAccountReq",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/dto/OpenAccountReq.java",
+      "summary": "开户请求 DTO，包含客户号、账户类型、币种等字段及校验。",
+      "tags": [
+        "dto",
+        "请求",
+        "开户"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/adapter/dto/TransactionResp.java",
+      "type": "file",
+      "name": "TransactionResp.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/dto/TransactionResp.java",
+      "summary": "交易流水响应 DTO，返回交易类型、金额、前后余额等信息。",
+      "tags": [
+        "dto",
+        "响应",
+        "交易"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/adapter/dto/TransactionResp.java:TransactionResp",
+      "type": "class",
+      "name": "TransactionResp",
+      "filePath": "forex-account/src/main/java/com/forex/account/adapter/dto/TransactionResp.java",
+      "summary": "交易流水响应 DTO，返回交易类型、金额、前后余额等信息。",
+      "tags": [
+        "dto",
+        "响应",
+        "交易"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/application/command/AccountOperationCmd.java",
+      "type": "file",
+      "name": "AccountOperationCmd.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/command/AccountOperationCmd.java",
+      "summary": "账户操作应用层命令对象，封装存取款/冻结等参数。",
+      "tags": [
+        "command",
+        "应用层",
+        "CQRS"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/application/command/AccountOperationCmd.java:AccountOperationCmd",
+      "type": "class",
+      "name": "AccountOperationCmd",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/command/AccountOperationCmd.java",
+      "summary": "账户操作应用层命令对象，封装存取款/冻结等参数。",
+      "tags": [
+        "command",
+        "应用层",
+        "CQRS"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/application/command/OpenAccountCmd.java",
+      "type": "file",
+      "name": "OpenAccountCmd.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/command/OpenAccountCmd.java",
+      "summary": "开户应用层命令对象，封装开户所需参数。",
+      "tags": [
+        "command",
+        "应用层",
+        "CQRS"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/application/command/OpenAccountCmd.java:OpenAccountCmd",
+      "type": "class",
+      "name": "OpenAccountCmd",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/command/OpenAccountCmd.java",
+      "summary": "开户应用层命令对象，封装开户所需参数。",
+      "tags": [
+        "command",
+        "应用层",
+        "CQRS"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/application/query/AccountDetailDTO.java",
+      "type": "file",
+      "name": "AccountDetailDTO.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/query/AccountDetailDTO.java",
+      "summary": "账户详情查询 DTO，用于查询侧返回账户明细数据。",
+      "tags": [
+        "query",
+        "dto",
+        "CQRS"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/application/query/AccountDetailDTO.java:AccountDetailDTO",
+      "type": "class",
+      "name": "AccountDetailDTO",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/query/AccountDetailDTO.java",
+      "summary": "账户详情查询 DTO，用于查询侧返回账户明细数据。",
+      "tags": [
+        "query",
+        "dto",
+        "CQRS"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/application/query/AccountQuery.java",
+      "type": "file",
+      "name": "AccountQuery.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/query/AccountQuery.java",
+      "summary": "账户分页查询条件对象，继承分页请求，含客户号、状态、币种过滤。",
+      "tags": [
+        "query",
+        "分页",
+        "CQRS"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/application/query/AccountQuery.java:AccountQuery",
+      "type": "class",
+      "name": "AccountQuery",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/query/AccountQuery.java",
+      "summary": "账户分页查询条件对象，继承分页请求，含客户号、状态、币种过滤。",
+      "tags": [
+        "query",
+        "分页",
+        "CQRS"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/application/query/TransactionDTO.java",
+      "type": "file",
+      "name": "TransactionDTO.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/query/TransactionDTO.java",
+      "summary": "交易流水查询 DTO，用于查询侧返回交易明细数据。",
+      "tags": [
+        "query",
+        "dto",
+        "CQRS"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/application/query/TransactionDTO.java:TransactionDTO",
+      "type": "class",
+      "name": "TransactionDTO",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/query/TransactionDTO.java",
+      "summary": "交易流水查询 DTO，用于查询侧返回交易明细数据。",
+      "tags": [
+        "query",
+        "dto",
+        "CQRS"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "type": "file",
+      "name": "AccountAppService.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "summary": "账户应用服务，编排领域服务、仓储与事件发布，实现开户、销户、存取款、冻结解冻及交易查询等用例，并管理事务。",
+      "tags": [
+        "应用服务",
+        "用例编排",
+        "事务",
+        "事件发布"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:AccountAppService",
+      "type": "class",
+      "name": "AccountAppService",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "summary": "账户应用服务，编排领域服务、仓储与事件发布，实现开户、销户、存取款、冻结解冻及交易查询等用例，并管理事务。",
+      "tags": [
+        "应用服务",
+        "用例编排",
+        "事务",
+        "事件发布"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:openAccount",
+      "type": "function",
+      "name": "openAccount",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "summary": "方法 openAccount(cmd)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:closeAccount",
+      "type": "function",
+      "name": "closeAccount",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "summary": "方法 closeAccount(accountId)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getAccountDetail",
+      "type": "function",
+      "name": "getAccountDetail",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "summary": "方法 getAccountDetail(accountId)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getAccountByNo",
+      "type": "function",
+      "name": "getAccountByNo",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "summary": "方法 getAccountByNo(accountNo)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getCustomerAccounts",
+      "type": "function",
+      "name": "getCustomerAccounts",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "summary": "方法 getCustomerAccounts(customerId)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getTransactions",
+      "type": "function",
+      "name": "getTransactions",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "summary": "方法 getTransactions(accountId, pageReq)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:deposit",
+      "type": "function",
+      "name": "deposit",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "summary": "方法 deposit(accountId, amount, relatedBizNo, summary)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:withdraw",
+      "type": "function",
+      "name": "withdraw",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "summary": "方法 withdraw(accountId, amount, relatedBizNo, summary)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:freeze",
+      "type": "function",
+      "name": "freeze",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "summary": "方法 freeze(accountId, amount)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:unfreeze",
+      "type": "function",
+      "name": "unfreeze",
+      "filePath": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "summary": "方法 unfreeze(accountId, amount)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java",
+      "type": "file",
+      "name": "AccountOpenedEvent.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java",
+      "summary": "账户已开户领域事件，携带账户号、客户号、币种等信息。",
+      "tags": [
+        "领域事件",
+        "DDD"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java:AccountOpenedEvent",
+      "type": "class",
+      "name": "AccountOpenedEvent",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java",
+      "summary": "账户已开户领域事件，携带账户号、客户号、币种等信息。",
+      "tags": [
+        "领域事件",
+        "DDD"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java:AccountOpenedEvent",
+      "type": "function",
+      "name": "AccountOpenedEvent",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java",
+      "summary": "方法 AccountOpenedEvent(accountId, accountNo, customerId, currency)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java:eventName",
+      "type": "function",
+      "name": "eventName",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java",
+      "summary": "方法 eventName()",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java",
+      "type": "file",
+      "name": "BalanceChangedEvent.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java",
+      "summary": "余额变动领域事件，携带交易金额、类型与变动后余额。",
+      "tags": [
+        "领域事件",
+        "DDD"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java:BalanceChangedEvent",
+      "type": "class",
+      "name": "BalanceChangedEvent",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java",
+      "summary": "余额变动领域事件，携带交易金额、类型与变动后余额。",
+      "tags": [
+        "领域事件",
+        "DDD"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java:BalanceChangedEvent",
+      "type": "function",
+      "name": "BalanceChangedEvent",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java",
+      "summary": "方法 BalanceChangedEvent(accountId, accountNo, amount, txType, balanceAfter)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java:eventName",
+      "type": "function",
+      "name": "eventName",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java",
+      "summary": "方法 eventName()",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "type": "file",
+      "name": "ForexAccount.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "外汇账户聚合根，封装账户核心业务规则：存取款、冻结解冻、销户、可用余额计算与校验。",
+      "tags": [
+        "聚合根",
+        "DDD",
+        "领域模型",
+        "业务规则"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "type": "class",
+      "name": "ForexAccount",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "外汇账户聚合根，封装账户核心业务规则：存取款、冻结解冻、销户、可用余额计算与校验。",
+      "tags": [
+        "聚合根",
+        "DDD",
+        "领域模型",
+        "业务规则"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "type": "function",
+      "name": "ForexAccount",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "方法 ForexAccount()",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "方法 create(customerId, accountType, currency, accountName, openBranch)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:reconstitute",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "方法 reconstitute(id, accountNo, customerId, accountType, currency, accountName, balance, frozenAmount, availableBalance, openDate, openBranch, accountStatus, interestRate, isInterestBearing, centralBankReportStatus, lastReportTime)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:deposit",
+      "type": "function",
+      "name": "deposit",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "方法 deposit(amount)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:withdraw",
+      "type": "function",
+      "name": "withdraw",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "方法 withdraw(amount)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:freeze",
+      "type": "function",
+      "name": "freeze",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "方法 freeze(amount)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:unfreeze",
+      "type": "function",
+      "name": "unfreeze",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "方法 unfreeze(amount)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:close",
+      "type": "function",
+      "name": "close",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "方法 close()",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:calculateAvailableBalance",
+      "type": "function",
+      "name": "calculateAvailableBalance",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "方法 calculateAvailableBalance()",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:assignAccountNo",
+      "type": "function",
+      "name": "assignAccountNo",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "方法 assignAccountNo(accountNo)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:setFrozen",
+      "type": "function",
+      "name": "setFrozen",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "方法 setFrozen()",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:setNormal",
+      "type": "function",
+      "name": "setNormal",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "方法 setNormal()",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:validate",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "summary": "方法 validate()",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "type": "file",
+      "name": "AccountTransaction.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "summary": "账户交易流水实体，通过工厂方法 record 创建交易记录。",
+      "tags": [
+        "实体",
+        "DDD",
+        "交易"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java:AccountTransaction",
+      "type": "class",
+      "name": "AccountTransaction",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "summary": "账户交易流水实体，通过工厂方法 record 创建交易记录。",
+      "tags": [
+        "实体",
+        "DDD",
+        "交易"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java:record",
+      "type": "function",
+      "name": "record",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "summary": "方法 record(accountId, accountNo, transactionType, amount, currency, balanceBefore, balanceAfter, relatedBizNo, relatedBizType, summary)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "type": "file",
+      "name": "AccountNumber.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "summary": "账号值对象，保证账号非空并提供相等性语义。",
+      "tags": [
+        "值对象",
+        "DDD"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:AccountNumber",
+      "type": "class",
+      "name": "AccountNumber",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "summary": "账号值对象，保证账号非空并提供相等性语义。",
+      "tags": [
+        "值对象",
+        "DDD"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:AccountNumber",
+      "type": "function",
+      "name": "AccountNumber",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "summary": "方法 AccountNumber(accountNo)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "summary": "方法 of(accountNo)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "summary": "方法 equals(o)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "summary": "方法 hashCode()",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "type": "file",
+      "name": "Money.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "summary": "金额值对象，封装金额与币种，提供加减、比较等运算并校验币种一致性。",
+      "tags": [
+        "值对象",
+        "DDD",
+        "金额"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "type": "class",
+      "name": "Money",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "summary": "金额值对象，封装金额与币种，提供加减、比较等运算并校验币种一致性。",
+      "tags": [
+        "值对象",
+        "DDD",
+        "金额"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "type": "function",
+      "name": "Money",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "summary": "方法 Money(amount, currency)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "summary": "方法 of(amount, currency)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:zero",
+      "type": "function",
+      "name": "zero",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "summary": "方法 zero(currency)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:add",
+      "type": "function",
+      "name": "add",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "summary": "方法 add(other)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:subtract",
+      "type": "function",
+      "name": "subtract",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "summary": "方法 subtract(other)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:isPositive",
+      "type": "function",
+      "name": "isPositive",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "summary": "方法 isPositive()",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:isGreaterThan",
+      "type": "function",
+      "name": "isGreaterThan",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "summary": "方法 isGreaterThan(other)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "summary": "方法 equals(o)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "summary": "方法 hashCode()",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java",
+      "type": "file",
+      "name": "AccountRepository.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java",
+      "summary": "账户仓储接口，定义账户持久化与查询契约。",
+      "tags": [
+        "仓储",
+        "接口",
+        "DDD"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java:AccountRepository",
+      "type": "class",
+      "name": "AccountRepository",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java",
+      "summary": "账户仓储接口，定义账户持久化与查询契约。",
+      "tags": [
+        "仓储",
+        "接口",
+        "DDD"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java",
+      "type": "file",
+      "name": "TransactionRepository.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java",
+      "summary": "交易流水仓储接口，定义交易持久化与查询契约。",
+      "tags": [
+        "仓储",
+        "接口",
+        "DDD"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java:TransactionRepository",
+      "type": "class",
+      "name": "TransactionRepository",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java",
+      "summary": "交易流水仓储接口，定义交易持久化与查询契约。",
+      "tags": [
+        "仓储",
+        "接口",
+        "DDD"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "type": "file",
+      "name": "AccountDomainService.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "summary": "账户领域服务，处理跨聚合逻辑：开户、销户、冻结解冻、记录交易与账号生成。",
+      "tags": [
+        "领域服务",
+        "DDD",
+        "业务逻辑"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:AccountDomainService",
+      "type": "class",
+      "name": "AccountDomainService",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "summary": "账户领域服务，处理跨聚合逻辑：开户、销户、冻结解冻、记录交易与账号生成。",
+      "tags": [
+        "领域服务",
+        "DDD",
+        "业务逻辑"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:openAccount",
+      "type": "function",
+      "name": "openAccount",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "summary": "方法 openAccount(customerId, accountType, currency, accountName, openBranch)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:closeAccount",
+      "type": "function",
+      "name": "closeAccount",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "summary": "方法 closeAccount(account)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:freezeAccount",
+      "type": "function",
+      "name": "freezeAccount",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "summary": "方法 freezeAccount(account)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:unfreezeAccount",
+      "type": "function",
+      "name": "unfreezeAccount",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "summary": "方法 unfreezeAccount(account)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:recordTransaction",
+      "type": "function",
+      "name": "recordTransaction",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "summary": "方法 recordTransaction(account, txType, amount, relatedBizNo, relatedBizType, summary)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:generateAccountNo",
+      "type": "function",
+      "name": "generateAccountNo",
+      "filePath": "forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "summary": "方法 generateAccountNo(currency)",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java",
+      "type": "file",
+      "name": "AccountTransactionMapper.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java",
+      "summary": "账户交易 MyBatis-Plus Mapper，提供交易流水的持久化查询。",
+      "tags": [
+        "mapper",
+        "持久化",
+        "MyBatis"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java:AccountTransactionMapper",
+      "type": "class",
+      "name": "AccountTransactionMapper",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java",
+      "summary": "账户交易 MyBatis-Plus Mapper，提供交易流水的持久化查询。",
+      "tags": [
+        "mapper",
+        "持久化",
+        "MyBatis"
+      ],
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/AccountApplication.java:AccountApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/AccountApplication.java:AccountApplication",
+      "target": "function:forex-account/src/main/java/com/forex/account/AccountApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/AccountApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:AccountController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:AccountController",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:openAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:AccountController",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:closeAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:AccountController",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getById",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:AccountController",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getByAccountNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:AccountController",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getCustomerAccounts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:AccountController",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:deposit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:AccountController",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:withdraw",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:AccountController",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:freeze",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:AccountController",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:unfreeze",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:AccountController",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getTransactions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:AccountController",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:toAccountResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:AccountController",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:toTransactionResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:openAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:closeAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getById",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getByAccountNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getCustomerAccounts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:deposit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:withdraw",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:freeze",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:unfreeze",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getTransactions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:toAccountResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:toTransactionResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/dto/AccountOperationReq.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/adapter/dto/AccountOperationReq.java:AccountOperationReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/dto/AccountResp.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/adapter/dto/AccountResp.java:AccountResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/dto/OpenAccountReq.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/adapter/dto/OpenAccountReq.java:OpenAccountReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/dto/TransactionResp.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/adapter/dto/TransactionResp.java:TransactionResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/command/AccountOperationCmd.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/application/command/AccountOperationCmd.java:AccountOperationCmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/command/OpenAccountCmd.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/application/command/OpenAccountCmd.java:OpenAccountCmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/query/AccountDetailDTO.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/application/query/AccountDetailDTO.java:AccountDetailDTO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/query/AccountQuery.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/application/query/AccountQuery.java:AccountQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/query/TransactionDTO.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/application/query/TransactionDTO.java:TransactionDTO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:AccountAppService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:AccountAppService",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:openAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:AccountAppService",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:closeAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:AccountAppService",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getAccountDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:AccountAppService",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getAccountByNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:AccountAppService",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getCustomerAccounts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:AccountAppService",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getTransactions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:AccountAppService",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:deposit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:AccountAppService",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:withdraw",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:AccountAppService",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:freeze",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:AccountAppService",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:unfreeze",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:openAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:closeAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getAccountDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getAccountByNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getCustomerAccounts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getTransactions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:deposit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:withdraw",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:freeze",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:unfreeze",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java:AccountOpenedEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java:AccountOpenedEvent",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java:AccountOpenedEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java:AccountOpenedEvent",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java:eventName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java:AccountOpenedEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java:eventName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java:BalanceChangedEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java:BalanceChangedEvent",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java:BalanceChangedEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java:BalanceChangedEvent",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java:eventName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java:BalanceChangedEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java:eventName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:reconstitute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:deposit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:withdraw",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:freeze",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:unfreeze",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:calculateAvailableBalance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:assignAccountNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:setFrozen",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:setNormal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:reconstitute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:deposit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:withdraw",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:freeze",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:unfreeze",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:calculateAvailableBalance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:assignAccountNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:setFrozen",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:setNormal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java:AccountTransaction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java:AccountTransaction",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java:record",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java:record",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:AccountNumber",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:AccountNumber",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:AccountNumber",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:AccountNumber",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:AccountNumber",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:AccountNumber",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:AccountNumber",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:add",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:subtract",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:isPositive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:isGreaterThan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:add",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:subtract",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:isPositive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:isGreaterThan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java:AccountRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java:TransactionRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:AccountDomainService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:AccountDomainService",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:openAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:AccountDomainService",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:closeAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:AccountDomainService",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:freezeAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:AccountDomainService",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:unfreezeAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:AccountDomainService",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:recordTransaction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:AccountDomainService",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:generateAccountNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:openAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:closeAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:freezeAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:unfreezeAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:recordTransaction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:generateAccountNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java:AccountTransactionMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/adapter/dto/AccountOperationReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/adapter/dto/AccountResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/adapter/dto/OpenAccountReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/adapter/dto/TransactionResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/application/command/AccountOperationCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/application/command/OpenAccountCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/annotation/RedisLock.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/query/AccountQuery.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/application/command/AccountOperationCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/application/command/OpenAccountCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/application/query/AccountDetailDTO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/application/query/AccountQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/application/query/TransactionDTO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/annotation/RedisLock.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/domain/BaseDomainEvent.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/domain/BaseDomainEvent.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/enums/CurrencyEnum.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/domain/BaseEntity.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java",
+      "target": "file:forex-common/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:openAccount",
+      "target": "class:forex-account/src/main/java/com/forex/account/application/command/OpenAccountCmd.java:OpenAccountCmd",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:openAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:openAccount",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:openAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:toAccountResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:closeAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:closeAccount",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getById",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getAccountDetail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getById",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:toAccountResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getByAccountNo",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getAccountByNo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getByAccountNo",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:toAccountResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getCustomerAccounts",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getCustomerAccounts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:deposit",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:deposit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:deposit",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getAccountDetail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:deposit",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:toAccountResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:withdraw",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:withdraw",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:withdraw",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getAccountDetail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:withdraw",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:toAccountResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:freeze",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:freeze",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:freeze",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getAccountDetail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:freeze",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:toAccountResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:unfreeze",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:unfreeze",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:unfreeze",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getAccountDetail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:unfreeze",
+      "target": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:toAccountResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:getTransactions",
+      "target": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getTransactions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:toAccountResp",
+      "target": "class:forex-account/src/main/java/com/forex/account/adapter/dto/AccountResp.java:AccountResp",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java:toTransactionResp",
+      "target": "class:forex-account/src/main/java/com/forex/account/adapter/dto/TransactionResp.java:TransactionResp",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:openAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:openAccount",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:openAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java:save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:openAccount",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java:AccountOpenedEvent",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:closeAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java:findById",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:closeAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:closeAccount",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:closeAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java:save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getAccountDetail",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java:findById",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getAccountByNo",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java:findByAccountNo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getCustomerAccounts",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java:findByCustomerId",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getTransactions",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java:findByAccountId",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:getTransactions",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java:countByAccountId",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:deposit",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java:findById",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:deposit",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:recordTransaction",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:deposit",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java:save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:deposit",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java:save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:deposit",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java:BalanceChangedEvent",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:withdraw",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java:findById",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:withdraw",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:recordTransaction",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:withdraw",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java:save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:withdraw",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java:save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:withdraw",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java:BalanceChangedEvent",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:freeze",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java:findById",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:freeze",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:freeze",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:freeze",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java:save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:freeze",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java:BalanceChangedEvent",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:unfreeze",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java:findById",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:unfreeze",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:unfreeze",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:unfreeze",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java:save",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java:unfreeze",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java:BalanceChangedEvent",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:create",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:create",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:validate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:reconstitute",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:ForexAccount",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:deposit",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:calculateAvailableBalance",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:withdraw",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:calculateAvailableBalance",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:freeze",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:calculateAvailableBalance",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:unfreeze",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:calculateAvailableBalance",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java:record",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java:AccountTransaction",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:of",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java:AccountNumber",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:of",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:zero",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:add",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:subtract",
+      "target": "class:forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java:Money",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:openAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:create",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:openAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:generateAccountNo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:openAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:assignAccountNo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:closeAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:freezeAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:setFrozen",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:unfreezeAccount",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:setNormal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:recordTransaction",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:deposit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:recordTransaction",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java:withdraw",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java:recordTransaction",
+      "target": "function:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java:record",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

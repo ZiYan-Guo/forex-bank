@@ -1,0 +1,676 @@
+{
+  "batchIndex": 9,
+  "nodes": [
+    {
+      "id": "file:forex-bank-web/src/views/reporting/ReportingConsole.vue",
+      "type": "file",
+      "name": "ReportingConsole",
+      "filePath": "forex-bank-web/src/views/reporting/ReportingConsole.vue",
+      "summary": "监管报送页面，管理国际收支申报等监管报表，支持查询、生成、批量提交报表操作，使用 reportingApi 获取数据",
+      "tags": [
+        "vue-component",
+        "frontend",
+        "监管报表",
+        "reporting"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-bank-web/src/views/risk/EnterpriseRiskDashboard.vue",
+      "type": "file",
+      "name": "EnterpriseRiskDashboard",
+      "filePath": "forex-bank-web/src/views/risk/EnterpriseRiskDashboard.vue",
+      "summary": "企业风险仪表板，展示外汇敞口柱状图、VaR 风险价值仪表盘、情景压力测试和套保建议，使用 echarts 进行图表渲染",
+      "tags": [
+        "vue-component",
+        "frontend",
+        "风险管理",
+        "dashboard",
+        "echarts"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-bank-web/src/views/risk/RiskMonitor.vue",
+      "type": "file",
+      "name": "RiskMonitor",
+      "filePath": "forex-bank-web/src/views/risk/RiskMonitor.vue",
+      "summary": "风险监测页面，展示今日预警统计、风险日志表格，使用 riskApi 获取预警数据，集成 RiskLevelMap 展示风险等级标签",
+      "tags": [
+        "vue-component",
+        "frontend",
+        "风险管理",
+        "monitor"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-bank-web/src/views/risk/SamplingRuleConfig.vue",
+      "type": "file",
+      "name": "SamplingRuleConfig",
+      "filePath": "forex-bank-web/src/views/risk/SamplingRuleConfig.vue",
+      "summary": "便利化抽查规则配置页面，管理抽查规则的增删改查、启停控制、任务生成，使用 dayjs 处理时间",
+      "tags": [
+        "vue-component",
+        "frontend",
+        "风险管理",
+        "config"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-bank-web/src/views/schedule/JobManagement.vue",
+      "type": "file",
+      "name": "JobManagement",
+      "filePath": "forex-bank-web/src/views/schedule/JobManagement.vue",
+      "summary": "定时任务管理页面，管理任务的创建、启停、执行触发，展示任务执行日志详情",
+      "tags": [
+        "vue-component",
+        "frontend",
+        "调度管理",
+        "job"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-bank-web/src/views/settlement/BankGuarantee.vue",
+      "type": "file",
+      "name": "BankGuarantee",
+      "filePath": "forex-bank-web/src/views/settlement/BankGuarantee.vue",
+      "summary": "国际保函页面，支持投标/履约/预付款/质量/付款保函的创建与撤销，使用 settlementApi 发送请求",
+      "tags": [
+        "vue-component",
+        "frontend",
+        "结算",
+        "guarantee"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-bank-web/src/views/settlement/DocumentaryCollection.vue",
+      "type": "file",
+      "name": "DocumentaryCollection",
+      "filePath": "forex-bank-web/src/views/settlement/DocumentaryCollection.vue",
+      "summary": "跟单托收页面，支持光票/跟单托收、DP/DA托收方式的创建与撤销",
+      "tags": [
+        "vue-component",
+        "frontend",
+        "结算",
+        "collection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-bank-web/src/views/settlement/LetterOfCredit.vue",
+      "type": "file",
+      "name": "LetterOfCredit",
+      "filePath": "forex-bank-web/src/views/settlement/LetterOfCredit.vue",
+      "summary": "国际信用证管理页面，支持进口/出口/备用/国内信用证的开立和撤销，提供完整的信用证表单",
+      "tags": [
+        "vue-component",
+        "frontend",
+        "结算",
+        "letter-of-credit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-bank-web/src/views/trading/TradingList.vue",
+      "type": "file",
+      "name": "TradingList",
+      "filePath": "forex-bank-web/src/views/trading/TradingList.vue",
+      "summary": "外汇买卖管理页面，支持即期/远期/掉期/期权交易的查询和新建，使用 tradingApi 获取数据，集成 OrderStatusMap 展示状态",
+      "tags": [
+        "vue-component",
+        "frontend",
+        "trading",
+        "交易"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-bank-web/src/views/valuation/PnlAttribution.vue",
+      "type": "file",
+      "name": "PnlAttribution",
+      "filePath": "forex-bank-web/src/views/valuation/PnlAttribution.vue",
+      "summary": "损益归因分析页面，使用 vue-echarts 展示盈亏分解柱状图，包含 Delta/Theta/Gamma/Vega/Carry 等希腊值归因",
+      "tags": [
+        "vue-component",
+        "frontend",
+        "valuation",
+        "echarts",
+        "损益分析"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-bank-web/src/views/valuation/ValuationList.vue",
+      "type": "file",
+      "name": "ValuationList",
+      "filePath": "forex-bank-web/src/views/valuation/ValuationList.vue",
+      "summary": "衍生品估值列表页面，展示各交易合约的估值结果和盈亏，支持批量重估操作",
+      "tags": [
+        "vue-component",
+        "frontend",
+        "valuation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-bank-web/src/views/workflow/WorkflowList.vue",
+      "type": "file",
+      "name": "WorkflowList",
+      "filePath": "forex-bank-web/src/views/workflow/WorkflowList.vue",
+      "summary": "工作流审批页面，管理审批任务，支持通过/驳回操作，使用 workflowApi 获取任务数据",
+      "tags": [
+        "vue-component",
+        "frontend",
+        "workflow",
+        "审批"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-bank-web/vite.config.ts",
+      "type": "file",
+      "name": "vite.config",
+      "filePath": "forex-bank-web/vite.config.ts",
+      "summary": "Vite 构建配置文件，配置 Vue 插件、路径别名 @ 映射 src 目录、开发服务器端口3000和后端代理规则",
+      "tags": [
+        "typescript",
+        "config",
+        "vite",
+        "构建"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bookkeeping/pom.xml",
+      "type": "file",
+      "name": "pom.xml (bookkeeping)",
+      "filePath": "forex-bookkeeping/pom.xml",
+      "summary": "记账模块 Maven 配置文件，定义项目依赖和构建配置",
+      "tags": [
+        "xml",
+        "config",
+        "maven",
+        "pom"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java",
+      "type": "file",
+      "name": "BookkeepingController",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java",
+      "summary": "记账模块的 REST 控制器，提供分录创建、过账、冲销、查询、重估、月结、日切等接口",
+      "tags": [
+        "java",
+        "backend",
+        "controller",
+        "记账"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/dto/EntryResp.java",
+      "type": "file",
+      "name": "EntryResp",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/dto/EntryResp.java",
+      "summary": "分录响应 DTO 类，包含凭证编号、日期、币种、金额、科目、摘要等字段",
+      "tags": [
+        "java",
+        "backend",
+        "dto",
+        "记账"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/command/CreateEntryCmd.java",
+      "type": "file",
+      "name": "CreateEntryCmd",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/command/CreateEntryCmd.java",
+      "summary": "创建分录命令对象，包含凭证日期、业务类型、币种、金额、科目等必填字段",
+      "tags": [
+        "java",
+        "backend",
+        "command",
+        "记账"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java",
+      "type": "file",
+      "name": "BookkeepingAppService",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java",
+      "summary": "记账应用服务，协调分录创建、过账、冲销、查询、日结等业务操作，调用领域服务和仓库",
+      "tags": [
+        "java",
+        "backend",
+        "application-service",
+        "记账"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/BookkeepingApplication.java",
+      "type": "file",
+      "name": "BookkeepingApplication",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/BookkeepingApplication.java",
+      "summary": "记账模块的 Spring Boot 启动类，启用服务发现和 Mapper 扫描",
+      "tags": [
+        "java",
+        "backend",
+        "application",
+        "spring-boot"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/event/EntryPostedEvent.java",
+      "type": "file",
+      "name": "EntryPostedEvent",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/event/EntryPostedEvent.java",
+      "summary": "分录过账领域事件，包含分录ID、凭证编号和金额信息",
+      "tags": [
+        "java",
+        "backend",
+        "domain-event",
+        "记账"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/JournalEntry.java",
+      "type": "file",
+      "name": "JournalEntry",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/JournalEntry.java",
+      "summary": "会计分录聚合根，管理分录的完整生命周期，支持创建、过账、冲销操作，包含业务校验逻辑",
+      "tags": [
+        "java",
+        "backend",
+        "aggregate",
+        "记账"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/MonthEndClosing.java",
+      "type": "file",
+      "name": "MonthEndClosing",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/MonthEndClosing.java",
+      "summary": "月结聚合根，管理月结流程的启动、完成、锁定等状态转换，支持审计追踪记录",
+      "tags": [
+        "java",
+        "backend",
+        "aggregate",
+        "记账",
+        "月结"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/query/JournalQuery.java",
+      "type": "file",
+      "name": "JournalQuery",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/query/JournalQuery.java",
+      "summary": "分录查询对象，继承分页请求，支持按凭证号、日期、会计期、业务类型等多维查询",
+      "tags": [
+        "java",
+        "backend",
+        "query",
+        "记账"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/valueobject/VoucherNo.java",
+      "type": "file",
+      "name": "VoucherNo",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/valueobject/VoucherNo.java",
+      "summary": "凭证编号值对象，支持生成带前缀的格式化凭证编号",
+      "tags": [
+        "java",
+        "backend",
+        "value-object",
+        "记账"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/JournalEntryRepository.java",
+      "type": "file",
+      "name": "JournalEntryRepository",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/JournalEntryRepository.java",
+      "summary": "分录仓库接口，定义保存、查询、分页、按方向和期间汇总等数据访问操作",
+      "tags": [
+        "java",
+        "backend",
+        "repository",
+        "记账"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-bank-web/src/views/reporting/ReportingConsole.vue",
+      "target": "file:forex-bank-web/src/api/business.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bank-web/src/views/risk/RiskMonitor.vue",
+      "target": "file:forex-bank-web/src/api/business.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bank-web/src/views/risk/RiskMonitor.vue",
+      "target": "file:forex-bank-web/src/types/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bank-web/src/views/settlement/BankGuarantee.vue",
+      "target": "file:forex-bank-web/src/api/business.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bank-web/src/views/settlement/BankGuarantee.vue",
+      "target": "file:forex-bank-web/src/types/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bank-web/src/views/settlement/DocumentaryCollection.vue",
+      "target": "file:forex-bank-web/src/api/business.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bank-web/src/views/settlement/DocumentaryCollection.vue",
+      "target": "file:forex-bank-web/src/types/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bank-web/src/views/settlement/LetterOfCredit.vue",
+      "target": "file:forex-bank-web/src/api/business.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bank-web/src/views/settlement/LetterOfCredit.vue",
+      "target": "file:forex-bank-web/src/types/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bank-web/src/views/trading/TradingList.vue",
+      "target": "file:forex-bank-web/src/api/business.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bank-web/src/views/trading/TradingList.vue",
+      "target": "file:forex-bank-web/src/types/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bank-web/src/views/valuation/ValuationList.vue",
+      "target": "file:forex-bank-web/src/api/business.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bank-web/src/views/workflow/WorkflowList.vue",
+      "target": "file:forex-bank-web/src/api/business.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/dto/EntryResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/command/CreateEntryCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/JournalEntry.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/MonthEndClosing.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/query/JournalQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/command/CreateEntryCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/JournalEntry.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/query/JournalQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/JournalEntryRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/JournalEntry.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/JournalEntry.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/MonthEndClosing.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/MonthEndClosing.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/query/JournalQuery.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/valueobject/VoucherNo.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/JournalEntryRepository.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/JournalEntry.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/JournalEntryRepository.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/query/JournalQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/JournalEntryRepository.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/event/EntryPostedEvent.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseDomainEvent.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java#BookkeepingController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java#BookkeepingAppService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/JournalEntry.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/JournalEntry.java#JournalEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/MonthEndClosing.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/MonthEndClosing.java#MonthEndClosing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/JournalEntryRepository.java",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/JournalEntry.java",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java",
+      "target": "file:forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/command/CreateEntryCmd.java",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ],
+  "nodeCount": 25,
+  "edgeCount": 45
+}

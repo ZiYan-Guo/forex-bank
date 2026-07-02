@@ -1,0 +1,354 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notification.java",
+      "language": "java",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/domain/repository/NoticeRepository.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/domain/repository/NotificationRepository.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/domain/service/NotificationDomainService.java",
+      "language": "java",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/mapper/NoticeMapper.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/mapper/NotificationMapper.java",
+      "language": "java",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/persistence/NoticePO.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/persistence/NotificationPO.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/repository/NoticeRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/repository/NotificationRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/NotificationApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-ocr/pom.xml",
+      "language": "xml",
+      "sizeLines": 63,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/adapter/controller/OcrController.java",
+      "language": "java",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/adapter/dto/OcrTaskResp.java",
+      "language": "java",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/adapter/dto/OcrUploadReq.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/application/query/OcrQuery.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/application/service/OcrAppService.java",
+      "language": "java",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/event/OcrCompletedEvent.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/model/aggregate/OcrTask.java",
+      "language": "java",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/repository/OcrTaskRepository.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/service/OcrDomainService.java",
+      "language": "java",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/infrastructure/mapper/OcrTaskMapper.java",
+      "language": "java",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/infrastructure/persistence/OcrTaskPO.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/infrastructure/repository/OcrTaskRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notification.java": [
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import lombok.Getter;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/domain/repository/NoticeRepository.java": [
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.notification.application.query.NoticeQuery;",
+      "import com.forex.notification.domain.model.aggregate.Notice;",
+      "import java.util.Optional;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/domain/repository/NotificationRepository.java": [
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.notification.application.query.NotifyQuery;",
+      "import com.forex.notification.domain.model.aggregate.Notification;",
+      "import java.util.Optional;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/domain/service/NotificationDomainService.java": [
+      "import com.forex.notification.domain.event.NotificationSentEvent;",
+      "import com.forex.notification.domain.model.aggregate.Notice;",
+      "import com.forex.notification.domain.model.aggregate.Notification;",
+      "import com.forex.notification.domain.repository.NoticeRepository;",
+      "import com.forex.notification.domain.repository.NotificationRepository;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.context.ApplicationEventPublisher;",
+      "import org.springframework.stereotype.Service;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/infrastructure/mapper/NoticeMapper.java": [
+      "import com.forex.common.mybatis.base.BaseMapperExt;",
+      "import com.forex.notification.application.query.NoticeQuery;",
+      "import com.forex.notification.infrastructure.persistence.NoticePO;",
+      "import com.baomidou.mybatisplus.extension.plugins.pagination.Page;",
+      "import org.apache.ibatis.annotations.Mapper;",
+      "import org.apache.ibatis.annotations.Param;",
+      "import org.apache.ibatis.annotations.Select;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/infrastructure/mapper/NotificationMapper.java": [
+      "import com.forex.common.mybatis.base.BaseMapperExt;",
+      "import com.forex.notification.application.query.NotifyQuery;",
+      "import com.forex.notification.infrastructure.persistence.NotificationPO;",
+      "import com.baomidou.mybatisplus.extension.plugins.pagination.Page;",
+      "import org.apache.ibatis.annotations.Mapper;",
+      "import org.apache.ibatis.annotations.Param;",
+      "import org.apache.ibatis.annotations.Select;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/infrastructure/persistence/NoticePO.java": [
+      "import com.forex.common.mybatis.base.BasePO;",
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/infrastructure/persistence/NotificationPO.java": [
+      "import com.forex.common.mybatis.base.BasePO;",
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/infrastructure/repository/NoticeRepositoryImpl.java": [
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.notification.application.query.NoticeQuery;",
+      "import com.forex.notification.domain.model.aggregate.Notice;",
+      "import com.forex.notification.domain.repository.NoticeRepository;",
+      "import com.forex.notification.infrastructure.mapper.NoticeMapper;",
+      "import com.forex.notification.infrastructure.persistence.NoticePO;",
+      "import com.baomidou.mybatisplus.extension.plugins.pagination.Page;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Repository;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/infrastructure/repository/NotificationRepositoryImpl.java": [
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.notification.application.query.NotifyQuery;",
+      "import com.forex.notification.domain.model.aggregate.Notification;",
+      "import com.forex.notification.domain.repository.NotificationRepository;",
+      "import com.forex.notification.infrastructure.mapper.NotificationMapper;",
+      "import com.forex.notification.infrastructure.persistence.NotificationPO;",
+      "import com.baomidou.mybatisplus.extension.plugins.pagination.Page;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Repository;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/NotificationApplication.java": [
+      "import org.mybatis.spring.annotation.MapperScan;",
+      "import org.springframework.boot.SpringApplication;",
+      "import org.springframework.boot.autoconfigure.SpringBootApplication;",
+      "import org.springframework.cloud.client.discovery.EnableDiscoveryClient;"
+    ],
+    "forex-notification/src/main/resources/application.yml": [],
+    "forex-ocr/pom.xml": [],
+    "forex-ocr/src/main/java/com/forex/ocr/adapter/controller/OcrController.java": [
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.common.base.result.R;",
+      "import com.forex.ocr.adapter.dto.OcrTaskResp;",
+      "import com.forex.ocr.adapter.dto.OcrUploadReq;",
+      "import com.forex.ocr.application.query.OcrQuery;",
+      "import com.forex.ocr.application.service.OcrAppService;",
+      "import com.forex.ocr.domain.model.aggregate.OcrTask;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.web.bind.annotation.GetMapping;",
+      "import org.springframework.web.bind.annotation.PathVariable;",
+      "import org.springframework.web.bind.annotation.PostMapping;",
+      "import org.springframework.web.bind.annotation.RequestBody;",
+      "import org.springframework.web.bind.annotation.RequestMapping;",
+      "import org.springframework.web.bind.annotation.RequestParam;",
+      "import org.springframework.web.bind.annotation.RestController;",
+      "import org.springframework.web.multipart.MultipartFile;",
+      "import java.util.List;"
+    ],
+    "forex-ocr/src/main/java/com/forex/ocr/adapter/dto/OcrTaskResp.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-ocr/src/main/java/com/forex/ocr/adapter/dto/OcrUploadReq.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import jakarta.validation.constraints.NotBlank;",
+      "import lombok.Data;"
+    ],
+    "forex-ocr/src/main/java/com/forex/ocr/application/query/OcrQuery.java": [
+      "import com.forex.common.base.dto.PageReq;",
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;"
+    ],
+    "forex-ocr/src/main/java/com/forex/ocr/application/service/OcrAppService.java": [
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.ocr.application.query.OcrQuery;",
+      "import com.forex.ocr.domain.model.aggregate.OcrTask;",
+      "import com.forex.ocr.domain.repository.OcrTaskRepository;",
+      "import com.forex.ocr.domain.service.OcrDomainService;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Service;",
+      "import org.springframework.transaction.annotation.Transactional;"
+    ],
+    "forex-ocr/src/main/java/com/forex/ocr/domain/event/OcrCompletedEvent.java": [
+      "import com.forex.common.base.domain.BaseDomainEvent;",
+      "import lombok.Getter;"
+    ],
+    "forex-ocr/src/main/java/com/forex/ocr/domain/model/aggregate/OcrTask.java": [
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import lombok.Getter;",
+      "import java.time.LocalDateTime;",
+      "import java.util.UUID;"
+    ],
+    "forex-ocr/src/main/java/com/forex/ocr/domain/repository/OcrTaskRepository.java": [
+      "import com.forex.common.base.dto.PageReq;",
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.ocr.domain.model.aggregate.OcrTask;",
+      "import java.util.Optional;"
+    ],
+    "forex-ocr/src/main/java/com/forex/ocr/domain/service/OcrDomainService.java": [
+      "import com.forex.ocr.domain.event.OcrCompletedEvent;",
+      "import com.forex.ocr.domain.model.aggregate.OcrTask;",
+      "import com.forex.ocr.domain.repository.OcrTaskRepository;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.context.ApplicationEventPublisher;",
+      "import org.springframework.stereotype.Service;"
+    ],
+    "forex-ocr/src/main/java/com/forex/ocr/infrastructure/mapper/OcrTaskMapper.java": [
+      "import com.baomidou.mybatisplus.extension.plugins.pagination.Page;",
+      "import com.forex.common.mybatis.base.BaseMapperExt;",
+      "import com.forex.ocr.application.query.OcrQuery;",
+      "import com.forex.ocr.infrastructure.persistence.OcrTaskPO;",
+      "import org.apache.ibatis.annotations.Mapper;",
+      "import org.apache.ibatis.annotations.Param;",
+      "import org.apache.ibatis.annotations.Select;",
+      "import java.util.List;"
+    ],
+    "forex-ocr/src/main/java/com/forex/ocr/infrastructure/persistence/OcrTaskPO.java": [
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import com.forex.common.mybatis.base.BasePO;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-ocr/src/main/java/com/forex/ocr/infrastructure/repository/OcrTaskRepositoryImpl.java": [
+      "import com.baomidou.mybatisplus.extension.plugins.pagination.Page;",
+      "import com.forex.common.base.dto.PageReq;",
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.ocr.application.query.OcrQuery;",
+      "import com.forex.ocr.domain.model.aggregate.OcrTask;",
+      "import com.forex.ocr.domain.repository.OcrTaskRepository;",
+      "import com.forex.ocr.infrastructure.mapper.OcrTaskMapper;",
+      "import com.forex.ocr.infrastructure.persistence.OcrTaskPO;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Repository;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ]
+  }
+}

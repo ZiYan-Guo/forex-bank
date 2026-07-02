@@ -37,6 +37,10 @@ public class ModelProviderConfig {
         return "openai".equalsIgnoreCase(provider);
     }
 
+    public boolean isDeepSeekProvider() {
+        return "deepseek".equalsIgnoreCase(provider);
+    }
+
     public String resolveModel(String preferredModel) {
         if (preferredModel != null && !preferredModel.isBlank()) {
             return preferredModel;

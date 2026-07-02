@@ -1,0 +1,216 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    { "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/PaymentDirectionEnum.java", "language": "java", "sizeLines": 15, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/RiskLevelEnum.java", "language": "java", "sizeLines": 17, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/TradeTypeEnum.java", "language": "java", "sizeLines": 18, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/YesNoEnum.java", "language": "java", "sizeLines": 15, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BaseException.java", "language": "java", "sizeLines": 25, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java", "language": "java", "sizeLines": 18, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java", "language": "java", "sizeLines": 36, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java", "language": "java", "sizeLines": 44, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java", "language": "java", "sizeLines": 58, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java", "language": "java", "sizeLines": 52, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java", "language": "java", "sizeLines": 89, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java", "language": "java", "sizeLines": 32, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java", "language": "java", "sizeLines": 66, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-mybatis/pom.xml", "language": "xml", "sizeLines": 34, "fileCategory": "config" },
+    { "path": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java", "language": "java", "sizeLines": 6, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java", "language": "java", "sizeLines": 36, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java", "language": "java", "sizeLines": 39, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MyMetaObjectHandler.java", "language": "java", "sizeLines": 25, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/EncryptTypeHandler.java", "language": "java", "sizeLines": 43, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/JsonTypeHandler.java", "language": "java", "sizeLines": 58, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-mybatis/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports", "language": "unknown", "sizeLines": 1, "fileCategory": "config" },
+    { "path": "forex-common/forex-common-security/pom.xml", "language": "xml", "sizeLines": 57, "fileCategory": "config" },
+    { "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java", "language": "java", "sizeLines": 17, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java", "language": "java", "sizeLines": 17, "fileCategory": "code" },
+    { "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java", "language": "java", "sizeLines": 66, "fileCategory": "code" }
+  ],
+  "batchImportData": {
+    "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/PaymentDirectionEnum.java": [
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Getter;"
+    ],
+    "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/RiskLevelEnum.java": [
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Getter;"
+    ],
+    "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/TradeTypeEnum.java": [
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Getter;"
+    ],
+    "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/YesNoEnum.java": [
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Getter;"
+    ],
+    "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BaseException.java": [
+      "import com.forex.common.base.result.ResultCode;",
+      "import lombok.Getter;"
+    ],
+    "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java": [
+      "import com.forex.common.base.result.ResultCode;"
+    ],
+    "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java": [
+      "import org.springframework.http.HttpStatus;",
+      "import org.springframework.web.bind.annotation.ExceptionHandler;",
+      "import org.springframework.web.bind.annotation.ResponseStatus;",
+      "import org.springframework.web.bind.annotation.RestControllerAdvice;",
+      "import com.forex.common.base.result.R;",
+      "import lombok.extern.slf4j.Slf4j;"
+    ],
+    "forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java": [
+      "import com.forex.common.base.annotation.Idempotent;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import com.forex.common.base.result.ResultCode;",
+      "import com.forex.common.base.util.SpelUtil;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.aspectj.lang.ProceedingJoinPoint;",
+      "import org.aspectj.lang.annotation.Around;",
+      "import org.aspectj.lang.annotation.Aspect;",
+      "import org.aspectj.lang.reflect.MethodSignature;",
+      "import org.redisson.api.RBucket;",
+      "import org.redisson.api.RedissonClient;",
+      "import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;",
+      "import org.springframework.stereotype.Component;",
+      "import java.time.Duration;"
+    ],
+    "forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java": [
+      "import com.forex.common.base.annotation.RedisLock;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import com.forex.common.base.result.ResultCode;",
+      "import com.forex.common.base.util.SpelUtil;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.aspectj.lang.ProceedingJoinPoint;",
+      "import org.aspectj.lang.annotation.Around;",
+      "import org.aspectj.lang.annotation.Aspect;",
+      "import org.aspectj.lang.reflect.MethodSignature;",
+      "import org.redisson.api.RLock;",
+      "import org.redisson.api.RedissonClient;",
+      "import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;",
+      "import org.springframework.stereotype.Component;",
+      "import java.util.concurrent.TimeUnit;"
+    ],
+    "forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java": [
+      "import com.forex.common.base.annotation.RateLimit;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import com.forex.common.base.result.ResultCode;",
+      "import com.forex.common.base.util.SpelUtil;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.aspectj.lang.ProceedingJoinPoint;",
+      "import org.aspectj.lang.annotation.Around;",
+      "import org.aspectj.lang.annotation.Aspect;",
+      "import org.aspectj.lang.reflect.MethodSignature;",
+      "import org.redisson.api.RRateLimiter;",
+      "import org.redisson.api.RateIntervalUnit;",
+      "import org.redisson.api.RateType;",
+      "import org.redisson.api.RedissonClient;",
+      "import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;",
+      "import org.springframework.core.annotation.Order;",
+      "import org.springframework.stereotype.Component;"
+    ],
+    "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Data;",
+      "import lombok.NoArgsConstructor;"
+    ],
+    "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java": [
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Getter;"
+    ],
+    "forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java": [
+      "import org.springframework.expression.ExpressionParser;",
+      "import org.springframework.expression.spel.standard.SpelExpressionParser;",
+      "import org.springframework.expression.spel.support.StandardEvaluationContext;",
+      "import java.lang.reflect.Method;",
+      "import java.lang.reflect.Parameter;",
+      "import java.util.regex.Matcher;",
+      "import java.util.regex.Pattern;"
+    ],
+    "forex-common/forex-common-mybatis/pom.xml": [],
+    "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java": [
+      "import com.baomidou.mybatisplus.core.mapper.BaseMapper;"
+    ],
+    "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java": [
+      "import com.baomidou.mybatisplus.annotation.FieldFill;",
+      "import com.baomidou.mybatisplus.annotation.IdType;",
+      "import com.baomidou.mybatisplus.annotation.TableField;",
+      "import com.baomidou.mybatisplus.annotation.TableId;",
+      "import com.baomidou.mybatisplus.annotation.TableLogic;",
+      "import com.baomidou.mybatisplus.annotation.Version;",
+      "import lombok.Data;",
+      "import java.io.Serializable;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java": [
+      "import com.baomidou.mybatisplus.annotation.DbType;",
+      "import com.baomidou.mybatisplus.core.config.GlobalConfig;",
+      "import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;",
+      "import com.baomidou.mybatisplus.extension.plugins.inner.BlockAttackInnerInterceptor;",
+      "import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;",
+      "import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;",
+      "import com.forex.common.mybatis.handler.EncryptTypeHandler;",
+      "import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;",
+      "import org.springframework.context.annotation.Bean;",
+      "import org.springframework.context.annotation.Configuration;"
+    ],
+    "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MyMetaObjectHandler.java": [
+      "import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;",
+      "import org.apache.ibatis.reflection.MetaObject;",
+      "import org.springframework.stereotype.Component;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/EncryptTypeHandler.java": [
+      "import com.baomidou.mybatisplus.core.toolkit.AES;",
+      "import org.apache.ibatis.type.BaseTypeHandler;",
+      "import org.apache.ibatis.type.JdbcType;",
+      "import org.apache.ibatis.type.MappedJdbcTypes;",
+      "import org.apache.ibatis.type.MappedTypes;",
+      "import java.sql.CallableStatement;",
+      "import java.sql.PreparedStatement;",
+      "import java.sql.ResultSet;",
+      "import java.sql.SQLException;"
+    ],
+    "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/JsonTypeHandler.java": [
+      "import com.fasterxml.jackson.core.JsonProcessingException;",
+      "import com.fasterxml.jackson.databind.ObjectMapper;",
+      "import org.apache.ibatis.type.BaseTypeHandler;",
+      "import org.apache.ibatis.type.JdbcType;",
+      "import java.sql.CallableStatement;",
+      "import java.sql.PreparedStatement;",
+      "import java.sql.ResultSet;",
+      "import java.sql.SQLException;"
+    ],
+    "forex-common/forex-common-mybatis/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports": [],
+    "forex-common/forex-common-security/pom.xml": [],
+    "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java": [
+      "import java.lang.annotation.Documented;",
+      "import java.lang.annotation.ElementType;",
+      "import java.lang.annotation.Retention;",
+      "import java.lang.annotation.RetentionPolicy;",
+      "import java.lang.annotation.Target;"
+    ],
+    "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java": [
+      "import java.lang.annotation.Documented;",
+      "import java.lang.annotation.ElementType;",
+      "import java.lang.annotation.Retention;",
+      "import java.lang.annotation.RetentionPolicy;",
+      "import java.lang.annotation.Target;"
+    ],
+    "forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java": [
+      "import com.forex.common.base.exception.BusinessException;",
+      "import com.forex.common.base.result.ResultCode;",
+      "import com.forex.common.security.annotation.RequirePermission;",
+      "import com.forex.common.security.annotation.RequireRole;",
+      "import com.forex.common.security.util.UserContextHolder;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.aspectj.lang.annotation.Aspect;",
+      "import org.aspectj.lang.annotation.Before;",
+      "import org.springframework.stereotype.Component;",
+      "import java.util.Arrays;",
+      "import java.util.List;"
+    ]
+  }
+}

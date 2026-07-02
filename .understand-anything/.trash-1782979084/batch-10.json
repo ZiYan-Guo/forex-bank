@@ -1,0 +1,2432 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "file",
+      "name": "BookkeepingDomainService.java",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "summary": "Java类文件，包含类: BookkeepingDomainService",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n2",
+      "type": "class",
+      "name": "BookkeepingDomainService",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "summary": "类 BookkeepingDomainService，包含5个方法，2个属性",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n3",
+      "type": "function",
+      "name": "createEntry",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "summary": "方法 createEntry，属于类 BookkeepingDomainService",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n4",
+      "type": "function",
+      "name": "postEntry",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "summary": "方法 postEntry，属于类 BookkeepingDomainService",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n5",
+      "type": "function",
+      "name": "reverseEntry",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "summary": "方法 reverseEntry，属于类 BookkeepingDomainService",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n6",
+      "type": "function",
+      "name": "generateVoucherNo",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "summary": "方法 generateVoucherNo，属于类 BookkeepingDomainService",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n7",
+      "type": "function",
+      "name": "postEntriesForPeriod",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "summary": "方法 postEntriesForPeriod，属于类 BookkeepingDomainService",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n8",
+      "type": "file",
+      "name": "MonthEndClosingService.java",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "summary": "Java类文件，包含类: MonthEndClosingService",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n9",
+      "type": "class",
+      "name": "MonthEndClosingService",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "summary": "类 MonthEndClosingService，包含1个方法，4个属性",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n10",
+      "type": "function",
+      "name": "executeMonthEndClosing",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "summary": "方法 executeMonthEndClosing，属于类 MonthEndClosingService",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n11",
+      "type": "file",
+      "name": "RevaluationEntryService.java",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "summary": "Java类文件，包含类: RevaluationEntryService",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n12",
+      "type": "class",
+      "name": "RevaluationEntryService",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "summary": "类 RevaluationEntryService，包含3个方法，4个属性",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n13",
+      "type": "function",
+      "name": "generateRevaluationEntries",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "summary": "方法 generateRevaluationEntries，属于类 RevaluationEntryService",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n14",
+      "type": "function",
+      "name": "batchRevaluation",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "summary": "方法 batchRevaluation，属于类 RevaluationEntryService",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n15",
+      "type": "function",
+      "name": "generateSuffix",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "summary": "方法 generateSuffix，属于类 RevaluationEntryService",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n16",
+      "type": "file",
+      "name": "JournalEntryMapper.java",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/JournalEntryMapper.java",
+      "summary": "Java类文件，包含类: JournalEntryMapper",
+      "tags": [
+        "数据映射"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n17",
+      "type": "class",
+      "name": "JournalEntryMapper",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/JournalEntryMapper.java",
+      "summary": "类 JournalEntryMapper，包含5个方法",
+      "tags": [
+        "数据映射"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n18",
+      "type": "function",
+      "name": "selectByVoucherNo",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/JournalEntryMapper.java",
+      "summary": "方法 selectByVoucherNo，属于类 JournalEntryMapper",
+      "tags": [
+        "数据映射"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n19",
+      "type": "function",
+      "name": "selectByBizNo",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/JournalEntryMapper.java",
+      "summary": "方法 selectByBizNo，属于类 JournalEntryMapper",
+      "tags": [
+        "数据映射"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n20",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/JournalEntryMapper.java",
+      "summary": "方法 pageQuery，属于类 JournalEntryMapper",
+      "tags": [
+        "数据映射"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n21",
+      "type": "function",
+      "name": "selectByPeriodAndDirection",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/JournalEntryMapper.java",
+      "summary": "方法 selectByPeriodAndDirection，属于类 JournalEntryMapper",
+      "tags": [
+        "数据映射"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n22",
+      "type": "function",
+      "name": "selectByStatusAndPeriod",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/JournalEntryMapper.java",
+      "summary": "方法 selectByStatusAndPeriod，属于类 JournalEntryMapper",
+      "tags": [
+        "数据映射"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n23",
+      "type": "file",
+      "name": "JournalEntryPO.java",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/persistence/JournalEntryPO.java",
+      "summary": "Java类文件，包含类: JournalEntryPO",
+      "tags": [
+        "持久化对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n24",
+      "type": "class",
+      "name": "JournalEntryPO",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/persistence/JournalEntryPO.java",
+      "summary": "类 JournalEntryPO，16个属性",
+      "tags": [
+        "持久化对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n25",
+      "type": "file",
+      "name": "JournalEntryRepositoryImpl.java",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/repository/JournalEntryRepositoryImpl.java",
+      "summary": "Java类文件，包含类: JournalEntryRepositoryImpl",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n26",
+      "type": "class",
+      "name": "JournalEntryRepositoryImpl",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/repository/JournalEntryRepositoryImpl.java",
+      "summary": "类 JournalEntryRepositoryImpl，包含9个方法，1个属性",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n27",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/repository/JournalEntryRepositoryImpl.java",
+      "summary": "方法 save，属于类 JournalEntryRepositoryImpl",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n28",
+      "type": "function",
+      "name": "findById",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/repository/JournalEntryRepositoryImpl.java",
+      "summary": "方法 findById，属于类 JournalEntryRepositoryImpl",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n29",
+      "type": "function",
+      "name": "findByVoucherNo",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/repository/JournalEntryRepositoryImpl.java",
+      "summary": "方法 findByVoucherNo，属于类 JournalEntryRepositoryImpl",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n30",
+      "type": "function",
+      "name": "findByBizNo",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/repository/JournalEntryRepositoryImpl.java",
+      "summary": "方法 findByBizNo，属于类 JournalEntryRepositoryImpl",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n31",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/repository/JournalEntryRepositoryImpl.java",
+      "summary": "方法 pageQuery，属于类 JournalEntryRepositoryImpl",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n32",
+      "type": "function",
+      "name": "sumByDirection",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/repository/JournalEntryRepositoryImpl.java",
+      "summary": "方法 sumByDirection，属于类 JournalEntryRepositoryImpl",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n33",
+      "type": "function",
+      "name": "findByStatusAndPeriod",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/repository/JournalEntryRepositoryImpl.java",
+      "summary": "方法 findByStatusAndPeriod，属于类 JournalEntryRepositoryImpl",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n34",
+      "type": "function",
+      "name": "toDomain",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/repository/JournalEntryRepositoryImpl.java",
+      "summary": "方法 toDomain，属于类 JournalEntryRepositoryImpl",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n35",
+      "type": "function",
+      "name": "toPO",
+      "filePath": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/repository/JournalEntryRepositoryImpl.java",
+      "summary": "方法 toPO，属于类 JournalEntryRepositoryImpl",
+      "tags": [
+        "仓储实现"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n36",
+      "type": "file",
+      "name": "application.yml",
+      "filePath": "forex-bookkeeping/src/main/resources/application.yml",
+      "summary": "YAML配置文件",
+      "tags": [
+        "应用配置"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n37",
+      "type": "file",
+      "name": "pom.xml",
+      "filePath": "forex-cashpool/pom.xml",
+      "summary": "Maven POM配置文件",
+      "tags": [
+        "Maven配置"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n38",
+      "type": "file",
+      "name": "CashPoolController.java",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "summary": "Java类文件，包含类: CashPoolController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n39",
+      "type": "class",
+      "name": "CashPoolController",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "summary": "类 CashPoolController，包含6个方法，1个属性",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n40",
+      "type": "function",
+      "name": "createPool",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "summary": "方法 createPool，属于类 CashPoolController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n41",
+      "type": "function",
+      "name": "getPoolById",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "summary": "方法 getPoolById，属于类 CashPoolController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n42",
+      "type": "function",
+      "name": "addMember",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "summary": "方法 addMember，属于类 CashPoolController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n43",
+      "type": "function",
+      "name": "getMembers",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "summary": "方法 getMembers，属于类 CashPoolController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n44",
+      "type": "function",
+      "name": "calculateQuota",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "summary": "方法 calculateQuota，属于类 CashPoolController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n45",
+      "type": "function",
+      "name": "getQuotaUsage",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "summary": "方法 getQuotaUsage，属于类 CashPoolController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n46",
+      "type": "file",
+      "name": "OverseasLendingController.java",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "summary": "Java类文件，包含类: OverseasLendingController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n47",
+      "type": "class",
+      "name": "OverseasLendingController",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "summary": "类 OverseasLendingController，包含5个方法",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n48",
+      "type": "function",
+      "name": "createLending",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "summary": "方法 createLending，属于类 OverseasLendingController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n49",
+      "type": "function",
+      "name": "approveLending",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "summary": "方法 approveLending，属于类 OverseasLendingController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n50",
+      "type": "function",
+      "name": "recordRepayment",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "summary": "方法 recordRepayment，属于类 OverseasLendingController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n51",
+      "type": "function",
+      "name": "getLendingByContractNo",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "summary": "方法 getLendingByContractNo，属于类 OverseasLendingController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n52",
+      "type": "function",
+      "name": "queryLendingPage",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "summary": "方法 queryLendingPage，属于类 OverseasLendingController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n53",
+      "type": "file",
+      "name": "CashpoolApplication.java",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/CashpoolApplication.java",
+      "summary": "Java类文件，包含类: CashpoolApplication",
+      "tags": [
+        "启动类"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n54",
+      "type": "class",
+      "name": "CashpoolApplication",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/CashpoolApplication.java",
+      "summary": "类 CashpoolApplication，包含1个方法",
+      "tags": [
+        "启动类"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n55",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/CashpoolApplication.java",
+      "summary": "方法 main，属于类 CashpoolApplication",
+      "tags": [
+        "启动类"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n56",
+      "type": "file",
+      "name": "CashPool.java",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java",
+      "summary": "Java类文件，包含类: CashPool",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n57",
+      "type": "class",
+      "name": "CashPool",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java",
+      "summary": "类 CashPool，包含9个方法，11个属性",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n58",
+      "type": "function",
+      "name": "CashPool",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java",
+      "summary": "方法 CashPool，属于类 CashPool",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n59",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java",
+      "summary": "方法 create，属于类 CashPool",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n60",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java",
+      "summary": "方法 reconstitute，属于类 CashPool",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n61",
+      "type": "function",
+      "name": "addMember",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java",
+      "summary": "方法 addMember，属于类 CashPool",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n62",
+      "type": "function",
+      "name": "calculateAvailable",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java",
+      "summary": "方法 calculateAvailable，属于类 CashPool",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n63",
+      "type": "function",
+      "name": "suspend",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java",
+      "summary": "方法 suspend，属于类 CashPool",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n64",
+      "type": "function",
+      "name": "close",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java",
+      "summary": "方法 close，属于类 CashPool",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n65",
+      "type": "function",
+      "name": "recalculateLimits",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java",
+      "summary": "方法 recalculateLimits，属于类 CashPool",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n66",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java",
+      "summary": "方法 validate，属于类 CashPool",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n67",
+      "type": "file",
+      "name": "OverseasLending.java",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java",
+      "summary": "Java类文件，包含类: OverseasLending",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n68",
+      "type": "class",
+      "name": "OverseasLending",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java",
+      "summary": "类 OverseasLending，包含9个方法，13个属性",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n69",
+      "type": "function",
+      "name": "OverseasLending",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java",
+      "summary": "方法 OverseasLending，属于类 OverseasLending",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n70",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java",
+      "summary": "方法 create，属于类 OverseasLending",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n71",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java",
+      "summary": "方法 reconstitute，属于类 OverseasLending",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n72",
+      "type": "function",
+      "name": "approve",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java",
+      "summary": "方法 approve，属于类 OverseasLending",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n73",
+      "type": "function",
+      "name": "activate",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java",
+      "summary": "方法 activate，属于类 OverseasLending",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n74",
+      "type": "function",
+      "name": "recordRepayment",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java",
+      "summary": "方法 recordRepayment，属于类 OverseasLending",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n75",
+      "type": "function",
+      "name": "markOverdue",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java",
+      "summary": "方法 markOverdue，属于类 OverseasLending",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n76",
+      "type": "function",
+      "name": "cancel",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java",
+      "summary": "方法 cancel，属于类 OverseasLending",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n77",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java",
+      "summary": "方法 validate，属于类 OverseasLending",
+      "tags": [
+        "聚合根"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n78",
+      "type": "file",
+      "name": "PoolMember.java",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/entity/PoolMember.java",
+      "summary": "Java类文件，包含类: PoolMember",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n79",
+      "type": "class",
+      "name": "PoolMember",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/entity/PoolMember.java",
+      "summary": "类 PoolMember，包含1个方法，8个属性",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n80",
+      "type": "function",
+      "name": "getContributionLimit",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/entity/PoolMember.java",
+      "summary": "方法 getContributionLimit，属于类 PoolMember",
+      "tags": [
+        "实体"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n81",
+      "type": "file",
+      "name": "NettingSettlementService.java",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "summary": "Java类文件，包含类: NettingSettlementService",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n82",
+      "type": "class",
+      "name": "NettingSettlementService",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "summary": "类 NettingSettlementService，包含2个方法",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n83",
+      "type": "function",
+      "name": "calculateNetPosition",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "summary": "方法 calculateNetPosition，属于类 NettingSettlementService",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n84",
+      "type": "function",
+      "name": "generateNettingInstruction",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "summary": "方法 generateNettingInstruction，属于类 NettingSettlementService",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n85",
+      "type": "file",
+      "name": "QuotaCalculationEngine.java",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "summary": "Java类文件，包含类: QuotaCalculationEngine",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n86",
+      "type": "class",
+      "name": "QuotaCalculationEngine",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "summary": "类 QuotaCalculationEngine，包含3个方法，2个属性",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n87",
+      "type": "function",
+      "name": "calculateDebtLimit",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "summary": "方法 calculateDebtLimit，属于类 QuotaCalculationEngine",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n88",
+      "type": "function",
+      "name": "calculateLendingLimit",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "summary": "方法 calculateLendingLimit，属于类 QuotaCalculationEngine",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n89",
+      "type": "function",
+      "name": "calculateUsagePct",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "summary": "方法 calculateUsagePct，属于类 QuotaCalculationEngine",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n90",
+      "type": "file",
+      "name": "application.yml",
+      "filePath": "forex-cashpool/src/main/resources/application.yml",
+      "summary": "YAML配置文件",
+      "tags": [
+        "应用配置"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n91",
+      "type": "file",
+      "name": "pom.xml",
+      "filePath": "forex-clearing/pom.xml",
+      "summary": "Maven POM配置文件",
+      "tags": [
+        "Maven配置"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n92",
+      "type": "file",
+      "name": "CipsController.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "summary": "Java类文件，包含类: CipsController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n93",
+      "type": "class",
+      "name": "CipsController",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "summary": "类 CipsController，包含6个方法，2个属性",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n94",
+      "type": "function",
+      "name": "generateCips111",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "summary": "方法 generateCips111，属于类 CipsController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n95",
+      "type": "function",
+      "name": "generateCips112",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "summary": "方法 generateCips112，属于类 CipsController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n96",
+      "type": "function",
+      "name": "generateCips113",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "summary": "方法 generateCips113，属于类 CipsController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n97",
+      "type": "function",
+      "name": "lookupByBic",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "summary": "方法 lookupByBic，属于类 CipsController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n98",
+      "type": "function",
+      "name": "listParticipants",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "summary": "方法 listParticipants，属于类 CipsController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n99",
+      "type": "function",
+      "name": "getStatistics",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "summary": "方法 getStatistics，属于类 CipsController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n100",
+      "type": "file",
+      "name": "ClearingController.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ClearingController.java",
+      "summary": "Java类文件，包含类: ClearingController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n101",
+      "type": "class",
+      "name": "ClearingController",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ClearingController.java",
+      "summary": "类 ClearingController，包含8个方法，1个属性",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n102",
+      "type": "function",
+      "name": "generate",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ClearingController.java",
+      "summary": "方法 generate，属于类 ClearingController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n103",
+      "type": "function",
+      "name": "send",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ClearingController.java",
+      "summary": "方法 send，属于类 ClearingController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n104",
+      "type": "function",
+      "name": "acknowledge",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ClearingController.java",
+      "summary": "方法 acknowledge，属于类 ClearingController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n105",
+      "type": "function",
+      "name": "settle",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ClearingController.java",
+      "summary": "方法 settle，属于类 ClearingController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n106",
+      "type": "function",
+      "name": "cancel",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ClearingController.java",
+      "summary": "方法 cancel，属于类 ClearingController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n107",
+      "type": "function",
+      "name": "getDetail",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ClearingController.java",
+      "summary": "方法 getDetail，属于类 ClearingController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n108",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ClearingController.java",
+      "summary": "方法 pageQuery，属于类 ClearingController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n109",
+      "type": "function",
+      "name": "toClearingResp",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ClearingController.java",
+      "summary": "方法 toClearingResp，属于类 ClearingController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n110",
+      "type": "file",
+      "name": "ConfirmationController.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ConfirmationController.java",
+      "summary": "Java类文件，包含类: ConfirmationController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n111",
+      "type": "class",
+      "name": "ConfirmationController",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ConfirmationController.java",
+      "summary": "类 ConfirmationController，包含5个方法，3个属性",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n112",
+      "type": "function",
+      "name": "initiate",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ConfirmationController.java",
+      "summary": "方法 initiate，属于类 ConfirmationController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n113",
+      "type": "function",
+      "name": "getDetail",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ConfirmationController.java",
+      "summary": "方法 getDetail，属于类 ConfirmationController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n114",
+      "type": "function",
+      "name": "page",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ConfirmationController.java",
+      "summary": "方法 page，属于类 ConfirmationController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n115",
+      "type": "function",
+      "name": "retry",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ConfirmationController.java",
+      "summary": "方法 retry，属于类 ConfirmationController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n116",
+      "type": "function",
+      "name": "resolve",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ConfirmationController.java",
+      "summary": "方法 resolve，属于类 ConfirmationController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n117",
+      "type": "file",
+      "name": "PvpController.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/PvpController.java",
+      "summary": "Java类文件，包含类: PvpController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n118",
+      "type": "class",
+      "name": "PvpController",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/PvpController.java",
+      "summary": "类 PvpController，包含8个方法，5个属性",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n119",
+      "type": "function",
+      "name": "createPvpPair",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/PvpController.java",
+      "summary": "方法 createPvpPair，属于类 PvpController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n120",
+      "type": "function",
+      "name": "executePvpSettlement",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/PvpController.java",
+      "summary": "方法 executePvpSettlement，属于类 PvpController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n121",
+      "type": "function",
+      "name": "getPvpPairDetail",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/PvpController.java",
+      "summary": "方法 getPvpPairDetail，属于类 PvpController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n122",
+      "type": "function",
+      "name": "scheduleClsSession",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/PvpController.java",
+      "summary": "方法 scheduleClsSession，属于类 PvpController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n123",
+      "type": "function",
+      "name": "openPayInWindow",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/PvpController.java",
+      "summary": "方法 openPayInWindow，属于类 PvpController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n124",
+      "type": "function",
+      "name": "closePayInWindow",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/PvpController.java",
+      "summary": "方法 closePayInWindow，属于类 PvpController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n125",
+      "type": "function",
+      "name": "getTodaySession",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/PvpController.java",
+      "summary": "方法 getTodaySession，属于类 PvpController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n126",
+      "type": "function",
+      "name": "calculateBilateralNetting",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/PvpController.java",
+      "summary": "方法 calculateBilateralNetting，属于类 PvpController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n127",
+      "type": "file",
+      "name": "ReconciliationController.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "summary": "Java类文件，包含类: ReconciliationController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n128",
+      "type": "class",
+      "name": "ReconciliationController",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "summary": "类 ReconciliationController，包含4个方法，2个属性",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n129",
+      "type": "function",
+      "name": "importFromCfets",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "summary": "方法 importFromCfets，属于类 ReconciliationController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n130",
+      "type": "function",
+      "name": "autoMatch",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "summary": "方法 autoMatch，属于类 ReconciliationController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n131",
+      "type": "function",
+      "name": "previewSwift",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "summary": "方法 previewSwift，属于类 ReconciliationController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n132",
+      "type": "function",
+      "name": "convertMessage",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "summary": "方法 convertMessage，属于类 ReconciliationController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n133",
+      "type": "file",
+      "name": "RouteController.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/RouteController.java",
+      "summary": "Java类文件，包含类: RouteController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n134",
+      "type": "class",
+      "name": "RouteController",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/RouteController.java",
+      "summary": "类 RouteController，包含1个方法，1个属性",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n135",
+      "type": "function",
+      "name": "optimize",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/RouteController.java",
+      "summary": "方法 optimize，属于类 RouteController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n136",
+      "type": "file",
+      "name": "TrackerController.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/TrackerController.java",
+      "summary": "Java类文件，包含类: TrackerController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n137",
+      "type": "class",
+      "name": "TrackerController",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/TrackerController.java",
+      "summary": "类 TrackerController，包含4个方法，2个属性",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n138",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/TrackerController.java",
+      "summary": "方法 create，属于类 TrackerController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n139",
+      "type": "function",
+      "name": "updateStatus",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/TrackerController.java",
+      "summary": "方法 updateStatus，属于类 TrackerController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n140",
+      "type": "function",
+      "name": "getDetail",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/TrackerController.java",
+      "summary": "方法 getDetail，属于类 TrackerController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n141",
+      "type": "function",
+      "name": "overdue",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/TrackerController.java",
+      "summary": "方法 overdue，属于类 TrackerController",
+      "tags": [
+        "控制器"
+      ],
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n2",
+      "target": "n6",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n2",
+      "target": "n7",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n8",
+      "target": "n9",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n9",
+      "target": "n10",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n11",
+      "target": "n12",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n12",
+      "target": "n13",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n12",
+      "target": "n14",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n12",
+      "target": "n15",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n16",
+      "target": "n17",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n17",
+      "target": "n18",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n17",
+      "target": "n19",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n17",
+      "target": "n20",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n17",
+      "target": "n21",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n17",
+      "target": "n22",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n23",
+      "target": "n24",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n25",
+      "target": "n26",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n26",
+      "target": "n27",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n26",
+      "target": "n28",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n26",
+      "target": "n29",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n26",
+      "target": "n30",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n26",
+      "target": "n31",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n26",
+      "target": "n32",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n26",
+      "target": "n33",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n26",
+      "target": "n34",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n26",
+      "target": "n35",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n38",
+      "target": "n39",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n39",
+      "target": "n40",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n39",
+      "target": "n41",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n39",
+      "target": "n42",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n39",
+      "target": "n43",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n39",
+      "target": "n44",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n39",
+      "target": "n45",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n46",
+      "target": "n47",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n47",
+      "target": "n48",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n47",
+      "target": "n49",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n47",
+      "target": "n50",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n47",
+      "target": "n51",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n47",
+      "target": "n52",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n53",
+      "target": "n54",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n54",
+      "target": "n55",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n56",
+      "target": "n57",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n57",
+      "target": "n58",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n57",
+      "target": "n59",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n57",
+      "target": "n60",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n57",
+      "target": "n61",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n57",
+      "target": "n62",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n57",
+      "target": "n63",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n57",
+      "target": "n64",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n57",
+      "target": "n65",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n57",
+      "target": "n66",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n67",
+      "target": "n68",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n68",
+      "target": "n69",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n68",
+      "target": "n70",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n68",
+      "target": "n71",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n68",
+      "target": "n72",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n68",
+      "target": "n73",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n68",
+      "target": "n74",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n68",
+      "target": "n75",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n68",
+      "target": "n76",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n68",
+      "target": "n77",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n78",
+      "target": "n79",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n79",
+      "target": "n80",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n81",
+      "target": "n82",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n82",
+      "target": "n83",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n82",
+      "target": "n84",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n85",
+      "target": "n86",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n86",
+      "target": "n87",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n86",
+      "target": "n88",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n86",
+      "target": "n89",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n92",
+      "target": "n93",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n93",
+      "target": "n94",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n93",
+      "target": "n95",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n93",
+      "target": "n96",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n93",
+      "target": "n97",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n93",
+      "target": "n98",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n93",
+      "target": "n99",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n100",
+      "target": "n101",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n101",
+      "target": "n102",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n101",
+      "target": "n103",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n101",
+      "target": "n104",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n101",
+      "target": "n105",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n101",
+      "target": "n106",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n101",
+      "target": "n107",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n101",
+      "target": "n108",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n101",
+      "target": "n109",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n110",
+      "target": "n111",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n111",
+      "target": "n112",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n111",
+      "target": "n113",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n111",
+      "target": "n114",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n111",
+      "target": "n115",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n111",
+      "target": "n116",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n117",
+      "target": "n118",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n118",
+      "target": "n119",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n118",
+      "target": "n120",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n118",
+      "target": "n121",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n118",
+      "target": "n122",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n118",
+      "target": "n123",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n118",
+      "target": "n124",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n118",
+      "target": "n125",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n118",
+      "target": "n126",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n127",
+      "target": "n128",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n128",
+      "target": "n129",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n128",
+      "target": "n130",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n128",
+      "target": "n131",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n128",
+      "target": "n132",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n133",
+      "target": "n134",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n134",
+      "target": "n135",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n136",
+      "target": "n137",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n137",
+      "target": "n138",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n137",
+      "target": "n139",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n137",
+      "target": "n140",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n137",
+      "target": "n141",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n17",
+      "target": "n24",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n26",
+      "target": "n17",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n26",
+      "target": "n24",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n39",
+      "target": "n58",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n39",
+      "target": "n79",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n39",
+      "target": "n86",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n47",
+      "target": "n69",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n57",
+      "target": "n79",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n82",
+      "target": "n79",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

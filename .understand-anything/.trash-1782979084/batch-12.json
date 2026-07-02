@@ -1,0 +1,647 @@
+{
+  "batchIndex": 12,
+  "nodes": [
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ClsCurrency.java",
+      "type": "file",
+      "name": "ClsCurrency",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ClsCurrency.java",
+      "summary": "CLS 结算货币枚举，定义支持的结算货币代码及校验方法 isSupported 和 getSupportedCurrencies",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "值对象",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ConfirmationFlag.java",
+      "type": "file",
+      "name": "ConfirmationFlag",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ConfirmationFlag.java",
+      "summary": "交易确认标志枚举，定义待确认、已确认、有差异、手动解决等确认状态",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "值对象",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/NettingPosition.java",
+      "type": "file",
+      "name": "NettingPosition",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/NettingPosition.java",
+      "summary": "净额头寸值对象，记录币种的支付/接收总额，提供 of/add/equals/hashCode 方法，基于 BaseValueObject",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "值对象",
+        "domain"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/PaymentChannel.java",
+      "type": "file",
+      "name": "PaymentChannel",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/PaymentChannel.java",
+      "summary": "支付渠道路由值对象，包含渠道编码、费用、汇率加点、截止时间等信息，基于 BaseValueObject",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "值对象",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/SettlementRoute.java",
+      "type": "file",
+      "name": "SettlementRoute",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/SettlementRoute.java",
+      "summary": "结算路由值对象，包含路由ID、渠道、总成本、预计耗时、中转行等最优路由信息，基于 BaseValueObject",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "值对象",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/ClearingInstructionRepository.java",
+      "type": "file",
+      "name": "ClearingInstructionRepository",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/repository/ClearingInstructionRepository.java",
+      "summary": "清算指令仓储接口，定义 save/findById/findByInstructionNo/findByBizNo/pageQuery 方法",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "仓储接口",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/ClsSessionRepository.java",
+      "type": "file",
+      "name": "ClsSessionRepository",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/repository/ClsSessionRepository.java",
+      "summary": "CLS 会话仓储接口，定义 save/findById/findBySessionId/findBySettlementDate 方法",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "仓储接口",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/PvpSettlementRepository.java",
+      "type": "file",
+      "name": "PvpSettlementRepository",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/repository/PvpSettlementRepository.java",
+      "summary": "PVP 结算仓储接口，定义 save/findById/findByPairId 方法",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "仓储接口",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/SettlementBatchRepository.java",
+      "type": "file",
+      "name": "SettlementBatchRepository",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/repository/SettlementBatchRepository.java",
+      "summary": "结算批次仓储接口，定义 save/findById/findByBatchNo 方法",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "仓储接口",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/SettlementTrackerRepository.java",
+      "type": "file",
+      "name": "SettlementTrackerRepository",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/repository/SettlementTrackerRepository.java",
+      "summary": "结算跟踪仓储接口，定义 save/findById/findByTrackingId/findAll 方法",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "仓储接口",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/TradeConfirmationRepository.java",
+      "type": "file",
+      "name": "TradeConfirmationRepository",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/repository/TradeConfirmationRepository.java",
+      "summary": "交易确认仓储接口，定义 save/findById/findByConfirmId/findByTradeNo/findByMatchStatus/findAll 方法",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "仓储接口",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/ClearingDomainService.java",
+      "type": "file",
+      "name": "ClearingDomainService",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/service/ClearingDomainService.java",
+      "summary": "清算领域服务，实现指令创建/生成/发送/确认/结算全生命周期，包含指令编号生成和往来账余额计算",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "领域服务",
+        "domain"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/ClsSessionService.java",
+      "type": "file",
+      "name": "ClsSessionService",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/service/ClsSessionService.java",
+      "summary": "CLS 会话领域服务，管理 CLS 结算日程安排、出入金窗口开关、净额计算和结算完成",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "领域服务",
+        "domain"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/NettingService.java",
+      "type": "file",
+      "name": "NettingService",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/service/NettingService.java",
+      "summary": "轧差计算服务，按币种计算双边轧差净额头寸，将多笔清算指令聚合为净额头寸列表",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "领域服务",
+        "domain"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/PvpSettlementService.java",
+      "type": "file",
+      "name": "PvpSettlementService",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/service/PvpSettlementService.java",
+      "summary": "PVP 同步结算服务，创建 PVP 结算对并执行同步交收，确保支付与收款同时完成",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "领域服务",
+        "domain"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/ClearingInstructionMapper.java",
+      "type": "file",
+      "name": "ClearingInstructionMapper",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/ClearingInstructionMapper.java",
+      "summary": "清算指令 MyBatis Mapper，提供按指令号/业务号查询及分页查询，继承 BaseMapperExt",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "MyBatis Mapper",
+        "infrastructure",
+        "数据访问"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/ClsSessionMapper.java",
+      "type": "file",
+      "name": "ClsSessionMapper",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/ClsSessionMapper.java",
+      "summary": "CLS 会话 Mapper，提供按会话ID和结算日期查询，继承 BaseMapperExt",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "MyBatis Mapper",
+        "infrastructure",
+        "数据访问"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/PvpSettlementPairMapper.java",
+      "type": "file",
+      "name": "PvpSettlementPairMapper",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/PvpSettlementPairMapper.java",
+      "summary": "PVP 结算对 Mapper，提供按 PVP 对 ID 查询，继承 BaseMapperExt",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "MyBatis Mapper",
+        "infrastructure",
+        "数据访问"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/SettlementBatchMapper.java",
+      "type": "file",
+      "name": "SettlementBatchMapper",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/SettlementBatchMapper.java",
+      "summary": "结算批次 Mapper，提供按批次号查询，继承 BaseMapperExt",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "MyBatis Mapper",
+        "infrastructure",
+        "数据访问"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/SettlementTrackerMapper.java",
+      "type": "file",
+      "name": "SettlementTrackerMapper",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/SettlementTrackerMapper.java",
+      "summary": "结算跟踪 Mapper，提供按跟踪ID查询和全量查询，继承 BaseMapper",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "MyBatis Mapper",
+        "infrastructure",
+        "数据访问"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/TradeConfirmationMapper.java",
+      "type": "file",
+      "name": "TradeConfirmationMapper",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/TradeConfirmationMapper.java",
+      "summary": "交易确认 Mapper，提供按确认ID/交易号/匹配状态查询及全量查询，继承 BaseMapperExt",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "MyBatis Mapper",
+        "infrastructure",
+        "数据访问"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/ClearingInstructionPO.java",
+      "type": "file",
+      "name": "ClearingInstructionPO",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/ClearingInstructionPO.java",
+      "summary": "清算指令持久化对象 PO，映射清算指令表，包含指令编号、业务信息、币种金额、结算状态等 22 个字段",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "持久化对象",
+        "infrastructure",
+        "PO"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/ClsSessionPO.java",
+      "type": "file",
+      "name": "ClsSessionPO",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/ClsSessionPO.java",
+      "summary": "CLS 会话持久化对象 PO，映射 CLS 会话表，记录结算日期、出入金窗口、净额头寸等字段",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "持久化对象",
+        "infrastructure",
+        "PO"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/PvpSettlementPairPO.java",
+      "type": "file",
+      "name": "PvpSettlementPairPO",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/PvpSettlementPairPO.java",
+      "summary": "PVP 结算对持久化对象 PO，映射 PVP 结算表，记录支付/接收指令对、币种金额、结算状态等字段",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "持久化对象",
+        "infrastructure",
+        "PO"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/SettlementBatchPO.java",
+      "type": "file",
+      "name": "SettlementBatchPO",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/SettlementBatchPO.java",
+      "summary": "结算批次持久化对象 PO，映射结算批次表，记录批次号、渠道、总笔数、总金额、净额等字段",
+      "tags": [
+        "java",
+        "forex-clearing",
+        "持久化对象",
+        "infrastructure",
+        "PO"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/NettingPosition.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/PaymentChannel.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/SettlementRoute.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/ClearingInstructionRepository.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/ClearingInstructionRepository.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/query/ClearingQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/ClearingInstructionRepository.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/ClsSessionRepository.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClsSession.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/PvpSettlementRepository.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/PvpSettlementPair.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/SettlementBatchRepository.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementBatch.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/SettlementTrackerRepository.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementTracker.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/TradeConfirmationRepository.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/TradeConfirmation.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/ClearingDomainService.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/event/InstructionSentEvent.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/ClearingDomainService.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/ClearingDomainService.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ClearingAmount.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/ClearingDomainService.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/ClearingInstructionRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/ClearingDomainService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/ClsSessionService.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClsSession.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/ClsSessionService.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/ClsSessionRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/NettingService.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/NettingService.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/NettingPosition.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/PvpSettlementService.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/PvpSettlementService.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/PvpSettlementPair.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/PvpSettlementService.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/ClearingInstructionRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/PvpSettlementService.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/repository/PvpSettlementRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/ClearingInstructionMapper.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/domain/model/query/ClearingQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/ClearingInstructionMapper.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/ClearingInstructionPO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/ClearingInstructionMapper.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/ClsSessionMapper.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/ClsSessionPO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/ClsSessionMapper.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/PvpSettlementPairMapper.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/PvpSettlementPairPO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/PvpSettlementPairMapper.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/SettlementBatchMapper.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/SettlementBatchPO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/SettlementBatchMapper.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/SettlementTrackerMapper.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/SettlementTrackerPO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/TradeConfirmationMapper.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/TradeConfirmationPO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/TradeConfirmationMapper.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/ClearingInstructionPO.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/ClsSessionPO.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/PvpSettlementPairPO.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/SettlementBatchPO.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

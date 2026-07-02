@@ -1,0 +1,331 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "docker/docker-compose.yml",
+      "sizeLines": 128,
+      "language": "yaml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "docker/nacos/conf/application.properties",
+      "sizeLines": 7,
+      "language": "properties",
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-account/pom.xml",
+      "sizeLines": 55,
+      "language": "xml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "sizeLines": 15,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "sizeLines": 179,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/adapter/dto/AccountOperationReq.java",
+      "sizeLines": 28,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/adapter/dto/AccountResp.java",
+      "sizeLines": 64,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/adapter/dto/OpenAccountReq.java",
+      "sizeLines": 30,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/adapter/dto/TransactionResp.java",
+      "sizeLines": 51,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/command/AccountOperationCmd.java",
+      "sizeLines": 23,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/command/OpenAccountCmd.java",
+      "sizeLines": 24,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/query/AccountDetailDTO.java",
+      "sizeLines": 29,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/query/AccountQuery.java",
+      "sizeLines": 16,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/query/TransactionDTO.java",
+      "sizeLines": 24,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "sizeLines": 126,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java",
+      "sizeLines": 27,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java",
+      "sizeLines": 32,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "sizeLines": 166,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "sizeLines": 52,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "sizeLines": 36,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "sizeLines": 80,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java",
+      "sizeLines": 21,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java",
+      "sizeLines": 18,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "sizeLines": 80,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java",
+      "sizeLines": 23,
+      "language": "java",
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "docker/docker-compose.yml": [],
+    "docker/nacos/conf/application.properties": [],
+    "forex-account/pom.xml": [],
+    "forex-account/src/main/java/com/forex/account/AccountApplication.java": [
+      "import org.mybatis.spring.annotation.MapperScan;",
+      "import org.springframework.boot.SpringApplication;",
+      "import org.springframework.boot.autoconfigure.SpringBootApplication;",
+      "import org.springframework.cloud.client.discovery.EnableDiscoveryClient;"
+    ],
+    "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java": [
+      "import com.forex.account.adapter.dto.AccountOperationReq;",
+      "import com.forex.account.adapter.dto.AccountResp;",
+      "import com.forex.account.adapter.dto.OpenAccountReq;",
+      "import com.forex.account.adapter.dto.TransactionResp;",
+      "import com.forex.account.application.command.AccountOperationCmd;",
+      "import com.forex.account.application.command.OpenAccountCmd;",
+      "import com.forex.account.application.service.AccountAppService;",
+      "import com.forex.account.domain.model.aggregate.ForexAccount;",
+      "import com.forex.account.domain.model.entity.AccountTransaction;",
+      "import com.forex.common.base.annotation.Idempotent;",
+      "import com.forex.common.base.annotation.RedisLock;",
+      "import com.forex.common.base.dto.PageReq;",
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.common.base.result.R;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import jakarta.validation.Valid;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.web.bind.annotation.GetMapping;",
+      "import org.springframework.web.bind.annotation.PathVariable;"
+    ],
+    "forex-account/src/main/java/com/forex/account/adapter/dto/AccountOperationReq.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import jakarta.validation.constraints.DecimalMin;",
+      "import jakarta.validation.constraints.NotNull;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;"
+    ],
+    "forex-account/src/main/java/com/forex/account/adapter/dto/AccountResp.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-account/src/main/java/com/forex/account/adapter/dto/OpenAccountReq.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import jakarta.validation.constraints.NotBlank;",
+      "import jakarta.validation.constraints.NotNull;",
+      "import lombok.Data;"
+    ],
+    "forex-account/src/main/java/com/forex/account/adapter/dto/TransactionResp.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-account/src/main/java/com/forex/account/application/command/AccountOperationCmd.java": [
+      "import jakarta.validation.constraints.DecimalMin;",
+      "import jakarta.validation.constraints.NotNull;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;"
+    ],
+    "forex-account/src/main/java/com/forex/account/application/command/OpenAccountCmd.java": [
+      "import jakarta.validation.constraints.NotBlank;",
+      "import jakarta.validation.constraints.NotNull;",
+      "import lombok.Data;"
+    ],
+    "forex-account/src/main/java/com/forex/account/application/query/AccountDetailDTO.java": [
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-account/src/main/java/com/forex/account/application/query/AccountQuery.java": [
+      "import com.forex.common.base.dto.PageReq;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;"
+    ],
+    "forex-account/src/main/java/com/forex/account/application/query/TransactionDTO.java": [
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java": [
+      "import com.forex.account.application.command.AccountOperationCmd;",
+      "import com.forex.account.application.command.OpenAccountCmd;",
+      "import com.forex.account.application.query.AccountDetailDTO;",
+      "import com.forex.account.application.query.AccountQuery;",
+      "import com.forex.account.application.query.TransactionDTO;",
+      "import com.forex.account.domain.event.AccountOpenedEvent;",
+      "import com.forex.account.domain.event.BalanceChangedEvent;",
+      "import com.forex.account.domain.model.aggregate.ForexAccount;",
+      "import com.forex.account.domain.model.entity.AccountTransaction;",
+      "import com.forex.account.domain.repository.AccountRepository;",
+      "import com.forex.account.domain.repository.TransactionRepository;",
+      "import com.forex.account.domain.service.AccountDomainService;",
+      "import com.forex.common.base.annotation.RedisLock;",
+      "import com.forex.common.base.dto.PageReq;",
+      "import com.forex.common.base.dto.PageResp;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.context.ApplicationEventPublisher;",
+      "import org.springframework.stereotype.Service;",
+      "import org.springframework.transaction.annotation.Transactional;",
+      "import java.math.BigDecimal;"
+    ],
+    "forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java": [
+      "import com.forex.common.base.domain.BaseDomainEvent;",
+      "import lombok.Getter;"
+    ],
+    "forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java": [
+      "import com.forex.common.base.domain.BaseDomainEvent;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;"
+    ],
+    "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java": [
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import com.forex.common.base.enums.CurrencyEnum;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java": [
+      "import com.forex.common.base.domain.BaseEntity;",
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Getter;",
+      "import lombok.NoArgsConstructor;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDateTime;",
+      "import java.util.UUID;"
+    ],
+    "forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java": [
+      "import com.forex.common.base.domain.BaseValueObject;",
+      "import lombok.Getter;",
+      "import java.util.Objects;"
+    ],
+    "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java": [
+      "import com.forex.common.base.domain.BaseValueObject;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;",
+      "import java.util.Objects;"
+    ],
+    "forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java": [
+      "import com.forex.account.domain.model.aggregate.ForexAccount;",
+      "import com.forex.common.base.dto.PageReq;",
+      "import com.forex.common.base.dto.PageResp;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java": [
+      "import com.forex.account.domain.model.entity.AccountTransaction;",
+      "import com.forex.common.base.dto.PageReq;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java": [
+      "import com.forex.account.domain.model.aggregate.ForexAccount;",
+      "import com.forex.account.domain.model.entity.AccountTransaction;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.format.DateTimeFormatter;"
+    ],
+    "forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java": [
+      "import com.forex.account.infrastructure.persistence.AccountTransactionPO;",
+      "import com.baomidou.mybatisplus.core.mapper.BaseMapper;",
+      "import org.apache.ibatis.annotations.Mapper;",
+      "import org.apache.ibatis.annotations.Param;",
+      "import org.apache.ibatis.annotations.Select;",
+      "import java.util.List;"
+    ]
+  }
+}

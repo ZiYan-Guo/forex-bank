@@ -39,6 +39,9 @@
         <module>forex-cashpool</module>
         <module>forex-hedge-accounting</module>
         <module>forex-ai</module>
+        <module>forex-precious-metal</module>
+        <module>forex-limit</module>
+        <module>forex-supply-chain</module>
     </modules>
 
     <properties>

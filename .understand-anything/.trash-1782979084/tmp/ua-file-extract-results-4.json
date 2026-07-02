@@ -1,0 +1,4227 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "ForexAccountMapper",
+          "startLine": 12,
+          "endLine": 20,
+          "methods": [
+            "selectByAccountNo",
+            "selectByCustomerId"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ForexAccountMapper",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 34,
+      "nonEmptyLines": 27,
+      "classes": [
+        {
+          "name": "AccountTransactionPO",
+          "startLine": 13,
+          "endLine": 34,
+          "methods": [],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "transactionNo",
+            "accountId",
+            "accountNo",
+            "transactionType",
+            "amount",
+            "currency",
+            "balanceBefore",
+            "balanceAfter",
+            "relatedBizNo",
+            "relatedBizType",
+            "transactionTime",
+            "summary"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AccountTransactionPO",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 19,
+      "classes": [
+        {
+          "name": "BalanceSnapshotPO",
+          "startLine": 13,
+          "endLine": 26,
+          "methods": [],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "accountId",
+            "accountNo",
+            "balance",
+            "snapshotDate"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "BalanceSnapshotPO",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 34,
+      "nonEmptyLines": 28,
+      "classes": [
+        {
+          "name": "ForexAccountPO",
+          "startLine": 14,
+          "endLine": 34,
+          "methods": [],
+          "properties": [
+            "accountNo",
+            "customerId",
+            "accountType",
+            "currency",
+            "accountName",
+            "balance",
+            "frozenAmount",
+            "availableBalance",
+            "openDate",
+            "openBranch",
+            "accountStatus",
+            "interestRate",
+            "isInterestBearing",
+            "centralBankReportStatus",
+            "lastReportTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ForexAccountPO",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 109,
+      "nonEmptyLines": 93,
+      "functions": [
+        {
+          "name": "save",
+          "startLine": 26,
+          "endLine": 35,
+          "params": [
+            "account"
+          ]
+        },
+        {
+          "name": "findById",
+          "startLine": 37,
+          "endLine": 41,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "findByAccountNo",
+          "startLine": 43,
+          "endLine": 47,
+          "params": [
+            "accountNo"
+          ]
+        },
+        {
+          "name": "findByCustomerId",
+          "startLine": 49,
+          "endLine": 53,
+          "params": [
+            "customerId"
+          ]
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 55,
+          "endLine": 65,
+          "params": [
+            "pageReq"
+          ]
+        },
+        {
+          "name": "toDomain",
+          "startLine": 67,
+          "endLine": 86,
+          "params": [
+            "po"
+          ]
+        },
+        {
+          "name": "toPO",
+          "startLine": 88,
+          "endLine": 108,
+          "params": [
+            "account"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AccountRepositoryImpl",
+          "startLine": 20,
+          "endLine": 109,
+          "methods": [
+            "save",
+            "findById",
+            "findByAccountNo",
+            "findByCustomerId",
+            "pageQuery",
+            "toDomain",
+            "toPO"
+          ],
+          "properties": [
+            "forexAccountMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "save",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "findById",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "findByAccountNo",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "findByCustomerId",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "AccountRepositoryImpl",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "save",
+          "callee": "toPO",
+          "lineNumber": 28
+        },
+        {
+          "caller": "save",
+          "callee": "account.getId",
+          "lineNumber": 29
+        },
+        {
+          "caller": "save",
+          "callee": "forexAccountMapper.insert",
+          "lineNumber": 30
+        },
+        {
+          "caller": "save",
+          "callee": "forexAccountMapper.updateById",
+          "lineNumber": 32
+        },
+        {
+          "caller": "save",
+          "callee": "toDomain",
+          "lineNumber": 34
+        },
+        {
+          "caller": "findById",
+          "callee": "forexAccountMapper.selectById",
+          "lineNumber": 39
+        },
+        {
+          "caller": "findById",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 40
+        },
+        {
+          "caller": "findById",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 40
+        },
+        {
+          "caller": "findByAccountNo",
+          "callee": "forexAccountMapper.selectByAccountNo",
+          "lineNumber": 45
+        },
+        {
+          "caller": "findByAccountNo",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 46
+        },
+        {
+          "caller": "findByAccountNo",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 46
+        },
+        {
+          "caller": "findByCustomerId",
+          "callee": "forexAccountMapper.selectByCustomerId",
+          "lineNumber": 51
+        },
+        {
+          "caller": "findByCustomerId",
+          "callee": "poList.stream().map(this::toDomain).toList",
+          "lineNumber": 52
+        },
+        {
+          "caller": "findByCustomerId",
+          "callee": "poList.stream().map",
+          "lineNumber": 52
+        },
+        {
+          "caller": "findByCustomerId",
+          "callee": "poList.stream",
+          "lineNumber": 52
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "new LambdaQueryWrapper<>",
+          "lineNumber": 57
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "wrapper.orderByDesc",
+          "lineNumber": 58
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "forexAccountMapper.selectPage",
+          "lineNumber": 60
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "new Page<>",
+          "lineNumber": 61
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageNum",
+          "lineNumber": 61
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageSize",
+          "lineNumber": 61
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getRecords().stream().map(this::toDomain).toList",
+          "lineNumber": 63
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getRecords().stream().map",
+          "lineNumber": 63
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getRecords().stream",
+          "lineNumber": 63
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getRecords",
+          "lineNumber": 63
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "PageResp.of",
+          "lineNumber": 64
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getTotal",
+          "lineNumber": 64
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getCurrent",
+          "lineNumber": 64
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getSize",
+          "lineNumber": 64
+        },
+        {
+          "caller": "toDomain",
+          "callee": "ForexAccount.reconstitute",
+          "lineNumber": 68
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getId",
+          "lineNumber": 69
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getAccountNo",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getCustomerId",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getAccountType",
+          "lineNumber": 72
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getCurrency",
+          "lineNumber": 73
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getAccountName",
+          "lineNumber": 74
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getBalance",
+          "lineNumber": 75
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getFrozenAmount",
+          "lineNumber": 76
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getAvailableBalance",
+          "lineNumber": 77
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getOpenDate",
+          "lineNumber": 78
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getOpenBranch",
+          "lineNumber": 79
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getAccountStatus",
+          "lineNumber": 80
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getInterestRate",
+          "lineNumber": 81
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getIsInterestBearing",
+          "lineNumber": 82
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getCentralBankReportStatus",
+          "lineNumber": 83
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getLastReportTime",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toPO",
+          "callee": "new ForexAccountPO",
+          "lineNumber": 89
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setId",
+          "lineNumber": 90
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getId",
+          "lineNumber": 90
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setAccountNo",
+          "lineNumber": 91
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getAccountNo",
+          "lineNumber": 91
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setCustomerId",
+          "lineNumber": 92
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getCustomerId",
+          "lineNumber": 92
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setAccountType",
+          "lineNumber": 93
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getAccountType",
+          "lineNumber": 93
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setCurrency",
+          "lineNumber": 94
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getCurrency",
+          "lineNumber": 94
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setAccountName",
+          "lineNumber": 95
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getAccountName",
+          "lineNumber": 95
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setBalance",
+          "lineNumber": 96
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getBalance",
+          "lineNumber": 96
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setFrozenAmount",
+          "lineNumber": 97
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getFrozenAmount",
+          "lineNumber": 97
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setAvailableBalance",
+          "lineNumber": 98
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getAvailableBalance",
+          "lineNumber": 98
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setOpenDate",
+          "lineNumber": 99
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getOpenDate",
+          "lineNumber": 99
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setOpenBranch",
+          "lineNumber": 100
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getOpenBranch",
+          "lineNumber": 100
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setAccountStatus",
+          "lineNumber": 101
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getAccountStatus",
+          "lineNumber": 101
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setInterestRate",
+          "lineNumber": 102
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getInterestRate",
+          "lineNumber": 102
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setIsInterestBearing",
+          "lineNumber": 103
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getIsInterestBearing",
+          "lineNumber": 103
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setCentralBankReportStatus",
+          "lineNumber": 104
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getCentralBankReportStatus",
+          "lineNumber": 104
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setLastReportTime",
+          "lineNumber": 105
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getLastReportTime",
+          "lineNumber": 105
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setVersion",
+          "lineNumber": 106
+        },
+        {
+          "caller": "toPO",
+          "callee": "account.getVersion",
+          "lineNumber": 106
+        }
+      ],
+      "metrics": {
+        "importCount": 12,
+        "exportCount": 6,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 87,
+      "nonEmptyLines": 75,
+      "functions": [
+        {
+          "name": "save",
+          "startLine": 22,
+          "endLine": 31,
+          "params": [
+            "tx"
+          ]
+        },
+        {
+          "name": "findByAccountId",
+          "startLine": 33,
+          "endLine": 38,
+          "params": [
+            "accountId",
+            "pageReq"
+          ]
+        },
+        {
+          "name": "findByTransactionNo",
+          "startLine": 40,
+          "endLine": 44,
+          "params": [
+            "txNo"
+          ]
+        },
+        {
+          "name": "countByAccountId",
+          "startLine": 46,
+          "endLine": 50,
+          "params": [
+            "accountId"
+          ]
+        },
+        {
+          "name": "toDomain",
+          "startLine": 52,
+          "endLine": 68,
+          "params": [
+            "po"
+          ]
+        },
+        {
+          "name": "toPO",
+          "startLine": 70,
+          "endLine": 86,
+          "params": [
+            "tx"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TransactionRepositoryImpl",
+          "startLine": 16,
+          "endLine": 87,
+          "methods": [
+            "save",
+            "findByAccountId",
+            "findByTransactionNo",
+            "countByAccountId",
+            "toDomain",
+            "toPO"
+          ],
+          "properties": [
+            "accountTransactionMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "save",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "findByAccountId",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "findByTransactionNo",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "countByAccountId",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "TransactionRepositoryImpl",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "save",
+          "callee": "toPO",
+          "lineNumber": 24
+        },
+        {
+          "caller": "save",
+          "callee": "tx.getId",
+          "lineNumber": 25
+        },
+        {
+          "caller": "save",
+          "callee": "accountTransactionMapper.insert",
+          "lineNumber": 26
+        },
+        {
+          "caller": "save",
+          "callee": "accountTransactionMapper.updateById",
+          "lineNumber": 28
+        },
+        {
+          "caller": "save",
+          "callee": "toDomain",
+          "lineNumber": 30
+        },
+        {
+          "caller": "findByAccountId",
+          "callee": "accountTransactionMapper.selectByAccountId",
+          "lineNumber": 35
+        },
+        {
+          "caller": "findByAccountId",
+          "callee": "pageReq.getOffset",
+          "lineNumber": 36
+        },
+        {
+          "caller": "findByAccountId",
+          "callee": "pageReq.getPageSize",
+          "lineNumber": 36
+        },
+        {
+          "caller": "findByAccountId",
+          "callee": "poList.stream().map(this::toDomain).toList",
+          "lineNumber": 37
+        },
+        {
+          "caller": "findByAccountId",
+          "callee": "poList.stream().map",
+          "lineNumber": 37
+        },
+        {
+          "caller": "findByAccountId",
+          "callee": "poList.stream",
+          "lineNumber": 37
+        },
+        {
+          "caller": "findByTransactionNo",
+          "callee": "accountTransactionMapper.selectByTransactionNo",
+          "lineNumber": 42
+        },
+        {
+          "caller": "findByTransactionNo",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 43
+        },
+        {
+          "caller": "findByTransactionNo",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 43
+        },
+        {
+          "caller": "countByAccountId",
+          "callee": "accountTransactionMapper.selectByAccountId",
+          "lineNumber": 48
+        },
+        {
+          "caller": "countByAccountId",
+          "callee": "all.size",
+          "lineNumber": 49
+        },
+        {
+          "caller": "toDomain",
+          "callee": "new AccountTransaction",
+          "lineNumber": 53
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getId",
+          "lineNumber": 54
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getTransactionNo",
+          "lineNumber": 55
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getAccountId",
+          "lineNumber": 56
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getAccountNo",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getTransactionType",
+          "lineNumber": 58
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getAmount",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getCurrency",
+          "lineNumber": 60
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getBalanceBefore",
+          "lineNumber": 61
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getBalanceAfter",
+          "lineNumber": 62
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getRelatedBizNo",
+          "lineNumber": 63
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getRelatedBizType",
+          "lineNumber": 64
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getTransactionTime",
+          "lineNumber": 65
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getSummary",
+          "lineNumber": 66
+        },
+        {
+          "caller": "toPO",
+          "callee": "new AccountTransactionPO",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setId",
+          "lineNumber": 72
+        },
+        {
+          "caller": "toPO",
+          "callee": "tx.getId",
+          "lineNumber": 72
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setTransactionNo",
+          "lineNumber": 73
+        },
+        {
+          "caller": "toPO",
+          "callee": "tx.getTransactionNo",
+          "lineNumber": 73
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setAccountId",
+          "lineNumber": 74
+        },
+        {
+          "caller": "toPO",
+          "callee": "tx.getAccountId",
+          "lineNumber": 74
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setAccountNo",
+          "lineNumber": 75
+        },
+        {
+          "caller": "toPO",
+          "callee": "tx.getAccountNo",
+          "lineNumber": 75
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setTransactionType",
+          "lineNumber": 76
+        },
+        {
+          "caller": "toPO",
+          "callee": "tx.getTransactionType",
+          "lineNumber": 76
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setAmount",
+          "lineNumber": 77
+        },
+        {
+          "caller": "toPO",
+          "callee": "tx.getAmount",
+          "lineNumber": 77
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setCurrency",
+          "lineNumber": 78
+        },
+        {
+          "caller": "toPO",
+          "callee": "tx.getCurrency",
+          "lineNumber": 78
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setBalanceBefore",
+          "lineNumber": 79
+        },
+        {
+          "caller": "toPO",
+          "callee": "tx.getBalanceBefore",
+          "lineNumber": 79
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setBalanceAfter",
+          "lineNumber": 80
+        },
+        {
+          "caller": "toPO",
+          "callee": "tx.getBalanceAfter",
+          "lineNumber": 80
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setRelatedBizNo",
+          "lineNumber": 81
+        },
+        {
+          "caller": "toPO",
+          "callee": "tx.getRelatedBizNo",
+          "lineNumber": 81
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setRelatedBizType",
+          "lineNumber": 82
+        },
+        {
+          "caller": "toPO",
+          "callee": "tx.getRelatedBizType",
+          "lineNumber": 82
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setTransactionTime",
+          "lineNumber": 83
+        },
+        {
+          "caller": "toPO",
+          "callee": "tx.getTransactionTime",
+          "lineNumber": 83
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setSummary",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toPO",
+          "callee": "tx.getSummary",
+          "lineNumber": 84
+        }
+      ],
+      "metrics": {
+        "importCount": 9,
+        "exportCount": 5,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 45,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "forex-ai/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 57,
+      "nonEmptyLines": 55,
+      "metrics": {}
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 84,
+      "nonEmptyLines": 74,
+      "functions": [
+        {
+          "name": "chatQuery",
+          "startLine": 30,
+          "endLine": 40,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "recommendHedging",
+          "startLine": 42,
+          "endLine": 50,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "nlTrade",
+          "startLine": 52,
+          "endLine": 58,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "generateReport",
+          "startLine": 60,
+          "endLine": 68,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "createSession",
+          "startLine": 70,
+          "endLine": 77,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "getMessages",
+          "startLine": 79,
+          "endLine": 83,
+          "params": [
+            "sessionId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AiChatController",
+          "startLine": 22,
+          "endLine": 84,
+          "methods": [
+            "chatQuery",
+            "recommendHedging",
+            "nlTrade",
+            "generateReport",
+            "createSession",
+            "getMessages"
+          ],
+          "properties": [
+            "aiAppService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "chatQuery",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "recommendHedging",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "nlTrade",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "generateReport",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "createSession",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "getMessages",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "AiChatController",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "chatQuery",
+          "callee": "req.getSessionId",
+          "lineNumber": 34
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "sessionId.isEmpty",
+          "lineNumber": 35
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "aiAppService.createSession",
+          "lineNumber": 36
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "aiAppService.chatQuery",
+          "lineNumber": 38
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "req.getQuestion",
+          "lineNumber": 38
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "R.ok",
+          "lineNumber": 39
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "req.getOrDefault",
+          "lineNumber": 46
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "req.getOrDefault",
+          "lineNumber": 47
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "req.getOrDefault",
+          "lineNumber": 48
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "R.ok",
+          "lineNumber": 49
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "aiAppService.recommendHedging",
+          "lineNumber": 49
+        },
+        {
+          "caller": "nlTrade",
+          "callee": "req.get",
+          "lineNumber": 56
+        },
+        {
+          "caller": "nlTrade",
+          "callee": "R.ok",
+          "lineNumber": 57
+        },
+        {
+          "caller": "nlTrade",
+          "callee": "aiAppService.processNlTrade",
+          "lineNumber": 57
+        },
+        {
+          "caller": "generateReport",
+          "callee": "req.getOrDefault",
+          "lineNumber": 64
+        },
+        {
+          "caller": "generateReport",
+          "callee": "req.getOrDefault",
+          "lineNumber": 65
+        },
+        {
+          "caller": "generateReport",
+          "callee": "req.getOrDefault",
+          "lineNumber": 66
+        },
+        {
+          "caller": "generateReport",
+          "callee": "R.ok",
+          "lineNumber": 67
+        },
+        {
+          "caller": "generateReport",
+          "callee": "aiAppService.generateReport",
+          "lineNumber": 67
+        },
+        {
+          "caller": "createSession",
+          "callee": "req.getOrDefault",
+          "lineNumber": 74
+        },
+        {
+          "caller": "createSession",
+          "callee": "aiAppService.createSession",
+          "lineNumber": 75
+        },
+        {
+          "caller": "createSession",
+          "callee": "R.ok",
+          "lineNumber": 76
+        },
+        {
+          "caller": "createSession",
+          "callee": "Map.of",
+          "lineNumber": 76
+        },
+        {
+          "caller": "getMessages",
+          "callee": "R.ok",
+          "lineNumber": 82
+        },
+        {
+          "caller": "getMessages",
+          "callee": "aiAppService.getSessionMessages",
+          "lineNumber": 82
+        }
+      ],
+      "metrics": {
+        "importCount": 12,
+        "exportCount": 7,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 50,
+      "nonEmptyLines": 43,
+      "functions": [
+        {
+          "name": "ocrUpload",
+          "startLine": 24,
+          "endLine": 31,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "auditCompare",
+          "startLine": 33,
+          "endLine": 41,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "clearingCorrection",
+          "startLine": 43,
+          "endLine": 49,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AiDocumentController",
+          "startLine": 16,
+          "endLine": 50,
+          "methods": [
+            "ocrUpload",
+            "auditCompare",
+            "clearingCorrection"
+          ],
+          "properties": [
+            "aiAppService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ocrUpload",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "auditCompare",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "clearingCorrection",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "AiDocumentController",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ocrUpload",
+          "callee": "req.getOrDefault",
+          "lineNumber": 28
+        },
+        {
+          "caller": "ocrUpload",
+          "callee": "req.getOrDefault",
+          "lineNumber": 29
+        },
+        {
+          "caller": "ocrUpload",
+          "callee": "R.ok",
+          "lineNumber": 30
+        },
+        {
+          "caller": "ocrUpload",
+          "callee": "aiAppService.ocrRecognize",
+          "lineNumber": 30
+        },
+        {
+          "caller": "auditCompare",
+          "callee": "req.getOrDefault",
+          "lineNumber": 37
+        },
+        {
+          "caller": "auditCompare",
+          "callee": "req.getOrDefault",
+          "lineNumber": 38
+        },
+        {
+          "caller": "auditCompare",
+          "callee": "req.getOrDefault",
+          "lineNumber": 39
+        },
+        {
+          "caller": "auditCompare",
+          "callee": "R.ok",
+          "lineNumber": 40
+        },
+        {
+          "caller": "auditCompare",
+          "callee": "aiAppService.compareDocuments",
+          "lineNumber": 40
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "req.getOrDefault",
+          "lineNumber": 47
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "R.ok",
+          "lineNumber": 48
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "aiAppService.clearingCorrection",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 67,
+      "nonEmptyLines": 59,
+      "functions": [
+        {
+          "name": "predictRate",
+          "startLine": 26,
+          "endLine": 43,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "predictExposure",
+          "startLine": 45,
+          "endLine": 53,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "getAlertConfig",
+          "startLine": 55,
+          "endLine": 59,
+          "params": []
+        },
+        {
+          "name": "updateAlertConfig",
+          "startLine": 61,
+          "endLine": 66,
+          "params": [
+            "config"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AiPredictionController",
+          "startLine": 18,
+          "endLine": 67,
+          "methods": [
+            "predictRate",
+            "predictExposure",
+            "getAlertConfig",
+            "updateAlertConfig"
+          ],
+          "properties": [
+            "aiAppService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "predictRate",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "predictExposure",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "getAlertConfig",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "updateAlertConfig",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "AiPredictionController",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "predictRate",
+          "callee": "req.getOrDefault",
+          "lineNumber": 30
+        },
+        {
+          "caller": "predictRate",
+          "callee": "req.getOrDefault",
+          "lineNumber": 31
+        },
+        {
+          "caller": "predictRate",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 32
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 33
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 34
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 35
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 36
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 37
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 38
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 39
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 40
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 41
+        },
+        {
+          "caller": "predictRate",
+          "callee": "java.time.LocalDateTime.now().toString",
+          "lineNumber": 41
+        },
+        {
+          "caller": "predictRate",
+          "callee": "java.time.LocalDateTime.now",
+          "lineNumber": 41
+        },
+        {
+          "caller": "predictRate",
+          "callee": "R.ok",
+          "lineNumber": 42
+        },
+        {
+          "caller": "predictExposure",
+          "callee": "R.ok",
+          "lineNumber": 49
+        },
+        {
+          "caller": "predictExposure",
+          "callee": "List.of",
+          "lineNumber": 49
+        },
+        {
+          "caller": "predictExposure",
+          "callee": "Map.of",
+          "lineNumber": 50
+        },
+        {
+          "caller": "predictExposure",
+          "callee": "Map.of",
+          "lineNumber": 51
+        },
+        {
+          "caller": "getAlertConfig",
+          "callee": "R.ok",
+          "lineNumber": 58
+        },
+        {
+          "caller": "getAlertConfig",
+          "callee": "Map.of",
+          "lineNumber": 58
+        },
+        {
+          "caller": "updateAlertConfig",
+          "callee": "R.okMsg",
+          "lineNumber": 65
+        }
+      ],
+      "metrics": {
+        "importCount": 9,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 47,
+      "nonEmptyLines": 40,
+      "functions": [
+        {
+          "name": "amlEvaluate",
+          "startLine": 24,
+          "endLine": 31,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "fuzzyMatchBlacklist",
+          "startLine": 33,
+          "endLine": 40,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "networkAnalysis",
+          "startLine": 42,
+          "endLine": 46,
+          "params": [
+            "customerId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AiRiskController",
+          "startLine": 16,
+          "endLine": 47,
+          "methods": [
+            "amlEvaluate",
+            "fuzzyMatchBlacklist",
+            "networkAnalysis"
+          ],
+          "properties": [
+            "aiAppService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "amlEvaluate",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "fuzzyMatchBlacklist",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "networkAnalysis",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "AiRiskController",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "amlEvaluate",
+          "callee": "req.get",
+          "lineNumber": 28
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "req.get(\"customerId\").toString",
+          "lineNumber": 28
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "req.get",
+          "lineNumber": 28
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "req.get",
+          "lineNumber": 29
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "req.get(\"transactionData\").toString",
+          "lineNumber": 29
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "req.get",
+          "lineNumber": 29
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "R.ok",
+          "lineNumber": 30
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "aiAppService.amlEvaluate",
+          "lineNumber": 30
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "req.getOrDefault",
+          "lineNumber": 37
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "req.getOrDefault",
+          "lineNumber": 38
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "R.ok",
+          "lineNumber": 39
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "aiAppService.fuzzyMatchBlacklist",
+          "lineNumber": 39
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "R.ok",
+          "lineNumber": 45
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "aiAppService.networkAnalysis",
+          "lineNumber": 45
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "ChatMessageReq",
+          "startLine": 7,
+          "endLine": 20,
+          "methods": [],
+          "properties": [
+            "sessionId",
+            "question",
+            "stream"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChatMessageReq",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "ChatMessageResp",
+          "startLine": 9,
+          "endLine": 21,
+          "methods": [],
+          "properties": [
+            "answer",
+            "sources",
+            "confidence"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChatMessageResp",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "DocumentAuditResp",
+          "startLine": 8,
+          "endLine": 23,
+          "methods": [],
+          "properties": [
+            "auditId",
+            "isConsistent",
+            "discrepancies",
+            "opinion"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DocumentAuditResp",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 39,
+      "nonEmptyLines": 27,
+      "classes": [
+        {
+          "name": "RatePredictionResp",
+          "startLine": 9,
+          "endLine": 39,
+          "methods": [],
+          "properties": [
+            "currencyPair",
+            "predType",
+            "currentRate",
+            "predictedRate",
+            "lowerBound",
+            "upperBound",
+            "confidence",
+            "trend",
+            "predictionTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RatePredictionResp",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 18,
+      "classes": [
+        {
+          "name": "RiskAlertResp",
+          "startLine": 8,
+          "endLine": 26,
+          "methods": [],
+          "properties": [
+            "alertId",
+            "riskType",
+            "score",
+            "level",
+            "description"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RiskAlertResp",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "TradingRecommendResp",
+          "startLine": 9,
+          "endLine": 21,
+          "methods": [],
+          "properties": [
+            "strategies",
+            "recommendedRatio",
+            "reasoning"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "TradingRecommendResp",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AiApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "AiApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 167,
+      "nonEmptyLines": 149,
+      "functions": [
+        {
+          "name": "predictRate",
+          "startLine": 25,
+          "endLine": 37,
+          "params": [
+            "currencyPair",
+            "predType"
+          ]
+        },
+        {
+          "name": "predictExposure",
+          "startLine": 39,
+          "endLine": 44,
+          "params": []
+        },
+        {
+          "name": "chatQuery",
+          "startLine": 46,
+          "endLine": 52,
+          "params": [
+            "sessionId",
+            "question"
+          ]
+        },
+        {
+          "name": "recommendHedging",
+          "startLine": 54,
+          "endLine": 60,
+          "params": [
+            "customerId",
+            "businessType",
+            "riskPreference"
+          ]
+        },
+        {
+          "name": "processNlTrade",
+          "startLine": 62,
+          "endLine": 74,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "generateReport",
+          "startLine": 76,
+          "endLine": 82,
+          "params": [
+            "customerId",
+            "period",
+            "reportType"
+          ]
+        },
+        {
+          "name": "createSession",
+          "startLine": 84,
+          "endLine": 87,
+          "params": [
+            "sessionType"
+          ]
+        },
+        {
+          "name": "getSessionMessages",
+          "startLine": 89,
+          "endLine": 94,
+          "params": [
+            "sessionId"
+          ]
+        },
+        {
+          "name": "amlEvaluate",
+          "startLine": 96,
+          "endLine": 105,
+          "params": [
+            "customerId",
+            "transactionData"
+          ]
+        },
+        {
+          "name": "fuzzyMatchBlacklist",
+          "startLine": 107,
+          "endLine": 115,
+          "params": [
+            "name",
+            "idType"
+          ]
+        },
+        {
+          "name": "networkAnalysis",
+          "startLine": 117,
+          "endLine": 131,
+          "params": [
+            "customerId"
+          ]
+        },
+        {
+          "name": "ocrRecognize",
+          "startLine": 133,
+          "endLine": 145,
+          "params": [
+            "docType",
+            "imageBase64"
+          ]
+        },
+        {
+          "name": "compareDocuments",
+          "startLine": 147,
+          "endLine": 155,
+          "params": [
+            "invoiceId",
+            "billId",
+            "customsId"
+          ]
+        },
+        {
+          "name": "clearingCorrection",
+          "startLine": 157,
+          "endLine": 166,
+          "params": [
+            "clearingId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AiAppService",
+          "startLine": 13,
+          "endLine": 167,
+          "methods": [
+            "predictRate",
+            "predictExposure",
+            "chatQuery",
+            "recommendHedging",
+            "processNlTrade",
+            "generateReport",
+            "createSession",
+            "getSessionMessages",
+            "amlEvaluate",
+            "fuzzyMatchBlacklist",
+            "networkAnalysis",
+            "ocrRecognize",
+            "compareDocuments",
+            "clearingCorrection"
+          ],
+          "properties": [
+            "aiDomainService",
+            "ratePredictionRepository",
+            "chatSessionRepository",
+            "chatMessageRepository",
+            "riskAiAssessmentRepository",
+            "documentAuditRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "predictRate",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "predictExposure",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "chatQuery",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "recommendHedging",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "processNlTrade",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "generateReport",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "createSession",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "getSessionMessages",
+          "line": 89,
+          "isDefault": false
+        },
+        {
+          "name": "amlEvaluate",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "fuzzyMatchBlacklist",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "networkAnalysis",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "ocrRecognize",
+          "line": 133,
+          "isDefault": false
+        },
+        {
+          "name": "compareDocuments",
+          "line": 147,
+          "isDefault": false
+        },
+        {
+          "name": "clearingCorrection",
+          "line": 157,
+          "isDefault": false
+        },
+        {
+          "name": "AiAppService",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "predictRate",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 26
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 27
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 28
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 29
+        },
+        {
+          "caller": "predictRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 29
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 30
+        },
+        {
+          "caller": "predictRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 30
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 31
+        },
+        {
+          "caller": "predictRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 31
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 32
+        },
+        {
+          "caller": "predictRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 32
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 33
+        },
+        {
+          "caller": "predictRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 33
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 34
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 35
+        },
+        {
+          "caller": "predictRate",
+          "callee": "LocalDateTime.now().toString",
+          "lineNumber": 35
+        },
+        {
+          "caller": "predictRate",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 35
+        },
+        {
+          "caller": "predictExposure",
+          "callee": "List.of",
+          "lineNumber": 40
+        },
+        {
+          "caller": "predictExposure",
+          "callee": "Map.of",
+          "lineNumber": 41
+        },
+        {
+          "caller": "predictExposure",
+          "callee": "Map.of",
+          "lineNumber": 42
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 47
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "resp.put",
+          "lineNumber": 48
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "resp.put",
+          "lineNumber": 49
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "List.of",
+          "lineNumber": 49
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "resp.put",
+          "lineNumber": 50
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "new BigDecimal",
+          "lineNumber": 50
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 55
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "resp.put",
+          "lineNumber": 56
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "List.of",
+          "lineNumber": 56
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "resp.put",
+          "lineNumber": 57
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "List.of",
+          "lineNumber": 57
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "new BigDecimal",
+          "lineNumber": 57
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "new BigDecimal",
+          "lineNumber": 57
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "new BigDecimal",
+          "lineNumber": 57
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "resp.put",
+          "lineNumber": 58
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 63
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "intent.put",
+          "lineNumber": 64
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 65
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "params.put",
+          "lineNumber": 66
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "params.put",
+          "lineNumber": 67
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "new BigDecimal",
+          "lineNumber": 67
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "params.put",
+          "lineNumber": 68
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "params.put",
+          "lineNumber": 69
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "intent.put",
+          "lineNumber": 70
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "intent.put",
+          "lineNumber": 71
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "intent.put",
+          "lineNumber": 72
+        },
+        {
+          "caller": "generateReport",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 77
+        },
+        {
+          "caller": "generateReport",
+          "callee": "resp.put",
+          "lineNumber": 78
+        },
+        {
+          "caller": "generateReport",
+          "callee": "UUID.randomUUID().toString().substring",
+          "lineNumber": 78
+        },
+        {
+          "caller": "generateReport",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 78
+        },
+        {
+          "caller": "generateReport",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 78
+        },
+        {
+          "caller": "generateReport",
+          "callee": "resp.put",
+          "lineNumber": 79
+        },
+        {
+          "caller": "generateReport",
+          "callee": "resp.put",
+          "lineNumber": 80
+        },
+        {
+          "caller": "generateReport",
+          "callee": "LocalDateTime.now().toString",
+          "lineNumber": 80
+        },
+        {
+          "caller": "generateReport",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 80
+        },
+        {
+          "caller": "createSession",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 85
+        },
+        {
+          "caller": "createSession",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "List.of",
+          "lineNumber": 90
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "Map.of",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "LocalDateTime.now().minusMinutes(5).toString",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "LocalDateTime.now().minusMinutes",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "Map.of",
+          "lineNumber": 92
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "LocalDateTime.now().minusMinutes(4).toString",
+          "lineNumber": 92
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "LocalDateTime.now().minusMinutes",
+          "lineNumber": 92
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 92
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 97
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "resp.put",
+          "lineNumber": 98
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 98
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 98
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "resp.put",
+          "lineNumber": 99
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "resp.put",
+          "lineNumber": 100
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "new BigDecimal",
+          "lineNumber": 100
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "resp.put",
+          "lineNumber": 101
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "resp.put",
+          "lineNumber": 102
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "List.of",
+          "lineNumber": 102
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "resp.put",
+          "lineNumber": 103
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 108
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "resp.put",
+          "lineNumber": 109
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "List.of",
+          "lineNumber": 109
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "Map.of",
+          "lineNumber": 110
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "new BigDecimal",
+          "lineNumber": 110
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "resp.put",
+          "lineNumber": 112
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "resp.put",
+          "lineNumber": 113
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "new BigDecimal",
+          "lineNumber": 113
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 118
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "resp.put",
+          "lineNumber": 119
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "resp.put",
+          "lineNumber": 120
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "List.of",
+          "lineNumber": 120
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "Map.of",
+          "lineNumber": 121
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "Map.of",
+          "lineNumber": 122
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "Map.of",
+          "lineNumber": 123
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "resp.put",
+          "lineNumber": 125
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "List.of",
+          "lineNumber": 125
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "Map.of",
+          "lineNumber": 126
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "Map.of",
+          "lineNumber": 127
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "resp.put",
+          "lineNumber": 129
+        },
+        {
+          "caller": "ocrRecognize",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 134
+        },
+        {
+          "caller": "ocrRecognize",
+          "callee": "resp.put",
+          "lineNumber": 135
+        },
+        {
+          "caller": "ocrRecognize",
+          "callee": "resp.put",
+          "lineNumber": 136
+        },
+        {
+          "caller": "ocrRecognize",
+          "callee": "resp.put",
+          "lineNumber": 137
+        },
+        {
+          "caller": "ocrRecognize",
+          "callee": "Map.of",
+          "lineNumber": 137
+        },
+        {
+          "caller": "ocrRecognize",
+          "callee": "resp.put",
+          "lineNumber": 143
+        },
+        {
+          "caller": "ocrRecognize",
+          "callee": "new BigDecimal",
+          "lineNumber": 143
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 148
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "resp.put",
+          "lineNumber": 149
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 149
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 149
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "resp.put",
+          "lineNumber": 150
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "resp.put",
+          "lineNumber": 151
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "List.of",
+          "lineNumber": 151
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "resp.put",
+          "lineNumber": 152
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "resp.put",
+          "lineNumber": 153
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "new BigDecimal",
+          "lineNumber": 153
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 158
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "resp.put",
+          "lineNumber": 159
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "resp.put",
+          "lineNumber": 160
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "List.of",
+          "lineNumber": 160
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "Map.of",
+          "lineNumber": 161
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "resp.put",
+          "lineNumber": 163
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "resp.put",
+          "lineNumber": 164
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 15,
+        "functionCount": 14,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 50,
+      "nonEmptyLines": 39,
+      "functions": [
+        {
+          "name": "ChatMessage",
+          "startLine": 22,
+          "endLine": 23,
+          "params": []
+        },
+        {
+          "name": "of",
+          "startLine": 25,
+          "endLine": 32,
+          "params": [
+            "role",
+            "content"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 34,
+          "endLine": 41,
+          "params": [
+            "messageId",
+            "role",
+            "content",
+            "timestamp"
+          ]
+        },
+        {
+          "name": "isUserMessage",
+          "startLine": 43,
+          "endLine": 45,
+          "params": []
+        },
+        {
+          "name": "isAiMessage",
+          "startLine": 47,
+          "endLine": 49,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ChatMessage",
+          "startLine": 8,
+          "endLine": 50,
+          "methods": [
+            "ChatMessage",
+            "of",
+            "reconstitute",
+            "isUserMessage",
+            "isAiMessage"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "ROLE_USER",
+            "ROLE_AI",
+            "ROLE_SYSTEM",
+            "messageId",
+            "role",
+            "content",
+            "timestamp"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ROLE_USER",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "ROLE_AI",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "ROLE_SYSTEM",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "of",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "isUserMessage",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "isAiMessage",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "ChatMessage",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "of",
+          "callee": "new ChatMessage",
+          "lineNumber": 26
+        },
+        {
+          "caller": "of",
+          "callee": "java.util.UUID.randomUUID().toString().substring(0, 8).toUpperCase",
+          "lineNumber": 27
+        },
+        {
+          "caller": "of",
+          "callee": "java.util.UUID.randomUUID().toString().substring",
+          "lineNumber": 27
+        },
+        {
+          "caller": "of",
+          "callee": "java.util.UUID.randomUUID().toString",
+          "lineNumber": 27
+        },
+        {
+          "caller": "of",
+          "callee": "java.util.UUID.randomUUID",
+          "lineNumber": 27
+        },
+        {
+          "caller": "of",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 30
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new ChatMessage",
+          "lineNumber": 35
+        },
+        {
+          "caller": "isUserMessage",
+          "callee": "ROLE_USER.equals",
+          "lineNumber": 44
+        },
+        {
+          "caller": "isAiMessage",
+          "callee": "ROLE_AI.equals",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 8,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 105,
+      "nonEmptyLines": 89,
+      "functions": [
+        {
+          "name": "ChatSession",
+          "startLine": 35,
+          "endLine": 38,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 40,
+          "endLine": 51,
+          "params": [
+            "userId",
+            "userName",
+            "sessionType",
+            "title"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 53,
+          "endLine": 67,
+          "params": [
+            "id",
+            "sessionId",
+            "userId",
+            "userName",
+            "sessionType",
+            "title",
+            "status",
+            "createdAt",
+            "updatedAt",
+            "version"
+          ]
+        },
+        {
+          "name": "addMessage",
+          "startLine": 69,
+          "endLine": 78,
+          "params": [
+            "msg"
+          ]
+        },
+        {
+          "name": "close",
+          "startLine": 80,
+          "endLine": 86,
+          "params": []
+        },
+        {
+          "name": "getMessageCount",
+          "startLine": 88,
+          "endLine": 90,
+          "params": []
+        },
+        {
+          "name": "loadMessages",
+          "startLine": 92,
+          "endLine": 94,
+          "params": [
+            "messages"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 96,
+          "endLine": 104,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ChatSession",
+          "startLine": 14,
+          "endLine": 105,
+          "methods": [
+            "ChatSession",
+            "create",
+            "reconstitute",
+            "addMessage",
+            "close",
+            "getMessageCount",
+            "loadMessages",
+            "validate"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "SUPPORT",
+            "TRADING",
+            "AUDIT",
+            "ACTIVE",
+            "CLOSED",
+            "id",
+            "sessionId",
+            "userId",
+            "userName",
+            "sessionType",
+            "title",
+            "status",
+            "messages"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SUPPORT",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "TRADING",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "AUDIT",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "ACTIVE",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "CLOSED",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "create",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "addMessage",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "close",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "getMessageCount",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "loadMessages",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "ChatSession",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ChatSession",
+          "callee": "new ArrayList<>",
+          "lineNumber": 37
+        },
+        {
+          "caller": "create",
+          "callee": "new ChatSession",
+          "lineNumber": 41
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID().toString().substring(0, 8).toUpperCase",
+          "lineNumber": 42
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID().toString().substring",
+          "lineNumber": 42
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 42
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 42
+        },
+        {
+          "caller": "create",
+          "callee": "new ArrayList<>",
+          "lineNumber": 48
+        },
+        {
+          "caller": "create",
+          "callee": "session.validate",
+          "lineNumber": 49
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new ChatSession",
+          "lineNumber": 57
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new ArrayList<>",
+          "lineNumber": 65
+        },
+        {
+          "caller": "addMessage",
+          "callee": "new BusinessException",
+          "lineNumber": 71
+        },
+        {
+          "caller": "addMessage",
+          "callee": "CLOSED.equals",
+          "lineNumber": 73
+        },
+        {
+          "caller": "addMessage",
+          "callee": "new IllegalStateException",
+          "lineNumber": 74
+        },
+        {
+          "caller": "addMessage",
+          "callee": "this.messages.add",
+          "lineNumber": 76
+        },
+        {
+          "caller": "addMessage",
+          "callee": "markUpdated",
+          "lineNumber": 77
+        },
+        {
+          "caller": "close",
+          "callee": "CLOSED.equals",
+          "lineNumber": 81
+        },
+        {
+          "caller": "close",
+          "callee": "new IllegalStateException",
+          "lineNumber": 82
+        },
+        {
+          "caller": "close",
+          "callee": "markUpdated",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getMessageCount",
+          "callee": "messages.size",
+          "lineNumber": 89
+        },
+        {
+          "caller": "loadMessages",
+          "callee": "new ArrayList<>",
+          "lineNumber": 93
+        },
+        {
+          "caller": "loadMessages",
+          "callee": "new ArrayList<>",
+          "lineNumber": 93
+        },
+        {
+          "caller": "validate",
+          "callee": "sessionType.isBlank",
+          "lineNumber": 98
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 99
+        },
+        {
+          "caller": "validate",
+          "callee": "userId.isBlank",
+          "lineNumber": 101
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 102
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 12,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 110,
+      "nonEmptyLines": 94,
+      "functions": [
+        {
+          "name": "DocumentAudit",
+          "startLine": 34,
+          "endLine": 36,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 38,
+          "endLine": 48,
+          "params": [
+            "bizNo",
+            "docType",
+            "ocrResult"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 50,
+          "endLine": 68,
+          "params": [
+            "id",
+            "auditId",
+            "bizNo",
+            "docType",
+            "ocrResult",
+            "comparisonResult",
+            "isConsistent",
+            "discrepancyDetail",
+            "auditOpinion",
+            "confidenceScore",
+            "createdAt",
+            "updatedAt",
+            "version"
+          ]
+        },
+        {
+          "name": "markConsistent",
+          "startLine": 70,
+          "endLine": 75,
+          "params": []
+        },
+        {
+          "name": "markDiscrepancy",
+          "startLine": 77,
+          "endLine": 85,
+          "params": [
+            "detail"
+          ]
+        },
+        {
+          "name": "setComparisonResult",
+          "startLine": 87,
+          "endLine": 90,
+          "params": [
+            "comparisonResult"
+          ]
+        },
+        {
+          "name": "setConfidenceScore",
+          "startLine": 92,
+          "endLine": 95,
+          "params": [
+            "confidenceScore"
+          ]
+        },
+        {
+          "name": "isAudited",
+          "startLine": 97,
+          "endLine": 99,
+          "params": []
+        },
+        {
+          "name": "validate",
+          "startLine": 101,
+          "endLine": 109,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "DocumentAudit",
+          "startLine": 13,
+          "endLine": 110,
+          "methods": [
+            "DocumentAudit",
+            "create",
+            "reconstitute",
+            "markConsistent",
+            "markDiscrepancy",
+            "setComparisonResult",
+            "setConfidenceScore",
+            "isAudited",
+            "validate"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "INVOICE",
+            "BL",
+            "PACKING_LIST",
+            "CUSTOMS_DECLARATION",
+            "id",
+            "auditId",
+            "bizNo",
+            "docType",
+            "ocrResult",
+            "comparisonResult",
+            "isConsistent",
+            "discrepancyDetail",
+            "auditOpinion",
+            "confidenceScore"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "INVOICE",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "BL",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "PACKING_LIST",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "CUSTOMS_DECLARATION",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "create",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "markConsistent",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "markDiscrepancy",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "setComparisonResult",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "setConfidenceScore",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "isAudited",
+          "line": 97,
+          "isDefault": false
+        },
+        {
+          "name": "DocumentAudit",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new DocumentAudit",
+          "lineNumber": 39
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID().toString().substring(0, 8).toUpperCase",
+          "lineNumber": 40
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID().toString().substring",
+          "lineNumber": 40
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 40
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 40
+        },
+        {
+          "caller": "create",
+          "callee": "audit.validate",
+          "lineNumber": 46
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new DocumentAudit",
+          "lineNumber": 56
+        },
+        {
+          "caller": "markConsistent",
+          "callee": "markUpdated",
+          "lineNumber": 74
+        },
+        {
+          "caller": "markDiscrepancy",
+          "callee": "detail.isBlank",
+          "lineNumber": 78
+        },
+        {
+          "caller": "markDiscrepancy",
+          "callee": "new BusinessException",
+          "lineNumber": 79
+        },
+        {
+          "caller": "markDiscrepancy",
+          "callee": "markUpdated",
+          "lineNumber": 84
+        },
+        {
+          "caller": "setComparisonResult",
+          "callee": "markUpdated",
+          "lineNumber": 89
+        },
+        {
+          "caller": "setConfidenceScore",
+          "callee": "markUpdated",
+          "lineNumber": 94
+        },
+        {
+          "caller": "validate",
+          "callee": "bizNo.isBlank",
+          "lineNumber": 103
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 104
+        },
+        {
+          "caller": "validate",
+          "callee": "docType.isBlank",
+          "lineNumber": 106
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 107
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 12,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 107,
+      "nonEmptyLines": 94,
+      "functions": [
+        {
+          "name": "RatePrediction",
+          "startLine": 35,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 39,
+          "endLine": 56,
+          "params": [
+            "currencyPair",
+            "predType",
+            "targetTime",
+            "predictedRate",
+            "lowerBound",
+            "upperBound",
+            "confidence",
+            "modelName"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 58,
+          "endLine": 78,
+          "params": [
+            "id",
+            "predNo",
+            "currencyPair",
+            "predType",
+            "predTime",
+            "targetTime",
+            "predictedRate",
+            "lowerBound",
+            "upperBound",
+            "confidence",
+            "modelName",
+            "createdAt",
+            "updatedAt",
+            "version"
+          ]
+        },
+        {
+          "name": "calculateRange",
+          "startLine": 80,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "isAccurate",
+          "startLine": 84,
+          "endLine": 90,
+          "params": [
+            "actual",
+            "tolerance"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 92,
+          "endLine": 106,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RatePrediction",
+          "startLine": 14,
+          "endLine": 107,
+          "methods": [
+            "RatePrediction",
+            "create",
+            "reconstitute",
+            "calculateRange",
+            "isAccurate",
+            "validate"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "HOURLY",
+            "DAILY",
+            "WEEKLY",
+            "id",
+            "predNo",
+            "currencyPair",
+            "predType",
+            "predTime",
+            "targetTime",
+            "predictedRate",
+            "lowerBound",
+            "upperBound",
+            "confidence",
+            "modelName"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "HOURLY",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "DAILY",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "WEEKLY",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "create",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "calculateRange",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "isAccurate",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "RatePrediction",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new RatePrediction",
+          "lineNumber": 43
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID().toString().substring(0, 8).toUpperCase",
+          "lineNumber": 44
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID().toString().substring",
+          "lineNumber": 44
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 44
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 44
+        },
+        {
+          "caller": "create",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 47
+        },
+        {
+          "caller": "create",
+          "callee": "pred.validate",
+          "lineNumber": 54
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new RatePrediction",
+          "lineNumber": 65
+        },
+        {
+          "caller": "calculateRange",
+          "callee": "upperBound.subtract(lowerBound).setScale",
+          "lineNumber": 81
+        },
+        {
+          "caller": "calculateRange",
+          "callee": "upperBound.subtract",
+          "lineNumber": 81
+        },
+        {
+          "caller": "isAccurate",
+          "callee": "predictedRate.subtract(actual).abs",
+          "lineNumber": 88
+        },
+        {
+          "caller": "isAccurate",
+          "callee": "predictedRate.subtract",
+          "lineNumber": 88
+        },
+        {
+          "caller": "isAccurate",
+          "callee": "diff.compareTo",
+          "lineNumber": 89
+        },
+        {
+          "caller": "validate",
+          "callee": "currencyPair.isBlank",
+          "lineNumber": 94
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 95
+        },
+        {
+          "caller": "validate",
+          "callee": "predType.isBlank",
+          "lineNumber": 97
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 98
+        },
+        {
+          "caller": "validate",
+          "callee": "predictedRate.compareTo",
+          "lineNumber": 100
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 101
+        },
+        {
+          "caller": "validate",
+          "callee": "lowerBound.compareTo",
+          "lineNumber": 103
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 104
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 8,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 101,
+      "nonEmptyLines": 87,
+      "functions": [
+        {
+          "name": "RiskAiAssessment",
+          "startLine": 38,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 42,
+          "endLine": 58,
+          "params": [
+            "customerId",
+            "bizNo",
+            "riskType",
+            "riskScore",
+            "riskLevel",
+            "aiAnalysis",
+            "recommendation",
+            "dataPointsJson"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 60,
+          "endLine": 79,
+          "params": [
+            "id",
+            "assessmentId",
+            "customerId",
+            "bizNo",
+            "riskType",
+            "riskScore",
+            "riskLevel",
+            "aiAnalysis",
+            "recommendation",
+            "dataPointsJson",
+            "createdAt",
+            "updatedAt",
+            "version"
+          ]
+        },
+        {
+          "name": "isEscalated",
+          "startLine": 81,
+          "endLine": 83,
+          "params": []
+        },
+        {
+          "name": "isPassed",
+          "startLine": 85,
+          "endLine": 87,
+          "params": [
+            "threshold"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 89,
+          "endLine": 100,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RiskAiAssessment",
+          "startLine": 13,
+          "endLine": 101,
+          "methods": [
+            "RiskAiAssessment",
+            "create",
+            "reconstitute",
+            "isEscalated",
+            "isPassed",
+            "validate"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "AML",
+            "FRAUD",
+            "SANCTION",
+            "LEVEL_LOW",
+            "LEVEL_MEDIUM",
+            "LEVEL_HIGH",
+            "LEVEL_PROHIBITED",
+            "id",
+            "assessmentId",
+            "customerId",
+            "bizNo",
+            "riskType",
+            "riskScore",
+            "riskLevel",
+            "aiAnalysis",
+            "recommendation",
+            "dataPointsJson"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AML",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "FRAUD",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "SANCTION",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "LEVEL_LOW",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "LEVEL_MEDIUM",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "LEVEL_HIGH",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "LEVEL_PROHIBITED",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "create",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "isEscalated",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "isPassed",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "RiskAiAssessment",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new RiskAiAssessment",
+          "lineNumber": 46
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID().toString().substring(0, 8).toUpperCase",
+          "lineNumber": 47
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID().toString().substring",
+          "lineNumber": 47
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 47
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 47
+        },
+        {
+          "caller": "create",
+          "callee": "assessment.validate",
+          "lineNumber": 56
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new RiskAiAssessment",
+          "lineNumber": 67
+        },
+        {
+          "caller": "isEscalated",
+          "callee": "LEVEL_HIGH.equals",
+          "lineNumber": 82
+        },
+        {
+          "caller": "isEscalated",
+          "callee": "LEVEL_PROHIBITED.equals",
+          "lineNumber": 82
+        },
+        {
+          "caller": "isPassed",
+          "callee": "riskScore.doubleValue",
+          "lineNumber": 86
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 92
+        },
+        {
+          "caller": "validate",
+          "callee": "riskType.isBlank",
+          "lineNumber": 94
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 95
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 98
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 12,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    }
+  ]
+}

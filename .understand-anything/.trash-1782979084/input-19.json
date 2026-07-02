@@ -1,0 +1,362 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java",
+      "language": "java",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "language": "java",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java",
+      "language": "java",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "language": "java",
+      "sizeLines": 99,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java",
+      "language": "java",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java",
+      "language": "java",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 46,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-notification/pom.xml",
+      "language": "xml",
+      "sizeLines": 61,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "language": "java",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "language": "java",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/adapter/dto/CreateNoticeReq.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/adapter/dto/NoticeResp.java",
+      "language": "java",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/adapter/dto/NotificationResp.java",
+      "language": "java",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/adapter/dto/SendNotificationReq.java",
+      "language": "java",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/application/command/CreateNoticeCmd.java",
+      "language": "java",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/application/command/SendNotificationCmd.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/application/query/NoticeQuery.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/application/query/NotifyQuery.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "language": "java",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/domain/event/NotificationSentEvent.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "language": "java",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java": [
+      "import com.forex.common.base.domain.BaseValueObject;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;",
+      "import java.math.RoundingMode;",
+      "import java.util.Objects;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import com.forex.common.base.result.ResultCode;"
+    ],
+    "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java": [
+      "import com.forex.common.base.domain.BaseValueObject;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;",
+      "import java.util.Objects;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import com.forex.common.base.result.ResultCode;"
+    ],
+    "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java": [
+      "import com.forex.common.base.domain.BaseValueObject;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;",
+      "import java.math.RoundingMode;",
+      "import java.util.Objects;"
+    ],
+    "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java": [
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.margin.domain.model.aggregate.MarginAccount;",
+      "import com.forex.margin.domain.model.query.MarginQuery;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java": [
+      "import com.forex.margin.domain.model.entity.MarginCall;",
+      "import java.util.List;"
+    ],
+    "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java": [
+      "import com.forex.margin.domain.event.MarginCalledEvent;",
+      "import com.forex.margin.domain.model.aggregate.MarginAccount;",
+      "import com.forex.margin.domain.model.entity.MarginCall;",
+      "import com.forex.margin.domain.model.valueobject.WaterLevel;",
+      "import com.forex.margin.domain.repository.MarginAccountRepository;",
+      "import com.forex.margin.domain.repository.MarginCallRepository;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.context.ApplicationEventPublisher;",
+      "import org.springframework.stereotype.Service;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;",
+      "import java.time.format.DateTimeFormatter;",
+      "import org.springframework.transaction.annotation.Transactional;"
+    ],
+    "forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java": [
+      "import com.forex.common.mybatis.base.BaseMapperExt;",
+      "import com.forex.margin.infrastructure.persistence.MarginAccountPO;",
+      "import com.baomidou.mybatisplus.extension.plugins.pagination.Page;",
+      "import org.apache.ibatis.annotations.Mapper;",
+      "import org.apache.ibatis.annotations.Param;",
+      "import org.apache.ibatis.annotations.Select;",
+      "import java.util.List;"
+    ],
+    "forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java": [
+      "import com.forex.common.mybatis.base.BasePO;",
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java": [
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.margin.domain.model.aggregate.MarginAccount;",
+      "import com.forex.margin.domain.model.query.MarginQuery;",
+      "import com.forex.margin.domain.repository.MarginAccountRepository;",
+      "import com.forex.margin.infrastructure.mapper.MarginAccountMapper;",
+      "import com.forex.margin.infrastructure.persistence.MarginAccountPO;",
+      "import com.baomidou.mybatisplus.extension.plugins.pagination.Page;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Repository;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-margin/src/main/java/com/forex/margin/MarginApplication.java": [
+      "import org.mybatis.spring.annotation.MapperScan;",
+      "import org.springframework.boot.SpringApplication;",
+      "import org.springframework.boot.autoconfigure.SpringBootApplication;",
+      "import org.springframework.cloud.client.discovery.EnableDiscoveryClient;"
+    ],
+    "forex-margin/src/main/resources/application.yml": [],
+    "forex-notification/pom.xml": [],
+    "forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java": [
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.common.base.result.R;",
+      "import com.forex.notification.adapter.dto.CreateNoticeReq;",
+      "import com.forex.notification.adapter.dto.NoticeResp;",
+      "import com.forex.notification.application.command.CreateNoticeCmd;",
+      "import com.forex.notification.application.query.NoticeQuery;",
+      "import com.forex.notification.application.service.NotificationAppService;",
+      "import com.forex.notification.domain.model.aggregate.Notice;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import jakarta.validation.Valid;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.web.bind.annotation.GetMapping;",
+      "import org.springframework.web.bind.annotation.PathVariable;",
+      "import org.springframework.web.bind.annotation.PostMapping;",
+      "import org.springframework.web.bind.annotation.PutMapping;",
+      "import org.springframework.web.bind.annotation.RequestBody;",
+      "import org.springframework.web.bind.annotation.RequestMapping;",
+      "import org.springframework.web.bind.annotation.RestController;",
+      "import java.util.List;",
+      "import com.forex.common.security.annotation.RequirePermission;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java": [
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.common.base.result.R;",
+      "import com.forex.notification.adapter.dto.NotificationResp;",
+      "import com.forex.notification.adapter.dto.SendNotificationReq;",
+      "import com.forex.notification.application.command.SendNotificationCmd;",
+      "import com.forex.notification.application.query.NotifyQuery;",
+      "import com.forex.notification.application.service.NotificationAppService;",
+      "import com.forex.notification.domain.model.aggregate.Notification;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import jakarta.validation.Valid;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.web.bind.annotation.GetMapping;",
+      "import org.springframework.web.bind.annotation.PathVariable;",
+      "import org.springframework.web.bind.annotation.PostMapping;",
+      "import org.springframework.web.bind.annotation.RequestBody;",
+      "import org.springframework.web.bind.annotation.RequestMapping;",
+      "import org.springframework.web.bind.annotation.RestController;",
+      "import java.util.List;",
+      "import com.forex.common.security.annotation.RequirePermission;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/adapter/dto/CreateNoticeReq.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import jakarta.validation.constraints.NotBlank;",
+      "import lombok.Data;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/adapter/dto/NoticeResp.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/adapter/dto/NotificationResp.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/adapter/dto/SendNotificationReq.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import jakarta.validation.constraints.NotBlank;",
+      "import lombok.Data;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/application/command/CreateNoticeCmd.java": [
+      "import jakarta.validation.constraints.NotBlank;",
+      "import lombok.Data;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/application/command/SendNotificationCmd.java": [
+      "import jakarta.validation.constraints.NotBlank;",
+      "import lombok.Data;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/application/query/NoticeQuery.java": [
+      "import com.forex.common.base.dto.PageReq;",
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/application/query/NotifyQuery.java": [
+      "import com.forex.common.base.dto.PageReq;",
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java": [
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.notification.application.command.CreateNoticeCmd;",
+      "import com.forex.notification.application.command.SendNotificationCmd;",
+      "import com.forex.notification.application.query.NoticeQuery;",
+      "import com.forex.notification.application.query.NotifyQuery;",
+      "import com.forex.notification.domain.model.aggregate.Notice;",
+      "import com.forex.notification.domain.model.aggregate.Notification;",
+      "import com.forex.notification.domain.repository.NoticeRepository;",
+      "import com.forex.notification.domain.repository.NotificationRepository;",
+      "import com.forex.notification.domain.service.NotificationDomainService;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Service;",
+      "import org.springframework.transaction.annotation.Transactional;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import com.forex.common.base.result.ResultCode;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/domain/event/NotificationSentEvent.java": [
+      "import com.forex.common.base.domain.BaseDomainEvent;",
+      "import lombok.Getter;"
+    ],
+    "forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java": [
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import lombok.Getter;",
+      "import java.time.LocalDateTime;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import com.forex.common.base.result.ResultCode;"
+    ]
+  }
+}

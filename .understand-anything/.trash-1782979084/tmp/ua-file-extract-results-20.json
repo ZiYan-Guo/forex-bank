@@ -1,0 +1,3144 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notification.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 99,
+      "nonEmptyLines": 87,
+      "functions": [
+        {
+          "name": "Notification",
+          "startLine": 26,
+          "endLine": 28,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 30,
+          "endLine": 44,
+          "params": [
+            "title",
+            "content",
+            "notifyType",
+            "targetUsers",
+            "targetUserNames",
+            "bizType",
+            "bizNo"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 46,
+          "endLine": 64,
+          "params": [
+            "id",
+            "title",
+            "content",
+            "notifyType",
+            "targetUsers",
+            "targetUserNames",
+            "bizType",
+            "bizNo",
+            "status",
+            "sendTime",
+            "failedReason"
+          ]
+        },
+        {
+          "name": "send",
+          "startLine": 66,
+          "endLine": 73,
+          "params": []
+        },
+        {
+          "name": "markSent",
+          "startLine": 75,
+          "endLine": 79,
+          "params": []
+        },
+        {
+          "name": "markFailed",
+          "startLine": 81,
+          "endLine": 85,
+          "params": [
+            "reason"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 87,
+          "endLine": 98,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "Notification",
+          "startLine": 11,
+          "endLine": 99,
+          "methods": [
+            "Notification",
+            "create",
+            "reconstitute",
+            "send",
+            "markSent",
+            "markFailed",
+            "validate"
+          ],
+          "properties": [
+            "id",
+            "title",
+            "content",
+            "notifyType",
+            "targetUsers",
+            "targetUserNames",
+            "bizType",
+            "bizNo",
+            "status",
+            "sendTime",
+            "failedReason"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "send",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "markSent",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "markFailed",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "Notification",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new Notification",
+          "lineNumber": 33
+        },
+        {
+          "caller": "create",
+          "callee": "notification.validate",
+          "lineNumber": 42
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new Notification",
+          "lineNumber": 51
+        },
+        {
+          "caller": "send",
+          "callee": "\"SENT\".equals",
+          "lineNumber": 67
+        },
+        {
+          "caller": "send",
+          "callee": "new IllegalStateException",
+          "lineNumber": 68
+        },
+        {
+          "caller": "send",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 71
+        },
+        {
+          "caller": "send",
+          "callee": "markUpdated",
+          "lineNumber": 72
+        },
+        {
+          "caller": "markSent",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 77
+        },
+        {
+          "caller": "markSent",
+          "callee": "markUpdated",
+          "lineNumber": 78
+        },
+        {
+          "caller": "markFailed",
+          "callee": "markUpdated",
+          "lineNumber": 84
+        },
+        {
+          "caller": "validate",
+          "callee": "title.isBlank",
+          "lineNumber": 89
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 90
+        },
+        {
+          "caller": "validate",
+          "callee": "content.isBlank",
+          "lineNumber": 92
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 93
+        },
+        {
+          "caller": "validate",
+          "callee": "notifyType.isBlank",
+          "lineNumber": 95
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 96
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 6,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/domain/repository/NoticeRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "NoticeRepository",
+          "startLine": 9,
+          "endLine": 16,
+          "methods": [
+            "save",
+            "findById",
+            "pageQuery"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "NoticeRepository",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/domain/repository/NotificationRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "NotificationRepository",
+          "startLine": 9,
+          "endLine": 18,
+          "methods": [
+            "save",
+            "findById",
+            "findByBizNo",
+            "pageQuery"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "NotificationRepository",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/domain/service/NotificationDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 58,
+      "nonEmptyLines": 48,
+      "functions": [
+        {
+          "name": "sendNotification",
+          "startLine": 26,
+          "endLine": 43,
+          "params": [
+            "notification"
+          ]
+        },
+        {
+          "name": "createNotice",
+          "startLine": 45,
+          "endLine": 50,
+          "params": [
+            "notice"
+          ]
+        },
+        {
+          "name": "publishNotice",
+          "startLine": 52,
+          "endLine": 57,
+          "params": [
+            "notice"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "NotificationDomainService",
+          "startLine": 16,
+          "endLine": 58,
+          "methods": [
+            "sendNotification",
+            "createNotice",
+            "publishNotice"
+          ],
+          "properties": [
+            "notificationRepository",
+            "noticeRepository",
+            "eventPublisher"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "sendNotification",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "createNotice",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "publishNotice",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "NotificationDomainService",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "sendNotification",
+          "callee": "notification.send",
+          "lineNumber": 28
+        },
+        {
+          "caller": "sendNotification",
+          "callee": "notificationRepository.save",
+          "lineNumber": 29
+        },
+        {
+          "caller": "sendNotification",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 31
+        },
+        {
+          "caller": "sendNotification",
+          "callee": "new NotificationSentEvent",
+          "lineNumber": 31
+        },
+        {
+          "caller": "sendNotification",
+          "callee": "saved.getNotifyType",
+          "lineNumber": 32
+        },
+        {
+          "caller": "sendNotification",
+          "callee": "saved.getBizNo",
+          "lineNumber": 32
+        },
+        {
+          "caller": "sendNotification",
+          "callee": "log.info",
+          "lineNumber": 34
+        },
+        {
+          "caller": "sendNotification",
+          "callee": "saved.getId",
+          "lineNumber": 35
+        },
+        {
+          "caller": "sendNotification",
+          "callee": "saved.getNotifyType",
+          "lineNumber": 35
+        },
+        {
+          "caller": "sendNotification",
+          "callee": "saved.getBizNo",
+          "lineNumber": 35
+        },
+        {
+          "caller": "sendNotification",
+          "callee": "log.error",
+          "lineNumber": 38
+        },
+        {
+          "caller": "sendNotification",
+          "callee": "notification.getNotifyType",
+          "lineNumber": 39
+        },
+        {
+          "caller": "sendNotification",
+          "callee": "notification.getBizNo",
+          "lineNumber": 39
+        },
+        {
+          "caller": "sendNotification",
+          "callee": "e.getMessage",
+          "lineNumber": 39
+        },
+        {
+          "caller": "sendNotification",
+          "callee": "notification.markFailed",
+          "lineNumber": 40
+        },
+        {
+          "caller": "sendNotification",
+          "callee": "e.getMessage",
+          "lineNumber": 40
+        },
+        {
+          "caller": "sendNotification",
+          "callee": "notificationRepository.save",
+          "lineNumber": 41
+        },
+        {
+          "caller": "createNotice",
+          "callee": "noticeRepository.save",
+          "lineNumber": 46
+        },
+        {
+          "caller": "createNotice",
+          "callee": "log.info",
+          "lineNumber": 47
+        },
+        {
+          "caller": "createNotice",
+          "callee": "saved.getId",
+          "lineNumber": 48
+        },
+        {
+          "caller": "createNotice",
+          "callee": "saved.getTitle",
+          "lineNumber": 48
+        },
+        {
+          "caller": "createNotice",
+          "callee": "saved.getNoticeType",
+          "lineNumber": 48
+        },
+        {
+          "caller": "publishNotice",
+          "callee": "notice.publish",
+          "lineNumber": 53
+        },
+        {
+          "caller": "publishNotice",
+          "callee": "noticeRepository.save",
+          "lineNumber": 54
+        },
+        {
+          "caller": "publishNotice",
+          "callee": "log.info",
+          "lineNumber": 55
+        },
+        {
+          "caller": "publishNotice",
+          "callee": "saved.getId",
+          "lineNumber": 55
+        },
+        {
+          "caller": "publishNotice",
+          "callee": "saved.getTitle",
+          "lineNumber": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 9,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/mapper/NoticeMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 22,
+      "classes": [
+        {
+          "name": "NoticeMapper",
+          "startLine": 13,
+          "endLine": 27,
+          "methods": [
+            "pageQuery"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "NoticeMapper",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/mapper/NotificationMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 33,
+      "nonEmptyLines": 27,
+      "classes": [
+        {
+          "name": "NotificationMapper",
+          "startLine": 13,
+          "endLine": 33,
+          "methods": [
+            "selectByBizNo",
+            "pageQuery"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "NotificationMapper",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/persistence/NoticePO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 18,
+      "classes": [
+        {
+          "name": "NoticePO",
+          "startLine": 12,
+          "endLine": 24,
+          "methods": [],
+          "properties": [
+            "title",
+            "content",
+            "noticeType",
+            "publishStatus",
+            "publisherId",
+            "publishTime",
+            "expireTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "NoticePO",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/persistence/NotificationPO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 21,
+      "classes": [
+        {
+          "name": "NotificationPO",
+          "startLine": 12,
+          "endLine": 27,
+          "methods": [],
+          "properties": [
+            "title",
+            "content",
+            "notifyType",
+            "targetUsers",
+            "targetUserNames",
+            "bizType",
+            "bizNo",
+            "status",
+            "sendTime",
+            "failedReason"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "NotificationPO",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/repository/NoticeRepositoryImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 77,
+      "nonEmptyLines": 65,
+      "functions": [
+        {
+          "name": "save",
+          "startLine": 25,
+          "endLine": 34,
+          "params": [
+            "notice"
+          ]
+        },
+        {
+          "name": "findById",
+          "startLine": 36,
+          "endLine": 40,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 42,
+          "endLine": 50,
+          "params": [
+            "query"
+          ]
+        },
+        {
+          "name": "toDomain",
+          "startLine": 52,
+          "endLine": 63,
+          "params": [
+            "po"
+          ]
+        },
+        {
+          "name": "toPO",
+          "startLine": 65,
+          "endLine": 76,
+          "params": [
+            "notice"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "NoticeRepositoryImpl",
+          "startLine": 19,
+          "endLine": 77,
+          "methods": [
+            "save",
+            "findById",
+            "pageQuery",
+            "toDomain",
+            "toPO"
+          ],
+          "properties": [
+            "noticeMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "save",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "findById",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "NoticeRepositoryImpl",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "save",
+          "callee": "toPO",
+          "lineNumber": 27
+        },
+        {
+          "caller": "save",
+          "callee": "notice.getId",
+          "lineNumber": 28
+        },
+        {
+          "caller": "save",
+          "callee": "noticeMapper.insert",
+          "lineNumber": 29
+        },
+        {
+          "caller": "save",
+          "callee": "noticeMapper.updateById",
+          "lineNumber": 31
+        },
+        {
+          "caller": "save",
+          "callee": "toDomain",
+          "lineNumber": 33
+        },
+        {
+          "caller": "findById",
+          "callee": "noticeMapper.selectById",
+          "lineNumber": 38
+        },
+        {
+          "caller": "findById",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 39
+        },
+        {
+          "caller": "findById",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 39
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "new Page<>",
+          "lineNumber": 44
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageNum",
+          "lineNumber": 44
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageSize",
+          "lineNumber": 44
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "noticeMapper.pageQuery",
+          "lineNumber": 45
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords().stream()\n                .map(this::toDomain).toList",
+          "lineNumber": 46
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords().stream().map",
+          "lineNumber": 46
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords().stream",
+          "lineNumber": 46
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords",
+          "lineNumber": 46
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "PageResp.of",
+          "lineNumber": 49
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getTotal",
+          "lineNumber": 49
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageNum",
+          "lineNumber": 49
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageSize",
+          "lineNumber": 49
+        },
+        {
+          "caller": "toDomain",
+          "callee": "Notice.reconstitute",
+          "lineNumber": 53
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getId",
+          "lineNumber": 54
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getTitle",
+          "lineNumber": 55
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getContent",
+          "lineNumber": 56
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getNoticeType",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getPublishStatus",
+          "lineNumber": 58
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getPublisherId",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getPublishTime",
+          "lineNumber": 60
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getExpireTime",
+          "lineNumber": 61
+        },
+        {
+          "caller": "toPO",
+          "callee": "new NoticePO",
+          "lineNumber": 66
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setId",
+          "lineNumber": 67
+        },
+        {
+          "caller": "toPO",
+          "callee": "notice.getId",
+          "lineNumber": 67
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setTitle",
+          "lineNumber": 68
+        },
+        {
+          "caller": "toPO",
+          "callee": "notice.getTitle",
+          "lineNumber": 68
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setContent",
+          "lineNumber": 69
+        },
+        {
+          "caller": "toPO",
+          "callee": "notice.getContent",
+          "lineNumber": 69
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setNoticeType",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toPO",
+          "callee": "notice.getNoticeType",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setPublishStatus",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toPO",
+          "callee": "notice.getPublishStatus",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setPublisherId",
+          "lineNumber": 72
+        },
+        {
+          "caller": "toPO",
+          "callee": "notice.getPublisherId",
+          "lineNumber": 72
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setPublishTime",
+          "lineNumber": 73
+        },
+        {
+          "caller": "toPO",
+          "callee": "notice.getPublishTime",
+          "lineNumber": 73
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setExpireTime",
+          "lineNumber": 74
+        },
+        {
+          "caller": "toPO",
+          "callee": "notice.getExpireTime",
+          "lineNumber": 74
+        }
+      ],
+      "metrics": {
+        "importCount": 11,
+        "exportCount": 4,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/repository/NotificationRepositoryImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 89,
+      "nonEmptyLines": 76,
+      "functions": [
+        {
+          "name": "save",
+          "startLine": 25,
+          "endLine": 34,
+          "params": [
+            "notification"
+          ]
+        },
+        {
+          "name": "findById",
+          "startLine": 36,
+          "endLine": 40,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "findByBizNo",
+          "startLine": 42,
+          "endLine": 46,
+          "params": [
+            "bizNo"
+          ]
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 48,
+          "endLine": 56,
+          "params": [
+            "query"
+          ]
+        },
+        {
+          "name": "toDomain",
+          "startLine": 58,
+          "endLine": 72,
+          "params": [
+            "po"
+          ]
+        },
+        {
+          "name": "toPO",
+          "startLine": 74,
+          "endLine": 88,
+          "params": [
+            "notification"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "NotificationRepositoryImpl",
+          "startLine": 19,
+          "endLine": 89,
+          "methods": [
+            "save",
+            "findById",
+            "findByBizNo",
+            "pageQuery",
+            "toDomain",
+            "toPO"
+          ],
+          "properties": [
+            "notificationMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "save",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "findById",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "findByBizNo",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "NotificationRepositoryImpl",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "save",
+          "callee": "toPO",
+          "lineNumber": 27
+        },
+        {
+          "caller": "save",
+          "callee": "notification.getId",
+          "lineNumber": 28
+        },
+        {
+          "caller": "save",
+          "callee": "notificationMapper.insert",
+          "lineNumber": 29
+        },
+        {
+          "caller": "save",
+          "callee": "notificationMapper.updateById",
+          "lineNumber": 31
+        },
+        {
+          "caller": "save",
+          "callee": "toDomain",
+          "lineNumber": 33
+        },
+        {
+          "caller": "findById",
+          "callee": "notificationMapper.selectById",
+          "lineNumber": 38
+        },
+        {
+          "caller": "findById",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 39
+        },
+        {
+          "caller": "findById",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 39
+        },
+        {
+          "caller": "findByBizNo",
+          "callee": "notificationMapper.selectByBizNo",
+          "lineNumber": 44
+        },
+        {
+          "caller": "findByBizNo",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 45
+        },
+        {
+          "caller": "findByBizNo",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 45
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "new Page<>",
+          "lineNumber": 50
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageNum",
+          "lineNumber": 50
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageSize",
+          "lineNumber": 50
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "notificationMapper.pageQuery",
+          "lineNumber": 51
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords().stream()\n                .map(this::toDomain).toList",
+          "lineNumber": 52
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords().stream().map",
+          "lineNumber": 52
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords().stream",
+          "lineNumber": 52
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords",
+          "lineNumber": 52
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "PageResp.of",
+          "lineNumber": 55
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getTotal",
+          "lineNumber": 55
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageNum",
+          "lineNumber": 55
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageSize",
+          "lineNumber": 55
+        },
+        {
+          "caller": "toDomain",
+          "callee": "Notification.reconstitute",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getId",
+          "lineNumber": 60
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getTitle",
+          "lineNumber": 61
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getContent",
+          "lineNumber": 62
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getNotifyType",
+          "lineNumber": 63
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getTargetUsers",
+          "lineNumber": 64
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getTargetUserNames",
+          "lineNumber": 65
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getBizType",
+          "lineNumber": 66
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getBizNo",
+          "lineNumber": 67
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getStatus",
+          "lineNumber": 68
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getSendTime",
+          "lineNumber": 69
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getFailedReason",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toPO",
+          "callee": "new NotificationPO",
+          "lineNumber": 75
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setId",
+          "lineNumber": 76
+        },
+        {
+          "caller": "toPO",
+          "callee": "notification.getId",
+          "lineNumber": 76
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setTitle",
+          "lineNumber": 77
+        },
+        {
+          "caller": "toPO",
+          "callee": "notification.getTitle",
+          "lineNumber": 77
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setContent",
+          "lineNumber": 78
+        },
+        {
+          "caller": "toPO",
+          "callee": "notification.getContent",
+          "lineNumber": 78
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setNotifyType",
+          "lineNumber": 79
+        },
+        {
+          "caller": "toPO",
+          "callee": "notification.getNotifyType",
+          "lineNumber": 79
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setTargetUsers",
+          "lineNumber": 80
+        },
+        {
+          "caller": "toPO",
+          "callee": "notification.getTargetUsers",
+          "lineNumber": 80
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setTargetUserNames",
+          "lineNumber": 81
+        },
+        {
+          "caller": "toPO",
+          "callee": "notification.getTargetUserNames",
+          "lineNumber": 81
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setBizType",
+          "lineNumber": 82
+        },
+        {
+          "caller": "toPO",
+          "callee": "notification.getBizType",
+          "lineNumber": 82
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setBizNo",
+          "lineNumber": 83
+        },
+        {
+          "caller": "toPO",
+          "callee": "notification.getBizNo",
+          "lineNumber": 83
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setStatus",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toPO",
+          "callee": "notification.getStatus",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setSendTime",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toPO",
+          "callee": "notification.getSendTime",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setFailedReason",
+          "lineNumber": 86
+        },
+        {
+          "caller": "toPO",
+          "callee": "notification.getFailedReason",
+          "lineNumber": 86
+        }
+      ],
+      "metrics": {
+        "importCount": 11,
+        "exportCount": 5,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/NotificationApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "NotificationApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "NotificationApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-notification/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 45,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "forex-ocr/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 63,
+      "nonEmptyLines": 61,
+      "metrics": {}
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/adapter/controller/OcrController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 89,
+      "nonEmptyLines": 77,
+      "functions": [
+        {
+          "name": "upload",
+          "startLine": 36,
+          "endLine": 44,
+          "params": [
+            "docType",
+            "file"
+          ]
+        },
+        {
+          "name": "process",
+          "startLine": 46,
+          "endLine": 52,
+          "params": [
+            "taskId"
+          ]
+        },
+        {
+          "name": "getResult",
+          "startLine": 54,
+          "endLine": 59,
+          "params": [
+            "taskId"
+          ]
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 61,
+          "endLine": 72,
+          "params": [
+            "query"
+          ]
+        },
+        {
+          "name": "toResp",
+          "startLine": 74,
+          "endLine": 88,
+          "params": [
+            "task"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "OcrController",
+          "startLine": 28,
+          "endLine": 89,
+          "methods": [
+            "upload",
+            "process",
+            "getResult",
+            "pageQuery",
+            "toResp"
+          ],
+          "properties": [
+            "ocrAppService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "upload",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "process",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "getResult",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "OcrController",
+          "line": 28,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "upload",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 41
+        },
+        {
+          "caller": "upload",
+          "callee": "ocrAppService.uploadDocument",
+          "lineNumber": 42
+        },
+        {
+          "caller": "upload",
+          "callee": "R.ok",
+          "lineNumber": 43
+        },
+        {
+          "caller": "upload",
+          "callee": "toResp",
+          "lineNumber": 43
+        },
+        {
+          "caller": "process",
+          "callee": "ocrAppService.processOcr",
+          "lineNumber": 50
+        },
+        {
+          "caller": "process",
+          "callee": "R.ok",
+          "lineNumber": 51
+        },
+        {
+          "caller": "process",
+          "callee": "toResp",
+          "lineNumber": 51
+        },
+        {
+          "caller": "getResult",
+          "callee": "ocrAppService.getOcrResult",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getResult",
+          "callee": "R.ok",
+          "lineNumber": 58
+        },
+        {
+          "caller": "getResult",
+          "callee": "toResp",
+          "lineNumber": 58
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "ocrAppService.pageQuery",
+          "lineNumber": 65
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getRecords().stream()\n                .map(this::toResp).toList",
+          "lineNumber": 66
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getRecords().stream().map",
+          "lineNumber": 66
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getRecords().stream",
+          "lineNumber": 66
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getRecords",
+          "lineNumber": 66
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "PageResp.of",
+          "lineNumber": 69
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getTotal",
+          "lineNumber": 70
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getPageNum",
+          "lineNumber": 70
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getPageSize",
+          "lineNumber": 70
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "R.ok",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toResp",
+          "callee": "new OcrTaskResp",
+          "lineNumber": 75
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setId",
+          "lineNumber": 76
+        },
+        {
+          "caller": "toResp",
+          "callee": "task.getId",
+          "lineNumber": 76
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setTaskId",
+          "lineNumber": 77
+        },
+        {
+          "caller": "toResp",
+          "callee": "task.getTaskId",
+          "lineNumber": 77
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setDocType",
+          "lineNumber": 78
+        },
+        {
+          "caller": "toResp",
+          "callee": "task.getDocType",
+          "lineNumber": 78
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setFileName",
+          "lineNumber": 79
+        },
+        {
+          "caller": "toResp",
+          "callee": "task.getFileName",
+          "lineNumber": 79
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setFilePath",
+          "lineNumber": 80
+        },
+        {
+          "caller": "toResp",
+          "callee": "task.getFilePath",
+          "lineNumber": 80
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setOcrResult",
+          "lineNumber": 81
+        },
+        {
+          "caller": "toResp",
+          "callee": "task.getOcrResult",
+          "lineNumber": 81
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setRecognizedFields",
+          "lineNumber": 82
+        },
+        {
+          "caller": "toResp",
+          "callee": "task.getRecognizedFields",
+          "lineNumber": 82
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setStatus",
+          "lineNumber": 83
+        },
+        {
+          "caller": "toResp",
+          "callee": "task.getStatus",
+          "lineNumber": 83
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setErrorMsg",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toResp",
+          "callee": "task.getErrorMsg",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setUploadTime",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toResp",
+          "callee": "task.getUploadTime",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCompleteTime",
+          "lineNumber": 86
+        },
+        {
+          "caller": "toResp",
+          "callee": "task.getCompleteTime",
+          "lineNumber": 86
+        }
+      ],
+      "metrics": {
+        "importCount": 19,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/adapter/dto/OcrTaskResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 30,
+      "classes": [
+        {
+          "name": "OcrTaskResp",
+          "startLine": 9,
+          "endLine": 45,
+          "methods": [],
+          "properties": [
+            "id",
+            "taskId",
+            "docType",
+            "fileName",
+            "filePath",
+            "ocrResult",
+            "recognizedFields",
+            "status",
+            "errorMsg",
+            "uploadTime",
+            "completeTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OcrTaskResp",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/adapter/dto/OcrUploadReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "OcrUploadReq",
+          "startLine": 9,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "docType"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OcrUploadReq",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/application/query/OcrQuery.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "OcrQuery",
+          "startLine": 10,
+          "endLine": 19,
+          "methods": [],
+          "properties": [
+            "docType",
+            "status"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OcrQuery",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/application/service/OcrAppService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 34,
+      "functions": [
+        {
+          "name": "uploadDocument",
+          "startLine": 23,
+          "endLine": 25,
+          "params": [
+            "docType",
+            "fileName",
+            "filePath"
+          ]
+        },
+        {
+          "name": "processOcr",
+          "startLine": 27,
+          "endLine": 32,
+          "params": [
+            "taskId"
+          ]
+        },
+        {
+          "name": "getOcrResult",
+          "startLine": 34,
+          "endLine": 38,
+          "params": [
+            "taskId"
+          ]
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 40,
+          "endLine": 42,
+          "params": [
+            "query"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "OcrAppService",
+          "startLine": 16,
+          "endLine": 43,
+          "methods": [
+            "uploadDocument",
+            "processOcr",
+            "getOcrResult",
+            "pageQuery"
+          ],
+          "properties": [
+            "ocrDomainService",
+            "ocrTaskRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "uploadDocument",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "processOcr",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "getOcrResult",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "OcrAppService",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "uploadDocument",
+          "callee": "ocrDomainService.uploadDocument",
+          "lineNumber": 24
+        },
+        {
+          "caller": "processOcr",
+          "callee": "ocrTaskRepository.findByTaskId(taskId).orElseThrow",
+          "lineNumber": 29
+        },
+        {
+          "caller": "processOcr",
+          "callee": "ocrTaskRepository.findByTaskId",
+          "lineNumber": 29
+        },
+        {
+          "caller": "processOcr",
+          "callee": "new BusinessException",
+          "lineNumber": 30
+        },
+        {
+          "caller": "processOcr",
+          "callee": "ocrDomainService.processOcr",
+          "lineNumber": 31
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.getId",
+          "lineNumber": 31
+        },
+        {
+          "caller": "getOcrResult",
+          "callee": "ocrTaskRepository.findByTaskId(taskId).orElseThrow",
+          "lineNumber": 35
+        },
+        {
+          "caller": "getOcrResult",
+          "callee": "ocrTaskRepository.findByTaskId",
+          "lineNumber": 35
+        },
+        {
+          "caller": "getOcrResult",
+          "callee": "new BusinessException",
+          "lineNumber": 36
+        },
+        {
+          "caller": "getOcrResult",
+          "callee": "ocrDomainService.getResult",
+          "lineNumber": 37
+        },
+        {
+          "caller": "getOcrResult",
+          "callee": "task.getId",
+          "lineNumber": 37
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "ocrTaskRepository.pageQuery",
+          "lineNumber": 41
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/event/OcrCompletedEvent.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 16,
+      "functions": [
+        {
+          "name": "OcrCompletedEvent",
+          "startLine": 13,
+          "endLine": 16,
+          "params": [
+            "taskId",
+            "docType"
+          ]
+        },
+        {
+          "name": "eventName",
+          "startLine": 18,
+          "endLine": 21,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "OcrCompletedEvent",
+          "startLine": 7,
+          "endLine": 22,
+          "methods": [
+            "OcrCompletedEvent",
+            "eventName"
+          ],
+          "properties": [
+            "taskId",
+            "docType"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OcrCompletedEvent",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "eventName",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "OcrCompletedEvent",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/model/aggregate/OcrTask.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 90,
+      "nonEmptyLines": 78,
+      "functions": [
+        {
+          "name": "OcrTask",
+          "startLine": 27,
+          "endLine": 29,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 31,
+          "endLine": 41,
+          "params": [
+            "docType",
+            "fileName",
+            "filePath"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 43,
+          "endLine": 60,
+          "params": [
+            "id",
+            "taskId",
+            "docType",
+            "fileName",
+            "filePath",
+            "ocrResult",
+            "recognizedFields",
+            "status",
+            "errorMsg",
+            "uploadTime",
+            "completeTime"
+          ]
+        },
+        {
+          "name": "startProcessing",
+          "startLine": 62,
+          "endLine": 65,
+          "params": []
+        },
+        {
+          "name": "complete",
+          "startLine": 67,
+          "endLine": 72,
+          "params": [
+            "result"
+          ]
+        },
+        {
+          "name": "fail",
+          "startLine": 74,
+          "endLine": 79,
+          "params": [
+            "error"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 81,
+          "endLine": 89,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "OcrTask",
+          "startLine": 12,
+          "endLine": 90,
+          "methods": [
+            "OcrTask",
+            "create",
+            "reconstitute",
+            "startProcessing",
+            "complete",
+            "fail",
+            "validate"
+          ],
+          "properties": [
+            "id",
+            "taskId",
+            "docType",
+            "fileName",
+            "filePath",
+            "ocrResult",
+            "recognizedFields",
+            "status",
+            "errorMsg",
+            "uploadTime",
+            "completeTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "startProcessing",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "complete",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "fail",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "OcrTask",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new OcrTask",
+          "lineNumber": 32
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID().toString().replace",
+          "lineNumber": 33
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 33
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 33
+        },
+        {
+          "caller": "create",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 38
+        },
+        {
+          "caller": "create",
+          "callee": "task.validate",
+          "lineNumber": 39
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new OcrTask",
+          "lineNumber": 47
+        },
+        {
+          "caller": "startProcessing",
+          "callee": "markUpdated",
+          "lineNumber": 64
+        },
+        {
+          "caller": "complete",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 70
+        },
+        {
+          "caller": "complete",
+          "callee": "markUpdated",
+          "lineNumber": 71
+        },
+        {
+          "caller": "fail",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 77
+        },
+        {
+          "caller": "fail",
+          "callee": "markUpdated",
+          "lineNumber": 78
+        },
+        {
+          "caller": "validate",
+          "callee": "docType.isBlank",
+          "lineNumber": 83
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 84
+        },
+        {
+          "caller": "validate",
+          "callee": "fileName.isBlank",
+          "lineNumber": 86
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 87
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 6,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/repository/OcrTaskRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "OcrTaskRepository",
+          "startLine": 9,
+          "endLine": 18,
+          "methods": [
+            "save",
+            "findById",
+            "findByTaskId",
+            "pageQuery"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "OcrTaskRepository",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/service/OcrDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 69,
+      "nonEmptyLines": 55,
+      "functions": [
+        {
+          "name": "uploadDocument",
+          "startLine": 25,
+          "endLine": 30,
+          "params": [
+            "docType",
+            "fileName",
+            "filePath"
+          ]
+        },
+        {
+          "name": "processOcr",
+          "startLine": 32,
+          "endLine": 57,
+          "params": [
+            "taskId"
+          ]
+        },
+        {
+          "name": "getResult",
+          "startLine": 59,
+          "endLine": 62,
+          "params": [
+            "taskId"
+          ]
+        },
+        {
+          "name": "simulateOcr",
+          "startLine": 64,
+          "endLine": 68,
+          "params": [
+            "task"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "OcrDomainService",
+          "startLine": 16,
+          "endLine": 69,
+          "methods": [
+            "uploadDocument",
+            "processOcr",
+            "getResult",
+            "simulateOcr"
+          ],
+          "properties": [
+            "ocrTaskRepository",
+            "eventPublisher"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "uploadDocument",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "processOcr",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "getResult",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "OcrDomainService",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "uploadDocument",
+          "callee": "OcrTask.create",
+          "lineNumber": 26
+        },
+        {
+          "caller": "uploadDocument",
+          "callee": "ocrTaskRepository.save",
+          "lineNumber": 27
+        },
+        {
+          "caller": "uploadDocument",
+          "callee": "log.info",
+          "lineNumber": 28
+        },
+        {
+          "caller": "uploadDocument",
+          "callee": "saved.getTaskId",
+          "lineNumber": 28
+        },
+        {
+          "caller": "processOcr",
+          "callee": "ocrTaskRepository.findById(taskId).orElseThrow",
+          "lineNumber": 33
+        },
+        {
+          "caller": "processOcr",
+          "callee": "ocrTaskRepository.findById",
+          "lineNumber": 33
+        },
+        {
+          "caller": "processOcr",
+          "callee": "new BusinessException",
+          "lineNumber": 34
+        },
+        {
+          "caller": "processOcr",
+          "callee": "\"UPLOADED\".equals",
+          "lineNumber": 36
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.getStatus",
+          "lineNumber": 36
+        },
+        {
+          "caller": "processOcr",
+          "callee": "new IllegalStateException",
+          "lineNumber": 37
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.getStatus",
+          "lineNumber": 37
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.startProcessing",
+          "lineNumber": 40
+        },
+        {
+          "caller": "processOcr",
+          "callee": "ocrTaskRepository.save",
+          "lineNumber": 41
+        },
+        {
+          "caller": "processOcr",
+          "callee": "simulateOcr",
+          "lineNumber": 44
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.complete",
+          "lineNumber": 45
+        },
+        {
+          "caller": "processOcr",
+          "callee": "ocrTaskRepository.save",
+          "lineNumber": 46
+        },
+        {
+          "caller": "processOcr",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 48
+        },
+        {
+          "caller": "processOcr",
+          "callee": "new OcrCompletedEvent",
+          "lineNumber": 48
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.getId",
+          "lineNumber": 48
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.getDocType",
+          "lineNumber": 48
+        },
+        {
+          "caller": "processOcr",
+          "callee": "log.info",
+          "lineNumber": 49
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.getTaskId",
+          "lineNumber": 49
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.getDocType",
+          "lineNumber": 49
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.fail",
+          "lineNumber": 51
+        },
+        {
+          "caller": "processOcr",
+          "callee": "e.getMessage",
+          "lineNumber": 51
+        },
+        {
+          "caller": "processOcr",
+          "callee": "ocrTaskRepository.save",
+          "lineNumber": 52
+        },
+        {
+          "caller": "processOcr",
+          "callee": "log.error",
+          "lineNumber": 53
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.getTaskId",
+          "lineNumber": 53
+        },
+        {
+          "caller": "getResult",
+          "callee": "ocrTaskRepository.findById(taskId).orElseThrow",
+          "lineNumber": 60
+        },
+        {
+          "caller": "getResult",
+          "callee": "ocrTaskRepository.findById",
+          "lineNumber": 60
+        },
+        {
+          "caller": "getResult",
+          "callee": "new BusinessException",
+          "lineNumber": 61
+        },
+        {
+          "caller": "simulateOcr",
+          "callee": "log.info",
+          "lineNumber": 65
+        },
+        {
+          "caller": "simulateOcr",
+          "callee": "task.getTaskId",
+          "lineNumber": 65
+        },
+        {
+          "caller": "simulateOcr",
+          "callee": "task.getDocType",
+          "lineNumber": 65
+        },
+        {
+          "caller": "simulateOcr",
+          "callee": "task.getFileName",
+          "lineNumber": 65
+        },
+        {
+          "caller": "simulateOcr",
+          "callee": "String.format",
+          "lineNumber": 66
+        },
+        {
+          "caller": "simulateOcr",
+          "callee": "task.getTaskId",
+          "lineNumber": 67
+        },
+        {
+          "caller": "simulateOcr",
+          "callee": "task.getDocType",
+          "lineNumber": 67
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/infrastructure/mapper/OcrTaskMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 36,
+      "classes": [
+        {
+          "name": "OcrTaskMapper",
+          "startLine": 14,
+          "endLine": 43,
+          "methods": [
+            "selectByTaskId",
+            "selectByCondition",
+            "pageQuery"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "OcrTaskMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/infrastructure/persistence/OcrTaskPO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 21,
+      "classes": [
+        {
+          "name": "OcrTaskPO",
+          "startLine": 11,
+          "endLine": 26,
+          "methods": [],
+          "properties": [
+            "taskId",
+            "docType",
+            "fileName",
+            "filePath",
+            "ocrResult",
+            "recognizedFields",
+            "status",
+            "errorMsg",
+            "uploadTime",
+            "completeTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OcrTaskPO",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/infrastructure/repository/OcrTaskRepositoryImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 92,
+      "nonEmptyLines": 80,
+      "functions": [
+        {
+          "name": "save",
+          "startLine": 25,
+          "endLine": 34,
+          "params": [
+            "task"
+          ]
+        },
+        {
+          "name": "findById",
+          "startLine": 36,
+          "endLine": 40,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "findByTaskId",
+          "startLine": 42,
+          "endLine": 46,
+          "params": [
+            "taskId"
+          ]
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 48,
+          "endLine": 59,
+          "params": [
+            "pageReq"
+          ]
+        },
+        {
+          "name": "toDomain",
+          "startLine": 61,
+          "endLine": 75,
+          "params": [
+            "po"
+          ]
+        },
+        {
+          "name": "toPO",
+          "startLine": 77,
+          "endLine": 91,
+          "params": [
+            "task"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "OcrTaskRepositoryImpl",
+          "startLine": 19,
+          "endLine": 92,
+          "methods": [
+            "save",
+            "findById",
+            "findByTaskId",
+            "pageQuery",
+            "toDomain",
+            "toPO"
+          ],
+          "properties": [
+            "ocrTaskMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "save",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "findById",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "findByTaskId",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "OcrTaskRepositoryImpl",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "save",
+          "callee": "toPO",
+          "lineNumber": 27
+        },
+        {
+          "caller": "save",
+          "callee": "task.getId",
+          "lineNumber": 28
+        },
+        {
+          "caller": "save",
+          "callee": "ocrTaskMapper.insert",
+          "lineNumber": 29
+        },
+        {
+          "caller": "save",
+          "callee": "ocrTaskMapper.updateById",
+          "lineNumber": 31
+        },
+        {
+          "caller": "save",
+          "callee": "toDomain",
+          "lineNumber": 33
+        },
+        {
+          "caller": "findById",
+          "callee": "ocrTaskMapper.selectById",
+          "lineNumber": 38
+        },
+        {
+          "caller": "findById",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 39
+        },
+        {
+          "caller": "findById",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 39
+        },
+        {
+          "caller": "findByTaskId",
+          "callee": "ocrTaskMapper.selectByTaskId",
+          "lineNumber": 44
+        },
+        {
+          "caller": "findByTaskId",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 45
+        },
+        {
+          "caller": "findByTaskId",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 45
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "new Page<>",
+          "lineNumber": 50
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageNum",
+          "lineNumber": 50
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageSize",
+          "lineNumber": 50
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "new OcrQuery",
+          "lineNumber": 51
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.setPageNum",
+          "lineNumber": 52
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageNum",
+          "lineNumber": 52
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.setPageSize",
+          "lineNumber": 53
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageSize",
+          "lineNumber": 53
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "ocrTaskMapper.pageQuery",
+          "lineNumber": 54
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords().stream()\n                .map(this::toDomain).toList",
+          "lineNumber": 55
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords().stream().map",
+          "lineNumber": 55
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords().stream",
+          "lineNumber": 55
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords",
+          "lineNumber": 55
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "PageResp.of",
+          "lineNumber": 58
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getTotal",
+          "lineNumber": 58
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageNum",
+          "lineNumber": 58
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageSize",
+          "lineNumber": 58
+        },
+        {
+          "caller": "toDomain",
+          "callee": "OcrTask.reconstitute",
+          "lineNumber": 62
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getId",
+          "lineNumber": 63
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getTaskId",
+          "lineNumber": 64
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getDocType",
+          "lineNumber": 65
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getFileName",
+          "lineNumber": 66
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getFilePath",
+          "lineNumber": 67
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getOcrResult",
+          "lineNumber": 68
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getRecognizedFields",
+          "lineNumber": 69
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getStatus",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getErrorMsg",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getUploadTime",
+          "lineNumber": 72
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getCompleteTime",
+          "lineNumber": 73
+        },
+        {
+          "caller": "toPO",
+          "callee": "new OcrTaskPO",
+          "lineNumber": 78
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setId",
+          "lineNumber": 79
+        },
+        {
+          "caller": "toPO",
+          "callee": "task.getId",
+          "lineNumber": 79
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setTaskId",
+          "lineNumber": 80
+        },
+        {
+          "caller": "toPO",
+          "callee": "task.getTaskId",
+          "lineNumber": 80
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setDocType",
+          "lineNumber": 81
+        },
+        {
+          "caller": "toPO",
+          "callee": "task.getDocType",
+          "lineNumber": 81
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setFileName",
+          "lineNumber": 82
+        },
+        {
+          "caller": "toPO",
+          "callee": "task.getFileName",
+          "lineNumber": 82
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setFilePath",
+          "lineNumber": 83
+        },
+        {
+          "caller": "toPO",
+          "callee": "task.getFilePath",
+          "lineNumber": 83
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setOcrResult",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toPO",
+          "callee": "task.getOcrResult",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setRecognizedFields",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toPO",
+          "callee": "task.getRecognizedFields",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setStatus",
+          "lineNumber": 86
+        },
+        {
+          "caller": "toPO",
+          "callee": "task.getStatus",
+          "lineNumber": 86
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setErrorMsg",
+          "lineNumber": 87
+        },
+        {
+          "caller": "toPO",
+          "callee": "task.getErrorMsg",
+          "lineNumber": 87
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setUploadTime",
+          "lineNumber": 88
+        },
+        {
+          "caller": "toPO",
+          "callee": "task.getUploadTime",
+          "lineNumber": 88
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setCompleteTime",
+          "lineNumber": 89
+        },
+        {
+          "caller": "toPO",
+          "callee": "task.getCompleteTime",
+          "lineNumber": 89
+        }
+      ],
+      "metrics": {
+        "importCount": 12,
+        "exportCount": 5,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    }
+  ]
+}

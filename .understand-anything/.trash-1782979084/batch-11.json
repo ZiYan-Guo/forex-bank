@@ -1,0 +1,2883 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "file",
+      "name": "ClearingResp.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ClearingResp.java",
+      "summary": "Java类文件，包含类: ClearingResp",
+      "tags": [
+        "适配器DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n2",
+      "type": "class",
+      "name": "ClearingResp",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ClearingResp.java",
+      "summary": "类 ClearingResp，包含0个方法，25个属性",
+      "tags": [
+        "适配器DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n3",
+      "type": "file",
+      "name": "GenerateClearingCmd.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/command/GenerateClearingCmd.java",
+      "summary": "Java类文件，包含类: GenerateClearingCmd",
+      "tags": [
+        "命令对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n4",
+      "type": "class",
+      "name": "GenerateClearingCmd",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/command/GenerateClearingCmd.java",
+      "summary": "类 GenerateClearingCmd，包含0个方法，10个属性",
+      "tags": [
+        "命令对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n5",
+      "type": "file",
+      "name": "InternalTrade.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/InternalTrade.java",
+      "summary": "Java类文件，包含类: InternalTrade",
+      "tags": [
+        "应用DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n6",
+      "type": "class",
+      "name": "InternalTrade",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/InternalTrade.java",
+      "summary": "类 InternalTrade，包含0个方法，5个属性",
+      "tags": [
+        "应用DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n7",
+      "type": "file",
+      "name": "ReconciliationResult.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "summary": "Java类文件，包含类: ReconciliationResult",
+      "tags": [
+        "应用DTO"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n8",
+      "type": "class",
+      "name": "ReconciliationResult",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "summary": "类 ReconciliationResult，包含4个方法，2个属性",
+      "tags": [
+        "应用DTO"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n9",
+      "type": "function",
+      "name": "addMatched",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "summary": "方法 addMatched，属于类 ReconciliationResult",
+      "tags": [
+        "应用DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n10",
+      "type": "function",
+      "name": "addUnmatched",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "summary": "方法 addUnmatched，属于类 ReconciliationResult",
+      "tags": [
+        "应用DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n11",
+      "type": "function",
+      "name": "getMatchedCount",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "summary": "方法 getMatchedCount，属于类 ReconciliationResult",
+      "tags": [
+        "应用DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n12",
+      "type": "function",
+      "name": "getUnmatchedCount",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "summary": "方法 getUnmatchedCount，属于类 ReconciliationResult",
+      "tags": [
+        "应用DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n13",
+      "type": "file",
+      "name": "TradeConfirmation.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/TradeConfirmation.java",
+      "summary": "Java类文件，包含类: TradeConfirmation",
+      "tags": [
+        "应用DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n14",
+      "type": "class",
+      "name": "TradeConfirmation",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/TradeConfirmation.java",
+      "summary": "类 TradeConfirmation，包含0个方法，7个属性",
+      "tags": [
+        "应用DTO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n15",
+      "type": "file",
+      "name": "AutomatedConfirmationService.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/AutomatedConfirmationService.java",
+      "summary": "Java类文件，包含类: AutomatedConfirmationService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n16",
+      "type": "class",
+      "name": "AutomatedConfirmationService",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/AutomatedConfirmationService.java",
+      "summary": "类 AutomatedConfirmationService，包含5个方法，1个属性",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n17",
+      "type": "function",
+      "name": "initiateConfirmation",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/AutomatedConfirmationService.java",
+      "summary": "方法 initiateConfirmation，属于类 AutomatedConfirmationService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n18",
+      "type": "function",
+      "name": "determineFlag",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/AutomatedConfirmationService.java",
+      "summary": "方法 determineFlag，属于类 AutomatedConfirmationService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n19",
+      "type": "function",
+      "name": "matchViaCentralized",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/AutomatedConfirmationService.java",
+      "summary": "方法 matchViaCentralized，属于类 AutomatedConfirmationService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n20",
+      "type": "function",
+      "name": "matchViaBilateral",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/AutomatedConfirmationService.java",
+      "summary": "方法 matchViaBilateral，属于类 AutomatedConfirmationService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n21",
+      "type": "function",
+      "name": "retryFailedConfirmations",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/AutomatedConfirmationService.java",
+      "summary": "方法 retryFailedConfirmations，属于类 AutomatedConfirmationService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n22",
+      "type": "file",
+      "name": "CipsMessageGenerator.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsMessageGenerator.java",
+      "summary": "Java类文件，包含类: CipsMessageGenerator",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n23",
+      "type": "class",
+      "name": "CipsMessageGenerator",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsMessageGenerator.java",
+      "summary": "类 CipsMessageGenerator，包含3个方法，0个属性",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n24",
+      "type": "function",
+      "name": "generateCips111",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsMessageGenerator.java",
+      "summary": "方法 generateCips111，属于类 CipsMessageGenerator",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n25",
+      "type": "function",
+      "name": "generateCips112",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsMessageGenerator.java",
+      "summary": "方法 generateCips112，属于类 CipsMessageGenerator",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n26",
+      "type": "function",
+      "name": "generateCips113",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsMessageGenerator.java",
+      "summary": "方法 generateCips113，属于类 CipsMessageGenerator",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n27",
+      "type": "file",
+      "name": "CipsRoutingService.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsRoutingService.java",
+      "summary": "Java类文件，包含类: CipsRoutingService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n28",
+      "type": "class",
+      "name": "CipsRoutingService",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsRoutingService.java",
+      "summary": "类 CipsRoutingService，包含5个方法，2个属性",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n29",
+      "type": "function",
+      "name": "CipsRoutingService",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsRoutingService.java",
+      "summary": "方法 CipsRoutingService，属于类 CipsRoutingService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n30",
+      "type": "function",
+      "name": "resolveByBic",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsRoutingService.java",
+      "summary": "方法 resolveByBic，属于类 CipsRoutingService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n31",
+      "type": "function",
+      "name": "resolveByBankName",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsRoutingService.java",
+      "summary": "方法 resolveByBankName，属于类 CipsRoutingService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n32",
+      "type": "function",
+      "name": "isCipsParticipant",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsRoutingService.java",
+      "summary": "方法 isCipsParticipant，属于类 CipsRoutingService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n33",
+      "type": "function",
+      "name": "getParticipantCount",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsRoutingService.java",
+      "summary": "方法 getParticipantCount，属于类 CipsRoutingService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n34",
+      "type": "file",
+      "name": "ClearingAppService.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/ClearingAppService.java",
+      "summary": "Java类文件，包含类: ClearingAppService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n35",
+      "type": "class",
+      "name": "ClearingAppService",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/ClearingAppService.java",
+      "summary": "类 ClearingAppService，包含7个方法，2个属性",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n36",
+      "type": "function",
+      "name": "generateInstruction",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/ClearingAppService.java",
+      "summary": "方法 generateInstruction，属于类 ClearingAppService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n37",
+      "type": "function",
+      "name": "sendInstruction",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/ClearingAppService.java",
+      "summary": "方法 sendInstruction，属于类 ClearingAppService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n38",
+      "type": "function",
+      "name": "acknowledgeInstruction",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/ClearingAppService.java",
+      "summary": "方法 acknowledgeInstruction，属于类 ClearingAppService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n39",
+      "type": "function",
+      "name": "settleInstruction",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/ClearingAppService.java",
+      "summary": "方法 settleInstruction，属于类 ClearingAppService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n40",
+      "type": "function",
+      "name": "cancelInstruction",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/ClearingAppService.java",
+      "summary": "方法 cancelInstruction，属于类 ClearingAppService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n41",
+      "type": "function",
+      "name": "getInstructionDetail",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/ClearingAppService.java",
+      "summary": "方法 getInstructionDetail，属于类 ClearingAppService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n42",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/ClearingAppService.java",
+      "summary": "方法 pageQuery，属于类 ClearingAppService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n43",
+      "type": "file",
+      "name": "ConfirmationWorkflowService.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/ConfirmationWorkflowService.java",
+      "summary": "Java类文件，包含类: ConfirmationWorkflowService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n44",
+      "type": "class",
+      "name": "ConfirmationWorkflowService",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/ConfirmationWorkflowService.java",
+      "summary": "类 ConfirmationWorkflowService，包含1个方法，1个属性",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n45",
+      "type": "function",
+      "name": "resolveIntervention",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/ConfirmationWorkflowService.java",
+      "summary": "方法 resolveIntervention，属于类 ConfirmationWorkflowService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n46",
+      "type": "file",
+      "name": "MtMxConverter.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/MtMxConverter.java",
+      "summary": "Java类文件，包含类: MtMxConverter",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n47",
+      "type": "class",
+      "name": "MtMxConverter",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/MtMxConverter.java",
+      "summary": "类 MtMxConverter，包含3个方法，0个属性",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n48",
+      "type": "function",
+      "name": "mt103ToPain001",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/MtMxConverter.java",
+      "summary": "方法 mt103ToPain001，属于类 MtMxConverter",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n49",
+      "type": "function",
+      "name": "mt202ToPacs009",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/MtMxConverter.java",
+      "summary": "方法 mt202ToPacs009，属于类 MtMxConverter",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n50",
+      "type": "function",
+      "name": "parseAddress",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/MtMxConverter.java",
+      "summary": "方法 parseAddress，属于类 MtMxConverter",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n51",
+      "type": "file",
+      "name": "RouteOptimizationService.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/RouteOptimizationService.java",
+      "summary": "Java类文件，包含类: RouteOptimizationService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n52",
+      "type": "class",
+      "name": "RouteOptimizationService",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/RouteOptimizationService.java",
+      "summary": "类 RouteOptimizationService，包含4个方法，0个属性",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n53",
+      "type": "function",
+      "name": "optimizeRoute",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/RouteOptimizationService.java",
+      "summary": "方法 optimizeRoute，属于类 RouteOptimizationService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n54",
+      "type": "function",
+      "name": "scoreChannel",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/RouteOptimizationService.java",
+      "summary": "方法 scoreChannel，属于类 RouteOptimizationService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n55",
+      "type": "function",
+      "name": "isBeforeCutOff",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/RouteOptimizationService.java",
+      "summary": "方法 isBeforeCutOff，属于类 RouteOptimizationService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n56",
+      "type": "function",
+      "name": "loadAvailableChannels",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/RouteOptimizationService.java",
+      "summary": "方法 loadAvailableChannels，属于类 RouteOptimizationService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n57",
+      "type": "file",
+      "name": "SettlementTrackerService.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/SettlementTrackerService.java",
+      "summary": "Java类文件，包含类: SettlementTrackerService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n58",
+      "type": "class",
+      "name": "SettlementTrackerService",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/SettlementTrackerService.java",
+      "summary": "类 SettlementTrackerService，包含4个方法，1个属性",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n59",
+      "type": "function",
+      "name": "createTracker",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/SettlementTrackerService.java",
+      "summary": "方法 createTracker，属于类 SettlementTrackerService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n60",
+      "type": "function",
+      "name": "updateStatus",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/SettlementTrackerService.java",
+      "summary": "方法 updateStatus，属于类 SettlementTrackerService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n61",
+      "type": "function",
+      "name": "markException",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/SettlementTrackerService.java",
+      "summary": "方法 markException，属于类 SettlementTrackerService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n62",
+      "type": "function",
+      "name": "findOverdue",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/SettlementTrackerService.java",
+      "summary": "方法 findOverdue，属于类 SettlementTrackerService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n63",
+      "type": "file",
+      "name": "SwiftMessageGenerator.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/SwiftMessageGenerator.java",
+      "summary": "Java类文件，包含类: SwiftMessageGenerator",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n64",
+      "type": "class",
+      "name": "SwiftMessageGenerator",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/SwiftMessageGenerator.java",
+      "summary": "类 SwiftMessageGenerator，包含4个方法，0个属性",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n65",
+      "type": "function",
+      "name": "generateMT300",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/SwiftMessageGenerator.java",
+      "summary": "方法 generateMT300，属于类 SwiftMessageGenerator",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n66",
+      "type": "function",
+      "name": "generateMT202",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/SwiftMessageGenerator.java",
+      "summary": "方法 generateMT202，属于类 SwiftMessageGenerator",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n67",
+      "type": "function",
+      "name": "generatePacs008",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/SwiftMessageGenerator.java",
+      "summary": "方法 generatePacs008，属于类 SwiftMessageGenerator",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n68",
+      "type": "function",
+      "name": "generatePostalAddress",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/SwiftMessageGenerator.java",
+      "summary": "方法 generatePostalAddress，属于类 SwiftMessageGenerator",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n69",
+      "type": "file",
+      "name": "TradeConfirmationService.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/TradeConfirmationService.java",
+      "summary": "Java类文件，包含类: TradeConfirmationService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n70",
+      "type": "class",
+      "name": "TradeConfirmationService",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/TradeConfirmationService.java",
+      "summary": "类 TradeConfirmationService，包含3个方法，0个属性",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n71",
+      "type": "function",
+      "name": "importFromCfets",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/TradeConfirmationService.java",
+      "summary": "方法 importFromCfets，属于类 TradeConfirmationService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n72",
+      "type": "function",
+      "name": "autoMatch",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/TradeConfirmationService.java",
+      "summary": "方法 autoMatch，属于类 TradeConfirmationService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n73",
+      "type": "function",
+      "name": "isMatch",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/service/TradeConfirmationService.java",
+      "summary": "方法 isMatch，属于类 TradeConfirmationService",
+      "tags": [
+        "应用服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n74",
+      "type": "file",
+      "name": "ClearingApplication.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/ClearingApplication.java",
+      "summary": "Java类文件，包含类: ClearingApplication",
+      "tags": [
+        "应用入口"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n75",
+      "type": "class",
+      "name": "ClearingApplication",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/ClearingApplication.java",
+      "summary": "类 ClearingApplication，包含1个方法，0个属性",
+      "tags": [
+        "应用入口"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n76",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/ClearingApplication.java",
+      "summary": "方法 main，属于类 ClearingApplication",
+      "tags": [
+        "应用入口"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n77",
+      "type": "file",
+      "name": "InstructionSentEvent.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/event/InstructionSentEvent.java",
+      "summary": "Java类文件，包含类: InstructionSentEvent",
+      "tags": [
+        "领域事件"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n78",
+      "type": "class",
+      "name": "InstructionSentEvent",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/event/InstructionSentEvent.java",
+      "summary": "类 InstructionSentEvent，包含2个方法，3个属性",
+      "tags": [
+        "领域事件"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n79",
+      "type": "function",
+      "name": "InstructionSentEvent",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/event/InstructionSentEvent.java",
+      "summary": "方法 InstructionSentEvent，属于类 InstructionSentEvent",
+      "tags": [
+        "领域事件"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n80",
+      "type": "function",
+      "name": "eventName",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/event/InstructionSentEvent.java",
+      "summary": "方法 eventName，属于类 InstructionSentEvent",
+      "tags": [
+        "领域事件"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n81",
+      "type": "file",
+      "name": "ClearingInstruction.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "summary": "Java类文件，包含类: ClearingInstruction",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n82",
+      "type": "class",
+      "name": "ClearingInstruction",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "summary": "类 ClearingInstruction，包含9个方法，34个属性",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n83",
+      "type": "function",
+      "name": "ClearingInstruction",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "summary": "方法 ClearingInstruction，属于类 ClearingInstruction",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n84",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "summary": "方法 create，属于类 ClearingInstruction",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n85",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "summary": "方法 reconstitute，属于类 ClearingInstruction",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n86",
+      "type": "function",
+      "name": "generate",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "summary": "方法 generate，属于类 ClearingInstruction",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n87",
+      "type": "function",
+      "name": "send",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "summary": "方法 send，属于类 ClearingInstruction",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n88",
+      "type": "function",
+      "name": "acknowledge",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "summary": "方法 acknowledge，属于类 ClearingInstruction",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n89",
+      "type": "function",
+      "name": "settle",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "summary": "方法 settle，属于类 ClearingInstruction",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n90",
+      "type": "function",
+      "name": "cancel",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "summary": "方法 cancel，属于类 ClearingInstruction",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n91",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "summary": "方法 validate，属于类 ClearingInstruction",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n92",
+      "type": "file",
+      "name": "ClsSession.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClsSession.java",
+      "summary": "Java类文件，包含类: ClsSession",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n93",
+      "type": "class",
+      "name": "ClsSession",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClsSession.java",
+      "summary": "类 ClsSession，包含8个方法，16个属性",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n94",
+      "type": "function",
+      "name": "ClsSession",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClsSession.java",
+      "summary": "方法 ClsSession，属于类 ClsSession",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n95",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClsSession.java",
+      "summary": "方法 create，属于类 ClsSession",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n96",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClsSession.java",
+      "summary": "方法 reconstitute，属于类 ClsSession",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n97",
+      "type": "function",
+      "name": "openPayIn",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClsSession.java",
+      "summary": "方法 openPayIn，属于类 ClsSession",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n98",
+      "type": "function",
+      "name": "closePayIn",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClsSession.java",
+      "summary": "方法 closePayIn，属于类 ClsSession",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n99",
+      "type": "function",
+      "name": "calculateNetPositions",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClsSession.java",
+      "summary": "方法 calculateNetPositions，属于类 ClsSession",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n100",
+      "type": "function",
+      "name": "completeSettlement",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClsSession.java",
+      "summary": "方法 completeSettlement，属于类 ClsSession",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n101",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClsSession.java",
+      "summary": "方法 validate，属于类 ClsSession",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n102",
+      "type": "file",
+      "name": "PvpSettlementPair.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/PvpSettlementPair.java",
+      "summary": "Java类文件，包含类: PvpSettlementPair",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n103",
+      "type": "class",
+      "name": "PvpSettlementPair",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/PvpSettlementPair.java",
+      "summary": "类 PvpSettlementPair，包含7个方法，18个属性",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n104",
+      "type": "function",
+      "name": "PvpSettlementPair",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/PvpSettlementPair.java",
+      "summary": "方法 PvpSettlementPair，属于类 PvpSettlementPair",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n105",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/PvpSettlementPair.java",
+      "summary": "方法 create，属于类 PvpSettlementPair",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n106",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/PvpSettlementPair.java",
+      "summary": "方法 reconstitute，属于类 PvpSettlementPair",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n107",
+      "type": "function",
+      "name": "attempt",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/PvpSettlementPair.java",
+      "summary": "方法 attempt，属于类 PvpSettlementPair",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n108",
+      "type": "function",
+      "name": "settle",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/PvpSettlementPair.java",
+      "summary": "方法 settle，属于类 PvpSettlementPair",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n109",
+      "type": "function",
+      "name": "fail",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/PvpSettlementPair.java",
+      "summary": "方法 fail，属于类 PvpSettlementPair",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n110",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/PvpSettlementPair.java",
+      "summary": "方法 validate，属于类 PvpSettlementPair",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n111",
+      "type": "file",
+      "name": "SettlementBatch.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementBatch.java",
+      "summary": "Java类文件，包含类: SettlementBatch",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n112",
+      "type": "class",
+      "name": "SettlementBatch",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementBatch.java",
+      "summary": "类 SettlementBatch，包含7个方法，11个属性",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n113",
+      "type": "function",
+      "name": "SettlementBatch",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementBatch.java",
+      "summary": "方法 SettlementBatch，属于类 SettlementBatch",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n114",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementBatch.java",
+      "summary": "方法 create，属于类 SettlementBatch",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n115",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementBatch.java",
+      "summary": "方法 reconstitute，属于类 SettlementBatch",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n116",
+      "type": "function",
+      "name": "addInstruction",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementBatch.java",
+      "summary": "方法 addInstruction，属于类 SettlementBatch",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n117",
+      "type": "function",
+      "name": "close",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementBatch.java",
+      "summary": "方法 close，属于类 SettlementBatch",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n118",
+      "type": "function",
+      "name": "settle",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementBatch.java",
+      "summary": "方法 settle，属于类 SettlementBatch",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n119",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementBatch.java",
+      "summary": "方法 validate，属于类 SettlementBatch",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n120",
+      "type": "file",
+      "name": "SettlementTracker.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementTracker.java",
+      "summary": "Java类文件，包含类: SettlementTracker",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n121",
+      "type": "class",
+      "name": "SettlementTracker",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementTracker.java",
+      "summary": "类 SettlementTracker，包含7个方法，18个属性",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n122",
+      "type": "function",
+      "name": "SettlementTracker",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementTracker.java",
+      "summary": "方法 SettlementTracker，属于类 SettlementTracker",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n123",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementTracker.java",
+      "summary": "方法 create，属于类 SettlementTracker",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n124",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementTracker.java",
+      "summary": "方法 reconstitute，属于类 SettlementTracker",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n125",
+      "type": "function",
+      "name": "transitionTo",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementTracker.java",
+      "summary": "方法 transitionTo，属于类 SettlementTracker",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n126",
+      "type": "function",
+      "name": "markException",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementTracker.java",
+      "summary": "方法 markException，属于类 SettlementTracker",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n127",
+      "type": "function",
+      "name": "isOverdue",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementTracker.java",
+      "summary": "方法 isOverdue，属于类 SettlementTracker",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n128",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementTracker.java",
+      "summary": "方法 validate，属于类 SettlementTracker",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n129",
+      "type": "file",
+      "name": "TradeConfirmation.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/TradeConfirmation.java",
+      "summary": "Java类文件，包含类: TradeConfirmation",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n130",
+      "type": "class",
+      "name": "TradeConfirmation",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/TradeConfirmation.java",
+      "summary": "类 TradeConfirmation，包含9个方法，23个属性",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "n131",
+      "type": "function",
+      "name": "TradeConfirmation",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/TradeConfirmation.java",
+      "summary": "方法 TradeConfirmation，属于类 TradeConfirmation",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n132",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/TradeConfirmation.java",
+      "summary": "方法 create，属于类 TradeConfirmation",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n133",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/TradeConfirmation.java",
+      "summary": "方法 reconstitute，属于类 TradeConfirmation",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n134",
+      "type": "function",
+      "name": "startMatching",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/TradeConfirmation.java",
+      "summary": "方法 startMatching，属于类 TradeConfirmation",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n135",
+      "type": "function",
+      "name": "markMatched",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/TradeConfirmation.java",
+      "summary": "方法 markMatched，属于类 TradeConfirmation",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n136",
+      "type": "function",
+      "name": "markDiscrepancy",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/TradeConfirmation.java",
+      "summary": "方法 markDiscrepancy，属于类 TradeConfirmation",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n137",
+      "type": "function",
+      "name": "resolve",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/TradeConfirmation.java",
+      "summary": "方法 resolve，属于类 TradeConfirmation",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n138",
+      "type": "function",
+      "name": "incrementRetry",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/TradeConfirmation.java",
+      "summary": "方法 incrementRetry，属于类 TradeConfirmation",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n139",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/TradeConfirmation.java",
+      "summary": "方法 validate，属于类 TradeConfirmation",
+      "tags": [
+        "聚合"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n140",
+      "type": "file",
+      "name": "ClearingQuery.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/query/ClearingQuery.java",
+      "summary": "Java类文件，包含类: ClearingQuery",
+      "tags": [],
+      "complexity": "low"
+    },
+    {
+      "id": "n141",
+      "type": "class",
+      "name": "ClearingQuery",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/query/ClearingQuery.java",
+      "summary": "类 ClearingQuery，包含0个方法，9个属性",
+      "tags": [],
+      "complexity": "low"
+    },
+    {
+      "id": "n142",
+      "type": "file",
+      "name": "ClearingAmount.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ClearingAmount.java",
+      "summary": "Java类文件，包含类: ClearingAmount",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n143",
+      "type": "class",
+      "name": "ClearingAmount",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ClearingAmount.java",
+      "summary": "类 ClearingAmount，包含5个方法，2个属性",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "n144",
+      "type": "function",
+      "name": "ClearingAmount",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ClearingAmount.java",
+      "summary": "方法 ClearingAmount，属于类 ClearingAmount",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n145",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ClearingAmount.java",
+      "summary": "方法 of，属于类 ClearingAmount",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n146",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ClearingAmount.java",
+      "summary": "方法 equals，属于类 ClearingAmount",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n147",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ClearingAmount.java",
+      "summary": "方法 hashCode，属于类 ClearingAmount",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n148",
+      "type": "function",
+      "name": "toString",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ClearingAmount.java",
+      "summary": "方法 toString，属于类 ClearingAmount",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n149",
+      "type": "reference",
+      "name": "ConfirmationFlag",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ConfirmationFlag.java",
+      "summary": "外部引用: ConfirmationFlag (来自 forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ConfirmationFlag.java)",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n150",
+      "type": "reference",
+      "name": "TradeConfirmationRepository",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/repository/TradeConfirmationRepository.java",
+      "summary": "外部引用: TradeConfirmationRepository (来自 forex-clearing/src/main/java/com/forex/clearing/domain/repository/TradeConfirmationRepository.java)",
+      "tags": [
+        "仓储接口"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n151",
+      "type": "reference",
+      "name": "ClearingInstructionRepository",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/repository/ClearingInstructionRepository.java",
+      "summary": "外部引用: ClearingInstructionRepository (来自 forex-clearing/src/main/java/com/forex/clearing/domain/repository/ClearingInstructionRepository.java)",
+      "tags": [
+        "仓储接口"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n152",
+      "type": "reference",
+      "name": "ClearingDomainService",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/service/ClearingDomainService.java",
+      "summary": "外部引用: ClearingDomainService (来自 forex-clearing/src/main/java/com/forex/clearing/domain/service/ClearingDomainService.java)",
+      "tags": [
+        "领域服务"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n153",
+      "type": "reference",
+      "name": "RedisLock",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RedisLock.java",
+      "summary": "外部引用: RedisLock (来自 forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RedisLock.java)",
+      "tags": [],
+      "complexity": "low"
+    },
+    {
+      "id": "n154",
+      "type": "reference",
+      "name": "PageResp",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "summary": "外部引用: PageResp (来自 forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java)",
+      "tags": [],
+      "complexity": "low"
+    },
+    {
+      "id": "n155",
+      "type": "reference",
+      "name": "BusinessException",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "summary": "外部引用: BusinessException (来自 forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java)",
+      "tags": [],
+      "complexity": "low"
+    },
+    {
+      "id": "n156",
+      "type": "reference",
+      "name": "PaymentChannel",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/PaymentChannel.java",
+      "summary": "外部引用: PaymentChannel (来自 forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/PaymentChannel.java)",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n157",
+      "type": "reference",
+      "name": "SettlementRoute",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/SettlementRoute.java",
+      "summary": "外部引用: SettlementRoute (来自 forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/SettlementRoute.java)",
+      "tags": [
+        "值对象"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n158",
+      "type": "reference",
+      "name": "SettlementTrackerRepository",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/domain/repository/SettlementTrackerRepository.java",
+      "summary": "外部引用: SettlementTrackerRepository (来自 forex-clearing/src/main/java/com/forex/clearing/domain/repository/SettlementTrackerRepository.java)",
+      "tags": [
+        "仓储接口"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "n159",
+      "type": "reference",
+      "name": "BaseDomainEvent",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseDomainEvent.java",
+      "summary": "外部引用: BaseDomainEvent (来自 forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseDomainEvent.java)",
+      "tags": [],
+      "complexity": "low"
+    },
+    {
+      "id": "n160",
+      "type": "reference",
+      "name": "BaseAggregate",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "summary": "外部引用: BaseAggregate (来自 forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java)",
+      "tags": [],
+      "complexity": "low"
+    },
+    {
+      "id": "n161",
+      "type": "reference",
+      "name": "PageReq",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "summary": "外部引用: PageReq (来自 forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java)",
+      "tags": [],
+      "complexity": "low"
+    },
+    {
+      "id": "n162",
+      "type": "reference",
+      "name": "BaseValueObject",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "summary": "外部引用: BaseValueObject (来自 forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java)",
+      "tags": [],
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n3",
+      "target": "n4",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n8",
+      "target": "n9",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n8",
+      "target": "n10",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n8",
+      "target": "n11",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n8",
+      "target": "n12",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n13",
+      "target": "n14",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n15",
+      "target": "n16",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n16",
+      "target": "n17",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n16",
+      "target": "n18",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n16",
+      "target": "n19",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n16",
+      "target": "n20",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n16",
+      "target": "n21",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n22",
+      "target": "n23",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n23",
+      "target": "n24",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n23",
+      "target": "n25",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n23",
+      "target": "n26",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n27",
+      "target": "n28",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n28",
+      "target": "n29",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n28",
+      "target": "n30",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n28",
+      "target": "n31",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n28",
+      "target": "n32",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n28",
+      "target": "n33",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n34",
+      "target": "n35",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n35",
+      "target": "n36",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n35",
+      "target": "n37",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n35",
+      "target": "n38",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n35",
+      "target": "n39",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n35",
+      "target": "n40",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n35",
+      "target": "n41",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n35",
+      "target": "n42",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n43",
+      "target": "n44",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n44",
+      "target": "n45",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n46",
+      "target": "n47",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n47",
+      "target": "n48",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n47",
+      "target": "n49",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n47",
+      "target": "n50",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n51",
+      "target": "n52",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n52",
+      "target": "n53",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n52",
+      "target": "n54",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n52",
+      "target": "n55",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n52",
+      "target": "n56",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n57",
+      "target": "n58",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n58",
+      "target": "n59",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n58",
+      "target": "n60",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n58",
+      "target": "n61",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n58",
+      "target": "n62",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n63",
+      "target": "n64",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n64",
+      "target": "n65",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n64",
+      "target": "n66",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n64",
+      "target": "n67",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n64",
+      "target": "n68",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n69",
+      "target": "n70",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n70",
+      "target": "n71",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n70",
+      "target": "n72",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n70",
+      "target": "n73",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n74",
+      "target": "n75",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n75",
+      "target": "n76",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n77",
+      "target": "n78",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n78",
+      "target": "n79",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n78",
+      "target": "n80",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n81",
+      "target": "n82",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n82",
+      "target": "n83",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n82",
+      "target": "n84",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n82",
+      "target": "n85",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n82",
+      "target": "n86",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n82",
+      "target": "n87",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n82",
+      "target": "n88",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n82",
+      "target": "n89",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n82",
+      "target": "n90",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n82",
+      "target": "n91",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n92",
+      "target": "n93",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n93",
+      "target": "n94",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n93",
+      "target": "n95",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n93",
+      "target": "n96",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n93",
+      "target": "n97",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n93",
+      "target": "n98",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n93",
+      "target": "n99",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n93",
+      "target": "n100",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n93",
+      "target": "n101",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n102",
+      "target": "n103",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n103",
+      "target": "n104",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n103",
+      "target": "n105",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n103",
+      "target": "n106",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n103",
+      "target": "n107",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n103",
+      "target": "n108",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n103",
+      "target": "n109",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n103",
+      "target": "n110",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n111",
+      "target": "n112",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n112",
+      "target": "n113",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n112",
+      "target": "n114",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n112",
+      "target": "n115",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n112",
+      "target": "n116",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n112",
+      "target": "n117",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n112",
+      "target": "n118",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n112",
+      "target": "n119",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n120",
+      "target": "n121",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n121",
+      "target": "n122",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n121",
+      "target": "n123",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n121",
+      "target": "n124",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n121",
+      "target": "n125",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n121",
+      "target": "n126",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n121",
+      "target": "n127",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n121",
+      "target": "n128",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n129",
+      "target": "n130",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n130",
+      "target": "n131",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n130",
+      "target": "n132",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n130",
+      "target": "n133",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n130",
+      "target": "n134",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n130",
+      "target": "n135",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n130",
+      "target": "n136",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n130",
+      "target": "n137",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n130",
+      "target": "n138",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n130",
+      "target": "n139",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n140",
+      "target": "n141",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n142",
+      "target": "n143",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n143",
+      "target": "n144",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n143",
+      "target": "n145",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n143",
+      "target": "n146",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n143",
+      "target": "n147",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n143",
+      "target": "n148",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "n15",
+      "target": "n130",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n15",
+      "target": "n149",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n15",
+      "target": "n150",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n34",
+      "target": "n4",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n34",
+      "target": "n82",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n34",
+      "target": "n141",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n34",
+      "target": "n151",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n34",
+      "target": "n152",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n34",
+      "target": "n153",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n34",
+      "target": "n154",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n34",
+      "target": "n155",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n43",
+      "target": "n130",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n43",
+      "target": "n150",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n51",
+      "target": "n156",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n51",
+      "target": "n157",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n57",
+      "target": "n121",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n57",
+      "target": "n158",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n69",
+      "target": "n6",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n69",
+      "target": "n8",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n69",
+      "target": "n14",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n77",
+      "target": "n159",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n81",
+      "target": "n160",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n81",
+      "target": "n155",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n92",
+      "target": "n160",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n92",
+      "target": "n155",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n102",
+      "target": "n160",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n102",
+      "target": "n155",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n111",
+      "target": "n160",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n111",
+      "target": "n155",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n120",
+      "target": "n160",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n120",
+      "target": "n155",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n129",
+      "target": "n149",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n129",
+      "target": "n160",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n129",
+      "target": "n155",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n140",
+      "target": "n161",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "n142",
+      "target": "n162",
+      "type": "import",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

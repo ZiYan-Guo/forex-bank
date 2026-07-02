@@ -1,0 +1,1021 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/PaymentDirectionEnum.java",
+      "type": "file",
+      "name": "PaymentDirectionEnum.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/PaymentDirectionEnum.java",
+      "summary": "支付方向枚举，定义汇入(INWARD)和汇出(OUTWARD)两种外汇支付方向，包含 code 和 desc 字段。",
+      "tags": ["枚举", "支付方向", "公共基础"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/PaymentDirectionEnum.java:PaymentDirectionEnum",
+      "type": "class",
+      "name": "PaymentDirectionEnum",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/PaymentDirectionEnum.java",
+      "summary": "支付方向枚举类，包含 INWARD(1,汇入) 和 OUTWARD(2,汇出) 两个枚举值。",
+      "tags": ["枚举", "支付方向"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/RiskLevelEnum.java",
+      "type": "file",
+      "name": "RiskLevelEnum.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/RiskLevelEnum.java",
+      "summary": "风险等级枚举，定义 LOW、MEDIUM、HIGH、PROHIBITED 四个风险等级，用于客户和交易风控。",
+      "tags": ["枚举", "风控", "风险等级"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/RiskLevelEnum.java:RiskLevelEnum",
+      "type": "class",
+      "name": "RiskLevelEnum",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/RiskLevelEnum.java",
+      "summary": "风险等级枚举类，LOW→低风险、MEDIUM→中风险、HIGH→高风险、PROHIBITED→禁止类。",
+      "tags": ["枚举", "风险等级"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/TradeTypeEnum.java",
+      "type": "file",
+      "name": "TradeTypeEnum.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/TradeTypeEnum.java",
+      "summary": "交易类型枚举，定义 SPOT(即期)、FORWARD(远期)、SWAP(掉期)、OPTION(期权)、OPTION_DATE(择期) 五种外汇交易类型。",
+      "tags": ["枚举", "交易类型", "外汇"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/TradeTypeEnum.java:TradeTypeEnum",
+      "type": "class",
+      "name": "TradeTypeEnum",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/TradeTypeEnum.java",
+      "summary": "外汇交易类型枚举，涵盖即期、远期、掉期、期权、择期五种交易产品。",
+      "tags": ["枚举", "交易类型"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/YesNoEnum.java",
+      "type": "file",
+      "name": "YesNoEnum.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/YesNoEnum.java",
+      "summary": "是/否通用枚举，YES(1,是) 和 NO(0,否)，用于标识二元状态字段。",
+      "tags": ["枚举", "通用"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/YesNoEnum.java:YesNoEnum",
+      "type": "class",
+      "name": "YesNoEnum",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/YesNoEnum.java",
+      "summary": "通用是/否枚举类，YES(1)→是、NO(0)→否。",
+      "tags": ["枚举"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BaseException.java",
+      "type": "file",
+      "name": "BaseException.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BaseException.java",
+      "summary": "系统基础异常类，继承 RuntimeException，封装错误码和消息，支持多种构造器（code+message、ResultCode、Throwable 组合）。所有业务异常均继承此类。",
+      "tags": ["异常", "基础类", "错误处理"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BaseException.java:BaseException",
+      "type": "class",
+      "name": "BaseException",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BaseException.java",
+      "summary": "基础异常类，扩展 RuntimeException，提供 code 字段和六个重载构造器，支持错误码、消息、原因的自由组合。",
+      "tags": ["异常", "基础类"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "file",
+      "name": "BusinessException.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "summary": "业务异常类，继承 BaseException，提供七个重载构造器，默认使用 BUSINESS_ERROR 错误码，用于上层业务逻辑抛出可识别异常。",
+      "tags": ["异常", "业务逻辑"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java:BusinessException",
+      "type": "class",
+      "name": "BusinessException",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "summary": "业务异常类，继承 BaseException，默认错误码为 BUSINESS_ERROR(10001)，面向业务层使用。",
+      "tags": ["异常", "业务"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "type": "file",
+      "name": "GlobalExceptionHandler.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "summary": "全局异常处理器，使用 @RestControllerAdvice 统一拦截业务异常、参数校验、数据完整性等八类异常，统一返回 R 格式错误响应。",
+      "tags": ["异常处理", "AOP", "Spring", "全局"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "type": "class",
+      "name": "GlobalExceptionHandler",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "summary": "全局异常处理器，统一拦截并处理 8 类异常，返回标准 R 响应，覆盖 400/405/409/500 等 HTTP 状态码。",
+      "tags": ["异常处理", "Spring", "RestControllerAdvice"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleBusinessException",
+      "type": "function",
+      "name": "handleBusinessException",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "summary": "处理业务异常(BusinessException)，返回 400 和失败响应。",
+      "tags": ["异常处理", "方法"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleIllegalArgumentException",
+      "type": "function",
+      "name": "handleIllegalArgumentException",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "summary": "处理非法参数异常，返回 VALIDATE_FAIL 错误码。",
+      "tags": ["异常处理", "方法"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleValidationException",
+      "type": "function",
+      "name": "handleValidationException",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "summary": "处理 JSR-303 参数校验异常(@Valid)，提取各字段错误信息拼接返回。",
+      "tags": ["异常处理", "方法", "参数校验"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleHttpMessageNotReadable",
+      "type": "function",
+      "name": "handleHttpMessageNotReadable",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "summary": "处理请求体不可读异常(JSON格式错误等)。",
+      "tags": ["异常处理", "方法"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleMissingParam",
+      "type": "function",
+      "name": "handleMissingParam",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "summary": "处理缺少必需请求参数异常。",
+      "tags": ["异常处理", "方法"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleMethodNotSupported",
+      "type": "function",
+      "name": "handleMethodNotSupported",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "summary": "处理不支持的 HTTP 方法异常，返回 405。",
+      "tags": ["异常处理", "方法"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleDataIntegrityViolation",
+      "type": "function",
+      "name": "handleDataIntegrityViolation",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "summary": "处理数据库数据完整性冲突异常(唯一键、外键等)，返回 409。",
+      "tags": ["异常处理", "方法", "数据库"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleException",
+      "type": "function",
+      "name": "handleException",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "summary": "兜底异常处理器，捕获所有未处理异常，返回 500 通用错误。",
+      "tags": ["异常处理", "方法"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "type": "file",
+      "name": "IdempotentAspect.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "summary": "幂等切面实现，基于 @Idempotent 注解 + Redis setIfAbsent 实现接口幂等性，防止重复请求。使用 SpEL 解析幂等键。",
+      "tags": ["幂等", "AOP", "Redis", "切面"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java:IdempotentAspect",
+      "type": "class",
+      "name": "IdempotentAspect",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "summary": "幂等切面类，使用 AOP 环绕通知拦截 @Idempotent 注解方法，通过 Redis setIfAbsent 实现请求去重。",
+      "tags": ["幂等", "AOP", "切面"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java:around",
+      "type": "function",
+      "name": "around",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "summary": "幂等环绕通知，生成 Redis Key 并通过 setIfAbsent 检查重复请求，已存在则抛出 BusinessException(IDEMPOTENT_REPEATED)。",
+      "tags": ["幂等", "方法"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "type": "file",
+      "name": "RedisLockAspect.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "summary": "Redis 分布式锁切面实现，基于 @RedisLock 注解 + Redisson tryLock 实现方法级分布式锁，支持等待时间、租约和自动释放。",
+      "tags": ["分布式锁", "AOP", "Redis", "切面"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:RedisLockAspect",
+      "type": "class",
+      "name": "RedisLockAspect",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "summary": "Redis 分布式锁切面类，拦截 @RedisLock 注解方法，通过 Redisson tryLock 获取锁，finally 块自动释放。",
+      "tags": ["分布式锁", "AOP", "切面"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:around",
+      "type": "function",
+      "name": "around",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "summary": "分布式锁环绕通知，通过 SpEL 解析锁键，tryLock 获取锁，获取失败抛 LOCK_FAILED 异常，finally 中释放锁。",
+      "tags": ["分布式锁", "方法"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "type": "file",
+      "name": "RateLimitAspect.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "summary": "限流切面实现，基于 @RateLimit 注解 + Redisson RRateLimiter 实现方法级限流，支持 SpEL 键解析。优先级 @Order(0)。",
+      "tags": ["限流", "AOP", "Redis", "切面"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:RateLimitAspect",
+      "type": "class",
+      "name": "RateLimitAspect",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "summary": "限流切面类，优先级 @Order(0) 高于幂等和锁切面，通过 RRateLimiter.tryAcquire 进行令牌桶限流。",
+      "tags": ["限流", "AOP", "切面"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:around",
+      "type": "function",
+      "name": "around",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "summary": "限流环绕通知，配置令牌桶速率并尝试获取令牌，超限抛 TOO_MANY_REQUESTS(429) 异常。",
+      "tags": ["限流", "方法"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "file",
+      "name": "R.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "summary": "统一 API 响应体泛型封装类。提供 ok() 系列成功响应和 fail() 系列错误响应的静态工厂方法，包含 code/message/data/traceId/timestamp 字段。所有 Controller 返回此格式。",
+      "tags": ["统一响应", "API", "泛型", "工具"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java:R",
+      "type": "class",
+      "name": "R",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "summary": "统一响应封装类，泛型支持，提供 8 个静态工厂方法(ok/fail)和 traceId 链式调用、isSuccess 判断。",
+      "tags": ["响应体", "泛型"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java:ok",
+      "type": "function",
+      "name": "ok",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "summary": "静态方法 ok()，构建无数据/有数据/自定义消息的成功响应(200)。",
+      "tags": ["响应", "方法"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java:fail",
+      "type": "function",
+      "name": "fail",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "summary": "静态方法 fail()，构建无参/仅消息/指定code/ResultCode 四种错误响应。",
+      "tags": ["响应", "方法"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "file",
+      "name": "ResultCode.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "summary": "统一响应码枚举，定义 HTTP 层(200/400/401/403/404/429/409/423/500/503)和业务层(10001-20001)共 18 个错误码。",
+      "tags": ["枚举", "错误码", "响应码"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java:ResultCode",
+      "type": "class",
+      "name": "ResultCode",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "summary": "响应码枚举，含 SUCCESS(200)、FAILURE(500)、VALIDATE_FAIL(400)、UNAUTHORIZED(401)、FORBIDDEN(403)、NOT_FOUND(404)、TOO_MANY_REQUESTS(429)、IDEMPOTENT_REPEATED(409)、LOCK_FAILED(423)、BUSINESS_ERROR(10001) 等。",
+      "tags": ["枚举", "错误码"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java",
+      "type": "file",
+      "name": "SpelUtil.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java",
+      "summary": "SpEL 表达式解析工具类，支持 #{paramName} 占位符替换和标准 SpEL 表达式求值，用于幂等键、锁键、限流键的动态解析。",
+      "tags": ["工具类", "SpEL", "表达式"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java:SpelUtil",
+      "type": "class",
+      "name": "SpelUtil",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java",
+      "summary": "SpEL 工具类，final 不可实例化，提供 resolveTemplate 静态方法自动选择占位符或 SpEL 表达式评估。",
+      "tags": ["工具类", "SpEL"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java:resolveTemplate",
+      "type": "function",
+      "name": "resolveTemplate",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java",
+      "summary": "模板解析入口方法，检测 #{xxx} 占位符则走占位符替换，否则走 SpEL 表达式求值。",
+      "tags": ["方法", "SpEL"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-common/forex-common-mybatis/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-common/forex-common-mybatis/pom.xml",
+      "summary": "forex-common-mybatis 子模块的 Maven 构建配置，声明父模块 forex-common，依赖 forex-common-base、mybatis-plus、MySQL 驱动和 Druid 连接池。",
+      "tags": ["maven", "构建", "mybatis"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "type": "file",
+      "name": "BaseMapperExt.java",
+      "filePath": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "summary": "扩展 MyBatis-Plus 基础 Mapper 接口，泛型约束为 BasePO 子类，供各业务 Mapper 继承以统一 CRUD 能力。",
+      "tags": ["mybatis", "mapper", "基础类"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java:BaseMapperExt",
+      "type": "class",
+      "name": "BaseMapperExt",
+      "filePath": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "summary": "扩展 Mapper 接口，继承 MyBatis-Plus BaseMapper<T extends BasePO>，统一项目 Mapper 规范。",
+      "tags": ["mapper", "接口"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java",
+      "type": "file",
+      "name": "BasePO.java",
+      "filePath": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java",
+      "summary": "持久化对象(Entity)基类，定义 id(雪花ID)、createTime、updateTime、version(乐观锁)、deleted(逻辑删除) 通用字段，所有 PO 继承此类。",
+      "tags": ["mybatis", "entity", "基础类"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java:BasePO",
+      "type": "class",
+      "name": "BasePO",
+      "filePath": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java",
+      "summary": "PO 基类，实现 Serializable，提供 id(@TableId 雪花ID)、createTime、updateTime、version(@Version)、deleted(@TableLogic) 字段。",
+      "tags": ["entity", "mybatis"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "type": "file",
+      "name": "MybatisPlusConfig.java",
+      "filePath": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "summary": "MyBatis-Plus 自动配置类，注册分页插件(MySQL)、乐观锁拦截器、全表删除/更新拦截器，以及逻辑删除全局配置。",
+      "tags": ["mybatis", "配置", "拦截器"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java:MybatisPlusConfig",
+      "type": "class",
+      "name": "MybatisPlusConfig",
+      "filePath": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "summary": "MyBatis-Plus 配置类，@ConditionalOnClass 条件装配，配置分页、乐观锁、防全表操作三大拦截器，设置 deleted 字段为逻辑删除。",
+      "tags": ["mybatis", "配置"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MyMetaObjectHandler.java",
+      "type": "file",
+      "name": "MyMetaObjectHandler.java",
+      "filePath": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MyMetaObjectHandler.java",
+      "summary": "MyBatis-Plus 元对象自动填充处理器，在 INSERT 时自动填充 createTime、updateTime、version(0)、deleted(0)，UPDATE 时填充 updateTime。",
+      "tags": ["mybatis", "自动填充", "配置"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MyMetaObjectHandler.java:MyMetaObjectHandler",
+      "type": "class",
+      "name": "MyMetaObjectHandler",
+      "filePath": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MyMetaObjectHandler.java",
+      "summary": "自动填充处理器，实现 MetaObjectHandler，insertFill 和 updateFill 自动设置时间戳等通用字段。",
+      "tags": ["mybatis", "自动填充"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/EncryptTypeHandler.java",
+      "type": "file",
+      "name": "EncryptTypeHandler.java",
+      "filePath": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/EncryptTypeHandler.java",
+      "summary": "MyBatis 加密类型处理器，使用 MyBatis-Plus AES 工具对 VARCHAR 字段进行自动加密存储和解密读取，密钥为 forex-encrypt-k1。",
+      "tags": ["mybatis", "加密", "TypeHandler"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/EncryptTypeHandler.java:EncryptTypeHandler",
+      "type": "class",
+      "name": "EncryptTypeHandler",
+      "filePath": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/EncryptTypeHandler.java",
+      "summary": "AES 加密 TypeHandler，@MappedJdbcTypes(VARCHAR) @MappedTypes(String)，存入加密/取出解密。",
+      "tags": ["加密", "TypeHandler"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/JsonTypeHandler.java",
+      "type": "file",
+      "name": "JsonTypeHandler.java",
+      "filePath": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/JsonTypeHandler.java",
+      "summary": "MyBatis JSON 类型处理器，通过 Jackson ObjectMapper 将对象序列化为 JSON 字符串存入数据库，读取时反序列化为指定类型。",
+      "tags": ["mybatis", "JSON", "TypeHandler"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/JsonTypeHandler.java:JsonTypeHandler",
+      "type": "class",
+      "name": "JsonTypeHandler",
+      "filePath": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/JsonTypeHandler.java",
+      "summary": "JSON TypeHandler，构造函数需传入目标类型，通过 Jackson 做 JSON ↔ Object 双向转换。",
+      "tags": ["JSON", "TypeHandler"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-common/forex-common-mybatis/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "type": "config",
+      "name": "AutoConfiguration.imports",
+      "filePath": "forex-common/forex-common-mybatis/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "summary": "Spring Boot 自动配置注册文件，声明 MybatisPlusConfig 为自动配置类，实现零代码引入即生效。",
+      "tags": ["spring", "自动配置", "配置"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-common/forex-common-security/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-common/forex-common-security/pom.xml",
+      "summary": "forex-common-security 子模块的 Maven 构建配置，依赖 forex-common-base、spring-boot-starter-web/aop、jjwt(JWT)、bouncy-castle(SM2/3/4)、hutool。",
+      "tags": ["maven", "构建", "安全"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "file",
+      "name": "RequirePermission.java",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "summary": "权限校验注解，标注在方法或类上，通过 PermissionAspect 切面校验用户是否拥有指定权限，支持 matchAll 全部匹配或任一匹配。",
+      "tags": ["注解", "权限", "安全"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java:RequirePermission",
+      "type": "class",
+      "name": "RequirePermission",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "summary": "方法/类级别的权限注解，value 为权限数组，matchAll=true 全部满足/t=false 任一满足即可。",
+      "tags": ["注解", "权限"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java",
+      "type": "file",
+      "name": "RequireRole.java",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java",
+      "summary": "角色校验注解，标注在方法或类上，通过 PermissionAspect 切面校验用户是否拥有指定角色，matchAll 默认 false(任一匹配)。",
+      "tags": ["注解", "角色", "安全"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java:RequireRole",
+      "type": "class",
+      "name": "RequireRole",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java",
+      "summary": "方法/类级别的角色注解，value 为角色数组，matchAll 默认 false(任一匹配)。",
+      "tags": ["注解", "角色"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "type": "file",
+      "name": "PermissionAspect.java",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "summary": "权限校验切面，通过 @Before 前置通知拦截 @RequireRole 和 @RequirePermission 注解，从 UserContextHolder 获取当前用户角色/权限进行匹配。",
+      "tags": ["权限", "AOP", "安全", "切面"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:PermissionAspect",
+      "type": "class",
+      "name": "PermissionAspect",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "summary": "权限切面类，实现角色校验(checkRole)和权限校验(checkPermission)两个前置通知。",
+      "tags": ["权限", "AOP", "切面"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:checkRole",
+      "type": "function",
+      "name": "checkRole",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "summary": "角色检查前置通知，从 UserContextHolder 获取用户角色，按 matchAll 策略匹配所需角色，不等时抛 FORBIDDEN。",
+      "tags": ["权限", "方法"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:checkPermission",
+      "type": "function",
+      "name": "checkPermission",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "summary": "权限检查前置通知，从 UserContextHolder 获取用户权限，按 matchAll 策略匹配所需权限。",
+      "tags": ["权限", "方法"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java:BusinessException",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BaseException.java:BaseException",
+      "type": "inherits",
+      "weight": 0.9,
+      "summary": "BusinessException 继承 BaseException"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BaseException.java:BaseException",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java:ResultCode",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "BaseException 引用 ResultCode 作为错误码"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java:BusinessException",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java:ResultCode",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "BusinessException 引用 ResultCode 作为默认错误码"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java:BusinessException",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "GlobalExceptionHandler 处理 BusinessException"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java:R",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "GlobalExceptionHandler 返回 R 统一响应"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java:ResultCode",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "GlobalExceptionHandler 使用 ResultCode 错误码"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java:IdempotentAspect",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java:BusinessException",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "IdempotentAspect 幂等失败时抛出 BusinessException"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java:IdempotentAspect",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java:ResultCode",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "IdempotentAspect 使用 IDEMPOTENT_REPEATED 错误码"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java:IdempotentAspect",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java:SpelUtil",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "IdempotentAspect 依赖 SpelUtil 解析幂等键"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:RedisLockAspect",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java:BusinessException",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "RedisLockAspect 获取锁失败时抛出 BusinessException"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:RedisLockAspect",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java:ResultCode",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "RedisLockAspect 使用 LOCK_FAILED 错误码"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:RedisLockAspect",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java:SpelUtil",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "RedisLockAspect 依赖 SpelUtil 解析锁键"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:RateLimitAspect",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java:BusinessException",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "RateLimitAspect 触发限流时抛出 BusinessException"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:RateLimitAspect",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java:ResultCode",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "RateLimitAspect 使用 TOO_MANY_REQUESTS 错误码"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:RateLimitAspect",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java:SpelUtil",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "RateLimitAspect 依赖 SpelUtil 解析限流键"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java:R",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java:ResultCode",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "R 类依赖 ResultCode 获取默认成功/失败码和消息"
+    },
+    {
+      "source": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java:MybatisPlusConfig",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/EncryptTypeHandler.java:EncryptTypeHandler",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "MybatisPlusConfig 注册 EncryptTypeHandler 类型处理器"
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:PermissionAspect",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java:BusinessException",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "PermissionAspect 权限不足时抛出 BusinessException"
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:PermissionAspect",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java:ResultCode",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "PermissionAspect 使用 FORBIDDEN 错误码"
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:PermissionAspect",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java:RequirePermission",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "PermissionAspect 拦截 @RequirePermission 注解"
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:PermissionAspect",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java:RequireRole",
+      "type": "imports",
+      "weight": 0.7,
+      "summary": "PermissionAspect 拦截 @RequireRole 注解"
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/PaymentDirectionEnum.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/PaymentDirectionEnum.java:PaymentDirectionEnum",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 PaymentDirectionEnum 枚举"
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/RiskLevelEnum.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/RiskLevelEnum.java:RiskLevelEnum",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 RiskLevelEnum 枚举"
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/TradeTypeEnum.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/TradeTypeEnum.java:TradeTypeEnum",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 TradeTypeEnum 枚举"
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/YesNoEnum.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/YesNoEnum.java:YesNoEnum",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 YesNoEnum 枚举"
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BaseException.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BaseException.java:BaseException",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 BaseException 类"
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java:BusinessException",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 BusinessException 类"
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 GlobalExceptionHandler 类"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleBusinessException",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "类包含 handleBusinessException 方法"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleIllegalArgumentException",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "类包含 handleIllegalArgumentException 方法"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleValidationException",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "类包含 handleValidationException 方法"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleHttpMessageNotReadable",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "类包含 handleHttpMessageNotReadable 方法"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleMissingParam",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "类包含 handleMissingParam 方法"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleMethodNotSupported",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "类包含 handleMethodNotSupported 方法"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleDataIntegrityViolation",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "类包含 handleDataIntegrityViolation 方法"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleException",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "类包含 handleException 方法"
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java:IdempotentAspect",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 IdempotentAspect 类"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java:IdempotentAspect",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java:around",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "类包含 around 环绕通知方法"
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:RedisLockAspect",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 RedisLockAspect 类"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:RedisLockAspect",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:around",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "类包含 around 环绕通知方法"
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:RateLimitAspect",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 RateLimitAspect 类"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:RateLimitAspect",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:around",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "类包含 around 环绕通知方法"
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java:R",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 R 统一响应类"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java:R",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java:ok",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "类包含 ok 静态工厂方法"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java:R",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java:fail",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "类包含 fail 静态工厂方法"
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java:ResultCode",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 ResultCode 枚举"
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java:SpelUtil",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 SpelUtil 工具类"
+    },
+    {
+      "source": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java:SpelUtil",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java:resolveTemplate",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "类包含 resolveTemplate 方法"
+    },
+    {
+      "source": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java:BaseMapperExt",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 BaseMapperExt 接口"
+    },
+    {
+      "source": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java:BasePO",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 BasePO 基类"
+    },
+    {
+      "source": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java:MybatisPlusConfig",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 MybatisPlusConfig 配置类"
+    },
+    {
+      "source": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MyMetaObjectHandler.java",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MyMetaObjectHandler.java:MyMetaObjectHandler",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 MyMetaObjectHandler 类"
+    },
+    {
+      "source": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/EncryptTypeHandler.java",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/EncryptTypeHandler.java:EncryptTypeHandler",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 EncryptTypeHandler 类型处理器"
+    },
+    {
+      "source": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/JsonTypeHandler.java",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/JsonTypeHandler.java:JsonTypeHandler",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 JsonTypeHandler 类型处理器"
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java:RequirePermission",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 RequirePermission 注解"
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java:RequireRole",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 RequireRole 注解"
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:PermissionAspect",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "文件包含 PermissionAspect 切面类"
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:PermissionAspect",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:checkRole",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "类包含 checkRole 角色检查方法"
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:PermissionAspect",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:checkPermission",
+      "type": "contains",
+      "weight": 1.0,
+      "summary": "类包含 checkPermission 权限检查方法"
+    },
+    {
+      "source": "config:forex-common/forex-common-mybatis/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java:MybatisPlusConfig",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "Spring Boot 自动配置注册 MybatisPlusConfig"
+    },
+    {
+      "source": "config:forex-common/forex-common-mybatis/pom.xml",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-common-mybatis pom.xml 管理 mybatis-plus 依赖"
+    },
+    {
+      "source": "config:forex-common/forex-common-security/pom.xml",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "type": "configures",
+      "weight": 0.6,
+      "summary": "forex-common-security pom.xml 管理 security 模块依赖"
+    },
+    {
+      "source": "config:forex-common/forex-common-security/pom.xml",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BaseException.java",
+      "type": "depends_on",
+      "weight": 0.6,
+      "summary": "forex-common-security 依赖 forex-common-base 模块"
+    },
+    {
+      "source": "config:forex-common/forex-common-mybatis/pom.xml",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BaseException.java",
+      "type": "depends_on",
+      "weight": 0.6,
+      "summary": "forex-common-mybatis 依赖 forex-common-base 模块"
+    }
+  ]
+}

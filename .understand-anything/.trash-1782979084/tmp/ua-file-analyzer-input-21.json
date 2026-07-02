@@ -1,0 +1,347 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchImportData": {
+    "forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java": [
+      "import org.mybatis.spring.annotation.MapperScan;",
+      "import org.springframework.boot.SpringApplication;",
+      "import org.springframework.boot.autoconfigure.SpringBootApplication;",
+      "import org.springframework.cloud.client.discovery.EnableDiscoveryClient;"
+    ],
+    "forex-ocr/src/main/resources/application.yml": [],
+    "forex-payment/pom.xml": [],
+    "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java": [
+      "import com.forex.common.base.annotation.Idempotent;",
+      "import com.forex.common.base.annotation.RedisLock;",
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.common.base.result.R;",
+      "import com.forex.payment.adapter.dto.AmlCheckReq;",
+      "import com.forex.payment.adapter.dto.CreatePaymentReq;",
+      "import com.forex.payment.adapter.dto.GpiUpdateReq;",
+      "import com.forex.payment.adapter.dto.PaymentResp;",
+      "import com.forex.payment.adapter.dto.SendPaymentReq;",
+      "import com.forex.payment.application.command.CreatePaymentCmd;",
+      "import com.forex.payment.application.command.SendPaymentCmd;",
+      "import com.forex.payment.domain.model.dto.PaymentQuery;",
+      "import com.forex.payment.application.service.BankCodeValidationService;",
+      "import com.forex.payment.application.service.BatchPaymentService;",
+      "import com.forex.payment.application.service.PaymentAppService;",
+      "import com.forex.payment.domain.model.aggregate.CrossBorderPayment;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import jakarta.validation.Valid;",
+      "import lombok.RequiredArgsConstructor;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentTemplateController.java": [
+      "import com.forex.common.base.result.R;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.web.bind.annotation.DeleteMapping;",
+      "import org.springframework.web.bind.annotation.GetMapping;",
+      "import org.springframework.web.bind.annotation.PathVariable;",
+      "import org.springframework.web.bind.annotation.PostMapping;",
+      "import org.springframework.web.bind.annotation.PutMapping;",
+      "import org.springframework.web.bind.annotation.RequestBody;",
+      "import org.springframework.web.bind.annotation.RequestMapping;",
+      "import org.springframework.web.bind.annotation.RequestParam;",
+      "import org.springframework.web.bind.annotation.RestController;",
+      "import java.time.LocalDateTime;",
+      "import java.util.ArrayList;",
+      "import java.util.LinkedHashMap;",
+      "import java.util.List;",
+      "import java.util.Map;",
+      "import java.util.concurrent.CopyOnWriteArrayList;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/adapter/dto/AmlCheckReq.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import jakarta.validation.constraints.NotBlank;",
+      "import jakarta.validation.constraints.NotNull;",
+      "import lombok.Data;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/adapter/dto/CreatePaymentReq.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import jakarta.validation.constraints.DecimalMin;",
+      "import jakarta.validation.constraints.NotBlank;",
+      "import jakarta.validation.constraints.NotNull;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/adapter/dto/GpiUpdateReq.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import jakarta.validation.constraints.NotBlank;",
+      "import lombok.Data;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/adapter/dto/PaymentResp.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/adapter/dto/SendPaymentReq.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import jakarta.validation.constraints.NotBlank;",
+      "import lombok.Data;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/application/command/BlacklistHitCmd.java": [
+      "import lombok.Data;",
+      "import java.math.BigDecimal;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/application/command/CreatePaymentCmd.java": [
+      "import jakarta.validation.constraints.DecimalMin;",
+      "import jakarta.validation.constraints.NotBlank;",
+      "import jakarta.validation.constraints.NotNull;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/application/command/SendPaymentCmd.java": [
+      "import jakarta.validation.constraints.NotBlank;",
+      "import lombok.Data;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/application/service/BankCodeValidationService.java": [
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import java.math.BigDecimal;",
+      "import java.util.regex.Pattern;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/application/service/BatchPaymentService.java": [
+      "import com.forex.payment.application.command.CreatePaymentCmd;",
+      "import com.forex.payment.domain.model.aggregate.CrossBorderPayment;",
+      "import com.forex.payment.domain.repository.PaymentRepository;",
+      "import com.forex.payment.domain.service.PaymentDomainService;",
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Data;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import java.math.BigDecimal;",
+      "import java.util.ArrayList;",
+      "import java.util.List;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java": [
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Data;",
+      "import java.util.ArrayList;",
+      "import java.util.List;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/application/service/PaymentAppService.java": [
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.forex.payment.application.command.BlacklistHitCmd;",
+      "import com.forex.payment.application.command.CreatePaymentCmd;",
+      "import com.forex.payment.application.command.SendPaymentCmd;",
+      "import com.forex.payment.domain.model.dto.PaymentQuery;",
+      "import com.forex.payment.domain.model.aggregate.CrossBorderPayment;",
+      "import com.forex.payment.domain.model.entity.BlacklistHit;",
+      "import com.forex.payment.domain.repository.BlacklistHitRepository;",
+      "import com.forex.payment.domain.repository.PaymentRepository;",
+      "import com.forex.payment.domain.service.PaymentDomainService;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Service;",
+      "import org.springframework.transaction.annotation.Transactional;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSentEvent.java": [
+      "import com.forex.common.base.domain.BaseDomainEvent;",
+      "import lombok.Getter;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSubmittedEvent.java": [
+      "import com.forex.common.base.domain.BaseDomainEvent;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/model/aggregate/CrossBorderPayment.java": [
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/model/dto/PaymentQuery.java": [
+      "import com.forex.common.base.dto.PageReq;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;",
+      "import java.time.LocalDate;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/model/entity/BlacklistHit.java": [
+      "import com.forex.common.base.domain.BaseEntity;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/model/entity/PaymentReconciliation.java": [
+      "import com.forex.common.base.domain.BaseEntity;",
+      "import lombok.Getter;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/model/entity/PaymentTemplate.java": [
+      "import com.forex.common.base.domain.BaseEntity;",
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Getter;",
+      "import lombok.NoArgsConstructor;"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/BeneficiaryInfo.java": [
+      "import com.forex.common.base.domain.BaseValueObject;",
+      "import lombok.Getter;",
+      "import java.util.Objects;"
+    ]
+  },
+  "batchFiles": [
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java",
+      "sizeLines": 15,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/resources/application.yml",
+      "sizeLines": 45,
+      "language": "yaml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-payment/pom.xml",
+      "sizeLines": 55,
+      "language": "xml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "sizeLines": 281,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentTemplateController.java",
+      "sizeLines": 247,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/AmlCheckReq.java",
+      "sizeLines": 22,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/CreatePaymentReq.java",
+      "sizeLines": 83,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/GpiUpdateReq.java",
+      "sizeLines": 21,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/PaymentResp.java",
+      "sizeLines": 112,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/SendPaymentReq.java",
+      "sizeLines": 20,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/command/BlacklistHitCmd.java",
+      "sizeLines": 16,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/command/CreatePaymentCmd.java",
+      "sizeLines": 50,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/command/SendPaymentCmd.java",
+      "sizeLines": 16,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/service/BankCodeValidationService.java",
+      "sizeLines": 56,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/service/BatchPaymentService.java",
+      "sizeLines": 91,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "sizeLines": 36,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/service/PaymentAppService.java",
+      "sizeLines": 168,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSentEvent.java",
+      "sizeLines": 23,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSubmittedEvent.java",
+      "sizeLines": 27,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/aggregate/CrossBorderPayment.java",
+      "sizeLines": 306,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/dto/PaymentQuery.java",
+      "sizeLines": 23,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/entity/BlacklistHit.java",
+      "sizeLines": 46,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/entity/PaymentReconciliation.java",
+      "sizeLines": 57,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/entity/PaymentTemplate.java",
+      "sizeLines": 61,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/BeneficiaryInfo.java",
+      "sizeLines": 64,
+      "language": "java",
+      "fileCategory": "code"
+    }
+  ]
+}

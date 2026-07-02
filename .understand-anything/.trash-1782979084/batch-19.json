@@ -1,0 +1,2566 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java",
+      "type": "file",
+      "name": "CollateralInfo.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java",
+      "summary": "担保品信息值对象，封装担保品类型、市场价值、折扣率和计算后的担保价值，支持 haircut 扣减计算。",
+      "tags": [
+        "值对象",
+        "DDD",
+        "担保品",
+        "保证金"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:CollateralInfo",
+      "type": "class",
+      "name": "CollateralInfo",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java",
+      "summary": "担保品信息值对象，继承 BaseValueObject，包含担保品类型、haircut 折扣率、市场价值和计算后的担保价值，提供 of 工厂方法和 calcCollateralValue 内部计算逻辑。",
+      "tags": [
+        "值对象",
+        "担保品"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java",
+      "summary": "工厂方法，根据担保品类型、市场价值和折扣率创建 CollateralInfo 实例，内部自动计算担保价值。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:getCollateralValue",
+      "type": "function",
+      "name": "getCollateralValue",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java",
+      "summary": "返回担保价值 = 市场价值 × (1 - 折扣率/100)，保留两位小数。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:calcCollateralValue",
+      "type": "function",
+      "name": "calcCollateralValue",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java",
+      "summary": "方法 calcCollateralValue",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java",
+      "summary": "比较 CollateralInfo 的相等性，基于 collateralType、haircutPct、marketValue、collateralValue 四个字段。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java",
+      "summary": "基于 collateralType、haircutPct、marketValue、collateralValue 计算哈希值。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "type": "file",
+      "name": "MarginAmount.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "summary": "保证金金额值对象，封装金额和币种，提供加、减、判正等运算，校验币种一致性。",
+      "tags": [
+        "值对象",
+        "DDD",
+        "保证金",
+        "金额"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:MarginAmount",
+      "type": "class",
+      "name": "MarginAmount",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "summary": "保证金金额值对象，继承 BaseValueObject，封装 BigDecimal 金额和币种，提供 of/zero 工厂方法及 add/subtract/isPositive 运算，校验币种一致性。",
+      "tags": [
+        "值对象",
+        "金额"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "summary": "工厂方法，根据金额和币种创建 MarginAmount 实例，非空校验。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:zero",
+      "type": "function",
+      "name": "zero",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "summary": "创建指定币种的零金额实例。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:add",
+      "type": "function",
+      "name": "add",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "summary": "加法运算，要求加数非空且币种一致，否则抛出 BusinessException。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:subtract",
+      "type": "function",
+      "name": "subtract",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "summary": "减法运算，要求减数非空且币种一致，否则抛出 BusinessException。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:isPositive",
+      "type": "function",
+      "name": "isPositive",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "summary": "判断金额是否大于零。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "summary": "比较 amount 和 currency 的相等性。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "summary": "基于 amount 和 currency 计算哈希值。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java",
+      "type": "file",
+      "name": "WaterLevel.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java",
+      "summary": "水位值对象，根据已存入保证金与要求金额的比率评估水位等级（SAFE/MARGIN_CALL/FORCE_LIQUIDATION）。",
+      "tags": [
+        "值对象",
+        "DDD",
+        "保证金",
+        "风控"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java:WaterLevel",
+      "type": "class",
+      "name": "WaterLevel",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java",
+      "summary": "保证金水位值对象，继承 BaseValueObject，包含 NEEDS_ACTION 常量。通过 evaluate 静态方法根据 ratio 判定 SAFE(>=100%)、MARGIN_CALL(>=50%)、FORCE_LIQUIDATION(<50%) 三个等级。",
+      "tags": [
+        "值对象",
+        "水位",
+        "风控"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java:evaluate",
+      "type": "function",
+      "name": "evaluate",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java",
+      "summary": "根据已存金额与要求金额计算比率，返回对应水位等级：SAFE(充足)、MARGIN_CALL(需追缴)、FORCE_LIQUIDATION(强制平仓)。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java:needsAction",
+      "type": "function",
+      "name": "needsAction",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java",
+      "summary": "判断当前水位是否需要响应操作（非 SAFE 等级即需处理）。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java",
+      "summary": "基于 level 字段比较相等性。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java",
+      "summary": "基于 level 字段计算哈希值。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "type": "file",
+      "name": "MarginAccountRepository.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "summary": "保证金账户仓储接口，定义保证金账户的持久化契约：保存、按ID/保证金编号/客户ID查询及分页查询。",
+      "tags": [
+        "仓储",
+        "接口",
+        "DDD",
+        "保证金"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:MarginAccountRepository",
+      "type": "interface",
+      "name": "MarginAccountRepository",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "summary": "保证金账户仓储接口，定义 save、findById、findByMarginNo、findByCustomerId、pageQuery 五个持久化操作。",
+      "tags": [
+        "仓储",
+        "接口"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "summary": "保存保证金账户。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:findById",
+      "type": "function",
+      "name": "findById",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "summary": "按主键 ID 查询保证金账户，返回 Optional。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:findByMarginNo",
+      "type": "function",
+      "name": "findByMarginNo",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "summary": "按保证金编号查询保证金账户，返回 Optional。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:findByCustomerId",
+      "type": "function",
+      "name": "findByCustomerId",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "summary": "按客户 ID 查询保证金账户列表。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "summary": "分页查询保证金账户，返回 PageResp。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java",
+      "type": "file",
+      "name": "MarginCallRepository.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java",
+      "summary": "追缴通知仓储接口，定义追缴记录的持久化契约：保存、按ID查询、按保证金ID查询列表。",
+      "tags": [
+        "仓储",
+        "接口",
+        "DDD",
+        "追缴"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java:MarginCallRepository",
+      "type": "interface",
+      "name": "MarginCallRepository",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java",
+      "summary": "追缴通知仓储接口，定义 save、findById、findByMarginId 三个持久化操作。",
+      "tags": [
+        "仓储",
+        "接口"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java:save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java",
+      "summary": "保存追缴通知记录。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java:findById",
+      "type": "function",
+      "name": "findById",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java",
+      "summary": "按主键 ID 查询追缴记录。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java:findByMarginId",
+      "type": "function",
+      "name": "findByMarginId",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java",
+      "summary": "按保证金账户 ID 查询追缴记录列表。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "type": "file",
+      "name": "MarginDomainService.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "summary": "保证金领域服务，处理保证金账户创建（含静态/动态计算）、存入保证金与水位检查、追缴保证金、释放保证金等核心业务逻辑。使用 @Transactional 确保事务一致性。",
+      "tags": [
+        "领域服务",
+        "DDD",
+        "保证金",
+        "事务",
+        "业务逻辑"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:MarginDomainService",
+      "type": "class",
+      "name": "MarginDomainService",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "summary": "保证金领域服务，编排 MarginAccount/MarginCall 聚合与仓储、事件发布。提供 createMargin（静态保证金）、createDynamicMargin（动态计算保证金）、depositWithWaterLevelCheck（存入+水位检查触发追缴）、callMargin/releaseMargin 等核心方法。",
+      "tags": [
+        "领域服务",
+        "保证金",
+        "DDD"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:createMargin",
+      "type": "function",
+      "name": "createMargin",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "summary": "创建静态保证金账户，使用固定保证金率，生成保证金编号，记录日志。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:createDynamicMargin",
+      "type": "function",
+      "name": "createDynamicMargin",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "summary": "创建动态保证金账户，根据名义本金、期限月数和波动率动态计算 requiredAmount/marginRate 后创建。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:depositWithWaterLevelCheck",
+      "type": "function",
+      "name": "depositWithWaterLevelCheck",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "summary": "存入保证金并检查水位，若水位需要追缴则自动创建 MarginCall 记录。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:calculateInitialMargin",
+      "type": "function",
+      "name": "calculateInitialMargin",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "summary": "计算初始保证金 = 名义本金 × 保证金率，null 安全返回零。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:callMargin",
+      "type": "function",
+      "name": "callMargin",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "summary": "执行保证金追缴，调用 account.call() 后持久化，并发布 MarginCalledEvent 领域事件。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:releaseMargin",
+      "type": "function",
+      "name": "releaseMargin",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "summary": "释放保证金，调用 account.release() 后持久化，记录释放原因和金额。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:generateMarginNo",
+      "type": "function",
+      "name": "generateMarginNo",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "summary": "方法 generateMarginNo",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java",
+      "type": "file",
+      "name": "MarginAccountMapper.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java",
+      "summary": "保证金账户 MyBatis Mapper 接口，继承 BaseMapperExt，提供按保证金编号、客户ID查询及动态 SQL 分页查询。",
+      "tags": [
+        "Mapper",
+        "MyBatis",
+        "持久化",
+        "保证金"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java:MarginAccountMapper",
+      "type": "class",
+      "name": "MarginAccountMapper",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java",
+      "summary": "保证金账户 MyBatis Mapper 接口，继承 BaseMapperExt<MarginAccountPO>，包含 selectByMarginNo、selectByCustomerId、pageQuery 三个自定义查询。",
+      "tags": [
+        "Mapper",
+        "MyBatis"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java:selectByMarginNo",
+      "type": "function",
+      "name": "selectByMarginNo",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java",
+      "summary": "按保证金编号查询，使用 @Select 注解 SQL。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java:selectByCustomerId",
+      "type": "function",
+      "name": "selectByCustomerId",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java",
+      "summary": "按客户 ID 查询保证金账户列表，按创建时间倒序。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java",
+      "summary": "动态 SQL 分页查询，支持 customerId/tradeId/marginNo/marginType/status 多条件过滤，使用 MyBatis <script> 标签。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java",
+      "type": "file",
+      "name": "MarginAccountPO.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java",
+      "summary": "保证金账户持久化对象(PO)，继承 BasePO，映射 t_margin_account 表，包含保证金编号、客户/交易 ID、类型、币种、金额、保证金率、状态等字段。",
+      "tags": [
+        "PO",
+        "持久化",
+        "MyBatis",
+        "保证金"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java:MarginAccountPO",
+      "type": "class",
+      "name": "MarginAccountPO",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java",
+      "summary": "保证金账户 PO，映射 t_margin_account 表，@Data/@EqualsAndHashCode，含 marginNo、customerId、tradeId、marginType、marginCurrency、requiredAmount、depositedAmount、shortfallAmount、marginRate、callDate、dueDate、status、collateralType、releaseReason 等字段。",
+      "tags": [
+        "PO",
+        "持久化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "type": "file",
+      "name": "MarginAccountRepositoryImpl.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "summary": "保证金账户仓储实现，实现 MarginAccountRepository 接口，使用 MarginAccountMapper 进行持久化，提供 PO↔Domain 双向转换。",
+      "tags": [
+        "仓储实现",
+        "持久化",
+        "基础设施"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:MarginAccountRepositoryImpl",
+      "type": "class",
+      "name": "MarginAccountRepositoryImpl",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "summary": "保证金账户仓储实现类，@Repository 注解，通过 MarginAccountMapper 实现 save/findById/findByMarginNo/findByCustomerId/pageQuery，内含 toDomain/toPO 双向映射方法。",
+      "tags": [
+        "仓储实现",
+        "持久化"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "summary": "保存保证金账户，按 ID 是否为空判断 insert 或 updateById，返回转换后的领域对象。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:findById",
+      "type": "function",
+      "name": "findById",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "summary": "按主键 ID 查询，通过 toDomain 转换为领域对象，返回 Optional。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:findByMarginNo",
+      "type": "function",
+      "name": "findByMarginNo",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "summary": "按保证金编号查询，通过 selectByMarginNo 查询，返回 Optional。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:findByCustomerId",
+      "type": "function",
+      "name": "findByCustomerId",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "summary": "按客户 ID 查询保证金账户列表，stream 映射为领域对象列表。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "summary": "分页查询，使用 MyBatis-Plus Page 对象，返回 PageResp 格式分页结果。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:toDomain",
+      "type": "function",
+      "name": "toDomain",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "summary": "将 MarginAccountPO 转换为 MarginAccount 领域对象（通过 reconstitute 重构）。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:toPO",
+      "type": "function",
+      "name": "toPO",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "summary": "将 MarginAccount 领域对象转换为 MarginAccountPO 持久化对象。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "type": "file",
+      "name": "MarginApplication.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "summary": "保证金微服务 Spring Boot 启动类，启用服务发现和 MyBatis Mapper 扫描。",
+      "tags": [
+        "启动类",
+        "SpringBoot",
+        "微服务",
+        "保证金"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/MarginApplication.java:MarginApplication",
+      "type": "class",
+      "name": "MarginApplication",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "summary": "保证金服务启动类，@SpringBootApplication + @EnableDiscoveryClient + @MapperScan，扫描 com.forex.margin.infrastructure.mapper 包。",
+      "tags": [
+        "启动类",
+        "SpringBoot"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/MarginApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "summary": "Spring Boot 应用入口，调用 SpringApplication.run 启动保证金微服务。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-margin/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-margin/src/main/resources/application.yml",
+      "summary": "保证金微服务配置文件，定义端口 8204、MySQL 数据源、Redis、Nacos 注册/配置中心及 MyBatis-Plus 配置。",
+      "tags": [
+        "配置文件",
+        "YAML",
+        "微服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-notification/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-notification/pom.xml",
+      "summary": "通知微服务 Maven 构建配置，依赖 forex-common-base/security/mybatis、Spring Boot Web、Nacos 服务发现、Redis、Knife4j、Mail 等模块。",
+      "tags": [
+        "Maven",
+        "构建",
+        "依赖管理",
+        "通知"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "type": "file",
+      "name": "NoticeController.java",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "summary": "公告管理 REST 控制器，提供公告创建、发布、查询详情和分页查询接口，使用 @RequirePermission 进行权限控制。",
+      "tags": [
+        "Controller",
+        "REST",
+        "适配层",
+        "公告"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:NoticeController",
+      "type": "class",
+      "name": "NoticeController",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "summary": "公告控制器，@RestController 映射 /api/notice，提供 create/publish/getById/pageQuery 四个接口，使用 @RequirePermission 控制创建/发布/分页权限。",
+      "tags": [
+        "Controller",
+        "REST",
+        "公告"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "summary": "创建公告，接收 CreateNoticeReq，转换为 CreateNoticeCmd 调用应用服务，返回 NoticeResp。需要 notification:create 权限。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:publish",
+      "type": "function",
+      "name": "publish",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "summary": "发布公告，按 ID 调用 publishNotice，返回 NoticeResp。需要 notification:publish 权限。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:getById",
+      "type": "function",
+      "name": "getById",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "summary": "查询公告详情，按 ID 返回 NoticeResp，无需权限。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "summary": "分页查询公告，接收 NoticeQuery，返回 PageResp<NoticeResp>。需要 notification:page 权限。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:toResp",
+      "type": "function",
+      "name": "toResp",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "summary": "私有方法，将 Notice 领域对象转换为 NoticeResp 响应 DTO。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "type": "file",
+      "name": "NotificationController.java",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "summary": "通知管理 REST 控制器，提供通知发送、查询详情和分页查询接口，使用 @RequirePermission 进行权限控制。",
+      "tags": [
+        "Controller",
+        "REST",
+        "适配层",
+        "通知"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java:NotificationController",
+      "type": "class",
+      "name": "NotificationController",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "summary": "通知控制器，@RestController 映射 /api/notification，提供 send/getById/pageQuery 三个接口，使用 @RequirePermission 控制发送和分页权限。",
+      "tags": [
+        "Controller",
+        "REST",
+        "通知"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java:send",
+      "type": "function",
+      "name": "send",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "summary": "发送通知，接收 SendNotificationReq，转换为 SendNotificationCmd 调用应用服务，返回 NotificationResp。需要 notification:send 权限。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java:getById",
+      "type": "function",
+      "name": "getById",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "summary": "查询通知详情，按 ID 返回 NotificationResp，无需权限。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "summary": "分页查询通知，接收 NotifyQuery，返回 PageResp<NotificationResp>。需要 notification:page 权限。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java:toResp",
+      "type": "function",
+      "name": "toResp",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "summary": "私有方法，将 Notification 领域对象转换为 NotificationResp 响应 DTO。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/adapter/dto/CreateNoticeReq.java",
+      "type": "file",
+      "name": "CreateNoticeReq.java",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/dto/CreateNoticeReq.java",
+      "summary": "创建公告请求 DTO，包含公告标题、内容、类型、发布人ID、过期时间，使用 @NotBlank 和 @Schema 校验与文档化。",
+      "tags": [
+        "DTO",
+        "请求",
+        "校验",
+        "公告"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-notification/src/main/java/com/forex/notification/adapter/dto/CreateNoticeReq.java:CreateNoticeReq",
+      "type": "class",
+      "name": "CreateNoticeReq",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/dto/CreateNoticeReq.java",
+      "summary": "创建公告请求 DTO，@Data 注解，含 title/content/noticeType(@NotBlank)、publisherId、expireTime 字段。",
+      "tags": [
+        "DTO",
+        "请求"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/adapter/dto/NoticeResp.java",
+      "type": "file",
+      "name": "NoticeResp.java",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/dto/NoticeResp.java",
+      "summary": "公告响应 DTO，包含公告 ID、标题、内容、类型、发布状态、发布人、发布/过期时间等完整字段，使用 @Schema 注解。",
+      "tags": [
+        "DTO",
+        "响应",
+        "公告"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-notification/src/main/java/com/forex/notification/adapter/dto/NoticeResp.java:NoticeResp",
+      "type": "class",
+      "name": "NoticeResp",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/dto/NoticeResp.java",
+      "summary": "公告响应 DTO，@Data 注解，含 id/title/content/noticeType/publishStatus/publisherId/publishTime/expireTime 字段。",
+      "tags": [
+        "DTO",
+        "响应"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/adapter/dto/NotificationResp.java",
+      "type": "file",
+      "name": "NotificationResp.java",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/dto/NotificationResp.java",
+      "summary": "通知响应 DTO，包含通知 ID、标题、内容、类型、目标用户、业务关联、发送时间、状态、失败原因等字段。",
+      "tags": [
+        "DTO",
+        "响应",
+        "通知"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-notification/src/main/java/com/forex/notification/adapter/dto/NotificationResp.java:NotificationResp",
+      "type": "class",
+      "name": "NotificationResp",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/dto/NotificationResp.java",
+      "summary": "通知响应 DTO，@Data 注解，含 id/title/content/notifyType/targetUsers/targetUserNames/bizType/bizNo/status/sendTime/failedReason 字段。",
+      "tags": [
+        "DTO",
+        "响应"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/adapter/dto/SendNotificationReq.java",
+      "type": "file",
+      "name": "SendNotificationReq.java",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/dto/SendNotificationReq.java",
+      "summary": "发送通知请求 DTO，包含通知标题、内容、类型、目标用户信息、业务关联号，使用 @NotBlank 校验必填字段。",
+      "tags": [
+        "DTO",
+        "请求",
+        "校验",
+        "通知"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-notification/src/main/java/com/forex/notification/adapter/dto/SendNotificationReq.java:SendNotificationReq",
+      "type": "class",
+      "name": "SendNotificationReq",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/adapter/dto/SendNotificationReq.java",
+      "summary": "发送通知请求 DTO，@Data 注解，含 title/content/notifyType(@NotBlank)、targetUsers、targetUserNames、bizType、bizNo 字段。",
+      "tags": [
+        "DTO",
+        "请求"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/application/command/CreateNoticeCmd.java",
+      "type": "file",
+      "name": "CreateNoticeCmd.java",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/command/CreateNoticeCmd.java",
+      "summary": "创建公告应用层命令对象，封装公告标题、内容、类型、发布人、过期时间参数。",
+      "tags": [
+        "Command",
+        "应用层",
+        "CQRS",
+        "公告"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-notification/src/main/java/com/forex/notification/application/command/CreateNoticeCmd.java:CreateNoticeCmd",
+      "type": "class",
+      "name": "CreateNoticeCmd",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/command/CreateNoticeCmd.java",
+      "summary": "创建公告命令，@Data 注解，含 title/content/noticeType(@NotBlank)、publisherId、expireTime 字段。",
+      "tags": [
+        "Command",
+        "应用层"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/application/command/SendNotificationCmd.java",
+      "type": "file",
+      "name": "SendNotificationCmd.java",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/command/SendNotificationCmd.java",
+      "summary": "发送通知应用层命令对象，封装通知标题、内容、类型、目标用户、业务关联参数。",
+      "tags": [
+        "Command",
+        "应用层",
+        "CQRS",
+        "通知"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-notification/src/main/java/com/forex/notification/application/command/SendNotificationCmd.java:SendNotificationCmd",
+      "type": "class",
+      "name": "SendNotificationCmd",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/command/SendNotificationCmd.java",
+      "summary": "发送通知命令，@Data 注解，含 title/content/notifyType(@NotBlank)、targetUsers、targetUserNames、bizType、bizNo 字段。",
+      "tags": [
+        "Command",
+        "应用层"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/application/query/NoticeQuery.java",
+      "type": "file",
+      "name": "NoticeQuery.java",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/query/NoticeQuery.java",
+      "summary": "公告分页查询条件对象，继承 PageReq，支持按公告类型、发布状态过滤。",
+      "tags": [
+        "Query",
+        "查询",
+        "CQRS",
+        "公告"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-notification/src/main/java/com/forex/notification/application/query/NoticeQuery.java:NoticeQuery",
+      "type": "class",
+      "name": "NoticeQuery",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/query/NoticeQuery.java",
+      "summary": "公告查询对象，继承 PageReq，包含 noticeType 和 publishStatus 过滤条件，@Schema 注解文档化。",
+      "tags": [
+        "Query",
+        "分页"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/application/query/NotifyQuery.java",
+      "type": "file",
+      "name": "NotifyQuery.java",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/query/NotifyQuery.java",
+      "summary": "通知分页查询条件对象，继承 PageReq，支持按通知类型、状态、业务类型过滤。",
+      "tags": [
+        "Query",
+        "查询",
+        "CQRS",
+        "通知"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-notification/src/main/java/com/forex/notification/application/query/NotifyQuery.java:NotifyQuery",
+      "type": "class",
+      "name": "NotifyQuery",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/query/NotifyQuery.java",
+      "summary": "通知查询对象，继承 PageReq，包含 notifyType、status、bizType 过滤条件，@Schema 注解文档化。",
+      "tags": [
+        "Query",
+        "分页"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "type": "file",
+      "name": "NotificationAppService.java",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "summary": "通知应用服务，编排领域服务与仓储，实现发送通知、创建/发布公告、查询详情及分页查询等用例，管理事务边界。",
+      "tags": [
+        "应用服务",
+        "用例编排",
+        "事务",
+        "通知"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:NotificationAppService",
+      "type": "class",
+      "name": "NotificationAppService",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "summary": "通知应用服务，@Service/@RequiredArgsConstructor，注入 NotificationDomainService/NotificationRepository/NoticeRepository，提供 sendNotification、createNotice、publishNotice、getNotificationDetail、getNoticeDetail、pageQueryNotification、pageQueryNotice 七个方法，标注 @Transactional。",
+      "tags": [
+        "应用服务",
+        "通知",
+        "事务"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:sendNotification",
+      "type": "function",
+      "name": "sendNotification",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "summary": "发送通知，通过 Notification.create 工厂创建领域对象，委托 NotificationDomainService 发送。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:createNotice",
+      "type": "function",
+      "name": "createNotice",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "summary": "创建公告，通过 Notice.create 工厂创建领域对象，委托 NotificationDomainService 创建。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:publishNotice",
+      "type": "function",
+      "name": "publishNotice",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "summary": "发布公告，先查询公告是否存在（不存在抛 BusinessException），再委托领域服务发布。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:getNotificationDetail",
+      "type": "function",
+      "name": "getNotificationDetail",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "summary": "按 ID 查询通知详情，不存在则抛 NOT_FOUND 异常。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:getNoticeDetail",
+      "type": "function",
+      "name": "getNoticeDetail",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "summary": "按 ID 查询公告详情，不存在则抛 NOT_FOUND 异常。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:pageQueryNotification",
+      "type": "function",
+      "name": "pageQueryNotification",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "summary": "分页查询通知，委托 NotificationRepository.pageQuery。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:pageQueryNotice",
+      "type": "function",
+      "name": "pageQueryNotice",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "summary": "分页查询公告，委托 NoticeRepository.pageQuery。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/domain/event/NotificationSentEvent.java",
+      "type": "file",
+      "name": "NotificationSentEvent.java",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/domain/event/NotificationSentEvent.java",
+      "summary": "通知已发送领域事件，继承 BaseDomainEvent，携带通知类型和业务编号，事件名称为 NotificationSent。",
+      "tags": [
+        "领域事件",
+        "DDD",
+        "通知"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-notification/src/main/java/com/forex/notification/domain/event/NotificationSentEvent.java:NotificationSentEvent",
+      "type": "class",
+      "name": "NotificationSentEvent",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/domain/event/NotificationSentEvent.java",
+      "summary": "通知发送事件，继承 BaseDomainEvent，@Getter，包含 notifyType 和 bizNo 字段，eventName() 返回 NotificationSent。",
+      "tags": [
+        "领域事件"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/domain/event/NotificationSentEvent.java:eventName",
+      "type": "function",
+      "name": "eventName",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/domain/event/NotificationSentEvent.java",
+      "summary": "返回事件名称字符串 NotificationSent。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "type": "file",
+      "name": "Notice.java",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "summary": "公告聚合根，继承 BaseAggregate，封装公告创建、发布、过期等生命周期管理，以及业务校验逻辑。",
+      "tags": [
+        "聚合根",
+        "DDD",
+        "领域模型",
+        "公告"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:Notice",
+      "type": "class",
+      "name": "Notice",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "summary": "公告聚合根，继承 BaseAggregate，包含 create（工厂方法）、reconstitute（重建）、publish（发布）、expire（过期）、isPublished（查询）等业务方法，内置 validate 校验标题/内容/类型非空。",
+      "tags": [
+        "聚合根",
+        "公告",
+        "DDD"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "summary": "工厂方法，创建公告（初始状态 DRAFT），执行 validate 校验，返回 Notice 实例。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:reconstitute",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "summary": "从持久化数据重建公告聚合（用于仓储层读出）。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:publish",
+      "type": "function",
+      "name": "publish",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "summary": "发布公告，状态从 DRAFT 变为 PUBLISHED，设置发布时间，若已发布则抛异常。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:expire",
+      "type": "function",
+      "name": "expire",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "summary": "将公告标记为过期，仅已发布状态可过期，更新为 EXPIRED 状态。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:isPublished",
+      "type": "function",
+      "name": "isPublished",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "summary": "判断公告是否处于已发布状态。",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:validate",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "summary": "方法 validate",
+      "tags": [
+        "方法"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:CollateralInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:CollateralInfo",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:CollateralInfo",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:getCollateralValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:CollateralInfo",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:calcCollateralValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:CollateralInfo",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:CollateralInfo",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:MarginAmount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:MarginAmount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:MarginAmount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:MarginAmount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:add",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:MarginAmount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:subtract",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:MarginAmount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:isPositive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:MarginAmount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:MarginAmount",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java:WaterLevel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java:WaterLevel",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java:evaluate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java:WaterLevel",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java:needsAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java:WaterLevel",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java:WaterLevel",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:MarginAccountRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:MarginAccountRepository",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:MarginAccountRepository",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:findById",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:MarginAccountRepository",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:findByMarginNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:MarginAccountRepository",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:findByCustomerId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:MarginAccountRepository",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java:MarginCallRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java:MarginCallRepository",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java:save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java:MarginCallRepository",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java:findById",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java:MarginCallRepository",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java:findByMarginId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:MarginDomainService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:MarginDomainService",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:createMargin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:MarginDomainService",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:createDynamicMargin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:MarginDomainService",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:depositWithWaterLevelCheck",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:MarginDomainService",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:calculateInitialMargin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:MarginDomainService",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:callMargin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:MarginDomainService",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:releaseMargin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:MarginDomainService",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:generateMarginNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java:MarginAccountMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java:MarginAccountMapper",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java:selectByMarginNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java:MarginAccountMapper",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java:selectByCustomerId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java:MarginAccountMapper",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java:MarginAccountPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:MarginAccountRepositoryImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:MarginAccountRepositoryImpl",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:MarginAccountRepositoryImpl",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:findById",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:MarginAccountRepositoryImpl",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:findByMarginNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:MarginAccountRepositoryImpl",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:findByCustomerId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:MarginAccountRepositoryImpl",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:MarginAccountRepositoryImpl",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:toDomain",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:MarginAccountRepositoryImpl",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:toPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/MarginApplication.java:MarginApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/MarginApplication.java:MarginApplication",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/MarginApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:NoticeController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:NoticeController",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:NoticeController",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:publish",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:NoticeController",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:getById",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:NoticeController",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:NoticeController",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:toResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java:NotificationController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java:NotificationController",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java:send",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java:NotificationController",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java:getById",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java:NotificationController",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java:NotificationController",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java:toResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/dto/CreateNoticeReq.java",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/adapter/dto/CreateNoticeReq.java:CreateNoticeReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/dto/NoticeResp.java",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/adapter/dto/NoticeResp.java:NoticeResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/dto/NotificationResp.java",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/adapter/dto/NotificationResp.java:NotificationResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/dto/SendNotificationReq.java",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/adapter/dto/SendNotificationReq.java:SendNotificationReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/command/CreateNoticeCmd.java",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/application/command/CreateNoticeCmd.java:CreateNoticeCmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/command/SendNotificationCmd.java",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/application/command/SendNotificationCmd.java:SendNotificationCmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/query/NoticeQuery.java",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/application/query/NoticeQuery.java:NoticeQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/query/NotifyQuery.java",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/application/query/NotifyQuery.java:NotifyQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:NotificationAppService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:NotificationAppService",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:sendNotification",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:NotificationAppService",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:createNotice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:NotificationAppService",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:publishNotice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:NotificationAppService",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:getNotificationDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:NotificationAppService",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:getNoticeDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:NotificationAppService",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:pageQueryNotification",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:NotificationAppService",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:pageQueryNotice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/domain/event/NotificationSentEvent.java",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/domain/event/NotificationSentEvent.java:NotificationSentEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/domain/event/NotificationSentEvent.java:NotificationSentEvent",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/domain/event/NotificationSentEvent.java:eventName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:Notice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:Notice",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:Notice",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:reconstitute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:Notice",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:publish",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:Notice",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:expire",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:Notice",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:isPublished",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:Notice",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/domain/model/query/MarginQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/domain/event/MarginCalledEvent.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/domain/model/query/MarginQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "target": "file:forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/adapter/dto/CreateNoticeReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/adapter/dto/NoticeResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/application/command/CreateNoticeCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/application/query/NoticeQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/adapter/dto/NotificationResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/adapter/dto/SendNotificationReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/application/command/SendNotificationCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/application/query/NotifyQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notification.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/query/NoticeQuery.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/query/NotifyQuery.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/application/command/CreateNoticeCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/application/command/SendNotificationCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/application/query/NoticeQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/application/query/NotifyQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notification.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/domain/repository/NoticeRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/domain/repository/NotificationRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "target": "file:forex-notification/src/main/java/com/forex/notification/domain/service/NotificationDomainService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/domain/event/NotificationSentEvent.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseDomainEvent.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:createMargin",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:createDynamicMargin",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:depositWithWaterLevelCheck",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:callMargin",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:releaseMargin",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:MarginDomainService",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/event/MarginCalledEvent.java:MarginCalledEvent",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:MarginDomainService",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java:WaterLevel",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java:MarginDomainService",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java:MarginCall",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:MarginAccountRepositoryImpl",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java:MarginAccountMapper",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:MarginAccountRepositoryImpl",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java:MarginAccount",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java:MarginAccountRepositoryImpl",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java:MarginAccountPO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:NotificationAppService",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/domain/service/NotificationDomainService.java:NotificationDomainService",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:NotificationAppService",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:Notice",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:NotificationAppService",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notification.java:Notification",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:NoticeController",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:NotificationAppService",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java:NoticeController",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:Notice",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java:NotificationController",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java:NotificationAppService",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java:NotificationController",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notification.java:Notification",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java:Notice",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java:BaseAggregate",
+      "type": "extends",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:forex-notification/src/main/java/com/forex/notification/domain/event/NotificationSentEvent.java:NotificationSentEvent",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseDomainEvent.java:BaseDomainEvent",
+      "type": "extends",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java:MarginAccountPO",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java:BasePO",
+      "type": "extends",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java:CollateralInfo",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java:BaseValueObject",
+      "type": "extends",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java:MarginAmount",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java:BaseValueObject",
+      "type": "extends",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "class:forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java:WaterLevel",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java:BaseValueObject",
+      "type": "extends",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

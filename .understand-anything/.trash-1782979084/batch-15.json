@@ -1,0 +1,1294 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "type": "file",
+      "name": "SecurityAutoConfiguration.java",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "summary": "安全自动配置类，绑定 forex.security 配置前缀，创建 JwtUtil 和 Sm2Util Bean，并在启动时校验 JWT 密钥强度。",
+      "tags": [
+        "安全",
+        "自动配置",
+        "SpringBoot",
+        "JWT",
+        "国密"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:SecurityAutoConfiguration",
+      "type": "class",
+      "name": "SecurityAutoConfiguration",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "summary": "安全自动配置类，绑定 forex.security 配置前缀，创建 JwtUtil 和 Sm2Util Bean，启动时校验 JWT 密钥强度。",
+      "tags": [
+        "安全",
+        "自动配置",
+        "Configuration"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:validate",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "summary": "validate()：@PostConstruct 启动时校验 JWT 密钥至少 32 字符，不足则抛出 IllegalStateException。",
+      "tags": [
+        "校验",
+        "JWT密钥",
+        "PostConstruct"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:jwtUtil",
+      "type": "function",
+      "name": "jwtUtil",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "summary": "jwtUtil()：@Bean 创建 JwtUtil 实例，注入 JWT 密钥。",
+      "tags": [
+        "Bean",
+        "JwtUtil"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:sm2Util",
+      "type": "function",
+      "name": "sm2Util",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "summary": "sm2Util()：@Bean 条件化创建 Sm2Util 实例，仅当 forex.security.sm2-enabled=true 时启用。",
+      "tags": [
+        "Bean",
+        "Sm2Util",
+        "国密"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java",
+      "type": "file",
+      "name": "TokenAuthenticationFilter.java",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java",
+      "summary": "Token 认证过滤器，拦截请求提取 Bearer Token，验证 JWT 并设置用户上下文，跳过白名单 URL（actuator/swagger 等）。",
+      "tags": [
+        "过滤器",
+        "认证",
+        "JWT",
+        "Token"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:TokenAuthenticationFilter",
+      "type": "class",
+      "name": "TokenAuthenticationFilter",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java",
+      "summary": "Token 认证过滤器，继承 OncePerRequestFilter，在请求链路中解析 JWT Token 并写入 ThreadLocal 用户上下文。",
+      "tags": [
+        "过滤器",
+        "认证",
+        "Token",
+        "OncePerRequestFilter"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:shouldNotFilter",
+      "type": "function",
+      "name": "shouldNotFilter",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java",
+      "summary": "shouldNotFilter()：返回是否跳过白名单 URL（actuator/swagger 等路径）。",
+      "tags": [
+        "白名单",
+        "过滤"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:doFilterInternal",
+      "type": "function",
+      "name": "doFilterInternal",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java",
+      "summary": "doFilterInternal()：核心过滤逻辑，提取 Token → 验证 → 解析 Claims → 设置 UserContextHolder，失败返回 401。",
+      "tags": [
+        "过滤",
+        "认证",
+        "JWT"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:extractToken",
+      "type": "function",
+      "name": "extractToken",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java",
+      "summary": "extractToken()：从 HTTP 请求头 Authorization 中提取 Bearer Token。",
+      "tags": [
+        "Token提取",
+        "Bearer"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java",
+      "type": "file",
+      "name": "JwtUtil.java",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java",
+      "summary": "JWT 工具类，使用 HMAC-SHA256 算法生成访问令牌(30分钟)和刷新令牌(7天)，支持解析、验证和读取 Claims 信息。",
+      "tags": [
+        "JWT",
+        "Token",
+        "HMAC-SHA256",
+        "加密"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "type": "class",
+      "name": "JwtUtil",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java",
+      "summary": "JWT 工具类，封装令牌生成、解析、验证等功能，携带 userId/username/roles/permissions 信息。",
+      "tags": [
+        "JWT",
+        "Token",
+        "HMAC"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "type": "function",
+      "name": "JwtUtil",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java",
+      "summary": "JwtUtil(secret)：构造方法，基于密钥字符串生成 HMAC-SHA256 密钥对。",
+      "tags": [
+        "构造",
+        "密钥",
+        "HMAC"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:generateAccessToken",
+      "type": "function",
+      "name": "generateAccessToken",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java",
+      "summary": "generateAccessToken()：生成访问令牌，30 分钟过期，包含用户 ID、角色、权限等声明。",
+      "tags": [
+        "Token",
+        "生成",
+        "访问令牌"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:generateRefreshToken",
+      "type": "function",
+      "name": "generateRefreshToken",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java",
+      "summary": "generateRefreshToken()：生成刷新令牌，7 天过期。",
+      "tags": [
+        "Token",
+        "生成",
+        "刷新令牌"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:parseToken",
+      "type": "function",
+      "name": "parseToken",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java",
+      "summary": "parseToken()：解析并验证 JWT 签名，返回 Claims。",
+      "tags": [
+        "解析",
+        "Token",
+        "验证"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:validateToken",
+      "type": "function",
+      "name": "validateToken",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java",
+      "summary": "validateToken()：验证令牌完整性，返回 boolean。",
+      "tags": [
+        "验证",
+        "Token"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:getUserId",
+      "type": "function",
+      "name": "getUserId",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java",
+      "summary": "getUserId(claims)：从 Claims 获取用户 ID。",
+      "tags": [
+        "Claims",
+        "用户ID"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:getUsername",
+      "type": "function",
+      "name": "getUsername",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java",
+      "summary": "getUsername(claims)：从 Claims 获取用户名。",
+      "tags": [
+        "Claims",
+        "用户名"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:getRoles",
+      "type": "function",
+      "name": "getRoles",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java",
+      "summary": "getRoles(claims)：从 Claims 获取角色列表。",
+      "tags": [
+        "Claims",
+        "角色"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:getPermissions",
+      "type": "function",
+      "name": "getPermissions",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java",
+      "summary": "getPermissions(claims)：从 Claims 获取权限列表。",
+      "tags": [
+        "Claims",
+        "权限"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java",
+      "type": "file",
+      "name": "Sm2Util.java",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java",
+      "summary": "国密 SM2 非对称加密工具类，基于 Hutool 实现加密/解密/签名/验签操作。",
+      "tags": [
+        "国密",
+        "SM2",
+        "非对称加密",
+        "Hutool"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:Sm2Util",
+      "type": "class",
+      "name": "Sm2Util",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java",
+      "summary": "国密 SM2 非对称加密工具，支持构造密钥对或随机生成，提供 Base64 加密、解密、签名、验签方法。",
+      "tags": [
+        "SM2",
+        "加密",
+        "国密",
+        "Hutool"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:Sm2Util",
+      "type": "function",
+      "name": "Sm2Util",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java",
+      "summary": "JwtUtil(line): 双参数构造，使用指定私钥/公钥创建 SM2 实例。",
+      "tags": [
+        "构造",
+        "SM2",
+        "密钥"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:encryptBase64",
+      "type": "function",
+      "name": "encryptBase64",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java",
+      "summary": "encryptBase64()：使用公钥 Base64 加密明文。",
+      "tags": [
+        "加密",
+        "SM2",
+        "Base64"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:decryptStr",
+      "type": "function",
+      "name": "decryptStr",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java",
+      "summary": "decryptStr()：使用私钥解密 Base64 密文。",
+      "tags": [
+        "解密",
+        "SM2"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:signHex",
+      "type": "function",
+      "name": "signHex",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java",
+      "summary": "signHex()：对数据签名，返回 Hex 格式签名。",
+      "tags": [
+        "签名",
+        "SM2",
+        "Hex"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:verifyHex",
+      "type": "function",
+      "name": "verifyHex",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java",
+      "summary": "verifyHex()：验证签名，返回 boolean。",
+      "tags": [
+        "验证签名",
+        "SM2",
+        "Hex"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java",
+      "type": "file",
+      "name": "Sm3Util.java",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java",
+      "summary": "国密 SM3 哈希摘要工具类，基于 Hutool 实现字符串和字节数组的哈希计算与验证。",
+      "tags": [
+        "国密",
+        "SM3",
+        "哈希",
+        "Hutool"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java:Sm3Util",
+      "type": "class",
+      "name": "Sm3Util",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java",
+      "summary": "国密 SM3 哈希工具，全部静态方法，支持字符串/字节数组哈希和验证。",
+      "tags": [
+        "SM3",
+        "哈希",
+        "国密"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java:hashHex",
+      "type": "function",
+      "name": "hashHex",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java",
+      "summary": "hashHex(String)：计算字符串的 SM3 哈希 Hex。",
+      "tags": [
+        "SM3",
+        "哈希",
+        "Hex"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java:hashHex#2",
+      "type": "function",
+      "name": "hashHex#2",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java",
+      "summary": "hashHex(byte[])：计算字节数组的 SM3 哈希 Hex。",
+      "tags": [
+        "SM3",
+        "哈希",
+        "字节"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java:verify",
+      "type": "function",
+      "name": "verify",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java",
+      "summary": "verify()：验证哈希值是否匹配。",
+      "tags": [
+        "SM3",
+        "验证"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java",
+      "type": "file",
+      "name": "Sm4Util.java",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java",
+      "summary": "国密 SM4 对称加密工具类，基于 Hutool 实现 CBC 和 ECB 模式的加密/解密操作。",
+      "tags": [
+        "国密",
+        "SM4",
+        "对称加密",
+        "Hutool"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java:Sm4Util",
+      "type": "class",
+      "name": "Sm4Util",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java",
+      "summary": "国密 SM4 对称加密工具，全静态方法，支持 CBC/ECB 模式的 Base64 加密解密。",
+      "tags": [
+        "SM4",
+        "对称加密",
+        "国密"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java:encryptCbc",
+      "type": "function",
+      "name": "encryptCbc",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java",
+      "summary": "encryptCbc()：CBC 模式 Base64 加密。",
+      "tags": [
+        "SM4",
+        "CBC",
+        "加密"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java:decryptCbc",
+      "type": "function",
+      "name": "decryptCbc",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java",
+      "summary": "decryptCbc()：CBC 模式解密。",
+      "tags": [
+        "SM4",
+        "CBC",
+        "解密"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java:encryptEcb",
+      "type": "function",
+      "name": "encryptEcb",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java",
+      "summary": "encryptEcb()：ECB 模式 Base64 加密。",
+      "tags": [
+        "SM4",
+        "ECB",
+        "加密"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java:decryptEcb",
+      "type": "function",
+      "name": "decryptEcb",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java",
+      "summary": "decryptEcb()：ECB 模式解密。",
+      "tags": [
+        "SM4",
+        "ECB",
+        "解密"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java",
+      "type": "file",
+      "name": "UserContextHolder.java",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java",
+      "summary": "用户上下文持有器，基于 ThreadLocal 存储当前线程的用户信息，支持设置、获取、清除及快捷读取 userId/username/roles/permissions。",
+      "tags": [
+        "ThreadLocal",
+        "用户上下文",
+        "工具类"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:UserContextHolder",
+      "type": "class",
+      "name": "UserContextHolder",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java",
+      "summary": "用户上下文持有器，通过 ThreadLocal 存储 UserInfo，提供全静态方法访问。",
+      "tags": [
+        "ThreadLocal",
+        "上下文",
+        "工具类"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:set",
+      "type": "function",
+      "name": "set",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java",
+      "summary": "set(UserInfo)：将用户信息设置到当前线程 ThreadLocal。",
+      "tags": [
+        "设置",
+        "ThreadLocal"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:get",
+      "type": "function",
+      "name": "get",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java",
+      "summary": "get()：获取当前线程用户信息。",
+      "tags": [
+        "获取",
+        "ThreadLocal"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:clear",
+      "type": "function",
+      "name": "clear",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java",
+      "summary": "clear()：清除当前线程用户信息。",
+      "tags": [
+        "清除",
+        "ThreadLocal"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:getUserId",
+      "type": "function",
+      "name": "getUserId",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java",
+      "summary": "getUserId()：快捷读取当前用户 ID。",
+      "tags": [
+        "用户ID"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:getUsername",
+      "type": "function",
+      "name": "getUsername",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java",
+      "summary": "getUsername()：快捷读取当前用户名。",
+      "tags": [
+        "用户名"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:getRoles",
+      "type": "function",
+      "name": "getRoles",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java",
+      "summary": "getRoles()：快捷读取当前用户角色列表。",
+      "tags": [
+        "角色"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:getPermissions",
+      "type": "function",
+      "name": "getPermissions",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java",
+      "summary": "getPermissions()：快捷读取当前用户权限列表。",
+      "tags": [
+        "权限"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserInfo.java",
+      "type": "file",
+      "name": "UserInfo.java",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserInfo.java",
+      "summary": "用户信息数据类，包含 userId/username/roles/permissions 四个基础字段，实现 Serializable。",
+      "tags": [
+        "用户信息",
+        "DTO",
+        "Serializable"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserInfo.java:UserInfo",
+      "type": "class",
+      "name": "UserInfo",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserInfo.java",
+      "summary": "用户信息实体，存储用户 ID、用户名、角色列表和权限列表。",
+      "tags": [
+        "用户信息",
+        "POJO"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-common/forex-common-security/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "type": "file",
+      "name": "org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "filePath": "forex-common/forex-common-security/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "summary": "Spring Boot 自动配置注册文件，声明 SecurityAutoConfiguration 为自动配置类。",
+      "tags": [
+        "SpringBoot",
+        "自动配置",
+        "SPI"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "config:forex-common/forex-common-security/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "type": "config",
+      "name": "AutoConfiguration.imports",
+      "filePath": "forex-common/forex-common-security/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "summary": "注册 SecurityAutoConfiguration 为 Spring Boot 自动配置入口。",
+      "tags": [
+        "自动配置",
+        "SPI"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "file",
+      "name": "RequirePermission.java",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "summary": "权限注解，标注在方法或类上声明所需的权限标识，支持 matchAll（全匹配）和 matchAny（任意匹配）模式。",
+      "tags": [
+        "注解",
+        "权限控制",
+        "AOP"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java:RequirePermission",
+      "type": "class",
+      "name": "@interface RequirePermission",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "summary": "自定义权限注解，声明方法所需的权限标识列表，支持全匹配/任意匹配。",
+      "tags": [
+        "注解",
+        "权限"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java",
+      "type": "file",
+      "name": "RequireRole.java",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java",
+      "summary": "角色注解，标注在方法或类上声明所需的角色标识，支持 matchAll（全匹配）和 matchAny（任意匹配）模式。",
+      "tags": [
+        "注解",
+        "角色控制",
+        "AOP"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java:RequireRole",
+      "type": "class",
+      "name": "@interface RequireRole",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java",
+      "summary": "自定义角色注解，声明方法所需的角色标识列表，支持全匹配/任意匹配。",
+      "tags": [
+        "注解",
+        "角色"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "type": "file",
+      "name": "PermissionAspect.java",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "summary": "权限切面，基于 Spring AOP 对 @RequireRole 和 @RequirePermission 注解进行拦截，从 UserContextHolder 获取当前用户信息并校验权限。",
+      "tags": [
+        "AOP",
+        "权限",
+        "切面",
+        "拦截"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:PermissionAspect",
+      "type": "class",
+      "name": "PermissionAspect",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "summary": "权限校验切面，拦截 @RequireRole 和 @RequirePermission 注解的方法执行，校验角色和权限是否匹配。",
+      "tags": [
+        "AOP",
+        "权限",
+        "切面"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:checkRole",
+      "type": "function",
+      "name": "checkRole",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "summary": "checkRole()：@Before 拦截 @RequireRole，校验当前用户角色是否满足要求，不满足抛出 BusinessException FORBIDDEN。",
+      "tags": [
+        "角色校验",
+        "AOP"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:checkPermission",
+      "type": "function",
+      "name": "checkPermission",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "summary": "checkPermission()：@Before 拦截 @RequirePermission，校验当前用户权限是否满足要求，不满足抛出 BusinessException FORBIDDEN。",
+      "tags": [
+        "权限校验",
+        "AOP"
+      ],
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:SecurityAutoConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:SecurityAutoConfiguration",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:SecurityAutoConfiguration",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:jwtUtil",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:SecurityAutoConfiguration",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:sm2Util",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:Sm2Util",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:jwtUtil",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:sm2Util",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:Sm2Util",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:TokenAuthenticationFilter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:TokenAuthenticationFilter",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:shouldNotFilter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:TokenAuthenticationFilter",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:doFilterInternal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:TokenAuthenticationFilter",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:extractToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:UserContextHolder",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserInfo.java:UserInfo",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:doFilterInternal",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:validateToken",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:doFilterInternal",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:parseToken",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:doFilterInternal",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:getUserId",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:doFilterInternal",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:getUsername",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:doFilterInternal",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:getRoles",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:doFilterInternal",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:getPermissions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:doFilterInternal",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:set",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:doFilterInternal",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:clear",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:doFilterInternal",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java:extractToken",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:generateAccessToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:generateRefreshToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:parseToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:validateToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:getUserId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:getUsername",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:getRoles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:getPermissions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:validateToken",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:parseToken",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:Sm2Util",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:Sm2Util",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:Sm2Util",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:Sm2Util",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:encryptBase64",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:Sm2Util",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:decryptStr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:Sm2Util",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:signHex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:Sm2Util",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java:verifyHex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java:Sm3Util",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java:Sm3Util",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java:hashHex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java:Sm3Util",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java:hashHex#2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java:Sm3Util",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java:verify",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java:verify",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java:hashHex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java:Sm4Util",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java:Sm4Util",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java:encryptCbc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java:Sm4Util",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java:decryptCbc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java:Sm4Util",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java:encryptEcb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java:Sm4Util",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java:decryptEcb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:UserContextHolder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:UserContextHolder",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:set",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:UserContextHolder",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:UserContextHolder",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:clear",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:UserContextHolder",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:getUserId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:UserContextHolder",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:getUsername",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:UserContextHolder",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:getRoles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:UserContextHolder",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:getPermissions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:getUserId",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:get",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:getUsername",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:get",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:getRoles",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:get",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:getPermissions",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:get",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserInfo.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserInfo.java:UserInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "target": "config:forex-common/forex-common-security/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java:RequirePermission",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java:RequireRole",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:PermissionAspect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:PermissionAspect",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:checkRole",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:PermissionAspect",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:checkPermission",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java:RequirePermission",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java:RequireRole",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:UserContextHolder",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:checkRole",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:getRoles",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java:checkPermission",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java:getPermissions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

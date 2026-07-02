@@ -1,0 +1,2889 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "type": "file",
+      "name": "ChatSessionRepositoryImpl.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "summary": "仓储实现类，ChatSessionRepositoryImpl的数据持久层实现",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 6.3
+    },
+    {
+      "id": "class:ChatSessionRepositoryImpl",
+      "type": "repository-impl",
+      "name": "ChatSessionRepositoryImpl",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "summary": "仓储实现，负责数据持久化操作",
+      "tags": [
+        "java",
+        "code",
+        "repository-impl"
+      ],
+      "complexity": 1.6
+    },
+    {
+      "id": "function:ChatSessionRepositoryImpl.findBySessionId",
+      "type": "function",
+      "name": "findBySessionId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "summary": "ChatSessionRepositoryImpl的方法findBySessionId",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.1
+    },
+    {
+      "id": "function:ChatSessionRepositoryImpl.findByUserId",
+      "type": "function",
+      "name": "findByUserId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "summary": "ChatSessionRepositoryImpl的方法findByUserId",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.11
+    },
+    {
+      "id": "function:ChatSessionRepositoryImpl.save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "summary": "ChatSessionRepositoryImpl的方法save",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.14
+    },
+    {
+      "id": "function:ChatSessionRepositoryImpl.toDomain",
+      "type": "function",
+      "name": "toDomain",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "summary": "ChatSessionRepositoryImpl的方法toDomain",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.11
+    },
+    {
+      "id": "function:ChatSessionRepositoryImpl.toPO",
+      "type": "function",
+      "name": "toPO",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "summary": "ChatSessionRepositoryImpl的方法toPO",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.16
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "type": "file",
+      "name": "DocumentAuditRepositoryImpl.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "summary": "仓储实现类，DocumentAuditRepositoryImpl的数据持久层实现",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 6.26
+    },
+    {
+      "id": "class:DocumentAuditRepositoryImpl",
+      "type": "repository-impl",
+      "name": "DocumentAuditRepositoryImpl",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "summary": "仓储实现，负责数据持久化操作",
+      "tags": [
+        "java",
+        "code",
+        "repository-impl"
+      ],
+      "complexity": 1.6
+    },
+    {
+      "id": "function:DocumentAuditRepositoryImpl.findByAuditId",
+      "type": "function",
+      "name": "findByAuditId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "summary": "DocumentAuditRepositoryImpl的方法findByAuditId",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.1
+    },
+    {
+      "id": "function:DocumentAuditRepositoryImpl.findByBizNo",
+      "type": "function",
+      "name": "findByBizNo",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "summary": "DocumentAuditRepositoryImpl的方法findByBizNo",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.1
+    },
+    {
+      "id": "function:DocumentAuditRepositoryImpl.save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "summary": "DocumentAuditRepositoryImpl的方法save",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.14
+    },
+    {
+      "id": "function:DocumentAuditRepositoryImpl.toDomain",
+      "type": "function",
+      "name": "toDomain",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "summary": "DocumentAuditRepositoryImpl的方法toDomain",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.13
+    },
+    {
+      "id": "function:DocumentAuditRepositoryImpl.toPO",
+      "type": "function",
+      "name": "toPO",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "summary": "DocumentAuditRepositoryImpl的方法toPO",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.19
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "type": "file",
+      "name": "RatePredictionRepositoryImpl.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "summary": "仓储实现类，RatePredictionRepositoryImpl的数据持久层实现",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 6.4
+    },
+    {
+      "id": "class:RatePredictionRepositoryImpl",
+      "type": "repository-impl",
+      "name": "RatePredictionRepositoryImpl",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "summary": "仓储实现，负责数据持久化操作",
+      "tags": [
+        "java",
+        "code",
+        "repository-impl"
+      ],
+      "complexity": 1.6
+    },
+    {
+      "id": "function:RatePredictionRepositoryImpl.findByPredNo",
+      "type": "function",
+      "name": "findByPredNo",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "summary": "RatePredictionRepositoryImpl的方法findByPredNo",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.1
+    },
+    {
+      "id": "function:RatePredictionRepositoryImpl.findByCurrencyPairAndPredType",
+      "type": "function",
+      "name": "findByCurrencyPairAndPredType",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "summary": "RatePredictionRepositoryImpl的方法findByCurrencyPairAndPredType",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.16
+    },
+    {
+      "id": "function:RatePredictionRepositoryImpl.save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "summary": "RatePredictionRepositoryImpl的方法save",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.14
+    },
+    {
+      "id": "function:RatePredictionRepositoryImpl.toDomain",
+      "type": "function",
+      "name": "toDomain",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "summary": "RatePredictionRepositoryImpl的方法toDomain",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.12
+    },
+    {
+      "id": "function:RatePredictionRepositoryImpl.toPO",
+      "type": "function",
+      "name": "toPO",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "summary": "RatePredictionRepositoryImpl的方法toPO",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.2
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "type": "file",
+      "name": "RiskAiAssessmentRepositoryImpl.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "summary": "仓储实现类，RiskAiAssessmentRepositoryImpl的数据持久层实现",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 6.38
+    },
+    {
+      "id": "class:RiskAiAssessmentRepositoryImpl",
+      "type": "repository-impl",
+      "name": "RiskAiAssessmentRepositoryImpl",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "summary": "仓储实现，负责数据持久化操作",
+      "tags": [
+        "java",
+        "code",
+        "repository-impl"
+      ],
+      "complexity": 1.6
+    },
+    {
+      "id": "function:RiskAiAssessmentRepositoryImpl.findByAssessmentId",
+      "type": "function",
+      "name": "findByAssessmentId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "summary": "RiskAiAssessmentRepositoryImpl的方法findByAssessmentId",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.1
+    },
+    {
+      "id": "function:RiskAiAssessmentRepositoryImpl.findByCustomerId",
+      "type": "function",
+      "name": "findByCustomerId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "summary": "RiskAiAssessmentRepositoryImpl的方法findByCustomerId",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.11
+    },
+    {
+      "id": "function:RiskAiAssessmentRepositoryImpl.save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "summary": "RiskAiAssessmentRepositoryImpl的方法save",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.14
+    },
+    {
+      "id": "function:RiskAiAssessmentRepositoryImpl.toDomain",
+      "type": "function",
+      "name": "toDomain",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "summary": "RiskAiAssessmentRepositoryImpl的方法toDomain",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.12
+    },
+    {
+      "id": "function:RiskAiAssessmentRepositoryImpl.toPO",
+      "type": "function",
+      "name": "toPO",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "summary": "RiskAiAssessmentRepositoryImpl的方法toPO",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.19
+    },
+    {
+      "id": "file:forex-ai/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-ai/src/main/resources/application.yml",
+      "summary": "YAML配置文件，定义server, spring, forex等",
+      "tags": [
+        "yaml",
+        "config"
+      ],
+      "complexity": 2.22
+    },
+    {
+      "id": "file:forex-ai/src/main/resources/knowledge/faq/lc_process_faq.md",
+      "type": "docs",
+      "name": "lc_process_faq.md",
+      "filePath": "forex-ai/src/main/resources/knowledge/faq/lc_process_faq.md",
+      "summary": "知识文档：国际信用证办理流程",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": 2.6
+    },
+    {
+      "id": "file:forex-ai/src/main/resources/knowledge/faq/spot_forex_faq.md",
+      "type": "docs",
+      "name": "spot_forex_faq.md",
+      "filePath": "forex-ai/src/main/resources/knowledge/faq/spot_forex_faq.md",
+      "summary": "知识文档：即期结售汇常见问题",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": 2.0
+    },
+    {
+      "id": "file:forex-ai/src/main/resources/knowledge/policy/aml_regulation.md",
+      "type": "docs",
+      "name": "aml_regulation.md",
+      "filePath": "forex-ai/src/main/resources/knowledge/policy/aml_regulation.md",
+      "summary": "知识文档：反洗钱法规要点",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": 2.02
+    },
+    {
+      "id": "file:forex-ai/src/main/resources/knowledge/policy/forex_administration.md",
+      "type": "docs",
+      "name": "forex_administration.md",
+      "filePath": "forex-ai/src/main/resources/knowledge/policy/forex_administration.md",
+      "summary": "知识文档：银行外汇展业管理办法要点",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": 1.62
+    },
+    {
+      "id": "file:forex-auth/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-auth/pom.xml",
+      "summary": "Maven POM配置文件，定义项目依赖与构建配置",
+      "tags": [
+        "xml",
+        "config"
+      ],
+      "complexity": 1.26
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "type": "file",
+      "name": "AuthController.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "summary": "REST控制器，提供AuthController等接口",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 10.88
+    },
+    {
+      "id": "class:AuthController",
+      "type": "controller",
+      "name": "AuthController",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "summary": "REST API控制器，处理HTTP请求",
+      "tags": [
+        "java",
+        "code",
+        "controller"
+      ],
+      "complexity": 2.8
+    },
+    {
+      "id": "function:AuthController.login",
+      "type": "function",
+      "name": "login",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "summary": "AuthController的方法login",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.43
+    },
+    {
+      "id": "function:AuthController.refresh",
+      "type": "function",
+      "name": "refresh",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "summary": "AuthController的方法refresh",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.32
+    },
+    {
+      "id": "function:AuthController.logout",
+      "type": "function",
+      "name": "logout",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "summary": "AuthController的方法logout",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.15
+    },
+    {
+      "id": "function:AuthController.me",
+      "type": "function",
+      "name": "me",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "summary": "AuthController的方法me",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.18
+    },
+    {
+      "id": "function:AuthController.recordLoginAttempt",
+      "type": "function",
+      "name": "recordLoginAttempt",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "summary": "AuthController的方法recordLoginAttempt",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.11
+    },
+    {
+      "id": "function:AuthController.clearLoginAttempts",
+      "type": "function",
+      "name": "clearLoginAttempts",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "summary": "AuthController的方法clearLoginAttempts",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.09
+    },
+    {
+      "id": "function:AuthController.lockAccount",
+      "type": "function",
+      "name": "lockAccount",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "summary": "AuthController的方法lockAccount",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.09
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java",
+      "type": "file",
+      "name": "LoginReq.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java",
+      "summary": "数据传输对象，LoginReq的数据模型",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 1.84
+    },
+    {
+      "id": "class:LoginReq",
+      "type": "dto",
+      "name": "LoginReq",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java",
+      "summary": "请求/命令对象",
+      "tags": [
+        "java",
+        "code",
+        "dto"
+      ],
+      "complexity": 0.2
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java",
+      "type": "file",
+      "name": "TokenResp.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java",
+      "summary": "数据传输对象，TokenResp的数据模型",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 2.2
+    },
+    {
+      "id": "class:TokenResp",
+      "type": "class",
+      "name": "TokenResp",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java",
+      "summary": "TokenResp类",
+      "tags": [
+        "java",
+        "code",
+        "class"
+      ],
+      "complexity": 0.6
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "type": "file",
+      "name": "AuthAppService.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "summary": "领域服务，提供AuthAppService的业务逻辑",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 7.02
+    },
+    {
+      "id": "class:AuthAppService",
+      "type": "service",
+      "name": "AuthAppService",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "summary": "领域服务类，封装核心业务逻辑",
+      "tags": [
+        "java",
+        "code",
+        "service"
+      ],
+      "complexity": 2.0
+    },
+    {
+      "id": "function:AuthAppService.login",
+      "type": "function",
+      "name": "login",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "summary": "AuthAppService的方法login",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.22
+    },
+    {
+      "id": "function:AuthAppService.refreshToken",
+      "type": "function",
+      "name": "refreshToken",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "summary": "AuthAppService的方法refreshToken",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.15
+    },
+    {
+      "id": "function:AuthAppService.logout",
+      "type": "function",
+      "name": "logout",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "summary": "AuthAppService的方法logout",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.11
+    },
+    {
+      "id": "function:AuthAppService.isTokenBlacklisted",
+      "type": "function",
+      "name": "isTokenBlacklisted",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "summary": "AuthAppService的方法isTokenBlacklisted",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.08
+    },
+    {
+      "id": "function:AuthAppService.hashToken",
+      "type": "function",
+      "name": "hashToken",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "summary": "AuthAppService的方法hashToken",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.08
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "type": "file",
+      "name": "AuthApplication.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "summary": "Spring Boot启动类，AuthApplication服务入口",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 2.62
+    },
+    {
+      "id": "class:AuthApplication",
+      "type": "application",
+      "name": "AuthApplication",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "summary": "Spring Boot应用入口",
+      "tags": [
+        "java",
+        "code",
+        "application"
+      ],
+      "complexity": 0.3
+    },
+    {
+      "id": "function:AuthApplication.main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "summary": "AuthApplication的方法main",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.08
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Permission.java",
+      "type": "file",
+      "name": "Permission.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Permission.java",
+      "summary": "Java类文件，包含Permission",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 2.0
+    },
+    {
+      "id": "class:Permission",
+      "type": "class",
+      "name": "Permission",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Permission.java",
+      "summary": "Permission类",
+      "tags": [
+        "java",
+        "code",
+        "class"
+      ],
+      "complexity": 0.6
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Role.java",
+      "type": "file",
+      "name": "Role.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Role.java",
+      "summary": "Java类文件，包含Role",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 2.1
+    },
+    {
+      "id": "class:Role",
+      "type": "class",
+      "name": "Role",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Role.java",
+      "summary": "Role类",
+      "tags": [
+        "java",
+        "code",
+        "class"
+      ],
+      "complexity": 0.4
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "type": "file",
+      "name": "User.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "summary": "Java类文件，包含User",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 10.04
+    },
+    {
+      "id": "class:User",
+      "type": "class",
+      "name": "User",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "summary": "User类",
+      "tags": [
+        "java",
+        "code",
+        "class"
+      ],
+      "complexity": 3.6
+    },
+    {
+      "id": "function:User.User",
+      "type": "function",
+      "name": "User",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "summary": "User的方法User",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.03
+    },
+    {
+      "id": "function:User.create",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "summary": "User的方法create",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.36
+    },
+    {
+      "id": "function:User.reconstitute",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "summary": "User的方法reconstitute",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.47
+    },
+    {
+      "id": "function:User.assignRoles",
+      "type": "function",
+      "name": "assignRoles",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "summary": "User的方法assignRoles",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.12
+    },
+    {
+      "id": "function:User.disable",
+      "type": "function",
+      "name": "disable",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "summary": "User的方法disable",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.04
+    },
+    {
+      "id": "function:User.enable",
+      "type": "function",
+      "name": "enable",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "summary": "User的方法enable",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.04
+    },
+    {
+      "id": "function:User.isActive",
+      "type": "function",
+      "name": "isActive",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "summary": "User的方法isActive",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.03
+    },
+    {
+      "id": "function:User.changePassword",
+      "type": "function",
+      "name": "changePassword",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "summary": "User的方法changePassword",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.09
+    },
+    {
+      "id": "function:User.validate",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "summary": "User的方法validate",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.09
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/PasswordHash.java",
+      "type": "file",
+      "name": "PasswordHash.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/PasswordHash.java",
+      "summary": "Java类文件，包含PasswordHash",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 6.46
+    },
+    {
+      "id": "class:PasswordHash",
+      "type": "value-object",
+      "name": "PasswordHash",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/PasswordHash.java",
+      "summary": "值对象",
+      "tags": [
+        "java",
+        "code",
+        "value-object"
+      ],
+      "complexity": 1.9
+    },
+    {
+      "id": "function:PasswordHash.PasswordHash",
+      "type": "function",
+      "name": "PasswordHash",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/PasswordHash.java",
+      "summary": "PasswordHash的方法PasswordHash",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.08
+    },
+    {
+      "id": "function:PasswordHash.encode",
+      "type": "function",
+      "name": "encode",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/PasswordHash.java",
+      "summary": "PasswordHash的方法encode",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.08
+    },
+    {
+      "id": "function:PasswordHash.fromHash",
+      "type": "function",
+      "name": "fromHash",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/PasswordHash.java",
+      "summary": "PasswordHash的方法fromHash",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.08
+    },
+    {
+      "id": "function:PasswordHash.matches",
+      "type": "function",
+      "name": "matches",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/PasswordHash.java",
+      "summary": "PasswordHash的方法matches",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.08
+    },
+    {
+      "id": "function:PasswordHash.equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/PasswordHash.java",
+      "summary": "PasswordHash的方法equals",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.11
+    },
+    {
+      "id": "function:PasswordHash.hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/PasswordHash.java",
+      "summary": "PasswordHash的方法hashCode",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.04
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/TokenVo.java",
+      "type": "file",
+      "name": "TokenVo.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/TokenVo.java",
+      "summary": "Java类文件，包含TokenVo",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 4.38
+    },
+    {
+      "id": "class:TokenVo",
+      "type": "value-object",
+      "name": "TokenVo",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/TokenVo.java",
+      "summary": "值对象",
+      "tags": [
+        "java",
+        "code",
+        "value-object"
+      ],
+      "complexity": 1.2
+    },
+    {
+      "id": "function:TokenVo.TokenVo",
+      "type": "function",
+      "name": "TokenVo",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/TokenVo.java",
+      "summary": "TokenVo的方法TokenVo",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.2
+    },
+    {
+      "id": "function:TokenVo.equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/TokenVo.java",
+      "summary": "TokenVo的方法equals",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.11
+    },
+    {
+      "id": "function:TokenVo.hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/TokenVo.java",
+      "summary": "TokenVo的方法hashCode",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.04
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "type": "file",
+      "name": "UserRepository.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "summary": "Java类文件，包含UserRepository",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 2.32
+    },
+    {
+      "id": "class:UserRepository",
+      "type": "repository-interface",
+      "name": "UserRepository",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "summary": "仓储接口，定义数据访问契约",
+      "tags": [
+        "java",
+        "code",
+        "repository-interface"
+      ],
+      "complexity": 2.1
+    },
+    {
+      "id": "function:UserRepository.save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "summary": "UserRepository的方法save",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.1
+    },
+    {
+      "id": "function:UserRepository.findById",
+      "type": "function",
+      "name": "findById",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "summary": "UserRepository的方法findById",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.1
+    },
+    {
+      "id": "function:UserRepository.findByUsername",
+      "type": "function",
+      "name": "findByUsername",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "summary": "UserRepository的方法findByUsername",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.1
+    },
+    {
+      "id": "function:UserRepository.findRolesByUserId",
+      "type": "function",
+      "name": "findRolesByUserId",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "summary": "UserRepository的方法findRolesByUserId",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.1
+    },
+    {
+      "id": "function:UserRepository.findPermissionsByRoleIds",
+      "type": "function",
+      "name": "findPermissionsByRoleIds",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "summary": "UserRepository的方法findPermissionsByRoleIds",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.1
+    },
+    {
+      "id": "function:UserRepository.findAllPermissions",
+      "type": "function",
+      "name": "findAllPermissions",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "summary": "UserRepository的方法findAllPermissions",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.1
+    },
+    {
+      "id": "function:UserRepository.existsByUsername",
+      "type": "function",
+      "name": "existsByUsername",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "summary": "UserRepository的方法existsByUsername",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.1
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/domain/service/AuthenticationDomainService.java",
+      "type": "file",
+      "name": "AuthenticationDomainService.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/service/AuthenticationDomainService.java",
+      "summary": "领域服务，提供AuthenticationDomainService的业务逻辑",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 4.48
+    },
+    {
+      "id": "class:AuthenticationDomainService",
+      "type": "service",
+      "name": "AuthenticationDomainService",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/service/AuthenticationDomainService.java",
+      "summary": "领域服务类，封装核心业务逻辑",
+      "tags": [
+        "java",
+        "code",
+        "service"
+      ],
+      "complexity": 0.8
+    },
+    {
+      "id": "function:AuthenticationDomainService.authenticate",
+      "type": "function",
+      "name": "authenticate",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/service/AuthenticationDomainService.java",
+      "summary": "AuthenticationDomainService的方法authenticate",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.29
+    },
+    {
+      "id": "function:AuthenticationDomainService.encodePassword",
+      "type": "function",
+      "name": "encodePassword",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/domain/service/AuthenticationDomainService.java",
+      "summary": "AuthenticationDomainService的方法encodePassword",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.08
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java",
+      "type": "file",
+      "name": "UserMapper.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java",
+      "summary": "MyBatis映射接口，提供UserMapper的数据访问",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 2.74
+    },
+    {
+      "id": "class:UserMapper",
+      "type": "mapper",
+      "name": "UserMapper",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java",
+      "summary": "MyBatis数据映射器",
+      "tags": [
+        "java",
+        "code",
+        "mapper"
+      ],
+      "complexity": 1.2
+    },
+    {
+      "id": "function:UserMapper.selectByUsername",
+      "type": "function",
+      "name": "selectByUsername",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java",
+      "summary": "UserMapper的方法selectByUsername",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.1
+    },
+    {
+      "id": "function:UserMapper.selectRolesByUserId",
+      "type": "function",
+      "name": "selectRolesByUserId",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java",
+      "summary": "UserMapper的方法selectRolesByUserId",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.1
+    },
+    {
+      "id": "function:UserMapper.selectPermissionsByRoleIds",
+      "type": "function",
+      "name": "selectPermissionsByRoleIds",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java",
+      "summary": "UserMapper的方法selectPermissionsByRoleIds",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.1
+    },
+    {
+      "id": "function:UserMapper.selectAllPermissions",
+      "type": "function",
+      "name": "selectAllPermissions",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java",
+      "summary": "UserMapper的方法selectAllPermissions",
+      "tags": [
+        "java",
+        "function"
+      ],
+      "complexity": 0.1
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/PermissionPO.java",
+      "type": "file",
+      "name": "PermissionPO.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/PermissionPO.java",
+      "summary": "持久化对象，PermissionPO的数据库映射",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 2.02
+    },
+    {
+      "id": "class:PermissionPO",
+      "type": "entity",
+      "name": "PermissionPO",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/PermissionPO.java",
+      "summary": "持久化对象，数据库表映射",
+      "tags": [
+        "java",
+        "code",
+        "entity"
+      ],
+      "complexity": 0.6
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/RolePermissionPO.java",
+      "type": "file",
+      "name": "RolePermissionPO.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/RolePermissionPO.java",
+      "summary": "持久化对象，RolePermissionPO的数据库映射",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": 1.94
+    },
+    {
+      "id": "class:RolePermissionPO",
+      "type": "entity",
+      "name": "RolePermissionPO",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/RolePermissionPO.java",
+      "summary": "持久化对象，数据库表映射",
+      "tags": [
+        "java",
+        "code",
+        "entity"
+      ],
+      "complexity": 0.2
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "target": "class:ChatSessionRepositoryImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:ChatSessionRepositoryImpl",
+      "target": "function:ChatSessionRepositoryImpl.findBySessionId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:ChatSessionRepositoryImpl",
+      "target": "function:ChatSessionRepositoryImpl.findByUserId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:ChatSessionRepositoryImpl",
+      "target": "function:ChatSessionRepositoryImpl.save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:ChatSessionRepositoryImpl",
+      "target": "function:ChatSessionRepositoryImpl.toDomain",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:ChatSessionRepositoryImpl",
+      "target": "function:ChatSessionRepositoryImpl.toPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "target": "class:DocumentAuditRepositoryImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:DocumentAuditRepositoryImpl",
+      "target": "function:DocumentAuditRepositoryImpl.findByAuditId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:DocumentAuditRepositoryImpl",
+      "target": "function:DocumentAuditRepositoryImpl.findByBizNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:DocumentAuditRepositoryImpl",
+      "target": "function:DocumentAuditRepositoryImpl.save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:DocumentAuditRepositoryImpl",
+      "target": "function:DocumentAuditRepositoryImpl.toDomain",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:DocumentAuditRepositoryImpl",
+      "target": "function:DocumentAuditRepositoryImpl.toPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "target": "class:RatePredictionRepositoryImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:RatePredictionRepositoryImpl",
+      "target": "function:RatePredictionRepositoryImpl.findByPredNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:RatePredictionRepositoryImpl",
+      "target": "function:RatePredictionRepositoryImpl.findByCurrencyPairAndPredType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:RatePredictionRepositoryImpl",
+      "target": "function:RatePredictionRepositoryImpl.save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:RatePredictionRepositoryImpl",
+      "target": "function:RatePredictionRepositoryImpl.toDomain",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:RatePredictionRepositoryImpl",
+      "target": "function:RatePredictionRepositoryImpl.toPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "target": "class:RiskAiAssessmentRepositoryImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:RiskAiAssessmentRepositoryImpl",
+      "target": "function:RiskAiAssessmentRepositoryImpl.findByAssessmentId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:RiskAiAssessmentRepositoryImpl",
+      "target": "function:RiskAiAssessmentRepositoryImpl.findByCustomerId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:RiskAiAssessmentRepositoryImpl",
+      "target": "function:RiskAiAssessmentRepositoryImpl.save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:RiskAiAssessmentRepositoryImpl",
+      "target": "function:RiskAiAssessmentRepositoryImpl.toDomain",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:RiskAiAssessmentRepositoryImpl",
+      "target": "function:RiskAiAssessmentRepositoryImpl.toPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "class:AuthController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:AuthController",
+      "target": "function:AuthController.login",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:AuthController",
+      "target": "function:AuthController.refresh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:AuthController",
+      "target": "function:AuthController.logout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:AuthController",
+      "target": "function:AuthController.me",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:AuthController",
+      "target": "function:AuthController.recordLoginAttempt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:AuthController",
+      "target": "function:AuthController.clearLoginAttempts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:AuthController",
+      "target": "function:AuthController.lockAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java",
+      "target": "class:LoginReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java",
+      "target": "class:TokenResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "target": "class:AuthAppService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:AuthAppService",
+      "target": "function:AuthAppService.login",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:AuthAppService",
+      "target": "function:AuthAppService.refreshToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:AuthAppService",
+      "target": "function:AuthAppService.logout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:AuthAppService",
+      "target": "function:AuthAppService.isTokenBlacklisted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:AuthAppService",
+      "target": "function:AuthAppService.hashToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "target": "class:AuthApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:AuthApplication",
+      "target": "function:AuthApplication.main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Permission.java",
+      "target": "class:Permission",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Role.java",
+      "target": "class:Role",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "target": "class:User",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:User",
+      "target": "function:User.User",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:User",
+      "target": "function:User.create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:User",
+      "target": "function:User.reconstitute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:User",
+      "target": "function:User.assignRoles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:User",
+      "target": "function:User.disable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:User",
+      "target": "function:User.enable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:User",
+      "target": "function:User.isActive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:User",
+      "target": "function:User.changePassword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:User",
+      "target": "function:User.validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/PasswordHash.java",
+      "target": "class:PasswordHash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:PasswordHash",
+      "target": "function:PasswordHash.PasswordHash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:PasswordHash",
+      "target": "function:PasswordHash.encode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:PasswordHash",
+      "target": "function:PasswordHash.fromHash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:PasswordHash",
+      "target": "function:PasswordHash.matches",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:PasswordHash",
+      "target": "function:PasswordHash.equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:PasswordHash",
+      "target": "function:PasswordHash.hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/TokenVo.java",
+      "target": "class:TokenVo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:TokenVo",
+      "target": "function:TokenVo.TokenVo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:TokenVo",
+      "target": "function:TokenVo.equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:TokenVo",
+      "target": "function:TokenVo.hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "target": "class:UserRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:UserRepository",
+      "target": "function:UserRepository.save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:UserRepository",
+      "target": "function:UserRepository.findById",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:UserRepository",
+      "target": "function:UserRepository.findByUsername",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:UserRepository",
+      "target": "function:UserRepository.findRolesByUserId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:UserRepository",
+      "target": "function:UserRepository.findPermissionsByRoleIds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:UserRepository",
+      "target": "function:UserRepository.findAllPermissions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:UserRepository",
+      "target": "function:UserRepository.existsByUsername",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/service/AuthenticationDomainService.java",
+      "target": "class:AuthenticationDomainService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:AuthenticationDomainService",
+      "target": "function:AuthenticationDomainService.authenticate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:AuthenticationDomainService",
+      "target": "function:AuthenticationDomainService.encodePassword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java",
+      "target": "class:UserMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:UserMapper",
+      "target": "function:UserMapper.selectByUsername",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:UserMapper",
+      "target": "function:UserMapper.selectRolesByUserId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:UserMapper",
+      "target": "function:UserMapper.selectPermissionsByRoleIds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:UserMapper",
+      "target": "function:UserMapper.selectAllPermissions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/PermissionPO.java",
+      "target": "class:PermissionPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/RolePermissionPO.java",
+      "target": "class:RolePermissionPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "target": "class:ChatSession",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "target": "class:ChatSessionRepository",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "target": "class:ChatSessionMapper",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "target": "class:ChatSessionPO",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "target": "class:DocumentAudit",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "target": "class:DocumentAuditRepository",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "target": "class:DocumentAuditMapper",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "target": "class:DocumentAuditPO",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "target": "class:RatePrediction",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "target": "class:RatePredictionRepository",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "target": "class:RatePredictionMapper",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "target": "class:RatePredictionPO",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "target": "class:RiskAiAssessment",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "target": "class:RiskAiAssessmentRepository",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "target": "class:RiskAiAssessmentMapper",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "target": "class:RiskAiAssessmentPO",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "class:LoginReq",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "class:TokenResp",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "class:AuthAppService",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "class:RateLimit",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "class:BusinessException",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "class:R",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "class:ResultCode",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "class:JwtUtil",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "target": "class:User",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "target": "class:AuthenticationDomainService",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "target": "class:JwtUtil",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Permission.java",
+      "target": "class:BaseEntity",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Role.java",
+      "target": "class:BaseEntity",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "target": "class:BaseAggregate",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/PasswordHash.java",
+      "target": "class:BaseValueObject",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/TokenVo.java",
+      "target": "class:BaseValueObject",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "target": "class:Permission",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "target": "class:Role",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "target": "class:User",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/service/AuthenticationDomainService.java",
+      "target": "class:Role",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/service/AuthenticationDomainService.java",
+      "target": "class:User",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/domain/service/AuthenticationDomainService.java",
+      "target": "class:UserRepository",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java",
+      "target": "class:PermissionPO",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java",
+      "target": "class:RolePO",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java",
+      "target": "class:UserPO",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java",
+      "target": "class:BaseMapperExt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/PermissionPO.java",
+      "target": "class:BasePO",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/RolePermissionPO.java",
+      "target": "class:BasePO",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:ChatSessionRepositoryImpl.findBySessionId",
+      "target": "class:ChatSessionMapper",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ChatSessionRepositoryImpl.findByUserId",
+      "target": "class:ChatSessionMapper",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ChatSessionRepositoryImpl.save",
+      "target": "function:ChatSessionRepositoryImpl.toPO",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ChatSessionRepositoryImpl.save",
+      "target": "class:ChatSessionMapper",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:ChatSessionRepositoryImpl.toPO",
+      "target": "class:ChatSessionPO",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:DocumentAuditRepositoryImpl.findByAuditId",
+      "target": "class:DocumentAuditMapper",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:DocumentAuditRepositoryImpl.findByBizNo",
+      "target": "class:DocumentAuditMapper",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:DocumentAuditRepositoryImpl.save",
+      "target": "function:DocumentAuditRepositoryImpl.toPO",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:DocumentAuditRepositoryImpl.save",
+      "target": "class:DocumentAuditMapper",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:DocumentAuditRepositoryImpl.toPO",
+      "target": "class:DocumentAuditPO",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:RatePredictionRepositoryImpl.findByPredNo",
+      "target": "class:RatePredictionMapper",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:RatePredictionRepositoryImpl.findByCurrencyPairAndPredType",
+      "target": "class:RatePredictionMapper",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:RatePredictionRepositoryImpl.save",
+      "target": "function:RatePredictionRepositoryImpl.toPO",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:RatePredictionRepositoryImpl.save",
+      "target": "class:RatePredictionMapper",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:RatePredictionRepositoryImpl.toPO",
+      "target": "class:RatePredictionPO",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:RiskAiAssessmentRepositoryImpl.findByAssessmentId",
+      "target": "class:RiskAiAssessmentMapper",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:RiskAiAssessmentRepositoryImpl.findByCustomerId",
+      "target": "class:RiskAiAssessmentMapper",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:RiskAiAssessmentRepositoryImpl.save",
+      "target": "function:RiskAiAssessmentRepositoryImpl.toPO",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:RiskAiAssessmentRepositoryImpl.save",
+      "target": "class:RiskAiAssessmentMapper",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:RiskAiAssessmentRepositoryImpl.toPO",
+      "target": "class:RiskAiAssessmentPO",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.login",
+      "target": "class:StringRedisTemplate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.login",
+      "target": "class:BusinessException",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.login",
+      "target": "class:AuthAppService",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.login",
+      "target": "function:AuthController.clearLoginAttempts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.login",
+      "target": "class:JwtUtil",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.login",
+      "target": "class:TokenResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.login",
+      "target": "function:AuthController.recordLoginAttempt",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.login",
+      "target": "function:AuthController.lockAccount",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.refresh",
+      "target": "class:AuthAppService",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.refresh",
+      "target": "class:BusinessException",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.refresh",
+      "target": "class:JwtUtil",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.refresh",
+      "target": "class:TokenResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.logout",
+      "target": "class:AuthAppService",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.me",
+      "target": "class:JwtUtil",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.me",
+      "target": "class:TokenResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.recordLoginAttempt",
+      "target": "class:StringRedisTemplate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.clearLoginAttempts",
+      "target": "class:StringRedisTemplate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthController.lockAccount",
+      "target": "class:StringRedisTemplate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthAppService.login",
+      "target": "class:AuthenticationDomainService",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthAppService.login",
+      "target": "class:JwtUtil",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthAppService.refreshToken",
+      "target": "function:AuthAppService.isTokenBlacklisted",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthAppService.refreshToken",
+      "target": "class:BusinessException",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthAppService.refreshToken",
+      "target": "class:JwtUtil",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthAppService.logout",
+      "target": "function:AuthAppService.hashToken",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthAppService.logout",
+      "target": "class:StringRedisTemplate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthAppService.isTokenBlacklisted",
+      "target": "class:StringRedisTemplate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthAppService.isTokenBlacklisted",
+      "target": "function:AuthAppService.hashToken",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:User.create",
+      "target": "class:User",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:User.reconstitute",
+      "target": "class:User",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:User.validate",
+      "target": "class:BusinessException",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:PasswordHash.encode",
+      "target": "class:PasswordHash",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:PasswordHash.encode",
+      "target": "class:BCrypt",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:PasswordHash.fromHash",
+      "target": "class:PasswordHash",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:PasswordHash.matches",
+      "target": "class:BCrypt",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthenticationDomainService.authenticate",
+      "target": "class:UserRepository",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthenticationDomainService.authenticate",
+      "target": "class:BusinessException",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthenticationDomainService.authenticate",
+      "target": "class:BCrypt",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:AuthenticationDomainService.encodePassword",
+      "target": "class:BCrypt",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:AuthController",
+      "target": "class:AuthAppService",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:AuthController",
+      "target": "class:JwtUtil",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:AuthController",
+      "target": "class:LoginReq",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:AuthController",
+      "target": "class:TokenResp",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:AuthAppService",
+      "target": "class:AuthenticationDomainService",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:AuthAppService",
+      "target": "class:JwtUtil",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:AuthAppService",
+      "target": "class:User",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:AuthenticationDomainService",
+      "target": "class:UserRepository",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:AuthenticationDomainService",
+      "target": "class:User",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:AuthenticationDomainService",
+      "target": "class:Role",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:User",
+      "target": "class:Role",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:User",
+      "target": "class:Permission",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:User",
+      "target": "class:BaseAggregate",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:UserRepository",
+      "target": "class:User",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:UserRepository",
+      "target": "class:Role",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:UserRepository",
+      "target": "class:Permission",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:UserMapper",
+      "target": "class:UserPO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:UserMapper",
+      "target": "class:PermissionPO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:UserMapper",
+      "target": "class:RolePO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Permission",
+      "target": "class:BaseEntity",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:Role",
+      "target": "class:BaseEntity",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:PermissionPO",
+      "target": "class:BasePO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:RolePermissionPO",
+      "target": "class:BasePO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:PasswordHash",
+      "target": "class:BaseValueObject",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:TokenVo",
+      "target": "class:BaseValueObject",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ChatSessionRepositoryImpl",
+      "target": "class:ChatSession",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ChatSessionRepositoryImpl",
+      "target": "class:ChatSessionMapper",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:ChatSessionRepositoryImpl",
+      "target": "class:ChatSessionPO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:DocumentAuditRepositoryImpl",
+      "target": "class:DocumentAudit",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:DocumentAuditRepositoryImpl",
+      "target": "class:DocumentAuditMapper",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:DocumentAuditRepositoryImpl",
+      "target": "class:DocumentAuditPO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:RatePredictionRepositoryImpl",
+      "target": "class:RatePrediction",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:RatePredictionRepositoryImpl",
+      "target": "class:RatePredictionMapper",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:RatePredictionRepositoryImpl",
+      "target": "class:RatePredictionPO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:RiskAiAssessmentRepositoryImpl",
+      "target": "class:RiskAiAssessment",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:RiskAiAssessmentRepositoryImpl",
+      "target": "class:RiskAiAssessmentMapper",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "class:RiskAiAssessmentRepositoryImpl",
+      "target": "class:RiskAiAssessmentPO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-ai/src/main/resources/application.yml",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:forex-auth/pom.xml",
+      "target": "file:forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

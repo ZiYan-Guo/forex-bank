@@ -1,0 +1,512 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java",
+      "type": "mapper",
+      "name": "ForexAccountMapper",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java",
+      "summary": "外汇账户 MyBatis Mapper 接口，提供按账号和客户ID查询的数据库操作方法",
+      "tags": ["MyBatis", "Mapper", "账户查询", "持久层"],
+      "complexity": 2
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java",
+      "type": "persistence-model",
+      "name": "AccountTransactionPO",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java",
+      "summary": "账户交易持久化对象，映射 account_transaction 表，记录交易流水号、金额、币种、余额变动等字段",
+      "tags": ["MyBatis-Plus", "PO", "交易记录", "持久层"],
+      "complexity": 2
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java",
+      "type": "persistence-model",
+      "name": "BalanceSnapshotPO",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java",
+      "summary": "余额快照持久化对象，记录账户在特定日期的余额快照数据",
+      "tags": ["MyBatis-Plus", "PO", "余额快照", "持久层"],
+      "complexity": 1
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java",
+      "type": "persistence-model",
+      "name": "ForexAccountPO",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java",
+      "summary": "外汇账户持久化对象，继承 BasePO，包含账户号、币种、余额、冻结金额、央行申报状态等完整字段",
+      "tags": ["MyBatis-Plus", "PO", "账户", "持久层", "BasePO"],
+      "complexity": 3
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java",
+      "type": "repository-impl",
+      "name": "AccountRepositoryImpl",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java",
+      "summary": "账户仓储实现，实现 AccountRepository 接口，提供账户的增删改查和分页查询，含 Domain ↔ PO 转换逻辑",
+      "tags": ["仓储实现", "DDD", "账户", "Domain-PO转换", "分页查询"],
+      "complexity": 6
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java",
+      "type": "repository-impl",
+      "name": "TransactionRepositoryImpl",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java",
+      "summary": "交易仓储实现，实现 TransactionRepository 接口，提供交易记录的增删改查和统计，含 Domain ↔ PO 转换逻辑",
+      "tags": ["仓储实现", "DDD", "交易", "Domain-PO转换"],
+      "complexity": 5
+    },
+    {
+      "id": "file:forex-account/src/main/resources/application.yml",
+      "type": "config-file",
+      "name": "application.yml",
+      "filePath": "forex-account/src/main/resources/application.yml",
+      "summary": "forex-account 模块配置文件，包含 server、spring、mybatis-plus、knife4j 配置节",
+      "tags": ["配置", "YAML", "Spring Boot", "MyBatis-Plus", "Knife4j"],
+      "complexity": 3
+    },
+    {
+      "id": "file:forex-ai/pom.xml",
+      "type": "build-config",
+      "name": "pom.xml",
+      "filePath": "forex-ai/pom.xml",
+      "summary": "forex-ai 模块 Maven 构建配置，定义依赖和插件",
+      "tags": ["配置", "Maven", "POM", "构建"],
+      "complexity": 3
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "type": "controller",
+      "name": "AiChatController",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "summary": "AI 对话 REST 控制器，提供聊天查询、对冲建议、自然语言交易、报告生成、会话管理接口",
+      "tags": ["REST", "Controller", "AI对话", "对冲", "自然语言交易", "会话管理"],
+      "complexity": 5
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "type": "controller",
+      "name": "AiDocumentController",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "summary": "AI 单证 REST 控制器，提供 OCR 上传识别、单证比对审计、清算纠错接口",
+      "tags": ["REST", "Controller", "OCR", "单证审计", "清算纠错"],
+      "complexity": 4
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "type": "controller",
+      "name": "AiPredictionController",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "summary": "AI 预测 REST 控制器，提供汇率预测、风险敞口预测、预警配置管理接口",
+      "tags": ["REST", "Controller", "汇率预测", "敞口预测", "预警配置"],
+      "complexity": 4
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "type": "controller",
+      "name": "AiRiskController",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "summary": "AI 风控 REST 控制器，提供 AML 评估、黑名单模糊匹配、关系网络分析接口",
+      "tags": ["REST", "Controller", "AML", "黑名单", "网络分析"],
+      "complexity": 3
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java",
+      "type": "dto",
+      "name": "ChatMessageReq",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java",
+      "summary": "聊天请求 DTO，包含会话ID、问题和流式标识",
+      "tags": ["DTO", "请求体", "聊天"],
+      "complexity": 1
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java",
+      "type": "dto",
+      "name": "ChatMessageResp",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java",
+      "summary": "聊天响应 DTO，包含回答、引用来源和置信度",
+      "tags": ["DTO", "响应体", "聊天"],
+      "complexity": 1
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java",
+      "type": "dto",
+      "name": "DocumentAuditResp",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java",
+      "summary": "单证审计响应 DTO，包含审计ID、一致性标识、差异列表和审计意见",
+      "tags": ["DTO", "响应体", "单证审计"],
+      "complexity": 1
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java",
+      "type": "dto",
+      "name": "RatePredictionResp",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java",
+      "summary": "汇率预测响应 DTO，包含货币对、预测类型、当前/预测汇率、上下界、置信度和趋势",
+      "tags": ["DTO", "响应体", "汇率预测"],
+      "complexity": 2
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java",
+      "type": "dto",
+      "name": "RiskAlertResp",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java",
+      "summary": "风险预警响应 DTO，包含预警ID、风险类型、评分、等级和描述",
+      "tags": ["DTO", "响应体", "风险预警"],
+      "complexity": 1
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java",
+      "type": "dto",
+      "name": "TradingRecommendResp",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java",
+      "summary": "交易建议响应 DTO，包含对冲策略、建议比例和推理说明",
+      "tags": ["DTO", "响应体", "交易建议", "对冲"],
+      "complexity": 1
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "type": "spring-boot-app",
+      "name": "AiApplication",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "summary": "forex-ai 模块 Spring Boot 启动类，启用服务发现和 Mapper 扫描",
+      "tags": ["Spring Boot", "启动类", "服务发现", "MyBatis"],
+      "complexity": 1
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "type": "application-service",
+      "name": "AiAppService",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "summary": "AI 应用服务核心类，聚合所有 AI 子域服务，提供预测、对话、交易、风控、OCR 和单证审计等14个业务方法",
+      "tags": ["应用服务", "DDD", "AI", "预测", "对话", "风控", "OCR", "单证审计"],
+      "complexity": 8
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java",
+      "type": "domain-aggregate",
+      "name": "ChatMessage",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java",
+      "summary": "聊天消息领域聚合，支持 USER/AI/SYSTEM 三种角色，提供工厂方法和消息角色判断",
+      "tags": ["领域聚合", "DDD", "聊天", "消息"],
+      "complexity": 3
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java",
+      "type": "domain-aggregate",
+      "name": "ChatSession",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java",
+      "summary": "聊天会话领域聚合，继承 BaseAggregate，支持 SUPPORT/TRADING/AUDIT 三种类型，管理消息加载和会话生命周期",
+      "tags": ["领域聚合", "DDD", "聊天", "会话管理"],
+      "complexity": 5
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java",
+      "type": "domain-aggregate",
+      "name": "DocumentAudit",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java",
+      "summary": "单证审计领域聚合，继承 BaseAggregate，支持 INVOICE/BL/PACKING_LIST/CUSTOMS_DECLARATION 四种单证类型，管理审计结果和置信度评分",
+      "tags": ["领域聚合", "DDD", "单证审计", "合规"],
+      "complexity": 5
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java",
+      "type": "domain-aggregate",
+      "name": "RatePrediction",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java",
+      "summary": "汇率预测领域聚合，继承 BaseAggregate，支持 HOURLY/DAILY/WEEKLY 三种预测类型，包含区间计算和准确性校验",
+      "tags": ["领域聚合", "DDD", "汇率预测", "预测区间"],
+      "complexity": 4
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java",
+      "type": "domain-aggregate",
+      "name": "RiskAiAssessment",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java",
+      "summary": "AI 风险评估领域聚合，继承 BaseAggregate，支持 AML/FRAUD/SANCTION 三种风险类型和四级风险等级，提供升级判断和阈值检验",
+      "tags": ["领域聚合", "DDD", "风险评估", "AML", "反欺诈", "制裁"],
+      "complexity": 5
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java:ForexAccountMapper",
+      "type": "mapper",
+      "name": "ForexAccountMapper",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java",
+      "summary": "MyBatis Mapper 接口，定义 selectByAccountNo 和 selectByCustomerId 查询方法",
+      "tags": ["Mapper", "接口", "MyBatis"],
+      "complexity": 2
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java:AccountTransactionPO",
+      "type": "persistence-model",
+      "name": "AccountTransactionPO",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java",
+      "summary": "账户交易表持久化类，14个字段映射 transactionNo、amount、currency 等",
+      "tags": ["PO", "MyBatis-Plus", "交易记录"],
+      "complexity": 2
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java:BalanceSnapshotPO",
+      "type": "persistence-model",
+      "name": "BalanceSnapshotPO",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java",
+      "summary": "余额快照表持久化类，6个字段记录 accountId、balance、snapshotDate",
+      "tags": ["PO", "MyBatis-Plus", "余额快照"],
+      "complexity": 1
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java:ForexAccountPO",
+      "type": "persistence-model",
+      "name": "ForexAccountPO",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java",
+      "summary": "外汇账户表持久化类，继承 BasePO，15个业务字段包含央行申报信息",
+      "tags": ["PO", "MyBatis-Plus", "BasePO", "账户"],
+      "complexity": 3
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java:AccountRepositoryImpl",
+      "type": "repository-impl",
+      "name": "AccountRepositoryImpl",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java",
+      "summary": "账户仓储实现类，依赖 ForexAccountMapper，实现 save/findById/findByAccountNo/findByCustomerId/pageQuery",
+      "tags": ["仓储实现", "@Repository", "Spring"],
+      "complexity": 6
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java:TransactionRepositoryImpl",
+      "type": "repository-impl",
+      "name": "TransactionRepositoryImpl",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java",
+      "summary": "交易仓储实现类，依赖 AccountTransactionMapper，实现 save/findByAccountId/findByTransactionNo/countByAccountId",
+      "tags": ["仓储实现", "@Repository", "Spring"],
+      "complexity": 5
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:AiChatController",
+      "type": "controller",
+      "name": "AiChatController",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "summary": "AI 聊天 REST 控制器，端点: /chat/query, /chat/hedging, /chat/nl-trade, /chat/report, /chat/session, /chat/messages",
+      "tags": ["RestController", "Spring"],
+      "complexity": 5
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java:AiDocumentController",
+      "type": "controller",
+      "name": "AiDocumentController",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "summary": "AI 单证 REST 控制器，端点: ocr/upload, document/audit, clearing/correction",
+      "tags": ["RestController", "Spring"],
+      "complexity": 3
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:AiPredictionController",
+      "type": "controller",
+      "name": "AiPredictionController",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "summary": "AI 预测 REST 控制器，端点: prediction/rate, prediction/exposure, prediction/alert-config(GET/PUT)",
+      "tags": ["RestController", "Spring"],
+      "complexity": 4
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java:AiRiskController",
+      "type": "controller",
+      "name": "AiRiskController",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "summary": "AI 风控 REST 控制器，端点: risk/aml, risk/blacklist, risk/network/{customerId}",
+      "tags": ["RestController", "Spring"],
+      "complexity": 3
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java:ChatMessageReq",
+      "type": "dto",
+      "name": "ChatMessageReq",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java",
+      "summary": "聊天请求 DTO，字段: sessionId, question, stream",
+      "tags": ["DTO", "Lombok"],
+      "complexity": 1
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java:ChatMessageResp",
+      "type": "dto",
+      "name": "ChatMessageResp",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java",
+      "summary": "聊天响应 DTO，字段: answer, sources, confidence",
+      "tags": ["DTO", "Lombok"],
+      "complexity": 1
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java:DocumentAuditResp",
+      "type": "dto",
+      "name": "DocumentAuditResp",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java",
+      "summary": "单证审计响应 DTO，字段: auditId, isConsistent, discrepancies, opinion",
+      "tags": ["DTO", "Lombok"],
+      "complexity": 1
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java:RatePredictionResp",
+      "type": "dto",
+      "name": "RatePredictionResp",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java",
+      "summary": "汇率预测响应 DTO，字段: currencyPair, predType, currentRate, predictedRate, lowerBound, upperBound, confidence, trend, predictionTime",
+      "tags": ["DTO", "Lombok"],
+      "complexity": 2
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java:RiskAlertResp",
+      "type": "dto",
+      "name": "RiskAlertResp",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java",
+      "summary": "风险预警响应 DTO，字段: alertId, riskType, score, level, description",
+      "tags": ["DTO", "Lombok"],
+      "complexity": 1
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java:TradingRecommendResp",
+      "type": "dto",
+      "name": "TradingRecommendResp",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java",
+      "summary": "交易建议响应 DTO，字段: strategies, recommendedRatio, reasoning",
+      "tags": ["DTO", "Lombok"],
+      "complexity": 1
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/AiApplication.java:AiApplication",
+      "type": "spring-boot-app",
+      "name": "AiApplication",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "summary": "Spring Boot 启动主类，启用 @EnableDiscoveryClient, @MapperScan",
+      "tags": ["SpringBootApplication", "启动类"],
+      "complexity": 1
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:AiAppService",
+      "type": "application-service",
+      "name": "AiAppService",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "summary": "AI 应用核心服务，注入 aiDomainService、5个 Repository，提供14个业务方法",
+      "tags": ["Service", "Spring"],
+      "complexity": 8
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java:ChatMessage",
+      "type": "domain-aggregate",
+      "name": "ChatMessage",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java",
+      "summary": "聊天消息聚合根，Serializable，静态常量: ROLE_USER, ROLE_AI, ROLE_SYSTEM",
+      "tags": ["领域聚合", "Serializable"],
+      "complexity": 3
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java:ChatSession",
+      "type": "domain-aggregate",
+      "name": "ChatSession",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java",
+      "summary": "聊天会话聚合根，继承 BaseAggregate，静态常量: SUPPORT/TRADING/AUDIT/ACTIVE/CLOSED",
+      "tags": ["领域聚合", "BaseAggregate"],
+      "complexity": 5
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java:DocumentAudit",
+      "type": "domain-aggregate",
+      "name": "DocumentAudit",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java",
+      "summary": "单证审计聚合根，继承 BaseAggregate，静态常量: INVOICE/BL/PACKING_LIST/CUSTOMS_DECLARATION",
+      "tags": ["领域聚合", "BaseAggregate"],
+      "complexity": 5
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java:RatePrediction",
+      "type": "domain-aggregate",
+      "name": "RatePrediction",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java",
+      "summary": "汇率预测聚合根，继承 BaseAggregate，静态常量: HOURLY/DAILY/WEEKLY",
+      "tags": ["领域聚合", "BaseAggregate"],
+      "complexity": 4
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java:RiskAiAssessment",
+      "type": "domain-aggregate",
+      "name": "RiskAiAssessment",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java",
+      "summary": "AI风险评估聚合根，继承 BaseAggregate，静态常量: AML/FRAUD/SANCTION 和 LEVEL_LOW/MEDIUM/HIGH/PROHIBITED",
+      "tags": ["领域聚合", "BaseAggregate"],
+      "complexity": 5
+    }
+  ],
+  "edges": [
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java", "target": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java", "target": "class:forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java:ForexAccountMapper", "type": "contains", "direction": "forward", "weight": 1},
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java", "target": "class:forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java:AccountTransactionPO", "type": "contains", "direction": "forward", "weight": 1},
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java", "target": "class:forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java:BalanceSnapshotPO", "type": "contains", "direction": "forward", "weight": 1},
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java", "target": "class:forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java:ForexAccountPO", "type": "contains", "direction": "forward", "weight": 1},
+    {"source": "class:forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java:ForexAccountPO", "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java", "type": "extends", "direction": "forward", "weight": 1},
+
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java", "target": "file:forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java", "target": "file:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java", "target": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java", "target": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java", "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java", "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java", "target": "class:forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java:AccountRepositoryImpl", "type": "contains", "direction": "forward", "weight": 1},
+
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java", "target": "file:forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java", "target": "file:forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java", "target": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java", "target": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java", "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java", "target": "class:forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java:TransactionRepositoryImpl", "type": "contains", "direction": "forward", "weight": 1},
+
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java", "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java", "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java", "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java", "target": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java", "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java", "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:AiChatController", "type": "contains", "direction": "forward", "weight": 1},
+
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java", "target": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java", "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java", "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java:AiDocumentController", "type": "contains", "direction": "forward", "weight": 1},
+
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java", "target": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java", "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java", "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:AiPredictionController", "type": "contains", "direction": "forward", "weight": 1},
+
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java", "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java", "target": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java", "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java", "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java:AiRiskController", "type": "contains", "direction": "forward", "weight": 1},
+
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java", "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java:ChatMessageReq", "type": "contains", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java", "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java:ChatMessageResp", "type": "contains", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java", "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java:DocumentAuditResp", "type": "contains", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java", "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java:RatePredictionResp", "type": "contains", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java", "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java:RiskAlertResp", "type": "contains", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java", "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java:TradingRecommendResp", "type": "contains", "direction": "forward", "weight": 1},
+
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/AiApplication.java", "target": "class:forex-ai/src/main/java/com/forex/ai/AiApplication.java:AiApplication", "type": "contains", "direction": "forward", "weight": 1},
+
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java", "target": "file:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java", "type": "imports", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java", "target": "class:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:AiAppService", "type": "contains", "direction": "forward", "weight": 1},
+
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java", "target": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java:ChatMessage", "type": "contains", "direction": "forward", "weight": 1},
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java", "target": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java:ChatSession", "type": "contains", "direction": "forward", "weight": 1},
+    {"source": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java:ChatSession", "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java", "type": "extends", "direction": "forward", "weight": 1},
+
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java", "target": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java:DocumentAudit", "type": "contains", "direction": "forward", "weight": 1},
+    {"source": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java:DocumentAudit", "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java", "type": "extends", "direction": "forward", "weight": 1},
+
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java", "target": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java:RatePrediction", "type": "contains", "direction": "forward", "weight": 1},
+    {"source": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java:RatePrediction", "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java", "type": "extends", "direction": "forward", "weight": 1},
+
+    {"source": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java", "target": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java:RiskAiAssessment", "type": "contains", "direction": "forward", "weight": 1},
+    {"source": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java:RiskAiAssessment", "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java", "type": "extends", "direction": "forward", "weight": 1},
+
+    {"source": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:AiChatController", "target": "class:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:AiAppService", "type": "depends_on", "direction": "forward", "weight": 1},
+    {"source": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java:AiDocumentController", "target": "class:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:AiAppService", "type": "depends_on", "direction": "forward", "weight": 1},
+    {"source": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:AiPredictionController", "target": "class:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:AiAppService", "type": "depends_on", "direction": "forward", "weight": 1},
+    {"source": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java:AiRiskController", "target": "class:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:AiAppService", "type": "depends_on", "direction": "forward", "weight": 1},
+
+    {"source": "class:forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java:AccountRepositoryImpl", "target": "file:forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java", "type": "implements", "direction": "forward", "weight": 1},
+    {"source": "class:forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java:TransactionRepositoryImpl", "target": "file:forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java", "type": "implements", "direction": "forward", "weight": 1}
+  ]
+}

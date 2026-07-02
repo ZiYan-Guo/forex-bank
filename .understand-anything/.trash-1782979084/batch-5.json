@@ -1,0 +1,2278 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java",
+      "type": "file",
+      "name": "ChatMessageRepository.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java",
+      "summary": "仓储接口，定义数据访问契约, 1个类, 2个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java:ChatMessageRepository",
+      "type": "interface",
+      "name": "ChatMessageRepository",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java",
+      "summary": "仓储接口，定义数据访问契约",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java:ChatMessageRepository.findBySessionId",
+      "type": "function",
+      "name": "findBySessionId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java",
+      "summary": "findBySessionId()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java:ChatMessageRepository.save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java",
+      "summary": "save()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java",
+      "type": "file",
+      "name": "ChatSessionRepository.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java",
+      "summary": "仓储接口，定义数据访问契约, 1个类, 3个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java:ChatSessionRepository",
+      "type": "interface",
+      "name": "ChatSessionRepository",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java",
+      "summary": "仓储接口，定义数据访问契约",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java:ChatSessionRepository.findBySessionId",
+      "type": "function",
+      "name": "findBySessionId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java",
+      "summary": "findBySessionId()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java:ChatSessionRepository.findByUserId",
+      "type": "function",
+      "name": "findByUserId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java",
+      "summary": "findByUserId()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java:ChatSessionRepository.save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java",
+      "summary": "save()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java",
+      "type": "file",
+      "name": "DocumentAuditRepository.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java",
+      "summary": "仓储接口，定义数据访问契约, 1个类, 3个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java:DocumentAuditRepository",
+      "type": "interface",
+      "name": "DocumentAuditRepository",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java",
+      "summary": "仓储接口，定义数据访问契约",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java:DocumentAuditRepository.findByAuditId",
+      "type": "function",
+      "name": "findByAuditId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java",
+      "summary": "findByAuditId()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java:DocumentAuditRepository.findByBizNo",
+      "type": "function",
+      "name": "findByBizNo",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java",
+      "summary": "findByBizNo()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java:DocumentAuditRepository.save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java",
+      "summary": "save()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java",
+      "type": "file",
+      "name": "RatePredictionRepository.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java",
+      "summary": "仓储接口，定义数据访问契约, 1个类, 3个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java:RatePredictionRepository",
+      "type": "interface",
+      "name": "RatePredictionRepository",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java",
+      "summary": "仓储接口，定义数据访问契约",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java:RatePredictionRepository.findByPredNo",
+      "type": "function",
+      "name": "findByPredNo",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java",
+      "summary": "findByPredNo()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java:RatePredictionRepository.findByCurrencyPairAndPredType",
+      "type": "function",
+      "name": "findByCurrencyPairAndPredType",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java",
+      "summary": "findByCurrencyPairAndPredType()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java:RatePredictionRepository.save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java",
+      "summary": "save()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java",
+      "type": "file",
+      "name": "RiskAiAssessmentRepository.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java",
+      "summary": "仓储接口，定义数据访问契约, 1个类, 3个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java:RiskAiAssessmentRepository",
+      "type": "interface",
+      "name": "RiskAiAssessmentRepository",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java",
+      "summary": "仓储接口，定义数据访问契约",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java:RiskAiAssessmentRepository.findByAssessmentId",
+      "type": "function",
+      "name": "findByAssessmentId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java",
+      "summary": "findByAssessmentId()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java:RiskAiAssessmentRepository.findByCustomerId",
+      "type": "function",
+      "name": "findByCustomerId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java",
+      "summary": "findByCustomerId()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java:RiskAiAssessmentRepository.save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java",
+      "summary": "save()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "type": "file",
+      "name": "AiDomainService.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "summary": "领域服务，封装核心业务逻辑, 1个类, 0个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java:AiDomainService",
+      "type": "class",
+      "name": "AiDomainService",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "summary": "领域服务，封装核心业务逻辑",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "type": "file",
+      "name": "AmlDetectionEngine.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "summary": "领域服务引擎，执行AI模型计算, 1个类, 14个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine",
+      "type": "class",
+      "name": "AmlDetectionEngine",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "summary": "领域服务引擎，执行AI算法计算",
+      "tags": [],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.evaluateTransaction",
+      "type": "function",
+      "name": "evaluateTransaction",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "summary": "evaluateTransaction(customerId, bizNo, amount, currency, direction)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.calculateAmlScore",
+      "type": "function",
+      "name": "calculateAmlScore",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "summary": "calculateAmlScore(amount, frequency7d, country)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.analyzePattern",
+      "type": "function",
+      "name": "analyzePattern",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "summary": "analyzePattern(recentTransactions)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.resolveLevel",
+      "type": "function",
+      "name": "resolveLevel",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "summary": "resolveLevel(score)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.buildAnalysis",
+      "type": "function",
+      "name": "buildAnalysis",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "summary": "buildAnalysis(customerId, amount, currency, direction, score)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.buildRecommendation",
+      "type": "function",
+      "name": "buildRecommendation",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "summary": "buildRecommendation(riskLevel)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.isHighRiskCountry",
+      "type": "function",
+      "name": "isHighRiskCountry",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "summary": "isHighRiskCountry(country)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "type": "file",
+      "name": "DocumentAuditService.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "summary": "领域服务，封装核心业务逻辑, 1个类, 18个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService",
+      "type": "class",
+      "name": "DocumentAuditService",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "summary": "领域服务，封装核心业务逻辑",
+      "tags": [],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.compareDocuments",
+      "type": "function",
+      "name": "compareDocuments",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "summary": "compareDocuments(invoiceOcr, contractOcr, customsOcr)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractKeyFields",
+      "type": "function",
+      "name": "extractKeyFields",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "summary": "extractKeyFields(ocrText, docType)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractInvoiceFields",
+      "type": "function",
+      "name": "extractInvoiceFields",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "summary": "extractInvoiceFields(text)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractBlFields",
+      "type": "function",
+      "name": "extractBlFields",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "summary": "extractBlFields(text)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractPackingFields",
+      "type": "function",
+      "name": "extractPackingFields",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "summary": "extractPackingFields(text)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractCustomsFields",
+      "type": "function",
+      "name": "extractCustomsFields",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "summary": "extractCustomsFields(text)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.compareAmount",
+      "type": "function",
+      "name": "compareAmount",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "summary": "compareAmount(invoiceOcr, contractOcr, customsOcr)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.compareParties",
+      "type": "function",
+      "name": "compareParties",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "summary": "compareParties(invoiceOcr, contractOcr, customsOcr)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.compareGoodsDescription",
+      "type": "function",
+      "name": "compareGoodsDescription",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "summary": "compareGoodsDescription(invoiceOcr, contractOcr, customsOcr)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "type": "file",
+      "name": "RatePredictionEngine.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "summary": "领域服务引擎，执行AI模型计算, 1个类, 10个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine",
+      "type": "class",
+      "name": "RatePredictionEngine",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "summary": "领域服务引擎，执行AI算法计算",
+      "tags": [],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine.predict",
+      "type": "function",
+      "name": "predict",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "summary": "predict(currencyPair, predType, historicalRates)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine.batchPredict",
+      "type": "function",
+      "name": "batchPredict",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "summary": "batchPredict(currencyPair, predType, days)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine.exponentialSmoothing",
+      "type": "function",
+      "name": "exponentialSmoothing",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "summary": "exponentialSmoothing(rates, alpha)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine.calculateVolatility",
+      "type": "function",
+      "name": "calculateVolatility",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "summary": "calculateVolatility(rates)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine.resolveTargetTime",
+      "type": "function",
+      "name": "resolveTargetTime",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "summary": "resolveTargetTime(predType)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "type": "file",
+      "name": "SmartRagService.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "summary": "领域服务，封装核心业务逻辑, 1个类, 6个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService",
+      "type": "class",
+      "name": "SmartRagService",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "summary": "领域服务，封装核心业务逻辑",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService.answerQuery",
+      "type": "function",
+      "name": "answerQuery",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "summary": "answerQuery(userQuestion, context)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService.generateReport",
+      "type": "function",
+      "name": "generateReport",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "summary": "generateReport(assessments, reportType)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService.generateAnswer",
+      "type": "function",
+      "name": "generateAnswer",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "summary": "generateAnswer(question, relevantDocs)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "type": "file",
+      "name": "TradingAssistant.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "summary": "交易助手，处理自然语言交易指令, 1个类, 6个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:TradingAssistant",
+      "type": "class",
+      "name": "TradingAssistant",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "summary": "交易助手服务",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:TradingAssistant.processNaturalLanguageTrade",
+      "type": "function",
+      "name": "processNaturalLanguageTrade",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "summary": "processNaturalLanguageTrade(userInput)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:TradingAssistant.recommendHedging",
+      "type": "function",
+      "name": "recommendHedging",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "summary": "recommendHedging(customerId, businessType, riskPreference)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:TradingAssistant.generateRiskReport",
+      "type": "function",
+      "name": "generateRiskReport",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "summary": "generateRiskReport(customerId, period)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "type": "file",
+      "name": "ModelProviderConfig.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "summary": "基础设施配置, 1个类, 6个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:ModelProviderConfig",
+      "type": "config",
+      "name": "ModelProviderConfig",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "summary": "配置类",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:ModelProviderConfig.isOllamaProvider",
+      "type": "function",
+      "name": "isOllamaProvider",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "summary": "isOllamaProvider()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:ModelProviderConfig.isOpenAiProvider",
+      "type": "function",
+      "name": "isOpenAiProvider",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "summary": "isOpenAiProvider()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:ModelProviderConfig.resolveModel",
+      "type": "function",
+      "name": "resolveModel",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "summary": "resolveModel(preferredModel)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "type": "file",
+      "name": "SpringAiConfig.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "summary": "基础设施配置, 1个类, 2个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java:SpringAiConfig",
+      "type": "config",
+      "name": "SpringAiConfig",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "summary": "配置类",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java:SpringAiConfig.aiRestTemplate",
+      "type": "function",
+      "name": "aiRestTemplate",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "summary": "aiRestTemplate()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java",
+      "type": "file",
+      "name": "ChatMessageMapper.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java",
+      "summary": "MyBatis Mapper接口，映射数据库CRUD操作, 1个类, 1个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java:ChatMessageMapper",
+      "type": "mapper",
+      "name": "ChatMessageMapper",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java",
+      "summary": "MyBatis Mapper接口，映射数据库表操作",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java:ChatMessageMapper.findBySessionId",
+      "type": "function",
+      "name": "findBySessionId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java",
+      "summary": "findBySessionId()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java",
+      "type": "file",
+      "name": "ChatSessionMapper.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java",
+      "summary": "MyBatis Mapper接口，映射数据库CRUD操作, 1个类, 2个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java:ChatSessionMapper",
+      "type": "mapper",
+      "name": "ChatSessionMapper",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java",
+      "summary": "MyBatis Mapper接口，映射数据库表操作",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java:ChatSessionMapper.findBySessionId",
+      "type": "function",
+      "name": "findBySessionId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java",
+      "summary": "findBySessionId()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java:ChatSessionMapper.findByUserId",
+      "type": "function",
+      "name": "findByUserId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java",
+      "summary": "findByUserId()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java",
+      "type": "file",
+      "name": "DocumentAuditMapper.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java",
+      "summary": "MyBatis Mapper接口，映射数据库CRUD操作, 1个类, 2个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java:DocumentAuditMapper",
+      "type": "mapper",
+      "name": "DocumentAuditMapper",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java",
+      "summary": "MyBatis Mapper接口，映射数据库表操作",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java:DocumentAuditMapper.findByAuditId",
+      "type": "function",
+      "name": "findByAuditId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java",
+      "summary": "findByAuditId()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java:DocumentAuditMapper.findByBizNo",
+      "type": "function",
+      "name": "findByBizNo",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java",
+      "summary": "findByBizNo()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java",
+      "type": "file",
+      "name": "RatePredictionMapper.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java",
+      "summary": "MyBatis Mapper接口，映射数据库CRUD操作, 1个类, 2个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java:RatePredictionMapper",
+      "type": "mapper",
+      "name": "RatePredictionMapper",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java",
+      "summary": "MyBatis Mapper接口，映射数据库表操作",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java:RatePredictionMapper.findByPredNo",
+      "type": "function",
+      "name": "findByPredNo",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java",
+      "summary": "findByPredNo()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java:RatePredictionMapper.findByCurrencyPairAndPredType",
+      "type": "function",
+      "name": "findByCurrencyPairAndPredType",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java",
+      "summary": "findByCurrencyPairAndPredType()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java",
+      "type": "file",
+      "name": "RiskAiAssessmentMapper.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java",
+      "summary": "MyBatis Mapper接口，映射数据库CRUD操作, 1个类, 2个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java:RiskAiAssessmentMapper",
+      "type": "mapper",
+      "name": "RiskAiAssessmentMapper",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java",
+      "summary": "MyBatis Mapper接口，映射数据库表操作",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java:RiskAiAssessmentMapper.findByAssessmentId",
+      "type": "function",
+      "name": "findByAssessmentId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java",
+      "summary": "findByAssessmentId()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java:RiskAiAssessmentMapper.findByCustomerId",
+      "type": "function",
+      "name": "findByCustomerId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java",
+      "summary": "findByCustomerId()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatMessagePO.java",
+      "type": "file",
+      "name": "ChatMessagePO.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatMessagePO.java",
+      "summary": "持久化对象(PO)，映射数据库表结构, 1个类, 0个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatMessagePO.java:ChatMessagePO",
+      "type": "table",
+      "name": "ChatMessagePO",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatMessagePO.java",
+      "summary": "持久化对象，映射数据库表",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatSessionPO.java",
+      "type": "file",
+      "name": "ChatSessionPO.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatSessionPO.java",
+      "summary": "持久化对象(PO)，映射数据库表结构, 1个类, 0个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatSessionPO.java:ChatSessionPO",
+      "type": "table",
+      "name": "ChatSessionPO",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatSessionPO.java",
+      "summary": "持久化对象，映射数据库表",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/DocumentAuditPO.java",
+      "type": "file",
+      "name": "DocumentAuditPO.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/DocumentAuditPO.java",
+      "summary": "持久化对象(PO)，映射数据库表结构, 1个类, 0个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/DocumentAuditPO.java:DocumentAuditPO",
+      "type": "table",
+      "name": "DocumentAuditPO",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/DocumentAuditPO.java",
+      "summary": "持久化对象，映射数据库表",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RatePredictionPO.java",
+      "type": "file",
+      "name": "RatePredictionPO.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RatePredictionPO.java",
+      "summary": "持久化对象(PO)，映射数据库表结构, 1个类, 0个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RatePredictionPO.java:RatePredictionPO",
+      "type": "table",
+      "name": "RatePredictionPO",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RatePredictionPO.java",
+      "summary": "持久化对象，映射数据库表",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RiskAiAssessmentPO.java",
+      "type": "file",
+      "name": "RiskAiAssessmentPO.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RiskAiAssessmentPO.java",
+      "summary": "持久化对象(PO)，映射数据库表结构, 1个类, 0个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RiskAiAssessmentPO.java:RiskAiAssessmentPO",
+      "type": "table",
+      "name": "RiskAiAssessmentPO",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RiskAiAssessmentPO.java",
+      "summary": "持久化对象，映射数据库表",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "type": "file",
+      "name": "KnowledgeBaseInitializer.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "summary": "知识库初始化，加载RAG文档, 1个类, 10个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer",
+      "type": "class",
+      "name": "KnowledgeBaseInitializer",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "summary": "知识库初始化器，应用启动时加载知识库",
+      "tags": [],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer.run",
+      "type": "function",
+      "name": "run",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "summary": "run(args)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer.searchRelevant",
+      "type": "function",
+      "name": "searchRelevant",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "summary": "searchRelevant(query, topK)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer.getAllDocuments",
+      "type": "function",
+      "name": "getAllDocuments",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "summary": "getAllDocuments()",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer.getDocument",
+      "type": "function",
+      "name": "getDocument",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "summary": "getDocument(key)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer.containsKeyword",
+      "type": "function",
+      "name": "containsKeyword",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "summary": "containsKeyword(doc, query)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "type": "file",
+      "name": "ChatMessageRepositoryImpl.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "summary": "仓储实现，提供数据持久化能力, 1个类, 8个方法",
+      "tags": [
+        "java",
+        "code"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "repository-impl:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl",
+      "type": "repository-impl",
+      "name": "ChatMessageRepositoryImpl",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "summary": "仓储实现类",
+      "tags": [],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl.findBySessionId",
+      "type": "function",
+      "name": "findBySessionId",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "summary": "findBySessionId(sessionId)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl.save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "summary": "save(message)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl.toDomain",
+      "type": "function",
+      "name": "toDomain",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "summary": "toDomain(po)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl.toPO",
+      "type": "function",
+      "name": "toPO",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "summary": "toPO(message)",
+      "tags": [],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java",
+      "target": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java:ChatMessageRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java:ChatMessageRepository",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java:ChatMessageRepository.findBySessionId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java:ChatMessageRepository",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java:ChatMessageRepository.save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java",
+      "target": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java:ChatSessionRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java:ChatSessionRepository",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java:ChatSessionRepository.findBySessionId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java:ChatSessionRepository",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java:ChatSessionRepository.findByUserId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java:ChatSessionRepository",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java:ChatSessionRepository.save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java",
+      "target": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java:DocumentAuditRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java:DocumentAuditRepository",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java:DocumentAuditRepository.findByAuditId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java:DocumentAuditRepository",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java:DocumentAuditRepository.findByBizNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java:DocumentAuditRepository",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java:DocumentAuditRepository.save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java",
+      "target": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java:RatePredictionRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java:RatePredictionRepository",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java:RatePredictionRepository.findByPredNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java:RatePredictionRepository",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java:RatePredictionRepository.findByCurrencyPairAndPredType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java:RatePredictionRepository",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java:RatePredictionRepository.save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java",
+      "target": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java:RiskAiAssessmentRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java:RiskAiAssessmentRepository",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java:RiskAiAssessmentRepository.findByAssessmentId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java:RiskAiAssessmentRepository",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java:RiskAiAssessmentRepository.findByCustomerId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java:RiskAiAssessmentRepository",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java:RiskAiAssessmentRepository.save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java:AiDomainService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.evaluateTransaction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.calculateAmlScore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.analyzePattern",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.resolveLevel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.buildAnalysis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.buildRecommendation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.isHighRiskCountry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.compareDocuments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractKeyFields",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractInvoiceFields",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractBlFields",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractPackingFields",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractCustomsFields",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.compareAmount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.compareParties",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.compareGoodsDescription",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine.predict",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine.batchPredict",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine.exponentialSmoothing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine.calculateVolatility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine.resolveTargetTime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService.answerQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService.generateReport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService.generateAnswer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:TradingAssistant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:TradingAssistant",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:TradingAssistant.processNaturalLanguageTrade",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:TradingAssistant",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:TradingAssistant.recommendHedging",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:TradingAssistant",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:TradingAssistant.generateRiskReport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "target": "config:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:ModelProviderConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "config:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:ModelProviderConfig",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:ModelProviderConfig.isOllamaProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:ModelProviderConfig",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:ModelProviderConfig.isOpenAiProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:ModelProviderConfig",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:ModelProviderConfig.resolveModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "target": "config:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java:SpringAiConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "config:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java:SpringAiConfig",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java:SpringAiConfig.aiRestTemplate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java",
+      "target": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java:ChatMessageMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java:ChatMessageMapper",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java:ChatMessageMapper.findBySessionId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java",
+      "target": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java:ChatSessionMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java:ChatSessionMapper",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java:ChatSessionMapper.findBySessionId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java:ChatSessionMapper",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java:ChatSessionMapper.findByUserId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java",
+      "target": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java:DocumentAuditMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java:DocumentAuditMapper",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java:DocumentAuditMapper.findByAuditId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java:DocumentAuditMapper",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java:DocumentAuditMapper.findByBizNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java",
+      "target": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java:RatePredictionMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java:RatePredictionMapper",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java:RatePredictionMapper.findByPredNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java:RatePredictionMapper",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java:RatePredictionMapper.findByCurrencyPairAndPredType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java",
+      "target": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java:RiskAiAssessmentMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java:RiskAiAssessmentMapper",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java:RiskAiAssessmentMapper.findByAssessmentId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java:RiskAiAssessmentMapper",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java:RiskAiAssessmentMapper.findByCustomerId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatMessagePO.java",
+      "target": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatMessagePO.java:ChatMessagePO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatSessionPO.java",
+      "target": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatSessionPO.java:ChatSessionPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/DocumentAuditPO.java",
+      "target": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/DocumentAuditPO.java:DocumentAuditPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RatePredictionPO.java",
+      "target": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RatePredictionPO.java:RatePredictionPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RiskAiAssessmentPO.java",
+      "target": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RiskAiAssessmentPO.java:RiskAiAssessmentPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer.run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer.searchRelevant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer.getAllDocuments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer.getDocument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer.containsKeyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "target": "repository-impl:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "repository-impl:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl.findBySessionId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "repository-impl:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl.save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "repository-impl:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl.toDomain",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "repository-impl:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl.toPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatMessagePO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatSessionPO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/DocumentAuditPO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RatePredictionPO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RiskAiAssessmentPO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatSessionPO.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/DocumentAuditPO.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RatePredictionPO.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RiskAiAssessmentPO.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatMessagePO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.evaluateTransaction",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.calculateAmlScore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 22
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.evaluateTransaction",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.resolveLevel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 23
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.evaluateTransaction",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.buildAnalysis",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 25
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.evaluateTransaction",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.buildRecommendation",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 26
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.calculateAmlScore",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine.isHighRiskCountry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 58
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.compareDocuments",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.compareAmount",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 31
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.compareDocuments",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.compareParties",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 32
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.compareDocuments",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.compareGoodsDescription",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 33
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractKeyFields",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractInvoiceFields",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 61
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractKeyFields",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractBlFields",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 62
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractKeyFields",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractPackingFields",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 63
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractKeyFields",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService.extractCustomsFields",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 64
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine.predict",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine.exponentialSmoothing",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 32
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine.predict",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine.calculateVolatility",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 33
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine.predict",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine.resolveTargetTime",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 39
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService.answerQuery",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService.generateAnswer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 35
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer.searchRelevant",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer.containsKeyword",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 46
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl.save",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl.toPO",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.6,
+      "line": 27
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java:ChatMessageRepository",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java:ChatMessage",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7,
+      "reason": "仓库管理ChatMessage聚合根"
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java:ChatSessionRepository",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java:ChatSession",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7,
+      "reason": "仓库管理ChatSession聚合根"
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java:DocumentAuditRepository",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java:DocumentAudit",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7,
+      "reason": "仓库管理DocumentAudit聚合根"
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java:RatePredictionRepository",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java:RatePrediction",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7,
+      "reason": "仓库管理RatePrediction聚合根"
+    },
+    {
+      "source": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java:RiskAiAssessmentRepository",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java:RiskAiAssessment",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7,
+      "reason": "仓库管理RiskAiAssessment聚合根"
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java:ChatMessageMapper",
+      "target": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatMessagePO.java:ChatMessagePO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8,
+      "reason": "Mapper映射ChatMessagePO持久化对象"
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java:ChatSessionMapper",
+      "target": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatSessionPO.java:ChatSessionPO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8,
+      "reason": "Mapper映射ChatSessionPO持久化对象"
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java:DocumentAuditMapper",
+      "target": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/DocumentAuditPO.java:DocumentAuditPO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8,
+      "reason": "Mapper映射DocumentAuditPO持久化对象"
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java:RatePredictionMapper",
+      "target": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RatePredictionPO.java:RatePredictionPO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8,
+      "reason": "Mapper映射RatePredictionPO持久化对象"
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java:RiskAiAssessmentMapper",
+      "target": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RiskAiAssessmentPO.java:RiskAiAssessmentPO",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8,
+      "reason": "Mapper映射RiskAiAssessmentPO持久化对象"
+    },
+    {
+      "source": "repository-impl:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl",
+      "target": "interface:forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java:ChatMessageRepository",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "repository-impl:forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java:ChatMessageRepositoryImpl",
+      "target": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java:ChatMessageMapper",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8,
+      "reason": "RepositoryImpl使用Mapper进行数据访问"
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java:AiDomainService",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7,
+      "reason": "AiDomainService整合所有AI领域服务引擎"
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java:AiDomainService",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7,
+      "reason": "AiDomainService整合所有AI领域服务引擎"
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java:AiDomainService",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7,
+      "reason": "AiDomainService整合所有AI领域服务引擎"
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java:AiDomainService",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7,
+      "reason": "AiDomainService整合所有AI领域服务引擎"
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java:AiDomainService",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:TradingAssistant",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7,
+      "reason": "AiDomainService整合所有AI领域服务引擎"
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java:KnowledgeBaseInitializer",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8,
+      "reason": "SmartRagService依赖KnowledgeBaseInitializer检索知识库"
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java:AmlDetectionEngine",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java:RiskAiAssessment",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7,
+      "reason": "AML检测引擎创建风控评估结果"
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java:DocumentAuditService",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java:DocumentAudit",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7,
+      "reason": "文档审计服务创建审计结果"
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java:RatePredictionEngine",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java:RatePrediction",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7,
+      "reason": "汇率预测引擎创建预测结果"
+    },
+    {
+      "source": "class:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java:RiskAiAssessment",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7,
+      "reason": "RAG服务生成风险评估报告"
+    },
+    {
+      "source": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatSessionPO.java:ChatSessionPO",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java:BasePO",
+      "type": "extends",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/DocumentAuditPO.java:DocumentAuditPO",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java:BasePO",
+      "type": "extends",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RatePredictionPO.java:RatePredictionPO",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java:BasePO",
+      "type": "extends",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "table:forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RiskAiAssessmentPO.java:RiskAiAssessmentPO",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java:BasePO",
+      "type": "extends",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java:ChatSessionMapper",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java:BaseMapperExt",
+      "type": "extends",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java:DocumentAuditMapper",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java:BaseMapperExt",
+      "type": "extends",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java:RatePredictionMapper",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java:BaseMapperExt",
+      "type": "extends",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "mapper:forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java:RiskAiAssessmentMapper",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java:BaseMapperExt",
+      "type": "extends",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

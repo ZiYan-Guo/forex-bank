@@ -1,0 +1,221 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {"path": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java", "sizeLines": 20, "language": "java", "fileCategory": "code"},
+    {"path": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java", "sizeLines": 34, "language": "java", "fileCategory": "code"},
+    {"path": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java", "sizeLines": 26, "language": "java", "fileCategory": "code"},
+    {"path": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java", "sizeLines": 34, "language": "java", "fileCategory": "code"},
+    {"path": "forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java", "sizeLines": 109, "language": "java", "fileCategory": "code"},
+    {"path": "forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java", "sizeLines": 87, "language": "java", "fileCategory": "code"},
+    {"path": "forex-account/src/main/resources/application.yml", "sizeLines": 45, "language": "yaml", "fileCategory": "config"},
+    {"path": "forex-ai/pom.xml", "sizeLines": 57, "language": "xml", "fileCategory": "config"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java", "sizeLines": 74, "language": "java", "fileCategory": "code"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java", "sizeLines": 43, "language": "java", "fileCategory": "code"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java", "sizeLines": 60, "language": "java", "fileCategory": "code"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java", "sizeLines": 42, "language": "java", "fileCategory": "code"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java", "sizeLines": 20, "language": "java", "fileCategory": "code"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java", "sizeLines": 21, "language": "java", "fileCategory": "code"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java", "sizeLines": 23, "language": "java", "fileCategory": "code"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java", "sizeLines": 39, "language": "java", "fileCategory": "code"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java", "sizeLines": 26, "language": "java", "fileCategory": "code"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java", "sizeLines": 21, "language": "java", "fileCategory": "code"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/AiApplication.java", "sizeLines": 15, "language": "java", "fileCategory": "code"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java", "sizeLines": 165, "language": "java", "fileCategory": "code"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java", "sizeLines": 50, "language": "java", "fileCategory": "code"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java", "sizeLines": 103, "language": "java", "fileCategory": "code"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java", "sizeLines": 108, "language": "java", "fileCategory": "code"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java", "sizeLines": 105, "language": "java", "fileCategory": "code"},
+    {"path": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java", "sizeLines": 99, "language": "java", "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java": [
+      "import com.forex.account.infrastructure.persistence.ForexAccountPO;",
+      "import com.forex.common.mybatis.base.BaseMapperExt;",
+      "import org.apache.ibatis.annotations.Mapper;",
+      "import org.apache.ibatis.annotations.Param;",
+      "import org.apache.ibatis.annotations.Select;",
+      "import java.util.List;"
+    ],
+    "forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java": [
+      "import com.baomidou.mybatisplus.annotation.IdType;",
+      "import com.baomidou.mybatisplus.annotation.TableId;",
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import lombok.Data;",
+      "import java.io.Serializable;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java": [
+      "import com.baomidou.mybatisplus.annotation.IdType;",
+      "import com.baomidou.mybatisplus.annotation.TableId;",
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import lombok.Data;",
+      "import java.io.Serializable;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;"
+    ],
+    "forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java": [
+      "import com.forex.common.mybatis.base.BasePO;",
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDate;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java": [
+      "import com.forex.account.domain.model.aggregate.ForexAccount;",
+      "import com.forex.account.domain.repository.AccountRepository;",
+      "import com.forex.account.infrastructure.mapper.ForexAccountMapper;",
+      "import com.forex.account.infrastructure.persistence.ForexAccountPO;",
+      "import com.forex.common.base.dto.PageReq;",
+      "import com.forex.common.base.dto.PageResp;",
+      "import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;",
+      "import com.baomidou.mybatisplus.extension.plugins.pagination.Page;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Repository;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java": [
+      "import com.forex.account.domain.model.entity.AccountTransaction;",
+      "import com.forex.account.domain.repository.TransactionRepository;",
+      "import com.forex.account.infrastructure.mapper.AccountTransactionMapper;",
+      "import com.forex.account.infrastructure.persistence.AccountTransactionPO;",
+      "import com.forex.common.base.dto.PageReq;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Repository;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-account/src/main/resources/application.yml": [],
+    "forex-ai/pom.xml": [],
+    "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java": [
+      "import com.forex.ai.adapter.dto.ChatMessageReq;",
+      "import com.forex.ai.adapter.dto.ChatMessageResp;",
+      "import com.forex.ai.adapter.dto.TradingRecommendResp;",
+      "import com.forex.ai.application.service.AiAppService;",
+      "import com.forex.common.base.result.R;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import jakarta.validation.Valid;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.web.bind.annotation.*;",
+      "import java.util.List;",
+      "import java.util.Map;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java": [
+      "import com.forex.ai.application.service.AiAppService;",
+      "import com.forex.common.base.result.R;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.web.bind.annotation.*;",
+      "import java.util.Map;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java": [
+      "import com.forex.ai.application.service.AiAppService;",
+      "import com.forex.common.base.result.R;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import jakarta.validation.Valid;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.web.bind.annotation.*;",
+      "import java.math.BigDecimal;",
+      "import java.util.*;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java": [
+      "import com.forex.ai.adapter.dto.RiskAlertResp;",
+      "import com.forex.ai.application.service.AiAppService;",
+      "import com.forex.common.base.result.R;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.web.bind.annotation.*;",
+      "import java.util.Map;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import jakarta.validation.constraints.NotBlank;",
+      "import lombok.Data;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.util.List;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import java.util.List;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.util.List;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/AiApplication.java": [
+      "import org.mybatis.spring.annotation.MapperScan;",
+      "import org.springframework.boot.SpringApplication;",
+      "import org.springframework.boot.autoconfigure.SpringBootApplication;",
+      "import org.springframework.cloud.client.discovery.EnableDiscoveryClient;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java": [
+      "import com.forex.ai.domain.repository.*;",
+      "import com.forex.ai.domain.service.AiDomainService;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Service;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDateTime;",
+      "import java.util.*;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java": [
+      "import java.io.Serializable;",
+      "import java.time.LocalDateTime;",
+      "import lombok.Getter;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java": [
+      "import java.time.LocalDateTime;",
+      "import java.util.ArrayList;",
+      "import java.util.List;",
+      "import java.util.UUID;",
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import lombok.Getter;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java": [
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDateTime;",
+      "import java.util.UUID;",
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import lombok.Getter;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java": [
+      "import java.math.BigDecimal;",
+      "import java.math.RoundingMode;",
+      "import java.time.LocalDateTime;",
+      "import java.util.UUID;",
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import lombok.Getter;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java": [
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDateTime;",
+      "import java.util.UUID;",
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import lombok.Getter;"
+    ]
+  }
+}
