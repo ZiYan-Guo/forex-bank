@@ -1,0 +1,182 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-payment/src/test/java/com/forex/payment/application/service/BankCodeValidationServiceTest.java",
+      "language": "java",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/PositionApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-precious-metal/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-precious-metal/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 36,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-rate/pom.xml",
+      "language": "xml",
+      "sizeLines": 59,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java",
+      "language": "java",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/RateApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-reporting/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-risk/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java",
+      "language": "java",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java",
+      "language": "java",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/config/RocketMqConsumerConfig.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/RiskApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-saccr/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-schedule/pom.xml",
+      "language": "xml",
+      "sizeLines": 67,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "forex-payment/src/test/java/com/forex/payment/application/service/BankCodeValidationServiceTest.java": [],
+    "forex-position/pom.xml": [],
+    "forex-position/src/main/java/com/forex/position/PositionApplication.java": [],
+    "forex-position/src/main/resources/application.yml": [],
+    "forex-precious-metal/pom.xml": [],
+    "forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java": [],
+    "forex-precious-metal/src/main/resources/application.yml": [],
+    "forex-rate/pom.xml": [],
+    "forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java": [],
+    "forex-rate/src/main/java/com/forex/rate/RateApplication.java": [],
+    "forex-rate/src/main/resources/application.yml": [],
+    "forex-reporting/pom.xml": [],
+    "forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java": [],
+    "forex-reporting/src/main/resources/application.yml": [],
+    "forex-risk/pom.xml": [],
+    "forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java": [],
+    "forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java": [],
+    "forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java": [],
+    "forex-risk/src/main/java/com/forex/risk/infrastructure/config/RocketMqConsumerConfig.java": [],
+    "forex-risk/src/main/java/com/forex/risk/RiskApplication.java": [],
+    "forex-risk/src/main/resources/application.yml": [],
+    "forex-saccr/pom.xml": [],
+    "forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java": [],
+    "forex-saccr/src/main/resources/application.yml": [],
+    "forex-schedule/pom.xml": []
+  }
+}

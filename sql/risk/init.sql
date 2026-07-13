@@ -107,6 +107,40 @@ CREATE TABLE IF NOT EXISTS t_sampling_rule (
     PRIMARY KEY (id), UNIQUE KEY uk_rule_code (rule_code)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Capital Account Facilitation Sampling Rules 资本项目便利化抽查规则表';
 
+-- ============================================
+-- 资本项目便利化抽查任务表
+-- Capital Account Facilitation Sampling Tasks
+-- ============================================
+CREATE TABLE IF NOT EXISTS t_sampling_task (
+    id BIGINT NOT NULL COMMENT 'Primary Key 主键ID',
+    task_id VARCHAR(80) NOT NULL COMMENT 'Task ID 任务编号',
+    biz_no VARCHAR(64) NOT NULL COMMENT 'Business No 业务编号',
+    biz_type VARCHAR(30) NOT NULL COMMENT 'Business Type 业务类型',
+    customer_id BIGINT COMMENT 'Customer ID 客户ID',
+    amount DECIMAL(22,6) NOT NULL DEFAULT 0 COMMENT 'Transaction Amount 交易金额',
+    currency VARCHAR(10) COMMENT 'Currency 币种',
+    country_code VARCHAR(10) COMMENT 'Country Code 国家代码',
+    account_age_days INT COMMENT 'Account Age Days 开户天数',
+    sampling_rate DECIMAL(5,2) NOT NULL DEFAULT 0 COMMENT 'Sampling Rate 抽查比例',
+    reason VARCHAR(500) COMMENT 'Sampling Reason 抽查原因',
+    matched_rules_json TEXT COMMENT 'Matched Rule Codes JSON 命中规则编码JSON',
+    status VARCHAR(20) NOT NULL DEFAULT 'PENDING' COMMENT 'PENDING/COMPLETED 待处理/已完成',
+    business_date DATE NOT NULL COMMENT 'Business Date 业务日期',
+    completed_at DATETIME COMMENT 'Completed Time 完成时间',
+    review_result VARCHAR(30) COMMENT 'Review Result 检查结果',
+    review_comment VARCHAR(500) COMMENT 'Review Comment 检查意见',
+    create_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    update_time DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    version INT DEFAULT 0,
+    deleted TINYINT DEFAULT 0,
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_task_id (task_id),
+    KEY idx_biz_no (biz_no),
+    KEY idx_status (status),
+    KEY idx_business_date (business_date),
+    KEY idx_biz_type (biz_type)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Capital Account Facilitation Sampling Tasks 资本项目便利化抽查任务表';
+
 -- Seed sampling rules 种子抽查规则
 INSERT INTO t_sampling_rule (id, rule_code, rule_name, condition_json, sampling_rate, target_module, effective_date, status) VALUES
 (1, 'SMP_HIGH_AMT', 'High Amount Transaction 大额交易', '{"minAmount":500000,"currency":"USD"}', 50.00, 'FX_PAYMENT', '2026-01-01', 'ACTIVE'),

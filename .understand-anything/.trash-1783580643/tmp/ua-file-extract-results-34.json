@@ -1,0 +1,1483 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 9,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 87,
+      "nonEmptyLines": 75,
+      "functions": [
+        {
+          "name": "createOrder",
+          "startLine": 26,
+          "endLine": 32,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "confirmOrder",
+          "startLine": 34,
+          "endLine": 40,
+          "params": [
+            "orderNo"
+          ]
+        },
+        {
+          "name": "executeOrder",
+          "startLine": 42,
+          "endLine": 48,
+          "params": [
+            "orderNo"
+          ]
+        },
+        {
+          "name": "cancelOrder",
+          "startLine": 50,
+          "endLine": 56,
+          "params": [
+            "orderNo"
+          ]
+        },
+        {
+          "name": "settleOrder",
+          "startLine": 58,
+          "endLine": 64,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "getOrder",
+          "startLine": 66,
+          "endLine": 70,
+          "params": [
+            "orderNo"
+          ]
+        },
+        {
+          "name": "pageOrders",
+          "startLine": 72,
+          "endLine": 76,
+          "params": [
+            "query"
+          ]
+        },
+        {
+          "name": "markToMarket",
+          "startLine": 78,
+          "endLine": 86,
+          "params": [
+            "customerId",
+            "metalType",
+            "price"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PreciousMetalController",
+          "startLine": 18,
+          "endLine": 87,
+          "methods": [
+            "createOrder",
+            "confirmOrder",
+            "executeOrder",
+            "cancelOrder",
+            "settleOrder",
+            "getOrder",
+            "pageOrders",
+            "markToMarket"
+          ],
+          "properties": [
+            "metalAppService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createOrder",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "confirmOrder",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "executeOrder",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "cancelOrder",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "settleOrder",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "getOrder",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "pageOrders",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "markToMarket",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "PreciousMetalController",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createOrder",
+          "callee": "metalAppService.createOrder",
+          "lineNumber": 30
+        },
+        {
+          "caller": "createOrder",
+          "callee": "R.ok",
+          "lineNumber": 31
+        },
+        {
+          "caller": "confirmOrder",
+          "callee": "metalAppService.confirmOrder",
+          "lineNumber": 38
+        },
+        {
+          "caller": "confirmOrder",
+          "callee": "R.ok",
+          "lineNumber": 39
+        },
+        {
+          "caller": "executeOrder",
+          "callee": "metalAppService.executeOrder",
+          "lineNumber": 46
+        },
+        {
+          "caller": "executeOrder",
+          "callee": "R.ok",
+          "lineNumber": 47
+        },
+        {
+          "caller": "cancelOrder",
+          "callee": "metalAppService.cancelOrder",
+          "lineNumber": 54
+        },
+        {
+          "caller": "cancelOrder",
+          "callee": "R.ok",
+          "lineNumber": 55
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "metalAppService.settleOrder",
+          "lineNumber": 62
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "R.ok",
+          "lineNumber": 63
+        },
+        {
+          "caller": "getOrder",
+          "callee": "R.ok",
+          "lineNumber": 69
+        },
+        {
+          "caller": "getOrder",
+          "callee": "metalAppService.getOrder",
+          "lineNumber": 69
+        },
+        {
+          "caller": "pageOrders",
+          "callee": "R.ok",
+          "lineNumber": 75
+        },
+        {
+          "caller": "pageOrders",
+          "callee": "metalAppService.pageOrders",
+          "lineNumber": 75
+        },
+        {
+          "caller": "markToMarket",
+          "callee": "metalAppService.markToMarket",
+          "lineNumber": 84
+        },
+        {
+          "caller": "markToMarket",
+          "callee": "R.ok",
+          "lineNumber": 85
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 9,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/CreateOrderCmd.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 20,
+      "classes": [
+        {
+          "name": "CreateOrderCmd",
+          "startLine": 9,
+          "endLine": 23,
+          "methods": [],
+          "properties": [
+            "customerId",
+            "metalType",
+            "tradeType",
+            "direction",
+            "weight",
+            "weightUnit",
+            "purity",
+            "unitPrice",
+            "currency",
+            "deliveryType",
+            "valueDate",
+            "deliveryLocation"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CreateOrderCmd",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/SettleOrderCmd.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "SettleOrderCmd",
+          "startLine": 9,
+          "endLine": 14,
+          "methods": [],
+          "properties": [
+            "orderNo",
+            "settleCurrency",
+            "settleAmount"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SettleOrderCmd",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/query/OrderQuery.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "OrderQuery",
+          "startLine": 9,
+          "endLine": 19,
+          "methods": [],
+          "properties": [
+            "customerId",
+            "metalType",
+            "tradeType",
+            "direction",
+            "orderStatus",
+            "startDate",
+            "endDate"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OrderQuery",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 72,
+      "nonEmptyLines": 60,
+      "functions": [
+        {
+          "name": "createOrder",
+          "startLine": 26,
+          "endLine": 33,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "confirmOrder",
+          "startLine": 35,
+          "endLine": 40,
+          "params": [
+            "orderNo"
+          ]
+        },
+        {
+          "name": "executeOrder",
+          "startLine": 42,
+          "endLine": 47,
+          "params": [
+            "orderNo"
+          ]
+        },
+        {
+          "name": "cancelOrder",
+          "startLine": 49,
+          "endLine": 54,
+          "params": [
+            "orderNo"
+          ]
+        },
+        {
+          "name": "settleOrder",
+          "startLine": 56,
+          "endLine": 58,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "getOrder",
+          "startLine": 60,
+          "endLine": 63,
+          "params": [
+            "orderNo"
+          ]
+        },
+        {
+          "name": "pageOrders",
+          "startLine": 65,
+          "endLine": 67,
+          "params": [
+            "query"
+          ]
+        },
+        {
+          "name": "markToMarket",
+          "startLine": 69,
+          "endLine": 71,
+          "params": [
+            "customerId",
+            "metalType",
+            "price"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MetalAppService",
+          "startLine": 18,
+          "endLine": 72,
+          "methods": [
+            "createOrder",
+            "confirmOrder",
+            "executeOrder",
+            "cancelOrder",
+            "settleOrder",
+            "getOrder",
+            "pageOrders",
+            "markToMarket"
+          ],
+          "properties": [
+            "domainService",
+            "orderRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createOrder",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "confirmOrder",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "executeOrder",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "cancelOrder",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "settleOrder",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "getOrder",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "pageOrders",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "markToMarket",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "MetalAppService",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createOrder",
+          "callee": "domainService.createOrder",
+          "lineNumber": 27
+        },
+        {
+          "caller": "createOrder",
+          "callee": "cmd.getCustomerId",
+          "lineNumber": 28
+        },
+        {
+          "caller": "createOrder",
+          "callee": "cmd.getMetalType",
+          "lineNumber": 28
+        },
+        {
+          "caller": "createOrder",
+          "callee": "cmd.getTradeType",
+          "lineNumber": 28
+        },
+        {
+          "caller": "createOrder",
+          "callee": "cmd.getDirection",
+          "lineNumber": 29
+        },
+        {
+          "caller": "createOrder",
+          "callee": "cmd.getWeight",
+          "lineNumber": 29
+        },
+        {
+          "caller": "createOrder",
+          "callee": "cmd.getWeightUnit",
+          "lineNumber": 29
+        },
+        {
+          "caller": "createOrder",
+          "callee": "cmd.getPurity",
+          "lineNumber": 30
+        },
+        {
+          "caller": "createOrder",
+          "callee": "cmd.getUnitPrice",
+          "lineNumber": 30
+        },
+        {
+          "caller": "createOrder",
+          "callee": "cmd.getCurrency",
+          "lineNumber": 30
+        },
+        {
+          "caller": "createOrder",
+          "callee": "cmd.getDeliveryType",
+          "lineNumber": 31
+        },
+        {
+          "caller": "createOrder",
+          "callee": "cmd.getValueDate",
+          "lineNumber": 31
+        },
+        {
+          "caller": "createOrder",
+          "callee": "cmd.getDeliveryLocation",
+          "lineNumber": 31
+        },
+        {
+          "caller": "createOrder",
+          "callee": "order.getOrderNo",
+          "lineNumber": 32
+        },
+        {
+          "caller": "confirmOrder",
+          "callee": "orderRepository.findByOrderNo(orderNo).orElseThrow",
+          "lineNumber": 36
+        },
+        {
+          "caller": "confirmOrder",
+          "callee": "orderRepository.findByOrderNo",
+          "lineNumber": 36
+        },
+        {
+          "caller": "confirmOrder",
+          "callee": "new BusinessException",
+          "lineNumber": 37
+        },
+        {
+          "caller": "confirmOrder",
+          "callee": "order.confirm",
+          "lineNumber": 38
+        },
+        {
+          "caller": "confirmOrder",
+          "callee": "orderRepository.save",
+          "lineNumber": 39
+        },
+        {
+          "caller": "executeOrder",
+          "callee": "orderRepository.findByOrderNo(orderNo).orElseThrow",
+          "lineNumber": 43
+        },
+        {
+          "caller": "executeOrder",
+          "callee": "orderRepository.findByOrderNo",
+          "lineNumber": 43
+        },
+        {
+          "caller": "executeOrder",
+          "callee": "new BusinessException",
+          "lineNumber": 44
+        },
+        {
+          "caller": "executeOrder",
+          "callee": "order.execute",
+          "lineNumber": 45
+        },
+        {
+          "caller": "executeOrder",
+          "callee": "orderRepository.save",
+          "lineNumber": 46
+        },
+        {
+          "caller": "cancelOrder",
+          "callee": "orderRepository.findByOrderNo(orderNo).orElseThrow",
+          "lineNumber": 50
+        },
+        {
+          "caller": "cancelOrder",
+          "callee": "orderRepository.findByOrderNo",
+          "lineNumber": 50
+        },
+        {
+          "caller": "cancelOrder",
+          "callee": "new BusinessException",
+          "lineNumber": 51
+        },
+        {
+          "caller": "cancelOrder",
+          "callee": "order.cancel",
+          "lineNumber": 52
+        },
+        {
+          "caller": "cancelOrder",
+          "callee": "orderRepository.save",
+          "lineNumber": 53
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "domainService.settleOrder",
+          "lineNumber": 57
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "cmd.getOrderNo",
+          "lineNumber": 57
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "cmd.getSettleCurrency",
+          "lineNumber": 57
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "cmd.getSettleAmount",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getOrder",
+          "callee": "orderRepository.findByOrderNo(orderNo).orElseThrow",
+          "lineNumber": 61
+        },
+        {
+          "caller": "getOrder",
+          "callee": "orderRepository.findByOrderNo",
+          "lineNumber": 61
+        },
+        {
+          "caller": "getOrder",
+          "callee": "new BusinessException",
+          "lineNumber": 62
+        },
+        {
+          "caller": "pageOrders",
+          "callee": "orderRepository.findPage",
+          "lineNumber": 66
+        },
+        {
+          "caller": "markToMarket",
+          "callee": "domainService.markToMarket",
+          "lineNumber": 70
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 9,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 163,
+      "nonEmptyLines": 147,
+      "functions": [
+        {
+          "name": "PreciousMetalOrder",
+          "startLine": 36,
+          "endLine": 38,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 40,
+          "endLine": 63,
+          "params": [
+            "customerId",
+            "metalType",
+            "tradeType",
+            "direction",
+            "weight",
+            "weightUnit",
+            "purity",
+            "unitPrice",
+            "currency",
+            "deliveryType",
+            "valueDate",
+            "deliveryLocation"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 65,
+          "endLine": 97,
+          "params": [
+            "id",
+            "orderNo",
+            "customerId",
+            "metalType",
+            "tradeType",
+            "direction",
+            "weight",
+            "weightUnit",
+            "purity",
+            "unitPrice",
+            "totalAmount",
+            "currency",
+            "settleCurrency",
+            "deliveryType",
+            "valueDate",
+            "deliveryLocation",
+            "storageLocation",
+            "orderStatus",
+            "riskLevel",
+            "createTime"
+          ]
+        },
+        {
+          "name": "calculateTotalAmount",
+          "startLine": 99,
+          "endLine": 101,
+          "params": []
+        },
+        {
+          "name": "confirm",
+          "startLine": 103,
+          "endLine": 109,
+          "params": []
+        },
+        {
+          "name": "execute",
+          "startLine": 111,
+          "endLine": 117,
+          "params": []
+        },
+        {
+          "name": "settle",
+          "startLine": 119,
+          "endLine": 126,
+          "params": [
+            "settleCurrency",
+            "settleAmount"
+          ]
+        },
+        {
+          "name": "cancel",
+          "startLine": 128,
+          "endLine": 134,
+          "params": []
+        },
+        {
+          "name": "assignOrderNo",
+          "startLine": 136,
+          "endLine": 138,
+          "params": [
+            "orderNo"
+          ]
+        },
+        {
+          "name": "assignStorage",
+          "startLine": 140,
+          "endLine": 142,
+          "params": [
+            "storageLocation"
+          ]
+        },
+        {
+          "name": "evaluateRisk",
+          "startLine": 144,
+          "endLine": 146,
+          "params": [
+            "riskLevel"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 148,
+          "endLine": 162,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PreciousMetalOrder",
+          "startLine": 12,
+          "endLine": 163,
+          "methods": [
+            "PreciousMetalOrder",
+            "create",
+            "reconstitute",
+            "calculateTotalAmount",
+            "confirm",
+            "execute",
+            "settle",
+            "cancel",
+            "assignOrderNo",
+            "assignStorage",
+            "evaluateRisk",
+            "validate"
+          ],
+          "properties": [
+            "id",
+            "orderNo",
+            "customerId",
+            "metalType",
+            "tradeType",
+            "direction",
+            "weight",
+            "weightUnit",
+            "purity",
+            "unitPrice",
+            "totalAmount",
+            "currency",
+            "settleCurrency",
+            "deliveryType",
+            "valueDate",
+            "deliveryLocation",
+            "storageLocation",
+            "orderStatus",
+            "riskLevel",
+            "createTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "calculateTotalAmount",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "confirm",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "execute",
+          "line": 111,
+          "isDefault": false
+        },
+        {
+          "name": "settle",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "cancel",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "assignOrderNo",
+          "line": 136,
+          "isDefault": false
+        },
+        {
+          "name": "assignStorage",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "evaluateRisk",
+          "line": 144,
+          "isDefault": false
+        },
+        {
+          "name": "PreciousMetalOrder",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new PreciousMetalOrder",
+          "lineNumber": 45
+        },
+        {
+          "caller": "create",
+          "callee": "order.calculateTotalAmount",
+          "lineNumber": 58
+        },
+        {
+          "caller": "create",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 60
+        },
+        {
+          "caller": "create",
+          "callee": "order.validate",
+          "lineNumber": 61
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new PreciousMetalOrder",
+          "lineNumber": 75
+        },
+        {
+          "caller": "calculateTotalAmount",
+          "callee": "this.weight.multiply(this.unitPrice).multiply",
+          "lineNumber": 100
+        },
+        {
+          "caller": "calculateTotalAmount",
+          "callee": "this.weight.multiply",
+          "lineNumber": 100
+        },
+        {
+          "caller": "confirm",
+          "callee": "\"PENDING\".equals",
+          "lineNumber": 104
+        },
+        {
+          "caller": "confirm",
+          "callee": "new BusinessException",
+          "lineNumber": 105
+        },
+        {
+          "caller": "confirm",
+          "callee": "markUpdated",
+          "lineNumber": 108
+        },
+        {
+          "caller": "execute",
+          "callee": "\"CONFIRMED\".equals",
+          "lineNumber": 112
+        },
+        {
+          "caller": "execute",
+          "callee": "new BusinessException",
+          "lineNumber": 113
+        },
+        {
+          "caller": "execute",
+          "callee": "markUpdated",
+          "lineNumber": 116
+        },
+        {
+          "caller": "settle",
+          "callee": "\"EXECUTED\".equals",
+          "lineNumber": 120
+        },
+        {
+          "caller": "settle",
+          "callee": "new BusinessException",
+          "lineNumber": 121
+        },
+        {
+          "caller": "settle",
+          "callee": "markUpdated",
+          "lineNumber": 125
+        },
+        {
+          "caller": "cancel",
+          "callee": "\"SETTLED\".equals",
+          "lineNumber": 129
+        },
+        {
+          "caller": "cancel",
+          "callee": "new BusinessException",
+          "lineNumber": 130
+        },
+        {
+          "caller": "cancel",
+          "callee": "markUpdated",
+          "lineNumber": 133
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 151
+        },
+        {
+          "caller": "validate",
+          "callee": "metalType.isBlank",
+          "lineNumber": 153
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 154
+        },
+        {
+          "caller": "validate",
+          "callee": "weight.compareTo",
+          "lineNumber": 156
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 157
+        },
+        {
+          "caller": "validate",
+          "callee": "purity.compareTo",
+          "lineNumber": 159
+        },
+        {
+          "caller": "validate",
+          "callee": "purity.compareTo",
+          "lineNumber": 159
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 160
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 11,
+        "functionCount": 12,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/MetalPositionRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 8,
+      "classes": [
+        {
+          "name": "MetalPositionRepository",
+          "startLine": 7,
+          "endLine": 11,
+          "methods": [
+            "save",
+            "findById",
+            "findByCustomerAndMetal"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MetalPositionRepository",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/PreciousMetalOrderRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "PreciousMetalOrderRepository",
+          "startLine": 9,
+          "endLine": 14,
+          "methods": [
+            "save",
+            "findById",
+            "findByOrderNo",
+            "findPage"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "PreciousMetalOrderRepository",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 84,
+      "nonEmptyLines": 70,
+      "functions": [
+        {
+          "name": "createOrder",
+          "startLine": 22,
+          "endLine": 48,
+          "params": [
+            "customerId",
+            "metalType",
+            "tradeType",
+            "direction",
+            "weight",
+            "weightUnit",
+            "purity",
+            "unitPrice",
+            "currency",
+            "deliveryType",
+            "valueDate",
+            "deliveryLocation"
+          ]
+        },
+        {
+          "name": "settleOrder",
+          "startLine": 50,
+          "endLine": 76,
+          "params": [
+            "orderNo",
+            "settleCurrency",
+            "settleAmount"
+          ]
+        },
+        {
+          "name": "markToMarket",
+          "startLine": 78,
+          "endLine": 83,
+          "params": [
+            "customerId",
+            "metalType",
+            "newPrice"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PreciousMetalDomainService",
+          "startLine": 15,
+          "endLine": 84,
+          "methods": [
+            "createOrder",
+            "settleOrder",
+            "markToMarket"
+          ],
+          "properties": [
+            "orderRepository",
+            "positionRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createOrder",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "settleOrder",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "markToMarket",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "PreciousMetalDomainService",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createOrder",
+          "callee": "\"SELL\".equals",
+          "lineNumber": 27
+        },
+        {
+          "caller": "createOrder",
+          "callee": "positionRepository.findByCustomerAndMetal(customerId, metalType).orElseThrow",
+          "lineNumber": 28
+        },
+        {
+          "caller": "createOrder",
+          "callee": "positionRepository.findByCustomerAndMetal",
+          "lineNumber": 28
+        },
+        {
+          "caller": "createOrder",
+          "callee": "new BusinessException",
+          "lineNumber": 29
+        },
+        {
+          "caller": "createOrder",
+          "callee": "position.getAvailableWeight().compareTo",
+          "lineNumber": 30
+        },
+        {
+          "caller": "createOrder",
+          "callee": "position.getAvailableWeight",
+          "lineNumber": 30
+        },
+        {
+          "caller": "createOrder",
+          "callee": "new BusinessException",
+          "lineNumber": 31
+        },
+        {
+          "caller": "createOrder",
+          "callee": "position.lock",
+          "lineNumber": 33
+        },
+        {
+          "caller": "createOrder",
+          "callee": "positionRepository.save",
+          "lineNumber": 34
+        },
+        {
+          "caller": "createOrder",
+          "callee": "PreciousMetalOrder.create",
+          "lineNumber": 37
+        },
+        {
+          "caller": "createOrder",
+          "callee": "LocalDate.now().toString().replace",
+          "lineNumber": 41
+        },
+        {
+          "caller": "createOrder",
+          "callee": "LocalDate.now().toString",
+          "lineNumber": 41
+        },
+        {
+          "caller": "createOrder",
+          "callee": "LocalDate.now",
+          "lineNumber": 41
+        },
+        {
+          "caller": "createOrder",
+          "callee": "metalType.substring(0, 2).toUpperCase",
+          "lineNumber": 42
+        },
+        {
+          "caller": "createOrder",
+          "callee": "metalType.substring",
+          "lineNumber": 42
+        },
+        {
+          "caller": "createOrder",
+          "callee": "String.format",
+          "lineNumber": 43
+        },
+        {
+          "caller": "createOrder",
+          "callee": "System.currentTimeMillis",
+          "lineNumber": 43
+        },
+        {
+          "caller": "createOrder",
+          "callee": "order.assignOrderNo",
+          "lineNumber": 44
+        },
+        {
+          "caller": "createOrder",
+          "callee": "orderRepository.save",
+          "lineNumber": 46
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "orderRepository.findByOrderNo(orderNo).orElseThrow",
+          "lineNumber": 51
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "orderRepository.findByOrderNo",
+          "lineNumber": 51
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "new BusinessException",
+          "lineNumber": 52
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "order.settle",
+          "lineNumber": 54
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "\"BUY\".equals",
+          "lineNumber": 56
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "order.getDirection",
+          "lineNumber": 56
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "positionRepository\n                    .findByCustomerAndMetal(order.getCustomerId(), order.getMetalType()).orElseGet",
+          "lineNumber": 57
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "positionRepository.findByCustomerAndMetal",
+          "lineNumber": 57
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "order.getCustomerId",
+          "lineNumber": 58
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "order.getMetalType",
+          "lineNumber": 58
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "MetalPosition.create",
+          "lineNumber": 59
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "order.getCustomerId",
+          "lineNumber": 60
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "order.getMetalType",
+          "lineNumber": 60
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "order.getWeightUnit",
+          "lineNumber": 61
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "order.getCurrency",
+          "lineNumber": 62
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "order.getDeliveryLocation",
+          "lineNumber": 63
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "position.addWeight",
+          "lineNumber": 65
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "order.getWeight",
+          "lineNumber": 65
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "order.getUnitPrice",
+          "lineNumber": 65
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "positionRepository.save",
+          "lineNumber": 66
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "positionRepository\n                    .findByCustomerAndMetal(order.getCustomerId(), order.getMetalType()).orElseThrow",
+          "lineNumber": 68
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "positionRepository.findByCustomerAndMetal",
+          "lineNumber": 68
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "order.getCustomerId",
+          "lineNumber": 69
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "order.getMetalType",
+          "lineNumber": 69
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "new BusinessException",
+          "lineNumber": 70
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "position.deliver",
+          "lineNumber": 71
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "order.getWeight",
+          "lineNumber": 71
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "positionRepository.save",
+          "lineNumber": 72
+        },
+        {
+          "caller": "settleOrder",
+          "callee": "orderRepository.save",
+          "lineNumber": 75
+        },
+        {
+          "caller": "markToMarket",
+          "callee": "positionRepository.findByCustomerAndMetal(customerId, metalType).orElseThrow",
+          "lineNumber": 79
+        },
+        {
+          "caller": "markToMarket",
+          "callee": "positionRepository.findByCustomerAndMetal",
+          "lineNumber": 79
+        },
+        {
+          "caller": "markToMarket",
+          "callee": "new BusinessException",
+          "lineNumber": 80
+        },
+        {
+          "caller": "markToMarket",
+          "callee": "position.markToMarket",
+          "lineNumber": 81
+        },
+        {
+          "caller": "markToMarket",
+          "callee": "positionRepository.save",
+          "lineNumber": 82
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    }
+  ]
+}

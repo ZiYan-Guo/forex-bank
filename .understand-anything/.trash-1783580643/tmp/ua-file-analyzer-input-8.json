@@ -1,0 +1,326 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/application/service/LimitAppService.java",
+      "language": "java",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/domain/model/aggregate/LimitConfig.java",
+      "language": "java",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/domain/repository/LimitConfigRepository.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/domain/service/LimitDomainService.java",
+      "language": "java",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java",
+      "language": "java",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "language": "java",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/application/service/OcrAppService.java",
+      "language": "java",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/event/OcrCompletedEvent.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/model/aggregate/OcrTask.java",
+      "language": "java",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/repository/OcrTaskRepository.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/service/OcrDomainService.java",
+      "language": "java",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/test/java/com/forex/ocr/domain/service/OcrDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/service/BatchPaymentService.java",
+      "language": "java",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSentEvent.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSubmittedEvent.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/aggregate/CrossBorderPayment.java",
+      "language": "java",
+      "sizeLines": 308,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/BeneficiaryInfo.java",
+      "language": "java",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PaymentAmount.java",
+      "language": "java",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PaymentNo.java",
+      "language": "java",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PostalAddress.java",
+      "language": "java",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/SwiftCode.java",
+      "language": "java",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/repository/PaymentRepository.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "language": "java",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/infrastructure/event/PaymentEventListener.java",
+      "language": "java",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/test/java/com/forex/payment/domain/service/PaymentDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 157,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/domain/model/valueobject/PositionAmount.java",
+      "language": "java",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/MetalPosition.java",
+      "language": "java",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "language": "java",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "forex-limit/src/main/java/com/forex/limit/application/service/LimitAppService.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "forex-limit/src/main/java/com/forex/limit/application/command/CreateLimitCmd.java",
+      "forex-limit/src/main/java/com/forex/limit/domain/model/aggregate/LimitConfig.java",
+      "forex-limit/src/main/java/com/forex/limit/domain/repository/LimitConfigRepository.java",
+      "forex-limit/src/main/java/com/forex/limit/domain/service/LimitDomainService.java"
+    ],
+    "forex-limit/src/main/java/com/forex/limit/domain/model/aggregate/LimitConfig.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-limit/src/main/java/com/forex/limit/domain/repository/LimitConfigRepository.java": [
+      "forex-limit/src/main/java/com/forex/limit/domain/model/aggregate/LimitConfig.java"
+    ],
+    "forex-limit/src/main/java/com/forex/limit/domain/service/LimitDomainService.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "forex-limit/src/main/java/com/forex/limit/domain/model/aggregate/LimitConfig.java",
+      "forex-limit/src/main/java/com/forex/limit/domain/repository/LimitConfigRepository.java"
+    ],
+    "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-ocr/src/main/java/com/forex/ocr/application/service/OcrAppService.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "forex-ocr/src/main/java/com/forex/ocr/application/query/OcrQuery.java",
+      "forex-ocr/src/main/java/com/forex/ocr/domain/model/aggregate/OcrTask.java",
+      "forex-ocr/src/main/java/com/forex/ocr/domain/repository/OcrTaskRepository.java",
+      "forex-ocr/src/main/java/com/forex/ocr/domain/service/OcrDomainService.java"
+    ],
+    "forex-ocr/src/main/java/com/forex/ocr/domain/event/OcrCompletedEvent.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseDomainEvent.java"
+    ],
+    "forex-ocr/src/main/java/com/forex/ocr/domain/model/aggregate/OcrTask.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-ocr/src/main/java/com/forex/ocr/domain/repository/OcrTaskRepository.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "forex-ocr/src/main/java/com/forex/ocr/domain/model/aggregate/OcrTask.java"
+    ],
+    "forex-ocr/src/main/java/com/forex/ocr/domain/service/OcrDomainService.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "forex-ocr/src/main/java/com/forex/ocr/domain/event/OcrCompletedEvent.java",
+      "forex-ocr/src/main/java/com/forex/ocr/domain/model/aggregate/OcrTask.java",
+      "forex-ocr/src/main/java/com/forex/ocr/domain/repository/OcrTaskRepository.java"
+    ],
+    "forex-ocr/src/test/java/com/forex/ocr/domain/service/OcrDomainServiceTest.java": [
+      "forex-ocr/src/main/java/com/forex/ocr/domain/event/OcrCompletedEvent.java",
+      "forex-ocr/src/main/java/com/forex/ocr/domain/model/aggregate/OcrTask.java",
+      "forex-ocr/src/main/java/com/forex/ocr/domain/repository/OcrTaskRepository.java"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/application/service/BatchPaymentService.java": [
+      "forex-payment/src/main/java/com/forex/payment/application/command/CreatePaymentCmd.java",
+      "forex-payment/src/main/java/com/forex/payment/domain/model/aggregate/CrossBorderPayment.java",
+      "forex-payment/src/main/java/com/forex/payment/domain/repository/PaymentRepository.java",
+      "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSentEvent.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseDomainEvent.java"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSubmittedEvent.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseDomainEvent.java"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/model/aggregate/CrossBorderPayment.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/BeneficiaryInfo.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PaymentAmount.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PaymentNo.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PostalAddress.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/SwiftCode.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/repository/PaymentRepository.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "forex-payment/src/main/java/com/forex/payment/domain/model/aggregate/CrossBorderPayment.java",
+      "forex-payment/src/main/java/com/forex/payment/domain/model/dto/PaymentQuery.java"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSentEvent.java",
+      "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSubmittedEvent.java",
+      "forex-payment/src/main/java/com/forex/payment/domain/model/aggregate/CrossBorderPayment.java",
+      "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PaymentNo.java",
+      "forex-payment/src/main/java/com/forex/payment/domain/repository/PaymentRepository.java"
+    ],
+    "forex-payment/src/main/java/com/forex/payment/infrastructure/event/PaymentEventListener.java": [
+      "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSentEvent.java",
+      "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSubmittedEvent.java"
+    ],
+    "forex-payment/src/test/java/com/forex/payment/domain/service/PaymentDomainServiceTest.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSentEvent.java",
+      "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSubmittedEvent.java",
+      "forex-payment/src/main/java/com/forex/payment/domain/model/aggregate/CrossBorderPayment.java",
+      "forex-payment/src/main/java/com/forex/payment/domain/repository/PaymentRepository.java"
+    ],
+    "forex-position/src/main/java/com/forex/position/domain/model/valueobject/PositionAmount.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/MetalPosition.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "forex-rate/src/main/java/com/forex/rate/application/command/RateSaveCmd.java",
+      "forex-rate/src/main/java/com/forex/rate/domain/event/RateUpdatedEvent.java",
+      "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java"
+    ]
+  }
+}

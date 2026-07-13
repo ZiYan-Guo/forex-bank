@@ -1,0 +1,184 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "docker/docker-compose.yml",
+      "language": "yaml",
+      "sizeLines": 128,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "docker/nacos/conf/application.properties",
+      "language": "properties",
+      "sizeLines": 7,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-account/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/BalanceSnapshotMapper.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-ai/pom.xml",
+      "language": "xml",
+      "sizeLines": 57,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java",
+      "language": "java",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "language": "java",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 71,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/faq/lc_process_faq.md",
+      "language": "markdown",
+      "sizeLines": 50,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/faq/spot_forex_faq.md",
+      "language": "markdown",
+      "sizeLines": 30,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/policy/aml_regulation.md",
+      "language": "markdown",
+      "sizeLines": 41,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/policy/forex_administration.md",
+      "language": "markdown",
+      "sizeLines": 31,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "forex-auth/pom.xml",
+      "language": "xml",
+      "sizeLines": 63,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 57,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-bank-web/src/components/layout/MainLayout.vue",
+      "language": "vue",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/env.d.ts",
+      "language": "typescript",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/account/AccountList.vue",
+      "language": "vue",
+      "sizeLines": 176,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "docker/docker-compose.yml": [],
+    "docker/nacos/conf/application.properties": [],
+    "forex-account/pom.xml": [],
+    "forex-account/src/main/java/com/forex/account/AccountApplication.java": [],
+    "forex-account/src/main/java/com/forex/account/infrastructure/mapper/BalanceSnapshotMapper.java": [
+      "forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java"
+    ],
+    "forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java": [],
+    "forex-account/src/main/resources/application.yml": [],
+    "forex-ai/pom.xml": [],
+    "forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java": [],
+    "forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java": [],
+    "forex-ai/src/main/java/com/forex/ai/AiApplication.java": [],
+    "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java": [],
+    "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java": [],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java": [],
+    "forex-ai/src/main/resources/application.yml": [],
+    "forex-ai/src/main/resources/knowledge/faq/lc_process_faq.md": [],
+    "forex-ai/src/main/resources/knowledge/faq/spot_forex_faq.md": [],
+    "forex-ai/src/main/resources/knowledge/policy/aml_regulation.md": [],
+    "forex-ai/src/main/resources/knowledge/policy/forex_administration.md": [],
+    "forex-auth/pom.xml": [],
+    "forex-auth/src/main/java/com/forex/auth/AuthApplication.java": [],
+    "forex-auth/src/main/resources/application.yml": [],
+    "forex-bank-web/src/components/layout/MainLayout.vue": [],
+    "forex-bank-web/src/env.d.ts": [],
+    "forex-bank-web/src/views/account/AccountList.vue": []
+  }
+}

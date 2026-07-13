@@ -1,0 +1,324 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "sizeLines": 60,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "sizeLines": 63,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "sizeLines": 65,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "sizeLines": 64,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/resources/application.yml",
+      "sizeLines": 61,
+      "language": "yaml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/faq/lc_process_faq.md",
+      "sizeLines": 50,
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/faq/spot_forex_faq.md",
+      "sizeLines": 30,
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/policy/aml_regulation.md",
+      "sizeLines": 41,
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/policy/forex_administration.md",
+      "sizeLines": 31,
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "forex-auth/pom.xml",
+      "sizeLines": 63,
+      "language": "xml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "sizeLines": 165,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java",
+      "sizeLines": 17,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java",
+      "sizeLines": 30,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "sizeLines": 72,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "sizeLines": 16,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Permission.java",
+      "sizeLines": 20,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Role.java",
+      "sizeLines": 20,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "sizeLines": 125,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/PasswordHash.java",
+      "sizeLines": 43,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/TokenVo.java",
+      "sizeLines": 34,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "sizeLines": 26,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/service/AuthenticationDomainService.java",
+      "sizeLines": 50,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java",
+      "sizeLines": 37,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/PermissionPO.java",
+      "sizeLines": 21,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/RolePermissionPO.java",
+      "sizeLines": 17,
+      "language": "java",
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java": [
+      "import com.forex.ai.domain.model.aggregate.ChatSession;",
+      "import com.forex.ai.domain.repository.ChatSessionRepository;",
+      "import com.forex.ai.infrastructure.mapper.ChatSessionMapper;",
+      "import com.forex.ai.infrastructure.persistence.ChatSessionPO;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Repository;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java": [
+      "import com.forex.ai.domain.model.aggregate.DocumentAudit;",
+      "import com.forex.ai.domain.repository.DocumentAuditRepository;",
+      "import com.forex.ai.infrastructure.mapper.DocumentAuditMapper;",
+      "import com.forex.ai.infrastructure.persistence.DocumentAuditPO;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Repository;",
+      "import java.util.Optional;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java": [
+      "import com.forex.ai.domain.model.aggregate.RatePrediction;",
+      "import com.forex.ai.domain.repository.RatePredictionRepository;",
+      "import com.forex.ai.infrastructure.mapper.RatePredictionMapper;",
+      "import com.forex.ai.infrastructure.persistence.RatePredictionPO;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Repository;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java": [
+      "import com.forex.ai.domain.model.aggregate.RiskAiAssessment;",
+      "import com.forex.ai.domain.repository.RiskAiAssessmentRepository;",
+      "import com.forex.ai.infrastructure.mapper.RiskAiAssessmentMapper;",
+      "import com.forex.ai.infrastructure.persistence.RiskAiAssessmentPO;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Repository;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-ai/src/main/resources/application.yml": [],
+    "forex-ai/src/main/resources/knowledge/faq/lc_process_faq.md": [],
+    "forex-ai/src/main/resources/knowledge/faq/spot_forex_faq.md": [],
+    "forex-ai/src/main/resources/knowledge/policy/aml_regulation.md": [],
+    "forex-ai/src/main/resources/knowledge/policy/forex_administration.md": [],
+    "forex-auth/pom.xml": [],
+    "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java": [
+      "import com.forex.auth.adapter.dto.LoginReq;",
+      "import com.forex.auth.adapter.dto.TokenResp;",
+      "import com.forex.auth.application.service.AuthAppService;",
+      "import com.forex.common.base.annotation.RateLimit;",
+      "import com.forex.common.base.exception.BusinessException;",
+      "import com.forex.common.base.result.R;",
+      "import com.forex.common.base.result.ResultCode;",
+      "import com.forex.common.security.jwt.JwtUtil;",
+      "import io.jsonwebtoken.Claims;",
+      "import io.swagger.v3.oas.annotations.Operation;",
+      "import io.swagger.v3.oas.annotations.tags.Tag;",
+      "import jakarta.validation.Valid;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.data.redis.core.StringRedisTemplate;",
+      "import org.springframework.web.bind.annotation.GetMapping;",
+      "import org.springframework.web.bind.annotation.PostMapping;",
+      "import org.springframework.web.bind.annotation.RequestBody;",
+      "import org.springframework.web.bind.annotation.RequestHeader;",
+      "import org.springframework.web.bind.annotation.RequestMapping;",
+      "import org.springframework.web.bind.annotation.RestController;"
+    ],
+    "forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import jakarta.validation.constraints.NotBlank;",
+      "import lombok.Data;"
+    ],
+    "forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java": [
+      "import io.swagger.v3.oas.annotations.media.Schema;",
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Data;",
+      "import lombok.NoArgsConstructor;"
+    ],
+    "forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java": [
+      "import com.forex.auth.domain.model.aggregate.User;",
+      "import com.forex.auth.domain.service.AuthenticationDomainService;",
+      "import com.forex.common.security.jwt.JwtUtil;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.data.redis.core.StringRedisTemplate;",
+      "import org.springframework.stereotype.Service;",
+      "import org.springframework.util.DigestUtils;",
+      "import java.nio.charset.StandardCharsets;",
+      "import java.util.List;",
+      "import java.util.concurrent.TimeUnit;"
+    ],
+    "forex-auth/src/main/java/com/forex/auth/AuthApplication.java": [
+      "import org.mybatis.spring.annotation.MapperScan;",
+      "import org.springframework.boot.SpringApplication;",
+      "import org.springframework.boot.autoconfigure.SpringBootApplication;",
+      "import org.springframework.cloud.client.discovery.EnableDiscoveryClient;"
+    ],
+    "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Permission.java": [
+      "import com.forex.common.base.domain.BaseEntity;",
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Getter;",
+      "import lombok.NoArgsConstructor;"
+    ],
+    "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Role.java": [
+      "import com.forex.common.base.domain.BaseEntity;",
+      "import lombok.AllArgsConstructor;",
+      "import lombok.Getter;",
+      "import lombok.NoArgsConstructor;",
+      "import java.util.Set;"
+    ],
+    "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java": [
+      "import com.forex.common.base.domain.BaseAggregate;",
+      "import lombok.Getter;",
+      "import java.time.LocalDateTime;",
+      "import java.util.Set;"
+    ],
+    "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/PasswordHash.java": [
+      "import com.forex.common.base.domain.BaseValueObject;",
+      "import cn.hutool.crypto.digest.BCrypt;",
+      "import lombok.Getter;",
+      "import java.util.Objects;"
+    ],
+    "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/TokenVo.java": [
+      "import com.forex.common.base.domain.BaseValueObject;",
+      "import lombok.Getter;",
+      "import java.util.List;",
+      "import java.util.Objects;"
+    ],
+    "forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java": [
+      "import com.forex.auth.domain.model.aggregate.Permission;",
+      "import com.forex.auth.domain.model.aggregate.Role;",
+      "import com.forex.auth.domain.model.aggregate.User;",
+      "import java.util.List;",
+      "import java.util.Optional;",
+      "import java.util.Set;"
+    ],
+    "forex-auth/src/main/java/com/forex/auth/domain/service/AuthenticationDomainService.java": [
+      "import com.forex.auth.domain.model.aggregate.Role;",
+      "import com.forex.auth.domain.model.aggregate.User;",
+      "import com.forex.auth.domain.repository.UserRepository;",
+      "import cn.hutool.crypto.digest.BCrypt;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;",
+      "import java.util.Set;"
+    ],
+    "forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java": [
+      "import com.forex.auth.infrastructure.persistence.PermissionPO;",
+      "import com.forex.auth.infrastructure.persistence.RolePO;",
+      "import com.forex.auth.infrastructure.persistence.UserPO;",
+      "import com.forex.common.mybatis.base.BaseMapperExt;",
+      "import org.apache.ibatis.annotations.Mapper;",
+      "import org.apache.ibatis.annotations.Param;",
+      "import org.apache.ibatis.annotations.Select;",
+      "import java.util.List;"
+    ],
+    "forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/PermissionPO.java": [
+      "import com.forex.common.mybatis.base.BasePO;",
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;"
+    ],
+    "forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/RolePermissionPO.java": [
+      "import com.forex.common.mybatis.base.BasePO;",
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;"
+    ]
+  }
+}

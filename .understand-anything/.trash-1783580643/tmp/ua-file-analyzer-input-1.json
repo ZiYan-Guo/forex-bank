@@ -1,0 +1,42 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "API_SECURITY_GUIDE.md",
+      "sizeLines": 156,
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "IMPROVEMENTS.md",
+      "sizeLines": 256,
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "LICENSE",
+      "sizeLines": 201,
+      "language": "text",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "README.md",
+      "sizeLines": 345,
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "pom.xml",
+      "sizeLines": 297,
+      "language": "xml",
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "API_SECURITY_GUIDE.md": [],
+    "IMPROVEMENTS.md": [],
+    "LICENSE": [],
+    "README.md": [],
+    "pom.xml": []
+  }
+}

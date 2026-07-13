@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "document:API_SECURITY_GUIDE.md",
+      "type": "document",
+      "name": "API_SECURITY_GUIDE.md",
+      "filePath": "API_SECURITY_GUIDE.md",
+      "summary": "API_SECURITY_GUIDE.md 提供 API_SECURITY_GUIDE.md 项目的说明文档，帮助理解业务范围、技术栈或改进记录。",
+      "tags": [
+        "documentation",
+        "overview",
+        "API_SECURITY_GUIDE.md"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:IMPROVEMENTS.md",
+      "type": "document",
+      "name": "IMPROVEMENTS.md",
+      "filePath": "IMPROVEMENTS.md",
+      "summary": "IMPROVEMENTS.md 提供 IMPROVEMENTS.md 项目的说明文档，帮助理解业务范围、技术栈或改进记录。",
+      "tags": [
+        "documentation",
+        "overview",
+        "IMPROVEMENTS.md"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "README.md 提供 README.md 项目的说明文档，帮助理解业务范围、技术栈或改进记录。",
+      "tags": [
+        "documentation",
+        "overview",
+        "README.md"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "pom.xml",
+      "summary": "pom.xml 是 pom.xml 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "pom.xml"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": []
+}

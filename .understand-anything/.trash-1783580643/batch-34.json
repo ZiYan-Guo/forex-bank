@@ -1,0 +1,1570 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "type": "file",
+      "name": "PreciousMetalController.java",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "summary": "PreciousMetalController.java 是 precious-metal 模块中的REST 控制器，主要定义 PreciousMetalController，承担该业务域的分层协作职责。",
+      "tags": [
+        "api-handler",
+        "precious-metal",
+        "java",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:PreciousMetalController",
+      "type": "class",
+      "name": "PreciousMetalController",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "lineRange": [
+        18,
+        87
+      ],
+      "summary": "PreciousMetalController 是 precious-metal 模块的REST 控制器，封装 8 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "api-handler",
+        "precious-metal",
+        "java",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:createOrder",
+      "type": "function",
+      "name": "createOrder",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "lineRange": [
+        26,
+        32
+      ],
+      "summary": "createOrder 实现 precious-metal 模块中的关键处理步骤，参数包括 cmd。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:confirmOrder",
+      "type": "function",
+      "name": "confirmOrder",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "lineRange": [
+        34,
+        40
+      ],
+      "summary": "confirmOrder 实现 precious-metal 模块中的关键处理步骤，参数包括 orderNo。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:executeOrder",
+      "type": "function",
+      "name": "executeOrder",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "lineRange": [
+        42,
+        48
+      ],
+      "summary": "executeOrder 实现 precious-metal 模块中的关键处理步骤，参数包括 orderNo。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:cancelOrder",
+      "type": "function",
+      "name": "cancelOrder",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "lineRange": [
+        50,
+        56
+      ],
+      "summary": "cancelOrder 实现 precious-metal 模块中的关键处理步骤，参数包括 orderNo。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:settleOrder",
+      "type": "function",
+      "name": "settleOrder",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "lineRange": [
+        58,
+        64
+      ],
+      "summary": "settleOrder 实现 precious-metal 模块中的关键处理步骤，参数包括 cmd。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:getOrder",
+      "type": "function",
+      "name": "getOrder",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "lineRange": [
+        66,
+        70
+      ],
+      "summary": "getOrder 实现 precious-metal 模块中的关键处理步骤，参数包括 orderNo。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:pageOrders",
+      "type": "function",
+      "name": "pageOrders",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "lineRange": [
+        72,
+        76
+      ],
+      "summary": "pageOrders 实现 precious-metal 模块中的关键处理步骤，参数包括 query。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:markToMarket",
+      "type": "function",
+      "name": "markToMarket",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "lineRange": [
+        78,
+        86
+      ],
+      "summary": "markToMarket 实现 precious-metal 模块中的关键处理步骤，参数包括 customerId、metalType、price。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/CreateOrderCmd.java",
+      "type": "file",
+      "name": "CreateOrderCmd.java",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/CreateOrderCmd.java",
+      "summary": "CreateOrderCmd.java 是 precious-metal 模块中的传输对象，主要定义 CreateOrderCmd，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "precious-metal",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/CreateOrderCmd.java:CreateOrderCmd",
+      "type": "class",
+      "name": "CreateOrderCmd",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/CreateOrderCmd.java",
+      "lineRange": [
+        9,
+        23
+      ],
+      "summary": "CreateOrderCmd 是 precious-metal 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "precious-metal",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/SettleOrderCmd.java",
+      "type": "file",
+      "name": "SettleOrderCmd.java",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/SettleOrderCmd.java",
+      "summary": "SettleOrderCmd.java 是 precious-metal 模块中的传输对象，主要定义 SettleOrderCmd，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "precious-metal",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/SettleOrderCmd.java:SettleOrderCmd",
+      "type": "class",
+      "name": "SettleOrderCmd",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/SettleOrderCmd.java",
+      "lineRange": [
+        9,
+        14
+      ],
+      "summary": "SettleOrderCmd 是 precious-metal 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "precious-metal",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/query/OrderQuery.java",
+      "type": "file",
+      "name": "OrderQuery.java",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/query/OrderQuery.java",
+      "summary": "OrderQuery.java 是 precious-metal 模块中的传输对象，主要定义 OrderQuery，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "precious-metal",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/query/OrderQuery.java:OrderQuery",
+      "type": "class",
+      "name": "OrderQuery",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/query/OrderQuery.java",
+      "lineRange": [
+        9,
+        19
+      ],
+      "summary": "OrderQuery 是 precious-metal 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "precious-metal",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "type": "file",
+      "name": "MetalAppService.java",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "summary": "MetalAppService.java 是 precious-metal 模块中的应用服务，主要定义 MetalAppService，承担该业务域的分层协作职责。",
+      "tags": [
+        "application-service",
+        "precious-metal",
+        "java",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:MetalAppService",
+      "type": "class",
+      "name": "MetalAppService",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "lineRange": [
+        18,
+        72
+      ],
+      "summary": "MetalAppService 是 precious-metal 模块的应用服务，封装 8 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "application-service",
+        "precious-metal",
+        "java",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:createOrder",
+      "type": "function",
+      "name": "createOrder",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "lineRange": [
+        26,
+        33
+      ],
+      "summary": "createOrder 实现 precious-metal 模块中的关键处理步骤，参数包括 cmd。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:confirmOrder",
+      "type": "function",
+      "name": "confirmOrder",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "lineRange": [
+        35,
+        40
+      ],
+      "summary": "confirmOrder 实现 precious-metal 模块中的关键处理步骤，参数包括 orderNo。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:executeOrder",
+      "type": "function",
+      "name": "executeOrder",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "lineRange": [
+        42,
+        47
+      ],
+      "summary": "executeOrder 实现 precious-metal 模块中的关键处理步骤，参数包括 orderNo。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:cancelOrder",
+      "type": "function",
+      "name": "cancelOrder",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "lineRange": [
+        49,
+        54
+      ],
+      "summary": "cancelOrder 实现 precious-metal 模块中的关键处理步骤，参数包括 orderNo。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:settleOrder",
+      "type": "function",
+      "name": "settleOrder",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "lineRange": [
+        56,
+        58
+      ],
+      "summary": "settleOrder 实现 precious-metal 模块中的关键处理步骤，参数包括 cmd。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:getOrder",
+      "type": "function",
+      "name": "getOrder",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "lineRange": [
+        60,
+        63
+      ],
+      "summary": "getOrder 实现 precious-metal 模块中的关键处理步骤，参数包括 orderNo。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:pageOrders",
+      "type": "function",
+      "name": "pageOrders",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "lineRange": [
+        65,
+        67
+      ],
+      "summary": "pageOrders 实现 precious-metal 模块中的关键处理步骤，参数包括 query。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:markToMarket",
+      "type": "function",
+      "name": "markToMarket",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "lineRange": [
+        69,
+        71
+      ],
+      "summary": "markToMarket 实现 precious-metal 模块中的关键处理步骤，参数包括 customerId、metalType、price。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "type": "file",
+      "name": "PreciousMetalOrder.java",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "summary": "PreciousMetalOrder.java 是 precious-metal 模块中的领域模型，主要定义 PreciousMetalOrder，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "precious-metal",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:PreciousMetalOrder",
+      "type": "class",
+      "name": "PreciousMetalOrder",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "lineRange": [
+        12,
+        163
+      ],
+      "summary": "PreciousMetalOrder 是 precious-metal 模块的领域模型，封装 12 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "precious-metal",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:PreciousMetalOrder",
+      "type": "function",
+      "name": "PreciousMetalOrder",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "lineRange": [
+        36,
+        38
+      ],
+      "summary": "PreciousMetalOrder 实现 precious-metal 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "lineRange": [
+        40,
+        63
+      ],
+      "summary": "create 实现 precious-metal 模块中的关键处理步骤，参数包括 customerId、metalType、tradeType、direction、weight、weightUnit、purity、unitPrice、currency、deliveryType、valueDate、deliveryLocation。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:reconstitute",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "lineRange": [
+        65,
+        97
+      ],
+      "summary": "reconstitute 实现 precious-metal 模块中的关键处理步骤，参数包括 id、orderNo、customerId、metalType、tradeType、direction、weight、weightUnit、purity、unitPrice、totalAmount、currency、settleCurrency、deliveryType、valueDate、deliveryLocation、storageLocation、orderStatus、riskLevel、createTime。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "data-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:calculateTotalAmount",
+      "type": "function",
+      "name": "calculateTotalAmount",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "lineRange": [
+        99,
+        101
+      ],
+      "summary": "calculateTotalAmount 实现 precious-metal 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:confirm",
+      "type": "function",
+      "name": "confirm",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "lineRange": [
+        103,
+        109
+      ],
+      "summary": "confirm 实现 precious-metal 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:execute",
+      "type": "function",
+      "name": "execute",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "lineRange": [
+        111,
+        117
+      ],
+      "summary": "execute 实现 precious-metal 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:settle",
+      "type": "function",
+      "name": "settle",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "lineRange": [
+        119,
+        126
+      ],
+      "summary": "settle 实现 precious-metal 模块中的关键处理步骤，参数包括 settleCurrency、settleAmount。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:cancel",
+      "type": "function",
+      "name": "cancel",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "lineRange": [
+        128,
+        134
+      ],
+      "summary": "cancel 实现 precious-metal 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:assignOrderNo",
+      "type": "function",
+      "name": "assignOrderNo",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "lineRange": [
+        136,
+        138
+      ],
+      "summary": "assignOrderNo 实现 precious-metal 模块中的关键处理步骤，参数包括 orderNo。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:assignStorage",
+      "type": "function",
+      "name": "assignStorage",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "lineRange": [
+        140,
+        142
+      ],
+      "summary": "assignStorage 实现 precious-metal 模块中的关键处理步骤，参数包括 storageLocation。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:evaluateRisk",
+      "type": "function",
+      "name": "evaluateRisk",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "lineRange": [
+        144,
+        146
+      ],
+      "summary": "evaluateRisk 实现 precious-metal 模块中的关键处理步骤，参数包括 riskLevel。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:validate",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "lineRange": [
+        148,
+        162
+      ],
+      "summary": "validate 实现 precious-metal 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/MetalPositionRepository.java",
+      "type": "file",
+      "name": "MetalPositionRepository.java",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/MetalPositionRepository.java",
+      "summary": "MetalPositionRepository.java 是 precious-metal 模块中的仓储接口，主要定义 MetalPositionRepository，承担该业务域的分层协作职责。",
+      "tags": [
+        "repository",
+        "precious-metal",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/MetalPositionRepository.java:MetalPositionRepository",
+      "type": "class",
+      "name": "MetalPositionRepository",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/MetalPositionRepository.java",
+      "lineRange": [
+        7,
+        11
+      ],
+      "summary": "MetalPositionRepository 是 precious-metal 模块的仓储接口，封装 3 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "repository",
+        "precious-metal",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/PreciousMetalOrderRepository.java",
+      "type": "file",
+      "name": "PreciousMetalOrderRepository.java",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/PreciousMetalOrderRepository.java",
+      "summary": "PreciousMetalOrderRepository.java 是 precious-metal 模块中的仓储接口，主要定义 PreciousMetalOrderRepository，承担该业务域的分层协作职责。",
+      "tags": [
+        "repository",
+        "precious-metal",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/PreciousMetalOrderRepository.java:PreciousMetalOrderRepository",
+      "type": "class",
+      "name": "PreciousMetalOrderRepository",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/PreciousMetalOrderRepository.java",
+      "lineRange": [
+        9,
+        14
+      ],
+      "summary": "PreciousMetalOrderRepository 是 precious-metal 模块的仓储接口，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "repository",
+        "precious-metal",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "type": "file",
+      "name": "PreciousMetalDomainService.java",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "summary": "PreciousMetalDomainService.java 是 precious-metal 模块中的领域服务，主要定义 PreciousMetalDomainService，承担该业务域的分层协作职责。",
+      "tags": [
+        "domain-service",
+        "precious-metal",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java:PreciousMetalDomainService",
+      "type": "class",
+      "name": "PreciousMetalDomainService",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "lineRange": [
+        15,
+        84
+      ],
+      "summary": "PreciousMetalDomainService 是 precious-metal 模块的领域服务，封装 3 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "domain-service",
+        "precious-metal",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java:createOrder",
+      "type": "function",
+      "name": "createOrder",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "lineRange": [
+        22,
+        48
+      ],
+      "summary": "createOrder 实现 precious-metal 模块中的关键处理步骤，参数包括 customerId、metalType、tradeType、direction、weight、weightUnit、purity、unitPrice、currency、deliveryType、valueDate、deliveryLocation。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "domain-service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java:settleOrder",
+      "type": "function",
+      "name": "settleOrder",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "lineRange": [
+        50,
+        76
+      ],
+      "summary": "settleOrder 实现 precious-metal 模块中的关键处理步骤，参数包括 orderNo、settleCurrency、settleAmount。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "domain-service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java:markToMarket",
+      "type": "function",
+      "name": "markToMarket",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "lineRange": [
+        78,
+        83
+      ],
+      "summary": "markToMarket 实现 precious-metal 模块中的关键处理步骤，参数包括 customerId、metalType、newPrice。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "domain-service"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:PreciousMetalController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:PreciousMetalController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:createOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:createOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:confirmOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:confirmOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:executeOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:executeOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:cancelOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:cancelOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:settleOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:settleOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:getOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:getOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:pageOrders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:pageOrders",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:markToMarket",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java:markToMarket",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/CreateOrderCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/SettleOrderCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/query/OrderQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/CreateOrderCmd.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/CreateOrderCmd.java:CreateOrderCmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/CreateOrderCmd.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/CreateOrderCmd.java:CreateOrderCmd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/SettleOrderCmd.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/SettleOrderCmd.java:SettleOrderCmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/SettleOrderCmd.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/SettleOrderCmd.java:SettleOrderCmd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/query/OrderQuery.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/query/OrderQuery.java:OrderQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/query/OrderQuery.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/query/OrderQuery.java:OrderQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/query/OrderQuery.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:MetalAppService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:MetalAppService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:createOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:createOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:confirmOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:confirmOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:executeOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:executeOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:cancelOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:cancelOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:settleOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:settleOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:getOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:getOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:pageOrders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:pageOrders",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:markToMarket",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java:markToMarket",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/CreateOrderCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/SettleOrderCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/query/OrderQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/PreciousMetalOrderRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:PreciousMetalOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:PreciousMetalOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:PreciousMetalOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:PreciousMetalOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:reconstitute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:reconstitute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:calculateTotalAmount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:calculateTotalAmount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:confirm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:confirm",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:settle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:settle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:cancel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:cancel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:assignOrderNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:assignOrderNo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:assignStorage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:assignStorage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:evaluateRisk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:evaluateRisk",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java:validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/MetalPositionRepository.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/MetalPositionRepository.java:MetalPositionRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/MetalPositionRepository.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/MetalPositionRepository.java:MetalPositionRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/MetalPositionRepository.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/MetalPosition.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/PreciousMetalOrderRepository.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/PreciousMetalOrderRepository.java:PreciousMetalOrderRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/PreciousMetalOrderRepository.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/PreciousMetalOrderRepository.java:PreciousMetalOrderRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/PreciousMetalOrderRepository.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/query/OrderQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/PreciousMetalOrderRepository.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java:PreciousMetalDomainService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java:PreciousMetalDomainService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java:createOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java:createOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java:settleOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java:settleOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java:markToMarket",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java:markToMarket",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/MetalPosition.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/MetalPositionRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "target": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/PreciousMetalOrderRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

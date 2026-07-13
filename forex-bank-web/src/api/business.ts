@@ -57,7 +57,18 @@ export const riskApi = {
   logPageQuery: (params: any) => request.post<ApiResponse<PageResp<any>>>('/risk/log/page', params),
   generateReport: (data: any) => request.post<ApiResponse>('/risk/report/generate', data),
   submitReport: (reportNo: string) => request.post<ApiResponse>(`/risk/report/submit/${reportNo}`),
-  getReport: (reportNo: string) => request.get<ApiResponse>(`/risk/report/${reportNo}`)
+  getReport: (reportNo: string) => request.get<ApiResponse>(`/risk/report/${reportNo}`),
+  listSamplingRules: () => request.get<ApiResponse<any[]>>('/risk/sampling/rules'),
+  createSamplingRule: (data: any) => request.post<ApiResponse>('/risk/sampling/rules', data),
+  updateSamplingRule: (id: number, data: any) => request.put<ApiResponse>(`/risk/sampling/rules/${id}`, data),
+  updateSamplingRuleStatus: (id: number, status: string) =>
+    request.put<ApiResponse>(`/risk/sampling/rules/${id}/status`, { status }),
+  deleteSamplingRule: (id: number) => request.post<ApiResponse>(`/risk/sampling/rules/${id}/delete`),
+  generateSamplingTasks: (data: any) => request.post<ApiResponse>('/risk/sampling/tasks/generate', data),
+  listSamplingTasks: () => request.get<ApiResponse>('/risk/sampling/tasks'),
+  completeSamplingTask: (taskId: string, data: any) =>
+    request.put<ApiResponse>(`/risk/sampling/tasks/${taskId}/complete`, data),
+  getSamplingStatistics: () => request.get<ApiResponse>('/risk/sampling/statistics')
 }
 
 export const accountApi = {

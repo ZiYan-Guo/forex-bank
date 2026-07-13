@@ -1,0 +1,3381 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 26,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 52,
+      "nonEmptyLines": 44,
+      "functions": [
+        {
+          "name": "chat",
+          "startLine": 27,
+          "endLine": 51,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AgentController",
+          "startLine": 19,
+          "endLine": 52,
+          "methods": [
+            "chat"
+          ],
+          "properties": [
+            "agentOrchestrator"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "chat",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "AgentController",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "chat",
+          "callee": "req.getSessionId",
+          "lineNumber": 30
+        },
+        {
+          "caller": "chat",
+          "callee": "req.getSessionId",
+          "lineNumber": 30
+        },
+        {
+          "caller": "chat",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 30
+        },
+        {
+          "caller": "chat",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 30
+        },
+        {
+          "caller": "chat",
+          "callee": "agentOrchestrator.execute",
+          "lineNumber": 31
+        },
+        {
+          "caller": "chat",
+          "callee": "req.getQuestion",
+          "lineNumber": 31
+        },
+        {
+          "caller": "chat",
+          "callee": "new java.util.LinkedHashMap<>",
+          "lineNumber": 33
+        },
+        {
+          "caller": "chat",
+          "callee": "resp.put",
+          "lineNumber": 34
+        },
+        {
+          "caller": "chat",
+          "callee": "resp.put",
+          "lineNumber": 35
+        },
+        {
+          "caller": "chat",
+          "callee": "result.getAnswer",
+          "lineNumber": 35
+        },
+        {
+          "caller": "chat",
+          "callee": "resp.put",
+          "lineNumber": 36
+        },
+        {
+          "caller": "chat",
+          "callee": "result.isSuccess",
+          "lineNumber": 36
+        },
+        {
+          "caller": "chat",
+          "callee": "resp.put",
+          "lineNumber": 37
+        },
+        {
+          "caller": "chat",
+          "callee": "result.getIterations",
+          "lineNumber": 37
+        },
+        {
+          "caller": "chat",
+          "callee": "resp.put",
+          "lineNumber": 38
+        },
+        {
+          "caller": "chat",
+          "callee": "result.getDownloadUrl",
+          "lineNumber": 38
+        },
+        {
+          "caller": "chat",
+          "callee": "new ArrayList<>",
+          "lineNumber": 40
+        },
+        {
+          "caller": "chat",
+          "callee": "result.getActionHistory",
+          "lineNumber": 41
+        },
+        {
+          "caller": "chat",
+          "callee": "actions.add",
+          "lineNumber": 42
+        },
+        {
+          "caller": "chat",
+          "callee": "Map.of",
+          "lineNumber": 42
+        },
+        {
+          "caller": "chat",
+          "callee": "action.getThought",
+          "lineNumber": 43
+        },
+        {
+          "caller": "chat",
+          "callee": "action.getThought",
+          "lineNumber": 43
+        },
+        {
+          "caller": "chat",
+          "callee": "action.getTool",
+          "lineNumber": 44
+        },
+        {
+          "caller": "chat",
+          "callee": "action.getTool",
+          "lineNumber": 44
+        },
+        {
+          "caller": "chat",
+          "callee": "action.isFinalAnswer",
+          "lineNumber": 45
+        },
+        {
+          "caller": "chat",
+          "callee": "resp.put",
+          "lineNumber": 48
+        },
+        {
+          "caller": "chat",
+          "callee": "R.ok",
+          "lineNumber": 50
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 84,
+      "nonEmptyLines": 74,
+      "functions": [
+        {
+          "name": "chatQuery",
+          "startLine": 30,
+          "endLine": 40,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "recommendHedging",
+          "startLine": 42,
+          "endLine": 50,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "nlTrade",
+          "startLine": 52,
+          "endLine": 58,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "generateReport",
+          "startLine": 60,
+          "endLine": 68,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "createSession",
+          "startLine": 70,
+          "endLine": 77,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "getMessages",
+          "startLine": 79,
+          "endLine": 83,
+          "params": [
+            "sessionId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AiChatController",
+          "startLine": 22,
+          "endLine": 84,
+          "methods": [
+            "chatQuery",
+            "recommendHedging",
+            "nlTrade",
+            "generateReport",
+            "createSession",
+            "getMessages"
+          ],
+          "properties": [
+            "aiAppService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "chatQuery",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "recommendHedging",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "nlTrade",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "generateReport",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "createSession",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "getMessages",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "AiChatController",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "chatQuery",
+          "callee": "req.getSessionId",
+          "lineNumber": 34
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "sessionId.isEmpty",
+          "lineNumber": 35
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "aiAppService.createSession",
+          "lineNumber": 36
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "aiAppService.chatQuery",
+          "lineNumber": 38
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "req.getQuestion",
+          "lineNumber": 38
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "R.ok",
+          "lineNumber": 39
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "req.getOrDefault",
+          "lineNumber": 46
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "req.getOrDefault",
+          "lineNumber": 47
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "req.getOrDefault",
+          "lineNumber": 48
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "R.ok",
+          "lineNumber": 49
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "aiAppService.recommendHedging",
+          "lineNumber": 49
+        },
+        {
+          "caller": "nlTrade",
+          "callee": "req.get",
+          "lineNumber": 56
+        },
+        {
+          "caller": "nlTrade",
+          "callee": "R.ok",
+          "lineNumber": 57
+        },
+        {
+          "caller": "nlTrade",
+          "callee": "aiAppService.processNlTrade",
+          "lineNumber": 57
+        },
+        {
+          "caller": "generateReport",
+          "callee": "req.getOrDefault",
+          "lineNumber": 64
+        },
+        {
+          "caller": "generateReport",
+          "callee": "req.getOrDefault",
+          "lineNumber": 65
+        },
+        {
+          "caller": "generateReport",
+          "callee": "req.getOrDefault",
+          "lineNumber": 66
+        },
+        {
+          "caller": "generateReport",
+          "callee": "R.ok",
+          "lineNumber": 67
+        },
+        {
+          "caller": "generateReport",
+          "callee": "aiAppService.generateReport",
+          "lineNumber": 67
+        },
+        {
+          "caller": "createSession",
+          "callee": "req.getOrDefault",
+          "lineNumber": 74
+        },
+        {
+          "caller": "createSession",
+          "callee": "aiAppService.createSession",
+          "lineNumber": 75
+        },
+        {
+          "caller": "createSession",
+          "callee": "R.ok",
+          "lineNumber": 76
+        },
+        {
+          "caller": "createSession",
+          "callee": "Map.of",
+          "lineNumber": 76
+        },
+        {
+          "caller": "getMessages",
+          "callee": "R.ok",
+          "lineNumber": 82
+        },
+        {
+          "caller": "getMessages",
+          "callee": "aiAppService.getSessionMessages",
+          "lineNumber": 82
+        }
+      ],
+      "metrics": {
+        "importCount": 10,
+        "exportCount": 7,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 50,
+      "nonEmptyLines": 43,
+      "functions": [
+        {
+          "name": "ocrUpload",
+          "startLine": 24,
+          "endLine": 31,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "auditCompare",
+          "startLine": 33,
+          "endLine": 41,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "clearingCorrection",
+          "startLine": 43,
+          "endLine": 49,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AiDocumentController",
+          "startLine": 16,
+          "endLine": 50,
+          "methods": [
+            "ocrUpload",
+            "auditCompare",
+            "clearingCorrection"
+          ],
+          "properties": [
+            "aiAppService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ocrUpload",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "auditCompare",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "clearingCorrection",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "AiDocumentController",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ocrUpload",
+          "callee": "req.getOrDefault",
+          "lineNumber": 28
+        },
+        {
+          "caller": "ocrUpload",
+          "callee": "req.getOrDefault",
+          "lineNumber": 29
+        },
+        {
+          "caller": "ocrUpload",
+          "callee": "R.ok",
+          "lineNumber": 30
+        },
+        {
+          "caller": "ocrUpload",
+          "callee": "aiAppService.ocrRecognize",
+          "lineNumber": 30
+        },
+        {
+          "caller": "auditCompare",
+          "callee": "req.getOrDefault",
+          "lineNumber": 37
+        },
+        {
+          "caller": "auditCompare",
+          "callee": "req.getOrDefault",
+          "lineNumber": 38
+        },
+        {
+          "caller": "auditCompare",
+          "callee": "req.getOrDefault",
+          "lineNumber": 39
+        },
+        {
+          "caller": "auditCompare",
+          "callee": "R.ok",
+          "lineNumber": 40
+        },
+        {
+          "caller": "auditCompare",
+          "callee": "aiAppService.compareDocuments",
+          "lineNumber": 40
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "req.getOrDefault",
+          "lineNumber": 47
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "R.ok",
+          "lineNumber": 48
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "aiAppService.clearingCorrection",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 67,
+      "nonEmptyLines": 59,
+      "functions": [
+        {
+          "name": "predictRate",
+          "startLine": 26,
+          "endLine": 43,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "predictExposure",
+          "startLine": 45,
+          "endLine": 53,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "getAlertConfig",
+          "startLine": 55,
+          "endLine": 59,
+          "params": []
+        },
+        {
+          "name": "updateAlertConfig",
+          "startLine": 61,
+          "endLine": 66,
+          "params": [
+            "config"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AiPredictionController",
+          "startLine": 18,
+          "endLine": 67,
+          "methods": [
+            "predictRate",
+            "predictExposure",
+            "getAlertConfig",
+            "updateAlertConfig"
+          ],
+          "properties": [
+            "aiAppService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "predictRate",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "predictExposure",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "getAlertConfig",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "updateAlertConfig",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "AiPredictionController",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "predictRate",
+          "callee": "req.getOrDefault",
+          "lineNumber": 30
+        },
+        {
+          "caller": "predictRate",
+          "callee": "req.getOrDefault",
+          "lineNumber": 31
+        },
+        {
+          "caller": "predictRate",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 32
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 33
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 34
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 35
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 36
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 37
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 38
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 39
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 40
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 41
+        },
+        {
+          "caller": "predictRate",
+          "callee": "java.time.LocalDateTime.now().toString",
+          "lineNumber": 41
+        },
+        {
+          "caller": "predictRate",
+          "callee": "java.time.LocalDateTime.now",
+          "lineNumber": 41
+        },
+        {
+          "caller": "predictRate",
+          "callee": "R.ok",
+          "lineNumber": 42
+        },
+        {
+          "caller": "predictExposure",
+          "callee": "R.ok",
+          "lineNumber": 49
+        },
+        {
+          "caller": "predictExposure",
+          "callee": "List.of",
+          "lineNumber": 49
+        },
+        {
+          "caller": "predictExposure",
+          "callee": "Map.of",
+          "lineNumber": 50
+        },
+        {
+          "caller": "predictExposure",
+          "callee": "Map.of",
+          "lineNumber": 51
+        },
+        {
+          "caller": "getAlertConfig",
+          "callee": "R.ok",
+          "lineNumber": 58
+        },
+        {
+          "caller": "getAlertConfig",
+          "callee": "Map.of",
+          "lineNumber": 58
+        },
+        {
+          "caller": "updateAlertConfig",
+          "callee": "R.okMsg",
+          "lineNumber": 65
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 47,
+      "nonEmptyLines": 40,
+      "functions": [
+        {
+          "name": "amlEvaluate",
+          "startLine": 24,
+          "endLine": 31,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "fuzzyMatchBlacklist",
+          "startLine": 33,
+          "endLine": 40,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "networkAnalysis",
+          "startLine": 42,
+          "endLine": 46,
+          "params": [
+            "customerId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AiRiskController",
+          "startLine": 16,
+          "endLine": 47,
+          "methods": [
+            "amlEvaluate",
+            "fuzzyMatchBlacklist",
+            "networkAnalysis"
+          ],
+          "properties": [
+            "aiAppService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "amlEvaluate",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "fuzzyMatchBlacklist",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "networkAnalysis",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "AiRiskController",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "amlEvaluate",
+          "callee": "req.get",
+          "lineNumber": 28
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "req.get(\"customerId\").toString",
+          "lineNumber": 28
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "req.get",
+          "lineNumber": 28
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "req.get",
+          "lineNumber": 29
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "req.get(\"transactionData\").toString",
+          "lineNumber": 29
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "req.get",
+          "lineNumber": 29
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "R.ok",
+          "lineNumber": 30
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "aiAppService.amlEvaluate",
+          "lineNumber": 30
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "req.getOrDefault",
+          "lineNumber": 37
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "req.getOrDefault",
+          "lineNumber": 38
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "R.ok",
+          "lineNumber": 39
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "aiAppService.fuzzyMatchBlacklist",
+          "lineNumber": 39
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "R.ok",
+          "lineNumber": 45
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "aiAppService.networkAnalysis",
+          "lineNumber": 45
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/AlertConfigReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "AlertConfigReq",
+          "startLine": 6,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "currencyPair",
+            "threshold"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AlertConfigReq",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/AmlEvaluateReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "AmlEvaluateReq",
+          "startLine": 6,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "customerId",
+            "transactionData"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AmlEvaluateReq",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/AuditCompareReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "AuditCompareReq",
+          "startLine": 6,
+          "endLine": 19,
+          "methods": [],
+          "properties": [
+            "invoiceId",
+            "billId",
+            "customsId"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuditCompareReq",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "ChatMessageReq",
+          "startLine": 7,
+          "endLine": 20,
+          "methods": [],
+          "properties": [
+            "sessionId",
+            "question",
+            "stream"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChatMessageReq",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "ChatMessageResp",
+          "startLine": 9,
+          "endLine": 21,
+          "methods": [],
+          "properties": [
+            "answer",
+            "sources",
+            "confidence"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChatMessageResp",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ClearingCorrectionReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "ClearingCorrectionReq",
+          "startLine": 6,
+          "endLine": 13,
+          "methods": [],
+          "properties": [
+            "clearingId"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ClearingCorrectionReq",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/CreateSessionReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "CreateSessionReq",
+          "startLine": 6,
+          "endLine": 13,
+          "methods": [],
+          "properties": [
+            "userId"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CreateSessionReq",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/FuzzyMatchReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "FuzzyMatchReq",
+          "startLine": 6,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "name",
+            "idType"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FuzzyMatchReq",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/GenerateAiReportReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "GenerateAiReportReq",
+          "startLine": 6,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "type",
+            "customerId"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GenerateAiReportReq",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/HedgingRecommendReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "HedgingRecommendReq",
+          "startLine": 6,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "customerId",
+            "tradeId"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "HedgingRecommendReq",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/NlTradeReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "NlTradeReq",
+          "startLine": 6,
+          "endLine": 13,
+          "methods": [],
+          "properties": [
+            "query"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "NlTradeReq",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/OcrUploadReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "OcrUploadReq",
+          "startLine": 6,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "docType",
+            "imageBase64"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OcrUploadReq",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictExposureReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "PredictExposureReq",
+          "startLine": 6,
+          "endLine": 13,
+          "methods": [],
+          "properties": [
+            "customerId"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PredictExposureReq",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictRateReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "PredictRateReq",
+          "startLine": 6,
+          "endLine": 13,
+          "methods": [],
+          "properties": [
+            "currencyPair"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PredictRateReq",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 18,
+      "classes": [
+        {
+          "name": "RiskAlertResp",
+          "startLine": 8,
+          "endLine": 26,
+          "methods": [],
+          "properties": [
+            "alertId",
+            "riskType",
+            "score",
+            "level",
+            "description"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RiskAlertResp",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "TradingRecommendResp",
+          "startLine": 9,
+          "endLine": 21,
+          "methods": [],
+          "properties": [
+            "strategies",
+            "recommendedRatio",
+            "reasoning"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "TradingRecommendResp",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 167,
+      "nonEmptyLines": 149,
+      "functions": [
+        {
+          "name": "predictRate",
+          "startLine": 25,
+          "endLine": 37,
+          "params": [
+            "currencyPair",
+            "predType"
+          ]
+        },
+        {
+          "name": "predictExposure",
+          "startLine": 39,
+          "endLine": 44,
+          "params": []
+        },
+        {
+          "name": "chatQuery",
+          "startLine": 46,
+          "endLine": 52,
+          "params": [
+            "sessionId",
+            "question"
+          ]
+        },
+        {
+          "name": "recommendHedging",
+          "startLine": 54,
+          "endLine": 60,
+          "params": [
+            "customerId",
+            "businessType",
+            "riskPreference"
+          ]
+        },
+        {
+          "name": "processNlTrade",
+          "startLine": 62,
+          "endLine": 74,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "generateReport",
+          "startLine": 76,
+          "endLine": 82,
+          "params": [
+            "customerId",
+            "period",
+            "reportType"
+          ]
+        },
+        {
+          "name": "createSession",
+          "startLine": 84,
+          "endLine": 87,
+          "params": [
+            "sessionType"
+          ]
+        },
+        {
+          "name": "getSessionMessages",
+          "startLine": 89,
+          "endLine": 94,
+          "params": [
+            "sessionId"
+          ]
+        },
+        {
+          "name": "amlEvaluate",
+          "startLine": 96,
+          "endLine": 105,
+          "params": [
+            "customerId",
+            "transactionData"
+          ]
+        },
+        {
+          "name": "fuzzyMatchBlacklist",
+          "startLine": 107,
+          "endLine": 115,
+          "params": [
+            "name",
+            "idType"
+          ]
+        },
+        {
+          "name": "networkAnalysis",
+          "startLine": 117,
+          "endLine": 131,
+          "params": [
+            "customerId"
+          ]
+        },
+        {
+          "name": "ocrRecognize",
+          "startLine": 133,
+          "endLine": 145,
+          "params": [
+            "docType",
+            "imageBase64"
+          ]
+        },
+        {
+          "name": "compareDocuments",
+          "startLine": 147,
+          "endLine": 155,
+          "params": [
+            "invoiceId",
+            "billId",
+            "customsId"
+          ]
+        },
+        {
+          "name": "clearingCorrection",
+          "startLine": 157,
+          "endLine": 166,
+          "params": [
+            "clearingId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AiAppService",
+          "startLine": 13,
+          "endLine": 167,
+          "methods": [
+            "predictRate",
+            "predictExposure",
+            "chatQuery",
+            "recommendHedging",
+            "processNlTrade",
+            "generateReport",
+            "createSession",
+            "getSessionMessages",
+            "amlEvaluate",
+            "fuzzyMatchBlacklist",
+            "networkAnalysis",
+            "ocrRecognize",
+            "compareDocuments",
+            "clearingCorrection"
+          ],
+          "properties": [
+            "aiDomainService",
+            "ratePredictionRepository",
+            "chatSessionRepository",
+            "chatMessageRepository",
+            "riskAiAssessmentRepository",
+            "documentAuditRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "predictRate",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "predictExposure",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "chatQuery",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "recommendHedging",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "processNlTrade",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "generateReport",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "createSession",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "getSessionMessages",
+          "line": 89,
+          "isDefault": false
+        },
+        {
+          "name": "amlEvaluate",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "fuzzyMatchBlacklist",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "networkAnalysis",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "ocrRecognize",
+          "line": 133,
+          "isDefault": false
+        },
+        {
+          "name": "compareDocuments",
+          "line": 147,
+          "isDefault": false
+        },
+        {
+          "name": "clearingCorrection",
+          "line": 157,
+          "isDefault": false
+        },
+        {
+          "name": "AiAppService",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "predictRate",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 26
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 27
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 28
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 29
+        },
+        {
+          "caller": "predictRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 29
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 30
+        },
+        {
+          "caller": "predictRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 30
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 31
+        },
+        {
+          "caller": "predictRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 31
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 32
+        },
+        {
+          "caller": "predictRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 32
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 33
+        },
+        {
+          "caller": "predictRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 33
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 34
+        },
+        {
+          "caller": "predictRate",
+          "callee": "result.put",
+          "lineNumber": 35
+        },
+        {
+          "caller": "predictRate",
+          "callee": "LocalDateTime.now().toString",
+          "lineNumber": 35
+        },
+        {
+          "caller": "predictRate",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 35
+        },
+        {
+          "caller": "predictExposure",
+          "callee": "List.of",
+          "lineNumber": 40
+        },
+        {
+          "caller": "predictExposure",
+          "callee": "Map.of",
+          "lineNumber": 41
+        },
+        {
+          "caller": "predictExposure",
+          "callee": "Map.of",
+          "lineNumber": 42
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 47
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "resp.put",
+          "lineNumber": 48
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "resp.put",
+          "lineNumber": 49
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "List.of",
+          "lineNumber": 49
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "resp.put",
+          "lineNumber": 50
+        },
+        {
+          "caller": "chatQuery",
+          "callee": "new BigDecimal",
+          "lineNumber": 50
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 55
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "resp.put",
+          "lineNumber": 56
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "List.of",
+          "lineNumber": 56
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "resp.put",
+          "lineNumber": 57
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "List.of",
+          "lineNumber": 57
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "new BigDecimal",
+          "lineNumber": 57
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "new BigDecimal",
+          "lineNumber": 57
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "new BigDecimal",
+          "lineNumber": 57
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "resp.put",
+          "lineNumber": 58
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 63
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "intent.put",
+          "lineNumber": 64
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 65
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "params.put",
+          "lineNumber": 66
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "params.put",
+          "lineNumber": 67
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "new BigDecimal",
+          "lineNumber": 67
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "params.put",
+          "lineNumber": 68
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "params.put",
+          "lineNumber": 69
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "intent.put",
+          "lineNumber": 70
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "intent.put",
+          "lineNumber": 71
+        },
+        {
+          "caller": "processNlTrade",
+          "callee": "intent.put",
+          "lineNumber": 72
+        },
+        {
+          "caller": "generateReport",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 77
+        },
+        {
+          "caller": "generateReport",
+          "callee": "resp.put",
+          "lineNumber": 78
+        },
+        {
+          "caller": "generateReport",
+          "callee": "UUID.randomUUID().toString().substring",
+          "lineNumber": 78
+        },
+        {
+          "caller": "generateReport",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 78
+        },
+        {
+          "caller": "generateReport",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 78
+        },
+        {
+          "caller": "generateReport",
+          "callee": "resp.put",
+          "lineNumber": 79
+        },
+        {
+          "caller": "generateReport",
+          "callee": "resp.put",
+          "lineNumber": 80
+        },
+        {
+          "caller": "generateReport",
+          "callee": "LocalDateTime.now().toString",
+          "lineNumber": 80
+        },
+        {
+          "caller": "generateReport",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 80
+        },
+        {
+          "caller": "createSession",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 85
+        },
+        {
+          "caller": "createSession",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "List.of",
+          "lineNumber": 90
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "Map.of",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "LocalDateTime.now().minusMinutes(5).toString",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "LocalDateTime.now().minusMinutes",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "Map.of",
+          "lineNumber": 92
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "LocalDateTime.now().minusMinutes(4).toString",
+          "lineNumber": 92
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "LocalDateTime.now().minusMinutes",
+          "lineNumber": 92
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 92
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 97
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "resp.put",
+          "lineNumber": 98
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 98
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 98
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "resp.put",
+          "lineNumber": 99
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "resp.put",
+          "lineNumber": 100
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "new BigDecimal",
+          "lineNumber": 100
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "resp.put",
+          "lineNumber": 101
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "resp.put",
+          "lineNumber": 102
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "List.of",
+          "lineNumber": 102
+        },
+        {
+          "caller": "amlEvaluate",
+          "callee": "resp.put",
+          "lineNumber": 103
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 108
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "resp.put",
+          "lineNumber": 109
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "List.of",
+          "lineNumber": 109
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "Map.of",
+          "lineNumber": 110
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "new BigDecimal",
+          "lineNumber": 110
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "resp.put",
+          "lineNumber": 112
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "resp.put",
+          "lineNumber": 113
+        },
+        {
+          "caller": "fuzzyMatchBlacklist",
+          "callee": "new BigDecimal",
+          "lineNumber": 113
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 118
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "resp.put",
+          "lineNumber": 119
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "resp.put",
+          "lineNumber": 120
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "List.of",
+          "lineNumber": 120
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "Map.of",
+          "lineNumber": 121
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "Map.of",
+          "lineNumber": 122
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "Map.of",
+          "lineNumber": 123
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "resp.put",
+          "lineNumber": 125
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "List.of",
+          "lineNumber": 125
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "Map.of",
+          "lineNumber": 126
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "Map.of",
+          "lineNumber": 127
+        },
+        {
+          "caller": "networkAnalysis",
+          "callee": "resp.put",
+          "lineNumber": 129
+        },
+        {
+          "caller": "ocrRecognize",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 134
+        },
+        {
+          "caller": "ocrRecognize",
+          "callee": "resp.put",
+          "lineNumber": 135
+        },
+        {
+          "caller": "ocrRecognize",
+          "callee": "resp.put",
+          "lineNumber": 136
+        },
+        {
+          "caller": "ocrRecognize",
+          "callee": "resp.put",
+          "lineNumber": 137
+        },
+        {
+          "caller": "ocrRecognize",
+          "callee": "Map.of",
+          "lineNumber": 137
+        },
+        {
+          "caller": "ocrRecognize",
+          "callee": "resp.put",
+          "lineNumber": 143
+        },
+        {
+          "caller": "ocrRecognize",
+          "callee": "new BigDecimal",
+          "lineNumber": 143
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 148
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "resp.put",
+          "lineNumber": 149
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 149
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 149
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "resp.put",
+          "lineNumber": 150
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "resp.put",
+          "lineNumber": 151
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "List.of",
+          "lineNumber": 151
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "resp.put",
+          "lineNumber": 152
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "resp.put",
+          "lineNumber": 153
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "new BigDecimal",
+          "lineNumber": 153
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 158
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "resp.put",
+          "lineNumber": 159
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "resp.put",
+          "lineNumber": 160
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "List.of",
+          "lineNumber": 160
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "Map.of",
+          "lineNumber": 161
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "resp.put",
+          "lineNumber": 163
+        },
+        {
+          "caller": "clearingCorrection",
+          "callee": "resp.put",
+          "lineNumber": 164
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 15,
+        "functionCount": 14,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 174,
+      "nonEmptyLines": 154,
+      "functions": [
+        {
+          "name": "execute",
+          "startLine": 24,
+          "endLine": 71,
+          "params": [
+            "userQuery",
+            "sessionId"
+          ]
+        },
+        {
+          "name": "buildSystemPrompt",
+          "startLine": 73,
+          "endLine": 85,
+          "params": []
+        },
+        {
+          "name": "think",
+          "startLine": 87,
+          "endLine": 99,
+          "params": [
+            "systemPrompt",
+            "history"
+          ]
+        },
+        {
+          "name": "parseIntent",
+          "startLine": 101,
+          "endLine": 157,
+          "params": [
+            "query"
+          ]
+        },
+        {
+          "name": "detectFormat",
+          "startLine": 159,
+          "endLine": 164,
+          "params": [
+            "query"
+          ]
+        },
+        {
+          "name": "executeTool",
+          "startLine": 166,
+          "endLine": 173,
+          "params": [
+            "action"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AgentOrchestrator",
+          "startLine": 13,
+          "endLine": 174,
+          "methods": [
+            "execute",
+            "buildSystemPrompt",
+            "think",
+            "parseIntent",
+            "detectFormat",
+            "executeTool"
+          ],
+          "properties": [
+            "toolRegistry",
+            "modelProviderConfig",
+            "objectMapper",
+            "MAX_ITERATIONS"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "execute",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "AgentOrchestrator",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "execute",
+          "callee": "new ArrayList<>",
+          "lineNumber": 25
+        },
+        {
+          "caller": "execute",
+          "callee": "new ArrayList<>",
+          "lineNumber": 26
+        },
+        {
+          "caller": "execute",
+          "callee": "conversationHistory.add",
+          "lineNumber": 27
+        },
+        {
+          "caller": "execute",
+          "callee": "Map.of",
+          "lineNumber": 27
+        },
+        {
+          "caller": "execute",
+          "callee": "buildSystemPrompt",
+          "lineNumber": 29
+        },
+        {
+          "caller": "execute",
+          "callee": "log.info",
+          "lineNumber": 32
+        },
+        {
+          "caller": "execute",
+          "callee": "think",
+          "lineNumber": 34
+        },
+        {
+          "caller": "execute",
+          "callee": "actionHistory.add",
+          "lineNumber": 35
+        },
+        {
+          "caller": "execute",
+          "callee": "action.isFinalAnswer",
+          "lineNumber": 37
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder()\n                        .answer(action.getFinalAnswer())\n                        .actionHistory(actionHistory)\n                        .iterations(iteration + 1)\n                        .success(true).build",
+          "lineNumber": 38
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder()\n                        .answer(action.getFinalAnswer())\n                        .actionHistory(actionHistory)\n                        .iterations(iteration + 1).success",
+          "lineNumber": 38
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder()\n                        .answer(action.getFinalAnswer())\n                        .actionHistory(actionHistory).iterations",
+          "lineNumber": 38
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder()\n                        .answer(action.getFinalAnswer()).actionHistory",
+          "lineNumber": 38
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder().answer",
+          "lineNumber": 38
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder",
+          "lineNumber": 38
+        },
+        {
+          "caller": "execute",
+          "callee": "action.getFinalAnswer",
+          "lineNumber": 39
+        },
+        {
+          "caller": "execute",
+          "callee": "action.requiresTool",
+          "lineNumber": 46
+        },
+        {
+          "caller": "execute",
+          "callee": "executeTool",
+          "lineNumber": 47
+        },
+        {
+          "caller": "execute",
+          "callee": "action.setObservation",
+          "lineNumber": 48
+        },
+        {
+          "caller": "execute",
+          "callee": "objectMapper.valueToTree(observation).toString",
+          "lineNumber": 48
+        },
+        {
+          "caller": "execute",
+          "callee": "objectMapper.valueToTree",
+          "lineNumber": 48
+        },
+        {
+          "caller": "execute",
+          "callee": "conversationHistory.add",
+          "lineNumber": 49
+        },
+        {
+          "caller": "execute",
+          "callee": "Map.of",
+          "lineNumber": 49
+        },
+        {
+          "caller": "execute",
+          "callee": "action.getTool",
+          "lineNumber": 51
+        },
+        {
+          "caller": "execute",
+          "callee": "log.warn",
+          "lineNumber": 55
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder()\n                        .answer(\"无法完成请求，请提供更多信息。\")\n                        .actionHistory(actionHistory)\n                        .iterations(iteration + 1)\n                        .success(false).build",
+          "lineNumber": 56
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder()\n                        .answer(\"无法完成请求，请提供更多信息。\")\n                        .actionHistory(actionHistory)\n                        .iterations(iteration + 1).success",
+          "lineNumber": 56
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder()\n                        .answer(\"无法完成请求，请提供更多信息。\")\n                        .actionHistory(actionHistory).iterations",
+          "lineNumber": 56
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder()\n                        .answer(\"无法完成请求，请提供更多信息。\").actionHistory",
+          "lineNumber": 56
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder().answer",
+          "lineNumber": 56
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder",
+          "lineNumber": 56
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder()\n                .answer(\"请求处理超时，请稍后重试。\")\n                .actionHistory(actionHistory)\n                .iterations(MAX_ITERATIONS)\n                .success(false).build",
+          "lineNumber": 65
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder()\n                .answer(\"请求处理超时，请稍后重试。\")\n                .actionHistory(actionHistory)\n                .iterations(MAX_ITERATIONS).success",
+          "lineNumber": 65
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder()\n                .answer(\"请求处理超时，请稍后重试。\")\n                .actionHistory(actionHistory).iterations",
+          "lineNumber": 65
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder()\n                .answer(\"请求处理超时，请稍后重试。\").actionHistory",
+          "lineNumber": 65
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder().answer",
+          "lineNumber": 65
+        },
+        {
+          "caller": "execute",
+          "callee": "AgentResult.builder",
+          "lineNumber": 65
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "new StringBuilder",
+          "lineNumber": 74
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "sb.append",
+          "lineNumber": 75
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "sb.append",
+          "lineNumber": 76
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "toolRegistry.getAllTools",
+          "lineNumber": 77
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "sb.append(\"- **\").append(tool.name()).append(\"**: \").append(tool.description()).append",
+          "lineNumber": 78
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "sb.append(\"- **\").append(tool.name()).append(\"**: \").append",
+          "lineNumber": 78
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "sb.append(\"- **\").append(tool.name()).append",
+          "lineNumber": 78
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "sb.append(\"- **\").append",
+          "lineNumber": 78
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "sb.append",
+          "lineNumber": 78
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "tool.name",
+          "lineNumber": 78
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "tool.description",
+          "lineNumber": 78
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "sb.append",
+          "lineNumber": 80
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "sb.append",
+          "lineNumber": 81
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "sb.append",
+          "lineNumber": 82
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "sb.append",
+          "lineNumber": 83
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "sb.toString",
+          "lineNumber": 84
+        },
+        {
+          "caller": "think",
+          "callee": "history.size",
+          "lineNumber": 91
+        },
+        {
+          "caller": "think",
+          "callee": "\"user\".equals",
+          "lineNumber": 92
+        },
+        {
+          "caller": "think",
+          "callee": "history.get(i).get",
+          "lineNumber": 92
+        },
+        {
+          "caller": "think",
+          "callee": "history.get",
+          "lineNumber": 92
+        },
+        {
+          "caller": "think",
+          "callee": "history.get(i).get(\"content\").toString",
+          "lineNumber": 93
+        },
+        {
+          "caller": "think",
+          "callee": "history.get(i).get",
+          "lineNumber": 93
+        },
+        {
+          "caller": "think",
+          "callee": "history.get",
+          "lineNumber": 93
+        },
+        {
+          "caller": "think",
+          "callee": "parseIntent",
+          "lineNumber": 98
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "query.toLowerCase",
+          "lineNumber": 102
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 104
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 104
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 104
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想查询汇率信息\")\n                    .tool(\"query_exchange_rate\")\n                    .parameters(Map.of(\"query\", query)).build",
+          "lineNumber": 105
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想查询汇率信息\")\n                    .tool(\"query_exchange_rate\").parameters",
+          "lineNumber": 105
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想查询汇率信息\").tool",
+          "lineNumber": 105
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder().thought",
+          "lineNumber": 105
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder",
+          "lineNumber": 105
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "Map.of",
+          "lineNumber": 108
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 111
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 111
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 111
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 111
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 111
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想生成或下载报告/指标\")\n                    .tool(\"generate_report\")\n                    .parameters(Map.of(\"query\", query, \"format\", detectFormat(query))).build",
+          "lineNumber": 112
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想生成或下载报告/指标\")\n                    .tool(\"generate_report\").parameters",
+          "lineNumber": 112
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想生成或下载报告/指标\").tool",
+          "lineNumber": 112
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder().thought",
+          "lineNumber": 112
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder",
+          "lineNumber": 112
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "Map.of",
+          "lineNumber": 115
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "detectFormat",
+          "lineNumber": 115
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 118
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 118
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 118
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 118
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 118
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 118
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 118
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 118
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 118
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 118
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想进行交易操作\")\n                    .tool(\"place_trade\")\n                    .parameters(Map.of(\"query\", query)).build",
+          "lineNumber": 119
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想进行交易操作\")\n                    .tool(\"place_trade\").parameters",
+          "lineNumber": 119
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想进行交易操作\").tool",
+          "lineNumber": 119
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder().thought",
+          "lineNumber": 119
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder",
+          "lineNumber": 119
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "Map.of",
+          "lineNumber": 122
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 125
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 125
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 125
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 125
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想查询风险评估\")\n                    .tool(\"evaluate_risk\")\n                    .parameters(Map.of(\"query\", query)).build",
+          "lineNumber": 126
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想查询风险评估\")\n                    .tool(\"evaluate_risk\").parameters",
+          "lineNumber": 126
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想查询风险评估\").tool",
+          "lineNumber": 126
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder().thought",
+          "lineNumber": 126
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder",
+          "lineNumber": 126
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "Map.of",
+          "lineNumber": 129
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 132
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 132
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 132
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 132
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想进行支付操作\")\n                    .tool(\"initiate_payment\")\n                    .parameters(Map.of(\"query\", query)).build",
+          "lineNumber": 133
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想进行支付操作\")\n                    .tool(\"initiate_payment\").parameters",
+          "lineNumber": 133
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想进行支付操作\").tool",
+          "lineNumber": 133
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder().thought",
+          "lineNumber": 133
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder",
+          "lineNumber": 133
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "Map.of",
+          "lineNumber": 136
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 139
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 139
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 139
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 139
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 139
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 139
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "q.contains",
+          "lineNumber": 139
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想查询知识库\")\n                    .tool(\"search_knowledge\")\n                    .parameters(Map.of(\"query\", query)).build",
+          "lineNumber": 140
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想查询知识库\")\n                    .tool(\"search_knowledge\").parameters",
+          "lineNumber": 140
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                    .thought(\"用户想查询知识库\").tool",
+          "lineNumber": 140
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder().thought",
+          "lineNumber": 140
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder",
+          "lineNumber": 140
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "Map.of",
+          "lineNumber": 143
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder()\n                .finalAnswer(\"您好，我是银行外汇业务智能助手。我可以帮您：\\n\"\n                        + \"1. 查询实时汇率\\n\"\n                        + \"2. 生成业务报告和指标下载\\n\"\n                        + \"3. 执行外汇/贵金属交易\\n\"\n                        + \"4. 评估业务风险敞口\\n\"\n                        + \"5. 发起跨境支付\\n\"\n                        + \"6. 查询业务知识\\n\\n\"\n                        + \"请告诉我您的具体需求。\").build",
+          "lineNumber": 147
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder().finalAnswer",
+          "lineNumber": 147
+        },
+        {
+          "caller": "parseIntent",
+          "callee": "AgentAction.builder",
+          "lineNumber": 147
+        },
+        {
+          "caller": "detectFormat",
+          "callee": "query.contains",
+          "lineNumber": 160
+        },
+        {
+          "caller": "detectFormat",
+          "callee": "query.contains",
+          "lineNumber": 160
+        },
+        {
+          "caller": "detectFormat",
+          "callee": "query.contains",
+          "lineNumber": 161
+        },
+        {
+          "caller": "detectFormat",
+          "callee": "query.contains",
+          "lineNumber": 162
+        },
+        {
+          "caller": "executeTool",
+          "callee": "toolRegistry.execute",
+          "lineNumber": 168
+        },
+        {
+          "caller": "executeTool",
+          "callee": "action.getTool",
+          "lineNumber": 168
+        },
+        {
+          "caller": "executeTool",
+          "callee": "action.getParameters",
+          "lineNumber": 168
+        },
+        {
+          "caller": "executeTool",
+          "callee": "log.error",
+          "lineNumber": 170
+        },
+        {
+          "caller": "executeTool",
+          "callee": "action.getTool",
+          "lineNumber": 170
+        },
+        {
+          "caller": "executeTool",
+          "callee": "Map.of",
+          "lineNumber": 171
+        },
+        {
+          "caller": "executeTool",
+          "callee": "e.getMessage",
+          "lineNumber": 171
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 2,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentResult.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "AgentResult",
+          "startLine": 8,
+          "endLine": 17,
+          "methods": [],
+          "properties": [
+            "answer",
+            "actionHistory",
+            "iterations",
+            "success",
+            "downloadUrl",
+            "reportFormat"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AgentResult",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "AgentTool",
+          "startLine": 5,
+          "endLine": 16,
+          "methods": [
+            "name",
+            "description",
+            "execute",
+            "parameterSchema"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AgentTool",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 53,
+      "nonEmptyLines": 44,
+      "functions": [
+        {
+          "name": "init",
+          "startLine": 19,
+          "endLine": 22,
+          "params": []
+        },
+        {
+          "name": "name",
+          "startLine": 24,
+          "endLine": 27,
+          "params": []
+        },
+        {
+          "name": "description",
+          "startLine": 29,
+          "endLine": 32,
+          "params": []
+        },
+        {
+          "name": "execute",
+          "startLine": 34,
+          "endLine": 45,
+          "params": [
+            "parameters"
+          ]
+        },
+        {
+          "name": "extractPair",
+          "startLine": 47,
+          "endLine": 52,
+          "params": [
+            "query"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ExchangeRateTool",
+          "startLine": 13,
+          "endLine": 53,
+          "methods": [
+            "init",
+            "name",
+            "description",
+            "execute",
+            "extractPair"
+          ],
+          "properties": [
+            "toolRegistry"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "init",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "name",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "description",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "execute",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "ExchangeRateTool",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "init",
+          "callee": "toolRegistry.register",
+          "lineNumber": 21
+        },
+        {
+          "caller": "execute",
+          "callee": "parameters.getOrDefault",
+          "lineNumber": 36
+        },
+        {
+          "caller": "execute",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 37
+        },
+        {
+          "caller": "execute",
+          "callee": "result.put",
+          "lineNumber": 38
+        },
+        {
+          "caller": "execute",
+          "callee": "extractPair",
+          "lineNumber": 38
+        },
+        {
+          "caller": "execute",
+          "callee": "result.put",
+          "lineNumber": 39
+        },
+        {
+          "caller": "execute",
+          "callee": "new BigDecimal",
+          "lineNumber": 39
+        },
+        {
+          "caller": "execute",
+          "callee": "result.put",
+          "lineNumber": 40
+        },
+        {
+          "caller": "execute",
+          "callee": "new BigDecimal",
+          "lineNumber": 40
+        },
+        {
+          "caller": "execute",
+          "callee": "result.put",
+          "lineNumber": 41
+        },
+        {
+          "caller": "execute",
+          "callee": "new BigDecimal",
+          "lineNumber": 41
+        },
+        {
+          "caller": "execute",
+          "callee": "result.put",
+          "lineNumber": 42
+        },
+        {
+          "caller": "execute",
+          "callee": "System.currentTimeMillis",
+          "lineNumber": 42
+        },
+        {
+          "caller": "execute",
+          "callee": "result.put",
+          "lineNumber": 43
+        },
+        {
+          "caller": "extractPair",
+          "callee": "query.toUpperCase().contains",
+          "lineNumber": 48
+        },
+        {
+          "caller": "extractPair",
+          "callee": "query.toUpperCase",
+          "lineNumber": 48
+        },
+        {
+          "caller": "extractPair",
+          "callee": "query.toUpperCase().contains",
+          "lineNumber": 49
+        },
+        {
+          "caller": "extractPair",
+          "callee": "query.toUpperCase",
+          "lineNumber": 49
+        },
+        {
+          "caller": "extractPair",
+          "callee": "query.toUpperCase().contains",
+          "lineNumber": 50
+        },
+        {
+          "caller": "extractPair",
+          "callee": "query.toUpperCase",
+          "lineNumber": 50
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    }
+  ]
+}

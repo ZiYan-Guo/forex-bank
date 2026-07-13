@@ -1,0 +1,1027 @@
+{
+  "nodes": [
+    {
+      "id": "config:forex-gateway/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-gateway/src/main/resources/application.yml",
+      "summary": "application.yml 配置 网关 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "网关"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:forex-hedge-accounting/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-hedge-accounting/pom.xml",
+      "summary": "pom.xml 是 hedge-accounting 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "hedge-accounting"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/CreateHedgeReq.java",
+      "type": "file",
+      "name": "CreateHedgeReq.java",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/CreateHedgeReq.java",
+      "summary": "CreateHedgeReq.java 是 hedge-accounting 模块中的传输对象，主要定义 CreateHedgeReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "hedge-accounting",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/CreateHedgeReq.java:CreateHedgeReq",
+      "type": "class",
+      "name": "CreateHedgeReq",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/CreateHedgeReq.java",
+      "lineRange": [
+        7,
+        18
+      ],
+      "summary": "CreateHedgeReq 是 hedge-accounting 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "hedge-accounting",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/EffectivenessTestReq.java",
+      "type": "file",
+      "name": "EffectivenessTestReq.java",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/EffectivenessTestReq.java",
+      "summary": "EffectivenessTestReq.java 是 hedge-accounting 模块中的传输对象，主要定义 EffectivenessTestReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "hedge-accounting",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/EffectivenessTestReq.java:EffectivenessTestReq",
+      "type": "class",
+      "name": "EffectivenessTestReq",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/EffectivenessTestReq.java",
+      "lineRange": [
+        6,
+        10
+      ],
+      "summary": "EffectivenessTestReq 是 hedge-accounting 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "hedge-accounting",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/GenerateHedgeEntriesReq.java",
+      "type": "file",
+      "name": "GenerateHedgeEntriesReq.java",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/GenerateHedgeEntriesReq.java",
+      "summary": "GenerateHedgeEntriesReq.java 是 hedge-accounting 模块中的传输对象，主要定义 GenerateHedgeEntriesReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "hedge-accounting",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/GenerateHedgeEntriesReq.java:GenerateHedgeEntriesReq",
+      "type": "class",
+      "name": "GenerateHedgeEntriesReq",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/GenerateHedgeEntriesReq.java",
+      "lineRange": [
+        7,
+        12
+      ],
+      "summary": "GenerateHedgeEntriesReq 是 hedge-accounting 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "hedge-accounting",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "type": "file",
+      "name": "HedgeAccountingApplication.java",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "summary": "HedgeAccountingApplication.java 是 hedge-accounting 模块中的启动入口，主要定义 HedgeAccountingApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "hedge-accounting",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java:HedgeAccountingApplication",
+      "type": "class",
+      "name": "HedgeAccountingApplication",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "lineRange": [
+        12,
+        19
+      ],
+      "summary": "HedgeAccountingApplication 是 hedge-accounting 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "hedge-accounting",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "lineRange": [
+        16,
+        18
+      ],
+      "summary": "main 实现 hedge-accounting 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "hedge-accounting",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-hedge-accounting/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-hedge-accounting/src/main/resources/application.yml",
+      "summary": "application.yml 配置 hedge-accounting 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "hedge-accounting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-limit/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-limit/pom.xml",
+      "summary": "pom.xml 是 额度管理 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "额度管理"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-limit/src/main/java/com/forex/limit/LimitApplication.java",
+      "type": "file",
+      "name": "LimitApplication.java",
+      "filePath": "forex-limit/src/main/java/com/forex/limit/LimitApplication.java",
+      "summary": "LimitApplication.java 是 额度管理 模块中的启动入口，主要定义 LimitApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "额度管理",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-limit/src/main/java/com/forex/limit/LimitApplication.java:LimitApplication",
+      "type": "class",
+      "name": "LimitApplication",
+      "filePath": "forex-limit/src/main/java/com/forex/limit/LimitApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "LimitApplication 是 额度管理 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "额度管理",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-limit/src/main/java/com/forex/limit/LimitApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-limit/src/main/java/com/forex/limit/LimitApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 额度管理 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "额度管理",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-limit/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-limit/src/main/resources/application.yml",
+      "summary": "application.yml 配置 额度管理 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "额度管理"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-margin/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-margin/pom.xml",
+      "summary": "pom.xml 是 margin 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "margin"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "type": "file",
+      "name": "MarginApplication.java",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "summary": "MarginApplication.java 是 margin 模块中的启动入口，主要定义 MarginApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "margin",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-margin/src/main/java/com/forex/margin/MarginApplication.java:MarginApplication",
+      "type": "class",
+      "name": "MarginApplication",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "MarginApplication 是 margin 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "margin",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-margin/src/main/java/com/forex/margin/MarginApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 margin 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "margin",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-margin/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-margin/src/main/resources/application.yml",
+      "summary": "application.yml 配置 margin 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "margin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-notification/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-notification/pom.xml",
+      "summary": "pom.xml 是 notification 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "notification"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-notification/src/main/java/com/forex/notification/NotificationApplication.java",
+      "type": "file",
+      "name": "NotificationApplication.java",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/NotificationApplication.java",
+      "summary": "NotificationApplication.java 是 notification 模块中的启动入口，主要定义 NotificationApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "notification",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-notification/src/main/java/com/forex/notification/NotificationApplication.java:NotificationApplication",
+      "type": "class",
+      "name": "NotificationApplication",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/NotificationApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "NotificationApplication 是 notification 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "notification",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-notification/src/main/java/com/forex/notification/NotificationApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-notification/src/main/java/com/forex/notification/NotificationApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 notification 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "notification",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-notification/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-notification/src/main/resources/application.yml",
+      "summary": "application.yml 配置 notification 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "notification"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-ocr/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-ocr/pom.xml",
+      "summary": "pom.xml 是 ocr 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "ocr"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java",
+      "type": "file",
+      "name": "OcrApplication.java",
+      "filePath": "forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java",
+      "summary": "OcrApplication.java 是 ocr 模块中的启动入口，主要定义 OcrApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "ocr",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java:OcrApplication",
+      "type": "class",
+      "name": "OcrApplication",
+      "filePath": "forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "OcrApplication 是 ocr 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "ocr",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 ocr 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "ocr",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-ocr/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-ocr/src/main/resources/application.yml",
+      "summary": "application.yml 配置 ocr 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "ocr"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-payment/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-payment/pom.xml",
+      "summary": "pom.xml 是 跨境支付 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "跨境支付"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/CreateTemplateReq.java",
+      "type": "file",
+      "name": "CreateTemplateReq.java",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/dto/CreateTemplateReq.java",
+      "summary": "CreateTemplateReq.java 是 跨境支付 模块中的传输对象，主要定义 CreateTemplateReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "跨境支付",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-payment/src/main/java/com/forex/payment/adapter/dto/CreateTemplateReq.java:CreateTemplateReq",
+      "type": "class",
+      "name": "CreateTemplateReq",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/dto/CreateTemplateReq.java",
+      "lineRange": [
+        6,
+        11
+      ],
+      "summary": "CreateTemplateReq 是 跨境支付 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "跨境支付",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/UpdateTemplateReq.java",
+      "type": "file",
+      "name": "UpdateTemplateReq.java",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/dto/UpdateTemplateReq.java",
+      "summary": "UpdateTemplateReq.java 是 跨境支付 模块中的传输对象，主要定义 UpdateTemplateReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "跨境支付",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-payment/src/main/java/com/forex/payment/adapter/dto/UpdateTemplateReq.java:UpdateTemplateReq",
+      "type": "class",
+      "name": "UpdateTemplateReq",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/dto/UpdateTemplateReq.java",
+      "lineRange": [
+        6,
+        21
+      ],
+      "summary": "UpdateTemplateReq 是 跨境支付 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "跨境支付",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "type": "file",
+      "name": "BatchResult.java",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "summary": "BatchResult.java 是 跨境支付 模块中的代码文件，主要定义 BatchResult，承担该业务域的分层协作职责。",
+      "tags": [
+        "code",
+        "跨境支付",
+        "java",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java:BatchResult",
+      "type": "class",
+      "name": "BatchResult",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "lineRange": [
+        9,
+        36
+      ],
+      "summary": "BatchResult 是 跨境支付 模块的代码文件，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "code",
+        "跨境支付",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java:addSuccess",
+      "type": "function",
+      "name": "addSuccess",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "lineRange": [
+        14,
+        16
+      ],
+      "summary": "addSuccess 实现 跨境支付 模块中的关键处理步骤，参数包括 no。",
+      "tags": [
+        "function",
+        "跨境支付",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java:addFailure",
+      "type": "function",
+      "name": "addFailure",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "lineRange": [
+        18,
+        20
+      ],
+      "summary": "addFailure 实现 跨境支付 模块中的关键处理步骤，参数包括 ref、error。",
+      "tags": [
+        "function",
+        "跨境支付",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java:getSuccessCount",
+      "type": "function",
+      "name": "getSuccessCount",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "lineRange": [
+        22,
+        24
+      ],
+      "summary": "getSuccessCount 实现 跨境支付 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "跨境支付",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java:getFailureCount",
+      "type": "function",
+      "name": "getFailureCount",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "lineRange": [
+        26,
+        28
+      ],
+      "summary": "getFailureCount 实现 跨境支付 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "跨境支付",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-payment/src/main/java/com/forex/payment/PaymentApplication.java",
+      "type": "file",
+      "name": "PaymentApplication.java",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/PaymentApplication.java",
+      "summary": "PaymentApplication.java 是 跨境支付 模块中的启动入口，主要定义 PaymentApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "跨境支付",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-payment/src/main/java/com/forex/payment/PaymentApplication.java:PaymentApplication",
+      "type": "class",
+      "name": "PaymentApplication",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/PaymentApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "PaymentApplication 是 跨境支付 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "跨境支付",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/PaymentApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/PaymentApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 跨境支付 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "跨境支付",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-payment/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-payment/src/main/resources/application.yml",
+      "summary": "application.yml 配置 跨境支付 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "跨境支付"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/CreateHedgeReq.java",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/CreateHedgeReq.java:CreateHedgeReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/CreateHedgeReq.java",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/CreateHedgeReq.java:CreateHedgeReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/EffectivenessTestReq.java",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/EffectivenessTestReq.java:EffectivenessTestReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/EffectivenessTestReq.java",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/EffectivenessTestReq.java:EffectivenessTestReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/GenerateHedgeEntriesReq.java",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/GenerateHedgeEntriesReq.java:GenerateHedgeEntriesReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/GenerateHedgeEntriesReq.java",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/GenerateHedgeEntriesReq.java:GenerateHedgeEntriesReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java:HedgeAccountingApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "target": "class:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java:HedgeAccountingApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "target": "function:forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-limit/src/main/java/com/forex/limit/LimitApplication.java",
+      "target": "class:forex-limit/src/main/java/com/forex/limit/LimitApplication.java:LimitApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-limit/src/main/java/com/forex/limit/LimitApplication.java",
+      "target": "class:forex-limit/src/main/java/com/forex/limit/LimitApplication.java:LimitApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-limit/src/main/java/com/forex/limit/LimitApplication.java",
+      "target": "function:forex-limit/src/main/java/com/forex/limit/LimitApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-limit/src/main/java/com/forex/limit/LimitApplication.java",
+      "target": "function:forex-limit/src/main/java/com/forex/limit/LimitApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/MarginApplication.java:MarginApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "target": "class:forex-margin/src/main/java/com/forex/margin/MarginApplication.java:MarginApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/MarginApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "target": "function:forex-margin/src/main/java/com/forex/margin/MarginApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/NotificationApplication.java",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/NotificationApplication.java:NotificationApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/NotificationApplication.java",
+      "target": "class:forex-notification/src/main/java/com/forex/notification/NotificationApplication.java:NotificationApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/NotificationApplication.java",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/NotificationApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-notification/src/main/java/com/forex/notification/NotificationApplication.java",
+      "target": "function:forex-notification/src/main/java/com/forex/notification/NotificationApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java",
+      "target": "class:forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java:OcrApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java",
+      "target": "class:forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java:OcrApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java",
+      "target": "function:forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java",
+      "target": "function:forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/CreateTemplateReq.java",
+      "target": "class:forex-payment/src/main/java/com/forex/payment/adapter/dto/CreateTemplateReq.java:CreateTemplateReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/CreateTemplateReq.java",
+      "target": "class:forex-payment/src/main/java/com/forex/payment/adapter/dto/CreateTemplateReq.java:CreateTemplateReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/UpdateTemplateReq.java",
+      "target": "class:forex-payment/src/main/java/com/forex/payment/adapter/dto/UpdateTemplateReq.java:UpdateTemplateReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/UpdateTemplateReq.java",
+      "target": "class:forex-payment/src/main/java/com/forex/payment/adapter/dto/UpdateTemplateReq.java:UpdateTemplateReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "target": "class:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java:BatchResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "target": "class:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java:BatchResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java:addSuccess",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java:addSuccess",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java:addFailure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java:addFailure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java:getSuccessCount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java:getSuccessCount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java:getFailureCount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java:getFailureCount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/PaymentApplication.java",
+      "target": "class:forex-payment/src/main/java/com/forex/payment/PaymentApplication.java:PaymentApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/PaymentApplication.java",
+      "target": "class:forex-payment/src/main/java/com/forex/payment/PaymentApplication.java:PaymentApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/PaymentApplication.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/PaymentApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/PaymentApplication.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/PaymentApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

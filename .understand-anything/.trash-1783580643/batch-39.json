@@ -1,0 +1,943 @@
+{
+  "nodes": [
+    {
+      "id": "service:docker/docker-compose.yml",
+      "type": "service",
+      "name": "docker-compose.yml",
+      "filePath": "docker/docker-compose.yml",
+      "summary": "docker-compose.yml 描述 docker 相关的部署或基础设施编排，用于本地环境和服务运行支撑。",
+      "tags": [
+        "code",
+        "docker",
+        "yaml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:docker/nacos/conf/application.properties",
+      "type": "config",
+      "name": "application.properties",
+      "filePath": "docker/nacos/conf/application.properties",
+      "summary": "application.properties 配置 docker 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "docker"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-account/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-account/pom.xml",
+      "summary": "pom.xml 是 账户管理 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "账户管理"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "type": "file",
+      "name": "AccountApplication.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "summary": "AccountApplication.java 是 账户管理 模块中的启动入口，主要定义 AccountApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "账户管理",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/AccountApplication.java:AccountApplication",
+      "type": "class",
+      "name": "AccountApplication",
+      "filePath": "forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "AccountApplication 是 账户管理 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "账户管理",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-account/src/main/java/com/forex/account/AccountApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 账户管理 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "账户管理",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/BalanceSnapshotMapper.java",
+      "type": "file",
+      "name": "BalanceSnapshotMapper.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/BalanceSnapshotMapper.java",
+      "summary": "BalanceSnapshotMapper.java 是 账户管理 模块中的MyBatis Mapper，主要定义 BalanceSnapshotMapper，承担该业务域的分层协作职责。",
+      "tags": [
+        "mapper",
+        "账户管理",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/infrastructure/mapper/BalanceSnapshotMapper.java:BalanceSnapshotMapper",
+      "type": "class",
+      "name": "BalanceSnapshotMapper",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/BalanceSnapshotMapper.java",
+      "lineRange": [
+        13,
+        15
+      ],
+      "summary": "BalanceSnapshotMapper 是 账户管理 模块的MyBatis Mapper，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "mapper",
+        "账户管理",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java",
+      "type": "file",
+      "name": "BalanceSnapshotPO.java",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java",
+      "summary": "BalanceSnapshotPO.java 是 账户管理 模块中的领域模型，主要定义 BalanceSnapshotPO，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "账户管理",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java:BalanceSnapshotPO",
+      "type": "class",
+      "name": "BalanceSnapshotPO",
+      "filePath": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java",
+      "lineRange": [
+        13,
+        26
+      ],
+      "summary": "BalanceSnapshotPO 是 账户管理 模块的领域模型，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "账户管理",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-account/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-account/src/main/resources/application.yml",
+      "summary": "application.yml 配置 账户管理 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "账户管理"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-ai/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-ai/pom.xml",
+      "summary": "pom.xml 是 AI智能服务 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "AI智能服务"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java",
+      "type": "file",
+      "name": "DocumentAuditResp.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java",
+      "summary": "DocumentAuditResp.java 是 AI智能服务 模块中的传输对象，主要定义 DocumentAuditResp，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java:DocumentAuditResp",
+      "type": "class",
+      "name": "DocumentAuditResp",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java",
+      "lineRange": [
+        8,
+        23
+      ],
+      "summary": "DocumentAuditResp 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java",
+      "type": "file",
+      "name": "RatePredictionResp.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java",
+      "summary": "RatePredictionResp.java 是 AI智能服务 模块中的传输对象，主要定义 RatePredictionResp，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java:RatePredictionResp",
+      "type": "class",
+      "name": "RatePredictionResp",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java",
+      "lineRange": [
+        9,
+        39
+      ],
+      "summary": "RatePredictionResp 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "type": "file",
+      "name": "AiApplication.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "summary": "AiApplication.java 是 AI智能服务 模块中的启动入口，主要定义 AiApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "AI智能服务",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/AiApplication.java:AiApplication",
+      "type": "class",
+      "name": "AiApplication",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "AiApplication 是 AI智能服务 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "AI智能服务",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/AiApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 AI智能服务 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java",
+      "type": "file",
+      "name": "AgentAction.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java",
+      "summary": "AgentAction.java 是 AI智能服务 模块中的代码文件，主要定义 AgentAction，承担该业务域的分层协作职责。",
+      "tags": [
+        "code",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java:AgentAction",
+      "type": "class",
+      "name": "AgentAction",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java",
+      "lineRange": [
+        8,
+        24
+      ],
+      "summary": "AgentAction 是 AI智能服务 模块的代码文件，封装 2 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "code",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java:isFinalAnswer",
+      "type": "function",
+      "name": "isFinalAnswer",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java",
+      "lineRange": [
+        17,
+        19
+      ],
+      "summary": "isFinalAnswer 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java:requiresTool",
+      "type": "function",
+      "name": "requiresTool",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java",
+      "lineRange": [
+        21,
+        23
+      ],
+      "summary": "requiresTool 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "type": "file",
+      "name": "TradingAssistant.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "summary": "TradingAssistant.java 是 AI智能服务 模块中的领域服务，主要定义 TradingAssistant，承担该业务域的分层协作职责。",
+      "tags": [
+        "domain-service",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:TradingAssistant",
+      "type": "class",
+      "name": "TradingAssistant",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "lineRange": [
+        9,
+        91
+      ],
+      "summary": "TradingAssistant 是 AI智能服务 模块的领域服务，封装 3 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "domain-service",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:processNaturalLanguageTrade",
+      "type": "function",
+      "name": "processNaturalLanguageTrade",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "lineRange": [
+        13,
+        40
+      ],
+      "summary": "processNaturalLanguageTrade 实现 AI智能服务 模块中的关键处理步骤，参数包括 userInput。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "domain-service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:recommendHedging",
+      "type": "function",
+      "name": "recommendHedging",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "lineRange": [
+        42,
+        69
+      ],
+      "summary": "recommendHedging 实现 AI智能服务 模块中的关键处理步骤，参数包括 customerId、businessType、riskPreference。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "domain-service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:generateRiskReport",
+      "type": "function",
+      "name": "generateRiskReport",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "lineRange": [
+        71,
+        90
+      ],
+      "summary": "generateRiskReport 实现 AI智能服务 模块中的关键处理步骤，参数包括 customerId、period。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "domain-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "type": "file",
+      "name": "SpringAiConfig.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "summary": "SpringAiConfig.java 是 AI智能服务 模块中的配置，主要定义 SpringAiConfig，承担该业务域的分层协作职责。",
+      "tags": [
+        "configuration",
+        "AI智能服务",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java:SpringAiConfig",
+      "type": "class",
+      "name": "SpringAiConfig",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "lineRange": [
+        14,
+        23
+      ],
+      "summary": "SpringAiConfig 是 AI智能服务 模块的配置，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "configuration",
+        "AI智能服务",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java:aiRestTemplate",
+      "type": "function",
+      "name": "aiRestTemplate",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "lineRange": [
+        18,
+        22
+      ],
+      "summary": "aiRestTemplate 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-ai/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-ai/src/main/resources/application.yml",
+      "summary": "application.yml 配置 AI智能服务 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "AI智能服务"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:forex-ai/src/main/resources/knowledge/faq/lc_process_faq.md",
+      "type": "document",
+      "name": "lc_process_faq.md",
+      "filePath": "forex-ai/src/main/resources/knowledge/faq/lc_process_faq.md",
+      "summary": "lc_process_faq.md 提供 AI智能服务 项目的说明文档，帮助理解业务范围、技术栈或改进记录。",
+      "tags": [
+        "documentation",
+        "overview",
+        "AI智能服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:forex-ai/src/main/resources/knowledge/faq/spot_forex_faq.md",
+      "type": "document",
+      "name": "spot_forex_faq.md",
+      "filePath": "forex-ai/src/main/resources/knowledge/faq/spot_forex_faq.md",
+      "summary": "spot_forex_faq.md 提供 AI智能服务 项目的说明文档，帮助理解业务范围、技术栈或改进记录。",
+      "tags": [
+        "documentation",
+        "overview",
+        "AI智能服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:forex-ai/src/main/resources/knowledge/policy/aml_regulation.md",
+      "type": "document",
+      "name": "aml_regulation.md",
+      "filePath": "forex-ai/src/main/resources/knowledge/policy/aml_regulation.md",
+      "summary": "aml_regulation.md 提供 AI智能服务 项目的说明文档，帮助理解业务范围、技术栈或改进记录。",
+      "tags": [
+        "documentation",
+        "overview",
+        "AI智能服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:forex-ai/src/main/resources/knowledge/policy/forex_administration.md",
+      "type": "document",
+      "name": "forex_administration.md",
+      "filePath": "forex-ai/src/main/resources/knowledge/policy/forex_administration.md",
+      "summary": "forex_administration.md 提供 AI智能服务 项目的说明文档，帮助理解业务范围、技术栈或改进记录。",
+      "tags": [
+        "documentation",
+        "overview",
+        "AI智能服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-auth/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-auth/pom.xml",
+      "summary": "pom.xml 是 认证授权 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "认证授权"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "type": "file",
+      "name": "AuthApplication.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "summary": "AuthApplication.java 是 认证授权 模块中的启动入口，主要定义 AuthApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "认证授权",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-auth/src/main/java/com/forex/auth/AuthApplication.java:AuthApplication",
+      "type": "class",
+      "name": "AuthApplication",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "lineRange": [
+        8,
+        16
+      ],
+      "summary": "AuthApplication 是 认证授权 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "认证授权",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-auth/src/main/java/com/forex/auth/AuthApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "lineRange": [
+        13,
+        15
+      ],
+      "summary": "main 实现 认证授权 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "认证授权",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-auth/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-auth/src/main/resources/application.yml",
+      "summary": "application.yml 配置 认证授权 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "认证授权"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-bank-web/src/components/layout/MainLayout.vue",
+      "type": "file",
+      "name": "MainLayout.vue",
+      "filePath": "forex-bank-web/src/components/layout/MainLayout.vue",
+      "summary": "MainLayout.vue 是 bank-web 模块中的代码文件，承担该业务域的分层协作职责。",
+      "tags": [
+        "code",
+        "bank-web",
+        "vue"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-bank-web/src/env.d.ts",
+      "type": "file",
+      "name": "env.d.ts",
+      "filePath": "forex-bank-web/src/env.d.ts",
+      "summary": "env.d.ts 是 bank-web 模块中的代码文件，承担该业务域的分层协作职责。",
+      "tags": [
+        "code",
+        "bank-web",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-bank-web/src/views/account/AccountList.vue",
+      "type": "file",
+      "name": "AccountList.vue",
+      "filePath": "forex-bank-web/src/views/account/AccountList.vue",
+      "summary": "AccountList.vue 是 bank-web 模块中的代码文件，承担该业务域的分层协作职责。",
+      "tags": [
+        "code",
+        "bank-web",
+        "vue"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/AccountApplication.java:AccountApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/AccountApplication.java:AccountApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/AccountApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "target": "function:forex-account/src/main/java/com/forex/account/AccountApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/BalanceSnapshotMapper.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/infrastructure/mapper/BalanceSnapshotMapper.java:BalanceSnapshotMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/BalanceSnapshotMapper.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/infrastructure/mapper/BalanceSnapshotMapper.java:BalanceSnapshotMapper",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/infrastructure/mapper/BalanceSnapshotMapper.java",
+      "target": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java:BalanceSnapshotPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java",
+      "target": "class:forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java:BalanceSnapshotPO",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java:DocumentAuditResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java:DocumentAuditResp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java:RatePredictionResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java:RatePredictionResp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/AiApplication.java:AiApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/AiApplication.java:AiApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/AiApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/AiApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java:AgentAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java:AgentAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java:isFinalAnswer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java:isFinalAnswer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java:requiresTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java:requiresTool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:TradingAssistant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:TradingAssistant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:processNaturalLanguageTrade",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:processNaturalLanguageTrade",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:recommendHedging",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:recommendHedging",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:generateRiskReport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java:generateRiskReport",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java:SpringAiConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java:SpringAiConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java:aiRestTemplate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java:aiRestTemplate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "target": "class:forex-auth/src/main/java/com/forex/auth/AuthApplication.java:AuthApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "target": "class:forex-auth/src/main/java/com/forex/auth/AuthApplication.java:AuthApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "target": "function:forex-auth/src/main/java/com/forex/auth/AuthApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "target": "function:forex-auth/src/main/java/com/forex/auth/AuthApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

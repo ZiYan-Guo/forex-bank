@@ -1,0 +1,4022 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 79,
+      "nonEmptyLines": 68,
+      "functions": [
+        {
+          "name": "ExchangeRate",
+          "startLine": 33,
+          "endLine": 35,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 37,
+          "endLine": 53,
+          "params": [
+            "currencyPair",
+            "baseCurrency",
+            "quoteCurrency",
+            "bidRate",
+            "askRate",
+            "rateSource"
+          ]
+        },
+        {
+          "name": "invalidate",
+          "startLine": 55,
+          "endLine": 58,
+          "params": []
+        },
+        {
+          "name": "isExpired",
+          "startLine": 60,
+          "endLine": 65,
+          "params": [
+            "ttl"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 67,
+          "endLine": 78,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ExchangeRate",
+          "startLine": 15,
+          "endLine": 79,
+          "methods": [
+            "ExchangeRate",
+            "create",
+            "invalidate",
+            "isExpired",
+            "validate"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "currencyPair",
+            "baseCurrency",
+            "quoteCurrency",
+            "bidRate",
+            "askRate",
+            "midRate",
+            "spread",
+            "rateSource",
+            "rateDate",
+            "rateTime",
+            "status"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "invalidate",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "isExpired",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "ExchangeRate",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new ExchangeRate",
+          "lineNumber": 39
+        },
+        {
+          "caller": "create",
+          "callee": "bidRate.add(askRate).divide",
+          "lineNumber": 45
+        },
+        {
+          "caller": "create",
+          "callee": "bidRate.add",
+          "lineNumber": 45
+        },
+        {
+          "caller": "create",
+          "callee": "new BigDecimal",
+          "lineNumber": 45
+        },
+        {
+          "caller": "create",
+          "callee": "askRate.subtract",
+          "lineNumber": 46
+        },
+        {
+          "caller": "create",
+          "callee": "LocalDate.now",
+          "lineNumber": 48
+        },
+        {
+          "caller": "create",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 49
+        },
+        {
+          "caller": "create",
+          "callee": "rate.validate",
+          "lineNumber": 51
+        },
+        {
+          "caller": "invalidate",
+          "callee": "markUpdated",
+          "lineNumber": 57
+        },
+        {
+          "caller": "isExpired",
+          "callee": "Duration.between(rateTime, LocalDateTime.now()).compareTo",
+          "lineNumber": 64
+        },
+        {
+          "caller": "isExpired",
+          "callee": "Duration.between",
+          "lineNumber": 64
+        },
+        {
+          "caller": "isExpired",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 64
+        },
+        {
+          "caller": "validate",
+          "callee": "currencyPair.isBlank",
+          "lineNumber": 69
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 70
+        },
+        {
+          "caller": "validate",
+          "callee": "bidRate.compareTo",
+          "lineNumber": 72
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 73
+        },
+        {
+          "caller": "validate",
+          "callee": "askRate.compareTo",
+          "lineNumber": 75
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 76
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 4,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 47,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "symbol",
+          "startLine": 21,
+          "endLine": 23,
+          "params": []
+        },
+        {
+          "name": "parse",
+          "startLine": 25,
+          "endLine": 34,
+          "params": [
+            "pair"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 36,
+          "endLine": 41,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 43,
+          "endLine": 46,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CurrencyPair",
+          "startLine": 12,
+          "endLine": 47,
+          "methods": [
+            "symbol",
+            "parse",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "base",
+            "quote"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "symbol",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "parse",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "CurrencyPair",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "symbol",
+          "callee": "base.toUpperCase",
+          "lineNumber": 22
+        },
+        {
+          "caller": "symbol",
+          "callee": "quote.toUpperCase",
+          "lineNumber": 22
+        },
+        {
+          "caller": "parse",
+          "callee": "pair.isBlank",
+          "lineNumber": 26
+        },
+        {
+          "caller": "parse",
+          "callee": "new BusinessException",
+          "lineNumber": 27
+        },
+        {
+          "caller": "parse",
+          "callee": "pair.split",
+          "lineNumber": 29
+        },
+        {
+          "caller": "parse",
+          "callee": "new BusinessException",
+          "lineNumber": 31
+        },
+        {
+          "caller": "parse",
+          "callee": "new CurrencyPair",
+          "lineNumber": 33
+        },
+        {
+          "caller": "parse",
+          "callee": "parts[0].toUpperCase",
+          "lineNumber": 33
+        },
+        {
+          "caller": "parse",
+          "callee": "parts[1].toUpperCase",
+          "lineNumber": 33
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 40
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 40
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 45
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "RateValue",
+          "startLine": 19,
+          "endLine": 24,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 26,
+          "endLine": 28,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "addSpread",
+          "startLine": 30,
+          "endLine": 35,
+          "params": [
+            "spread"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 37,
+          "endLine": 42,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 44,
+          "endLine": 47,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RateValue",
+          "startLine": 12,
+          "endLine": 48,
+          "methods": [
+            "RateValue",
+            "of",
+            "addSpread",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "addSpread",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "RateValue",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "RateValue",
+          "callee": "value.compareTo",
+          "lineNumber": 20
+        },
+        {
+          "caller": "RateValue",
+          "callee": "new BusinessException",
+          "lineNumber": 21
+        },
+        {
+          "caller": "of",
+          "callee": "new RateValue",
+          "lineNumber": 27
+        },
+        {
+          "caller": "addSpread",
+          "callee": "new BusinessException",
+          "lineNumber": 32
+        },
+        {
+          "caller": "addSpread",
+          "callee": "new RateValue",
+          "lineNumber": 34
+        },
+        {
+          "caller": "addSpread",
+          "callee": "this.value.add",
+          "lineNumber": 34
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 41
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 46
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "ExchangeRateRepository",
+          "startLine": 10,
+          "endLine": 21,
+          "methods": [
+            "save",
+            "findById",
+            "findLatestByCurrencyPair",
+            "findLatestRates",
+            "pageQuery"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ExchangeRateRepository",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 38,
+      "functions": [
+        {
+          "name": "calculateCrossRate",
+          "startLine": 15,
+          "endLine": 23,
+          "params": [
+            "usdBaseRate",
+            "usdQuoteRate"
+          ]
+        },
+        {
+          "name": "applySpread",
+          "startLine": 25,
+          "endLine": 33,
+          "params": [
+            "baseRate",
+            "spreadAdjust"
+          ]
+        },
+        {
+          "name": "calculateAmount",
+          "startLine": 35,
+          "endLine": 43,
+          "params": [
+            "amount",
+            "rate"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RateCalculationDomainService",
+          "startLine": 11,
+          "endLine": 44,
+          "methods": [
+            "calculateCrossRate",
+            "applySpread",
+            "calculateAmount"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "calculateCrossRate",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "applySpread",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "calculateAmount",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "RateCalculationDomainService",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "calculateCrossRate",
+          "callee": "usdBaseRate.compareTo",
+          "lineNumber": 16
+        },
+        {
+          "caller": "calculateCrossRate",
+          "callee": "new BusinessException",
+          "lineNumber": 17
+        },
+        {
+          "caller": "calculateCrossRate",
+          "callee": "usdQuoteRate.compareTo",
+          "lineNumber": 19
+        },
+        {
+          "caller": "calculateCrossRate",
+          "callee": "new BusinessException",
+          "lineNumber": 20
+        },
+        {
+          "caller": "calculateCrossRate",
+          "callee": "usdQuoteRate.divide",
+          "lineNumber": 22
+        },
+        {
+          "caller": "applySpread",
+          "callee": "baseRate.compareTo",
+          "lineNumber": 26
+        },
+        {
+          "caller": "applySpread",
+          "callee": "new BusinessException",
+          "lineNumber": 27
+        },
+        {
+          "caller": "applySpread",
+          "callee": "new BusinessException",
+          "lineNumber": 30
+        },
+        {
+          "caller": "applySpread",
+          "callee": "baseRate.add",
+          "lineNumber": 32
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "amount.compareTo",
+          "lineNumber": 36
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "new BusinessException",
+          "lineNumber": 37
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "rate.compareTo",
+          "lineNumber": 39
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "new BusinessException",
+          "lineNumber": 40
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "amount.multiply(rate).setScale",
+          "lineNumber": 42
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "amount.multiply",
+          "lineNumber": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 55,
+      "nonEmptyLines": 48,
+      "functions": [
+        {
+          "name": "publishRate",
+          "startLine": 20,
+          "endLine": 39,
+          "params": [
+            "rate",
+            "channelCode",
+            "spreadAdjust"
+          ]
+        },
+        {
+          "name": "validateRate",
+          "startLine": 41,
+          "endLine": 54,
+          "params": [
+            "rate"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RatePublishDomainService",
+          "startLine": 13,
+          "endLine": 55,
+          "methods": [
+            "publishRate",
+            "validateRate"
+          ],
+          "properties": [
+            "MAX_REASONABLE_RATE",
+            "MIN_REASONABLE_RATE"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "publishRate",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "validateRate",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "RatePublishDomainService",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "publishRate",
+          "callee": "new BusinessException",
+          "lineNumber": 22
+        },
+        {
+          "caller": "publishRate",
+          "callee": "channelCode.isBlank",
+          "lineNumber": 24
+        },
+        {
+          "caller": "publishRate",
+          "callee": "new BusinessException",
+          "lineNumber": 25
+        },
+        {
+          "caller": "publishRate",
+          "callee": "spreadAdjust.compareTo",
+          "lineNumber": 28
+        },
+        {
+          "caller": "publishRate",
+          "callee": "rate.getAskRate().subtract",
+          "lineNumber": 28
+        },
+        {
+          "caller": "publishRate",
+          "callee": "rate.getAskRate",
+          "lineNumber": 28
+        },
+        {
+          "caller": "publishRate",
+          "callee": "rate.getBidRate",
+          "lineNumber": 28
+        },
+        {
+          "caller": "publishRate",
+          "callee": "new BusinessException",
+          "lineNumber": 29
+        },
+        {
+          "caller": "publishRate",
+          "callee": "rate.getBidRate().add",
+          "lineNumber": 31
+        },
+        {
+          "caller": "publishRate",
+          "callee": "rate.getBidRate",
+          "lineNumber": 31
+        },
+        {
+          "caller": "publishRate",
+          "callee": "spreadAdjust.divide",
+          "lineNumber": 31
+        },
+        {
+          "caller": "publishRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 31
+        },
+        {
+          "caller": "publishRate",
+          "callee": "rate.getAskRate().subtract",
+          "lineNumber": 32
+        },
+        {
+          "caller": "publishRate",
+          "callee": "rate.getAskRate",
+          "lineNumber": 32
+        },
+        {
+          "caller": "publishRate",
+          "callee": "spreadAdjust.divide",
+          "lineNumber": 32
+        },
+        {
+          "caller": "publishRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 32
+        },
+        {
+          "caller": "publishRate",
+          "callee": "adjustedBid.add(adjustedAsk).divide",
+          "lineNumber": 33
+        },
+        {
+          "caller": "publishRate",
+          "callee": "adjustedBid.add",
+          "lineNumber": 33
+        },
+        {
+          "caller": "publishRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 33
+        },
+        {
+          "caller": "publishRate",
+          "callee": "ExchangeRate.create",
+          "lineNumber": 34
+        },
+        {
+          "caller": "publishRate",
+          "callee": "rate.getCurrencyPair",
+          "lineNumber": 34
+        },
+        {
+          "caller": "publishRate",
+          "callee": "rate.getBaseCurrency",
+          "lineNumber": 34
+        },
+        {
+          "caller": "publishRate",
+          "callee": "rate.getQuoteCurrency",
+          "lineNumber": 34
+        },
+        {
+          "caller": "publishRate",
+          "callee": "ExchangeRate.create",
+          "lineNumber": 37
+        },
+        {
+          "caller": "publishRate",
+          "callee": "rate.getCurrencyPair",
+          "lineNumber": 37
+        },
+        {
+          "caller": "publishRate",
+          "callee": "rate.getBaseCurrency",
+          "lineNumber": 37
+        },
+        {
+          "caller": "publishRate",
+          "callee": "rate.getQuoteCurrency",
+          "lineNumber": 37
+        },
+        {
+          "caller": "publishRate",
+          "callee": "rate.getBidRate",
+          "lineNumber": 38
+        },
+        {
+          "caller": "publishRate",
+          "callee": "rate.getAskRate",
+          "lineNumber": 38
+        },
+        {
+          "caller": "validateRate",
+          "callee": "rate.getBidRate",
+          "lineNumber": 45
+        },
+        {
+          "caller": "validateRate",
+          "callee": "rate.getAskRate",
+          "lineNumber": 46
+        },
+        {
+          "caller": "validateRate",
+          "callee": "bidRate.compareTo",
+          "lineNumber": 47
+        },
+        {
+          "caller": "validateRate",
+          "callee": "bidRate.compareTo",
+          "lineNumber": 47
+        },
+        {
+          "caller": "validateRate",
+          "callee": "askRate.compareTo",
+          "lineNumber": 50
+        },
+        {
+          "caller": "validateRate",
+          "callee": "askRate.compareTo",
+          "lineNumber": 50
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-rate/src/test/java/com/forex/rate/domain/service/RateCalculationDomainServiceTest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 64,
+      "nonEmptyLines": 52,
+      "functions": [
+        {
+          "name": "testCalculateCrossRate",
+          "startLine": 15,
+          "endLine": 21,
+          "params": []
+        },
+        {
+          "name": "testCalculateCrossRate_ZeroBase",
+          "startLine": 23,
+          "endLine": 28,
+          "params": []
+        },
+        {
+          "name": "testApplySpread",
+          "startLine": 30,
+          "endLine": 35,
+          "params": []
+        },
+        {
+          "name": "testApplySpread_Negative",
+          "startLine": 37,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "testCalculateAmount",
+          "startLine": 44,
+          "endLine": 49,
+          "params": []
+        },
+        {
+          "name": "testCalculateAmount_ZeroAmount",
+          "startLine": 51,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "testCalculateAmount_ZeroRate",
+          "startLine": 58,
+          "endLine": 63,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RateCalculationDomainServiceTest",
+          "startLine": 11,
+          "endLine": 64,
+          "methods": [
+            "testCalculateCrossRate",
+            "testCalculateCrossRate_ZeroBase",
+            "testApplySpread",
+            "testApplySpread_Negative",
+            "testCalculateAmount",
+            "testCalculateAmount_ZeroAmount",
+            "testCalculateAmount_ZeroRate"
+          ],
+          "properties": [
+            "service"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "testCalculateCrossRate",
+          "callee": "service.calculateCrossRate",
+          "lineNumber": 18
+        },
+        {
+          "caller": "testCalculateCrossRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 19
+        },
+        {
+          "caller": "testCalculateCrossRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 19
+        },
+        {
+          "caller": "testCalculateCrossRate",
+          "callee": "assertEquals",
+          "lineNumber": 20
+        },
+        {
+          "caller": "testCalculateCrossRate",
+          "callee": "result.compareTo",
+          "lineNumber": 20
+        },
+        {
+          "caller": "testCalculateCrossRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 20
+        },
+        {
+          "caller": "testCalculateCrossRate_ZeroBase",
+          "callee": "assertThrows",
+          "lineNumber": 26
+        },
+        {
+          "caller": "testCalculateCrossRate_ZeroBase",
+          "callee": "service.calculateCrossRate",
+          "lineNumber": 27
+        },
+        {
+          "caller": "testCalculateCrossRate_ZeroBase",
+          "callee": "new BigDecimal",
+          "lineNumber": 27
+        },
+        {
+          "caller": "testApplySpread",
+          "callee": "service.applySpread",
+          "lineNumber": 33
+        },
+        {
+          "caller": "testApplySpread",
+          "callee": "new BigDecimal",
+          "lineNumber": 33
+        },
+        {
+          "caller": "testApplySpread",
+          "callee": "new BigDecimal",
+          "lineNumber": 33
+        },
+        {
+          "caller": "testApplySpread",
+          "callee": "assertEquals",
+          "lineNumber": 34
+        },
+        {
+          "caller": "testApplySpread",
+          "callee": "result.compareTo",
+          "lineNumber": 34
+        },
+        {
+          "caller": "testApplySpread",
+          "callee": "new BigDecimal",
+          "lineNumber": 34
+        },
+        {
+          "caller": "testApplySpread_Negative",
+          "callee": "service.applySpread",
+          "lineNumber": 40
+        },
+        {
+          "caller": "testApplySpread_Negative",
+          "callee": "new BigDecimal",
+          "lineNumber": 40
+        },
+        {
+          "caller": "testApplySpread_Negative",
+          "callee": "new BigDecimal",
+          "lineNumber": 40
+        },
+        {
+          "caller": "testApplySpread_Negative",
+          "callee": "assertEquals",
+          "lineNumber": 41
+        },
+        {
+          "caller": "testApplySpread_Negative",
+          "callee": "result.compareTo",
+          "lineNumber": 41
+        },
+        {
+          "caller": "testApplySpread_Negative",
+          "callee": "new BigDecimal",
+          "lineNumber": 41
+        },
+        {
+          "caller": "testCalculateAmount",
+          "callee": "service.calculateAmount",
+          "lineNumber": 47
+        },
+        {
+          "caller": "testCalculateAmount",
+          "callee": "new BigDecimal",
+          "lineNumber": 47
+        },
+        {
+          "caller": "testCalculateAmount",
+          "callee": "new BigDecimal",
+          "lineNumber": 47
+        },
+        {
+          "caller": "testCalculateAmount",
+          "callee": "assertEquals",
+          "lineNumber": 48
+        },
+        {
+          "caller": "testCalculateAmount",
+          "callee": "result.compareTo",
+          "lineNumber": 48
+        },
+        {
+          "caller": "testCalculateAmount",
+          "callee": "new BigDecimal",
+          "lineNumber": 48
+        },
+        {
+          "caller": "testCalculateAmount_ZeroAmount",
+          "callee": "assertThrows",
+          "lineNumber": 54
+        },
+        {
+          "caller": "testCalculateAmount_ZeroAmount",
+          "callee": "service.calculateAmount",
+          "lineNumber": 55
+        },
+        {
+          "caller": "testCalculateAmount_ZeroAmount",
+          "callee": "new BigDecimal",
+          "lineNumber": 55
+        },
+        {
+          "caller": "testCalculateAmount_ZeroRate",
+          "callee": "assertThrows",
+          "lineNumber": 61
+        },
+        {
+          "caller": "testCalculateAmount_ZeroRate",
+          "callee": "service.calculateAmount",
+          "lineNumber": 62
+        },
+        {
+          "caller": "testCalculateAmount_ZeroRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 62
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 75,
+      "nonEmptyLines": 58,
+      "functions": [
+        {
+          "name": "testPublishRate",
+          "startLine": 17,
+          "endLine": 28,
+          "params": []
+        },
+        {
+          "name": "testPublishRate_WithSpread",
+          "startLine": 30,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "testPublishRate_SpreadExceeds",
+          "startLine": 44,
+          "endLine": 52,
+          "params": []
+        },
+        {
+          "name": "testValidateRate_Valid",
+          "startLine": 54,
+          "endLine": 60,
+          "params": []
+        },
+        {
+          "name": "testValidateRate_ExtremeBid",
+          "startLine": 62,
+          "endLine": 68,
+          "params": []
+        },
+        {
+          "name": "testValidateRate_Null",
+          "startLine": 70,
+          "endLine": 74,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RatePublishDomainServiceTest",
+          "startLine": 13,
+          "endLine": 75,
+          "methods": [
+            "testPublishRate",
+            "testPublishRate_WithSpread",
+            "testPublishRate_SpreadExceeds",
+            "testValidateRate_Valid",
+            "testValidateRate_ExtremeBid",
+            "testValidateRate_Null"
+          ],
+          "properties": [
+            "service"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "testPublishRate",
+          "callee": "ExchangeRate.create",
+          "lineNumber": 20
+        },
+        {
+          "caller": "testPublishRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 21
+        },
+        {
+          "caller": "testPublishRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 21
+        },
+        {
+          "caller": "testPublishRate",
+          "callee": "service.publishRate",
+          "lineNumber": 23
+        },
+        {
+          "caller": "testPublishRate",
+          "callee": "assertNotNull",
+          "lineNumber": 25
+        },
+        {
+          "caller": "testPublishRate",
+          "callee": "assertEquals",
+          "lineNumber": 26
+        },
+        {
+          "caller": "testPublishRate",
+          "callee": "published.getCurrencyPair",
+          "lineNumber": 26
+        },
+        {
+          "caller": "testPublishRate",
+          "callee": "assertEquals",
+          "lineNumber": 27
+        },
+        {
+          "caller": "testPublishRate",
+          "callee": "published.getBidRate().compareTo",
+          "lineNumber": 27
+        },
+        {
+          "caller": "testPublishRate",
+          "callee": "published.getBidRate",
+          "lineNumber": 27
+        },
+        {
+          "caller": "testPublishRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 27
+        },
+        {
+          "caller": "testPublishRate_WithSpread",
+          "callee": "ExchangeRate.create",
+          "lineNumber": 33
+        },
+        {
+          "caller": "testPublishRate_WithSpread",
+          "callee": "new BigDecimal",
+          "lineNumber": 34
+        },
+        {
+          "caller": "testPublishRate_WithSpread",
+          "callee": "new BigDecimal",
+          "lineNumber": 34
+        },
+        {
+          "caller": "testPublishRate_WithSpread",
+          "callee": "service.publishRate",
+          "lineNumber": 36
+        },
+        {
+          "caller": "testPublishRate_WithSpread",
+          "callee": "new BigDecimal",
+          "lineNumber": 37
+        },
+        {
+          "caller": "testPublishRate_WithSpread",
+          "callee": "assertNotNull",
+          "lineNumber": 39
+        },
+        {
+          "caller": "testPublishRate_WithSpread",
+          "callee": "assertTrue",
+          "lineNumber": 40
+        },
+        {
+          "caller": "testPublishRate_WithSpread",
+          "callee": "published.getBidRate().compareTo",
+          "lineNumber": 40
+        },
+        {
+          "caller": "testPublishRate_WithSpread",
+          "callee": "published.getBidRate",
+          "lineNumber": 40
+        },
+        {
+          "caller": "testPublishRate_WithSpread",
+          "callee": "new BigDecimal",
+          "lineNumber": 40
+        },
+        {
+          "caller": "testPublishRate_WithSpread",
+          "callee": "assertTrue",
+          "lineNumber": 41
+        },
+        {
+          "caller": "testPublishRate_WithSpread",
+          "callee": "published.getAskRate().compareTo",
+          "lineNumber": 41
+        },
+        {
+          "caller": "testPublishRate_WithSpread",
+          "callee": "published.getAskRate",
+          "lineNumber": 41
+        },
+        {
+          "caller": "testPublishRate_WithSpread",
+          "callee": "new BigDecimal",
+          "lineNumber": 41
+        },
+        {
+          "caller": "testPublishRate_SpreadExceeds",
+          "callee": "ExchangeRate.create",
+          "lineNumber": 47
+        },
+        {
+          "caller": "testPublishRate_SpreadExceeds",
+          "callee": "new BigDecimal",
+          "lineNumber": 48
+        },
+        {
+          "caller": "testPublishRate_SpreadExceeds",
+          "callee": "new BigDecimal",
+          "lineNumber": 48
+        },
+        {
+          "caller": "testPublishRate_SpreadExceeds",
+          "callee": "assertThrows",
+          "lineNumber": 50
+        },
+        {
+          "caller": "testPublishRate_SpreadExceeds",
+          "callee": "service.publishRate",
+          "lineNumber": 51
+        },
+        {
+          "caller": "testPublishRate_SpreadExceeds",
+          "callee": "new BigDecimal",
+          "lineNumber": 51
+        },
+        {
+          "caller": "testValidateRate_Valid",
+          "callee": "ExchangeRate.create",
+          "lineNumber": 57
+        },
+        {
+          "caller": "testValidateRate_Valid",
+          "callee": "new BigDecimal",
+          "lineNumber": 58
+        },
+        {
+          "caller": "testValidateRate_Valid",
+          "callee": "new BigDecimal",
+          "lineNumber": 58
+        },
+        {
+          "caller": "testValidateRate_Valid",
+          "callee": "assertTrue",
+          "lineNumber": 59
+        },
+        {
+          "caller": "testValidateRate_Valid",
+          "callee": "service.validateRate",
+          "lineNumber": 59
+        },
+        {
+          "caller": "testValidateRate_ExtremeBid",
+          "callee": "ExchangeRate.create",
+          "lineNumber": 65
+        },
+        {
+          "caller": "testValidateRate_ExtremeBid",
+          "callee": "new BigDecimal",
+          "lineNumber": 66
+        },
+        {
+          "caller": "testValidateRate_ExtremeBid",
+          "callee": "new BigDecimal",
+          "lineNumber": 66
+        },
+        {
+          "caller": "testValidateRate_ExtremeBid",
+          "callee": "assertFalse",
+          "lineNumber": 67
+        },
+        {
+          "caller": "testValidateRate_ExtremeBid",
+          "callee": "service.validateRate",
+          "lineNumber": 67
+        },
+        {
+          "caller": "testValidateRate_Null",
+          "callee": "assertFalse",
+          "lineNumber": 73
+        },
+        {
+          "caller": "testValidateRate_Null",
+          "callee": "service.validateRate",
+          "lineNumber": 73
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 42,
+      "nonEmptyLines": 33,
+      "functions": [
+        {
+          "name": "BopCode",
+          "startLine": 15,
+          "endLine": 20,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 22,
+          "endLine": 24,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 26,
+          "endLine": 31,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 33,
+          "endLine": 36,
+          "params": []
+        },
+        {
+          "name": "toString",
+          "startLine": 38,
+          "endLine": 41,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "BopCode",
+          "startLine": 10,
+          "endLine": 42,
+          "methods": [
+            "BopCode",
+            "of",
+            "equals",
+            "hashCode",
+            "toString"
+          ],
+          "properties": [
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "BopCode",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "BopCode",
+          "callee": "value.isBlank",
+          "lineNumber": 16
+        },
+        {
+          "caller": "BopCode",
+          "callee": "new BusinessException",
+          "lineNumber": 17
+        },
+        {
+          "caller": "of",
+          "callee": "new BopCode",
+          "lineNumber": 23
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 30
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 63,
+      "nonEmptyLines": 52,
+      "functions": [
+        {
+          "name": "ReportNo",
+          "startLine": 20,
+          "endLine": 25,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 27,
+          "endLine": 29,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "generate",
+          "startLine": 31,
+          "endLine": 45,
+          "params": [
+            "type"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 47,
+          "endLine": 52,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 54,
+          "endLine": 57,
+          "params": []
+        },
+        {
+          "name": "toString",
+          "startLine": 59,
+          "endLine": 62,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ReportNo",
+          "startLine": 13,
+          "endLine": 63,
+          "methods": [
+            "ReportNo",
+            "of",
+            "generate",
+            "equals",
+            "hashCode",
+            "toString"
+          ],
+          "properties": [
+            "DATE_FORMATTER",
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "generate",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "ReportNo",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ReportNo",
+          "callee": "value.isBlank",
+          "lineNumber": 21
+        },
+        {
+          "caller": "ReportNo",
+          "callee": "new BusinessException",
+          "lineNumber": 22
+        },
+        {
+          "caller": "of",
+          "callee": "new ReportNo",
+          "lineNumber": 28
+        },
+        {
+          "caller": "generate",
+          "callee": "\"INWARD\".equalsIgnoreCase",
+          "lineNumber": 33
+        },
+        {
+          "caller": "generate",
+          "callee": "\"OUTWARD\".equalsIgnoreCase",
+          "lineNumber": 35
+        },
+        {
+          "caller": "generate",
+          "callee": "\"DOMESTIC\".equalsIgnoreCase",
+          "lineNumber": 37
+        },
+        {
+          "caller": "generate",
+          "callee": "LocalDateTime.now().format",
+          "lineNumber": 42
+        },
+        {
+          "caller": "generate",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 42
+        },
+        {
+          "caller": "generate",
+          "callee": "ThreadLocalRandom.current().nextInt",
+          "lineNumber": 43
+        },
+        {
+          "caller": "generate",
+          "callee": "ThreadLocalRandom.current",
+          "lineNumber": 43
+        },
+        {
+          "caller": "generate",
+          "callee": "new ReportNo",
+          "lineNumber": 44
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 51
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 56
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 36,
+      "functions": [
+        {
+          "name": "RiskLevel",
+          "startLine": 20,
+          "endLine": 24,
+          "params": [
+            "code",
+            "name",
+            "severity"
+          ]
+        },
+        {
+          "name": "isHigherThan",
+          "startLine": 26,
+          "endLine": 28,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "needsAction",
+          "startLine": 30,
+          "endLine": 32,
+          "params": []
+        },
+        {
+          "name": "equals",
+          "startLine": 34,
+          "endLine": 39,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 41,
+          "endLine": 44,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RiskLevel",
+          "startLine": 8,
+          "endLine": 45,
+          "methods": [
+            "RiskLevel",
+            "isHigherThan",
+            "needsAction",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "code",
+            "name",
+            "severity",
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "WARNING",
+            "BREACH"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "LOW",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "MEDIUM",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "HIGH",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "WARNING",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "BREACH",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "RiskLevel",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "isHigherThan",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "needsAction",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "RiskLevel",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 38
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 11,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 47,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "RiskScore",
+          "startLine": 16,
+          "endLine": 21,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 23,
+          "endLine": 25,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "isHigh",
+          "startLine": 27,
+          "endLine": 29,
+          "params": []
+        },
+        {
+          "name": "equals",
+          "startLine": 31,
+          "endLine": 36,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 38,
+          "endLine": 41,
+          "params": []
+        },
+        {
+          "name": "toString",
+          "startLine": 43,
+          "endLine": 46,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RiskScore",
+          "startLine": 11,
+          "endLine": 47,
+          "methods": [
+            "RiskScore",
+            "of",
+            "isHigh",
+            "equals",
+            "hashCode",
+            "toString"
+          ],
+          "properties": [
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "isHigh",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "RiskScore",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "RiskScore",
+          "callee": "value.compareTo",
+          "lineNumber": 17
+        },
+        {
+          "caller": "RiskScore",
+          "callee": "new BusinessException",
+          "lineNumber": 18
+        },
+        {
+          "caller": "of",
+          "callee": "new RiskScore",
+          "lineNumber": 24
+        },
+        {
+          "caller": "isHigh",
+          "callee": "value.compareTo",
+          "lineNumber": 28
+        },
+        {
+          "caller": "isHigh",
+          "callee": "new BigDecimal",
+          "lineNumber": 28
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 35
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 40
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 54,
+      "nonEmptyLines": 46,
+      "functions": [
+        {
+          "name": "fromJson",
+          "startLine": 29,
+          "endLine": 35,
+          "params": [
+            "json"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 37,
+          "endLine": 48,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 50,
+          "endLine": 53,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RuleCondition",
+          "startLine": 14,
+          "endLine": 54,
+          "methods": [
+            "fromJson",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "OBJECT_MAPPER",
+            "type",
+            "field",
+            "operator",
+            "value",
+            "currency",
+            "pattern",
+            "windowMinutes"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "fromJson",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "RuleCondition",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fromJson",
+          "callee": "OBJECT_MAPPER.readValue",
+          "lineNumber": 31
+        },
+        {
+          "caller": "fromJson",
+          "callee": "new BusinessException",
+          "lineNumber": 33
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 41
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 42
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 43
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 44
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 45
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 46
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 47
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 35,
+      "functions": [
+        {
+          "name": "LcAmount",
+          "startLine": 17,
+          "endLine": 26,
+          "params": [
+            "amount",
+            "currency"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 28,
+          "endLine": 30,
+          "params": [
+            "amount",
+            "currency"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 32,
+          "endLine": 37,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 39,
+          "endLine": 42,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "LcAmount",
+          "startLine": 11,
+          "endLine": 43,
+          "methods": [
+            "LcAmount",
+            "of",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "amount",
+            "currency"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "LcAmount",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "LcAmount",
+          "callee": "amount.compareTo",
+          "lineNumber": 18
+        },
+        {
+          "caller": "LcAmount",
+          "callee": "new BusinessException",
+          "lineNumber": 19
+        },
+        {
+          "caller": "LcAmount",
+          "callee": "currency.isBlank",
+          "lineNumber": 21
+        },
+        {
+          "caller": "LcAmount",
+          "callee": "new BusinessException",
+          "lineNumber": 22
+        },
+        {
+          "caller": "of",
+          "callee": "new LcAmount",
+          "lineNumber": 29
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 36
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 36
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 41
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 65,
+      "nonEmptyLines": 54,
+      "functions": [
+        {
+          "name": "LcNo",
+          "startLine": 20,
+          "endLine": 25,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 27,
+          "endLine": 29,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "generate",
+          "startLine": 31,
+          "endLine": 47,
+          "params": [
+            "type"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 49,
+          "endLine": 54,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 56,
+          "endLine": 59,
+          "params": []
+        },
+        {
+          "name": "toString",
+          "startLine": 61,
+          "endLine": 64,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "LcNo",
+          "startLine": 13,
+          "endLine": 65,
+          "methods": [
+            "LcNo",
+            "of",
+            "generate",
+            "equals",
+            "hashCode",
+            "toString"
+          ],
+          "properties": [
+            "DATE_FORMATTER",
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "generate",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "LcNo",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "LcNo",
+          "callee": "value.isBlank",
+          "lineNumber": 21
+        },
+        {
+          "caller": "LcNo",
+          "callee": "new BusinessException",
+          "lineNumber": 22
+        },
+        {
+          "caller": "of",
+          "callee": "new LcNo",
+          "lineNumber": 28
+        },
+        {
+          "caller": "generate",
+          "callee": "\"IMPORT\".equalsIgnoreCase",
+          "lineNumber": 33
+        },
+        {
+          "caller": "generate",
+          "callee": "\"EXPORT\".equalsIgnoreCase",
+          "lineNumber": 35
+        },
+        {
+          "caller": "generate",
+          "callee": "\"STANDBY\".equalsIgnoreCase",
+          "lineNumber": 37
+        },
+        {
+          "caller": "generate",
+          "callee": "\"DOMESTIC\".equalsIgnoreCase",
+          "lineNumber": 39
+        },
+        {
+          "caller": "generate",
+          "callee": "LocalDateTime.now().format",
+          "lineNumber": 44
+        },
+        {
+          "caller": "generate",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 44
+        },
+        {
+          "caller": "generate",
+          "callee": "ThreadLocalRandom.current().nextInt",
+          "lineNumber": 45
+        },
+        {
+          "caller": "generate",
+          "callee": "ThreadLocalRandom.current",
+          "lineNumber": 45
+        },
+        {
+          "caller": "generate",
+          "callee": "new LcNo",
+          "lineNumber": 46
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 53
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 58
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 128,
+      "nonEmptyLines": 113,
+      "functions": [
+        {
+          "name": "FactoringContract",
+          "startLine": 34,
+          "endLine": 36,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 38,
+          "endLine": 61,
+          "params": [
+            "sellerId",
+            "buyerId",
+            "factoringType",
+            "recourse",
+            "invoiceAmount",
+            "currency",
+            "advanceRate",
+            "factoringFee",
+            "invoiceDate",
+            "dueDate",
+            "goodsDescription",
+            "invoiceNo"
+          ]
+        },
+        {
+          "name": "calculateAdvance",
+          "startLine": 63,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "submit",
+          "startLine": 68,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "approve",
+          "startLine": 76,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "reject",
+          "startLine": 84,
+          "endLine": 90,
+          "params": [
+            "reason"
+          ]
+        },
+        {
+          "name": "disburse",
+          "startLine": 92,
+          "endLine": 98,
+          "params": []
+        },
+        {
+          "name": "repay",
+          "startLine": 100,
+          "endLine": 106,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "assignContractNo",
+          "startLine": 108,
+          "endLine": 110,
+          "params": [
+            "contractNo"
+          ]
+        },
+        {
+          "name": "evaluateRisk",
+          "startLine": 112,
+          "endLine": 114,
+          "params": [
+            "riskLevel"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 116,
+          "endLine": 127,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "FactoringContract",
+          "startLine": 12,
+          "endLine": 128,
+          "methods": [
+            "FactoringContract",
+            "create",
+            "calculateAdvance",
+            "submit",
+            "approve",
+            "reject",
+            "disburse",
+            "repay",
+            "assignContractNo",
+            "evaluateRisk",
+            "validate"
+          ],
+          "properties": [
+            "id",
+            "contractNo",
+            "sellerId",
+            "buyerId",
+            "factoringType",
+            "recourse",
+            "invoiceAmount",
+            "currency",
+            "advanceRate",
+            "advanceAmount",
+            "factoringFee",
+            "invoiceDate",
+            "dueDate",
+            "goodsDescription",
+            "invoiceNo",
+            "contractStatus",
+            "riskLevel",
+            "createTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "calculateAdvance",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "submit",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "approve",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "reject",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "disburse",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "repay",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "assignContractNo",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "evaluateRisk",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "FactoringContract",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new FactoringContract",
+          "lineNumber": 43
+        },
+        {
+          "caller": "create",
+          "callee": "contract.calculateAdvance",
+          "lineNumber": 56
+        },
+        {
+          "caller": "create",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 58
+        },
+        {
+          "caller": "create",
+          "callee": "contract.validate",
+          "lineNumber": 59
+        },
+        {
+          "caller": "calculateAdvance",
+          "callee": "this.invoiceAmount.multiply(this.advanceRate).subtract",
+          "lineNumber": 64
+        },
+        {
+          "caller": "calculateAdvance",
+          "callee": "this.invoiceAmount.multiply",
+          "lineNumber": 64
+        },
+        {
+          "caller": "submit",
+          "callee": "\"DRAFT\".equals",
+          "lineNumber": 69
+        },
+        {
+          "caller": "submit",
+          "callee": "new BusinessException",
+          "lineNumber": 70
+        },
+        {
+          "caller": "submit",
+          "callee": "markUpdated",
+          "lineNumber": 73
+        },
+        {
+          "caller": "approve",
+          "callee": "\"PENDING_REVIEW\".equals",
+          "lineNumber": 77
+        },
+        {
+          "caller": "approve",
+          "callee": "new BusinessException",
+          "lineNumber": 78
+        },
+        {
+          "caller": "approve",
+          "callee": "markUpdated",
+          "lineNumber": 81
+        },
+        {
+          "caller": "reject",
+          "callee": "\"PENDING_REVIEW\".equals",
+          "lineNumber": 85
+        },
+        {
+          "caller": "reject",
+          "callee": "new BusinessException",
+          "lineNumber": 86
+        },
+        {
+          "caller": "reject",
+          "callee": "markUpdated",
+          "lineNumber": 89
+        },
+        {
+          "caller": "disburse",
+          "callee": "\"APPROVED\".equals",
+          "lineNumber": 93
+        },
+        {
+          "caller": "disburse",
+          "callee": "new BusinessException",
+          "lineNumber": 94
+        },
+        {
+          "caller": "disburse",
+          "callee": "markUpdated",
+          "lineNumber": 97
+        },
+        {
+          "caller": "repay",
+          "callee": "\"DISBURSED\".equals",
+          "lineNumber": 101
+        },
+        {
+          "caller": "repay",
+          "callee": "new BusinessException",
+          "lineNumber": 102
+        },
+        {
+          "caller": "repay",
+          "callee": "markUpdated",
+          "lineNumber": 105
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 119
+        },
+        {
+          "caller": "validate",
+          "callee": "invoiceAmount.compareTo",
+          "lineNumber": 121
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 122
+        },
+        {
+          "caller": "validate",
+          "callee": "advanceRate.compareTo",
+          "lineNumber": 124
+        },
+        {
+          "caller": "validate",
+          "callee": "advanceRate.compareTo",
+          "lineNumber": 124
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 125
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 10,
+        "functionCount": 11,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 97,
+      "nonEmptyLines": 85,
+      "functions": [
+        {
+          "name": "ForfaitingContract",
+          "startLine": 32,
+          "endLine": 34,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 36,
+          "endLine": 57,
+          "params": [
+            "exporterId",
+            "importerId",
+            "forfaitingType",
+            "faceAmount",
+            "currency",
+            "discountRate",
+            "shipmentDate",
+            "maturityDate",
+            "goodsDescription",
+            "issuingBank"
+          ]
+        },
+        {
+          "name": "calculateDiscount",
+          "startLine": 59,
+          "endLine": 64,
+          "params": []
+        },
+        {
+          "name": "submit",
+          "startLine": 66,
+          "endLine": 69,
+          "params": []
+        },
+        {
+          "name": "approve",
+          "startLine": 71,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "discount",
+          "startLine": 76,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "assignContractNo",
+          "startLine": 84,
+          "endLine": 86,
+          "params": [
+            "contractNo"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 88,
+          "endLine": 96,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ForfaitingContract",
+          "startLine": 12,
+          "endLine": 97,
+          "methods": [
+            "ForfaitingContract",
+            "create",
+            "calculateDiscount",
+            "submit",
+            "approve",
+            "discount",
+            "assignContractNo",
+            "validate"
+          ],
+          "properties": [
+            "id",
+            "contractNo",
+            "exporterId",
+            "importerId",
+            "forfaitingType",
+            "faceAmount",
+            "currency",
+            "discountRate",
+            "discountAmount",
+            "netAmount",
+            "shipmentDate",
+            "maturityDate",
+            "goodsDescription",
+            "issuingBank",
+            "contractStatus",
+            "createTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "calculateDiscount",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "submit",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "approve",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "discount",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "assignContractNo",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "ForfaitingContract",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new ForfaitingContract",
+          "lineNumber": 41
+        },
+        {
+          "caller": "create",
+          "callee": "contract.calculateDiscount",
+          "lineNumber": 52
+        },
+        {
+          "caller": "create",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 54
+        },
+        {
+          "caller": "create",
+          "callee": "contract.validate",
+          "lineNumber": 55
+        },
+        {
+          "caller": "calculateDiscount",
+          "callee": "java.time.temporal.ChronoUnit.DAYS.between",
+          "lineNumber": 60
+        },
+        {
+          "caller": "calculateDiscount",
+          "callee": "LocalDate.now",
+          "lineNumber": 60
+        },
+        {
+          "caller": "calculateDiscount",
+          "callee": "this.discountRate.divide",
+          "lineNumber": 61
+        },
+        {
+          "caller": "calculateDiscount",
+          "callee": "new BigDecimal",
+          "lineNumber": 61
+        },
+        {
+          "caller": "calculateDiscount",
+          "callee": "this.faceAmount.multiply(dailyRate).multiply",
+          "lineNumber": 62
+        },
+        {
+          "caller": "calculateDiscount",
+          "callee": "this.faceAmount.multiply",
+          "lineNumber": 62
+        },
+        {
+          "caller": "calculateDiscount",
+          "callee": "new BigDecimal",
+          "lineNumber": 62
+        },
+        {
+          "caller": "calculateDiscount",
+          "callee": "this.faceAmount.subtract",
+          "lineNumber": 63
+        },
+        {
+          "caller": "submit",
+          "callee": "markUpdated",
+          "lineNumber": 68
+        },
+        {
+          "caller": "approve",
+          "callee": "markUpdated",
+          "lineNumber": 73
+        },
+        {
+          "caller": "discount",
+          "callee": "\"APPROVED\".equals",
+          "lineNumber": 77
+        },
+        {
+          "caller": "discount",
+          "callee": "new BusinessException",
+          "lineNumber": 78
+        },
+        {
+          "caller": "discount",
+          "callee": "markUpdated",
+          "lineNumber": 81
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 91
+        },
+        {
+          "caller": "validate",
+          "callee": "faceAmount.compareTo",
+          "lineNumber": 93
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 94
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 7,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/FactoringContractRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "FactoringContractRepository",
+          "startLine": 8,
+          "endLine": 13,
+          "methods": [
+            "save",
+            "findById",
+            "findByContractNo",
+            "findBySeller"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FactoringContractRepository",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/ForfaitingContractRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "ForfaitingContractRepository",
+          "startLine": 8,
+          "endLine": 13,
+          "methods": [
+            "save",
+            "findById",
+            "findByContractNo",
+            "findByExporter"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ForfaitingContractRepository",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 39,
+      "functions": [
+        {
+          "name": "createFactoring",
+          "startLine": 20,
+          "endLine": 31,
+          "params": [
+            "sellerId",
+            "buyerId",
+            "factoringType",
+            "recourse",
+            "invoiceAmount",
+            "currency",
+            "advanceRate",
+            "factoringFee",
+            "invoiceDate",
+            "dueDate",
+            "goodsDescription",
+            "invoiceNo"
+          ]
+        },
+        {
+          "name": "createForfaiting",
+          "startLine": 33,
+          "endLine": 44,
+          "params": [
+            "exporterId",
+            "importerId",
+            "forfaitingType",
+            "faceAmount",
+            "currency",
+            "discountRate",
+            "shipmentDate",
+            "maturityDate",
+            "goodsDescription",
+            "issuingBank"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SupplyChainDomainService",
+          "startLine": 13,
+          "endLine": 45,
+          "methods": [
+            "createFactoring",
+            "createForfaiting"
+          ],
+          "properties": [
+            "factoringRepository",
+            "forfaitingRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createFactoring",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "createForfaiting",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "SupplyChainDomainService",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createFactoring",
+          "callee": "FactoringContract.create",
+          "lineNumber": 25
+        },
+        {
+          "caller": "createFactoring",
+          "callee": "contract.assignContractNo",
+          "lineNumber": 28
+        },
+        {
+          "caller": "createFactoring",
+          "callee": "System.currentTimeMillis",
+          "lineNumber": 28
+        },
+        {
+          "caller": "createFactoring",
+          "callee": "factoringRepository.save",
+          "lineNumber": 29
+        },
+        {
+          "caller": "createForfaiting",
+          "callee": "ForfaitingContract.create",
+          "lineNumber": 38
+        },
+        {
+          "caller": "createForfaiting",
+          "callee": "contract.assignContractNo",
+          "lineNumber": 41
+        },
+        {
+          "caller": "createForfaiting",
+          "callee": "System.currentTimeMillis",
+          "lineNumber": 41
+        },
+        {
+          "caller": "createForfaiting",
+          "callee": "forfaitingRepository.save",
+          "lineNumber": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 33,
+      "functions": [
+        {
+          "name": "StrikePrice",
+          "startLine": 16,
+          "endLine": 18,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 20,
+          "endLine": 28,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 30,
+          "endLine": 35,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 37,
+          "endLine": 40,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "StrikePrice",
+          "startLine": 11,
+          "endLine": 41,
+          "methods": [
+            "StrikePrice",
+            "of",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "StrikePrice",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "of",
+          "callee": "new BusinessException",
+          "lineNumber": 22
+        },
+        {
+          "caller": "of",
+          "callee": "value.compareTo",
+          "lineNumber": 24
+        },
+        {
+          "caller": "of",
+          "callee": "new BusinessException",
+          "lineNumber": 25
+        },
+        {
+          "caller": "of",
+          "callee": "new StrikePrice",
+          "lineNumber": 27
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 34
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 36,
+      "functions": [
+        {
+          "name": "SwapPoints",
+          "startLine": 16,
+          "endLine": 18,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 20,
+          "endLine": 25,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "applyToRate",
+          "startLine": 27,
+          "endLine": 32,
+          "params": [
+            "rate"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 34,
+          "endLine": 39,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 41,
+          "endLine": 44,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SwapPoints",
+          "startLine": 11,
+          "endLine": 45,
+          "methods": [
+            "SwapPoints",
+            "of",
+            "applyToRate",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "applyToRate",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "SwapPoints",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "of",
+          "callee": "new BusinessException",
+          "lineNumber": 22
+        },
+        {
+          "caller": "of",
+          "callee": "new SwapPoints",
+          "lineNumber": 24
+        },
+        {
+          "caller": "applyToRate",
+          "callee": "new BusinessException",
+          "lineNumber": 29
+        },
+        {
+          "caller": "applyToRate",
+          "callee": "rate.add",
+          "lineNumber": 31
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 38
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 66,
+      "nonEmptyLines": 54,
+      "functions": [
+        {
+          "name": "TradeAmount",
+          "startLine": 17,
+          "endLine": 20,
+          "params": [
+            "amount",
+            "currency"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 22,
+          "endLine": 30,
+          "params": [
+            "amount",
+            "currency"
+          ]
+        },
+        {
+          "name": "add",
+          "startLine": 32,
+          "endLine": 35,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "subtract",
+          "startLine": 37,
+          "endLine": 40,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "multiply",
+          "startLine": 42,
+          "endLine": 47,
+          "params": [
+            "rate"
+          ]
+        },
+        {
+          "name": "assertSameCurrency",
+          "startLine": 49,
+          "endLine": 53,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 55,
+          "endLine": 60,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 62,
+          "endLine": 65,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "TradeAmount",
+          "startLine": 11,
+          "endLine": 66,
+          "methods": [
+            "TradeAmount",
+            "of",
+            "add",
+            "subtract",
+            "multiply",
+            "assertSameCurrency",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "amount",
+            "currency"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "add",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "subtract",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "multiply",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "TradeAmount",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "of",
+          "callee": "new BusinessException",
+          "lineNumber": 24
+        },
+        {
+          "caller": "of",
+          "callee": "currency.isBlank",
+          "lineNumber": 26
+        },
+        {
+          "caller": "of",
+          "callee": "new BusinessException",
+          "lineNumber": 27
+        },
+        {
+          "caller": "of",
+          "callee": "new TradeAmount",
+          "lineNumber": 29
+        },
+        {
+          "caller": "add",
+          "callee": "assertSameCurrency",
+          "lineNumber": 33
+        },
+        {
+          "caller": "add",
+          "callee": "new TradeAmount",
+          "lineNumber": 34
+        },
+        {
+          "caller": "add",
+          "callee": "this.amount.add",
+          "lineNumber": 34
+        },
+        {
+          "caller": "subtract",
+          "callee": "assertSameCurrency",
+          "lineNumber": 38
+        },
+        {
+          "caller": "subtract",
+          "callee": "new TradeAmount",
+          "lineNumber": 39
+        },
+        {
+          "caller": "subtract",
+          "callee": "this.amount.subtract",
+          "lineNumber": 39
+        },
+        {
+          "caller": "multiply",
+          "callee": "new BusinessException",
+          "lineNumber": 44
+        },
+        {
+          "caller": "multiply",
+          "callee": "new TradeAmount",
+          "lineNumber": 46
+        },
+        {
+          "caller": "multiply",
+          "callee": "this.amount.multiply",
+          "lineNumber": 46
+        },
+        {
+          "caller": "assertSameCurrency",
+          "callee": "this.currency.equals",
+          "lineNumber": 50
+        },
+        {
+          "caller": "assertSameCurrency",
+          "callee": "new BusinessException",
+          "lineNumber": 51
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 59
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 59
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 64
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 7,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 56,
+      "nonEmptyLines": 45,
+      "functions": [
+        {
+          "name": "FairValue",
+          "startLine": 16,
+          "endLine": 21,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 23,
+          "endLine": 25,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "zero",
+          "startLine": 27,
+          "endLine": 29,
+          "params": []
+        },
+        {
+          "name": "add",
+          "startLine": 31,
+          "endLine": 36,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "subtract",
+          "startLine": 38,
+          "endLine": 43,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 45,
+          "endLine": 50,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 52,
+          "endLine": 55,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "FairValue",
+          "startLine": 11,
+          "endLine": 56,
+          "methods": [
+            "FairValue",
+            "of",
+            "zero",
+            "add",
+            "subtract",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "zero",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "add",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "subtract",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "FairValue",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "FairValue",
+          "callee": "new BusinessException",
+          "lineNumber": 18
+        },
+        {
+          "caller": "of",
+          "callee": "new FairValue",
+          "lineNumber": 24
+        },
+        {
+          "caller": "zero",
+          "callee": "new FairValue",
+          "lineNumber": 28
+        },
+        {
+          "caller": "add",
+          "callee": "new BusinessException",
+          "lineNumber": 33
+        },
+        {
+          "caller": "add",
+          "callee": "new FairValue",
+          "lineNumber": 35
+        },
+        {
+          "caller": "add",
+          "callee": "this.value.add",
+          "lineNumber": 35
+        },
+        {
+          "caller": "subtract",
+          "callee": "new BusinessException",
+          "lineNumber": 40
+        },
+        {
+          "caller": "subtract",
+          "callee": "new FairValue",
+          "lineNumber": 42
+        },
+        {
+          "caller": "subtract",
+          "callee": "this.value.subtract",
+          "lineNumber": 42
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 49
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 54
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 33,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "ValuationModelRegistry",
+          "startLine": 20,
+          "endLine": 24,
+          "params": [
+            "models"
+          ]
+        },
+        {
+          "name": "getModel",
+          "startLine": 26,
+          "endLine": 32,
+          "params": [
+            "type"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ValuationModelRegistry",
+          "startLine": 14,
+          "endLine": 33,
+          "methods": [
+            "ValuationModelRegistry",
+            "getModel"
+          ],
+          "properties": [
+            "modelMap"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ValuationModelRegistry",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "getModel",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "ValuationModelRegistry",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ValuationModelRegistry",
+          "callee": "models.stream().collect",
+          "lineNumber": 21
+        },
+        {
+          "caller": "ValuationModelRegistry",
+          "callee": "models.stream",
+          "lineNumber": 21
+        },
+        {
+          "caller": "ValuationModelRegistry",
+          "callee": "Collectors.toMap",
+          "lineNumber": 22
+        },
+        {
+          "caller": "ValuationModelRegistry",
+          "callee": "Function.identity",
+          "lineNumber": 22
+        },
+        {
+          "caller": "ValuationModelRegistry",
+          "callee": "log.info",
+          "lineNumber": 23
+        },
+        {
+          "caller": "ValuationModelRegistry",
+          "callee": "modelMap.size",
+          "lineNumber": 23
+        },
+        {
+          "caller": "ValuationModelRegistry",
+          "callee": "modelMap.keySet",
+          "lineNumber": 23
+        },
+        {
+          "caller": "getModel",
+          "callee": "modelMap.get",
+          "lineNumber": 27
+        },
+        {
+          "caller": "getModel",
+          "callee": "new BusinessException",
+          "lineNumber": 29
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    }
+  ]
+}

@@ -23,6 +23,9 @@ public interface SamplingRuleRepository {
     /** Find all active and enabled rules. 查询所有启用状态的有效规则。 */
     List<SamplingRule> findAllActive();
 
+    /** Find all rules including inactive ones. 查询全部抽查规则。 */
+    List<SamplingRule> findAll();
+
     /** Delete by id. 根据ID删除。 */
     void deleteById(Long id);
 }

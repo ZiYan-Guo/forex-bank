@@ -1,0 +1,4707 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "type": "file",
+      "name": "ExchangeRate.java",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "summary": "ExchangeRate.java 是 汇率服务 模块中的领域模型，主要定义 ExchangeRate，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "汇率服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:ExchangeRate",
+      "type": "class",
+      "name": "ExchangeRate",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "lineRange": [
+        15,
+        79
+      ],
+      "summary": "ExchangeRate 是 汇率服务 模块的领域模型，封装 5 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "汇率服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:ExchangeRate",
+      "type": "function",
+      "name": "ExchangeRate",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "lineRange": [
+        33,
+        35
+      ],
+      "summary": "ExchangeRate 实现 汇率服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "lineRange": [
+        37,
+        53
+      ],
+      "summary": "create 实现 汇率服务 模块中的关键处理步骤，参数包括 currencyPair、baseCurrency、quoteCurrency、bidRate、askRate、rateSource。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:invalidate",
+      "type": "function",
+      "name": "invalidate",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "lineRange": [
+        55,
+        58
+      ],
+      "summary": "invalidate 实现 汇率服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:isExpired",
+      "type": "function",
+      "name": "isExpired",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "lineRange": [
+        60,
+        65
+      ],
+      "summary": "isExpired 实现 汇率服务 模块中的关键处理步骤，参数包括 ttl。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:validate",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "lineRange": [
+        67,
+        78
+      ],
+      "summary": "validate 实现 汇率服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "type": "file",
+      "name": "CurrencyPair.java",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "summary": "CurrencyPair.java 是 汇率服务 模块中的领域模型，主要定义 CurrencyPair，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "汇率服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java:CurrencyPair",
+      "type": "class",
+      "name": "CurrencyPair",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "lineRange": [
+        12,
+        47
+      ],
+      "summary": "CurrencyPair 是 汇率服务 模块的领域模型，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "汇率服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java:symbol",
+      "type": "function",
+      "name": "symbol",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "lineRange": [
+        21,
+        23
+      ],
+      "summary": "symbol 实现 汇率服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "lineRange": [
+        25,
+        34
+      ],
+      "summary": "parse 实现 汇率服务 模块中的关键处理步骤，参数包括 pair。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "lineRange": [
+        36,
+        41
+      ],
+      "summary": "equals 实现 汇率服务 模块中的关键处理步骤，参数包括 o。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "lineRange": [
+        43,
+        46
+      ],
+      "summary": "hashCode 实现 汇率服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "type": "file",
+      "name": "RateValue.java",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "summary": "RateValue.java 是 汇率服务 模块中的领域模型，主要定义 RateValue，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "汇率服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:RateValue",
+      "type": "class",
+      "name": "RateValue",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "lineRange": [
+        12,
+        48
+      ],
+      "summary": "RateValue 是 汇率服务 模块的领域模型，封装 5 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "汇率服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:RateValue",
+      "type": "function",
+      "name": "RateValue",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "lineRange": [
+        19,
+        24
+      ],
+      "summary": "RateValue 实现 汇率服务 模块中的关键处理步骤，参数包括 value。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "lineRange": [
+        26,
+        28
+      ],
+      "summary": "of 实现 汇率服务 模块中的关键处理步骤，参数包括 value。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:addSpread",
+      "type": "function",
+      "name": "addSpread",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "lineRange": [
+        30,
+        35
+      ],
+      "summary": "addSpread 实现 汇率服务 模块中的关键处理步骤，参数包括 spread。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "lineRange": [
+        37,
+        42
+      ],
+      "summary": "equals 实现 汇率服务 模块中的关键处理步骤，参数包括 o。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "lineRange": [
+        44,
+        47
+      ],
+      "summary": "hashCode 实现 汇率服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "type": "file",
+      "name": "ExchangeRateRepository.java",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "summary": "ExchangeRateRepository.java 是 汇率服务 模块中的仓储接口，主要定义 ExchangeRateRepository，承担该业务域的分层协作职责。",
+      "tags": [
+        "repository",
+        "汇率服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java:ExchangeRateRepository",
+      "type": "class",
+      "name": "ExchangeRateRepository",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "lineRange": [
+        10,
+        21
+      ],
+      "summary": "ExchangeRateRepository 是 汇率服务 模块的仓储接口，封装 5 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "repository",
+        "汇率服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "type": "file",
+      "name": "RateCalculationDomainService.java",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "summary": "RateCalculationDomainService.java 是 汇率服务 模块中的领域服务，主要定义 RateCalculationDomainService，承担该业务域的分层协作职责。",
+      "tags": [
+        "domain-service",
+        "汇率服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:RateCalculationDomainService",
+      "type": "class",
+      "name": "RateCalculationDomainService",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "lineRange": [
+        11,
+        44
+      ],
+      "summary": "RateCalculationDomainService 是 汇率服务 模块的领域服务，封装 3 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "domain-service",
+        "汇率服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:calculateCrossRate",
+      "type": "function",
+      "name": "calculateCrossRate",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "lineRange": [
+        15,
+        23
+      ],
+      "summary": "calculateCrossRate 实现 汇率服务 模块中的关键处理步骤，参数包括 usdBaseRate、usdQuoteRate。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "domain-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:applySpread",
+      "type": "function",
+      "name": "applySpread",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "lineRange": [
+        25,
+        33
+      ],
+      "summary": "applySpread 实现 汇率服务 模块中的关键处理步骤，参数包括 baseRate、spreadAdjust。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "domain-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:calculateAmount",
+      "type": "function",
+      "name": "calculateAmount",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "lineRange": [
+        35,
+        43
+      ],
+      "summary": "calculateAmount 实现 汇率服务 模块中的关键处理步骤，参数包括 amount、rate。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "domain-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "type": "file",
+      "name": "RatePublishDomainService.java",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "summary": "RatePublishDomainService.java 是 汇率服务 模块中的领域服务，主要定义 RatePublishDomainService，承担该业务域的分层协作职责。",
+      "tags": [
+        "domain-service",
+        "汇率服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java:RatePublishDomainService",
+      "type": "class",
+      "name": "RatePublishDomainService",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "lineRange": [
+        13,
+        55
+      ],
+      "summary": "RatePublishDomainService 是 汇率服务 模块的领域服务，封装 2 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "domain-service",
+        "汇率服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java:publishRate",
+      "type": "function",
+      "name": "publishRate",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "lineRange": [
+        20,
+        39
+      ],
+      "summary": "publishRate 实现 汇率服务 模块中的关键处理步骤，参数包括 rate、channelCode、spreadAdjust。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "domain-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java:validateRate",
+      "type": "function",
+      "name": "validateRate",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "lineRange": [
+        41,
+        54
+      ],
+      "summary": "validateRate 实现 汇率服务 模块中的关键处理步骤，参数包括 rate。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "domain-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-rate/src/test/java/com/forex/rate/domain/service/RateCalculationDomainServiceTest.java",
+      "type": "file",
+      "name": "RateCalculationDomainServiceTest.java",
+      "filePath": "forex-rate/src/test/java/com/forex/rate/domain/service/RateCalculationDomainServiceTest.java",
+      "summary": "RateCalculationDomainServiceTest.java 是 汇率服务 模块中的领域服务，主要定义 RateCalculationDomainServiceTest，承担该业务域的分层协作职责。",
+      "tags": [
+        "domain-service",
+        "汇率服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-rate/src/test/java/com/forex/rate/domain/service/RateCalculationDomainServiceTest.java:RateCalculationDomainServiceTest",
+      "type": "class",
+      "name": "RateCalculationDomainServiceTest",
+      "filePath": "forex-rate/src/test/java/com/forex/rate/domain/service/RateCalculationDomainServiceTest.java",
+      "lineRange": [
+        11,
+        64
+      ],
+      "summary": "RateCalculationDomainServiceTest 是 汇率服务 模块的领域服务，封装 7 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "domain-service",
+        "汇率服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java",
+      "type": "file",
+      "name": "RatePublishDomainServiceTest.java",
+      "filePath": "forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java",
+      "summary": "RatePublishDomainServiceTest.java 是 汇率服务 模块中的领域服务，主要定义 RatePublishDomainServiceTest，承担该业务域的分层协作职责。",
+      "tags": [
+        "domain-service",
+        "汇率服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java:RatePublishDomainServiceTest",
+      "type": "class",
+      "name": "RatePublishDomainServiceTest",
+      "filePath": "forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java",
+      "lineRange": [
+        13,
+        75
+      ],
+      "summary": "RatePublishDomainServiceTest 是 汇率服务 模块的领域服务，封装 6 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "domain-service",
+        "汇率服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java:testPublishRate",
+      "type": "function",
+      "name": "testPublishRate",
+      "filePath": "forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java",
+      "lineRange": [
+        17,
+        28
+      ],
+      "summary": "testPublishRate 实现 汇率服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "domain-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java:testPublishRate_WithSpread",
+      "type": "function",
+      "name": "testPublishRate_WithSpread",
+      "filePath": "forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java",
+      "lineRange": [
+        30,
+        42
+      ],
+      "summary": "testPublishRate_WithSpread 实现 汇率服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "domain-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "type": "file",
+      "name": "BopCode.java",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "summary": "BopCode.java 是 reporting 模块中的领域模型，主要定义 BopCode，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "reporting",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:BopCode",
+      "type": "class",
+      "name": "BopCode",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "lineRange": [
+        10,
+        42
+      ],
+      "summary": "BopCode 是 reporting 模块的领域模型，封装 5 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "reporting",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:BopCode",
+      "type": "function",
+      "name": "BopCode",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "lineRange": [
+        15,
+        20
+      ],
+      "summary": "BopCode 实现 reporting 模块中的关键处理步骤，参数包括 value。",
+      "tags": [
+        "function",
+        "reporting",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "lineRange": [
+        22,
+        24
+      ],
+      "summary": "of 实现 reporting 模块中的关键处理步骤，参数包括 value。",
+      "tags": [
+        "function",
+        "reporting",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "lineRange": [
+        26,
+        31
+      ],
+      "summary": "equals 实现 reporting 模块中的关键处理步骤，参数包括 o。",
+      "tags": [
+        "function",
+        "reporting",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "lineRange": [
+        33,
+        36
+      ],
+      "summary": "hashCode 实现 reporting 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "reporting",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:toString",
+      "type": "function",
+      "name": "toString",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "lineRange": [
+        38,
+        41
+      ],
+      "summary": "toString 实现 reporting 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "reporting",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "type": "file",
+      "name": "ReportNo.java",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "summary": "ReportNo.java 是 reporting 模块中的领域模型，主要定义 ReportNo，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "reporting",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:ReportNo",
+      "type": "class",
+      "name": "ReportNo",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "lineRange": [
+        13,
+        63
+      ],
+      "summary": "ReportNo 是 reporting 模块的领域模型，封装 6 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "reporting",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:ReportNo",
+      "type": "function",
+      "name": "ReportNo",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "lineRange": [
+        20,
+        25
+      ],
+      "summary": "ReportNo 实现 reporting 模块中的关键处理步骤，参数包括 value。",
+      "tags": [
+        "function",
+        "reporting",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "lineRange": [
+        27,
+        29
+      ],
+      "summary": "of 实现 reporting 模块中的关键处理步骤，参数包括 value。",
+      "tags": [
+        "function",
+        "reporting",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:generate",
+      "type": "function",
+      "name": "generate",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "lineRange": [
+        31,
+        45
+      ],
+      "summary": "generate 实现 reporting 模块中的关键处理步骤，参数包括 type。",
+      "tags": [
+        "function",
+        "reporting",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "lineRange": [
+        47,
+        52
+      ],
+      "summary": "equals 实现 reporting 模块中的关键处理步骤，参数包括 o。",
+      "tags": [
+        "function",
+        "reporting",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "lineRange": [
+        54,
+        57
+      ],
+      "summary": "hashCode 实现 reporting 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "reporting",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:toString",
+      "type": "function",
+      "name": "toString",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "lineRange": [
+        59,
+        62
+      ],
+      "summary": "toString 实现 reporting 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "reporting",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "type": "file",
+      "name": "RiskLevel.java",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "summary": "RiskLevel.java 是 risk 模块中的领域模型，主要定义 RiskLevel，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "risk",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "type": "class",
+      "name": "RiskLevel",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "lineRange": [
+        8,
+        45
+      ],
+      "summary": "RiskLevel 是 risk 模块的领域模型，封装 5 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "risk",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "type": "function",
+      "name": "RiskLevel",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "lineRange": [
+        20,
+        24
+      ],
+      "summary": "RiskLevel 实现 risk 模块中的关键处理步骤，参数包括 code、name、severity。",
+      "tags": [
+        "function",
+        "risk",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:isHigherThan",
+      "type": "function",
+      "name": "isHigherThan",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "lineRange": [
+        26,
+        28
+      ],
+      "summary": "isHigherThan 实现 risk 模块中的关键处理步骤，参数包括 other。",
+      "tags": [
+        "function",
+        "risk",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:needsAction",
+      "type": "function",
+      "name": "needsAction",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "lineRange": [
+        30,
+        32
+      ],
+      "summary": "needsAction 实现 risk 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "risk",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "lineRange": [
+        34,
+        39
+      ],
+      "summary": "equals 实现 risk 模块中的关键处理步骤，参数包括 o。",
+      "tags": [
+        "function",
+        "risk",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "lineRange": [
+        41,
+        44
+      ],
+      "summary": "hashCode 实现 risk 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "risk",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "type": "file",
+      "name": "RiskScore.java",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "summary": "RiskScore.java 是 risk 模块中的领域模型，主要定义 RiskScore，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "risk",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:RiskScore",
+      "type": "class",
+      "name": "RiskScore",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "lineRange": [
+        11,
+        47
+      ],
+      "summary": "RiskScore 是 risk 模块的领域模型，封装 6 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "risk",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:RiskScore",
+      "type": "function",
+      "name": "RiskScore",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "lineRange": [
+        16,
+        21
+      ],
+      "summary": "RiskScore 实现 risk 模块中的关键处理步骤，参数包括 value。",
+      "tags": [
+        "function",
+        "risk",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "lineRange": [
+        23,
+        25
+      ],
+      "summary": "of 实现 risk 模块中的关键处理步骤，参数包括 value。",
+      "tags": [
+        "function",
+        "risk",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:isHigh",
+      "type": "function",
+      "name": "isHigh",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "lineRange": [
+        27,
+        29
+      ],
+      "summary": "isHigh 实现 risk 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "risk",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "lineRange": [
+        31,
+        36
+      ],
+      "summary": "equals 实现 risk 模块中的关键处理步骤，参数包括 o。",
+      "tags": [
+        "function",
+        "risk",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "lineRange": [
+        38,
+        41
+      ],
+      "summary": "hashCode 实现 risk 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "risk",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:toString",
+      "type": "function",
+      "name": "toString",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "lineRange": [
+        43,
+        46
+      ],
+      "summary": "toString 实现 risk 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "risk",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "type": "file",
+      "name": "RuleCondition.java",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "summary": "RuleCondition.java 是 risk 模块中的领域模型，主要定义 RuleCondition，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "risk",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java:RuleCondition",
+      "type": "class",
+      "name": "RuleCondition",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "lineRange": [
+        14,
+        54
+      ],
+      "summary": "RuleCondition 是 risk 模块的领域模型，封装 3 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "risk",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java:fromJson",
+      "type": "function",
+      "name": "fromJson",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "lineRange": [
+        29,
+        35
+      ],
+      "summary": "fromJson 实现 risk 模块中的关键处理步骤，参数包括 json。",
+      "tags": [
+        "function",
+        "risk",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "lineRange": [
+        37,
+        48
+      ],
+      "summary": "equals 实现 risk 模块中的关键处理步骤，参数包括 o。",
+      "tags": [
+        "function",
+        "risk",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "lineRange": [
+        50,
+        53
+      ],
+      "summary": "hashCode 实现 risk 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "risk",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "type": "file",
+      "name": "LcAmount.java",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "summary": "LcAmount.java 是 国际结算 模块中的领域模型，主要定义 LcAmount，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "国际结算",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java:LcAmount",
+      "type": "class",
+      "name": "LcAmount",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "lineRange": [
+        11,
+        43
+      ],
+      "summary": "LcAmount 是 国际结算 模块的领域模型，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "国际结算",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java:LcAmount",
+      "type": "function",
+      "name": "LcAmount",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "lineRange": [
+        17,
+        26
+      ],
+      "summary": "LcAmount 实现 国际结算 模块中的关键处理步骤，参数包括 amount、currency。",
+      "tags": [
+        "function",
+        "国际结算",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "lineRange": [
+        28,
+        30
+      ],
+      "summary": "of 实现 国际结算 模块中的关键处理步骤，参数包括 amount、currency。",
+      "tags": [
+        "function",
+        "国际结算",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "lineRange": [
+        32,
+        37
+      ],
+      "summary": "equals 实现 国际结算 模块中的关键处理步骤，参数包括 o。",
+      "tags": [
+        "function",
+        "国际结算",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "lineRange": [
+        39,
+        42
+      ],
+      "summary": "hashCode 实现 国际结算 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "国际结算",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "type": "file",
+      "name": "LcNo.java",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "summary": "LcNo.java 是 国际结算 模块中的领域模型，主要定义 LcNo，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "国际结算",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:LcNo",
+      "type": "class",
+      "name": "LcNo",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "lineRange": [
+        13,
+        65
+      ],
+      "summary": "LcNo 是 国际结算 模块的领域模型，封装 6 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "国际结算",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:LcNo",
+      "type": "function",
+      "name": "LcNo",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "lineRange": [
+        20,
+        25
+      ],
+      "summary": "LcNo 实现 国际结算 模块中的关键处理步骤，参数包括 value。",
+      "tags": [
+        "function",
+        "国际结算",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "lineRange": [
+        27,
+        29
+      ],
+      "summary": "of 实现 国际结算 模块中的关键处理步骤，参数包括 value。",
+      "tags": [
+        "function",
+        "国际结算",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:generate",
+      "type": "function",
+      "name": "generate",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "lineRange": [
+        31,
+        47
+      ],
+      "summary": "generate 实现 国际结算 模块中的关键处理步骤，参数包括 type。",
+      "tags": [
+        "function",
+        "国际结算",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "lineRange": [
+        49,
+        54
+      ],
+      "summary": "equals 实现 国际结算 模块中的关键处理步骤，参数包括 o。",
+      "tags": [
+        "function",
+        "国际结算",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "lineRange": [
+        56,
+        59
+      ],
+      "summary": "hashCode 实现 国际结算 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "国际结算",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:toString",
+      "type": "function",
+      "name": "toString",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "lineRange": [
+        61,
+        64
+      ],
+      "summary": "toString 实现 国际结算 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "国际结算",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "type": "file",
+      "name": "FactoringContract.java",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "summary": "FactoringContract.java 是 supply-chain 模块中的领域模型，主要定义 FactoringContract，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "supply-chain",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:FactoringContract",
+      "type": "class",
+      "name": "FactoringContract",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "lineRange": [
+        12,
+        128
+      ],
+      "summary": "FactoringContract 是 supply-chain 模块的领域模型，封装 11 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "supply-chain",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:FactoringContract",
+      "type": "function",
+      "name": "FactoringContract",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "lineRange": [
+        34,
+        36
+      ],
+      "summary": "FactoringContract 实现 supply-chain 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "lineRange": [
+        38,
+        61
+      ],
+      "summary": "create 实现 supply-chain 模块中的关键处理步骤，参数包括 sellerId、buyerId、factoringType、recourse、invoiceAmount、currency、advanceRate、factoringFee、invoiceDate、dueDate、goodsDescription、invoiceNo。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:calculateAdvance",
+      "type": "function",
+      "name": "calculateAdvance",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "lineRange": [
+        63,
+        66
+      ],
+      "summary": "calculateAdvance 实现 supply-chain 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:submit",
+      "type": "function",
+      "name": "submit",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "lineRange": [
+        68,
+        74
+      ],
+      "summary": "submit 实现 supply-chain 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:approve",
+      "type": "function",
+      "name": "approve",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "lineRange": [
+        76,
+        82
+      ],
+      "summary": "approve 实现 supply-chain 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:reject",
+      "type": "function",
+      "name": "reject",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "lineRange": [
+        84,
+        90
+      ],
+      "summary": "reject 实现 supply-chain 模块中的关键处理步骤，参数包括 reason。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:disburse",
+      "type": "function",
+      "name": "disburse",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "lineRange": [
+        92,
+        98
+      ],
+      "summary": "disburse 实现 supply-chain 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:repay",
+      "type": "function",
+      "name": "repay",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "lineRange": [
+        100,
+        106
+      ],
+      "summary": "repay 实现 supply-chain 模块中的关键处理步骤，参数包括 amount。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:assignContractNo",
+      "type": "function",
+      "name": "assignContractNo",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "lineRange": [
+        108,
+        110
+      ],
+      "summary": "assignContractNo 实现 supply-chain 模块中的关键处理步骤，参数包括 contractNo。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:evaluateRisk",
+      "type": "function",
+      "name": "evaluateRisk",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "lineRange": [
+        112,
+        114
+      ],
+      "summary": "evaluateRisk 实现 supply-chain 模块中的关键处理步骤，参数包括 riskLevel。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:validate",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "lineRange": [
+        116,
+        127
+      ],
+      "summary": "validate 实现 supply-chain 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "type": "file",
+      "name": "ForfaitingContract.java",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "summary": "ForfaitingContract.java 是 supply-chain 模块中的领域模型，主要定义 ForfaitingContract，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "supply-chain",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:ForfaitingContract",
+      "type": "class",
+      "name": "ForfaitingContract",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "lineRange": [
+        12,
+        97
+      ],
+      "summary": "ForfaitingContract 是 supply-chain 模块的领域模型，封装 8 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "supply-chain",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:ForfaitingContract",
+      "type": "function",
+      "name": "ForfaitingContract",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "lineRange": [
+        32,
+        34
+      ],
+      "summary": "ForfaitingContract 实现 supply-chain 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "lineRange": [
+        36,
+        57
+      ],
+      "summary": "create 实现 supply-chain 模块中的关键处理步骤，参数包括 exporterId、importerId、forfaitingType、faceAmount、currency、discountRate、shipmentDate、maturityDate、goodsDescription、issuingBank。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:calculateDiscount",
+      "type": "function",
+      "name": "calculateDiscount",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "lineRange": [
+        59,
+        64
+      ],
+      "summary": "calculateDiscount 实现 supply-chain 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:submit",
+      "type": "function",
+      "name": "submit",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "lineRange": [
+        66,
+        69
+      ],
+      "summary": "submit 实现 supply-chain 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:approve",
+      "type": "function",
+      "name": "approve",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "lineRange": [
+        71,
+        74
+      ],
+      "summary": "approve 实现 supply-chain 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:discount",
+      "type": "function",
+      "name": "discount",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "lineRange": [
+        76,
+        82
+      ],
+      "summary": "discount 实现 supply-chain 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:assignContractNo",
+      "type": "function",
+      "name": "assignContractNo",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "lineRange": [
+        84,
+        86
+      ],
+      "summary": "assignContractNo 实现 supply-chain 模块中的关键处理步骤，参数包括 contractNo。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/FactoringContractRepository.java",
+      "type": "file",
+      "name": "FactoringContractRepository.java",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/FactoringContractRepository.java",
+      "summary": "FactoringContractRepository.java 是 supply-chain 模块中的仓储接口，主要定义 FactoringContractRepository，承担该业务域的分层协作职责。",
+      "tags": [
+        "repository",
+        "supply-chain",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/FactoringContractRepository.java:FactoringContractRepository",
+      "type": "class",
+      "name": "FactoringContractRepository",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/FactoringContractRepository.java",
+      "lineRange": [
+        8,
+        13
+      ],
+      "summary": "FactoringContractRepository 是 supply-chain 模块的仓储接口，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "repository",
+        "supply-chain",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/ForfaitingContractRepository.java",
+      "type": "file",
+      "name": "ForfaitingContractRepository.java",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/ForfaitingContractRepository.java",
+      "summary": "ForfaitingContractRepository.java 是 supply-chain 模块中的仓储接口，主要定义 ForfaitingContractRepository，承担该业务域的分层协作职责。",
+      "tags": [
+        "repository",
+        "supply-chain",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/ForfaitingContractRepository.java:ForfaitingContractRepository",
+      "type": "class",
+      "name": "ForfaitingContractRepository",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/ForfaitingContractRepository.java",
+      "lineRange": [
+        8,
+        13
+      ],
+      "summary": "ForfaitingContractRepository 是 supply-chain 模块的仓储接口，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "repository",
+        "supply-chain",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "type": "file",
+      "name": "SupplyChainDomainService.java",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "summary": "SupplyChainDomainService.java 是 supply-chain 模块中的领域服务，主要定义 SupplyChainDomainService，承担该业务域的分层协作职责。",
+      "tags": [
+        "domain-service",
+        "supply-chain",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java:SupplyChainDomainService",
+      "type": "class",
+      "name": "SupplyChainDomainService",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "lineRange": [
+        13,
+        45
+      ],
+      "summary": "SupplyChainDomainService 是 supply-chain 模块的领域服务，封装 2 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "domain-service",
+        "supply-chain",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java:createFactoring",
+      "type": "function",
+      "name": "createFactoring",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "lineRange": [
+        20,
+        31
+      ],
+      "summary": "createFactoring 实现 supply-chain 模块中的关键处理步骤，参数包括 sellerId、buyerId、factoringType、recourse、invoiceAmount、currency、advanceRate、factoringFee、invoiceDate、dueDate、goodsDescription、invoiceNo。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "domain-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java:createForfaiting",
+      "type": "function",
+      "name": "createForfaiting",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "lineRange": [
+        33,
+        44
+      ],
+      "summary": "createForfaiting 实现 supply-chain 模块中的关键处理步骤，参数包括 exporterId、importerId、forfaitingType、faceAmount、currency、discountRate、shipmentDate、maturityDate、goodsDescription、issuingBank。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "domain-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "type": "file",
+      "name": "StrikePrice.java",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "summary": "StrikePrice.java 是 trading 模块中的领域模型，主要定义 StrikePrice，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "trading",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java:StrikePrice",
+      "type": "class",
+      "name": "StrikePrice",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "lineRange": [
+        11,
+        41
+      ],
+      "summary": "StrikePrice 是 trading 模块的领域模型，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "trading",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java:StrikePrice",
+      "type": "function",
+      "name": "StrikePrice",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "lineRange": [
+        16,
+        18
+      ],
+      "summary": "StrikePrice 实现 trading 模块中的关键处理步骤，参数包括 value。",
+      "tags": [
+        "function",
+        "trading",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "lineRange": [
+        20,
+        28
+      ],
+      "summary": "of 实现 trading 模块中的关键处理步骤，参数包括 value。",
+      "tags": [
+        "function",
+        "trading",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "lineRange": [
+        30,
+        35
+      ],
+      "summary": "equals 实现 trading 模块中的关键处理步骤，参数包括 o。",
+      "tags": [
+        "function",
+        "trading",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "lineRange": [
+        37,
+        40
+      ],
+      "summary": "hashCode 实现 trading 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "trading",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "type": "file",
+      "name": "SwapPoints.java",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "summary": "SwapPoints.java 是 trading 模块中的领域模型，主要定义 SwapPoints，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "trading",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:SwapPoints",
+      "type": "class",
+      "name": "SwapPoints",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "lineRange": [
+        11,
+        45
+      ],
+      "summary": "SwapPoints 是 trading 模块的领域模型，封装 5 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "trading",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:SwapPoints",
+      "type": "function",
+      "name": "SwapPoints",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "lineRange": [
+        16,
+        18
+      ],
+      "summary": "SwapPoints 实现 trading 模块中的关键处理步骤，参数包括 value。",
+      "tags": [
+        "function",
+        "trading",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "lineRange": [
+        20,
+        25
+      ],
+      "summary": "of 实现 trading 模块中的关键处理步骤，参数包括 value。",
+      "tags": [
+        "function",
+        "trading",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:applyToRate",
+      "type": "function",
+      "name": "applyToRate",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "lineRange": [
+        27,
+        32
+      ],
+      "summary": "applyToRate 实现 trading 模块中的关键处理步骤，参数包括 rate。",
+      "tags": [
+        "function",
+        "trading",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "lineRange": [
+        34,
+        39
+      ],
+      "summary": "equals 实现 trading 模块中的关键处理步骤，参数包括 o。",
+      "tags": [
+        "function",
+        "trading",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "lineRange": [
+        41,
+        44
+      ],
+      "summary": "hashCode 实现 trading 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "trading",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "type": "file",
+      "name": "TradeAmount.java",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "summary": "TradeAmount.java 是 trading 模块中的领域模型，主要定义 TradeAmount，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "trading",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:TradeAmount",
+      "type": "class",
+      "name": "TradeAmount",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "lineRange": [
+        11,
+        66
+      ],
+      "summary": "TradeAmount 是 trading 模块的领域模型，封装 8 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "trading",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:TradeAmount",
+      "type": "function",
+      "name": "TradeAmount",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "lineRange": [
+        17,
+        20
+      ],
+      "summary": "TradeAmount 实现 trading 模块中的关键处理步骤，参数包括 amount、currency。",
+      "tags": [
+        "function",
+        "trading",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "lineRange": [
+        22,
+        30
+      ],
+      "summary": "of 实现 trading 模块中的关键处理步骤，参数包括 amount、currency。",
+      "tags": [
+        "function",
+        "trading",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:add",
+      "type": "function",
+      "name": "add",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "lineRange": [
+        32,
+        35
+      ],
+      "summary": "add 实现 trading 模块中的关键处理步骤，参数包括 other。",
+      "tags": [
+        "function",
+        "trading",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:subtract",
+      "type": "function",
+      "name": "subtract",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "lineRange": [
+        37,
+        40
+      ],
+      "summary": "subtract 实现 trading 模块中的关键处理步骤，参数包括 other。",
+      "tags": [
+        "function",
+        "trading",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:multiply",
+      "type": "function",
+      "name": "multiply",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "lineRange": [
+        42,
+        47
+      ],
+      "summary": "multiply 实现 trading 模块中的关键处理步骤，参数包括 rate。",
+      "tags": [
+        "function",
+        "trading",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "lineRange": [
+        55,
+        60
+      ],
+      "summary": "equals 实现 trading 模块中的关键处理步骤，参数包括 o。",
+      "tags": [
+        "function",
+        "trading",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "lineRange": [
+        62,
+        65
+      ],
+      "summary": "hashCode 实现 trading 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "trading",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "type": "file",
+      "name": "FairValue.java",
+      "filePath": "forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "summary": "FairValue.java 是 valuation 模块中的领域模型，主要定义 FairValue，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "valuation",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:FairValue",
+      "type": "class",
+      "name": "FairValue",
+      "filePath": "forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "lineRange": [
+        11,
+        56
+      ],
+      "summary": "FairValue 是 valuation 模块的领域模型，封装 7 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "valuation",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:FairValue",
+      "type": "function",
+      "name": "FairValue",
+      "filePath": "forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "lineRange": [
+        16,
+        21
+      ],
+      "summary": "FairValue 实现 valuation 模块中的关键处理步骤，参数包括 value。",
+      "tags": [
+        "function",
+        "valuation",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "lineRange": [
+        23,
+        25
+      ],
+      "summary": "of 实现 valuation 模块中的关键处理步骤，参数包括 value。",
+      "tags": [
+        "function",
+        "valuation",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:zero",
+      "type": "function",
+      "name": "zero",
+      "filePath": "forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "lineRange": [
+        27,
+        29
+      ],
+      "summary": "zero 实现 valuation 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "valuation",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:add",
+      "type": "function",
+      "name": "add",
+      "filePath": "forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "lineRange": [
+        31,
+        36
+      ],
+      "summary": "add 实现 valuation 模块中的关键处理步骤，参数包括 other。",
+      "tags": [
+        "function",
+        "valuation",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:subtract",
+      "type": "function",
+      "name": "subtract",
+      "filePath": "forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "lineRange": [
+        38,
+        43
+      ],
+      "summary": "subtract 实现 valuation 模块中的关键处理步骤，参数包括 other。",
+      "tags": [
+        "function",
+        "valuation",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "lineRange": [
+        45,
+        50
+      ],
+      "summary": "equals 实现 valuation 模块中的关键处理步骤，参数包括 o。",
+      "tags": [
+        "function",
+        "valuation",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:hashCode",
+      "type": "function",
+      "name": "hashCode",
+      "filePath": "forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "lineRange": [
+        52,
+        55
+      ],
+      "summary": "hashCode 实现 valuation 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "valuation",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java",
+      "type": "file",
+      "name": "ValuationModelRegistry.java",
+      "filePath": "forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java",
+      "summary": "ValuationModelRegistry.java 是 valuation 模块中的代码文件，主要定义 ValuationModelRegistry，承担该业务域的分层协作职责。",
+      "tags": [
+        "code",
+        "valuation",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java:ValuationModelRegistry",
+      "type": "class",
+      "name": "ValuationModelRegistry",
+      "filePath": "forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java",
+      "lineRange": [
+        14,
+        33
+      ],
+      "summary": "ValuationModelRegistry 是 valuation 模块的代码文件，封装 2 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "code",
+        "valuation",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java:ValuationModelRegistry",
+      "type": "function",
+      "name": "ValuationModelRegistry",
+      "filePath": "forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java",
+      "lineRange": [
+        20,
+        24
+      ],
+      "summary": "ValuationModelRegistry 实现 valuation 模块中的关键处理步骤，参数包括 models。",
+      "tags": [
+        "function",
+        "valuation",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java:getModel",
+      "type": "function",
+      "name": "getModel",
+      "filePath": "forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java",
+      "lineRange": [
+        26,
+        32
+      ],
+      "summary": "getModel 实现 valuation 模块中的关键处理步骤，参数包括 type。",
+      "tags": [
+        "function",
+        "valuation",
+        "code"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:ExchangeRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:ExchangeRate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:ExchangeRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:ExchangeRate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:invalidate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:invalidate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:isExpired",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:isExpired",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java:CurrencyPair",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java:CurrencyPair",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java:symbol",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java:symbol",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java:equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java:hashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:RateValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:RateValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:RateValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:RateValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:of",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:addSpread",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:addSpread",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java:hashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java:ExchangeRateRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java:ExchangeRateRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:RateCalculationDomainService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:RateCalculationDomainService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:calculateCrossRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:calculateCrossRate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:applySpread",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:applySpread",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:calculateAmount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:calculateAmount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java:RatePublishDomainService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java:RatePublishDomainService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java:publishRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java:publishRate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java:validateRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java:validateRate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/test/java/com/forex/rate/domain/service/RateCalculationDomainServiceTest.java",
+      "target": "class:forex-rate/src/test/java/com/forex/rate/domain/service/RateCalculationDomainServiceTest.java:RateCalculationDomainServiceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/test/java/com/forex/rate/domain/service/RateCalculationDomainServiceTest.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java",
+      "target": "class:forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java:RatePublishDomainServiceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java",
+      "target": "function:forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java:testPublishRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java",
+      "target": "function:forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java:testPublishRate_WithSpread",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "target": "class:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:BopCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "target": "class:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:BopCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:BopCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:BopCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:of",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:hashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:toString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java:toString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "class:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:ReportNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "class:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:ReportNo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:ReportNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:ReportNo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:of",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:generate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:generate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:hashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:toString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java:toString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:RiskLevel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:isHigherThan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:isHigherThan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:needsAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:needsAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java:hashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:RiskScore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:RiskScore",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:RiskScore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:RiskScore",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:of",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:isHigh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:isHigh",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:hashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:toString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java:toString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java:RuleCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java:RuleCondition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java:fromJson",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java:fromJson",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java:equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java:hashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java:LcAmount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java:LcAmount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java:LcAmount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java:LcAmount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java:of",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java:equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java:hashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:LcNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:LcNo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:LcNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:LcNo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:of",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:generate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:generate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:hashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:toString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java:toString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "class:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:FactoringContract",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "class:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:FactoringContract",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:FactoringContract",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:FactoringContract",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:calculateAdvance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:calculateAdvance",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:submit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:submit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:approve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:approve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:reject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:reject",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:disburse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:disburse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:repay",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:repay",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:assignContractNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:assignContractNo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:evaluateRisk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:evaluateRisk",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java:validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "class:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:ForfaitingContract",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "class:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:ForfaitingContract",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:ForfaitingContract",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:ForfaitingContract",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:calculateDiscount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:calculateDiscount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:submit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:submit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:approve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:approve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:discount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:discount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:assignContractNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java:assignContractNo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/FactoringContractRepository.java",
+      "target": "class:forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/FactoringContractRepository.java:FactoringContractRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/FactoringContractRepository.java",
+      "target": "class:forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/FactoringContractRepository.java:FactoringContractRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/FactoringContractRepository.java",
+      "target": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/ForfaitingContractRepository.java",
+      "target": "class:forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/ForfaitingContractRepository.java:ForfaitingContractRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/ForfaitingContractRepository.java",
+      "target": "class:forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/ForfaitingContractRepository.java:ForfaitingContractRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/ForfaitingContractRepository.java",
+      "target": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "target": "class:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java:SupplyChainDomainService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "target": "class:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java:SupplyChainDomainService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java:createFactoring",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java:createFactoring",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java:createForfaiting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java:createForfaiting",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "target": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "target": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "target": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/FactoringContractRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "target": "file:forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/ForfaitingContractRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "target": "class:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java:StrikePrice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "target": "class:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java:StrikePrice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java:StrikePrice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java:StrikePrice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java:of",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java:equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java:hashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "target": "class:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:SwapPoints",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "target": "class:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:SwapPoints",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:SwapPoints",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:SwapPoints",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:of",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:applyToRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:applyToRate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java:hashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "class:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:TradeAmount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "class:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:TradeAmount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:TradeAmount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:TradeAmount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:of",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:add",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:add",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:subtract",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:subtract",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:multiply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:multiply",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java:hashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "class:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:FairValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "class:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:FairValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:FairValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:FairValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:of",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:zero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:add",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:add",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:subtract",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:subtract",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:equals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:hashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java:hashCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java",
+      "target": "class:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java:ValuationModelRegistry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java",
+      "target": "class:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java:ValuationModelRegistry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java:ValuationModelRegistry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java:ValuationModelRegistry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java:getModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java:getModel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java",
+      "target": "file:forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/ValuationModelType.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

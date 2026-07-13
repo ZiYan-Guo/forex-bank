@@ -22,4 +22,7 @@ public interface SamplingRuleMapper extends BaseMapper<SamplingRulePO> {
 
     @Select("SELECT * FROM t_sampling_rule WHERE status = 'ACTIVE' AND deleted = 0 AND (effective_date IS NULL OR effective_date <= CURDATE()) AND (expire_date IS NULL OR expire_date >= CURDATE())")
     List<SamplingRulePO> selectAllActive();
+
+    @Select("SELECT * FROM t_sampling_rule WHERE deleted = 0 ORDER BY priority DESC, id DESC")
+    List<SamplingRulePO> selectAllRules();
 }

@@ -1,0 +1,1009 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "forex-payment/src/test/java/com/forex/payment/application/service/BankCodeValidationServiceTest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 65,
+      "nonEmptyLines": 53,
+      "functions": [
+        {
+          "name": "testValidateSwiftCode_Valid",
+          "startLine": 14,
+          "endLine": 20,
+          "params": []
+        },
+        {
+          "name": "testValidateSwiftCode_Invalid",
+          "startLine": 22,
+          "endLine": 29,
+          "params": []
+        },
+        {
+          "name": "testAutoCompleteBic_Known",
+          "startLine": 31,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "testAutoCompleteBic_LongEnough",
+          "startLine": 39,
+          "endLine": 43,
+          "params": []
+        },
+        {
+          "name": "testCalculateFee_SWIFT_OUR",
+          "startLine": 45,
+          "endLine": 50,
+          "params": []
+        },
+        {
+          "name": "testCalculateFee_CIPS_SHA",
+          "startLine": 52,
+          "endLine": 57,
+          "params": []
+        },
+        {
+          "name": "testCalculateFee_BEN",
+          "startLine": 59,
+          "endLine": 64,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "BankCodeValidationServiceTest",
+          "startLine": 10,
+          "endLine": 65,
+          "methods": [
+            "testValidateSwiftCode_Valid",
+            "testValidateSwiftCode_Invalid",
+            "testAutoCompleteBic_Known",
+            "testAutoCompleteBic_LongEnough",
+            "testCalculateFee_SWIFT_OUR",
+            "testCalculateFee_CIPS_SHA",
+            "testCalculateFee_BEN"
+          ],
+          "properties": [
+            "service"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "testValidateSwiftCode_Valid",
+          "callee": "assertTrue",
+          "lineNumber": 17
+        },
+        {
+          "caller": "testValidateSwiftCode_Valid",
+          "callee": "service.validateSwiftCode",
+          "lineNumber": 17
+        },
+        {
+          "caller": "testValidateSwiftCode_Valid",
+          "callee": "assertTrue",
+          "lineNumber": 18
+        },
+        {
+          "caller": "testValidateSwiftCode_Valid",
+          "callee": "service.validateSwiftCode",
+          "lineNumber": 18
+        },
+        {
+          "caller": "testValidateSwiftCode_Valid",
+          "callee": "assertTrue",
+          "lineNumber": 19
+        },
+        {
+          "caller": "testValidateSwiftCode_Valid",
+          "callee": "service.validateSwiftCode",
+          "lineNumber": 19
+        },
+        {
+          "caller": "testValidateSwiftCode_Invalid",
+          "callee": "assertFalse",
+          "lineNumber": 25
+        },
+        {
+          "caller": "testValidateSwiftCode_Invalid",
+          "callee": "service.validateSwiftCode",
+          "lineNumber": 25
+        },
+        {
+          "caller": "testValidateSwiftCode_Invalid",
+          "callee": "assertFalse",
+          "lineNumber": 26
+        },
+        {
+          "caller": "testValidateSwiftCode_Invalid",
+          "callee": "service.validateSwiftCode",
+          "lineNumber": 26
+        },
+        {
+          "caller": "testValidateSwiftCode_Invalid",
+          "callee": "assertFalse",
+          "lineNumber": 27
+        },
+        {
+          "caller": "testValidateSwiftCode_Invalid",
+          "callee": "service.validateSwiftCode",
+          "lineNumber": 27
+        },
+        {
+          "caller": "testValidateSwiftCode_Invalid",
+          "callee": "assertFalse",
+          "lineNumber": 28
+        },
+        {
+          "caller": "testValidateSwiftCode_Invalid",
+          "callee": "service.validateSwiftCode",
+          "lineNumber": 28
+        },
+        {
+          "caller": "testAutoCompleteBic_Known",
+          "callee": "assertEquals",
+          "lineNumber": 34
+        },
+        {
+          "caller": "testAutoCompleteBic_Known",
+          "callee": "service.autoCompleteBic",
+          "lineNumber": 34
+        },
+        {
+          "caller": "testAutoCompleteBic_Known",
+          "callee": "assertEquals",
+          "lineNumber": 35
+        },
+        {
+          "caller": "testAutoCompleteBic_Known",
+          "callee": "service.autoCompleteBic",
+          "lineNumber": 35
+        },
+        {
+          "caller": "testAutoCompleteBic_Known",
+          "callee": "assertEquals",
+          "lineNumber": 36
+        },
+        {
+          "caller": "testAutoCompleteBic_Known",
+          "callee": "service.autoCompleteBic",
+          "lineNumber": 36
+        },
+        {
+          "caller": "testAutoCompleteBic_LongEnough",
+          "callee": "assertEquals",
+          "lineNumber": 42
+        },
+        {
+          "caller": "testAutoCompleteBic_LongEnough",
+          "callee": "service.autoCompleteBic",
+          "lineNumber": 42
+        },
+        {
+          "caller": "testCalculateFee_SWIFT_OUR",
+          "callee": "service.calculateFee",
+          "lineNumber": 48
+        },
+        {
+          "caller": "testCalculateFee_SWIFT_OUR",
+          "callee": "new BigDecimal",
+          "lineNumber": 48
+        },
+        {
+          "caller": "testCalculateFee_SWIFT_OUR",
+          "callee": "assertEquals",
+          "lineNumber": 49
+        },
+        {
+          "caller": "testCalculateFee_SWIFT_OUR",
+          "callee": "fee.compareTo",
+          "lineNumber": 49
+        },
+        {
+          "caller": "testCalculateFee_SWIFT_OUR",
+          "callee": "new BigDecimal",
+          "lineNumber": 49
+        },
+        {
+          "caller": "testCalculateFee_CIPS_SHA",
+          "callee": "service.calculateFee",
+          "lineNumber": 55
+        },
+        {
+          "caller": "testCalculateFee_CIPS_SHA",
+          "callee": "new BigDecimal",
+          "lineNumber": 55
+        },
+        {
+          "caller": "testCalculateFee_CIPS_SHA",
+          "callee": "assertEquals",
+          "lineNumber": 56
+        },
+        {
+          "caller": "testCalculateFee_CIPS_SHA",
+          "callee": "fee.compareTo",
+          "lineNumber": 56
+        },
+        {
+          "caller": "testCalculateFee_CIPS_SHA",
+          "callee": "new BigDecimal",
+          "lineNumber": 56
+        },
+        {
+          "caller": "testCalculateFee_BEN",
+          "callee": "service.calculateFee",
+          "lineNumber": 62
+        },
+        {
+          "caller": "testCalculateFee_BEN",
+          "callee": "new BigDecimal",
+          "lineNumber": 62
+        },
+        {
+          "caller": "testCalculateFee_BEN",
+          "callee": "assertEquals",
+          "lineNumber": 63
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-position/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 55,
+      "nonEmptyLines": 55,
+      "metrics": {}
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/PositionApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PositionApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "PositionApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-position/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 45,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "forex-precious-metal/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 55,
+      "nonEmptyLines": 55,
+      "metrics": {}
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PreciousMetalApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "PreciousMetalApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-precious-metal/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 36,
+      "nonEmptyLines": 33,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 27
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "forex-rate/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 59,
+      "nonEmptyLines": 59,
+      "metrics": {}
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 8,
+      "classes": [
+        {
+          "name": "RateQuery",
+          "startLine": 7,
+          "endLine": 12,
+          "methods": [],
+          "properties": [
+            "currencyPair",
+            "rateDate"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RateQuery",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/RateApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RateApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "RateApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-rate/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 45,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "forex-reporting/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 55,
+      "nonEmptyLines": 55,
+      "metrics": {}
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ReportingApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "ReportingApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-reporting/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 45,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "forex-risk/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 55,
+      "nonEmptyLines": 55,
+      "metrics": {}
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "CompleteTaskReq",
+          "startLine": 6,
+          "endLine": 11,
+          "methods": [],
+          "properties": [
+            "result",
+            "comment"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CompleteTaskReq",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 8,
+      "classes": [
+        {
+          "name": "GenerateSamplingReq",
+          "startLine": 6,
+          "endLine": 10,
+          "methods": [],
+          "properties": [
+            "date"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GenerateSamplingReq",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "SamplingEvaluateReq",
+          "startLine": 7,
+          "endLine": 15,
+          "methods": [],
+          "properties": [
+            "customerId",
+            "bizType",
+            "amount",
+            "currency",
+            "countryCode"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SamplingEvaluateReq",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/config/RocketMqConsumerConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "RocketMqConsumerConfig",
+          "startLine": 11,
+          "endLine": 17,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RocketMqConsumerConfig",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/RiskApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RiskApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "RiskApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-risk/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 45,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "forex-saccr/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 55,
+      "nonEmptyLines": 55,
+      "metrics": {}
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SaccrApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "SaccrApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-saccr/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 45,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "forex-schedule/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 67,
+      "nonEmptyLines": 65,
+      "metrics": {}
+    }
+  ]
+}

@@ -1,0 +1,2473 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 7,
+      "classes": [
+        {
+          "name": "ChatMessageRepository",
+          "startLine": 7,
+          "endLine": 12,
+          "methods": [
+            "findBySessionId",
+            "save"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChatMessageRepository",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "ChatSessionRepository",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "findBySessionId",
+            "findByUserId",
+            "save"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChatSessionRepository",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 8,
+      "classes": [
+        {
+          "name": "DocumentAuditRepository",
+          "startLine": 7,
+          "endLine": 14,
+          "methods": [
+            "findByAuditId",
+            "findByBizNo",
+            "save"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DocumentAuditRepository",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "RatePredictionRepository",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "findByPredNo",
+            "findByCurrencyPairAndPredType",
+            "save"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RatePredictionRepository",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "RiskAiAssessmentRepository",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "findByAssessmentId",
+            "findByCustomerId",
+            "save"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RiskAiAssessmentRepository",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "AiDomainService",
+          "startLine": 8,
+          "endLine": 19,
+          "methods": [],
+          "properties": [
+            "ratePredictionEngine",
+            "smartRagService",
+            "amlDetectionEngine",
+            "documentAuditService",
+            "tradingAssistant"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AiDomainService",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 101,
+      "nonEmptyLines": 82,
+      "functions": [
+        {
+          "name": "evaluateTransaction",
+          "startLine": 20,
+          "endLine": 33,
+          "params": [
+            "customerId",
+            "bizNo",
+            "amount",
+            "currency",
+            "direction"
+          ]
+        },
+        {
+          "name": "calculateAmlScore",
+          "startLine": 35,
+          "endLine": 63,
+          "params": [
+            "amount",
+            "frequency7d",
+            "country"
+          ]
+        },
+        {
+          "name": "analyzePattern",
+          "startLine": 65,
+          "endLine": 71,
+          "params": [
+            "recentTransactions"
+          ]
+        },
+        {
+          "name": "resolveLevel",
+          "startLine": 73,
+          "endLine": 79,
+          "params": [
+            "score"
+          ]
+        },
+        {
+          "name": "buildAnalysis",
+          "startLine": 81,
+          "endLine": 86,
+          "params": [
+            "customerId",
+            "amount",
+            "currency",
+            "direction",
+            "score"
+          ]
+        },
+        {
+          "name": "buildRecommendation",
+          "startLine": 88,
+          "endLine": 95,
+          "params": [
+            "riskLevel"
+          ]
+        },
+        {
+          "name": "isHighRiskCountry",
+          "startLine": 97,
+          "endLine": 100,
+          "params": [
+            "country"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AmlDetectionEngine",
+          "startLine": 15,
+          "endLine": 101,
+          "methods": [
+            "evaluateTransaction",
+            "calculateAmlScore",
+            "analyzePattern",
+            "resolveLevel",
+            "buildAnalysis",
+            "buildRecommendation",
+            "isHighRiskCountry"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "evaluateTransaction",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "calculateAmlScore",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "analyzePattern",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "AmlDetectionEngine",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "evaluateTransaction",
+          "callee": "calculateAmlScore",
+          "lineNumber": 22
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "resolveLevel",
+          "lineNumber": 23
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "buildAnalysis",
+          "lineNumber": 25
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "buildRecommendation",
+          "lineNumber": 26
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "\"{\\\"amount\\\":%s,\\\"currency\\\":\\\"%s\\\",\\\"direction\\\":\\\"%s\\\"}\".formatted",
+          "lineNumber": 28
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "amount.toPlainString",
+          "lineNumber": 29
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "RiskAiAssessment.create",
+          "lineNumber": 31
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "new BigDecimal",
+          "lineNumber": 39
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "amount.compareTo",
+          "lineNumber": 40
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "score.add",
+          "lineNumber": 41
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "new BigDecimal",
+          "lineNumber": 41
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "new BigDecimal",
+          "lineNumber": 43
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "amount.compareTo",
+          "lineNumber": 44
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "score.add",
+          "lineNumber": 45
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "new BigDecimal",
+          "lineNumber": 45
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "new BigDecimal",
+          "lineNumber": 47
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "amount.compareTo",
+          "lineNumber": 48
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "score.add",
+          "lineNumber": 49
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "new BigDecimal",
+          "lineNumber": 49
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "score.add",
+          "lineNumber": 54
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "new BigDecimal(\"0.10\").multiply",
+          "lineNumber": 54
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "new BigDecimal",
+          "lineNumber": 54
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "new BigDecimal",
+          "lineNumber": 55
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "Math.min",
+          "lineNumber": 55
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "isHighRiskCountry",
+          "lineNumber": 58
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "score.add",
+          "lineNumber": 59
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "new BigDecimal",
+          "lineNumber": 59
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "score.min(BigDecimal.ONE).setScale",
+          "lineNumber": 62
+        },
+        {
+          "caller": "calculateAmlScore",
+          "callee": "score.min",
+          "lineNumber": 62
+        },
+        {
+          "caller": "analyzePattern",
+          "callee": "recentTransactions.isEmpty",
+          "lineNumber": 66
+        },
+        {
+          "caller": "analyzePattern",
+          "callee": "recentTransactions.size",
+          "lineNumber": 69
+        },
+        {
+          "caller": "analyzePattern",
+          "callee": "\"分析近 %d 笔交易：未检测到明显异常模式，交易行为符合正常业务规律。\".formatted",
+          "lineNumber": 70
+        },
+        {
+          "caller": "resolveLevel",
+          "callee": "score.doubleValue",
+          "lineNumber": 74
+        },
+        {
+          "caller": "buildAnalysis",
+          "callee": "\"客户 %d 的 %s 交易，金额 %s %s，AML风险评分 %s。\".formatted",
+          "lineNumber": 83
+        },
+        {
+          "caller": "buildAnalysis",
+          "callee": "Objects.toString",
+          "lineNumber": 84
+        },
+        {
+          "caller": "buildAnalysis",
+          "callee": "amount.toPlainString",
+          "lineNumber": 85
+        },
+        {
+          "caller": "buildAnalysis",
+          "callee": "score.toPlainString",
+          "lineNumber": 85
+        },
+        {
+          "caller": "isHighRiskCountry",
+          "callee": "List.of(\"KP\", \"IR\", \"SY\", \"CU\", \"VE\").contains",
+          "lineNumber": 99
+        },
+        {
+          "caller": "isHighRiskCountry",
+          "callee": "List.of",
+          "lineNumber": 99
+        },
+        {
+          "caller": "isHighRiskCountry",
+          "callee": "country.toUpperCase",
+          "lineNumber": 99
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 4,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 100,
+      "nonEmptyLines": 80,
+      "functions": [
+        {
+          "name": "compareDocuments",
+          "startLine": 19,
+          "endLine": 53,
+          "params": [
+            "invoiceOcr",
+            "contractOcr",
+            "customsOcr"
+          ]
+        },
+        {
+          "name": "extractKeyFields",
+          "startLine": 55,
+          "endLine": 67,
+          "params": [
+            "ocrText",
+            "docType"
+          ]
+        },
+        {
+          "name": "extractInvoiceFields",
+          "startLine": 69,
+          "endLine": 72,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "extractBlFields",
+          "startLine": 74,
+          "endLine": 77,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "extractPackingFields",
+          "startLine": 79,
+          "endLine": 82,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "extractCustomsFields",
+          "startLine": 84,
+          "endLine": 87,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "compareAmount",
+          "startLine": 89,
+          "endLine": 91,
+          "params": [
+            "invoiceOcr",
+            "contractOcr",
+            "customsOcr"
+          ]
+        },
+        {
+          "name": "compareParties",
+          "startLine": 93,
+          "endLine": 95,
+          "params": [
+            "invoiceOcr",
+            "contractOcr",
+            "customsOcr"
+          ]
+        },
+        {
+          "name": "compareGoodsDescription",
+          "startLine": 97,
+          "endLine": 99,
+          "params": [
+            "invoiceOcr",
+            "contractOcr",
+            "customsOcr"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "DocumentAuditService",
+          "startLine": 14,
+          "endLine": 100,
+          "methods": [
+            "compareDocuments",
+            "extractKeyFields",
+            "extractInvoiceFields",
+            "extractBlFields",
+            "extractPackingFields",
+            "extractCustomsFields",
+            "compareAmount",
+            "compareParties",
+            "compareGoodsDescription"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "compareDocuments",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "extractKeyFields",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "DocumentAuditService",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "compareDocuments",
+          "callee": "log.info",
+          "lineNumber": 20
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "DocumentAudit.create",
+          "lineNumber": 21
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "audit.markDiscrepancy",
+          "lineNumber": 24
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "new StringBuilder",
+          "lineNumber": 28
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "comparison.append",
+          "lineNumber": 29
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "compareAmount",
+          "lineNumber": 31
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "compareParties",
+          "lineNumber": 32
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "compareGoodsDescription",
+          "lineNumber": 33
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "comparison.append(\"- 金额一致性: \").append(amountMatch ? \"一致\" : \"不一致\").append",
+          "lineNumber": 35
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "comparison.append(\"- 金额一致性: \").append",
+          "lineNumber": 35
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "comparison.append",
+          "lineNumber": 35
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "comparison.append(\"- 交易双方一致性: \").append(partyMatch ? \"一致\" : \"不一致\").append",
+          "lineNumber": 36
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "comparison.append(\"- 交易双方一致性: \").append",
+          "lineNumber": 36
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "comparison.append",
+          "lineNumber": 36
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "comparison.append(\"- 货物描述一致性: \").append(goodsMatch ? \"一致\" : \"不一致\").append",
+          "lineNumber": 37
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "comparison.append(\"- 货物描述一致性: \").append",
+          "lineNumber": 37
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "comparison.append",
+          "lineNumber": 37
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "audit.setComparisonResult",
+          "lineNumber": 39
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "comparison.toString",
+          "lineNumber": 39
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "audit.markConsistent",
+          "lineNumber": 42
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "audit.setConfidenceScore",
+          "lineNumber": 43
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "new BigDecimal",
+          "lineNumber": 43
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "new StringBuilder",
+          "lineNumber": 45
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "discrepancy.append",
+          "lineNumber": 46
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "discrepancy.append",
+          "lineNumber": 47
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "discrepancy.append",
+          "lineNumber": 48
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "audit.markDiscrepancy",
+          "lineNumber": 49
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "discrepancy.toString",
+          "lineNumber": 49
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "audit.setConfidenceScore",
+          "lineNumber": 50
+        },
+        {
+          "caller": "compareDocuments",
+          "callee": "new BigDecimal",
+          "lineNumber": 50
+        },
+        {
+          "caller": "extractKeyFields",
+          "callee": "ocrText.isBlank",
+          "lineNumber": 56
+        },
+        {
+          "caller": "extractKeyFields",
+          "callee": "log.info",
+          "lineNumber": 59
+        },
+        {
+          "caller": "extractKeyFields",
+          "callee": "extractInvoiceFields",
+          "lineNumber": 61
+        },
+        {
+          "caller": "extractKeyFields",
+          "callee": "extractBlFields",
+          "lineNumber": 62
+        },
+        {
+          "caller": "extractKeyFields",
+          "callee": "extractPackingFields",
+          "lineNumber": 63
+        },
+        {
+          "caller": "extractKeyFields",
+          "callee": "extractCustomsFields",
+          "lineNumber": 64
+        },
+        {
+          "caller": "extractKeyFields",
+          "callee": "ocrText.substring",
+          "lineNumber": 65
+        },
+        {
+          "caller": "extractKeyFields",
+          "callee": "Math.min",
+          "lineNumber": 65
+        },
+        {
+          "caller": "extractKeyFields",
+          "callee": "ocrText.length",
+          "lineNumber": 65
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 3,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 85,
+      "nonEmptyLines": 72,
+      "functions": [
+        {
+          "name": "predict",
+          "startLine": 27,
+          "endLine": 43,
+          "params": [
+            "currencyPair",
+            "predType",
+            "historicalRates"
+          ]
+        },
+        {
+          "name": "batchPredict",
+          "startLine": 45,
+          "endLine": 51,
+          "params": [
+            "currencyPair",
+            "predType",
+            "days"
+          ]
+        },
+        {
+          "name": "exponentialSmoothing",
+          "startLine": 53,
+          "endLine": 63,
+          "params": [
+            "rates",
+            "alpha"
+          ]
+        },
+        {
+          "name": "calculateVolatility",
+          "startLine": 65,
+          "endLine": 75,
+          "params": [
+            "rates"
+          ]
+        },
+        {
+          "name": "resolveTargetTime",
+          "startLine": 77,
+          "endLine": 84,
+          "params": [
+            "predType"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RatePredictionEngine",
+          "startLine": 19,
+          "endLine": 85,
+          "methods": [
+            "predict",
+            "batchPredict",
+            "exponentialSmoothing",
+            "calculateVolatility",
+            "resolveTargetTime"
+          ],
+          "properties": [
+            "MATH_CTX",
+            "ALPHA_DEFAULT"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "predict",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "batchPredict",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "RatePredictionEngine",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "predict",
+          "callee": "historicalRates.size",
+          "lineNumber": 29
+        },
+        {
+          "caller": "predict",
+          "callee": "new BusinessException",
+          "lineNumber": 30
+        },
+        {
+          "caller": "predict",
+          "callee": "exponentialSmoothing",
+          "lineNumber": 32
+        },
+        {
+          "caller": "predict",
+          "callee": "calculateVolatility",
+          "lineNumber": 33
+        },
+        {
+          "caller": "predict",
+          "callee": "BigDecimal.ONE.subtract",
+          "lineNumber": 34
+        },
+        {
+          "caller": "predict",
+          "callee": "volatility.multiply",
+          "lineNumber": 34
+        },
+        {
+          "caller": "predict",
+          "callee": "new BigDecimal",
+          "lineNumber": 34
+        },
+        {
+          "caller": "predict",
+          "callee": "predictedRate.multiply(volatility).multiply",
+          "lineNumber": 35
+        },
+        {
+          "caller": "predict",
+          "callee": "predictedRate.multiply",
+          "lineNumber": 35
+        },
+        {
+          "caller": "predict",
+          "callee": "new BigDecimal",
+          "lineNumber": 35
+        },
+        {
+          "caller": "predict",
+          "callee": "predictedRate.subtract",
+          "lineNumber": 36
+        },
+        {
+          "caller": "predict",
+          "callee": "predictedRate.add",
+          "lineNumber": 37
+        },
+        {
+          "caller": "predict",
+          "callee": "resolveTargetTime",
+          "lineNumber": 39
+        },
+        {
+          "caller": "predict",
+          "callee": "RatePrediction.create",
+          "lineNumber": 41
+        },
+        {
+          "caller": "predict",
+          "callee": "confidence.max",
+          "lineNumber": 42
+        },
+        {
+          "caller": "batchPredict",
+          "callee": "new ArrayList<>",
+          "lineNumber": 46
+        },
+        {
+          "caller": "batchPredict",
+          "callee": "log.debug",
+          "lineNumber": 48
+        },
+        {
+          "caller": "exponentialSmoothing",
+          "callee": "rates.get",
+          "lineNumber": 54
+        },
+        {
+          "caller": "exponentialSmoothing",
+          "callee": "rates.size",
+          "lineNumber": 55
+        },
+        {
+          "caller": "exponentialSmoothing",
+          "callee": "rates.get",
+          "lineNumber": 57
+        },
+        {
+          "caller": "exponentialSmoothing",
+          "callee": "alpha.multiply(actual).add",
+          "lineNumber": 58
+        },
+        {
+          "caller": "exponentialSmoothing",
+          "callee": "alpha.multiply",
+          "lineNumber": 58
+        },
+        {
+          "caller": "exponentialSmoothing",
+          "callee": "BigDecimal.ONE.subtract(alpha).multiply",
+          "lineNumber": 59
+        },
+        {
+          "caller": "exponentialSmoothing",
+          "callee": "BigDecimal.ONE.subtract",
+          "lineNumber": 59
+        },
+        {
+          "caller": "exponentialSmoothing",
+          "callee": "smoothed.setScale",
+          "lineNumber": 62
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "rates.stream()\n                .reduce(BigDecimal.ZERO, BigDecimal::add).divide",
+          "lineNumber": 66
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "rates.stream().reduce",
+          "lineNumber": 66
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "rates.stream",
+          "lineNumber": 66
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "new BigDecimal",
+          "lineNumber": 68
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "rates.size",
+          "lineNumber": 68
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "rates.stream()\n                .map(r -> r.subtract(mean).pow(2))\n                .reduce(BigDecimal.ZERO, BigDecimal::add).divide",
+          "lineNumber": 69
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "rates.stream()\n                .map(r -> r.subtract(mean).pow(2)).reduce",
+          "lineNumber": 69
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "rates.stream().map",
+          "lineNumber": 69
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "rates.stream",
+          "lineNumber": 69
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "r.subtract(mean).pow",
+          "lineNumber": 70
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "r.subtract",
+          "lineNumber": 70
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "new BigDecimal",
+          "lineNumber": 72
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "rates.size",
+          "lineNumber": 72
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "BigDecimal.valueOf(Math.sqrt(variance.doubleValue())).divide",
+          "lineNumber": 73
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "BigDecimal.valueOf",
+          "lineNumber": 73
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "Math.sqrt",
+          "lineNumber": 73
+        },
+        {
+          "caller": "calculateVolatility",
+          "callee": "variance.doubleValue",
+          "lineNumber": 73
+        },
+        {
+          "caller": "resolveTargetTime",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 78
+        },
+        {
+          "caller": "resolveTargetTime",
+          "callee": "now.plusHours",
+          "lineNumber": 80
+        },
+        {
+          "caller": "resolveTargetTime",
+          "callee": "now.plusWeeks",
+          "lineNumber": 81
+        },
+        {
+          "caller": "resolveTargetTime",
+          "callee": "now.plusDays",
+          "lineNumber": 82
+        }
+      ],
+      "metrics": {
+        "importCount": 9,
+        "exportCount": 3,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 36,
+      "nonEmptyLines": 29,
+      "functions": [
+        {
+          "name": "search",
+          "startLine": 17,
+          "endLine": 35,
+          "params": [
+            "query"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SmartRagService",
+          "startLine": 10,
+          "endLine": 36,
+          "methods": [
+            "search"
+          ],
+          "properties": [
+            "chatClient"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "search",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "SmartRagService",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "search",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 18
+        },
+        {
+          "caller": "search",
+          "callee": "chatClient.chat",
+          "lineNumber": 31
+        },
+        {
+          "caller": "search",
+          "callee": "result.put",
+          "lineNumber": 32
+        },
+        {
+          "caller": "search",
+          "callee": "result.put",
+          "lineNumber": 33
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 91,
+      "nonEmptyLines": 80,
+      "functions": [
+        {
+          "name": "processNaturalLanguageTrade",
+          "startLine": 13,
+          "endLine": 40,
+          "params": [
+            "userInput"
+          ]
+        },
+        {
+          "name": "recommendHedging",
+          "startLine": 42,
+          "endLine": 69,
+          "params": [
+            "customerId",
+            "businessType",
+            "riskPreference"
+          ]
+        },
+        {
+          "name": "generateRiskReport",
+          "startLine": 71,
+          "endLine": 90,
+          "params": [
+            "customerId",
+            "period"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TradingAssistant",
+          "startLine": 9,
+          "endLine": 91,
+          "methods": [
+            "processNaturalLanguageTrade",
+            "recommendHedging",
+            "generateRiskReport"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "processNaturalLanguageTrade",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "recommendHedging",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "generateRiskReport",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "TradingAssistant",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "log.info",
+          "lineNumber": 14
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "userInput.isBlank",
+          "lineNumber": 15
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "new StringBuilder",
+          "lineNumber": 18
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append",
+          "lineNumber": 19
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "userInput.toLowerCase",
+          "lineNumber": 21
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 22
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 22
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append",
+          "lineNumber": 23
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 24
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 24
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append",
+          "lineNumber": 25
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 27
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 27
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append",
+          "lineNumber": 28
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 30
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 30
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append",
+          "lineNumber": 31
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 33
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 33
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append",
+          "lineNumber": 34
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 35
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 35
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append",
+          "lineNumber": 36
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append(\"- 原始输入: \").append",
+          "lineNumber": 38
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append",
+          "lineNumber": 38
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.toString",
+          "lineNumber": 39
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "log.info",
+          "lineNumber": 43
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "new StringBuilder",
+          "lineNumber": 45
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append(\"套期保值建议 (客户: \").append(customerId).append",
+          "lineNumber": 46
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append(\"套期保值建议 (客户: \").append",
+          "lineNumber": 46
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 46
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 50
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 51
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 52
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 55
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 56
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 57
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "\"HIGH\".equalsIgnoreCase",
+          "lineNumber": 60
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 61
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 63
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 66
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.toString",
+          "lineNumber": 68
+        },
+        {
+          "caller": "generateRiskReport",
+          "callee": "log.info",
+          "lineNumber": 72
+        },
+        {
+          "caller": "generateRiskReport",
+          "callee": "LocalDate.now",
+          "lineNumber": 73
+        },
+        {
+          "caller": "generateRiskReport",
+          "callee": "\"\"\"\n                ## 外汇风险报告\n                **客户ID:** %d\n                **报告周期:** %s\n                **生成日期:** %s\n                \n                ### 风险评估\n                - 汇率风险: 中等\n                - 利率风险: 低\n                - 操作风险: 低\n                \n                ### 建议\n                1. 关注美元/人民币汇率波动\n                2. 评估远期敞口对冲比例\n                3. 定期审查交易对手信用风险\n                \"\"\".formatted",
+          "lineNumber": 74
+        },
+        {
+          "caller": "generateRiskReport",
+          "callee": "now.toString",
+          "lineNumber": 89
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 50,
+      "nonEmptyLines": 40,
+      "functions": [
+        {
+          "name": "isOllamaProvider",
+          "startLine": 32,
+          "endLine": 34,
+          "params": []
+        },
+        {
+          "name": "isOpenAiProvider",
+          "startLine": 36,
+          "endLine": 38,
+          "params": []
+        },
+        {
+          "name": "isDeepSeekProvider",
+          "startLine": 40,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "resolveModel",
+          "startLine": 44,
+          "endLine": 49,
+          "params": [
+            "preferredModel"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ModelProviderConfig",
+          "startLine": 7,
+          "endLine": 50,
+          "methods": [
+            "isOllamaProvider",
+            "isOpenAiProvider",
+            "isDeepSeekProvider",
+            "resolveModel"
+          ],
+          "properties": [
+            "provider",
+            "defaultModel",
+            "embeddingModel",
+            "knowledgeBasePath",
+            "prediction",
+            "risk"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "isOllamaProvider",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "isOpenAiProvider",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "isDeepSeekProvider",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "resolveModel",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "ModelProviderConfig",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "isOllamaProvider",
+          "callee": "\"ollama\".equalsIgnoreCase",
+          "lineNumber": 33
+        },
+        {
+          "caller": "isOpenAiProvider",
+          "callee": "\"openai\".equalsIgnoreCase",
+          "lineNumber": 37
+        },
+        {
+          "caller": "isDeepSeekProvider",
+          "callee": "\"deepseek\".equalsIgnoreCase",
+          "lineNumber": 41
+        },
+        {
+          "caller": "resolveModel",
+          "callee": "preferredModel.isBlank",
+          "lineNumber": 45
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 20,
+      "functions": [
+        {
+          "name": "aiRestTemplate",
+          "startLine": 18,
+          "endLine": 22,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SpringAiConfig",
+          "startLine": 14,
+          "endLine": 23,
+          "methods": [
+            "aiRestTemplate"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "aiRestTemplate",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "SpringAiConfig",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "aiRestTemplate",
+          "callee": "log.info",
+          "lineNumber": 20
+        },
+        {
+          "caller": "aiRestTemplate",
+          "callee": "new RestTemplate",
+          "lineNumber": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 12,
+      "classes": [
+        {
+          "name": "ChatMessageMapper",
+          "startLine": 11,
+          "endLine": 16,
+          "methods": [
+            "findBySessionId"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChatMessageMapper",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "ChatSessionMapper",
+          "startLine": 11,
+          "endLine": 19,
+          "methods": [
+            "findBySessionId",
+            "findByUserId"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChatSessionMapper",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "DocumentAuditMapper",
+          "startLine": 9,
+          "endLine": 17,
+          "methods": [
+            "findByAuditId",
+            "findByBizNo"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DocumentAuditMapper",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "RatePredictionMapper",
+          "startLine": 11,
+          "endLine": 19,
+          "methods": [
+            "findByPredNo",
+            "findByCurrencyPairAndPredType"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RatePredictionMapper",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "RiskAiAssessmentMapper",
+          "startLine": 11,
+          "endLine": 19,
+          "methods": [
+            "findByAssessmentId",
+            "findByCustomerId"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RiskAiAssessmentMapper",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatMessagePO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 19,
+      "classes": [
+        {
+          "name": "ChatMessagePO",
+          "startLine": 11,
+          "endLine": 24,
+          "methods": [],
+          "properties": [
+            "id",
+            "sessionId",
+            "role",
+            "content",
+            "sources",
+            "confidence",
+            "createTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChatMessagePO",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatSessionPO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "ChatSessionPO",
+          "startLine": 8,
+          "endLine": 19,
+          "methods": [],
+          "properties": [
+            "sessionId",
+            "userId",
+            "userName",
+            "sessionType",
+            "title",
+            "status"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChatSessionPO",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/DocumentAuditPO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 20,
+      "classes": [
+        {
+          "name": "DocumentAuditPO",
+          "startLine": 10,
+          "endLine": 24,
+          "methods": [],
+          "properties": [
+            "auditId",
+            "bizNo",
+            "docType",
+            "ocrResult",
+            "comparisonResult",
+            "isConsistent",
+            "discrepancyDetail",
+            "auditOpinion",
+            "confidenceScore"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DocumentAuditPO",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RatePredictionPO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 22,
+      "classes": [
+        {
+          "name": "RatePredictionPO",
+          "startLine": 11,
+          "endLine": 26,
+          "methods": [],
+          "properties": [
+            "predNo",
+            "currencyPair",
+            "predType",
+            "predTime",
+            "targetTime",
+            "predictedRate",
+            "lowerBound",
+            "upperBound",
+            "confidence",
+            "modelName"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RatePredictionPO",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RiskAiAssessmentPO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 20,
+      "classes": [
+        {
+          "name": "RiskAiAssessmentPO",
+          "startLine": 10,
+          "endLine": 24,
+          "methods": [],
+          "properties": [
+            "assessmentId",
+            "customerId",
+            "bizNo",
+            "riskType",
+            "riskScore",
+            "riskLevel",
+            "aiAnalysis",
+            "recommendation",
+            "dataPointsJson"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RiskAiAssessmentPO",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 67,
+      "nonEmptyLines": 57,
+      "functions": [
+        {
+          "name": "run",
+          "startLine": 20,
+          "endLine": 42,
+          "params": [
+            "args"
+          ]
+        },
+        {
+          "name": "searchRelevant",
+          "startLine": 44,
+          "endLine": 49,
+          "params": [
+            "query",
+            "topK"
+          ]
+        },
+        {
+          "name": "getAllDocuments",
+          "startLine": 51,
+          "endLine": 53,
+          "params": []
+        },
+        {
+          "name": "getDocument",
+          "startLine": 55,
+          "endLine": 57,
+          "params": [
+            "key"
+          ]
+        },
+        {
+          "name": "containsKeyword",
+          "startLine": 59,
+          "endLine": 66,
+          "params": [
+            "doc",
+            "query"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "KnowledgeBaseInitializer",
+          "startLine": 14,
+          "endLine": 67,
+          "methods": [
+            "run",
+            "searchRelevant",
+            "getAllDocuments",
+            "getDocument",
+            "containsKeyword"
+          ],
+          "properties": [
+            "vectorStore"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "run",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "searchRelevant",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "getAllDocuments",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "getDocument",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "KnowledgeBaseInitializer",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run",
+          "callee": "log.info",
+          "lineNumber": 22
+        },
+        {
+          "caller": "run",
+          "callee": "vectorStore.put",
+          "lineNumber": 23
+        },
+        {
+          "caller": "run",
+          "callee": "vectorStore.put",
+          "lineNumber": 26
+        },
+        {
+          "caller": "run",
+          "callee": "vectorStore.put",
+          "lineNumber": 29
+        },
+        {
+          "caller": "run",
+          "callee": "vectorStore.put",
+          "lineNumber": 32
+        },
+        {
+          "caller": "run",
+          "callee": "vectorStore.put",
+          "lineNumber": 35
+        },
+        {
+          "caller": "run",
+          "callee": "vectorStore.put",
+          "lineNumber": 38
+        },
+        {
+          "caller": "run",
+          "callee": "log.info",
+          "lineNumber": 41
+        },
+        {
+          "caller": "run",
+          "callee": "vectorStore.size",
+          "lineNumber": 41
+        },
+        {
+          "caller": "searchRelevant",
+          "callee": "vectorStore.values().stream()\n                .filter(doc -> containsKeyword(doc, query))\n                .limit(topK).toList",
+          "lineNumber": 45
+        },
+        {
+          "caller": "searchRelevant",
+          "callee": "vectorStore.values().stream()\n                .filter(doc -> containsKeyword(doc, query)).limit",
+          "lineNumber": 45
+        },
+        {
+          "caller": "searchRelevant",
+          "callee": "vectorStore.values().stream().filter",
+          "lineNumber": 45
+        },
+        {
+          "caller": "searchRelevant",
+          "callee": "vectorStore.values().stream",
+          "lineNumber": 45
+        },
+        {
+          "caller": "searchRelevant",
+          "callee": "vectorStore.values",
+          "lineNumber": 45
+        },
+        {
+          "caller": "searchRelevant",
+          "callee": "containsKeyword",
+          "lineNumber": 46
+        },
+        {
+          "caller": "getAllDocuments",
+          "callee": "new ArrayList<>",
+          "lineNumber": 52
+        },
+        {
+          "caller": "getAllDocuments",
+          "callee": "vectorStore.values",
+          "lineNumber": 52
+        },
+        {
+          "caller": "getDocument",
+          "callee": "vectorStore.get",
+          "lineNumber": 56
+        },
+        {
+          "caller": "containsKeyword",
+          "callee": "query.split",
+          "lineNumber": 60
+        },
+        {
+          "caller": "containsKeyword",
+          "callee": "word.length",
+          "lineNumber": 61
+        },
+        {
+          "caller": "containsKeyword",
+          "callee": "doc.contains",
+          "lineNumber": 61
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 40,
+      "functions": [
+        {
+          "name": "findBySessionId",
+          "startLine": 18,
+          "endLine": 23,
+          "params": [
+            "sessionId"
+          ]
+        },
+        {
+          "name": "save",
+          "startLine": 25,
+          "endLine": 33,
+          "params": [
+            "message"
+          ]
+        },
+        {
+          "name": "toDomain",
+          "startLine": 35,
+          "endLine": 39,
+          "params": [
+            "po"
+          ]
+        },
+        {
+          "name": "toPO",
+          "startLine": 41,
+          "endLine": 47,
+          "params": [
+            "message"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ChatMessageRepositoryImpl",
+          "startLine": 12,
+          "endLine": 48,
+          "methods": [
+            "findBySessionId",
+            "save",
+            "toDomain",
+            "toPO"
+          ],
+          "properties": [
+            "chatMessageMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "findBySessionId",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "save",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "ChatMessageRepositoryImpl",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "findBySessionId",
+          "callee": "chatMessageMapper.findBySessionId(sessionId).stream()\n                .map(this::toDomain).toList",
+          "lineNumber": 20
+        },
+        {
+          "caller": "findBySessionId",
+          "callee": "chatMessageMapper.findBySessionId(sessionId).stream().map",
+          "lineNumber": 20
+        },
+        {
+          "caller": "findBySessionId",
+          "callee": "chatMessageMapper.findBySessionId(sessionId).stream",
+          "lineNumber": 20
+        },
+        {
+          "caller": "findBySessionId",
+          "callee": "chatMessageMapper.findBySessionId",
+          "lineNumber": 20
+        },
+        {
+          "caller": "save",
+          "callee": "toPO",
+          "lineNumber": 27
+        },
+        {
+          "caller": "save",
+          "callee": "po.getId",
+          "lineNumber": 28
+        },
+        {
+          "caller": "save",
+          "callee": "chatMessageMapper.insert",
+          "lineNumber": 29
+        },
+        {
+          "caller": "save",
+          "callee": "chatMessageMapper.updateById",
+          "lineNumber": 31
+        },
+        {
+          "caller": "toDomain",
+          "callee": "ChatMessage.reconstitute",
+          "lineNumber": 36
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getSessionId",
+          "lineNumber": 37
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getId",
+          "lineNumber": 37
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getRole",
+          "lineNumber": 38
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getContent",
+          "lineNumber": 38
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getCreateTime",
+          "lineNumber": 38
+        },
+        {
+          "caller": "toPO",
+          "callee": "new ChatMessagePO",
+          "lineNumber": 42
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setRole",
+          "lineNumber": 43
+        },
+        {
+          "caller": "toPO",
+          "callee": "message.getRole",
+          "lineNumber": 43
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setContent",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toPO",
+          "callee": "message.getContent",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setCreateTime",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toPO",
+          "callee": "message.getTimestamp",
+          "lineNumber": 45
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 3,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    }
+  ]
+}

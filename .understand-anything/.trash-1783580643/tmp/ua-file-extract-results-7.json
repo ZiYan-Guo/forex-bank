@@ -1,0 +1,5559 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 28,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/adapter/controller/CustomerController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 213,
+      "nonEmptyLines": 194,
+      "functions": [
+        {
+          "name": "create",
+          "startLine": 45,
+          "endLine": 63,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "update",
+          "startLine": 65,
+          "endLine": 83,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "getById",
+          "startLine": 85,
+          "endLine": 90,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 92,
+          "endLine": 103,
+          "params": [
+            "query"
+          ]
+        },
+        {
+          "name": "updateRiskLevel",
+          "startLine": 105,
+          "endLine": 113,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "checkCredit",
+          "startLine": 115,
+          "endLine": 122,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "deductCredit",
+          "startLine": 124,
+          "endLine": 131,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "performDueDiligence",
+          "startLine": 133,
+          "endLine": 139,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "toResp",
+          "startLine": 141,
+          "endLine": 163,
+          "params": [
+            "customer"
+          ]
+        },
+        {
+          "name": "toResp",
+          "startLine": 165,
+          "endLine": 190,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "toResp",
+          "startLine": 192,
+          "endLine": 201,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "toCreditLimitResp",
+          "startLine": 203,
+          "endLine": 212,
+          "params": [
+            "limit"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CustomerController",
+          "startLine": 37,
+          "endLine": 213,
+          "methods": [
+            "create",
+            "update",
+            "getById",
+            "pageQuery",
+            "updateRiskLevel",
+            "checkCredit",
+            "deductCredit",
+            "performDueDiligence",
+            "toResp",
+            "toResp",
+            "toResp",
+            "toCreditLimitResp"
+          ],
+          "properties": [
+            "customerAppService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "update",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "getById",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "updateRiskLevel",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "checkCredit",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "deductCredit",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "performDueDiligence",
+          "line": 133,
+          "isDefault": false
+        },
+        {
+          "name": "CustomerController",
+          "line": 37,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new CreateCustomerCmd",
+          "lineNumber": 49
+        },
+        {
+          "caller": "create",
+          "callee": "cmd.setCustomerType",
+          "lineNumber": 50
+        },
+        {
+          "caller": "create",
+          "callee": "req.getCustomerType",
+          "lineNumber": 50
+        },
+        {
+          "caller": "create",
+          "callee": "cmd.setCustomerName",
+          "lineNumber": 51
+        },
+        {
+          "caller": "create",
+          "callee": "req.getCustomerName",
+          "lineNumber": 51
+        },
+        {
+          "caller": "create",
+          "callee": "cmd.setEnglishName",
+          "lineNumber": 52
+        },
+        {
+          "caller": "create",
+          "callee": "req.getEnglishName",
+          "lineNumber": 52
+        },
+        {
+          "caller": "create",
+          "callee": "cmd.setCertType",
+          "lineNumber": 53
+        },
+        {
+          "caller": "create",
+          "callee": "req.getCertType",
+          "lineNumber": 53
+        },
+        {
+          "caller": "create",
+          "callee": "cmd.setCertNo",
+          "lineNumber": 54
+        },
+        {
+          "caller": "create",
+          "callee": "req.getCertNo",
+          "lineNumber": 54
+        },
+        {
+          "caller": "create",
+          "callee": "cmd.setCountryCode",
+          "lineNumber": 55
+        },
+        {
+          "caller": "create",
+          "callee": "req.getCountryCode",
+          "lineNumber": 55
+        },
+        {
+          "caller": "create",
+          "callee": "cmd.setAddress",
+          "lineNumber": 56
+        },
+        {
+          "caller": "create",
+          "callee": "req.getAddress",
+          "lineNumber": 56
+        },
+        {
+          "caller": "create",
+          "callee": "cmd.setContactPerson",
+          "lineNumber": 57
+        },
+        {
+          "caller": "create",
+          "callee": "req.getContactPerson",
+          "lineNumber": 57
+        },
+        {
+          "caller": "create",
+          "callee": "cmd.setContactPhone",
+          "lineNumber": 58
+        },
+        {
+          "caller": "create",
+          "callee": "req.getContactPhone",
+          "lineNumber": 58
+        },
+        {
+          "caller": "create",
+          "callee": "cmd.setEmail",
+          "lineNumber": 59
+        },
+        {
+          "caller": "create",
+          "callee": "req.getEmail",
+          "lineNumber": 59
+        },
+        {
+          "caller": "create",
+          "callee": "cmd.setRemark",
+          "lineNumber": 60
+        },
+        {
+          "caller": "create",
+          "callee": "req.getRemark",
+          "lineNumber": 60
+        },
+        {
+          "caller": "create",
+          "callee": "customerAppService.createCustomer",
+          "lineNumber": 61
+        },
+        {
+          "caller": "create",
+          "callee": "R.ok",
+          "lineNumber": 62
+        },
+        {
+          "caller": "create",
+          "callee": "toResp",
+          "lineNumber": 62
+        },
+        {
+          "caller": "update",
+          "callee": "new UpdateCustomerCmd",
+          "lineNumber": 69
+        },
+        {
+          "caller": "update",
+          "callee": "cmd.setCustomerId",
+          "lineNumber": 70
+        },
+        {
+          "caller": "update",
+          "callee": "req.getCustomerId",
+          "lineNumber": 70
+        },
+        {
+          "caller": "update",
+          "callee": "cmd.setCustomerName",
+          "lineNumber": 71
+        },
+        {
+          "caller": "update",
+          "callee": "req.getCustomerName",
+          "lineNumber": 71
+        },
+        {
+          "caller": "update",
+          "callee": "cmd.setEnglishName",
+          "lineNumber": 72
+        },
+        {
+          "caller": "update",
+          "callee": "req.getEnglishName",
+          "lineNumber": 72
+        },
+        {
+          "caller": "update",
+          "callee": "cmd.setAddress",
+          "lineNumber": 73
+        },
+        {
+          "caller": "update",
+          "callee": "req.getAddress",
+          "lineNumber": 73
+        },
+        {
+          "caller": "update",
+          "callee": "cmd.setContactPerson",
+          "lineNumber": 74
+        },
+        {
+          "caller": "update",
+          "callee": "req.getContactPerson",
+          "lineNumber": 74
+        },
+        {
+          "caller": "update",
+          "callee": "cmd.setContactPhone",
+          "lineNumber": 75
+        },
+        {
+          "caller": "update",
+          "callee": "req.getContactPhone",
+          "lineNumber": 75
+        },
+        {
+          "caller": "update",
+          "callee": "cmd.setEmail",
+          "lineNumber": 76
+        },
+        {
+          "caller": "update",
+          "callee": "req.getEmail",
+          "lineNumber": 76
+        },
+        {
+          "caller": "update",
+          "callee": "cmd.setRiskLevel",
+          "lineNumber": 77
+        },
+        {
+          "caller": "update",
+          "callee": "req.getRiskLevel",
+          "lineNumber": 77
+        },
+        {
+          "caller": "update",
+          "callee": "cmd.setRiskReason",
+          "lineNumber": 78
+        },
+        {
+          "caller": "update",
+          "callee": "req.getRiskReason",
+          "lineNumber": 78
+        },
+        {
+          "caller": "update",
+          "callee": "cmd.setStatus",
+          "lineNumber": 79
+        },
+        {
+          "caller": "update",
+          "callee": "req.getStatus",
+          "lineNumber": 79
+        },
+        {
+          "caller": "update",
+          "callee": "cmd.setRemark",
+          "lineNumber": 80
+        },
+        {
+          "caller": "update",
+          "callee": "req.getRemark",
+          "lineNumber": 80
+        },
+        {
+          "caller": "update",
+          "callee": "customerAppService.updateCustomer",
+          "lineNumber": 81
+        },
+        {
+          "caller": "update",
+          "callee": "R.ok",
+          "lineNumber": 82
+        },
+        {
+          "caller": "update",
+          "callee": "toResp",
+          "lineNumber": 82
+        },
+        {
+          "caller": "getById",
+          "callee": "customerAppService.getCustomerDetail",
+          "lineNumber": 88
+        },
+        {
+          "caller": "getById",
+          "callee": "R.ok",
+          "lineNumber": 89
+        },
+        {
+          "caller": "getById",
+          "callee": "toResp",
+          "lineNumber": 89
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "customerAppService.pageQuery",
+          "lineNumber": 96
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getRecords().stream()\n                .map(this::toResp).collect",
+          "lineNumber": 97
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getRecords().stream().map",
+          "lineNumber": 97
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getRecords().stream",
+          "lineNumber": 97
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getRecords",
+          "lineNumber": 97
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "Collectors.toList",
+          "lineNumber": 99
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "PageResp.of",
+          "lineNumber": 100
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getTotal",
+          "lineNumber": 101
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getPageNum",
+          "lineNumber": 101
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getPageSize",
+          "lineNumber": 101
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "R.ok",
+          "lineNumber": 102
+        },
+        {
+          "caller": "updateRiskLevel",
+          "callee": "customerAppService.updateRiskLevel",
+          "lineNumber": 111
+        },
+        {
+          "caller": "updateRiskLevel",
+          "callee": "cmd.getCustomerId",
+          "lineNumber": 111
+        },
+        {
+          "caller": "updateRiskLevel",
+          "callee": "cmd.getRiskLevel",
+          "lineNumber": 111
+        },
+        {
+          "caller": "updateRiskLevel",
+          "callee": "cmd.getRiskReason",
+          "lineNumber": 111
+        },
+        {
+          "caller": "updateRiskLevel",
+          "callee": "R.okMsg",
+          "lineNumber": 112
+        },
+        {
+          "caller": "checkCredit",
+          "callee": "customerAppService.checkCredit",
+          "lineNumber": 119
+        },
+        {
+          "caller": "checkCredit",
+          "callee": "req.getCustomerId",
+          "lineNumber": 120
+        },
+        {
+          "caller": "checkCredit",
+          "callee": "req.getLimitType",
+          "lineNumber": 120
+        },
+        {
+          "caller": "checkCredit",
+          "callee": "req.getCurrency",
+          "lineNumber": 120
+        },
+        {
+          "caller": "checkCredit",
+          "callee": "req.getAmount",
+          "lineNumber": 120
+        },
+        {
+          "caller": "checkCredit",
+          "callee": "R.ok",
+          "lineNumber": 121
+        },
+        {
+          "caller": "deductCredit",
+          "callee": "customerAppService.deductCredit",
+          "lineNumber": 129
+        },
+        {
+          "caller": "deductCredit",
+          "callee": "req.getCustomerId",
+          "lineNumber": 129
+        },
+        {
+          "caller": "deductCredit",
+          "callee": "req.getLimitType",
+          "lineNumber": 129
+        },
+        {
+          "caller": "deductCredit",
+          "callee": "req.getCurrency",
+          "lineNumber": 129
+        },
+        {
+          "caller": "deductCredit",
+          "callee": "req.getAmount",
+          "lineNumber": 129
+        },
+        {
+          "caller": "deductCredit",
+          "callee": "R.okMsg",
+          "lineNumber": 130
+        },
+        {
+          "caller": "performDueDiligence",
+          "callee": "customerAppService.performDueDiligence",
+          "lineNumber": 137
+        },
+        {
+          "caller": "performDueDiligence",
+          "callee": "R.okMsg",
+          "lineNumber": 138
+        },
+        {
+          "caller": "toResp",
+          "callee": "new CustomerResp",
+          "lineNumber": 142
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setId",
+          "lineNumber": 143
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getId",
+          "lineNumber": 143
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCustomerNo",
+          "lineNumber": 144
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getCustomerNo",
+          "lineNumber": 144
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCustomerType",
+          "lineNumber": 145
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getCustomerType",
+          "lineNumber": 145
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCustomerName",
+          "lineNumber": 146
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getCustomerName",
+          "lineNumber": 146
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setEnglishName",
+          "lineNumber": 147
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getEnglishName",
+          "lineNumber": 147
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCertType",
+          "lineNumber": 148
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getCertType",
+          "lineNumber": 148
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCertNo",
+          "lineNumber": 149
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getCertNo",
+          "lineNumber": 149
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCountryCode",
+          "lineNumber": 150
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getCountryCode",
+          "lineNumber": 150
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setAddress",
+          "lineNumber": 151
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getAddress",
+          "lineNumber": 151
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setContactPerson",
+          "lineNumber": 152
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getContactPerson",
+          "lineNumber": 152
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setContactPhone",
+          "lineNumber": 153
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getContactPhone",
+          "lineNumber": 153
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setEmail",
+          "lineNumber": 154
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getEmail",
+          "lineNumber": 154
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setRiskLevel",
+          "lineNumber": 155
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getRiskLevel",
+          "lineNumber": 155
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setRiskReason",
+          "lineNumber": 156
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getRiskReason",
+          "lineNumber": 156
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setDueDiligenceStatus",
+          "lineNumber": 157
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getDueDiligenceStatus",
+          "lineNumber": 157
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setDueDiligenceDate",
+          "lineNumber": 158
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getDueDiligenceDate",
+          "lineNumber": 158
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCrossBorderPlatformId",
+          "lineNumber": 159
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getCrossBorderPlatformId",
+          "lineNumber": 159
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setStatus",
+          "lineNumber": 160
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getStatus",
+          "lineNumber": 160
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setRemark",
+          "lineNumber": 161
+        },
+        {
+          "caller": "toResp",
+          "callee": "customer.getRemark",
+          "lineNumber": 161
+        },
+        {
+          "caller": "toResp",
+          "callee": "new CustomerResp",
+          "lineNumber": 166
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setId",
+          "lineNumber": 167
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getId",
+          "lineNumber": 167
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCustomerNo",
+          "lineNumber": 168
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getCustomerNo",
+          "lineNumber": 168
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCustomerType",
+          "lineNumber": 169
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getCustomerType",
+          "lineNumber": 169
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCustomerName",
+          "lineNumber": 170
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getCustomerName",
+          "lineNumber": 170
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setEnglishName",
+          "lineNumber": 171
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getEnglishName",
+          "lineNumber": 171
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCertType",
+          "lineNumber": 172
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getCertType",
+          "lineNumber": 172
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCertNo",
+          "lineNumber": 173
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getCertNo",
+          "lineNumber": 173
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCountryCode",
+          "lineNumber": 174
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getCountryCode",
+          "lineNumber": 174
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setAddress",
+          "lineNumber": 175
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getAddress",
+          "lineNumber": 175
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setContactPerson",
+          "lineNumber": 176
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getContactPerson",
+          "lineNumber": 176
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setContactPhone",
+          "lineNumber": 177
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getContactPhone",
+          "lineNumber": 177
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setEmail",
+          "lineNumber": 178
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getEmail",
+          "lineNumber": 178
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setRiskLevel",
+          "lineNumber": 179
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getRiskLevel",
+          "lineNumber": 179
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setRiskReason",
+          "lineNumber": 180
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getRiskReason",
+          "lineNumber": 180
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setDueDiligenceStatus",
+          "lineNumber": 181
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getDueDiligenceStatus",
+          "lineNumber": 181
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setDueDiligenceDate",
+          "lineNumber": 182
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getDueDiligenceDate",
+          "lineNumber": 182
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCrossBorderPlatformId",
+          "lineNumber": 183
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getCrossBorderPlatformId",
+          "lineNumber": 183
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setStatus",
+          "lineNumber": 184
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getStatus",
+          "lineNumber": 184
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setRemark",
+          "lineNumber": 185
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getRemark",
+          "lineNumber": 185
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getLimits",
+          "lineNumber": 186
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setLimits",
+          "lineNumber": 187
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getLimits().stream().map(this::toCreditLimitResp).collect",
+          "lineNumber": 187
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getLimits().stream().map",
+          "lineNumber": 187
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getLimits().stream",
+          "lineNumber": 187
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getLimits",
+          "lineNumber": 187
+        },
+        {
+          "caller": "toResp",
+          "callee": "Collectors.toList",
+          "lineNumber": 187
+        },
+        {
+          "caller": "toResp",
+          "callee": "new CustomerResp",
+          "lineNumber": 193
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setId",
+          "lineNumber": 194
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getId",
+          "lineNumber": 194
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCustomerNo",
+          "lineNumber": 195
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getCustomerNo",
+          "lineNumber": 195
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCustomerType",
+          "lineNumber": 196
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getCustomerType",
+          "lineNumber": 196
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCustomerName",
+          "lineNumber": 197
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getCustomerName",
+          "lineNumber": 197
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setRiskLevel",
+          "lineNumber": 198
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getRiskLevel",
+          "lineNumber": 198
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setStatus",
+          "lineNumber": 199
+        },
+        {
+          "caller": "toResp",
+          "callee": "dto.getStatus",
+          "lineNumber": 199
+        },
+        {
+          "caller": "toCreditLimitResp",
+          "callee": "new CustomerResp.CreditLimitResp",
+          "lineNumber": 204
+        },
+        {
+          "caller": "toCreditLimitResp",
+          "callee": "lr.setId",
+          "lineNumber": 205
+        },
+        {
+          "caller": "toCreditLimitResp",
+          "callee": "limit.getId",
+          "lineNumber": 205
+        },
+        {
+          "caller": "toCreditLimitResp",
+          "callee": "lr.setLimitType",
+          "lineNumber": 206
+        },
+        {
+          "caller": "toCreditLimitResp",
+          "callee": "limit.getLimitType",
+          "lineNumber": 206
+        },
+        {
+          "caller": "toCreditLimitResp",
+          "callee": "lr.setCurrency",
+          "lineNumber": 207
+        },
+        {
+          "caller": "toCreditLimitResp",
+          "callee": "limit.getCurrency",
+          "lineNumber": 207
+        },
+        {
+          "caller": "toCreditLimitResp",
+          "callee": "lr.setTotalLimit",
+          "lineNumber": 208
+        },
+        {
+          "caller": "toCreditLimitResp",
+          "callee": "limit.getTotalLimit",
+          "lineNumber": 208
+        },
+        {
+          "caller": "toCreditLimitResp",
+          "callee": "lr.setUsedLimit",
+          "lineNumber": 209
+        },
+        {
+          "caller": "toCreditLimitResp",
+          "callee": "limit.getUsedLimit",
+          "lineNumber": 209
+        },
+        {
+          "caller": "toCreditLimitResp",
+          "callee": "lr.setAvailableLimit",
+          "lineNumber": 210
+        },
+        {
+          "caller": "toCreditLimitResp",
+          "callee": "limit.getAvailableLimit",
+          "lineNumber": 210
+        }
+      ],
+      "metrics": {
+        "importCount": 16,
+        "exportCount": 9,
+        "functionCount": 12,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/adapter/dto/CreditCheckReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 28,
+      "nonEmptyLines": 20,
+      "classes": [
+        {
+          "name": "CreditCheckReq",
+          "startLine": 10,
+          "endLine": 28,
+          "methods": [],
+          "properties": [
+            "customerId",
+            "limitType",
+            "currency",
+            "amount"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CreditCheckReq",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/adapter/dto/CustomerReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 64,
+      "nonEmptyLines": 46,
+      "classes": [
+        {
+          "name": "CustomerReq",
+          "startLine": 11,
+          "endLine": 64,
+          "methods": [],
+          "properties": [
+            "customerId",
+            "customerType",
+            "customerName",
+            "englishName",
+            "certType",
+            "certNo",
+            "countryCode",
+            "address",
+            "contactPerson",
+            "contactPhone",
+            "email",
+            "remark",
+            "riskLevel",
+            "riskReason",
+            "status"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CustomerReq",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/adapter/dto/CustomerResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 94,
+      "nonEmptyLines": 63,
+      "classes": [
+        {
+          "name": "CustomerResp",
+          "startLine": 10,
+          "endLine": 94,
+          "methods": [],
+          "properties": [
+            "id",
+            "customerNo",
+            "customerType",
+            "customerName",
+            "englishName",
+            "certType",
+            "certNo",
+            "countryCode",
+            "address",
+            "contactPerson",
+            "contactPhone",
+            "email",
+            "riskLevel",
+            "riskReason",
+            "dueDiligenceStatus",
+            "dueDiligenceDate",
+            "crossBorderPlatformId",
+            "status",
+            "remark",
+            "limits"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CustomerResp",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/command/CreateCustomerCmd.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 40,
+      "nonEmptyLines": 26,
+      "classes": [
+        {
+          "name": "CreateCustomerCmd",
+          "startLine": 10,
+          "endLine": 40,
+          "methods": [],
+          "properties": [
+            "customerType",
+            "customerName",
+            "englishName",
+            "certType",
+            "certNo",
+            "countryCode",
+            "address",
+            "contactPerson",
+            "contactPhone",
+            "email",
+            "remark"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CreateCustomerCmd",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/command/UpdateCustomerCmd.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 32,
+      "nonEmptyLines": 18,
+      "classes": [
+        {
+          "name": "UpdateCustomerCmd",
+          "startLine": 7,
+          "endLine": 32,
+          "methods": [],
+          "properties": [
+            "customerId",
+            "customerName",
+            "englishName",
+            "address",
+            "contactPerson",
+            "contactPhone",
+            "email",
+            "riskLevel",
+            "riskReason",
+            "status",
+            "remark"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UpdateCustomerCmd",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/query/CustomerDetailDTO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 74,
+      "nonEmptyLines": 49,
+      "classes": [
+        {
+          "name": "CustomerDetailDTO",
+          "startLine": 12,
+          "endLine": 74,
+          "methods": [],
+          "properties": [
+            "id",
+            "customerNo",
+            "customerType",
+            "customerName",
+            "englishName",
+            "certType",
+            "certNo",
+            "countryCode",
+            "address",
+            "contactPerson",
+            "contactPhone",
+            "email",
+            "riskLevel",
+            "riskReason",
+            "dueDiligenceStatus",
+            "dueDiligenceDate",
+            "crossBorderPlatformId",
+            "status",
+            "remark",
+            "limits"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CustomerDetailDTO",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/query/CustomerListDTO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 20,
+      "classes": [
+        {
+          "name": "CustomerListDTO",
+          "startLine": 7,
+          "endLine": 30,
+          "methods": [],
+          "properties": [
+            "id",
+            "customerNo",
+            "customerType",
+            "customerName",
+            "riskLevel",
+            "status",
+            "creditLimitsSummary"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CustomerListDTO",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/query/CustomerQuery.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 21,
+      "classes": [
+        {
+          "name": "CustomerQuery",
+          "startLine": 10,
+          "endLine": 31,
+          "methods": [],
+          "properties": [
+            "customerNo",
+            "customerType",
+            "customerName",
+            "riskLevel",
+            "status",
+            "certNo"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CustomerQuery",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/service/CustomerAppService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 161,
+      "nonEmptyLines": 143,
+      "functions": [
+        {
+          "name": "createCustomer",
+          "startLine": 39,
+          "endLine": 58,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "updateCustomer",
+          "startLine": 60,
+          "endLine": 69,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "updateRiskLevel",
+          "startLine": 71,
+          "endLine": 76,
+          "params": [
+            "customerId",
+            "newLevel",
+            "reason"
+          ]
+        },
+        {
+          "name": "performDueDiligence",
+          "startLine": 78,
+          "endLine": 83,
+          "params": [
+            "customerId"
+          ]
+        },
+        {
+          "name": "getCustomerDetail",
+          "startLine": 85,
+          "endLine": 90,
+          "params": [
+            "customerId"
+          ]
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 92,
+          "endLine": 107,
+          "params": [
+            "query"
+          ]
+        },
+        {
+          "name": "checkCredit",
+          "startLine": 109,
+          "endLine": 111,
+          "params": [
+            "customerId",
+            "limitType",
+            "currency",
+            "amount"
+          ]
+        },
+        {
+          "name": "deductCredit",
+          "startLine": 113,
+          "endLine": 116,
+          "params": [
+            "customerId",
+            "limitType",
+            "currency",
+            "amount"
+          ]
+        },
+        {
+          "name": "toDetailDTO",
+          "startLine": 118,
+          "endLine": 141,
+          "params": [
+            "customer",
+            "limits"
+          ]
+        },
+        {
+          "name": "toListDTO",
+          "startLine": 143,
+          "endLine": 154,
+          "params": [
+            "customer"
+          ]
+        },
+        {
+          "name": "formatCreditLimitsSummary",
+          "startLine": 156,
+          "endLine": 160,
+          "params": [
+            "limits"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CustomerAppService",
+          "startLine": 30,
+          "endLine": 161,
+          "methods": [
+            "createCustomer",
+            "updateCustomer",
+            "updateRiskLevel",
+            "performDueDiligence",
+            "getCustomerDetail",
+            "pageQuery",
+            "checkCredit",
+            "deductCredit",
+            "toDetailDTO",
+            "toListDTO",
+            "formatCreditLimitsSummary"
+          ],
+          "properties": [
+            "customerDomainService",
+            "creditCheckDomainService",
+            "customerRepository",
+            "creditLimitRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createCustomer",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "updateCustomer",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "updateRiskLevel",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "performDueDiligence",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "getCustomerDetail",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "checkCredit",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "deductCredit",
+          "line": 113,
+          "isDefault": false
+        },
+        {
+          "name": "CustomerAppService",
+          "line": 30,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createCustomer",
+          "callee": "new CustomerRegInfo",
+          "lineNumber": 41
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "cmd.getCustomerType",
+          "lineNumber": 42
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "cmd.getCustomerName",
+          "lineNumber": 43
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "cmd.getEnglishName",
+          "lineNumber": 44
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "cmd.getCertType",
+          "lineNumber": 45
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "cmd.getCertNo",
+          "lineNumber": 46
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "cmd.getCountryCode",
+          "lineNumber": 47
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "cmd.getAddress",
+          "lineNumber": 48
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "cmd.getContactPerson",
+          "lineNumber": 49
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "cmd.getContactPhone",
+          "lineNumber": 50
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "cmd.getEmail",
+          "lineNumber": 51
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "cmd.getRemark",
+          "lineNumber": 55
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "customerDomainService.createCustomer",
+          "lineNumber": 57
+        },
+        {
+          "caller": "updateCustomer",
+          "callee": "customerRepository.findById(CustomerId.of(cmd.getCustomerId())).orElseThrow",
+          "lineNumber": 62
+        },
+        {
+          "caller": "updateCustomer",
+          "callee": "customerRepository.findById",
+          "lineNumber": 62
+        },
+        {
+          "caller": "updateCustomer",
+          "callee": "CustomerId.of",
+          "lineNumber": 62
+        },
+        {
+          "caller": "updateCustomer",
+          "callee": "cmd.getCustomerId",
+          "lineNumber": 62
+        },
+        {
+          "caller": "updateCustomer",
+          "callee": "new BusinessException",
+          "lineNumber": 63
+        },
+        {
+          "caller": "updateCustomer",
+          "callee": "cmd.getCustomerName",
+          "lineNumber": 64
+        },
+        {
+          "caller": "updateCustomer",
+          "callee": "customerRepository.save",
+          "lineNumber": 67
+        },
+        {
+          "caller": "updateRiskLevel",
+          "callee": "customerRepository.findById(CustomerId.of(customerId)).orElseThrow",
+          "lineNumber": 73
+        },
+        {
+          "caller": "updateRiskLevel",
+          "callee": "customerRepository.findById",
+          "lineNumber": 73
+        },
+        {
+          "caller": "updateRiskLevel",
+          "callee": "CustomerId.of",
+          "lineNumber": 73
+        },
+        {
+          "caller": "updateRiskLevel",
+          "callee": "new BusinessException",
+          "lineNumber": 74
+        },
+        {
+          "caller": "updateRiskLevel",
+          "callee": "customerDomainService.updateRiskLevel",
+          "lineNumber": 75
+        },
+        {
+          "caller": "performDueDiligence",
+          "callee": "customerRepository.findById(CustomerId.of(customerId)).orElseThrow",
+          "lineNumber": 80
+        },
+        {
+          "caller": "performDueDiligence",
+          "callee": "customerRepository.findById",
+          "lineNumber": 80
+        },
+        {
+          "caller": "performDueDiligence",
+          "callee": "CustomerId.of",
+          "lineNumber": 80
+        },
+        {
+          "caller": "performDueDiligence",
+          "callee": "new BusinessException",
+          "lineNumber": 81
+        },
+        {
+          "caller": "performDueDiligence",
+          "callee": "customerDomainService.performDueDiligence",
+          "lineNumber": 82
+        },
+        {
+          "caller": "getCustomerDetail",
+          "callee": "customerRepository.findById(CustomerId.of(customerId)).orElseThrow",
+          "lineNumber": 86
+        },
+        {
+          "caller": "getCustomerDetail",
+          "callee": "customerRepository.findById",
+          "lineNumber": 86
+        },
+        {
+          "caller": "getCustomerDetail",
+          "callee": "CustomerId.of",
+          "lineNumber": 86
+        },
+        {
+          "caller": "getCustomerDetail",
+          "callee": "new BusinessException",
+          "lineNumber": 87
+        },
+        {
+          "caller": "getCustomerDetail",
+          "callee": "creditLimitRepository.findByCustomerId",
+          "lineNumber": 88
+        },
+        {
+          "caller": "getCustomerDetail",
+          "callee": "toDetailDTO",
+          "lineNumber": 89
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "new com.forex.customer.domain.model.dto.CustomerQuery",
+          "lineNumber": 94
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "domainQuery.setCustomerNo",
+          "lineNumber": 95
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getCustomerNo",
+          "lineNumber": 95
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "domainQuery.setCustomerName",
+          "lineNumber": 96
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getCustomerName",
+          "lineNumber": 96
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "domainQuery.setCustomerType",
+          "lineNumber": 97
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getCustomerType",
+          "lineNumber": 97
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "domainQuery.setRiskLevel",
+          "lineNumber": 98
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getRiskLevel",
+          "lineNumber": 98
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "domainQuery.setStatus",
+          "lineNumber": 99
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getStatus",
+          "lineNumber": 99
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "domainQuery.setCertNo",
+          "lineNumber": 100
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getCertNo",
+          "lineNumber": 100
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "customerRepository.pageQuery",
+          "lineNumber": 102
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getRecords().stream()\n                .map(this::toListDTO).toList",
+          "lineNumber": 103
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getRecords().stream().map",
+          "lineNumber": 103
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getRecords().stream",
+          "lineNumber": 103
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getRecords",
+          "lineNumber": 103
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "PageResp.of",
+          "lineNumber": 106
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getTotal",
+          "lineNumber": 106
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getPageNum",
+          "lineNumber": 106
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getPageSize",
+          "lineNumber": 106
+        },
+        {
+          "caller": "checkCredit",
+          "callee": "creditCheckDomainService.checkCreditAvailability",
+          "lineNumber": 110
+        },
+        {
+          "caller": "deductCredit",
+          "callee": "creditCheckDomainService.deductCredit",
+          "lineNumber": 115
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "new CustomerDetailDTO",
+          "lineNumber": 119
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setId",
+          "lineNumber": 120
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getId",
+          "lineNumber": 120
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setCustomerNo",
+          "lineNumber": 121
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getCustomerNo",
+          "lineNumber": 121
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setCustomerType",
+          "lineNumber": 122
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getCustomerType",
+          "lineNumber": 122
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setCustomerName",
+          "lineNumber": 123
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getCustomerName",
+          "lineNumber": 123
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setEnglishName",
+          "lineNumber": 124
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getEnglishName",
+          "lineNumber": 124
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setCertType",
+          "lineNumber": 125
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getCertType",
+          "lineNumber": 125
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setCertNo",
+          "lineNumber": 126
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getCertNo",
+          "lineNumber": 126
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setCountryCode",
+          "lineNumber": 127
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getCountryCode",
+          "lineNumber": 127
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setAddress",
+          "lineNumber": 128
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getAddress",
+          "lineNumber": 128
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setContactPerson",
+          "lineNumber": 129
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getContactPerson",
+          "lineNumber": 129
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setContactPhone",
+          "lineNumber": 130
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getContactPhone",
+          "lineNumber": 130
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setEmail",
+          "lineNumber": 131
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getEmail",
+          "lineNumber": 131
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setRiskLevel",
+          "lineNumber": 132
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getRiskLevel",
+          "lineNumber": 132
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setRiskReason",
+          "lineNumber": 133
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getRiskReason",
+          "lineNumber": 133
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setDueDiligenceStatus",
+          "lineNumber": 134
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getDueDiligenceStatus",
+          "lineNumber": 134
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setDueDiligenceDate",
+          "lineNumber": 135
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getDueDiligenceDate",
+          "lineNumber": 135
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setCrossBorderPlatformId",
+          "lineNumber": 136
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getCrossBorderPlatformId",
+          "lineNumber": 136
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setStatus",
+          "lineNumber": 137
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getStatus",
+          "lineNumber": 137
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setRemark",
+          "lineNumber": 138
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "customer.getRemark",
+          "lineNumber": 138
+        },
+        {
+          "caller": "toDetailDTO",
+          "callee": "dto.setLimits",
+          "lineNumber": 139
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "new CustomerListDTO",
+          "lineNumber": 144
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "dto.setId",
+          "lineNumber": 145
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "customer.getId",
+          "lineNumber": 145
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "dto.setCustomerNo",
+          "lineNumber": 146
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "customer.getCustomerNo",
+          "lineNumber": 146
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "dto.setCustomerType",
+          "lineNumber": 147
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "customer.getCustomerType",
+          "lineNumber": 147
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "dto.setCustomerName",
+          "lineNumber": 148
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "customer.getCustomerName",
+          "lineNumber": 148
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "dto.setRiskLevel",
+          "lineNumber": 149
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "customer.getRiskLevel",
+          "lineNumber": 149
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "dto.setStatus",
+          "lineNumber": 150
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "customer.getStatus",
+          "lineNumber": 150
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "creditLimitRepository.findByCustomerId",
+          "lineNumber": 151
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "customer.getId",
+          "lineNumber": 151
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "dto.setCreditLimitsSummary",
+          "lineNumber": 152
+        },
+        {
+          "caller": "toListDTO",
+          "callee": "formatCreditLimitsSummary",
+          "lineNumber": 152
+        },
+        {
+          "caller": "formatCreditLimitsSummary",
+          "callee": "limits.stream()\n                .map(l -> l.getLimitType() + \"/\" + l.getCurrency() + \":\" + l.getAvailableLimit()).collect",
+          "lineNumber": 157
+        },
+        {
+          "caller": "formatCreditLimitsSummary",
+          "callee": "limits.stream().map",
+          "lineNumber": 157
+        },
+        {
+          "caller": "formatCreditLimitsSummary",
+          "callee": "limits.stream",
+          "lineNumber": 157
+        },
+        {
+          "caller": "formatCreditLimitsSummary",
+          "callee": "l.getLimitType",
+          "lineNumber": 158
+        },
+        {
+          "caller": "formatCreditLimitsSummary",
+          "callee": "l.getCurrency",
+          "lineNumber": 158
+        },
+        {
+          "caller": "formatCreditLimitsSummary",
+          "callee": "l.getAvailableLimit",
+          "lineNumber": 158
+        },
+        {
+          "caller": "formatCreditLimitsSummary",
+          "callee": "Collectors.joining",
+          "lineNumber": 159
+        }
+      ],
+      "metrics": {
+        "importCount": 17,
+        "exportCount": 9,
+        "functionCount": 11,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/event/CustomerCreatedEvent.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 18,
+      "functions": [
+        {
+          "name": "CustomerCreatedEvent",
+          "startLine": 14,
+          "endLine": 18,
+          "params": [
+            "customerId",
+            "customerNo",
+            "customerName"
+          ]
+        },
+        {
+          "name": "eventName",
+          "startLine": 20,
+          "endLine": 23,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CustomerCreatedEvent",
+          "startLine": 7,
+          "endLine": 24,
+          "methods": [
+            "CustomerCreatedEvent",
+            "eventName"
+          ],
+          "properties": [
+            "customerId",
+            "customerNo",
+            "customerName"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CustomerCreatedEvent",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "eventName",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "CustomerCreatedEvent",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 134,
+      "nonEmptyLines": 119,
+      "functions": [
+        {
+          "name": "Customer",
+          "startLine": 34,
+          "endLine": 36,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 38,
+          "endLine": 63,
+          "params": [
+            "customerNo",
+            "customerType",
+            "customerName",
+            "englishName",
+            "certType",
+            "certNo",
+            "countryCode",
+            "address",
+            "contactPerson",
+            "contactPhone",
+            "email",
+            "riskLevel",
+            "riskReason",
+            "crossBorderPlatformId",
+            "remark"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 65,
+          "endLine": 93,
+          "params": [
+            "id",
+            "customerNo",
+            "customerType",
+            "customerName",
+            "englishName",
+            "certType",
+            "certNo",
+            "countryCode",
+            "address",
+            "contactPerson",
+            "contactPhone",
+            "email",
+            "riskLevel",
+            "riskReason",
+            "dueDiligenceStatus",
+            "dueDiligenceDate",
+            "crossBorderPlatformId",
+            "status",
+            "remark"
+          ]
+        },
+        {
+          "name": "updateRiskLevel",
+          "startLine": 95,
+          "endLine": 99,
+          "params": [
+            "newLevel",
+            "reason"
+          ]
+        },
+        {
+          "name": "enable",
+          "startLine": 101,
+          "endLine": 104,
+          "params": []
+        },
+        {
+          "name": "disable",
+          "startLine": 106,
+          "endLine": 109,
+          "params": []
+        },
+        {
+          "name": "completeDueDiligence",
+          "startLine": 111,
+          "endLine": 115,
+          "params": []
+        },
+        {
+          "name": "isActive",
+          "startLine": 117,
+          "endLine": 119,
+          "params": []
+        },
+        {
+          "name": "isDueDiligenceCompleted",
+          "startLine": 121,
+          "endLine": 123,
+          "params": []
+        },
+        {
+          "name": "validate",
+          "startLine": 125,
+          "endLine": 133,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "Customer",
+          "startLine": 11,
+          "endLine": 134,
+          "methods": [
+            "Customer",
+            "create",
+            "reconstitute",
+            "updateRiskLevel",
+            "enable",
+            "disable",
+            "completeDueDiligence",
+            "isActive",
+            "isDueDiligenceCompleted",
+            "validate"
+          ],
+          "properties": [
+            "id",
+            "customerNo",
+            "customerType",
+            "customerName",
+            "englishName",
+            "certType",
+            "certNo",
+            "countryCode",
+            "address",
+            "contactPerson",
+            "contactPhone",
+            "email",
+            "riskLevel",
+            "riskReason",
+            "dueDiligenceStatus",
+            "dueDiligenceDate",
+            "crossBorderPlatformId",
+            "status",
+            "remark"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "updateRiskLevel",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "enable",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "disable",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "completeDueDiligence",
+          "line": 111,
+          "isDefault": false
+        },
+        {
+          "name": "isActive",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "isDueDiligenceCompleted",
+          "line": 121,
+          "isDefault": false
+        },
+        {
+          "name": "Customer",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new Customer",
+          "lineNumber": 43
+        },
+        {
+          "caller": "create",
+          "callee": "customer.validate",
+          "lineNumber": 61
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new Customer",
+          "lineNumber": 72
+        },
+        {
+          "caller": "updateRiskLevel",
+          "callee": "markUpdated",
+          "lineNumber": 98
+        },
+        {
+          "caller": "enable",
+          "callee": "markUpdated",
+          "lineNumber": 103
+        },
+        {
+          "caller": "disable",
+          "callee": "markUpdated",
+          "lineNumber": 108
+        },
+        {
+          "caller": "completeDueDiligence",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 113
+        },
+        {
+          "caller": "completeDueDiligence",
+          "callee": "markUpdated",
+          "lineNumber": 114
+        },
+        {
+          "caller": "validate",
+          "callee": "customerName.isBlank",
+          "lineNumber": 127
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 128
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 131
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 9,
+        "functionCount": 10,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 22,
+      "classes": [
+        {
+          "name": "CustomerRegInfo",
+          "startLine": 8,
+          "endLine": 26,
+          "methods": [],
+          "properties": [
+            "customerType",
+            "customerName",
+            "englishName",
+            "certType",
+            "certNo",
+            "countryCode",
+            "address",
+            "contactPerson",
+            "contactPhone",
+            "email",
+            "riskLevel",
+            "riskReason",
+            "crossBorderPlatformId",
+            "remark"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CustomerRegInfo",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 82,
+      "nonEmptyLines": 71,
+      "functions": [
+        {
+          "name": "CreditLimit",
+          "startLine": 26,
+          "endLine": 39,
+          "params": [
+            "id",
+            "customerId",
+            "limitType",
+            "currency",
+            "totalLimit",
+            "usedLimit",
+            "availableLimit",
+            "effectiveDate",
+            "expireDate",
+            "status"
+          ]
+        },
+        {
+          "name": "deduct",
+          "startLine": 41,
+          "endLine": 56,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "release",
+          "startLine": 58,
+          "endLine": 67,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "isAvailable",
+          "startLine": 69,
+          "endLine": 71,
+          "params": []
+        },
+        {
+          "name": "isExpired",
+          "startLine": 73,
+          "endLine": 75,
+          "params": []
+        },
+        {
+          "name": "hasSufficientLimit",
+          "startLine": 77,
+          "endLine": 81,
+          "params": [
+            "amount"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CreditLimit",
+          "startLine": 12,
+          "endLine": 82,
+          "methods": [
+            "CreditLimit",
+            "deduct",
+            "release",
+            "isAvailable",
+            "isExpired",
+            "hasSufficientLimit"
+          ],
+          "properties": [
+            "id",
+            "customerId",
+            "limitType",
+            "currency",
+            "totalLimit",
+            "usedLimit",
+            "availableLimit",
+            "effectiveDate",
+            "expireDate",
+            "status"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CreditLimit",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "deduct",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "release",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "isAvailable",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "isExpired",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "hasSufficientLimit",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "CreditLimit",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "deduct",
+          "callee": "amount.compareTo",
+          "lineNumber": 42
+        },
+        {
+          "caller": "deduct",
+          "callee": "new BusinessException",
+          "lineNumber": 43
+        },
+        {
+          "caller": "deduct",
+          "callee": "isAvailable",
+          "lineNumber": 45
+        },
+        {
+          "caller": "deduct",
+          "callee": "new IllegalStateException",
+          "lineNumber": 46
+        },
+        {
+          "caller": "deduct",
+          "callee": "isExpired",
+          "lineNumber": 48
+        },
+        {
+          "caller": "deduct",
+          "callee": "new IllegalStateException",
+          "lineNumber": 49
+        },
+        {
+          "caller": "deduct",
+          "callee": "this.availableLimit.compareTo",
+          "lineNumber": 51
+        },
+        {
+          "caller": "deduct",
+          "callee": "new IllegalStateException",
+          "lineNumber": 52
+        },
+        {
+          "caller": "deduct",
+          "callee": "this.usedLimit.add",
+          "lineNumber": 54
+        },
+        {
+          "caller": "deduct",
+          "callee": "this.availableLimit.subtract",
+          "lineNumber": 55
+        },
+        {
+          "caller": "release",
+          "callee": "amount.compareTo",
+          "lineNumber": 59
+        },
+        {
+          "caller": "release",
+          "callee": "new BusinessException",
+          "lineNumber": 60
+        },
+        {
+          "caller": "release",
+          "callee": "this.usedLimit.compareTo",
+          "lineNumber": 62
+        },
+        {
+          "caller": "release",
+          "callee": "new IllegalStateException",
+          "lineNumber": 63
+        },
+        {
+          "caller": "release",
+          "callee": "this.usedLimit.subtract",
+          "lineNumber": 65
+        },
+        {
+          "caller": "release",
+          "callee": "this.availableLimit.add",
+          "lineNumber": 66
+        },
+        {
+          "caller": "isExpired",
+          "callee": "this.expireDate.isBefore",
+          "lineNumber": 74
+        },
+        {
+          "caller": "isExpired",
+          "callee": "LocalDate.now",
+          "lineNumber": 74
+        },
+        {
+          "caller": "hasSufficientLimit",
+          "callee": "isAvailable",
+          "lineNumber": 78
+        },
+        {
+          "caller": "hasSufficientLimit",
+          "callee": "isExpired",
+          "lineNumber": 78
+        },
+        {
+          "caller": "hasSufficientLimit",
+          "callee": "this.availableLimit.compareTo",
+          "lineNumber": 80
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 7,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 60,
+      "nonEmptyLines": 50,
+      "functions": [
+        {
+          "name": "CustomerQuota",
+          "startLine": 22,
+          "endLine": 31,
+          "params": [
+            "id",
+            "customerId",
+            "quotaYear",
+            "quotaType",
+            "quotaAmount",
+            "usedAmount",
+            "currency"
+          ]
+        },
+        {
+          "name": "deduct",
+          "startLine": 33,
+          "endLine": 41,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "release",
+          "startLine": 43,
+          "endLine": 51,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "getAvailable",
+          "startLine": 53,
+          "endLine": 55,
+          "params": []
+        },
+        {
+          "name": "isExceeded",
+          "startLine": 57,
+          "endLine": 59,
+          "params": [
+            "amount"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CustomerQuota",
+          "startLine": 11,
+          "endLine": 60,
+          "methods": [
+            "CustomerQuota",
+            "deduct",
+            "release",
+            "getAvailable",
+            "isExceeded"
+          ],
+          "properties": [
+            "id",
+            "customerId",
+            "quotaYear",
+            "quotaType",
+            "quotaAmount",
+            "usedAmount",
+            "currency"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CustomerQuota",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "deduct",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "release",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "getAvailable",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "isExceeded",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "CustomerQuota",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "deduct",
+          "callee": "amount.compareTo",
+          "lineNumber": 34
+        },
+        {
+          "caller": "deduct",
+          "callee": "new BusinessException",
+          "lineNumber": 35
+        },
+        {
+          "caller": "deduct",
+          "callee": "isExceeded",
+          "lineNumber": 37
+        },
+        {
+          "caller": "deduct",
+          "callee": "new IllegalStateException",
+          "lineNumber": 38
+        },
+        {
+          "caller": "deduct",
+          "callee": "this.usedAmount.add",
+          "lineNumber": 40
+        },
+        {
+          "caller": "release",
+          "callee": "amount.compareTo",
+          "lineNumber": 44
+        },
+        {
+          "caller": "release",
+          "callee": "new BusinessException",
+          "lineNumber": 45
+        },
+        {
+          "caller": "release",
+          "callee": "this.usedAmount.compareTo",
+          "lineNumber": 47
+        },
+        {
+          "caller": "release",
+          "callee": "new IllegalStateException",
+          "lineNumber": 48
+        },
+        {
+          "caller": "release",
+          "callee": "this.usedAmount.subtract",
+          "lineNumber": 50
+        },
+        {
+          "caller": "getAvailable",
+          "callee": "this.quotaAmount.subtract",
+          "lineNumber": 54
+        },
+        {
+          "caller": "isExceeded",
+          "callee": "getAvailable().compareTo",
+          "lineNumber": 58
+        },
+        {
+          "caller": "isExceeded",
+          "callee": "getAvailable",
+          "lineNumber": 58
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 6,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 29,
+      "functions": [
+        {
+          "name": "CustomerId",
+          "startLine": 16,
+          "endLine": 21,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 23,
+          "endLine": 25,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 27,
+          "endLine": 32,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 34,
+          "endLine": 37,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CustomerId",
+          "startLine": 11,
+          "endLine": 38,
+          "methods": [
+            "CustomerId",
+            "of",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "CustomerId",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CustomerId",
+          "callee": "new BusinessException",
+          "lineNumber": 18
+        },
+        {
+          "caller": "of",
+          "callee": "new CustomerId",
+          "lineNumber": 24
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 31
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 100,
+      "nonEmptyLines": 79,
+      "functions": [
+        {
+          "name": "RiskLevel",
+          "startLine": 21,
+          "endLine": 29,
+          "params": [
+            "level"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 31,
+          "endLine": 33,
+          "params": [
+            "level"
+          ]
+        },
+        {
+          "name": "low",
+          "startLine": 35,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "medium",
+          "startLine": 39,
+          "endLine": 41,
+          "params": []
+        },
+        {
+          "name": "high",
+          "startLine": 43,
+          "endLine": 45,
+          "params": []
+        },
+        {
+          "name": "prohibited",
+          "startLine": 47,
+          "endLine": 49,
+          "params": []
+        },
+        {
+          "name": "upgrade",
+          "startLine": 51,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "downgrade",
+          "startLine": 58,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "isLow",
+          "startLine": 68,
+          "endLine": 70,
+          "params": []
+        },
+        {
+          "name": "isMedium",
+          "startLine": 72,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "isHigh",
+          "startLine": 76,
+          "endLine": 78,
+          "params": []
+        },
+        {
+          "name": "isProhibited",
+          "startLine": 80,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "equals",
+          "startLine": 84,
+          "endLine": 89,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 91,
+          "endLine": 94,
+          "params": []
+        },
+        {
+          "name": "toString",
+          "startLine": 96,
+          "endLine": 99,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RiskLevel",
+          "startLine": 11,
+          "endLine": 100,
+          "methods": [
+            "RiskLevel",
+            "of",
+            "low",
+            "medium",
+            "high",
+            "prohibited",
+            "upgrade",
+            "downgrade",
+            "isLow",
+            "isMedium",
+            "isHigh",
+            "isProhibited",
+            "equals",
+            "hashCode",
+            "toString"
+          ],
+          "properties": [
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "PROHIBITED",
+            "level"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "LOW",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "MEDIUM",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "HIGH",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "PROHIBITED",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "of",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "low",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "medium",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "high",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "prohibited",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "upgrade",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "downgrade",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "isLow",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "isMedium",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "isHigh",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "isProhibited",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "RiskLevel",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "RiskLevel",
+          "callee": "new BusinessException",
+          "lineNumber": 23
+        },
+        {
+          "caller": "RiskLevel",
+          "callee": "new BusinessException",
+          "lineNumber": 26
+        },
+        {
+          "caller": "of",
+          "callee": "new RiskLevel",
+          "lineNumber": 32
+        },
+        {
+          "caller": "low",
+          "callee": "new RiskLevel",
+          "lineNumber": 36
+        },
+        {
+          "caller": "medium",
+          "callee": "new RiskLevel",
+          "lineNumber": 40
+        },
+        {
+          "caller": "high",
+          "callee": "new RiskLevel",
+          "lineNumber": 44
+        },
+        {
+          "caller": "prohibited",
+          "callee": "new RiskLevel",
+          "lineNumber": 48
+        },
+        {
+          "caller": "upgrade",
+          "callee": "new RiskLevel",
+          "lineNumber": 55
+        },
+        {
+          "caller": "downgrade",
+          "callee": "new RiskLevel",
+          "lineNumber": 63
+        },
+        {
+          "caller": "downgrade",
+          "callee": "new RiskLevel",
+          "lineNumber": 65
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 88
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 93
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 19,
+        "functionCount": 15,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "CreditLimitRepository",
+          "startLine": 8,
+          "endLine": 17,
+          "methods": [
+            "save",
+            "findById",
+            "findByCustomerId",
+            "findByCustomerAndType"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CreditLimitRepository",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 25,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "CustomerRepository",
+          "startLine": 12,
+          "endLine": 25,
+          "methods": [
+            "save",
+            "findById",
+            "findByCustomerNo",
+            "findByCondition",
+            "existsByCertNo",
+            "pageQuery"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CustomerRepository",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 55,
+      "nonEmptyLines": 42,
+      "functions": [
+        {
+          "name": "checkCreditAvailability",
+          "startLine": 23,
+          "endLine": 28,
+          "params": [
+            "customerId",
+            "limitType",
+            "currency",
+            "amount"
+          ]
+        },
+        {
+          "name": "deductCredit",
+          "startLine": 30,
+          "endLine": 41,
+          "params": [
+            "customerId",
+            "limitType",
+            "currency",
+            "amount"
+          ]
+        },
+        {
+          "name": "releaseCredit",
+          "startLine": 43,
+          "endLine": 54,
+          "params": [
+            "customerId",
+            "limitType",
+            "currency",
+            "amount"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CreditCheckDomainService",
+          "startLine": 16,
+          "endLine": 55,
+          "methods": [
+            "checkCreditAvailability",
+            "deductCredit",
+            "releaseCredit"
+          ],
+          "properties": [
+            "creditLimitRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "checkCreditAvailability",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "deductCredit",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "releaseCredit",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "CreditCheckDomainService",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "checkCreditAvailability",
+          "callee": "creditLimitRepository.findByCustomerAndType(customerId, limitType, currency)\n                .filter(limit -> limit.hasSufficientLimit(amount)).isPresent",
+          "lineNumber": 25
+        },
+        {
+          "caller": "checkCreditAvailability",
+          "callee": "creditLimitRepository.findByCustomerAndType(customerId, limitType, currency).filter",
+          "lineNumber": 25
+        },
+        {
+          "caller": "checkCreditAvailability",
+          "callee": "creditLimitRepository.findByCustomerAndType",
+          "lineNumber": 25
+        },
+        {
+          "caller": "checkCreditAvailability",
+          "callee": "limit.hasSufficientLimit",
+          "lineNumber": 26
+        },
+        {
+          "caller": "deductCredit",
+          "callee": "creditLimitRepository\n                .findByCustomerAndType(customerId, limitType, currency).orElseThrow",
+          "lineNumber": 32
+        },
+        {
+          "caller": "deductCredit",
+          "callee": "creditLimitRepository.findByCustomerAndType",
+          "lineNumber": 32
+        },
+        {
+          "caller": "deductCredit",
+          "callee": "new BusinessException",
+          "lineNumber": 34
+        },
+        {
+          "caller": "deductCredit",
+          "callee": "limit.deduct",
+          "lineNumber": 36
+        },
+        {
+          "caller": "deductCredit",
+          "callee": "creditLimitRepository.save",
+          "lineNumber": 37
+        },
+        {
+          "caller": "deductCredit",
+          "callee": "log.info",
+          "lineNumber": 39
+        },
+        {
+          "caller": "releaseCredit",
+          "callee": "creditLimitRepository\n                .findByCustomerAndType(customerId, limitType, currency).orElseThrow",
+          "lineNumber": 45
+        },
+        {
+          "caller": "releaseCredit",
+          "callee": "creditLimitRepository.findByCustomerAndType",
+          "lineNumber": 45
+        },
+        {
+          "caller": "releaseCredit",
+          "callee": "new BusinessException",
+          "lineNumber": 47
+        },
+        {
+          "caller": "releaseCredit",
+          "callee": "limit.release",
+          "lineNumber": 49
+        },
+        {
+          "caller": "releaseCredit",
+          "callee": "creditLimitRepository.save",
+          "lineNumber": 50
+        },
+        {
+          "caller": "releaseCredit",
+          "callee": "log.info",
+          "lineNumber": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 89,
+      "nonEmptyLines": 72,
+      "functions": [
+        {
+          "name": "createCustomer",
+          "startLine": 30,
+          "endLine": 63,
+          "params": [
+            "info"
+          ]
+        },
+        {
+          "name": "updateRiskLevel",
+          "startLine": 65,
+          "endLine": 72,
+          "params": [
+            "customer",
+            "newLevel",
+            "reason"
+          ]
+        },
+        {
+          "name": "performDueDiligence",
+          "startLine": 74,
+          "endLine": 82,
+          "params": [
+            "customer"
+          ]
+        },
+        {
+          "name": "generateCustomerNo",
+          "startLine": 84,
+          "endLine": 88,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CustomerDomainService",
+          "startLine": 21,
+          "endLine": 89,
+          "methods": [
+            "createCustomer",
+            "updateRiskLevel",
+            "performDueDiligence",
+            "generateCustomerNo"
+          ],
+          "properties": [
+            "customerRepository",
+            "eventPublisher"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createCustomer",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "updateRiskLevel",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "performDueDiligence",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "CustomerDomainService",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createCustomer",
+          "callee": "info.getCertType",
+          "lineNumber": 31
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getCertNo",
+          "lineNumber": 31
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "customerRepository.existsByCertNo",
+          "lineNumber": 32
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getCertType",
+          "lineNumber": 32
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getCertNo",
+          "lineNumber": 32
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "new BusinessException",
+          "lineNumber": 33
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "generateCustomerNo",
+          "lineNumber": 36
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "Customer.create",
+          "lineNumber": 38
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getCustomerType",
+          "lineNumber": 40
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getCustomerName",
+          "lineNumber": 41
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getEnglishName",
+          "lineNumber": 42
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getCertType",
+          "lineNumber": 43
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getCertNo",
+          "lineNumber": 44
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getCountryCode",
+          "lineNumber": 45
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getAddress",
+          "lineNumber": 46
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getContactPerson",
+          "lineNumber": 47
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getContactPhone",
+          "lineNumber": 48
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getEmail",
+          "lineNumber": 49
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getRiskLevel",
+          "lineNumber": 50
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getRiskReason",
+          "lineNumber": 51
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getCrossBorderPlatformId",
+          "lineNumber": 52
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "info.getRemark",
+          "lineNumber": 53
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "customerRepository.save",
+          "lineNumber": 56
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 58
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "new CustomerCreatedEvent",
+          "lineNumber": 58
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "saved.getId",
+          "lineNumber": 59
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "saved.getCustomerNo",
+          "lineNumber": 59
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "saved.getCustomerName",
+          "lineNumber": 59
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "log.info",
+          "lineNumber": 61
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "saved.getCustomerNo",
+          "lineNumber": 61
+        },
+        {
+          "caller": "createCustomer",
+          "callee": "saved.getCustomerName",
+          "lineNumber": 61
+        },
+        {
+          "caller": "updateRiskLevel",
+          "callee": "customer.getRiskLevel",
+          "lineNumber": 66
+        },
+        {
+          "caller": "updateRiskLevel",
+          "callee": "customer.updateRiskLevel",
+          "lineNumber": 67
+        },
+        {
+          "caller": "updateRiskLevel",
+          "callee": "customerRepository.save",
+          "lineNumber": 68
+        },
+        {
+          "caller": "updateRiskLevel",
+          "callee": "log.info",
+          "lineNumber": 70
+        },
+        {
+          "caller": "updateRiskLevel",
+          "callee": "customer.getId",
+          "lineNumber": 71
+        },
+        {
+          "caller": "performDueDiligence",
+          "callee": "customer.isDueDiligenceCompleted",
+          "lineNumber": 75
+        },
+        {
+          "caller": "performDueDiligence",
+          "callee": "new IllegalStateException",
+          "lineNumber": 76
+        },
+        {
+          "caller": "performDueDiligence",
+          "callee": "customer.completeDueDiligence",
+          "lineNumber": 78
+        },
+        {
+          "caller": "performDueDiligence",
+          "callee": "customerRepository.save",
+          "lineNumber": 79
+        },
+        {
+          "caller": "performDueDiligence",
+          "callee": "log.info",
+          "lineNumber": 81
+        },
+        {
+          "caller": "performDueDiligence",
+          "callee": "customer.getId",
+          "lineNumber": 81
+        },
+        {
+          "caller": "generateCustomerNo",
+          "callee": "LocalDateTime.now().format",
+          "lineNumber": 85
+        },
+        {
+          "caller": "generateCustomerNo",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 85
+        },
+        {
+          "caller": "generateCustomerNo",
+          "callee": "DateTimeFormatter.ofPattern",
+          "lineNumber": 85
+        },
+        {
+          "caller": "generateCustomerNo",
+          "callee": "ThreadLocalRandom.current().nextInt",
+          "lineNumber": 86
+        },
+        {
+          "caller": "generateCustomerNo",
+          "callee": "ThreadLocalRandom.current",
+          "lineNumber": 86
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-customer/src/test/java/com/forex/customer/domain/service/CustomerDomainServiceTest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 118,
+      "nonEmptyLines": 95,
+      "functions": [
+        {
+          "name": "setUp",
+          "startLine": 37,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "createRegInfo",
+          "startLine": 42,
+          "endLine": 47,
+          "params": []
+        },
+        {
+          "name": "testCreateCustomer",
+          "startLine": 49,
+          "endLine": 62,
+          "params": []
+        },
+        {
+          "name": "testUpdateRiskLevel",
+          "startLine": 64,
+          "endLine": 76,
+          "params": []
+        },
+        {
+          "name": "setUp",
+          "startLine": 86,
+          "endLine": 89,
+          "params": []
+        },
+        {
+          "name": "testCheckCreditAvailability_Sufficient",
+          "startLine": 91,
+          "endLine": 103,
+          "params": []
+        },
+        {
+          "name": "testCheckCreditAvailability_Insufficient",
+          "startLine": 105,
+          "endLine": 117,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CustomerDomainServiceTest",
+          "startLine": 28,
+          "endLine": 77,
+          "methods": [
+            "setUp",
+            "createRegInfo",
+            "testCreateCustomer",
+            "testUpdateRiskLevel"
+          ],
+          "properties": [
+            "customerRepository",
+            "eventPublisher",
+            "createdCaptor",
+            "customerDomainService"
+          ]
+        },
+        {
+          "name": "CreditCheckDomainServiceTest",
+          "startLine": 79,
+          "endLine": 118,
+          "methods": [
+            "setUp",
+            "testCheckCreditAvailability_Sufficient",
+            "testCheckCreditAvailability_Insufficient"
+          ],
+          "properties": [
+            "creditLimitRepository",
+            "creditCheckService"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "setUp",
+          "callee": "new CustomerDomainService",
+          "lineNumber": 39
+        },
+        {
+          "caller": "createRegInfo",
+          "callee": "new CustomerRegInfo",
+          "lineNumber": 43
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "createRegInfo",
+          "lineNumber": 52
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "when(customerRepository.existsByCertNo(anyString(), anyString())).thenReturn",
+          "lineNumber": 53
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "when",
+          "lineNumber": 53
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "customerRepository.existsByCertNo",
+          "lineNumber": 53
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "anyString",
+          "lineNumber": 53
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "anyString",
+          "lineNumber": 53
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "when(customerRepository.save(any())).thenAnswer",
+          "lineNumber": 54
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "when",
+          "lineNumber": 54
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "customerRepository.save",
+          "lineNumber": 54
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "any",
+          "lineNumber": 54
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "i.getArgument",
+          "lineNumber": 54
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "customerDomainService.createCustomer",
+          "lineNumber": 56
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "assertNotNull",
+          "lineNumber": 58
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "assertTrue",
+          "lineNumber": 59
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "result.getCustomerNo().startsWith",
+          "lineNumber": 59
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "result.getCustomerNo",
+          "lineNumber": 59
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "verify(eventPublisher).publishEvent",
+          "lineNumber": 60
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "verify",
+          "lineNumber": 60
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "createdCaptor.capture",
+          "lineNumber": 60
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "assertEquals",
+          "lineNumber": 61
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "createdCaptor.getValue().getCustomerName",
+          "lineNumber": 61
+        },
+        {
+          "caller": "testCreateCustomer",
+          "callee": "createdCaptor.getValue",
+          "lineNumber": 61
+        },
+        {
+          "caller": "testUpdateRiskLevel",
+          "callee": "Customer.create",
+          "lineNumber": 67
+        },
+        {
+          "caller": "testUpdateRiskLevel",
+          "callee": "when(customerRepository.save(any())).thenReturn",
+          "lineNumber": 70
+        },
+        {
+          "caller": "testUpdateRiskLevel",
+          "callee": "when",
+          "lineNumber": 70
+        },
+        {
+          "caller": "testUpdateRiskLevel",
+          "callee": "customerRepository.save",
+          "lineNumber": 70
+        },
+        {
+          "caller": "testUpdateRiskLevel",
+          "callee": "any",
+          "lineNumber": 70
+        },
+        {
+          "caller": "testUpdateRiskLevel",
+          "callee": "customerDomainService.updateRiskLevel",
+          "lineNumber": 72
+        },
+        {
+          "caller": "testUpdateRiskLevel",
+          "callee": "assertEquals",
+          "lineNumber": 74
+        },
+        {
+          "caller": "testUpdateRiskLevel",
+          "callee": "customer.getRiskLevel",
+          "lineNumber": 74
+        },
+        {
+          "caller": "testUpdateRiskLevel",
+          "callee": "verify(customerRepository).save",
+          "lineNumber": 75
+        },
+        {
+          "caller": "testUpdateRiskLevel",
+          "callee": "verify",
+          "lineNumber": 75
+        },
+        {
+          "caller": "setUp",
+          "callee": "new CreditCheckDomainService",
+          "lineNumber": 88
+        },
+        {
+          "caller": "testCheckCreditAvailability_Sufficient",
+          "callee": "new CreditLimit",
+          "lineNumber": 94
+        },
+        {
+          "caller": "testCheckCreditAvailability_Sufficient",
+          "callee": "new BigDecimal",
+          "lineNumber": 95
+        },
+        {
+          "caller": "testCheckCreditAvailability_Sufficient",
+          "callee": "new BigDecimal",
+          "lineNumber": 95
+        },
+        {
+          "caller": "testCheckCreditAvailability_Sufficient",
+          "callee": "new BigDecimal",
+          "lineNumber": 96
+        },
+        {
+          "caller": "testCheckCreditAvailability_Sufficient",
+          "callee": "LocalDate.now",
+          "lineNumber": 97
+        },
+        {
+          "caller": "testCheckCreditAvailability_Sufficient",
+          "callee": "LocalDate.now().plusYears",
+          "lineNumber": 97
+        },
+        {
+          "caller": "testCheckCreditAvailability_Sufficient",
+          "callee": "LocalDate.now",
+          "lineNumber": 97
+        },
+        {
+          "caller": "testCheckCreditAvailability_Sufficient",
+          "callee": "when(creditLimitRepository.findByCustomerAndType(1001L, \"TRADE\", \"USD\")).thenReturn",
+          "lineNumber": 98
+        },
+        {
+          "caller": "testCheckCreditAvailability_Sufficient",
+          "callee": "when",
+          "lineNumber": 98
+        },
+        {
+          "caller": "testCheckCreditAvailability_Sufficient",
+          "callee": "creditLimitRepository.findByCustomerAndType",
+          "lineNumber": 98
+        },
+        {
+          "caller": "testCheckCreditAvailability_Sufficient",
+          "callee": "Optional.of",
+          "lineNumber": 99
+        },
+        {
+          "caller": "testCheckCreditAvailability_Sufficient",
+          "callee": "assertTrue",
+          "lineNumber": 101
+        },
+        {
+          "caller": "testCheckCreditAvailability_Sufficient",
+          "callee": "creditCheckService.checkCreditAvailability",
+          "lineNumber": 101
+        },
+        {
+          "caller": "testCheckCreditAvailability_Sufficient",
+          "callee": "new BigDecimal",
+          "lineNumber": 102
+        },
+        {
+          "caller": "testCheckCreditAvailability_Insufficient",
+          "callee": "new CreditLimit",
+          "lineNumber": 108
+        },
+        {
+          "caller": "testCheckCreditAvailability_Insufficient",
+          "callee": "new BigDecimal",
+          "lineNumber": 109
+        },
+        {
+          "caller": "testCheckCreditAvailability_Insufficient",
+          "callee": "new BigDecimal",
+          "lineNumber": 109
+        },
+        {
+          "caller": "testCheckCreditAvailability_Insufficient",
+          "callee": "new BigDecimal",
+          "lineNumber": 110
+        },
+        {
+          "caller": "testCheckCreditAvailability_Insufficient",
+          "callee": "LocalDate.now",
+          "lineNumber": 111
+        },
+        {
+          "caller": "testCheckCreditAvailability_Insufficient",
+          "callee": "LocalDate.now().plusYears",
+          "lineNumber": 111
+        },
+        {
+          "caller": "testCheckCreditAvailability_Insufficient",
+          "callee": "LocalDate.now",
+          "lineNumber": 111
+        },
+        {
+          "caller": "testCheckCreditAvailability_Insufficient",
+          "callee": "when(creditLimitRepository.findByCustomerAndType(1001L, \"TRADE\", \"USD\")).thenReturn",
+          "lineNumber": 112
+        },
+        {
+          "caller": "testCheckCreditAvailability_Insufficient",
+          "callee": "when",
+          "lineNumber": 112
+        },
+        {
+          "caller": "testCheckCreditAvailability_Insufficient",
+          "callee": "creditLimitRepository.findByCustomerAndType",
+          "lineNumber": 112
+        },
+        {
+          "caller": "testCheckCreditAvailability_Insufficient",
+          "callee": "Optional.of",
+          "lineNumber": 113
+        },
+        {
+          "caller": "testCheckCreditAvailability_Insufficient",
+          "callee": "assertFalse",
+          "lineNumber": 115
+        },
+        {
+          "caller": "testCheckCreditAvailability_Insufficient",
+          "callee": "creditCheckService.checkCreditAvailability",
+          "lineNumber": 115
+        },
+        {
+          "caller": "testCheckCreditAvailability_Insufficient",
+          "callee": "new BigDecimal",
+          "lineNumber": 116
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 0,
+        "functionCount": 7,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 250,
+      "nonEmptyLines": 232,
+      "functions": [
+        {
+          "name": "ExchangeOrder",
+          "startLine": 59,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 67,
+          "endLine": 82,
+          "params": [
+            "customerId",
+            "orderType",
+            "dealType",
+            "baseCurrency",
+            "quoteCurrency",
+            "orderAmount",
+            "channel"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 88,
+          "endLine": 128,
+          "params": [
+            "id",
+            "orderNo",
+            "customerId",
+            "orderType",
+            "dealType",
+            "baseCurrency",
+            "quoteCurrency",
+            "orderAmount",
+            "settleAmount",
+            "bidRate",
+            "askRate",
+            "confirmedRate",
+            "rateType",
+            "lockRateTime",
+            "lockRateExpireTime",
+            "valueDate",
+            "maturityDate",
+            "orderStatus",
+            "customerAccountNo",
+            "bankAccountNo",
+            "feeAmount",
+            "commissionAmount",
+            "settlementType",
+            "channel",
+            "operatorId",
+            "remark"
+          ]
+        },
+        {
+          "name": "confirm",
+          "startLine": 134,
+          "endLine": 139,
+          "params": [
+            "rate"
+          ]
+        },
+        {
+          "name": "lockRate",
+          "startLine": 145,
+          "endLine": 151,
+          "params": [
+            "rate",
+            "lockSeconds"
+          ]
+        },
+        {
+          "name": "assignRate",
+          "startLine": 156,
+          "endLine": 160,
+          "params": [
+            "bidRate",
+            "askRate",
+            "rateType"
+          ]
+        },
+        {
+          "name": "assignDates",
+          "startLine": 165,
+          "endLine": 168,
+          "params": [
+            "valueDate",
+            "maturityDate"
+          ]
+        },
+        {
+          "name": "assignAccountInfo",
+          "startLine": 173,
+          "endLine": 179,
+          "params": [
+            "customerAccountNo",
+            "feeAmount",
+            "commissionAmount",
+            "settlementType"
+          ]
+        },
+        {
+          "name": "assignRemark",
+          "startLine": 184,
+          "endLine": 186,
+          "params": [
+            "remark"
+          ]
+        },
+        {
+          "name": "cancel",
+          "startLine": 192,
+          "endLine": 199,
+          "params": [
+            "reason"
+          ]
+        },
+        {
+          "name": "markReversed",
+          "startLine": 204,
+          "endLine": 210,
+          "params": []
+        },
+        {
+          "name": "calculateSettleAmount",
+          "startLine": 212,
+          "endLine": 217,
+          "params": []
+        },
+        {
+          "name": "isRateExpired",
+          "startLine": 222,
+          "endLine": 227,
+          "params": []
+        },
+        {
+          "name": "validate",
+          "startLine": 229,
+          "endLine": 249,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ExchangeOrder",
+          "startLine": 18,
+          "endLine": 250,
+          "methods": [
+            "ExchangeOrder",
+            "create",
+            "reconstitute",
+            "confirm",
+            "lockRate",
+            "assignRate",
+            "assignDates",
+            "assignAccountInfo",
+            "assignRemark",
+            "cancel",
+            "markReversed",
+            "calculateSettleAmount",
+            "isRateExpired",
+            "validate"
+          ],
+          "properties": [
+            "id",
+            "orderNo",
+            "customerId",
+            "orderType",
+            "dealType",
+            "baseCurrency",
+            "quoteCurrency",
+            "orderAmount",
+            "settleAmount",
+            "bidRate",
+            "askRate",
+            "confirmedRate",
+            "rateType",
+            "lockRateTime",
+            "lockRateExpireTime",
+            "valueDate",
+            "maturityDate",
+            "orderStatus",
+            "customerAccountNo",
+            "bankAccountNo",
+            "feeAmount",
+            "commissionAmount",
+            "settlementType",
+            "channel",
+            "operatorId",
+            "remark"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "confirm",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "lockRate",
+          "line": 145,
+          "isDefault": false
+        },
+        {
+          "name": "assignRate",
+          "line": 156,
+          "isDefault": false
+        },
+        {
+          "name": "assignDates",
+          "line": 165,
+          "isDefault": false
+        },
+        {
+          "name": "assignAccountInfo",
+          "line": 173,
+          "isDefault": false
+        },
+        {
+          "name": "assignRemark",
+          "line": 184,
+          "isDefault": false
+        },
+        {
+          "name": "cancel",
+          "line": 192,
+          "isDefault": false
+        },
+        {
+          "name": "markReversed",
+          "line": 204,
+          "isDefault": false
+        },
+        {
+          "name": "calculateSettleAmount",
+          "line": 212,
+          "isDefault": false
+        },
+        {
+          "name": "isRateExpired",
+          "line": 222,
+          "isDefault": false
+        },
+        {
+          "name": "ExchangeOrder",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new ExchangeOrder",
+          "lineNumber": 70
+        },
+        {
+          "caller": "create",
+          "callee": "OrderNo.generate(\"EX\").getValue",
+          "lineNumber": 71
+        },
+        {
+          "caller": "create",
+          "callee": "OrderNo.generate",
+          "lineNumber": 71
+        },
+        {
+          "caller": "create",
+          "callee": "order.validate",
+          "lineNumber": 80
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new ExchangeOrder",
+          "lineNumber": 100
+        },
+        {
+          "caller": "confirm",
+          "callee": "calculateSettleAmount",
+          "lineNumber": 137
+        },
+        {
+          "caller": "confirm",
+          "callee": "markUpdated",
+          "lineNumber": 138
+        },
+        {
+          "caller": "lockRate",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 147
+        },
+        {
+          "caller": "lockRate",
+          "callee": "LocalDateTime.now().plusSeconds",
+          "lineNumber": 148
+        },
+        {
+          "caller": "lockRate",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 148
+        },
+        {
+          "caller": "lockRate",
+          "callee": "markUpdated",
+          "lineNumber": 150
+        },
+        {
+          "caller": "cancel",
+          "callee": "\"PENDING\".equals",
+          "lineNumber": 193
+        },
+        {
+          "caller": "cancel",
+          "callee": "new BusinessException",
+          "lineNumber": 194
+        },
+        {
+          "caller": "cancel",
+          "callee": "markUpdated",
+          "lineNumber": 198
+        },
+        {
+          "caller": "markReversed",
+          "callee": "\"SUCCESS\".equals",
+          "lineNumber": 205
+        },
+        {
+          "caller": "markReversed",
+          "callee": "\"CONFIRMED\".equals",
+          "lineNumber": 205
+        },
+        {
+          "caller": "markReversed",
+          "callee": "new BusinessException",
+          "lineNumber": 206
+        },
+        {
+          "caller": "markReversed",
+          "callee": "markUpdated",
+          "lineNumber": 209
+        },
+        {
+          "caller": "calculateSettleAmount",
+          "callee": "orderAmount.multiply",
+          "lineNumber": 216
+        },
+        {
+          "caller": "isRateExpired",
+          "callee": "LocalDateTime.now().isAfter",
+          "lineNumber": 226
+        },
+        {
+          "caller": "isRateExpired",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 226
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 232
+        },
+        {
+          "caller": "validate",
+          "callee": "orderType.isBlank",
+          "lineNumber": 234
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 235
+        },
+        {
+          "caller": "validate",
+          "callee": "dealType.isBlank",
+          "lineNumber": 237
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 238
+        },
+        {
+          "caller": "validate",
+          "callee": "baseCurrency.isBlank",
+          "lineNumber": 240
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 241
+        },
+        {
+          "caller": "validate",
+          "callee": "quoteCurrency.isBlank",
+          "lineNumber": 243
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 244
+        },
+        {
+          "caller": "validate",
+          "callee": "orderAmount.compareTo",
+          "lineNumber": 246
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 247
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 13,
+        "functionCount": 14,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/CurrencyPair.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 29,
+      "functions": [
+        {
+          "name": "CurrencyPair",
+          "startLine": 14,
+          "endLine": 17,
+          "params": [
+            "base",
+            "quote"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 19,
+          "endLine": 21,
+          "params": [
+            "base",
+            "quote"
+          ]
+        },
+        {
+          "name": "symbol",
+          "startLine": 23,
+          "endLine": 25,
+          "params": []
+        },
+        {
+          "name": "equals",
+          "startLine": 27,
+          "endLine": 32,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 34,
+          "endLine": 37,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CurrencyPair",
+          "startLine": 8,
+          "endLine": 38,
+          "methods": [
+            "CurrencyPair",
+            "of",
+            "symbol",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "base",
+            "quote"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "symbol",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "CurrencyPair",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "of",
+          "callee": "new CurrencyPair",
+          "lineNumber": 20
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 31
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 31
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 61,
+      "nonEmptyLines": 48,
+      "functions": [
+        {
+          "name": "Money",
+          "startLine": 17,
+          "endLine": 20,
+          "params": [
+            "amount",
+            "currency"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 22,
+          "endLine": 24,
+          "params": [
+            "amount",
+            "currency"
+          ]
+        },
+        {
+          "name": "zero",
+          "startLine": 26,
+          "endLine": 28,
+          "params": [
+            "currency"
+          ]
+        },
+        {
+          "name": "add",
+          "startLine": 30,
+          "endLine": 33,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "subtract",
+          "startLine": 35,
+          "endLine": 38,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "multiply",
+          "startLine": 40,
+          "endLine": 42,
+          "params": [
+            "factor"
+          ]
+        },
+        {
+          "name": "assertSameCurrency",
+          "startLine": 44,
+          "endLine": 48,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 50,
+          "endLine": 55,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 57,
+          "endLine": 60,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "Money",
+          "startLine": 11,
+          "endLine": 61,
+          "methods": [
+            "Money",
+            "of",
+            "zero",
+            "add",
+            "subtract",
+            "multiply",
+            "assertSameCurrency",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "amount",
+            "currency"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "zero",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "add",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "subtract",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "multiply",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "Money",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "of",
+          "callee": "new Money",
+          "lineNumber": 23
+        },
+        {
+          "caller": "zero",
+          "callee": "new Money",
+          "lineNumber": 27
+        },
+        {
+          "caller": "add",
+          "callee": "assertSameCurrency",
+          "lineNumber": 31
+        },
+        {
+          "caller": "add",
+          "callee": "new Money",
+          "lineNumber": 32
+        },
+        {
+          "caller": "add",
+          "callee": "this.amount.add",
+          "lineNumber": 32
+        },
+        {
+          "caller": "subtract",
+          "callee": "assertSameCurrency",
+          "lineNumber": 36
+        },
+        {
+          "caller": "subtract",
+          "callee": "new Money",
+          "lineNumber": 37
+        },
+        {
+          "caller": "subtract",
+          "callee": "this.amount.subtract",
+          "lineNumber": 37
+        },
+        {
+          "caller": "multiply",
+          "callee": "new Money",
+          "lineNumber": 41
+        },
+        {
+          "caller": "multiply",
+          "callee": "this.amount.multiply",
+          "lineNumber": 41
+        },
+        {
+          "caller": "assertSameCurrency",
+          "callee": "this.currency.equals",
+          "lineNumber": 45
+        },
+        {
+          "caller": "assertSameCurrency",
+          "callee": "new BusinessException",
+          "lineNumber": 46
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 54
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 54
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 59
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 8,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/OrderNo.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 29,
+      "functions": [
+        {
+          "name": "OrderNo",
+          "startLine": 16,
+          "endLine": 18,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "generate",
+          "startLine": 20,
+          "endLine": 24,
+          "params": [
+            "prefix"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 26,
+          "endLine": 31,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 33,
+          "endLine": 36,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "OrderNo",
+          "startLine": 11,
+          "endLine": 37,
+          "methods": [
+            "OrderNo",
+            "generate",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "generate",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "OrderNo",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "generate",
+          "callee": "LocalDateTime.now().format",
+          "lineNumber": 21
+        },
+        {
+          "caller": "generate",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 21
+        },
+        {
+          "caller": "generate",
+          "callee": "DateTimeFormatter.ofPattern",
+          "lineNumber": 21
+        },
+        {
+          "caller": "generate",
+          "callee": "String.format",
+          "lineNumber": 22
+        },
+        {
+          "caller": "generate",
+          "callee": "ThreadLocalRandom.current().nextInt",
+          "lineNumber": 22
+        },
+        {
+          "caller": "generate",
+          "callee": "ThreadLocalRandom.current",
+          "lineNumber": 22
+        },
+        {
+          "caller": "generate",
+          "callee": "new OrderNo",
+          "lineNumber": 23
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 30
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/adapter/controller/LimitController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 54,
+      "nonEmptyLines": 46,
+      "functions": [
+        {
+          "name": "createLimit",
+          "startLine": 24,
+          "endLine": 29,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "approveLimit",
+          "startLine": 31,
+          "endLine": 37,
+          "params": [
+            "limitNo"
+          ]
+        },
+        {
+          "name": "checkLimit",
+          "startLine": 39,
+          "endLine": 47,
+          "params": [
+            "customerId",
+            "limitType",
+            "dimension",
+            "dimensionValue",
+            "amount"
+          ]
+        },
+        {
+          "name": "getCustomerLimits",
+          "startLine": 49,
+          "endLine": 53,
+          "params": [
+            "customerId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "LimitController",
+          "startLine": 16,
+          "endLine": 54,
+          "methods": [
+            "createLimit",
+            "approveLimit",
+            "checkLimit",
+            "getCustomerLimits"
+          ],
+          "properties": [
+            "limitAppService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createLimit",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "approveLimit",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "checkLimit",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "getCustomerLimits",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "LimitController",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createLimit",
+          "callee": "R.ok",
+          "lineNumber": 28
+        },
+        {
+          "caller": "createLimit",
+          "callee": "limitAppService.createLimit",
+          "lineNumber": 28
+        },
+        {
+          "caller": "approveLimit",
+          "callee": "limitAppService.approveLimit",
+          "lineNumber": 35
+        },
+        {
+          "caller": "approveLimit",
+          "callee": "R.ok",
+          "lineNumber": 36
+        },
+        {
+          "caller": "checkLimit",
+          "callee": "R.ok",
+          "lineNumber": 46
+        },
+        {
+          "caller": "checkLimit",
+          "callee": "limitAppService.checkLimit",
+          "lineNumber": 46
+        },
+        {
+          "caller": "getCustomerLimits",
+          "callee": "R.ok",
+          "lineNumber": 52
+        },
+        {
+          "caller": "getCustomerLimits",
+          "callee": "limitAppService.getCustomerLimits",
+          "lineNumber": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/application/command/CreateLimitCmd.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 17,
+      "classes": [
+        {
+          "name": "CreateLimitCmd",
+          "startLine": 9,
+          "endLine": 20,
+          "methods": [],
+          "properties": [
+            "customerId",
+            "limitType",
+            "dimension",
+            "dimensionValue",
+            "limitAmount",
+            "currency",
+            "limitPeriod",
+            "effectiveDate",
+            "expiryDate"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CreateLimitCmd",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

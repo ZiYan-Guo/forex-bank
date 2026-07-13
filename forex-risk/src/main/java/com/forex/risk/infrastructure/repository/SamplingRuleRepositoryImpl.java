@@ -57,6 +57,13 @@ public class SamplingRuleRepositoryImpl implements SamplingRuleRepository {
     }
 
     @Override
+    public List<SamplingRule> findAll() {
+        return samplingRuleMapper.selectAllRules().stream()
+                .map(this::toDomain)
+                .toList();
+    }
+
+    @Override
     public void deleteById(Long id) {
         samplingRuleMapper.deleteById(id);
     }

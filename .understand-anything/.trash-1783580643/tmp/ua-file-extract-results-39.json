@@ -1,0 +1,1157 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "docker/docker-compose.yml",
+      "language": "yaml",
+      "fileCategory": "infra",
+      "totalLines": 128,
+      "nonEmptyLines": 120,
+      "sections": [
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "services",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "volumes",
+          "level": 1,
+          "line": 122
+        },
+        {
+          "heading": "networks",
+          "level": 1,
+          "line": 126
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "docker/nacos/conf/application.properties",
+      "language": "properties",
+      "fileCategory": "config",
+      "totalLines": 7,
+      "nonEmptyLines": 7,
+      "metrics": {}
+    },
+    {
+      "path": "forex-account/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 55,
+      "nonEmptyLines": 55,
+      "metrics": {}
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AccountApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "AccountApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/BalanceSnapshotMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "BalanceSnapshotMapper",
+          "startLine": 13,
+          "endLine": 15,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "BalanceSnapshotMapper",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 19,
+      "classes": [
+        {
+          "name": "BalanceSnapshotPO",
+          "startLine": 13,
+          "endLine": 26,
+          "methods": [],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "accountId",
+            "accountNo",
+            "balance",
+            "snapshotDate"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "BalanceSnapshotPO",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-account/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 45,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "forex-ai/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 57,
+      "nonEmptyLines": 55,
+      "metrics": {}
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "DocumentAuditResp",
+          "startLine": 8,
+          "endLine": 23,
+          "methods": [],
+          "properties": [
+            "auditId",
+            "isConsistent",
+            "discrepancies",
+            "opinion"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DocumentAuditResp",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 39,
+      "nonEmptyLines": 27,
+      "classes": [
+        {
+          "name": "RatePredictionResp",
+          "startLine": 9,
+          "endLine": 39,
+          "methods": [],
+          "properties": [
+            "currencyPair",
+            "predType",
+            "currentRate",
+            "predictedRate",
+            "lowerBound",
+            "upperBound",
+            "confidence",
+            "trend",
+            "predictionTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RatePredictionResp",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AiApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "AiApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 19,
+      "functions": [
+        {
+          "name": "isFinalAnswer",
+          "startLine": 17,
+          "endLine": 19,
+          "params": []
+        },
+        {
+          "name": "requiresTool",
+          "startLine": 21,
+          "endLine": 23,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "AgentAction",
+          "startLine": 8,
+          "endLine": 24,
+          "methods": [
+            "isFinalAnswer",
+            "requiresTool"
+          ],
+          "properties": [
+            "thought",
+            "tool",
+            "parameters",
+            "observation",
+            "finalAnswer"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "isFinalAnswer",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "requiresTool",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "AgentAction",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "isFinalAnswer",
+          "callee": "finalAnswer.isBlank",
+          "lineNumber": 18
+        },
+        {
+          "caller": "requiresTool",
+          "callee": "tool.isBlank",
+          "lineNumber": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 91,
+      "nonEmptyLines": 80,
+      "functions": [
+        {
+          "name": "processNaturalLanguageTrade",
+          "startLine": 13,
+          "endLine": 40,
+          "params": [
+            "userInput"
+          ]
+        },
+        {
+          "name": "recommendHedging",
+          "startLine": 42,
+          "endLine": 69,
+          "params": [
+            "customerId",
+            "businessType",
+            "riskPreference"
+          ]
+        },
+        {
+          "name": "generateRiskReport",
+          "startLine": 71,
+          "endLine": 90,
+          "params": [
+            "customerId",
+            "period"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TradingAssistant",
+          "startLine": 9,
+          "endLine": 91,
+          "methods": [
+            "processNaturalLanguageTrade",
+            "recommendHedging",
+            "generateRiskReport"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "processNaturalLanguageTrade",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "recommendHedging",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "generateRiskReport",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "TradingAssistant",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "log.info",
+          "lineNumber": 14
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "userInput.isBlank",
+          "lineNumber": 15
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "new StringBuilder",
+          "lineNumber": 18
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append",
+          "lineNumber": 19
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "userInput.toLowerCase",
+          "lineNumber": 21
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 22
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 22
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append",
+          "lineNumber": 23
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 24
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 24
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append",
+          "lineNumber": 25
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 27
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 27
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append",
+          "lineNumber": 28
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 30
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 30
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append",
+          "lineNumber": 31
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 33
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 33
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append",
+          "lineNumber": 34
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 35
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "lower.contains",
+          "lineNumber": 35
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append",
+          "lineNumber": 36
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append(\"- 原始输入: \").append",
+          "lineNumber": 38
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.append",
+          "lineNumber": 38
+        },
+        {
+          "caller": "processNaturalLanguageTrade",
+          "callee": "result.toString",
+          "lineNumber": 39
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "log.info",
+          "lineNumber": 43
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "new StringBuilder",
+          "lineNumber": 45
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append(\"套期保值建议 (客户: \").append(customerId).append",
+          "lineNumber": 46
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append(\"套期保值建议 (客户: \").append",
+          "lineNumber": 46
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 46
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 50
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 51
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 52
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 55
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 56
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 57
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "\"HIGH\".equalsIgnoreCase",
+          "lineNumber": 60
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 61
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 63
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.append",
+          "lineNumber": 66
+        },
+        {
+          "caller": "recommendHedging",
+          "callee": "rec.toString",
+          "lineNumber": 68
+        },
+        {
+          "caller": "generateRiskReport",
+          "callee": "log.info",
+          "lineNumber": 72
+        },
+        {
+          "caller": "generateRiskReport",
+          "callee": "LocalDate.now",
+          "lineNumber": 73
+        },
+        {
+          "caller": "generateRiskReport",
+          "callee": "\"\"\"\n                ## 外汇风险报告\n                **客户ID:** %d\n                **报告周期:** %s\n                **生成日期:** %s\n                \n                ### 风险评估\n                - 汇率风险: 中等\n                - 利率风险: 低\n                - 操作风险: 低\n                \n                ### 建议\n                1. 关注美元/人民币汇率波动\n                2. 评估远期敞口对冲比例\n                3. 定期审查交易对手信用风险\n                \"\"\".formatted",
+          "lineNumber": 74
+        },
+        {
+          "caller": "generateRiskReport",
+          "callee": "now.toString",
+          "lineNumber": 89
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 20,
+      "functions": [
+        {
+          "name": "aiRestTemplate",
+          "startLine": 18,
+          "endLine": 22,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SpringAiConfig",
+          "startLine": 14,
+          "endLine": 23,
+          "methods": [
+            "aiRestTemplate"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "aiRestTemplate",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "SpringAiConfig",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "aiRestTemplate",
+          "callee": "log.info",
+          "lineNumber": 20
+        },
+        {
+          "caller": "aiRestTemplate",
+          "callee": "new RestTemplate",
+          "lineNumber": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 71,
+      "nonEmptyLines": 67,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "forex",
+          "level": 1,
+          "line": 36
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 59
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 68
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/faq/lc_process_faq.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 50,
+      "nonEmptyLines": 35,
+      "sections": [
+        {
+          "heading": "国际信用证办理流程",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. 申请人提交开证申请书",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "2. 银行审核贸易背景真实性",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "3. 开立SWIFT MT700报文",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "4. 通知行通知受益人",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "5. 受益人发货并交单",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "6. 银行审核单据后付款",
+          "level": 2,
+          "line": 37
+        },
+        {
+          "heading": "7. 常见问题",
+          "level": 2,
+          "line": 44
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/faq/spot_forex_faq.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 30,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "即期结售汇常见问题",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. 企业办理即期结售汇需要提供哪些材料？",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "2. 结售汇交易时间是什么时候？",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "3. 结售汇有金额限制吗？",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "4. 即期结售汇的汇率如何确定？",
+          "level": 2,
+          "line": 20
+        },
+        {
+          "heading": "5. 结售汇资金何时到账？",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "6. 个人是否可以办理结售汇？",
+          "level": 2,
+          "line": 28
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/policy/aml_regulation.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 41,
+      "nonEmptyLines": 31,
+      "sections": [
+        {
+          "heading": "反洗钱法规要点",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. 大额交易报告义务",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "2. 可疑交易报告义务",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "3. 客户身份识别制度",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "4. 反洗钱内控制度",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "5. 国际制裁合规",
+          "level": 2,
+          "line": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/policy/forex_administration.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 31,
+      "nonEmptyLines": 23,
+      "sections": [
+        {
+          "heading": "银行外汇展业管理办法要点",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. 事前客户尽调与合规风险分类",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "2. 事中差异化交易控制",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "3. 事后交易监测与风险报告",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "4. 外汇业务合规管理要求",
+          "level": 2,
+          "line": 26
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "forex-auth/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 63,
+      "nonEmptyLines": 59,
+      "metrics": {}
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 13,
+          "endLine": 15,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthApplication",
+          "startLine": 8,
+          "endLine": 16,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "AuthApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 14
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-auth/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 57,
+      "nonEmptyLines": 52,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 36
+        },
+        {
+          "heading": "forex",
+          "level": 1,
+          "line": 46
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 50
+        },
+        {
+          "heading": "logging",
+          "level": 1,
+          "line": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "forex-bank-web/src/components/layout/MainLayout.vue",
+      "language": "vue",
+      "fileCategory": "code",
+      "totalLines": 118,
+      "nonEmptyLines": 112,
+      "metrics": {}
+    },
+    {
+      "path": "forex-bank-web/src/env.d.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 7,
+      "nonEmptyLines": 6,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "forex-bank-web/src/views/account/AccountList.vue",
+      "language": "vue",
+      "fileCategory": "code",
+      "totalLines": 176,
+      "nonEmptyLines": 156,
+      "metrics": {}
+    }
+  ]
+}

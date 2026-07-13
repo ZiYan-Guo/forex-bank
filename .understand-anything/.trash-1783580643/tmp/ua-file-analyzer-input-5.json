@@ -1,0 +1,332 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java",
+      "sizeLines": 12,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java",
+      "sizeLines": 15,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java",
+      "sizeLines": 14,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java",
+      "sizeLines": 15,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java",
+      "sizeLines": 15,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "sizeLines": 17,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "sizeLines": 99,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "sizeLines": 98,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "sizeLines": 81,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "sizeLines": 65,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "sizeLines": 91,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "sizeLines": 46,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "sizeLines": 23,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java",
+      "sizeLines": 16,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java",
+      "sizeLines": 19,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java",
+      "sizeLines": 17,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java",
+      "sizeLines": 19,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java",
+      "sizeLines": 19,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatMessagePO.java",
+      "sizeLines": 24,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatSessionPO.java",
+      "sizeLines": 19,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/DocumentAuditPO.java",
+      "sizeLines": 24,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RatePredictionPO.java",
+      "sizeLines": 26,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RiskAiAssessmentPO.java",
+      "sizeLines": 24,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "sizeLines": 67,
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "sizeLines": 48,
+      "language": "java",
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java": [
+      "import com.forex.ai.domain.model.aggregate.ChatMessage;",
+      "import java.util.List;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java": [
+      "import com.forex.ai.domain.model.aggregate.ChatSession;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java": [
+      "import com.forex.ai.domain.model.aggregate.DocumentAudit;",
+      "import java.util.Optional;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java": [
+      "import com.forex.ai.domain.model.aggregate.RatePrediction;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java": [
+      "import com.forex.ai.domain.model.aggregate.RiskAiAssessment;",
+      "import java.util.List;",
+      "import java.util.Optional;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java": [
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.stereotype.Service;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java": [
+      "import java.math.BigDecimal;",
+      "import java.math.RoundingMode;",
+      "import java.util.List;",
+      "import java.util.Objects;",
+      "import org.springframework.stereotype.Service;",
+      "import com.forex.ai.domain.model.aggregate.RiskAiAssessment;",
+      "import lombok.extern.slf4j.Slf4j;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java": [
+      "import java.math.BigDecimal;",
+      "import java.math.RoundingMode;",
+      "import java.util.Set;",
+      "import org.springframework.stereotype.Service;",
+      "import com.forex.ai.domain.model.aggregate.DocumentAudit;",
+      "import lombok.extern.slf4j.Slf4j;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java": [
+      "import java.math.BigDecimal;",
+      "import java.math.MathContext;",
+      "import java.math.RoundingMode;",
+      "import java.time.LocalDateTime;",
+      "import java.util.ArrayList;",
+      "import java.util.List;",
+      "import org.springframework.stereotype.Service;",
+      "import com.forex.ai.domain.model.aggregate.RatePrediction;",
+      "import lombok.extern.slf4j.Slf4j;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java": [
+      "import java.util.List;",
+      "import org.springframework.stereotype.Service;",
+      "import com.forex.ai.domain.model.aggregate.RiskAiAssessment;",
+      "import com.forex.ai.infrastructure.rag.KnowledgeBaseInitializer;",
+      "import lombok.RequiredArgsConstructor;",
+      "import lombok.extern.slf4j.Slf4j;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java": [
+      "import java.time.LocalDate;",
+      "import org.springframework.stereotype.Service;",
+      "import lombok.extern.slf4j.Slf4j;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java": [
+      "import lombok.Data;",
+      "import org.springframework.boot.context.properties.ConfigurationProperties;",
+      "import org.springframework.context.annotation.Configuration;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java": [
+      "import lombok.extern.slf4j.Slf4j;",
+      "import org.springframework.boot.context.properties.ConfigurationProperties;",
+      "import org.springframework.context.annotation.Bean;",
+      "import org.springframework.context.annotation.Configuration;",
+      "import org.springframework.web.client.RestTemplate;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java": [
+      "import com.baomidou.mybatisplus.core.mapper.BaseMapper;",
+      "import com.forex.ai.infrastructure.persistence.ChatMessagePO;",
+      "import org.apache.ibatis.annotations.Mapper;",
+      "import org.apache.ibatis.annotations.Param;",
+      "import org.apache.ibatis.annotations.Select;",
+      "import java.util.List;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java": [
+      "import com.forex.common.mybatis.base.BaseMapperExt;",
+      "import com.forex.ai.infrastructure.persistence.ChatSessionPO;",
+      "import org.apache.ibatis.annotations.Mapper;",
+      "import org.apache.ibatis.annotations.Param;",
+      "import org.apache.ibatis.annotations.Select;",
+      "import java.util.List;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java": [
+      "import com.forex.common.mybatis.base.BaseMapperExt;",
+      "import com.forex.ai.infrastructure.persistence.DocumentAuditPO;",
+      "import org.apache.ibatis.annotations.Mapper;",
+      "import org.apache.ibatis.annotations.Param;",
+      "import org.apache.ibatis.annotations.Select;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java": [
+      "import com.forex.common.mybatis.base.BaseMapperExt;",
+      "import com.forex.ai.infrastructure.persistence.RatePredictionPO;",
+      "import org.apache.ibatis.annotations.Mapper;",
+      "import org.apache.ibatis.annotations.Param;",
+      "import org.apache.ibatis.annotations.Select;",
+      "import java.util.List;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java": [
+      "import com.forex.common.mybatis.base.BaseMapperExt;",
+      "import com.forex.ai.infrastructure.persistence.RiskAiAssessmentPO;",
+      "import org.apache.ibatis.annotations.Mapper;",
+      "import org.apache.ibatis.annotations.Param;",
+      "import org.apache.ibatis.annotations.Select;",
+      "import java.util.List;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatMessagePO.java": [
+      "import com.baomidou.mybatisplus.annotation.IdType;",
+      "import com.baomidou.mybatisplus.annotation.TableId;",
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import lombok.Data;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatSessionPO.java": [
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import com.forex.common.mybatis.base.BasePO;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/DocumentAuditPO.java": [
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import com.forex.common.mybatis.base.BasePO;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;",
+      "import java.math.BigDecimal;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RatePredictionPO.java": [
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import com.forex.common.mybatis.base.BasePO;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;",
+      "import java.math.BigDecimal;",
+      "import java.time.LocalDateTime;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RiskAiAssessmentPO.java": [
+      "import com.baomidou.mybatisplus.annotation.TableName;",
+      "import com.forex.common.mybatis.base.BasePO;",
+      "import lombok.Data;",
+      "import lombok.EqualsAndHashCode;",
+      "import java.math.BigDecimal;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java": [
+      "import java.util.ArrayList;",
+      "import java.util.List;",
+      "import java.util.Map;",
+      "import java.util.concurrent.ConcurrentHashMap;",
+      "import org.springframework.boot.ApplicationArguments;",
+      "import org.springframework.boot.ApplicationRunner;",
+      "import org.springframework.stereotype.Component;",
+      "import lombok.extern.slf4j.Slf4j;"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java": [
+      "import com.forex.ai.domain.model.aggregate.ChatMessage;",
+      "import com.forex.ai.domain.repository.ChatMessageRepository;",
+      "import com.forex.ai.infrastructure.mapper.ChatMessageMapper;",
+      "import com.forex.ai.infrastructure.persistence.ChatMessagePO;",
+      "import lombok.RequiredArgsConstructor;",
+      "import org.springframework.stereotype.Repository;",
+      "import java.util.List;"
+    ]
+  }
+}

@@ -1,0 +1,2645 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java",
+      "type": "file",
+      "name": "AgentController.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java",
+      "summary": "AgentController.java 是 AI智能服务 模块中的REST 控制器，主要定义 AgentController，承担该业务域的分层协作职责。",
+      "tags": [
+        "api-handler",
+        "AI智能服务",
+        "java",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java:AgentController",
+      "type": "class",
+      "name": "AgentController",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java",
+      "lineRange": [
+        19,
+        52
+      ],
+      "summary": "AgentController 是 AI智能服务 模块的REST 控制器，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "api-handler",
+        "AI智能服务",
+        "java",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java:chat",
+      "type": "function",
+      "name": "chat",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java",
+      "lineRange": [
+        27,
+        51
+      ],
+      "summary": "chat 实现 AI智能服务 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "type": "file",
+      "name": "AiChatController.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "summary": "AiChatController.java 是 AI智能服务 模块中的REST 控制器，主要定义 AiChatController，承担该业务域的分层协作职责。",
+      "tags": [
+        "api-handler",
+        "AI智能服务",
+        "java",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:AiChatController",
+      "type": "class",
+      "name": "AiChatController",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "lineRange": [
+        22,
+        84
+      ],
+      "summary": "AiChatController 是 AI智能服务 模块的REST 控制器，封装 6 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "api-handler",
+        "AI智能服务",
+        "java",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:chatQuery",
+      "type": "function",
+      "name": "chatQuery",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "lineRange": [
+        30,
+        40
+      ],
+      "summary": "chatQuery 实现 AI智能服务 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:recommendHedging",
+      "type": "function",
+      "name": "recommendHedging",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "lineRange": [
+        42,
+        50
+      ],
+      "summary": "recommendHedging 实现 AI智能服务 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:nlTrade",
+      "type": "function",
+      "name": "nlTrade",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "lineRange": [
+        52,
+        58
+      ],
+      "summary": "nlTrade 实现 AI智能服务 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:generateReport",
+      "type": "function",
+      "name": "generateReport",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "lineRange": [
+        60,
+        68
+      ],
+      "summary": "generateReport 实现 AI智能服务 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:createSession",
+      "type": "function",
+      "name": "createSession",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "lineRange": [
+        70,
+        77
+      ],
+      "summary": "createSession 实现 AI智能服务 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:getMessages",
+      "type": "function",
+      "name": "getMessages",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "lineRange": [
+        79,
+        83
+      ],
+      "summary": "getMessages 实现 AI智能服务 模块中的关键处理步骤，参数包括 sessionId。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "type": "file",
+      "name": "AiDocumentController.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "summary": "AiDocumentController.java 是 AI智能服务 模块中的REST 控制器，主要定义 AiDocumentController，承担该业务域的分层协作职责。",
+      "tags": [
+        "api-handler",
+        "AI智能服务",
+        "java",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java:AiDocumentController",
+      "type": "class",
+      "name": "AiDocumentController",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "lineRange": [
+        16,
+        50
+      ],
+      "summary": "AiDocumentController 是 AI智能服务 模块的REST 控制器，封装 3 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "api-handler",
+        "AI智能服务",
+        "java",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java:ocrUpload",
+      "type": "function",
+      "name": "ocrUpload",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "lineRange": [
+        24,
+        31
+      ],
+      "summary": "ocrUpload 实现 AI智能服务 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java:auditCompare",
+      "type": "function",
+      "name": "auditCompare",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "lineRange": [
+        33,
+        41
+      ],
+      "summary": "auditCompare 实现 AI智能服务 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java:clearingCorrection",
+      "type": "function",
+      "name": "clearingCorrection",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "lineRange": [
+        43,
+        49
+      ],
+      "summary": "clearingCorrection 实现 AI智能服务 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "type": "file",
+      "name": "AiPredictionController.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "summary": "AiPredictionController.java 是 AI智能服务 模块中的REST 控制器，主要定义 AiPredictionController，承担该业务域的分层协作职责。",
+      "tags": [
+        "api-handler",
+        "AI智能服务",
+        "java",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:AiPredictionController",
+      "type": "class",
+      "name": "AiPredictionController",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "lineRange": [
+        18,
+        67
+      ],
+      "summary": "AiPredictionController 是 AI智能服务 模块的REST 控制器，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "api-handler",
+        "AI智能服务",
+        "java",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:predictRate",
+      "type": "function",
+      "name": "predictRate",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "lineRange": [
+        26,
+        43
+      ],
+      "summary": "predictRate 实现 AI智能服务 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:predictExposure",
+      "type": "function",
+      "name": "predictExposure",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "lineRange": [
+        45,
+        53
+      ],
+      "summary": "predictExposure 实现 AI智能服务 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:getAlertConfig",
+      "type": "function",
+      "name": "getAlertConfig",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "lineRange": [
+        55,
+        59
+      ],
+      "summary": "getAlertConfig 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:updateAlertConfig",
+      "type": "function",
+      "name": "updateAlertConfig",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "lineRange": [
+        61,
+        66
+      ],
+      "summary": "updateAlertConfig 实现 AI智能服务 模块中的关键处理步骤，参数包括 config。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "type": "file",
+      "name": "AiRiskController.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "summary": "AiRiskController.java 是 AI智能服务 模块中的REST 控制器，主要定义 AiRiskController，承担该业务域的分层协作职责。",
+      "tags": [
+        "api-handler",
+        "AI智能服务",
+        "java",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java:AiRiskController",
+      "type": "class",
+      "name": "AiRiskController",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "lineRange": [
+        16,
+        47
+      ],
+      "summary": "AiRiskController 是 AI智能服务 模块的REST 控制器，封装 3 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "api-handler",
+        "AI智能服务",
+        "java",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java:amlEvaluate",
+      "type": "function",
+      "name": "amlEvaluate",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "lineRange": [
+        24,
+        31
+      ],
+      "summary": "amlEvaluate 实现 AI智能服务 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java:fuzzyMatchBlacklist",
+      "type": "function",
+      "name": "fuzzyMatchBlacklist",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "lineRange": [
+        33,
+        40
+      ],
+      "summary": "fuzzyMatchBlacklist 实现 AI智能服务 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java:networkAnalysis",
+      "type": "function",
+      "name": "networkAnalysis",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "lineRange": [
+        42,
+        46
+      ],
+      "summary": "networkAnalysis 实现 AI智能服务 模块中的关键处理步骤，参数包括 customerId。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/AlertConfigReq.java",
+      "type": "file",
+      "name": "AlertConfigReq.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/AlertConfigReq.java",
+      "summary": "AlertConfigReq.java 是 AI智能服务 模块中的配置，主要定义 AlertConfigReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "configuration",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/AlertConfigReq.java:AlertConfigReq",
+      "type": "class",
+      "name": "AlertConfigReq",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/AlertConfigReq.java",
+      "lineRange": [
+        6,
+        16
+      ],
+      "summary": "AlertConfigReq 是 AI智能服务 模块的配置，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "configuration",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/AmlEvaluateReq.java",
+      "type": "file",
+      "name": "AmlEvaluateReq.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/AmlEvaluateReq.java",
+      "summary": "AmlEvaluateReq.java 是 AI智能服务 模块中的传输对象，主要定义 AmlEvaluateReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/AmlEvaluateReq.java:AmlEvaluateReq",
+      "type": "class",
+      "name": "AmlEvaluateReq",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/AmlEvaluateReq.java",
+      "lineRange": [
+        6,
+        16
+      ],
+      "summary": "AmlEvaluateReq 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/AuditCompareReq.java",
+      "type": "file",
+      "name": "AuditCompareReq.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/AuditCompareReq.java",
+      "summary": "AuditCompareReq.java 是 AI智能服务 模块中的传输对象，主要定义 AuditCompareReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/AuditCompareReq.java:AuditCompareReq",
+      "type": "class",
+      "name": "AuditCompareReq",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/AuditCompareReq.java",
+      "lineRange": [
+        6,
+        19
+      ],
+      "summary": "AuditCompareReq 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java",
+      "type": "file",
+      "name": "ChatMessageReq.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java",
+      "summary": "ChatMessageReq.java 是 AI智能服务 模块中的传输对象，主要定义 ChatMessageReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java:ChatMessageReq",
+      "type": "class",
+      "name": "ChatMessageReq",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java",
+      "lineRange": [
+        7,
+        20
+      ],
+      "summary": "ChatMessageReq 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java",
+      "type": "file",
+      "name": "ChatMessageResp.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java",
+      "summary": "ChatMessageResp.java 是 AI智能服务 模块中的传输对象，主要定义 ChatMessageResp，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java:ChatMessageResp",
+      "type": "class",
+      "name": "ChatMessageResp",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java",
+      "lineRange": [
+        9,
+        21
+      ],
+      "summary": "ChatMessageResp 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ClearingCorrectionReq.java",
+      "type": "file",
+      "name": "ClearingCorrectionReq.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ClearingCorrectionReq.java",
+      "summary": "ClearingCorrectionReq.java 是 AI智能服务 模块中的传输对象，主要定义 ClearingCorrectionReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/ClearingCorrectionReq.java:ClearingCorrectionReq",
+      "type": "class",
+      "name": "ClearingCorrectionReq",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ClearingCorrectionReq.java",
+      "lineRange": [
+        6,
+        13
+      ],
+      "summary": "ClearingCorrectionReq 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/CreateSessionReq.java",
+      "type": "file",
+      "name": "CreateSessionReq.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/CreateSessionReq.java",
+      "summary": "CreateSessionReq.java 是 AI智能服务 模块中的传输对象，主要定义 CreateSessionReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/CreateSessionReq.java:CreateSessionReq",
+      "type": "class",
+      "name": "CreateSessionReq",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/CreateSessionReq.java",
+      "lineRange": [
+        6,
+        13
+      ],
+      "summary": "CreateSessionReq 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/FuzzyMatchReq.java",
+      "type": "file",
+      "name": "FuzzyMatchReq.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/FuzzyMatchReq.java",
+      "summary": "FuzzyMatchReq.java 是 AI智能服务 模块中的传输对象，主要定义 FuzzyMatchReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/FuzzyMatchReq.java:FuzzyMatchReq",
+      "type": "class",
+      "name": "FuzzyMatchReq",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/FuzzyMatchReq.java",
+      "lineRange": [
+        6,
+        16
+      ],
+      "summary": "FuzzyMatchReq 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/GenerateAiReportReq.java",
+      "type": "file",
+      "name": "GenerateAiReportReq.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/GenerateAiReportReq.java",
+      "summary": "GenerateAiReportReq.java 是 AI智能服务 模块中的传输对象，主要定义 GenerateAiReportReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/GenerateAiReportReq.java:GenerateAiReportReq",
+      "type": "class",
+      "name": "GenerateAiReportReq",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/GenerateAiReportReq.java",
+      "lineRange": [
+        6,
+        16
+      ],
+      "summary": "GenerateAiReportReq 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/HedgingRecommendReq.java",
+      "type": "file",
+      "name": "HedgingRecommendReq.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/HedgingRecommendReq.java",
+      "summary": "HedgingRecommendReq.java 是 AI智能服务 模块中的传输对象，主要定义 HedgingRecommendReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/HedgingRecommendReq.java:HedgingRecommendReq",
+      "type": "class",
+      "name": "HedgingRecommendReq",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/HedgingRecommendReq.java",
+      "lineRange": [
+        6,
+        16
+      ],
+      "summary": "HedgingRecommendReq 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/NlTradeReq.java",
+      "type": "file",
+      "name": "NlTradeReq.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/NlTradeReq.java",
+      "summary": "NlTradeReq.java 是 AI智能服务 模块中的传输对象，主要定义 NlTradeReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/NlTradeReq.java:NlTradeReq",
+      "type": "class",
+      "name": "NlTradeReq",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/NlTradeReq.java",
+      "lineRange": [
+        6,
+        13
+      ],
+      "summary": "NlTradeReq 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/OcrUploadReq.java",
+      "type": "file",
+      "name": "OcrUploadReq.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/OcrUploadReq.java",
+      "summary": "OcrUploadReq.java 是 AI智能服务 模块中的传输对象，主要定义 OcrUploadReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/OcrUploadReq.java:OcrUploadReq",
+      "type": "class",
+      "name": "OcrUploadReq",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/OcrUploadReq.java",
+      "lineRange": [
+        6,
+        16
+      ],
+      "summary": "OcrUploadReq 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictExposureReq.java",
+      "type": "file",
+      "name": "PredictExposureReq.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictExposureReq.java",
+      "summary": "PredictExposureReq.java 是 AI智能服务 模块中的传输对象，主要定义 PredictExposureReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictExposureReq.java:PredictExposureReq",
+      "type": "class",
+      "name": "PredictExposureReq",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictExposureReq.java",
+      "lineRange": [
+        6,
+        13
+      ],
+      "summary": "PredictExposureReq 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictRateReq.java",
+      "type": "file",
+      "name": "PredictRateReq.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictRateReq.java",
+      "summary": "PredictRateReq.java 是 AI智能服务 模块中的传输对象，主要定义 PredictRateReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictRateReq.java:PredictRateReq",
+      "type": "class",
+      "name": "PredictRateReq",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictRateReq.java",
+      "lineRange": [
+        6,
+        13
+      ],
+      "summary": "PredictRateReq 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java",
+      "type": "file",
+      "name": "RiskAlertResp.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java",
+      "summary": "RiskAlertResp.java 是 AI智能服务 模块中的传输对象，主要定义 RiskAlertResp，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java:RiskAlertResp",
+      "type": "class",
+      "name": "RiskAlertResp",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java",
+      "lineRange": [
+        8,
+        26
+      ],
+      "summary": "RiskAlertResp 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java",
+      "type": "file",
+      "name": "TradingRecommendResp.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java",
+      "summary": "TradingRecommendResp.java 是 AI智能服务 模块中的传输对象，主要定义 TradingRecommendResp，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java:TradingRecommendResp",
+      "type": "class",
+      "name": "TradingRecommendResp",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java",
+      "lineRange": [
+        9,
+        21
+      ],
+      "summary": "TradingRecommendResp 是 AI智能服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "AI智能服务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "type": "file",
+      "name": "AiAppService.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "summary": "AiAppService.java 是 AI智能服务 模块中的应用服务，主要定义 AiAppService，承担该业务域的分层协作职责。",
+      "tags": [
+        "application-service",
+        "AI智能服务",
+        "java",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:AiAppService",
+      "type": "class",
+      "name": "AiAppService",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "lineRange": [
+        13,
+        167
+      ],
+      "summary": "AiAppService 是 AI智能服务 模块的应用服务，封装 14 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "application-service",
+        "AI智能服务",
+        "java",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:predictRate",
+      "type": "function",
+      "name": "predictRate",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "lineRange": [
+        25,
+        37
+      ],
+      "summary": "predictRate 实现 AI智能服务 模块中的关键处理步骤，参数包括 currencyPair、predType。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:predictExposure",
+      "type": "function",
+      "name": "predictExposure",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "lineRange": [
+        39,
+        44
+      ],
+      "summary": "predictExposure 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:chatQuery",
+      "type": "function",
+      "name": "chatQuery",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "lineRange": [
+        46,
+        52
+      ],
+      "summary": "chatQuery 实现 AI智能服务 模块中的关键处理步骤，参数包括 sessionId、question。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:recommendHedging",
+      "type": "function",
+      "name": "recommendHedging",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "lineRange": [
+        54,
+        60
+      ],
+      "summary": "recommendHedging 实现 AI智能服务 模块中的关键处理步骤，参数包括 customerId、businessType、riskPreference。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:processNlTrade",
+      "type": "function",
+      "name": "processNlTrade",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "lineRange": [
+        62,
+        74
+      ],
+      "summary": "processNlTrade 实现 AI智能服务 模块中的关键处理步骤，参数包括 input。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:generateReport",
+      "type": "function",
+      "name": "generateReport",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "lineRange": [
+        76,
+        82
+      ],
+      "summary": "generateReport 实现 AI智能服务 模块中的关键处理步骤，参数包括 customerId、period、reportType。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:createSession",
+      "type": "function",
+      "name": "createSession",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "lineRange": [
+        84,
+        87
+      ],
+      "summary": "createSession 实现 AI智能服务 模块中的关键处理步骤，参数包括 sessionType。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:getSessionMessages",
+      "type": "function",
+      "name": "getSessionMessages",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "lineRange": [
+        89,
+        94
+      ],
+      "summary": "getSessionMessages 实现 AI智能服务 模块中的关键处理步骤，参数包括 sessionId。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:amlEvaluate",
+      "type": "function",
+      "name": "amlEvaluate",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "lineRange": [
+        96,
+        105
+      ],
+      "summary": "amlEvaluate 实现 AI智能服务 模块中的关键处理步骤，参数包括 customerId、transactionData。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:fuzzyMatchBlacklist",
+      "type": "function",
+      "name": "fuzzyMatchBlacklist",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "lineRange": [
+        107,
+        115
+      ],
+      "summary": "fuzzyMatchBlacklist 实现 AI智能服务 模块中的关键处理步骤，参数包括 name、idType。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:networkAnalysis",
+      "type": "function",
+      "name": "networkAnalysis",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "lineRange": [
+        117,
+        131
+      ],
+      "summary": "networkAnalysis 实现 AI智能服务 模块中的关键处理步骤，参数包括 customerId。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:ocrRecognize",
+      "type": "function",
+      "name": "ocrRecognize",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "lineRange": [
+        133,
+        145
+      ],
+      "summary": "ocrRecognize 实现 AI智能服务 模块中的关键处理步骤，参数包括 docType、imageBase64。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:compareDocuments",
+      "type": "function",
+      "name": "compareDocuments",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "lineRange": [
+        147,
+        155
+      ],
+      "summary": "compareDocuments 实现 AI智能服务 模块中的关键处理步骤，参数包括 invoiceId、billId、customsId。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:clearingCorrection",
+      "type": "function",
+      "name": "clearingCorrection",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "lineRange": [
+        157,
+        166
+      ],
+      "summary": "clearingCorrection 实现 AI智能服务 模块中的关键处理步骤，参数包括 clearingId。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "application-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "type": "file",
+      "name": "AgentOrchestrator.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "summary": "AgentOrchestrator.java 是 AI智能服务 模块中的领域服务，主要定义 AgentOrchestrator，承担该业务域的分层协作职责。",
+      "tags": [
+        "domain-service",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:AgentOrchestrator",
+      "type": "class",
+      "name": "AgentOrchestrator",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "lineRange": [
+        13,
+        174
+      ],
+      "summary": "AgentOrchestrator 是 AI智能服务 模块的领域服务，封装 6 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "domain-service",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:execute",
+      "type": "function",
+      "name": "execute",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "lineRange": [
+        24,
+        71
+      ],
+      "summary": "execute 实现 AI智能服务 模块中的关键处理步骤，参数包括 userQuery、sessionId。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "domain-service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:buildSystemPrompt",
+      "type": "function",
+      "name": "buildSystemPrompt",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "lineRange": [
+        73,
+        85
+      ],
+      "summary": "buildSystemPrompt 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "domain-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:think",
+      "type": "function",
+      "name": "think",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "lineRange": [
+        87,
+        99
+      ],
+      "summary": "think 实现 AI智能服务 模块中的关键处理步骤，参数包括 systemPrompt、history。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "domain-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:parseIntent",
+      "type": "function",
+      "name": "parseIntent",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "lineRange": [
+        101,
+        157
+      ],
+      "summary": "parseIntent 实现 AI智能服务 模块中的关键处理步骤，参数包括 query。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "domain-service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentResult.java",
+      "type": "file",
+      "name": "AgentResult.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentResult.java",
+      "summary": "AgentResult.java 是 AI智能服务 模块中的代码文件，主要定义 AgentResult，承担该业务域的分层协作职责。",
+      "tags": [
+        "code",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentResult.java:AgentResult",
+      "type": "class",
+      "name": "AgentResult",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentResult.java",
+      "lineRange": [
+        8,
+        17
+      ],
+      "summary": "AgentResult 是 AI智能服务 模块的代码文件，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "code",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "type": "file",
+      "name": "AgentTool.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "summary": "AgentTool.java 是 AI智能服务 模块中的Agent 工具，主要定义 AgentTool，承担该业务域的分层协作职责。",
+      "tags": [
+        "agent-tool",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java:AgentTool",
+      "type": "class",
+      "name": "AgentTool",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "lineRange": [
+        5,
+        16
+      ],
+      "summary": "AgentTool 是 AI智能服务 模块的Agent 工具，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "agent-tool",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "type": "file",
+      "name": "ExchangeRateTool.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "summary": "ExchangeRateTool.java 是 AI智能服务 模块中的Agent 工具，主要定义 ExchangeRateTool，承担该业务域的分层协作职责。",
+      "tags": [
+        "agent-tool",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java:ExchangeRateTool",
+      "type": "class",
+      "name": "ExchangeRateTool",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "lineRange": [
+        13,
+        53
+      ],
+      "summary": "ExchangeRateTool 是 AI智能服务 模块的Agent 工具，封装 5 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "agent-tool",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java:init",
+      "type": "function",
+      "name": "init",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "lineRange": [
+        19,
+        22
+      ],
+      "summary": "init 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java:name",
+      "type": "function",
+      "name": "name",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "lineRange": [
+        24,
+        27
+      ],
+      "summary": "name 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java:description",
+      "type": "function",
+      "name": "description",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "lineRange": [
+        29,
+        32
+      ],
+      "summary": "description 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java:execute",
+      "type": "function",
+      "name": "execute",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "lineRange": [
+        34,
+        45
+      ],
+      "summary": "execute 实现 AI智能服务 模块中的关键处理步骤，参数包括 parameters。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java:AgentController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java:AgentController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java:chat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java:chat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentResult.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:AiChatController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:AiChatController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:chatQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:chatQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:recommendHedging",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:recommendHedging",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:nlTrade",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:nlTrade",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:generateReport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:generateReport",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:createSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:createSession",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:getMessages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java:getMessages",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/CreateSessionReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/GenerateAiReportReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/HedgingRecommendReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/NlTradeReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java:AiDocumentController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java:AiDocumentController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java:ocrUpload",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java:ocrUpload",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java:auditCompare",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java:auditCompare",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java:clearingCorrection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java:clearingCorrection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/AuditCompareReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ClearingCorrectionReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/OcrUploadReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:AiPredictionController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:AiPredictionController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:predictRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:predictRate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:predictExposure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:predictExposure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:getAlertConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:getAlertConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:updateAlertConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java:updateAlertConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/AlertConfigReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictExposureReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictRateReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java:AiRiskController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java:AiRiskController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java:amlEvaluate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java:amlEvaluate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java:fuzzyMatchBlacklist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java:fuzzyMatchBlacklist",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java:networkAnalysis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java:networkAnalysis",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/AmlEvaluateReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/FuzzyMatchReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/AlertConfigReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/AlertConfigReq.java:AlertConfigReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/AlertConfigReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/AlertConfigReq.java:AlertConfigReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/AmlEvaluateReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/AmlEvaluateReq.java:AmlEvaluateReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/AmlEvaluateReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/AmlEvaluateReq.java:AmlEvaluateReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/AuditCompareReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/AuditCompareReq.java:AuditCompareReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/AuditCompareReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/AuditCompareReq.java:AuditCompareReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java:ChatMessageReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java:ChatMessageReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java:ChatMessageResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java:ChatMessageResp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ClearingCorrectionReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/ClearingCorrectionReq.java:ClearingCorrectionReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/ClearingCorrectionReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/ClearingCorrectionReq.java:ClearingCorrectionReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/CreateSessionReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/CreateSessionReq.java:CreateSessionReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/CreateSessionReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/CreateSessionReq.java:CreateSessionReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/FuzzyMatchReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/FuzzyMatchReq.java:FuzzyMatchReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/FuzzyMatchReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/FuzzyMatchReq.java:FuzzyMatchReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/GenerateAiReportReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/GenerateAiReportReq.java:GenerateAiReportReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/GenerateAiReportReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/GenerateAiReportReq.java:GenerateAiReportReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/HedgingRecommendReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/HedgingRecommendReq.java:HedgingRecommendReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/HedgingRecommendReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/HedgingRecommendReq.java:HedgingRecommendReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/NlTradeReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/NlTradeReq.java:NlTradeReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/NlTradeReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/NlTradeReq.java:NlTradeReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/OcrUploadReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/OcrUploadReq.java:OcrUploadReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/OcrUploadReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/OcrUploadReq.java:OcrUploadReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictExposureReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictExposureReq.java:PredictExposureReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictExposureReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictExposureReq.java:PredictExposureReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictRateReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictRateReq.java:PredictRateReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictRateReq.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictRateReq.java:PredictRateReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java:RiskAlertResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java:RiskAlertResp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java:TradingRecommendResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java:TradingRecommendResp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:AiAppService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:AiAppService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:predictRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:predictRate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:predictExposure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:predictExposure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:chatQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:chatQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:recommendHedging",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:recommendHedging",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:processNlTrade",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:processNlTrade",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:generateReport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:generateReport",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:createSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:createSession",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:getSessionMessages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:getSessionMessages",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:amlEvaluate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:amlEvaluate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:fuzzyMatchBlacklist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:fuzzyMatchBlacklist",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:networkAnalysis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:networkAnalysis",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:ocrRecognize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:ocrRecognize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:compareDocuments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:compareDocuments",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:clearingCorrection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java:clearingCorrection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:AgentOrchestrator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:AgentOrchestrator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:buildSystemPrompt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:think",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:parseIntent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:execute",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:buildSystemPrompt",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:execute",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:think",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:think",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java:parseIntent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentResult.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentResult.java:AgentResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentResult.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentResult.java:AgentResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java:AgentTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java:AgentTool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java:ExchangeRateTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java:ExchangeRateTool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java:init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java:init",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java:name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java:name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java:description",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java:description",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java:execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java:execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

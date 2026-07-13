@@ -1,0 +1,66 @@
+[
+  {
+    "order": 1,
+    "title": "项目总览",
+    "description": "从 README 和根 POM 理解银行外汇系统的技术栈、模块边界与 Maven 聚合结构。",
+    "nodeIds": [
+      "document:README.md",
+      "config:pom.xml"
+    ]
+  },
+  {
+    "order": 2,
+    "title": "网关与安全入口",
+    "description": "查看 API 网关和认证模块如何提供统一入口、登录令牌与访问控制。",
+    "nodeIds": [
+      "config:forex-gateway/src/main/resources/application.yml",
+      "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java"
+    ]
+  },
+  {
+    "order": 3,
+    "title": "客户与账户主数据",
+    "description": "理解客户、账户、额度与交易流水在系统中的基础主数据角色。",
+    "nodeIds": [
+      "file:forex-customer/src/main/java/com/forex/customer/adapter/controller/CustomerController.java",
+      "file:forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java"
+    ]
+  },
+  {
+    "order": 4,
+    "title": "前台交易域",
+    "description": "沿着汇率、结售汇、交易、额度和贵金属模块观察前台业务如何组织。",
+    "nodeIds": [
+      "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "file:forex-limit/src/main/java/com/forex/limit/application/service/LimitAppService.java",
+      "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java"
+    ]
+  },
+  {
+    "order": 5,
+    "title": "AI 智能能力",
+    "description": "查看 AI 模块的 Agent、RAG、预测、风控与工具注册是如何协作的。",
+    "nodeIds": [
+      "file:forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java",
+      "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "file:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java"
+    ]
+  },
+  {
+    "order": 6,
+    "title": "风控与中台",
+    "description": "从风险、估值、保证金和头寸模块理解中台分析与控制能力。",
+    "nodeIds": [
+      "file:forex-position/src/main/java/com/forex/position/PositionApplication.java"
+    ]
+  },
+  {
+    "order": 7,
+    "title": "支付结算清算",
+    "description": "查看跨境支付、国际结算和清算模块如何承接交易后流程。",
+    "nodeIds": [
+      "file:forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java",
+      "file:forex-clearing/src/main/java/com/forex/clearing/domain/service/ClearingDomainService.java"
+    ]
+  }
+]

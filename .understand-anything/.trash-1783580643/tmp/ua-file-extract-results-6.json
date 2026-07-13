@@ -1,0 +1,3270 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 60,
+      "nonEmptyLines": 51,
+      "functions": [
+        {
+          "name": "findBySessionId",
+          "startLine": 19,
+          "endLine": 23,
+          "params": [
+            "sessionId"
+          ]
+        },
+        {
+          "name": "findByUserId",
+          "startLine": 25,
+          "endLine": 30,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "save",
+          "startLine": 32,
+          "endLine": 40,
+          "params": [
+            "session"
+          ]
+        },
+        {
+          "name": "toDomain",
+          "startLine": 42,
+          "endLine": 47,
+          "params": [
+            "po"
+          ]
+        },
+        {
+          "name": "toPO",
+          "startLine": 49,
+          "endLine": 59,
+          "params": [
+            "session"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ChatSessionRepositoryImpl",
+          "startLine": 13,
+          "endLine": 60,
+          "methods": [
+            "findBySessionId",
+            "findByUserId",
+            "save",
+            "toDomain",
+            "toPO"
+          ],
+          "properties": [
+            "chatSessionMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "findBySessionId",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "findByUserId",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "save",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "ChatSessionRepositoryImpl",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "findBySessionId",
+          "callee": "chatSessionMapper.findBySessionId",
+          "lineNumber": 21
+        },
+        {
+          "caller": "findBySessionId",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 22
+        },
+        {
+          "caller": "findBySessionId",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 22
+        },
+        {
+          "caller": "findByUserId",
+          "callee": "chatSessionMapper.findByUserId(userId).stream()\n                .map(this::toDomain).toList",
+          "lineNumber": 27
+        },
+        {
+          "caller": "findByUserId",
+          "callee": "chatSessionMapper.findByUserId(userId).stream().map",
+          "lineNumber": 27
+        },
+        {
+          "caller": "findByUserId",
+          "callee": "chatSessionMapper.findByUserId(userId).stream",
+          "lineNumber": 27
+        },
+        {
+          "caller": "findByUserId",
+          "callee": "chatSessionMapper.findByUserId",
+          "lineNumber": 27
+        },
+        {
+          "caller": "save",
+          "callee": "toPO",
+          "lineNumber": 34
+        },
+        {
+          "caller": "save",
+          "callee": "po.getId",
+          "lineNumber": 35
+        },
+        {
+          "caller": "save",
+          "callee": "chatSessionMapper.insert",
+          "lineNumber": 36
+        },
+        {
+          "caller": "save",
+          "callee": "chatSessionMapper.updateById",
+          "lineNumber": 38
+        },
+        {
+          "caller": "toDomain",
+          "callee": "ChatSession.reconstitute",
+          "lineNumber": 43
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getId",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getSessionId",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getUserId",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getUserName",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getSessionType",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getTitle",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getStatus",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getCreateTime",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getUpdateTime",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getVersion",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toPO",
+          "callee": "new ChatSessionPO",
+          "lineNumber": 50
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setId",
+          "lineNumber": 51
+        },
+        {
+          "caller": "toPO",
+          "callee": "session.getId",
+          "lineNumber": 51
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setSessionId",
+          "lineNumber": 52
+        },
+        {
+          "caller": "toPO",
+          "callee": "session.getSessionId",
+          "lineNumber": 52
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setUserId",
+          "lineNumber": 53
+        },
+        {
+          "caller": "toPO",
+          "callee": "session.getUserId",
+          "lineNumber": 53
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setUserName",
+          "lineNumber": 54
+        },
+        {
+          "caller": "toPO",
+          "callee": "session.getUserName",
+          "lineNumber": 54
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setSessionType",
+          "lineNumber": 55
+        },
+        {
+          "caller": "toPO",
+          "callee": "session.getSessionType",
+          "lineNumber": 55
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setTitle",
+          "lineNumber": 56
+        },
+        {
+          "caller": "toPO",
+          "callee": "session.getTitle",
+          "lineNumber": 56
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setStatus",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toPO",
+          "callee": "session.getStatus",
+          "lineNumber": 57
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 4,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 63,
+      "nonEmptyLines": 54,
+      "functions": [
+        {
+          "name": "findByAuditId",
+          "startLine": 18,
+          "endLine": 22,
+          "params": [
+            "auditId"
+          ]
+        },
+        {
+          "name": "findByBizNo",
+          "startLine": 24,
+          "endLine": 28,
+          "params": [
+            "bizNo"
+          ]
+        },
+        {
+          "name": "save",
+          "startLine": 30,
+          "endLine": 38,
+          "params": [
+            "audit"
+          ]
+        },
+        {
+          "name": "toDomain",
+          "startLine": 40,
+          "endLine": 47,
+          "params": [
+            "po"
+          ]
+        },
+        {
+          "name": "toPO",
+          "startLine": 49,
+          "endLine": 62,
+          "params": [
+            "audit"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "DocumentAuditRepositoryImpl",
+          "startLine": 12,
+          "endLine": 63,
+          "methods": [
+            "findByAuditId",
+            "findByBizNo",
+            "save",
+            "toDomain",
+            "toPO"
+          ],
+          "properties": [
+            "documentAuditMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "findByAuditId",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "findByBizNo",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "save",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "DocumentAuditRepositoryImpl",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "findByAuditId",
+          "callee": "documentAuditMapper.findByAuditId",
+          "lineNumber": 20
+        },
+        {
+          "caller": "findByAuditId",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 21
+        },
+        {
+          "caller": "findByAuditId",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 21
+        },
+        {
+          "caller": "findByBizNo",
+          "callee": "documentAuditMapper.findByBizNo",
+          "lineNumber": 26
+        },
+        {
+          "caller": "findByBizNo",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 27
+        },
+        {
+          "caller": "findByBizNo",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 27
+        },
+        {
+          "caller": "save",
+          "callee": "toPO",
+          "lineNumber": 32
+        },
+        {
+          "caller": "save",
+          "callee": "po.getId",
+          "lineNumber": 33
+        },
+        {
+          "caller": "save",
+          "callee": "documentAuditMapper.insert",
+          "lineNumber": 34
+        },
+        {
+          "caller": "save",
+          "callee": "documentAuditMapper.updateById",
+          "lineNumber": 36
+        },
+        {
+          "caller": "toDomain",
+          "callee": "DocumentAudit.reconstitute",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getId",
+          "lineNumber": 42
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getAuditId",
+          "lineNumber": 42
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getBizNo",
+          "lineNumber": 42
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getDocType",
+          "lineNumber": 42
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getOcrResult",
+          "lineNumber": 43
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getComparisonResult",
+          "lineNumber": 43
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getIsConsistent",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getIsConsistent",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getDiscrepancyDetail",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getAuditOpinion",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getConfidenceScore",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getCreateTime",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getUpdateTime",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getVersion",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toPO",
+          "callee": "new DocumentAuditPO",
+          "lineNumber": 50
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setId",
+          "lineNumber": 51
+        },
+        {
+          "caller": "toPO",
+          "callee": "audit.getId",
+          "lineNumber": 51
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setAuditId",
+          "lineNumber": 52
+        },
+        {
+          "caller": "toPO",
+          "callee": "audit.getAuditId",
+          "lineNumber": 52
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setBizNo",
+          "lineNumber": 53
+        },
+        {
+          "caller": "toPO",
+          "callee": "audit.getBizNo",
+          "lineNumber": 53
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setDocType",
+          "lineNumber": 54
+        },
+        {
+          "caller": "toPO",
+          "callee": "audit.getDocType",
+          "lineNumber": 54
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setOcrResult",
+          "lineNumber": 55
+        },
+        {
+          "caller": "toPO",
+          "callee": "audit.getOcrResult",
+          "lineNumber": 55
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setComparisonResult",
+          "lineNumber": 56
+        },
+        {
+          "caller": "toPO",
+          "callee": "audit.getComparisonResult",
+          "lineNumber": 56
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setIsConsistent",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toPO",
+          "callee": "audit.getIsConsistent",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toPO",
+          "callee": "audit.getIsConsistent",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setDiscrepancyDetail",
+          "lineNumber": 58
+        },
+        {
+          "caller": "toPO",
+          "callee": "audit.getDiscrepancyDetail",
+          "lineNumber": 58
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setAuditOpinion",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toPO",
+          "callee": "audit.getAuditOpinion",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setConfidenceScore",
+          "lineNumber": 60
+        },
+        {
+          "caller": "toPO",
+          "callee": "audit.getConfidenceScore",
+          "lineNumber": 60
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 4,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 65,
+      "nonEmptyLines": 56,
+      "functions": [
+        {
+          "name": "findByPredNo",
+          "startLine": 19,
+          "endLine": 23,
+          "params": [
+            "predNo"
+          ]
+        },
+        {
+          "name": "findByCurrencyPairAndPredType",
+          "startLine": 25,
+          "endLine": 30,
+          "params": [
+            "currencyPair",
+            "predType"
+          ]
+        },
+        {
+          "name": "save",
+          "startLine": 32,
+          "endLine": 40,
+          "params": [
+            "prediction"
+          ]
+        },
+        {
+          "name": "toDomain",
+          "startLine": 42,
+          "endLine": 48,
+          "params": [
+            "po"
+          ]
+        },
+        {
+          "name": "toPO",
+          "startLine": 50,
+          "endLine": 64,
+          "params": [
+            "prediction"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RatePredictionRepositoryImpl",
+          "startLine": 13,
+          "endLine": 65,
+          "methods": [
+            "findByPredNo",
+            "findByCurrencyPairAndPredType",
+            "save",
+            "toDomain",
+            "toPO"
+          ],
+          "properties": [
+            "ratePredictionMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "findByPredNo",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "findByCurrencyPairAndPredType",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "save",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "RatePredictionRepositoryImpl",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "findByPredNo",
+          "callee": "ratePredictionMapper.findByPredNo",
+          "lineNumber": 21
+        },
+        {
+          "caller": "findByPredNo",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 22
+        },
+        {
+          "caller": "findByPredNo",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 22
+        },
+        {
+          "caller": "findByCurrencyPairAndPredType",
+          "callee": "ratePredictionMapper.findByCurrencyPairAndPredType(currencyPair, predType).stream()\n                .map(this::toDomain).toList",
+          "lineNumber": 27
+        },
+        {
+          "caller": "findByCurrencyPairAndPredType",
+          "callee": "ratePredictionMapper.findByCurrencyPairAndPredType(currencyPair, predType).stream().map",
+          "lineNumber": 27
+        },
+        {
+          "caller": "findByCurrencyPairAndPredType",
+          "callee": "ratePredictionMapper.findByCurrencyPairAndPredType(currencyPair, predType).stream",
+          "lineNumber": 27
+        },
+        {
+          "caller": "findByCurrencyPairAndPredType",
+          "callee": "ratePredictionMapper.findByCurrencyPairAndPredType",
+          "lineNumber": 27
+        },
+        {
+          "caller": "save",
+          "callee": "toPO",
+          "lineNumber": 34
+        },
+        {
+          "caller": "save",
+          "callee": "po.getId",
+          "lineNumber": 35
+        },
+        {
+          "caller": "save",
+          "callee": "ratePredictionMapper.insert",
+          "lineNumber": 36
+        },
+        {
+          "caller": "save",
+          "callee": "ratePredictionMapper.updateById",
+          "lineNumber": 38
+        },
+        {
+          "caller": "toDomain",
+          "callee": "RatePrediction.reconstitute",
+          "lineNumber": 43
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getId",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getPredNo",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getCurrencyPair",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getPredType",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getPredTime",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getTargetTime",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getPredictedRate",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getLowerBound",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getUpperBound",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getConfidence",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getModelName",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getCreateTime",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getUpdateTime",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getVersion",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toPO",
+          "callee": "new RatePredictionPO",
+          "lineNumber": 51
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setId",
+          "lineNumber": 52
+        },
+        {
+          "caller": "toPO",
+          "callee": "prediction.getId",
+          "lineNumber": 52
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setPredNo",
+          "lineNumber": 53
+        },
+        {
+          "caller": "toPO",
+          "callee": "prediction.getPredNo",
+          "lineNumber": 53
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setCurrencyPair",
+          "lineNumber": 54
+        },
+        {
+          "caller": "toPO",
+          "callee": "prediction.getCurrencyPair",
+          "lineNumber": 54
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setPredType",
+          "lineNumber": 55
+        },
+        {
+          "caller": "toPO",
+          "callee": "prediction.getPredType",
+          "lineNumber": 55
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setPredTime",
+          "lineNumber": 56
+        },
+        {
+          "caller": "toPO",
+          "callee": "prediction.getPredTime",
+          "lineNumber": 56
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setTargetTime",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toPO",
+          "callee": "prediction.getTargetTime",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setPredictedRate",
+          "lineNumber": 58
+        },
+        {
+          "caller": "toPO",
+          "callee": "prediction.getPredictedRate",
+          "lineNumber": 58
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setLowerBound",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toPO",
+          "callee": "prediction.getLowerBound",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setUpperBound",
+          "lineNumber": 60
+        },
+        {
+          "caller": "toPO",
+          "callee": "prediction.getUpperBound",
+          "lineNumber": 60
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setConfidence",
+          "lineNumber": 61
+        },
+        {
+          "caller": "toPO",
+          "callee": "prediction.getConfidence",
+          "lineNumber": 61
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setModelName",
+          "lineNumber": 62
+        },
+        {
+          "caller": "toPO",
+          "callee": "prediction.getModelName",
+          "lineNumber": 62
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 4,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 64,
+      "nonEmptyLines": 55,
+      "functions": [
+        {
+          "name": "findByAssessmentId",
+          "startLine": 19,
+          "endLine": 23,
+          "params": [
+            "assessmentId"
+          ]
+        },
+        {
+          "name": "findByCustomerId",
+          "startLine": 25,
+          "endLine": 30,
+          "params": [
+            "customerId"
+          ]
+        },
+        {
+          "name": "save",
+          "startLine": 32,
+          "endLine": 40,
+          "params": [
+            "assessment"
+          ]
+        },
+        {
+          "name": "toDomain",
+          "startLine": 42,
+          "endLine": 48,
+          "params": [
+            "po"
+          ]
+        },
+        {
+          "name": "toPO",
+          "startLine": 50,
+          "endLine": 63,
+          "params": [
+            "assessment"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RiskAiAssessmentRepositoryImpl",
+          "startLine": 13,
+          "endLine": 64,
+          "methods": [
+            "findByAssessmentId",
+            "findByCustomerId",
+            "save",
+            "toDomain",
+            "toPO"
+          ],
+          "properties": [
+            "riskAiAssessmentMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "findByAssessmentId",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "findByCustomerId",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "save",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "RiskAiAssessmentRepositoryImpl",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "findByAssessmentId",
+          "callee": "riskAiAssessmentMapper.findByAssessmentId",
+          "lineNumber": 21
+        },
+        {
+          "caller": "findByAssessmentId",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 22
+        },
+        {
+          "caller": "findByAssessmentId",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 22
+        },
+        {
+          "caller": "findByCustomerId",
+          "callee": "riskAiAssessmentMapper.findByCustomerId(customerId).stream()\n                .map(this::toDomain).toList",
+          "lineNumber": 27
+        },
+        {
+          "caller": "findByCustomerId",
+          "callee": "riskAiAssessmentMapper.findByCustomerId(customerId).stream().map",
+          "lineNumber": 27
+        },
+        {
+          "caller": "findByCustomerId",
+          "callee": "riskAiAssessmentMapper.findByCustomerId(customerId).stream",
+          "lineNumber": 27
+        },
+        {
+          "caller": "findByCustomerId",
+          "callee": "riskAiAssessmentMapper.findByCustomerId",
+          "lineNumber": 27
+        },
+        {
+          "caller": "save",
+          "callee": "toPO",
+          "lineNumber": 34
+        },
+        {
+          "caller": "save",
+          "callee": "po.getId",
+          "lineNumber": 35
+        },
+        {
+          "caller": "save",
+          "callee": "riskAiAssessmentMapper.insert",
+          "lineNumber": 36
+        },
+        {
+          "caller": "save",
+          "callee": "riskAiAssessmentMapper.updateById",
+          "lineNumber": 38
+        },
+        {
+          "caller": "toDomain",
+          "callee": "RiskAiAssessment.reconstitute",
+          "lineNumber": 43
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getId",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getAssessmentId",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getCustomerId",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getBizNo",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getRiskType",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getRiskScore",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getRiskLevel",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getAiAnalysis",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getRecommendation",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getDataPointsJson",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getCreateTime",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getUpdateTime",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getVersion",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toPO",
+          "callee": "new RiskAiAssessmentPO",
+          "lineNumber": 51
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setId",
+          "lineNumber": 52
+        },
+        {
+          "caller": "toPO",
+          "callee": "assessment.getId",
+          "lineNumber": 52
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setAssessmentId",
+          "lineNumber": 53
+        },
+        {
+          "caller": "toPO",
+          "callee": "assessment.getAssessmentId",
+          "lineNumber": 53
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setCustomerId",
+          "lineNumber": 54
+        },
+        {
+          "caller": "toPO",
+          "callee": "assessment.getCustomerId",
+          "lineNumber": 54
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setBizNo",
+          "lineNumber": 55
+        },
+        {
+          "caller": "toPO",
+          "callee": "assessment.getBizNo",
+          "lineNumber": 55
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setRiskType",
+          "lineNumber": 56
+        },
+        {
+          "caller": "toPO",
+          "callee": "assessment.getRiskType",
+          "lineNumber": 56
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setRiskScore",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toPO",
+          "callee": "assessment.getRiskScore",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setRiskLevel",
+          "lineNumber": 58
+        },
+        {
+          "caller": "toPO",
+          "callee": "assessment.getRiskLevel",
+          "lineNumber": 58
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setAiAnalysis",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toPO",
+          "callee": "assessment.getAiAnalysis",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setRecommendation",
+          "lineNumber": 60
+        },
+        {
+          "caller": "toPO",
+          "callee": "assessment.getRecommendation",
+          "lineNumber": 60
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setDataPointsJson",
+          "lineNumber": 61
+        },
+        {
+          "caller": "toPO",
+          "callee": "assessment.getDataPointsJson",
+          "lineNumber": 61
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 4,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ai/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 71,
+      "nonEmptyLines": 67,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "forex",
+          "level": 1,
+          "line": 36
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 59
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 68
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/faq/lc_process_faq.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 50,
+      "nonEmptyLines": 35,
+      "sections": [
+        {
+          "heading": "国际信用证办理流程",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. 申请人提交开证申请书",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "2. 银行审核贸易背景真实性",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "3. 开立SWIFT MT700报文",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "4. 通知行通知受益人",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "5. 受益人发货并交单",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "6. 银行审核单据后付款",
+          "level": 2,
+          "line": 37
+        },
+        {
+          "heading": "7. 常见问题",
+          "level": 2,
+          "line": 44
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/faq/spot_forex_faq.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 30,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "即期结售汇常见问题",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. 企业办理即期结售汇需要提供哪些材料？",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "2. 结售汇交易时间是什么时候？",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "3. 结售汇有金额限制吗？",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "4. 即期结售汇的汇率如何确定？",
+          "level": 2,
+          "line": 20
+        },
+        {
+          "heading": "5. 结售汇资金何时到账？",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "6. 个人是否可以办理结售汇？",
+          "level": 2,
+          "line": 28
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/policy/aml_regulation.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 41,
+      "nonEmptyLines": 31,
+      "sections": [
+        {
+          "heading": "反洗钱法规要点",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. 大额交易报告义务",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "2. 可疑交易报告义务",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "3. 客户身份识别制度",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "4. 反洗钱内控制度",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "5. 国际制裁合规",
+          "level": 2,
+          "line": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/policy/forex_administration.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 31,
+      "nonEmptyLines": 23,
+      "sections": [
+        {
+          "heading": "银行外汇展业管理办法要点",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. 事前客户尽调与合规风险分类",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "2. 事中差异化交易控制",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "3. 事后交易监测与风险报告",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "4. 外汇业务合规管理要求",
+          "level": 2,
+          "line": 26
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "forex-auth/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 63,
+      "nonEmptyLines": 59,
+      "metrics": {}
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 169,
+      "nonEmptyLines": 144,
+      "functions": [
+        {
+          "name": "login",
+          "startLine": 53,
+          "endLine": 90,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "refresh",
+          "startLine": 96,
+          "endLine": 122,
+          "params": [
+            "authHeader"
+          ]
+        },
+        {
+          "name": "logout",
+          "startLine": 128,
+          "endLine": 137,
+          "params": [
+            "authHeader"
+          ]
+        },
+        {
+          "name": "me",
+          "startLine": 139,
+          "endLine": 151,
+          "params": [
+            "authHeader"
+          ]
+        },
+        {
+          "name": "recordLoginAttempt",
+          "startLine": 153,
+          "endLine": 158,
+          "params": [
+            "username"
+          ]
+        },
+        {
+          "name": "clearLoginAttempts",
+          "startLine": 160,
+          "endLine": 163,
+          "params": [
+            "username"
+          ]
+        },
+        {
+          "name": "lockAccount",
+          "startLine": 165,
+          "endLine": 168,
+          "params": [
+            "username"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthController",
+          "startLine": 34,
+          "endLine": 169,
+          "methods": [
+            "login",
+            "refresh",
+            "logout",
+            "me",
+            "recordLoginAttempt",
+            "clearLoginAttempts",
+            "lockAccount"
+          ],
+          "properties": [
+            "authAppService",
+            "jwtUtil",
+            "stringRedisTemplate",
+            "MAX_LOGIN_ATTEMPTS",
+            "LOCKOUT_MINUTES",
+            "LOGIN_ATTEMPT_PREFIX",
+            "LOGIN_LOCK_PREFIX"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "login",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "refresh",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "logout",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "me",
+          "line": 139,
+          "isDefault": false
+        },
+        {
+          "name": "AuthController",
+          "line": 34,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "login",
+          "callee": "req.getUsername",
+          "lineNumber": 58
+        },
+        {
+          "caller": "login",
+          "callee": "Boolean.TRUE.equals",
+          "lineNumber": 59
+        },
+        {
+          "caller": "login",
+          "callee": "stringRedisTemplate.hasKey",
+          "lineNumber": 59
+        },
+        {
+          "caller": "login",
+          "callee": "new BusinessException",
+          "lineNumber": 60
+        },
+        {
+          "caller": "login",
+          "callee": "ResultCode.LOCK_FAILED.getCode",
+          "lineNumber": 60
+        },
+        {
+          "caller": "login",
+          "callee": "authAppService.login",
+          "lineNumber": 65
+        },
+        {
+          "caller": "login",
+          "callee": "req.getUsername",
+          "lineNumber": 65
+        },
+        {
+          "caller": "login",
+          "callee": "req.getPassword",
+          "lineNumber": 65
+        },
+        {
+          "caller": "login",
+          "callee": "clearLoginAttempts",
+          "lineNumber": 66
+        },
+        {
+          "caller": "login",
+          "callee": "req.getUsername",
+          "lineNumber": 66
+        },
+        {
+          "caller": "login",
+          "callee": "jwtUtil.parseToken",
+          "lineNumber": 68
+        },
+        {
+          "caller": "login",
+          "callee": "jwtUtil.generateRefreshToken",
+          "lineNumber": 69
+        },
+        {
+          "caller": "login",
+          "callee": "jwtUtil.getUserId",
+          "lineNumber": 70
+        },
+        {
+          "caller": "login",
+          "callee": "jwtUtil.getUsername",
+          "lineNumber": 70
+        },
+        {
+          "caller": "login",
+          "callee": "new TokenResp",
+          "lineNumber": 72
+        },
+        {
+          "caller": "login",
+          "callee": "resp.setAccessToken",
+          "lineNumber": 73
+        },
+        {
+          "caller": "login",
+          "callee": "resp.setRefreshToken",
+          "lineNumber": 74
+        },
+        {
+          "caller": "login",
+          "callee": "resp.setExpiresIn",
+          "lineNumber": 75
+        },
+        {
+          "caller": "login",
+          "callee": "resp.setUserId",
+          "lineNumber": 76
+        },
+        {
+          "caller": "login",
+          "callee": "jwtUtil.getUserId",
+          "lineNumber": 76
+        },
+        {
+          "caller": "login",
+          "callee": "resp.setUsername",
+          "lineNumber": 77
+        },
+        {
+          "caller": "login",
+          "callee": "jwtUtil.getUsername",
+          "lineNumber": 77
+        },
+        {
+          "caller": "login",
+          "callee": "resp.setRealName",
+          "lineNumber": 78
+        },
+        {
+          "caller": "login",
+          "callee": "jwtUtil.getUsername",
+          "lineNumber": 78
+        },
+        {
+          "caller": "login",
+          "callee": "R.ok",
+          "lineNumber": 80
+        },
+        {
+          "caller": "login",
+          "callee": "recordLoginAttempt",
+          "lineNumber": 82
+        },
+        {
+          "caller": "login",
+          "callee": "req.getUsername",
+          "lineNumber": 82
+        },
+        {
+          "caller": "login",
+          "callee": "lockAccount",
+          "lineNumber": 84
+        },
+        {
+          "caller": "login",
+          "callee": "req.getUsername",
+          "lineNumber": 84
+        },
+        {
+          "caller": "login",
+          "callee": "new BusinessException",
+          "lineNumber": 85
+        },
+        {
+          "caller": "login",
+          "callee": "ResultCode.LOCK_FAILED.getCode",
+          "lineNumber": 85
+        },
+        {
+          "caller": "refresh",
+          "callee": "authHeader.replace",
+          "lineNumber": 101
+        },
+        {
+          "caller": "refresh",
+          "callee": "authAppService.isTokenBlacklisted",
+          "lineNumber": 103
+        },
+        {
+          "caller": "refresh",
+          "callee": "new BusinessException",
+          "lineNumber": 104
+        },
+        {
+          "caller": "refresh",
+          "callee": "ResultCode.UNAUTHORIZED.getCode",
+          "lineNumber": 104
+        },
+        {
+          "caller": "refresh",
+          "callee": "authAppService.refreshToken",
+          "lineNumber": 107
+        },
+        {
+          "caller": "refresh",
+          "callee": "jwtUtil.generateRefreshToken",
+          "lineNumber": 108
+        },
+        {
+          "caller": "refresh",
+          "callee": "jwtUtil.getUserId",
+          "lineNumber": 109
+        },
+        {
+          "caller": "refresh",
+          "callee": "jwtUtil.parseToken",
+          "lineNumber": 109
+        },
+        {
+          "caller": "refresh",
+          "callee": "jwtUtil.getUsername",
+          "lineNumber": 110
+        },
+        {
+          "caller": "refresh",
+          "callee": "jwtUtil.parseToken",
+          "lineNumber": 110
+        },
+        {
+          "caller": "refresh",
+          "callee": "jwtUtil.parseToken",
+          "lineNumber": 112
+        },
+        {
+          "caller": "refresh",
+          "callee": "new TokenResp",
+          "lineNumber": 113
+        },
+        {
+          "caller": "refresh",
+          "callee": "resp.setAccessToken",
+          "lineNumber": 114
+        },
+        {
+          "caller": "refresh",
+          "callee": "resp.setRefreshToken",
+          "lineNumber": 115
+        },
+        {
+          "caller": "refresh",
+          "callee": "resp.setExpiresIn",
+          "lineNumber": 116
+        },
+        {
+          "caller": "refresh",
+          "callee": "resp.setUserId",
+          "lineNumber": 117
+        },
+        {
+          "caller": "refresh",
+          "callee": "jwtUtil.getUserId",
+          "lineNumber": 117
+        },
+        {
+          "caller": "refresh",
+          "callee": "resp.setUsername",
+          "lineNumber": 118
+        },
+        {
+          "caller": "refresh",
+          "callee": "jwtUtil.getUsername",
+          "lineNumber": 118
+        },
+        {
+          "caller": "refresh",
+          "callee": "resp.setRealName",
+          "lineNumber": 119
+        },
+        {
+          "caller": "refresh",
+          "callee": "jwtUtil.getUsername",
+          "lineNumber": 119
+        },
+        {
+          "caller": "refresh",
+          "callee": "R.ok",
+          "lineNumber": 121
+        },
+        {
+          "caller": "logout",
+          "callee": "authHeader.replace",
+          "lineNumber": 132
+        },
+        {
+          "caller": "logout",
+          "callee": "authAppService.logout",
+          "lineNumber": 133
+        },
+        {
+          "caller": "logout",
+          "callee": "R.ok",
+          "lineNumber": 134
+        },
+        {
+          "caller": "logout",
+          "callee": "r.setMessage",
+          "lineNumber": 135
+        },
+        {
+          "caller": "me",
+          "callee": "authHeader.replace",
+          "lineNumber": 142
+        },
+        {
+          "caller": "me",
+          "callee": "jwtUtil.parseToken",
+          "lineNumber": 143
+        },
+        {
+          "caller": "me",
+          "callee": "new TokenResp",
+          "lineNumber": 145
+        },
+        {
+          "caller": "me",
+          "callee": "resp.setUserId",
+          "lineNumber": 146
+        },
+        {
+          "caller": "me",
+          "callee": "jwtUtil.getUserId",
+          "lineNumber": 146
+        },
+        {
+          "caller": "me",
+          "callee": "resp.setUsername",
+          "lineNumber": 147
+        },
+        {
+          "caller": "me",
+          "callee": "jwtUtil.getUsername",
+          "lineNumber": 147
+        },
+        {
+          "caller": "me",
+          "callee": "resp.setRealName",
+          "lineNumber": 148
+        },
+        {
+          "caller": "me",
+          "callee": "jwtUtil.getUsername",
+          "lineNumber": 148
+        },
+        {
+          "caller": "me",
+          "callee": "R.ok",
+          "lineNumber": 150
+        },
+        {
+          "caller": "recordLoginAttempt",
+          "callee": "stringRedisTemplate.opsForValue().increment",
+          "lineNumber": 155
+        },
+        {
+          "caller": "recordLoginAttempt",
+          "callee": "stringRedisTemplate.opsForValue",
+          "lineNumber": 155
+        },
+        {
+          "caller": "recordLoginAttempt",
+          "callee": "stringRedisTemplate.expire",
+          "lineNumber": 156
+        },
+        {
+          "caller": "recordLoginAttempt",
+          "callee": "attempts.intValue",
+          "lineNumber": 157
+        },
+        {
+          "caller": "clearLoginAttempts",
+          "callee": "stringRedisTemplate.delete",
+          "lineNumber": 161
+        },
+        {
+          "caller": "clearLoginAttempts",
+          "callee": "stringRedisTemplate.delete",
+          "lineNumber": 162
+        },
+        {
+          "caller": "lockAccount",
+          "callee": "stringRedisTemplate.opsForValue().set",
+          "lineNumber": 166
+        },
+        {
+          "caller": "lockAccount",
+          "callee": "stringRedisTemplate.opsForValue",
+          "lineNumber": 166
+        }
+      ],
+      "metrics": {
+        "importCount": 20,
+        "exportCount": 5,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "LoginReq",
+          "startLine": 7,
+          "endLine": 17,
+          "methods": [],
+          "properties": [
+            "username",
+            "password"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "LoginReq",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 22,
+      "classes": [
+        {
+          "name": "TokenResp",
+          "startLine": 8,
+          "endLine": 30,
+          "methods": [],
+          "properties": [
+            "accessToken",
+            "refreshToken",
+            "expiresIn",
+            "userId",
+            "username",
+            "realName"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "TokenResp",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 61,
+      "functions": [
+        {
+          "name": "login",
+          "startLine": 34,
+          "endLine": 45,
+          "params": [
+            "username",
+            "password"
+          ]
+        },
+        {
+          "name": "refreshToken",
+          "startLine": 48,
+          "endLine": 57,
+          "params": [
+            "refreshToken"
+          ]
+        },
+        {
+          "name": "logout",
+          "startLine": 60,
+          "endLine": 65,
+          "params": [
+            "token"
+          ]
+        },
+        {
+          "name": "isTokenBlacklisted",
+          "startLine": 68,
+          "endLine": 70,
+          "params": [
+            "token"
+          ]
+        },
+        {
+          "name": "hashToken",
+          "startLine": 73,
+          "endLine": 75,
+          "params": [
+            "token"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthAppService",
+          "startLine": 20,
+          "endLine": 76,
+          "methods": [
+            "login",
+            "refreshToken",
+            "logout",
+            "isTokenBlacklisted",
+            "hashToken"
+          ],
+          "properties": [
+            "authDomainService",
+            "jwtUtil",
+            "stringRedisTemplate",
+            "ACCESS_TOKEN_EXPIRE_SECONDS",
+            "TOKEN_BLACKLIST_PREFIX"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "login",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "refreshToken",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "logout",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "isTokenBlacklisted",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "AuthAppService",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "login",
+          "callee": "authDomainService.authenticate",
+          "lineNumber": 35
+        },
+        {
+          "caller": "login",
+          "callee": "user.getRoles().stream()\n                .map(r -> r.getRoleCode()).toList",
+          "lineNumber": 37
+        },
+        {
+          "caller": "login",
+          "callee": "user.getRoles().stream().map",
+          "lineNumber": 37
+        },
+        {
+          "caller": "login",
+          "callee": "user.getRoles().stream",
+          "lineNumber": 37
+        },
+        {
+          "caller": "login",
+          "callee": "user.getRoles",
+          "lineNumber": 37
+        },
+        {
+          "caller": "login",
+          "callee": "r.getRoleCode",
+          "lineNumber": 38
+        },
+        {
+          "caller": "login",
+          "callee": "user.getPermissions().stream()\n                .map(p -> p.getPermCode()).toList",
+          "lineNumber": 40
+        },
+        {
+          "caller": "login",
+          "callee": "user.getPermissions().stream().map",
+          "lineNumber": 40
+        },
+        {
+          "caller": "login",
+          "callee": "user.getPermissions().stream",
+          "lineNumber": 40
+        },
+        {
+          "caller": "login",
+          "callee": "user.getPermissions",
+          "lineNumber": 40
+        },
+        {
+          "caller": "login",
+          "callee": "p.getPermCode",
+          "lineNumber": 41
+        },
+        {
+          "caller": "login",
+          "callee": "jwtUtil.generateAccessToken",
+          "lineNumber": 44
+        },
+        {
+          "caller": "login",
+          "callee": "user.getId",
+          "lineNumber": 44
+        },
+        {
+          "caller": "login",
+          "callee": "user.getUsername",
+          "lineNumber": 44
+        },
+        {
+          "caller": "refreshToken",
+          "callee": "isTokenBlacklisted",
+          "lineNumber": 49
+        },
+        {
+          "caller": "refreshToken",
+          "callee": "new BusinessException",
+          "lineNumber": 50
+        },
+        {
+          "caller": "refreshToken",
+          "callee": "jwtUtil.parseToken",
+          "lineNumber": 52
+        },
+        {
+          "caller": "refreshToken",
+          "callee": "jwtUtil.getUserId",
+          "lineNumber": 53
+        },
+        {
+          "caller": "refreshToken",
+          "callee": "jwtUtil.getUsername",
+          "lineNumber": 54
+        },
+        {
+          "caller": "refreshToken",
+          "callee": "jwtUtil.generateAccessToken",
+          "lineNumber": 56
+        },
+        {
+          "caller": "refreshToken",
+          "callee": "jwtUtil.getRoles",
+          "lineNumber": 56
+        },
+        {
+          "caller": "refreshToken",
+          "callee": "jwtUtil.getPermissions",
+          "lineNumber": 56
+        },
+        {
+          "caller": "logout",
+          "callee": "hashToken",
+          "lineNumber": 61
+        },
+        {
+          "caller": "logout",
+          "callee": "stringRedisTemplate.opsForValue().set",
+          "lineNumber": 62
+        },
+        {
+          "caller": "logout",
+          "callee": "stringRedisTemplate.opsForValue",
+          "lineNumber": 62
+        },
+        {
+          "caller": "isTokenBlacklisted",
+          "callee": "Boolean.TRUE.equals",
+          "lineNumber": 69
+        },
+        {
+          "caller": "isTokenBlacklisted",
+          "callee": "stringRedisTemplate.hasKey",
+          "lineNumber": 69
+        },
+        {
+          "caller": "isTokenBlacklisted",
+          "callee": "hashToken",
+          "lineNumber": 69
+        },
+        {
+          "caller": "hashToken",
+          "callee": "DigestUtils.md5DigestAsHex",
+          "lineNumber": 74
+        },
+        {
+          "caller": "hashToken",
+          "callee": "token.getBytes",
+          "lineNumber": 74
+        }
+      ],
+      "metrics": {
+        "importCount": 10,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 13,
+          "endLine": 15,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthApplication",
+          "startLine": 8,
+          "endLine": 16,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "AuthApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 14
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Permission.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "Permission",
+          "startLine": 9,
+          "endLine": 20,
+          "methods": [],
+          "properties": [
+            "id",
+            "permCode",
+            "permName",
+            "permType",
+            "parentCode",
+            "path"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Permission",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Role.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "Role",
+          "startLine": 11,
+          "endLine": 20,
+          "methods": [],
+          "properties": [
+            "id",
+            "roleCode",
+            "roleName",
+            "permissions"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Role",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 127,
+      "nonEmptyLines": 113,
+      "functions": [
+        {
+          "name": "User",
+          "startLine": 38,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 46,
+          "endLine": 56,
+          "params": [
+            "username",
+            "encodedPassword",
+            "realName",
+            "email",
+            "phone"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 62,
+          "endLine": 73,
+          "params": [
+            "id",
+            "username",
+            "encodedPassword",
+            "realName",
+            "email",
+            "phone",
+            "status"
+          ]
+        },
+        {
+          "name": "assignRoles",
+          "startLine": 79,
+          "endLine": 85,
+          "params": [
+            "roles"
+          ]
+        },
+        {
+          "name": "disable",
+          "startLine": 90,
+          "endLine": 93,
+          "params": []
+        },
+        {
+          "name": "enable",
+          "startLine": 98,
+          "endLine": 101,
+          "params": []
+        },
+        {
+          "name": "isActive",
+          "startLine": 106,
+          "endLine": 108,
+          "params": []
+        },
+        {
+          "name": "changePassword",
+          "startLine": 113,
+          "endLine": 116,
+          "params": [
+            "newEncodedPassword"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 118,
+          "endLine": 126,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "User",
+          "startLine": 16,
+          "endLine": 127,
+          "methods": [
+            "User",
+            "create",
+            "reconstitute",
+            "assignRoles",
+            "disable",
+            "enable",
+            "isActive",
+            "changePassword",
+            "validate"
+          ],
+          "properties": [
+            "id",
+            "username",
+            "password",
+            "realName",
+            "email",
+            "phone",
+            "status",
+            "roles",
+            "permissions"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "assignRoles",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "disable",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "enable",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "isActive",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "changePassword",
+          "line": 113,
+          "isDefault": false
+        },
+        {
+          "name": "User",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new User",
+          "lineNumber": 47
+        },
+        {
+          "caller": "create",
+          "callee": "user.validate",
+          "lineNumber": 54
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new User",
+          "lineNumber": 64
+        },
+        {
+          "caller": "assignRoles",
+          "callee": "roles.stream()\n                .flatMap(r -> r.getPermissions().stream()).collect",
+          "lineNumber": 81
+        },
+        {
+          "caller": "assignRoles",
+          "callee": "roles.stream().flatMap",
+          "lineNumber": 81
+        },
+        {
+          "caller": "assignRoles",
+          "callee": "roles.stream",
+          "lineNumber": 81
+        },
+        {
+          "caller": "assignRoles",
+          "callee": "r.getPermissions().stream",
+          "lineNumber": 82
+        },
+        {
+          "caller": "assignRoles",
+          "callee": "r.getPermissions",
+          "lineNumber": 82
+        },
+        {
+          "caller": "assignRoles",
+          "callee": "java.util.stream.Collectors.toSet",
+          "lineNumber": 83
+        },
+        {
+          "caller": "assignRoles",
+          "callee": "markUpdated",
+          "lineNumber": 84
+        },
+        {
+          "caller": "disable",
+          "callee": "markUpdated",
+          "lineNumber": 92
+        },
+        {
+          "caller": "enable",
+          "callee": "markUpdated",
+          "lineNumber": 100
+        },
+        {
+          "caller": "changePassword",
+          "callee": "markUpdated",
+          "lineNumber": 115
+        },
+        {
+          "caller": "validate",
+          "callee": "username.isBlank",
+          "lineNumber": 120
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 121
+        },
+        {
+          "caller": "validate",
+          "callee": "password.isBlank",
+          "lineNumber": 123
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 124
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 8,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/PasswordHash.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 31,
+      "functions": [
+        {
+          "name": "PasswordHash",
+          "startLine": 16,
+          "endLine": 18,
+          "params": [
+            "hash"
+          ]
+        },
+        {
+          "name": "encode",
+          "startLine": 20,
+          "endLine": 22,
+          "params": [
+            "rawPassword"
+          ]
+        },
+        {
+          "name": "fromHash",
+          "startLine": 24,
+          "endLine": 26,
+          "params": [
+            "hash"
+          ]
+        },
+        {
+          "name": "matches",
+          "startLine": 28,
+          "endLine": 30,
+          "params": [
+            "rawPassword"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 32,
+          "endLine": 37,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 39,
+          "endLine": 42,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PasswordHash",
+          "startLine": 11,
+          "endLine": 43,
+          "methods": [
+            "PasswordHash",
+            "encode",
+            "fromHash",
+            "matches",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "hash"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "encode",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "fromHash",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "matches",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "PasswordHash",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "encode",
+          "callee": "new PasswordHash",
+          "lineNumber": 21
+        },
+        {
+          "caller": "encode",
+          "callee": "BCrypt.hashpw",
+          "lineNumber": 21
+        },
+        {
+          "caller": "encode",
+          "callee": "BCrypt.gensalt",
+          "lineNumber": 21
+        },
+        {
+          "caller": "fromHash",
+          "callee": "new PasswordHash",
+          "lineNumber": 25
+        },
+        {
+          "caller": "matches",
+          "callee": "BCrypt.checkpw",
+          "lineNumber": 29
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 36
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 41
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/TokenVo.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 34,
+      "nonEmptyLines": 26,
+      "functions": [
+        {
+          "name": "TokenVo",
+          "startLine": 17,
+          "endLine": 21,
+          "params": [
+            "accessToken",
+            "refreshToken",
+            "expiresIn"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 23,
+          "endLine": 28,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 30,
+          "endLine": 33,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "TokenVo",
+          "startLine": 10,
+          "endLine": 34,
+          "methods": [
+            "TokenVo",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "accessToken",
+            "refreshToken",
+            "expiresIn"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "TokenVo",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "TokenVo",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 27
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 32
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "UserRepository",
+          "startLine": 11,
+          "endLine": 26,
+          "methods": [
+            "save",
+            "findById",
+            "findByUsername",
+            "findRolesByUserId",
+            "findPermissionsByRoleIds",
+            "findAllPermissions",
+            "existsByUsername"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserRepository",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/service/AuthenticationDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 54,
+      "nonEmptyLines": 41,
+      "functions": [
+        {
+          "name": "authenticate",
+          "startLine": 30,
+          "endLine": 48,
+          "params": [
+            "username",
+            "rawPassword"
+          ]
+        },
+        {
+          "name": "encodePassword",
+          "startLine": 51,
+          "endLine": 53,
+          "params": [
+            "rawPassword"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthenticationDomainService",
+          "startLine": 19,
+          "endLine": 54,
+          "methods": [
+            "authenticate",
+            "encodePassword"
+          ],
+          "properties": [
+            "BCRYPT_ROUNDS",
+            "userRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "authenticate",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "encodePassword",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "AuthenticationDomainService",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "authenticate",
+          "callee": "userRepository.findByUsername(username).orElseThrow",
+          "lineNumber": 31
+        },
+        {
+          "caller": "authenticate",
+          "callee": "userRepository.findByUsername",
+          "lineNumber": 31
+        },
+        {
+          "caller": "authenticate",
+          "callee": "new BusinessException",
+          "lineNumber": 32
+        },
+        {
+          "caller": "authenticate",
+          "callee": "user.isActive",
+          "lineNumber": 34
+        },
+        {
+          "caller": "authenticate",
+          "callee": "new BusinessException",
+          "lineNumber": 35
+        },
+        {
+          "caller": "authenticate",
+          "callee": "BCrypt.checkpw",
+          "lineNumber": 38
+        },
+        {
+          "caller": "authenticate",
+          "callee": "user.getPassword",
+          "lineNumber": 38
+        },
+        {
+          "caller": "authenticate",
+          "callee": "new BusinessException",
+          "lineNumber": 39
+        },
+        {
+          "caller": "authenticate",
+          "callee": "userRepository.findRolesByUserId",
+          "lineNumber": 42
+        },
+        {
+          "caller": "authenticate",
+          "callee": "user.getId",
+          "lineNumber": 42
+        },
+        {
+          "caller": "authenticate",
+          "callee": "roles.stream().map(Role::getId).collect",
+          "lineNumber": 43
+        },
+        {
+          "caller": "authenticate",
+          "callee": "roles.stream().map",
+          "lineNumber": 43
+        },
+        {
+          "caller": "authenticate",
+          "callee": "roles.stream",
+          "lineNumber": 43
+        },
+        {
+          "caller": "authenticate",
+          "callee": "java.util.stream.Collectors.toSet",
+          "lineNumber": 43
+        },
+        {
+          "caller": "authenticate",
+          "callee": "roles.forEach",
+          "lineNumber": 44
+        },
+        {
+          "caller": "authenticate",
+          "callee": "r.getPermissions().addAll",
+          "lineNumber": 44
+        },
+        {
+          "caller": "authenticate",
+          "callee": "r.getPermissions",
+          "lineNumber": 44
+        },
+        {
+          "caller": "authenticate",
+          "callee": "userRepository.findPermissionsByRoleIds",
+          "lineNumber": 44
+        },
+        {
+          "caller": "authenticate",
+          "callee": "user.assignRoles",
+          "lineNumber": 46
+        },
+        {
+          "caller": "encodePassword",
+          "callee": "BCrypt.hashpw",
+          "lineNumber": 52
+        },
+        {
+          "caller": "encodePassword",
+          "callee": "BCrypt.gensalt",
+          "lineNumber": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 28,
+      "classes": [
+        {
+          "name": "UserMapper",
+          "startLine": 15,
+          "endLine": 37,
+          "methods": [
+            "selectByUsername",
+            "selectRolesByUserId",
+            "selectPermissionsByRoleIds",
+            "selectAllPermissions"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserMapper",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/PermissionPO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "PermissionPO",
+          "startLine": 10,
+          "endLine": 21,
+          "methods": [],
+          "properties": [
+            "permCode",
+            "permName",
+            "permType",
+            "parentCode",
+            "path",
+            "sortOrder"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PermissionPO",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/RolePermissionPO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 12,
+      "classes": [
+        {
+          "name": "RolePermissionPO",
+          "startLine": 10,
+          "endLine": 17,
+          "methods": [],
+          "properties": [
+            "roleId",
+            "permissionId"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RolePermissionPO",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

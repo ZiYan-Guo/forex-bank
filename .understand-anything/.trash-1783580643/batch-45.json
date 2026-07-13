@@ -1,0 +1,900 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-payment/src/test/java/com/forex/payment/application/service/BankCodeValidationServiceTest.java",
+      "type": "file",
+      "name": "BankCodeValidationServiceTest.java",
+      "filePath": "forex-payment/src/test/java/com/forex/payment/application/service/BankCodeValidationServiceTest.java",
+      "summary": "BankCodeValidationServiceTest.java 是 跨境支付 模块中的服务组件，主要定义 BankCodeValidationServiceTest，承担该业务域的分层协作职责。",
+      "tags": [
+        "service",
+        "跨境支付",
+        "java",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-payment/src/test/java/com/forex/payment/application/service/BankCodeValidationServiceTest.java:BankCodeValidationServiceTest",
+      "type": "class",
+      "name": "BankCodeValidationServiceTest",
+      "filePath": "forex-payment/src/test/java/com/forex/payment/application/service/BankCodeValidationServiceTest.java",
+      "lineRange": [
+        10,
+        65
+      ],
+      "summary": "BankCodeValidationServiceTest 是 跨境支付 模块的服务组件，封装 7 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "service",
+        "跨境支付",
+        "java",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:forex-position/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-position/pom.xml",
+      "summary": "pom.xml 是 头寸管理 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "头寸管理"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-position/src/main/java/com/forex/position/PositionApplication.java",
+      "type": "file",
+      "name": "PositionApplication.java",
+      "filePath": "forex-position/src/main/java/com/forex/position/PositionApplication.java",
+      "summary": "PositionApplication.java 是 头寸管理 模块中的启动入口，主要定义 PositionApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "头寸管理",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-position/src/main/java/com/forex/position/PositionApplication.java:PositionApplication",
+      "type": "class",
+      "name": "PositionApplication",
+      "filePath": "forex-position/src/main/java/com/forex/position/PositionApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "PositionApplication 是 头寸管理 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "头寸管理",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-position/src/main/java/com/forex/position/PositionApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-position/src/main/java/com/forex/position/PositionApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 头寸管理 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "头寸管理",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-position/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-position/src/main/resources/application.yml",
+      "summary": "application.yml 配置 头寸管理 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "头寸管理"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-precious-metal/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-precious-metal/pom.xml",
+      "summary": "pom.xml 是 precious-metal 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "precious-metal"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java",
+      "type": "file",
+      "name": "PreciousMetalApplication.java",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java",
+      "summary": "PreciousMetalApplication.java 是 precious-metal 模块中的启动入口，主要定义 PreciousMetalApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "precious-metal",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java:PreciousMetalApplication",
+      "type": "class",
+      "name": "PreciousMetalApplication",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "PreciousMetalApplication 是 precious-metal 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "precious-metal",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 precious-metal 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "precious-metal",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-precious-metal/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-precious-metal/src/main/resources/application.yml",
+      "summary": "application.yml 配置 precious-metal 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "precious-metal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-rate/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-rate/pom.xml",
+      "summary": "pom.xml 是 汇率服务 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "汇率服务"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java",
+      "type": "file",
+      "name": "RateQuery.java",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java",
+      "summary": "RateQuery.java 是 汇率服务 模块中的传输对象，主要定义 RateQuery，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "汇率服务",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java:RateQuery",
+      "type": "class",
+      "name": "RateQuery",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java",
+      "lineRange": [
+        7,
+        12
+      ],
+      "summary": "RateQuery 是 汇率服务 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "汇率服务",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-rate/src/main/java/com/forex/rate/RateApplication.java",
+      "type": "file",
+      "name": "RateApplication.java",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/RateApplication.java",
+      "summary": "RateApplication.java 是 汇率服务 模块中的启动入口，主要定义 RateApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "汇率服务",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-rate/src/main/java/com/forex/rate/RateApplication.java:RateApplication",
+      "type": "class",
+      "name": "RateApplication",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/RateApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "RateApplication 是 汇率服务 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "汇率服务",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/RateApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/RateApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 汇率服务 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "汇率服务",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-rate/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-rate/src/main/resources/application.yml",
+      "summary": "application.yml 配置 汇率服务 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "汇率服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-reporting/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-reporting/pom.xml",
+      "summary": "pom.xml 是 reporting 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "reporting"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java",
+      "type": "file",
+      "name": "ReportingApplication.java",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java",
+      "summary": "ReportingApplication.java 是 reporting 模块中的启动入口，主要定义 ReportingApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "reporting",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java:ReportingApplication",
+      "type": "class",
+      "name": "ReportingApplication",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "ReportingApplication 是 reporting 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "reporting",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 reporting 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "reporting",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-reporting/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-reporting/src/main/resources/application.yml",
+      "summary": "application.yml 配置 reporting 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "reporting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-risk/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-risk/pom.xml",
+      "summary": "pom.xml 是 risk 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "risk"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java",
+      "type": "file",
+      "name": "CompleteTaskReq.java",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java",
+      "summary": "CompleteTaskReq.java 是 risk 模块中的传输对象，主要定义 CompleteTaskReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "risk",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java:CompleteTaskReq",
+      "type": "class",
+      "name": "CompleteTaskReq",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java",
+      "lineRange": [
+        6,
+        11
+      ],
+      "summary": "CompleteTaskReq 是 risk 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "risk",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java",
+      "type": "file",
+      "name": "GenerateSamplingReq.java",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java",
+      "summary": "GenerateSamplingReq.java 是 risk 模块中的传输对象，主要定义 GenerateSamplingReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "risk",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java:GenerateSamplingReq",
+      "type": "class",
+      "name": "GenerateSamplingReq",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java",
+      "lineRange": [
+        6,
+        10
+      ],
+      "summary": "GenerateSamplingReq 是 risk 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "risk",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java",
+      "type": "file",
+      "name": "SamplingEvaluateReq.java",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java",
+      "summary": "SamplingEvaluateReq.java 是 risk 模块中的传输对象，主要定义 SamplingEvaluateReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "risk",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java:SamplingEvaluateReq",
+      "type": "class",
+      "name": "SamplingEvaluateReq",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java",
+      "lineRange": [
+        7,
+        15
+      ],
+      "summary": "SamplingEvaluateReq 是 risk 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "risk",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/config/RocketMqConsumerConfig.java",
+      "type": "file",
+      "name": "RocketMqConsumerConfig.java",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/infrastructure/config/RocketMqConsumerConfig.java",
+      "summary": "RocketMqConsumerConfig.java 是 risk 模块中的配置，主要定义 RocketMqConsumerConfig，承担该业务域的分层协作职责。",
+      "tags": [
+        "configuration",
+        "risk",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-risk/src/main/java/com/forex/risk/infrastructure/config/RocketMqConsumerConfig.java:RocketMqConsumerConfig",
+      "type": "class",
+      "name": "RocketMqConsumerConfig",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/infrastructure/config/RocketMqConsumerConfig.java",
+      "lineRange": [
+        11,
+        17
+      ],
+      "summary": "RocketMqConsumerConfig 是 risk 模块的配置，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "configuration",
+        "risk",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-risk/src/main/java/com/forex/risk/RiskApplication.java",
+      "type": "file",
+      "name": "RiskApplication.java",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/RiskApplication.java",
+      "summary": "RiskApplication.java 是 risk 模块中的启动入口，主要定义 RiskApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "risk",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-risk/src/main/java/com/forex/risk/RiskApplication.java:RiskApplication",
+      "type": "class",
+      "name": "RiskApplication",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/RiskApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "RiskApplication 是 risk 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "risk",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/RiskApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/RiskApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 risk 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "risk",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-risk/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-risk/src/main/resources/application.yml",
+      "summary": "application.yml 配置 risk 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "risk"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-saccr/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-saccr/pom.xml",
+      "summary": "pom.xml 是 saccr 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "saccr"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java",
+      "type": "file",
+      "name": "SaccrApplication.java",
+      "filePath": "forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java",
+      "summary": "SaccrApplication.java 是 saccr 模块中的启动入口，主要定义 SaccrApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "saccr",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java:SaccrApplication",
+      "type": "class",
+      "name": "SaccrApplication",
+      "filePath": "forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "SaccrApplication 是 saccr 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "saccr",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 saccr 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "saccr",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-saccr/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-saccr/src/main/resources/application.yml",
+      "summary": "application.yml 配置 saccr 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "saccr"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-schedule/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-schedule/pom.xml",
+      "summary": "pom.xml 是 调度任务 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "调度任务"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-payment/src/test/java/com/forex/payment/application/service/BankCodeValidationServiceTest.java",
+      "target": "class:forex-payment/src/test/java/com/forex/payment/application/service/BankCodeValidationServiceTest.java:BankCodeValidationServiceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-position/src/main/java/com/forex/position/PositionApplication.java",
+      "target": "class:forex-position/src/main/java/com/forex/position/PositionApplication.java:PositionApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-position/src/main/java/com/forex/position/PositionApplication.java",
+      "target": "class:forex-position/src/main/java/com/forex/position/PositionApplication.java:PositionApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-position/src/main/java/com/forex/position/PositionApplication.java",
+      "target": "function:forex-position/src/main/java/com/forex/position/PositionApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-position/src/main/java/com/forex/position/PositionApplication.java",
+      "target": "function:forex-position/src/main/java/com/forex/position/PositionApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java:PreciousMetalApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java",
+      "target": "class:forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java:PreciousMetalApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java",
+      "target": "function:forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java:RateQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java:RateQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/RateApplication.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/RateApplication.java:RateApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/RateApplication.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/RateApplication.java:RateApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/RateApplication.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/RateApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/RateApplication.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/RateApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java",
+      "target": "class:forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java:ReportingApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java",
+      "target": "class:forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java:ReportingApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java",
+      "target": "function:forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java:CompleteTaskReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java:CompleteTaskReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java:GenerateSamplingReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java:GenerateSamplingReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java:SamplingEvaluateReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java:SamplingEvaluateReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/config/RocketMqConsumerConfig.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/infrastructure/config/RocketMqConsumerConfig.java:RocketMqConsumerConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/config/RocketMqConsumerConfig.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/infrastructure/config/RocketMqConsumerConfig.java:RocketMqConsumerConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/RiskApplication.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/RiskApplication.java:RiskApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/RiskApplication.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/RiskApplication.java:RiskApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/RiskApplication.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/RiskApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/RiskApplication.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/RiskApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java",
+      "target": "class:forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java:SaccrApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java",
+      "target": "class:forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java:SaccrApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java",
+      "target": "function:forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java",
+      "target": "function:forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

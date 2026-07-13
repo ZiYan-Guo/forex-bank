@@ -1,0 +1,3396 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "type": "file",
+      "name": "KnowledgeSearchTool.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "summary": "KnowledgeSearchTool.java 是 AI智能服务 模块中的Agent 工具，主要定义 KnowledgeSearchTool，承担该业务域的分层协作职责。",
+      "tags": [
+        "agent-tool",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java:KnowledgeSearchTool",
+      "type": "class",
+      "name": "KnowledgeSearchTool",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "lineRange": [
+        14,
+        50
+      ],
+      "summary": "KnowledgeSearchTool 是 AI智能服务 模块的Agent 工具，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "agent-tool",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java:init",
+      "type": "function",
+      "name": "init",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "lineRange": [
+        21,
+        24
+      ],
+      "summary": "init 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java:name",
+      "type": "function",
+      "name": "name",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "lineRange": [
+        26,
+        29
+      ],
+      "summary": "name 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java:description",
+      "type": "function",
+      "name": "description",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "lineRange": [
+        31,
+        34
+      ],
+      "summary": "description 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java:execute",
+      "type": "function",
+      "name": "execute",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "lineRange": [
+        36,
+        49
+      ],
+      "summary": "execute 实现 AI智能服务 模块中的关键处理步骤，参数包括 parameters。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "type": "file",
+      "name": "ReportGenerationTool.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "summary": "ReportGenerationTool.java 是 AI智能服务 模块中的Agent 工具，主要定义 ReportGenerationTool，承担该业务域的分层协作职责。",
+      "tags": [
+        "agent-tool",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java:ReportGenerationTool",
+      "type": "class",
+      "name": "ReportGenerationTool",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "lineRange": [
+        14,
+        55
+      ],
+      "summary": "ReportGenerationTool 是 AI智能服务 模块的Agent 工具，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "agent-tool",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java:init",
+      "type": "function",
+      "name": "init",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "lineRange": [
+        21,
+        24
+      ],
+      "summary": "init 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java:name",
+      "type": "function",
+      "name": "name",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "lineRange": [
+        26,
+        29
+      ],
+      "summary": "name 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java:description",
+      "type": "function",
+      "name": "description",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "lineRange": [
+        31,
+        34
+      ],
+      "summary": "description 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java:execute",
+      "type": "function",
+      "name": "execute",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "lineRange": [
+        36,
+        54
+      ],
+      "summary": "execute 实现 AI智能服务 模块中的关键处理步骤，参数包括 parameters。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "type": "file",
+      "name": "RiskEvaluationTool.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "summary": "RiskEvaluationTool.java 是 AI智能服务 模块中的Agent 工具，主要定义 RiskEvaluationTool，承担该业务域的分层协作职责。",
+      "tags": [
+        "agent-tool",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java:RiskEvaluationTool",
+      "type": "class",
+      "name": "RiskEvaluationTool",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "lineRange": [
+        13,
+        48
+      ],
+      "summary": "RiskEvaluationTool 是 AI智能服务 模块的Agent 工具，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "agent-tool",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java:init",
+      "type": "function",
+      "name": "init",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "lineRange": [
+        20,
+        23
+      ],
+      "summary": "init 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java:name",
+      "type": "function",
+      "name": "name",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "lineRange": [
+        25,
+        28
+      ],
+      "summary": "name 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java:description",
+      "type": "function",
+      "name": "description",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "lineRange": [
+        30,
+        33
+      ],
+      "summary": "description 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java:execute",
+      "type": "function",
+      "name": "execute",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "lineRange": [
+        35,
+        47
+      ],
+      "summary": "execute 实现 AI智能服务 模块中的关键处理步骤，参数包括 parameters。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "type": "file",
+      "name": "TradeExecutionTool.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "summary": "TradeExecutionTool.java 是 AI智能服务 模块中的Agent 工具，主要定义 TradeExecutionTool，承担该业务域的分层协作职责。",
+      "tags": [
+        "agent-tool",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java:TradeExecutionTool",
+      "type": "class",
+      "name": "TradeExecutionTool",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "lineRange": [
+        14,
+        54
+      ],
+      "summary": "TradeExecutionTool 是 AI智能服务 模块的Agent 工具，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "agent-tool",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java:init",
+      "type": "function",
+      "name": "init",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "lineRange": [
+        20,
+        23
+      ],
+      "summary": "init 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java:name",
+      "type": "function",
+      "name": "name",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "lineRange": [
+        25,
+        28
+      ],
+      "summary": "name 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java:description",
+      "type": "function",
+      "name": "description",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "lineRange": [
+        30,
+        33
+      ],
+      "summary": "description 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java:execute",
+      "type": "function",
+      "name": "execute",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "lineRange": [
+        35,
+        53
+      ],
+      "summary": "execute 实现 AI智能服务 模块中的关键处理步骤，参数包括 parameters。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "type": "file",
+      "name": "ToolRegistry.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "summary": "ToolRegistry.java 是 AI智能服务 模块中的Agent 工具，主要定义 ToolRegistry，承担该业务域的分层协作职责。",
+      "tags": [
+        "agent-tool",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:ToolRegistry",
+      "type": "class",
+      "name": "ToolRegistry",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "lineRange": [
+        9,
+        39
+      ],
+      "summary": "ToolRegistry 是 AI智能服务 模块的Agent 工具，封装 5 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "agent-tool",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:register",
+      "type": "function",
+      "name": "register",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "lineRange": [
+        14,
+        17
+      ],
+      "summary": "register 实现 AI智能服务 模块中的关键处理步骤，参数包括 tool。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:get",
+      "type": "function",
+      "name": "get",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "lineRange": [
+        19,
+        25
+      ],
+      "summary": "get 实现 AI智能服务 模块中的关键处理步骤，参数包括 name。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:execute",
+      "type": "function",
+      "name": "execute",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "lineRange": [
+        27,
+        30
+      ],
+      "summary": "execute 实现 AI智能服务 模块中的关键处理步骤，参数包括 toolName、parameters。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:getAllTools",
+      "type": "function",
+      "name": "getAllTools",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "lineRange": [
+        32,
+        34
+      ],
+      "summary": "getAllTools 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:getToolNames",
+      "type": "function",
+      "name": "getToolNames",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "lineRange": [
+        36,
+        38
+      ],
+      "summary": "getToolNames 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "agent-tool"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "type": "file",
+      "name": "AiDomainService.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "summary": "AiDomainService.java 是 AI智能服务 模块中的领域服务，主要定义 AiDomainService，承担该业务域的分层协作职责。",
+      "tags": [
+        "domain-service",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java:AiDomainService",
+      "type": "class",
+      "name": "AiDomainService",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "lineRange": [
+        8,
+        19
+      ],
+      "summary": "AiDomainService 是 AI智能服务 模块的领域服务，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "domain-service",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "type": "file",
+      "name": "SmartRagService.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "summary": "SmartRagService.java 是 AI智能服务 模块中的服务组件，主要定义 SmartRagService，承担该业务域的分层协作职责。",
+      "tags": [
+        "service",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService",
+      "type": "class",
+      "name": "SmartRagService",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "lineRange": [
+        10,
+        36
+      ],
+      "summary": "SmartRagService 是 AI智能服务 模块的服务组件，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "service",
+        "AI智能服务",
+        "java",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:search",
+      "type": "function",
+      "name": "search",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "lineRange": [
+        17,
+        35
+      ],
+      "summary": "search 实现 AI智能服务 模块中的关键处理步骤，参数包括 query。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/DeepSeekConfig.java",
+      "type": "file",
+      "name": "DeepSeekConfig.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/DeepSeekConfig.java",
+      "summary": "DeepSeekConfig.java 是 AI智能服务 模块中的配置，主要定义 DeepSeekConfig，承担该业务域的分层协作职责。",
+      "tags": [
+        "configuration",
+        "AI智能服务",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/config/DeepSeekConfig.java:DeepSeekConfig",
+      "type": "class",
+      "name": "DeepSeekConfig",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/DeepSeekConfig.java",
+      "lineRange": [
+        7,
+        21
+      ],
+      "summary": "DeepSeekConfig 是 AI智能服务 模块的配置，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "configuration",
+        "AI智能服务",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "type": "file",
+      "name": "ModelProviderConfig.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "summary": "ModelProviderConfig.java 是 AI智能服务 模块中的配置，主要定义 ModelProviderConfig，承担该业务域的分层协作职责。",
+      "tags": [
+        "configuration",
+        "AI智能服务",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:ModelProviderConfig",
+      "type": "class",
+      "name": "ModelProviderConfig",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "lineRange": [
+        7,
+        50
+      ],
+      "summary": "ModelProviderConfig 是 AI智能服务 模块的配置，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "configuration",
+        "AI智能服务",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:isOllamaProvider",
+      "type": "function",
+      "name": "isOllamaProvider",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "lineRange": [
+        32,
+        34
+      ],
+      "summary": "isOllamaProvider 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:isOpenAiProvider",
+      "type": "function",
+      "name": "isOpenAiProvider",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "lineRange": [
+        36,
+        38
+      ],
+      "summary": "isOpenAiProvider 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:isDeepSeekProvider",
+      "type": "function",
+      "name": "isDeepSeekProvider",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "lineRange": [
+        40,
+        42
+      ],
+      "summary": "isDeepSeekProvider 实现 AI智能服务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:resolveModel",
+      "type": "function",
+      "name": "resolveModel",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "lineRange": [
+        44,
+        49
+      ],
+      "summary": "resolveModel 实现 AI智能服务 模块中的关键处理步骤，参数包括 preferredModel。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java",
+      "type": "file",
+      "name": "DeepSeekChatClient.java",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java",
+      "summary": "DeepSeekChatClient.java 是 AI智能服务 模块中的代码文件，主要定义 DeepSeekChatClient，承担该业务域的分层协作职责。",
+      "tags": [
+        "code",
+        "AI智能服务",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java:DeepSeekChatClient",
+      "type": "class",
+      "name": "DeepSeekChatClient",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java",
+      "lineRange": [
+        16,
+        97
+      ],
+      "summary": "DeepSeekChatClient 是 AI智能服务 模块的代码文件，封装 3 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "code",
+        "AI智能服务",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java:chat",
+      "type": "function",
+      "name": "chat",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java",
+      "lineRange": [
+        27,
+        31
+      ],
+      "summary": "chat 实现 AI智能服务 模块中的关键处理步骤，参数包括 systemPrompt、userMessage。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java:generateLocalResponse",
+      "type": "function",
+      "name": "generateLocalResponse",
+      "filePath": "forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java",
+      "lineRange": [
+        82,
+        96
+      ],
+      "summary": "generateLocalResponse 实现 AI智能服务 模块中的关键处理步骤，参数包括 messages。",
+      "tags": [
+        "function",
+        "AI智能服务",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "type": "file",
+      "name": "AuthController.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "summary": "AuthController.java 是 认证授权 模块中的REST 控制器，主要定义 AuthController，承担该业务域的分层协作职责。",
+      "tags": [
+        "api-handler",
+        "认证授权",
+        "java",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java:AuthController",
+      "type": "class",
+      "name": "AuthController",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "lineRange": [
+        34,
+        169
+      ],
+      "summary": "AuthController 是 认证授权 模块的REST 控制器，封装 7 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "api-handler",
+        "认证授权",
+        "java",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java:login",
+      "type": "function",
+      "name": "login",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "lineRange": [
+        53,
+        90
+      ],
+      "summary": "login 实现 认证授权 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "认证授权",
+        "api-handler"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java:refresh",
+      "type": "function",
+      "name": "refresh",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "lineRange": [
+        96,
+        122
+      ],
+      "summary": "refresh 实现 认证授权 模块中的关键处理步骤，参数包括 authHeader。",
+      "tags": [
+        "function",
+        "认证授权",
+        "api-handler"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java:logout",
+      "type": "function",
+      "name": "logout",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "lineRange": [
+        128,
+        137
+      ],
+      "summary": "logout 实现 认证授权 模块中的关键处理步骤，参数包括 authHeader。",
+      "tags": [
+        "function",
+        "认证授权",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java:me",
+      "type": "function",
+      "name": "me",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "lineRange": [
+        139,
+        151
+      ],
+      "summary": "me 实现 认证授权 模块中的关键处理步骤，参数包括 authHeader。",
+      "tags": [
+        "function",
+        "认证授权",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java",
+      "type": "file",
+      "name": "LoginReq.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java",
+      "summary": "LoginReq.java 是 认证授权 模块中的传输对象，主要定义 LoginReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "认证授权",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java:LoginReq",
+      "type": "class",
+      "name": "LoginReq",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java",
+      "lineRange": [
+        7,
+        17
+      ],
+      "summary": "LoginReq 是 认证授权 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "认证授权",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java",
+      "type": "file",
+      "name": "TokenResp.java",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java",
+      "summary": "TokenResp.java 是 认证授权 模块中的传输对象，主要定义 TokenResp，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "认证授权",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java:TokenResp",
+      "type": "class",
+      "name": "TokenResp",
+      "filePath": "forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java",
+      "lineRange": [
+        8,
+        30
+      ],
+      "summary": "TokenResp 是 认证授权 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "认证授权",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "type": "file",
+      "name": "CashPoolController.java",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "summary": "CashPoolController.java 是 cashpool 模块中的REST 控制器，主要定义 CashPoolController，承担该业务域的分层协作职责。",
+      "tags": [
+        "api-handler",
+        "cashpool",
+        "java",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:CashPoolController",
+      "type": "class",
+      "name": "CashPoolController",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "lineRange": [
+        35,
+        194
+      ],
+      "summary": "CashPoolController 是 cashpool 模块的REST 控制器，封装 6 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "api-handler",
+        "cashpool",
+        "java",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:createPool",
+      "type": "function",
+      "name": "createPool",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "lineRange": [
+        48,
+        74
+      ],
+      "summary": "createPool 实现 cashpool 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "cashpool",
+        "api-handler"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:getPoolById",
+      "type": "function",
+      "name": "getPoolById",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "lineRange": [
+        80,
+        95
+      ],
+      "summary": "getPoolById 实现 cashpool 模块中的关键处理步骤，参数包括 poolId。",
+      "tags": [
+        "function",
+        "cashpool",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:addMember",
+      "type": "function",
+      "name": "addMember",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "lineRange": [
+        101,
+        125
+      ],
+      "summary": "addMember 实现 cashpool 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "cashpool",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:getMembers",
+      "type": "function",
+      "name": "getMembers",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "lineRange": [
+        131,
+        147
+      ],
+      "summary": "getMembers 实现 cashpool 模块中的关键处理步骤，参数包括 poolId。",
+      "tags": [
+        "function",
+        "cashpool",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:calculateQuota",
+      "type": "function",
+      "name": "calculateQuota",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "lineRange": [
+        153,
+        170
+      ],
+      "summary": "calculateQuota 实现 cashpool 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "cashpool",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:getQuotaUsage",
+      "type": "function",
+      "name": "getQuotaUsage",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "lineRange": [
+        176,
+        193
+      ],
+      "summary": "getQuotaUsage 实现 cashpool 模块中的关键处理步骤，参数包括 poolId。",
+      "tags": [
+        "function",
+        "cashpool",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "type": "file",
+      "name": "OverseasLendingController.java",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "summary": "OverseasLendingController.java 是 cashpool 模块中的REST 控制器，主要定义 OverseasLendingController，承担该业务域的分层协作职责。",
+      "tags": [
+        "api-handler",
+        "cashpool",
+        "java",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:OverseasLendingController",
+      "type": "class",
+      "name": "OverseasLendingController",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "lineRange": [
+        33,
+        179
+      ],
+      "summary": "OverseasLendingController 是 cashpool 模块的REST 控制器，封装 5 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "api-handler",
+        "cashpool",
+        "java",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:createLending",
+      "type": "function",
+      "name": "createLending",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "lineRange": [
+        44,
+        77
+      ],
+      "summary": "createLending 实现 cashpool 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "cashpool",
+        "api-handler"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:approveLending",
+      "type": "function",
+      "name": "approveLending",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "lineRange": [
+        83,
+        94
+      ],
+      "summary": "approveLending 实现 cashpool 模块中的关键处理步骤，参数包括 contractNo。",
+      "tags": [
+        "function",
+        "cashpool",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:recordRepayment",
+      "type": "function",
+      "name": "recordRepayment",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "lineRange": [
+        100,
+        121
+      ],
+      "summary": "recordRepayment 实现 cashpool 模块中的关键处理步骤，参数包括 contractNo、req。",
+      "tags": [
+        "function",
+        "cashpool",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:getLendingByContractNo",
+      "type": "function",
+      "name": "getLendingByContractNo",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "lineRange": [
+        127,
+        146
+      ],
+      "summary": "getLendingByContractNo 实现 cashpool 模块中的关键处理步骤，参数包括 contractNo。",
+      "tags": [
+        "function",
+        "cashpool",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:queryLendingPage",
+      "type": "function",
+      "name": "queryLendingPage",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "lineRange": [
+        152,
+        178
+      ],
+      "summary": "queryLendingPage 实现 cashpool 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "cashpool",
+        "api-handler"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "type": "file",
+      "name": "QuotaCalculationEngine.java",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "summary": "QuotaCalculationEngine.java 是 cashpool 模块中的领域服务，主要定义 QuotaCalculationEngine，承担该业务域的分层协作职责。",
+      "tags": [
+        "domain-service",
+        "cashpool",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java:QuotaCalculationEngine",
+      "type": "class",
+      "name": "QuotaCalculationEngine",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "lineRange": [
+        18,
+        77
+      ],
+      "summary": "QuotaCalculationEngine 是 cashpool 模块的领域服务，封装 3 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "domain-service",
+        "cashpool",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java:calculateDebtLimit",
+      "type": "function",
+      "name": "calculateDebtLimit",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "lineRange": [
+        32,
+        42
+      ],
+      "summary": "calculateDebtLimit 实现 cashpool 模块中的关键处理步骤，参数包括 netAssets。",
+      "tags": [
+        "function",
+        "cashpool",
+        "domain-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java:calculateLendingLimit",
+      "type": "function",
+      "name": "calculateLendingLimit",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "lineRange": [
+        49,
+        59
+      ],
+      "summary": "calculateLendingLimit 实现 cashpool 模块中的关键处理步骤，参数包括 netAssets。",
+      "tags": [
+        "function",
+        "cashpool",
+        "domain-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java:calculateUsagePct",
+      "type": "function",
+      "name": "calculateUsagePct",
+      "filePath": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "lineRange": [
+        66,
+        76
+      ],
+      "summary": "calculateUsagePct 实现 cashpool 模块中的关键处理步骤，参数包括 used、total。",
+      "tags": [
+        "function",
+        "cashpool",
+        "domain-service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "type": "file",
+      "name": "CipsController.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "summary": "CipsController.java 是 clearing 模块中的REST 控制器，主要定义 CipsController，承担该业务域的分层协作职责。",
+      "tags": [
+        "api-handler",
+        "clearing",
+        "java",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:CipsController",
+      "type": "class",
+      "name": "CipsController",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "lineRange": [
+        35,
+        169
+      ],
+      "summary": "CipsController 是 clearing 模块的REST 控制器，封装 6 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "api-handler",
+        "clearing",
+        "java",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:generateCips111",
+      "type": "function",
+      "name": "generateCips111",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "lineRange": [
+        49,
+        67
+      ],
+      "summary": "generateCips111 实现 clearing 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "clearing",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:generateCips112",
+      "type": "function",
+      "name": "generateCips112",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "lineRange": [
+        73,
+        84
+      ],
+      "summary": "generateCips112 实现 clearing 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "clearing",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:generateCips113",
+      "type": "function",
+      "name": "generateCips113",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "lineRange": [
+        90,
+        101
+      ],
+      "summary": "generateCips113 实现 clearing 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "clearing",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:lookupByBic",
+      "type": "function",
+      "name": "lookupByBic",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "lineRange": [
+        107,
+        118
+      ],
+      "summary": "lookupByBic 实现 clearing 模块中的关键处理步骤，参数包括 bic。",
+      "tags": [
+        "function",
+        "clearing",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:listParticipants",
+      "type": "function",
+      "name": "listParticipants",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "lineRange": [
+        124,
+        142
+      ],
+      "summary": "listParticipants 实现 clearing 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "clearing",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:getStatistics",
+      "type": "function",
+      "name": "getStatistics",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "lineRange": [
+        148,
+        168
+      ],
+      "summary": "getStatistics 实现 clearing 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "clearing",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "type": "file",
+      "name": "ReconciliationController.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "summary": "ReconciliationController.java 是 clearing 模块中的REST 控制器，主要定义 ReconciliationController，承担该业务域的分层协作职责。",
+      "tags": [
+        "api-handler",
+        "clearing",
+        "java",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java:ReconciliationController",
+      "type": "class",
+      "name": "ReconciliationController",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "lineRange": [
+        33,
+        94
+      ],
+      "summary": "ReconciliationController 是 clearing 模块的REST 控制器，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "api-handler",
+        "clearing",
+        "java",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java:importFromCfets",
+      "type": "function",
+      "name": "importFromCfets",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "lineRange": [
+        42,
+        48
+      ],
+      "summary": "importFromCfets 实现 clearing 模块中的关键处理步骤，参数包括 tradeDate。",
+      "tags": [
+        "function",
+        "clearing",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java:autoMatch",
+      "type": "function",
+      "name": "autoMatch",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "lineRange": [
+        50,
+        55
+      ],
+      "summary": "autoMatch 实现 clearing 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "clearing",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java:previewSwift",
+      "type": "function",
+      "name": "previewSwift",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "lineRange": [
+        57,
+        66
+      ],
+      "summary": "previewSwift 实现 clearing 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "clearing",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java:convertMessage",
+      "type": "function",
+      "name": "convertMessage",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "lineRange": [
+        68,
+        93
+      ],
+      "summary": "convertMessage 实现 clearing 模块中的关键处理步骤，参数包括 req。",
+      "tags": [
+        "function",
+        "clearing",
+        "api-handler"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips111Req.java",
+      "type": "file",
+      "name": "Cips111Req.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips111Req.java",
+      "summary": "Cips111Req.java 是 clearing 模块中的传输对象，主要定义 Cips111Req，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "clearing",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips111Req.java:Cips111Req",
+      "type": "class",
+      "name": "Cips111Req",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips111Req.java",
+      "lineRange": [
+        8,
+        38
+      ],
+      "summary": "Cips111Req 是 clearing 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "clearing",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips112Req.java",
+      "type": "file",
+      "name": "Cips112Req.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips112Req.java",
+      "summary": "Cips112Req.java 是 clearing 模块中的传输对象，主要定义 Cips112Req，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "clearing",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips112Req.java:Cips112Req",
+      "type": "class",
+      "name": "Cips112Req",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips112Req.java",
+      "lineRange": [
+        6,
+        18
+      ],
+      "summary": "Cips112Req 是 clearing 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "clearing",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips113Req.java",
+      "type": "file",
+      "name": "Cips113Req.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips113Req.java",
+      "summary": "Cips113Req.java 是 clearing 模块中的传输对象，主要定义 Cips113Req，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "clearing",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips113Req.java:Cips113Req",
+      "type": "class",
+      "name": "Cips113Req",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips113Req.java",
+      "lineRange": [
+        8,
+        20
+      ],
+      "summary": "Cips113Req 是 clearing 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "clearing",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileAutoMatchReq.java",
+      "type": "file",
+      "name": "ReconcileAutoMatchReq.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileAutoMatchReq.java",
+      "summary": "ReconcileAutoMatchReq.java 是 clearing 模块中的传输对象，主要定义 ReconcileAutoMatchReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "clearing",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileAutoMatchReq.java:ReconcileAutoMatchReq",
+      "type": "class",
+      "name": "ReconcileAutoMatchReq",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileAutoMatchReq.java",
+      "lineRange": [
+        6,
+        16
+      ],
+      "summary": "ReconcileAutoMatchReq 是 clearing 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "clearing",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileConvertReq.java",
+      "type": "file",
+      "name": "ReconcileConvertReq.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileConvertReq.java",
+      "summary": "ReconcileConvertReq.java 是 clearing 模块中的传输对象，主要定义 ReconcileConvertReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "clearing",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileConvertReq.java:ReconcileConvertReq",
+      "type": "class",
+      "name": "ReconcileConvertReq",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileConvertReq.java",
+      "lineRange": [
+        6,
+        12
+      ],
+      "summary": "ReconcileConvertReq 是 clearing 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "clearing",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcilePreviewReq.java",
+      "type": "file",
+      "name": "ReconcilePreviewReq.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcilePreviewReq.java",
+      "summary": "ReconcilePreviewReq.java 是 clearing 模块中的传输对象，主要定义 ReconcilePreviewReq，承担该业务域的分层协作职责。",
+      "tags": [
+        "dto",
+        "clearing",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcilePreviewReq.java:ReconcilePreviewReq",
+      "type": "class",
+      "name": "ReconcilePreviewReq",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcilePreviewReq.java",
+      "lineRange": [
+        6,
+        13
+      ],
+      "summary": "ReconcilePreviewReq 是 clearing 模块的传输对象，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "dto",
+        "clearing",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/application/dto/InternalTrade.java",
+      "type": "file",
+      "name": "InternalTrade.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/InternalTrade.java",
+      "summary": "InternalTrade.java 是 clearing 模块中的代码文件，主要定义 InternalTrade，承担该业务域的分层协作职责。",
+      "tags": [
+        "code",
+        "clearing",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-clearing/src/main/java/com/forex/clearing/application/dto/InternalTrade.java:InternalTrade",
+      "type": "class",
+      "name": "InternalTrade",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/InternalTrade.java",
+      "lineRange": [
+        13,
+        21
+      ],
+      "summary": "InternalTrade 是 clearing 模块的代码文件，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "code",
+        "clearing",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "type": "file",
+      "name": "ReconciliationResult.java",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "summary": "ReconciliationResult.java 是 clearing 模块中的代码文件，主要定义 ReconciliationResult，承担该业务域的分层协作职责。",
+      "tags": [
+        "code",
+        "clearing",
+        "java",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java:ReconciliationResult",
+      "type": "class",
+      "name": "ReconciliationResult",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "lineRange": [
+        13,
+        49
+      ],
+      "summary": "ReconciliationResult 是 clearing 模块的代码文件，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "code",
+        "clearing",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java:addMatched",
+      "type": "function",
+      "name": "addMatched",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "lineRange": [
+        19,
+        21
+      ],
+      "summary": "addMatched 实现 clearing 模块中的关键处理步骤，参数包括 externalRef、internalRef。",
+      "tags": [
+        "function",
+        "clearing",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java:addUnmatched",
+      "type": "function",
+      "name": "addUnmatched",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "lineRange": [
+        23,
+        25
+      ],
+      "summary": "addUnmatched 实现 clearing 模块中的关键处理步骤，参数包括 type、refNo、reason。",
+      "tags": [
+        "function",
+        "clearing",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java:getMatchedCount",
+      "type": "function",
+      "name": "getMatchedCount",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "lineRange": [
+        27,
+        29
+      ],
+      "summary": "getMatchedCount 实现 clearing 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "clearing",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java:getUnmatchedCount",
+      "type": "function",
+      "name": "getUnmatchedCount",
+      "filePath": "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "lineRange": [
+        31,
+        33
+      ],
+      "summary": "getUnmatchedCount 实现 clearing 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "clearing",
+        "code"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java:KnowledgeSearchTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java:KnowledgeSearchTool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java:init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java:init",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java:name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java:name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java:description",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java:description",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java:execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java:execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java:ReportGenerationTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java:ReportGenerationTool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java:init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java:init",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java:name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java:name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java:description",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java:description",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java:execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java:execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java:RiskEvaluationTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java:RiskEvaluationTool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java:init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java:init",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java:name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java:name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java:description",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java:description",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java:execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java:execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java:TradeExecutionTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java:TradeExecutionTool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java:init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java:init",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java:name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java:name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java:description",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java:description",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java:execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java:execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:ToolRegistry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:ToolRegistry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:register",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:register",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:getAllTools",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:getAllTools",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:getToolNames",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:getToolNames",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:execute",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java:get",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java:AiDomainService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java:AiDomainService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:SmartRagService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:search",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java:search",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/DeepSeekConfig.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/config/DeepSeekConfig.java:DeepSeekConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/DeepSeekConfig.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/config/DeepSeekConfig.java:DeepSeekConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:ModelProviderConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:ModelProviderConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:isOllamaProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:isOllamaProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:isOpenAiProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:isOpenAiProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:isDeepSeekProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:isDeepSeekProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:resolveModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java:resolveModel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java:DeepSeekChatClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java",
+      "target": "class:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java:DeepSeekChatClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java:chat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java:chat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java:chat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java:chat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java:generateLocalResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java",
+      "target": "file:forex-ai/src/main/java/com/forex/ai/infrastructure/config/DeepSeekConfig.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java:chat",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java:generateLocalResponse",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java:chat",
+      "target": "function:forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java:generateLocalResponse",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "class:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java:AuthController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "class:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java:AuthController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "function:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java:login",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "function:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java:login",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "function:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java:refresh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "function:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java:refresh",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "function:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java:logout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "function:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java:logout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "function:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java:me",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "function:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java:me",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "file:forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "file:forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "file:forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RateLimit.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java",
+      "target": "class:forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java:LoginReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java",
+      "target": "class:forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java:LoginReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java",
+      "target": "class:forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java:TokenResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java",
+      "target": "class:forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java:TokenResp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "class:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:CashPoolController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "class:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:CashPoolController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:createPool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:createPool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:getPoolById",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:getPoolById",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:addMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:addMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:getMembers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:getMembers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:calculateQuota",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:calculateQuota",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:getQuotaUsage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java:getQuotaUsage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "file:forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "file:forex-cashpool/src/main/java/com/forex/cashpool/domain/model/entity/PoolMember.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "file:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "target": "class:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:OverseasLendingController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "target": "class:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:OverseasLendingController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:createLending",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:createLending",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:approveLending",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:approveLending",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:recordRepayment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:recordRepayment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:getLendingByContractNo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:getLendingByContractNo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:queryLendingPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java:queryLendingPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "target": "file:forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "target": "class:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java:QuotaCalculationEngine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "target": "class:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java:QuotaCalculationEngine",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java:calculateDebtLimit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java:calculateDebtLimit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java:calculateLendingLimit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java:calculateLendingLimit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java:calculateUsagePct",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "target": "function:forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java:calculateUsagePct",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:CipsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:CipsController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:generateCips111",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:generateCips111",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:generateCips112",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:generateCips112",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:generateCips113",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:generateCips113",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:lookupByBic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:lookupByBic",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:listParticipants",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:listParticipants",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:getStatistics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java:getStatistics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips111Req.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips112Req.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips113Req.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/application/service/CipsMessageGenerator.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/application/service/CipsRoutingService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java:ReconciliationController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java:ReconciliationController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java:importFromCfets",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java:importFromCfets",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java:autoMatch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java:autoMatch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java:previewSwift",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java:previewSwift",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java:convertMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java:convertMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileAutoMatchReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileConvertReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcilePreviewReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/application/dto/TradeConfirmation.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/application/service/SwiftMessageGenerator.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "file:forex-clearing/src/main/java/com/forex/clearing/application/service/TradeConfirmationService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips111Req.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips111Req.java:Cips111Req",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips111Req.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips111Req.java:Cips111Req",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips112Req.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips112Req.java:Cips112Req",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips112Req.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips112Req.java:Cips112Req",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips113Req.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips113Req.java:Cips113Req",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips113Req.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips113Req.java:Cips113Req",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileAutoMatchReq.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileAutoMatchReq.java:ReconcileAutoMatchReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileAutoMatchReq.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileAutoMatchReq.java:ReconcileAutoMatchReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileConvertReq.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileConvertReq.java:ReconcileConvertReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileConvertReq.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileConvertReq.java:ReconcileConvertReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcilePreviewReq.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcilePreviewReq.java:ReconcilePreviewReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcilePreviewReq.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcilePreviewReq.java:ReconcilePreviewReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/application/dto/InternalTrade.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/application/dto/InternalTrade.java:InternalTrade",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/application/dto/InternalTrade.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/application/dto/InternalTrade.java:InternalTrade",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java:ReconciliationResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "target": "class:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java:ReconciliationResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java:addMatched",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java:addMatched",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java:addUnmatched",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java:addUnmatched",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java:getMatchedCount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java:getMatchedCount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java:getUnmatchedCount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "target": "function:forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java:getUnmatchedCount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

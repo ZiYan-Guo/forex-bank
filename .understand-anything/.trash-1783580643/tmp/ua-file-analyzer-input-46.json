@@ -1,0 +1,184 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java",
+      "language": "java",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 57,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-settlement/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-supply-chain/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-supply-chain/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 36,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-trading/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java",
+      "language": "java",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/model/enums/TradeStatus.java",
+      "language": "java",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/TradingApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java",
+      "language": "java",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-workflow/pom.xml",
+      "language": "xml",
+      "sizeLines": 59,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/ApprovalRecordMapper.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/ApprovalRecordPO.java",
+      "language": "java",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "sql/account/init.sql",
+      "language": "sql",
+      "sizeLines": 70,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/ai/init.sql",
+      "language": "sql",
+      "sizeLines": 45,
+      "fileCategory": "data"
+    }
+  ],
+  "batchImportData": {
+    "forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java": [],
+    "forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java": [],
+    "forex-schedule/src/main/resources/application.yml": [],
+    "forex-settlement/pom.xml": [],
+    "forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java": [],
+    "forex-settlement/src/main/resources/application.yml": [],
+    "forex-supply-chain/pom.xml": [],
+    "forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java": [],
+    "forex-supply-chain/src/main/resources/application.yml": [],
+    "forex-trading/pom.xml": [],
+    "forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java": [],
+    "forex-trading/src/main/java/com/forex/trading/domain/model/enums/TradeStatus.java": [],
+    "forex-trading/src/main/java/com/forex/trading/TradingApplication.java": [],
+    "forex-trading/src/main/resources/application.yml": [],
+    "forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java": [],
+    "forex-valuation/pom.xml": [],
+    "forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java": [],
+    "forex-valuation/src/main/resources/application.yml": [],
+    "forex-workflow/pom.xml": [],
+    "forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/ApprovalRecordMapper.java": [
+      "forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/ApprovalRecordPO.java"
+    ],
+    "forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/ApprovalRecordPO.java": [],
+    "forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java": [],
+    "forex-workflow/src/main/resources/application.yml": [],
+    "sql/account/init.sql": [],
+    "sql/ai/init.sql": []
+  }
+}

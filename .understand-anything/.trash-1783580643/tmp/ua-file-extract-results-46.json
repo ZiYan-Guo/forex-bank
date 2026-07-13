@@ -1,0 +1,1206 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 49,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "xxlJobExecutor",
+          "startLine": 36,
+          "endLine": 48,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "XxlJobConfig",
+          "startLine": 11,
+          "endLine": 49,
+          "methods": [
+            "xxlJobExecutor"
+          ],
+          "properties": [
+            "adminAddresses",
+            "accessToken",
+            "appname",
+            "ip",
+            "port",
+            "logPath",
+            "logRetentionDays"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "xxlJobExecutor",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "XxlJobConfig",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "xxlJobExecutor",
+          "callee": "log.info",
+          "lineNumber": 38
+        },
+        {
+          "caller": "xxlJobExecutor",
+          "callee": "new XxlJobSpringExecutor",
+          "lineNumber": 39
+        },
+        {
+          "caller": "xxlJobExecutor",
+          "callee": "executor.setAdminAddresses",
+          "lineNumber": 40
+        },
+        {
+          "caller": "xxlJobExecutor",
+          "callee": "executor.setAppname",
+          "lineNumber": 41
+        },
+        {
+          "caller": "xxlJobExecutor",
+          "callee": "executor.setIp",
+          "lineNumber": 42
+        },
+        {
+          "caller": "xxlJobExecutor",
+          "callee": "executor.setPort",
+          "lineNumber": 43
+        },
+        {
+          "caller": "xxlJobExecutor",
+          "callee": "executor.setAccessToken",
+          "lineNumber": 44
+        },
+        {
+          "caller": "xxlJobExecutor",
+          "callee": "executor.setLogPath",
+          "lineNumber": 45
+        },
+        {
+          "caller": "xxlJobExecutor",
+          "callee": "executor.setLogRetentionDays",
+          "lineNumber": 46
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ScheduleApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "ScheduleApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-schedule/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 57,
+      "nonEmptyLines": 53,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 42
+        },
+        {
+          "heading": "xxl",
+          "level": 1,
+          "line": 47
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "forex-settlement/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 55,
+      "nonEmptyLines": 55,
+      "metrics": {}
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SettlementApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "SettlementApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-settlement/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 45,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "forex-supply-chain/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 55,
+      "nonEmptyLines": 55,
+      "metrics": {}
+    },
+    {
+      "path": "forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SupplyChainApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "SupplyChainApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-supply-chain/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 36,
+      "nonEmptyLines": 33,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 27
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "forex-trading/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 55,
+      "nonEmptyLines": 55,
+      "metrics": {}
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 67,
+      "nonEmptyLines": 59,
+      "functions": [
+        {
+          "name": "recommendStrategies",
+          "startLine": 26,
+          "endLine": 66,
+          "params": [
+            "customerId",
+            "riskPreference",
+            "exposure",
+            "currencyPair"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "OptionStrategyService",
+          "startLine": 13,
+          "endLine": 67,
+          "methods": [
+            "recommendStrategies"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "recommendStrategies",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "OptionStrategyService",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "recommendStrategies",
+          "callee": "log.info",
+          "lineNumber": 28
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "exposure.getClass().getSimpleName",
+          "lineNumber": 29
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "exposure.getClass",
+          "lineNumber": 29
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "new ArrayList<>",
+          "lineNumber": 33
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "strategies.add",
+          "lineNumber": 34
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "Map.of",
+          "lineNumber": 34
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "strategies.add",
+          "lineNumber": 40
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "Map.of",
+          "lineNumber": 40
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "strategies.add",
+          "lineNumber": 46
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "Map.of",
+          "lineNumber": 46
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "riskPreference.contains",
+          "lineNumber": 54
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 58
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "result.put",
+          "lineNumber": 59
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "result.put",
+          "lineNumber": 60
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "result.put",
+          "lineNumber": 61
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "result.put",
+          "lineNumber": 62
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "result.put",
+          "lineNumber": 63
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "log.info",
+          "lineNumber": 64
+        },
+        {
+          "caller": "recommendStrategies",
+          "callee": "result.get",
+          "lineNumber": 64
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/model/enums/TradeStatus.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 68,
+      "nonEmptyLines": 55,
+      "callGraph": [
+        {
+          "caller": "fromCode",
+          "callee": "values",
+          "lineNumber": 61
+        },
+        {
+          "caller": "fromCode",
+          "callee": "status.code.equals",
+          "lineNumber": 62
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/TradingApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TradingApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "TradingApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-trading/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 45,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 58,
+      "nonEmptyLines": 45,
+      "functions": [
+        {
+          "name": "testRecommendStrategies_Conservative",
+          "startLine": 16,
+          "endLine": 26,
+          "params": []
+        },
+        {
+          "name": "testRecommendStrategies_Aggressive",
+          "startLine": 28,
+          "endLine": 35,
+          "params": []
+        },
+        {
+          "name": "testRecommendStrategies_NullPreference",
+          "startLine": 37,
+          "endLine": 44,
+          "params": []
+        },
+        {
+          "name": "testStrategyListContents",
+          "startLine": 46,
+          "endLine": 57,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "OptionStrategyServiceTest",
+          "startLine": 12,
+          "endLine": 58,
+          "methods": [
+            "testRecommendStrategies_Conservative",
+            "testRecommendStrategies_Aggressive",
+            "testRecommendStrategies_NullPreference",
+            "testStrategyListContents"
+          ],
+          "properties": [
+            "service"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "testRecommendStrategies_Conservative",
+          "callee": "service.recommendStrategies",
+          "lineNumber": 19
+        },
+        {
+          "caller": "testRecommendStrategies_Conservative",
+          "callee": "new BigDecimal",
+          "lineNumber": 20
+        },
+        {
+          "caller": "testRecommendStrategies_Conservative",
+          "callee": "assertEquals",
+          "lineNumber": 22
+        },
+        {
+          "caller": "testRecommendStrategies_Conservative",
+          "callee": "result.get",
+          "lineNumber": 22
+        },
+        {
+          "caller": "testRecommendStrategies_Conservative",
+          "callee": "result.get",
+          "lineNumber": 24
+        },
+        {
+          "caller": "testRecommendStrategies_Conservative",
+          "callee": "assertEquals",
+          "lineNumber": 25
+        },
+        {
+          "caller": "testRecommendStrategies_Conservative",
+          "callee": "strategies.size",
+          "lineNumber": 25
+        },
+        {
+          "caller": "testRecommendStrategies_Aggressive",
+          "callee": "service.recommendStrategies",
+          "lineNumber": 31
+        },
+        {
+          "caller": "testRecommendStrategies_Aggressive",
+          "callee": "new BigDecimal",
+          "lineNumber": 32
+        },
+        {
+          "caller": "testRecommendStrategies_Aggressive",
+          "callee": "assertEquals",
+          "lineNumber": 34
+        },
+        {
+          "caller": "testRecommendStrategies_Aggressive",
+          "callee": "result.get",
+          "lineNumber": 34
+        },
+        {
+          "caller": "testRecommendStrategies_NullPreference",
+          "callee": "service.recommendStrategies",
+          "lineNumber": 40
+        },
+        {
+          "caller": "testRecommendStrategies_NullPreference",
+          "callee": "new BigDecimal",
+          "lineNumber": 41
+        },
+        {
+          "caller": "testRecommendStrategies_NullPreference",
+          "callee": "assertEquals",
+          "lineNumber": 43
+        },
+        {
+          "caller": "testRecommendStrategies_NullPreference",
+          "callee": "result.get",
+          "lineNumber": 43
+        },
+        {
+          "caller": "testStrategyListContents",
+          "callee": "service.recommendStrategies",
+          "lineNumber": 49
+        },
+        {
+          "caller": "testStrategyListContents",
+          "callee": "new BigDecimal",
+          "lineNumber": 50
+        },
+        {
+          "caller": "testStrategyListContents",
+          "callee": "result.get",
+          "lineNumber": 53
+        },
+        {
+          "caller": "testStrategyListContents",
+          "callee": "assertEquals",
+          "lineNumber": 54
+        },
+        {
+          "caller": "testStrategyListContents",
+          "callee": "strategies.get(0).get",
+          "lineNumber": 54
+        },
+        {
+          "caller": "testStrategyListContents",
+          "callee": "strategies.get",
+          "lineNumber": 54
+        },
+        {
+          "caller": "testStrategyListContents",
+          "callee": "assertEquals",
+          "lineNumber": 55
+        },
+        {
+          "caller": "testStrategyListContents",
+          "callee": "strategies.get(1).get",
+          "lineNumber": 55
+        },
+        {
+          "caller": "testStrategyListContents",
+          "callee": "strategies.get",
+          "lineNumber": 55
+        },
+        {
+          "caller": "testStrategyListContents",
+          "callee": "assertEquals",
+          "lineNumber": 56
+        },
+        {
+          "caller": "testStrategyListContents",
+          "callee": "strategies.get(2).get",
+          "lineNumber": 56
+        },
+        {
+          "caller": "testStrategyListContents",
+          "callee": "strategies.get",
+          "lineNumber": 56
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-valuation/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 55,
+      "nonEmptyLines": 55,
+      "metrics": {}
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ValuationApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "ValuationApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-valuation/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 45,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "forex-workflow/pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 59,
+      "nonEmptyLines": 59,
+      "metrics": {}
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/ApprovalRecordMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "ApprovalRecordMapper",
+          "startLine": 17,
+          "endLine": 22,
+          "methods": [
+            "selectByTaskId"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ApprovalRecordMapper",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/ApprovalRecordPO.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 28,
+      "nonEmptyLines": 21,
+      "classes": [
+        {
+          "name": "ApprovalRecordPO",
+          "startLine": 12,
+          "endLine": 28,
+          "methods": [],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "taskId",
+            "stepName",
+            "approver",
+            "approverName",
+            "approveResult",
+            "comment",
+            "approveTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ApprovalRecordPO",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "WorkflowApplication",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "WorkflowApplication",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-workflow/src/main/resources/application.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 45,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "mybatis-plus",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "knife4j",
+          "level": 1,
+          "line": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "sql/account/init.sql",
+      "language": "sql",
+      "fileCategory": "data",
+      "totalLines": 70,
+      "nonEmptyLines": 67,
+      "definitions": [
+        {
+          "name": "t_forex_account",
+          "kind": "table",
+          "fields": [],
+          "startLine": 7,
+          "endLine": 12
+        },
+        {
+          "name": "t_account_transaction",
+          "kind": "table",
+          "fields": [],
+          "startLine": 36,
+          "endLine": 41
+        },
+        {
+          "name": "t_account_balance_snapshot",
+          "kind": "table",
+          "fields": [],
+          "startLine": 60,
+          "endLine": 65
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 3
+      }
+    },
+    {
+      "path": "sql/ai/init.sql",
+      "language": "sql",
+      "fileCategory": "data",
+      "totalLines": 45,
+      "nonEmptyLines": 40,
+      "definitions": [
+        {
+          "name": "t_rate_prediction",
+          "kind": "table",
+          "fields": [],
+          "startLine": 4,
+          "endLine": 9
+        },
+        {
+          "name": "t_chat_session",
+          "kind": "table",
+          "fields": [],
+          "startLine": 14,
+          "endLine": 19
+        },
+        {
+          "name": "t_chat_message",
+          "kind": "table",
+          "fields": [],
+          "startLine": 22,
+          "endLine": 27
+        },
+        {
+          "name": "t_risk_ai_assessment",
+          "kind": "table",
+          "fields": [],
+          "startLine": 29,
+          "endLine": 34
+        },
+        {
+          "name": "t_document_audit",
+          "kind": "table",
+          "fields": [],
+          "startLine": 38,
+          "endLine": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 5
+      }
+    }
+  ]
+}

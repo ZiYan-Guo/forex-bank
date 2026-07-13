@@ -1,0 +1,418 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "API_SECURITY_GUIDE.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 156,
+      "nonEmptyLines": 127,
+      "sections": [
+        {
+          "heading": "API 安全增强指南",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "📚 目录",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "权限控制",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "注解定义",
+          "level": 3,
+          "line": 16
+        },
+        {
+          "heading": "使用示例",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "1. 单权限检查",
+          "level": 4,
+          "line": 27
+        },
+        {
+          "heading": "2. 多权限检查 (任意一个)",
+          "level": 4,
+          "line": 37
+        },
+        {
+          "heading": "限流防护",
+          "level": 2,
+          "line": 52
+        },
+        {
+          "heading": "限流类型",
+          "level": 3,
+          "line": 54
+        },
+        {
+          "heading": "使用示例",
+          "level": 3,
+          "line": 60
+        },
+        {
+          "heading": "输入验证",
+          "level": 2,
+          "line": 76
+        },
+        {
+          "heading": "使用示例",
+          "level": 3,
+          "line": 78
+        },
+        {
+          "heading": "响应头安全",
+          "level": 2,
+          "line": 92
+        },
+        {
+          "heading": "自动添加的安全响应头",
+          "level": 3,
+          "line": 94
+        },
+        {
+          "heading": "SQL 注入防护",
+          "level": 2,
+          "line": 109
+        },
+        {
+          "heading": "自动检测的攻击模式",
+          "level": 3,
+          "line": 111
+        },
+        {
+          "heading": "防护示例",
+          "level": 3,
+          "line": 117
+        },
+        {
+          "heading": "✅ 正确用法（参数化查询）",
+          "level": 4,
+          "line": 119
+        },
+        {
+          "heading": "安全最佳实践",
+          "level": 2,
+          "line": 131
+        },
+        {
+          "heading": "1. 最小权限原则",
+          "level": 3,
+          "line": 133
+        },
+        {
+          "heading": "2. 深度防护",
+          "level": 3,
+          "line": 140
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 21
+      }
+    },
+    {
+      "path": "IMPROVEMENTS.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 256,
+      "nonEmptyLines": 206,
+      "sections": [
+        {
+          "heading": "银行外汇系统 - 改进清单",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "🚀 已完成的改进（第一批）",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "1. 审计日志系统 ✅",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "2. 幂等性保护 ✅",
+          "level": 3,
+          "line": 32
+        },
+        {
+          "heading": "3. 乐观锁与版本控制 ✅",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "4. 聚合根验证完善 ✅",
+          "level": 3,
+          "line": 80
+        },
+        {
+          "heading": "ForexAccountEnhanced",
+          "level": 4,
+          "line": 89
+        },
+        {
+          "heading": "FxTradeEnhanced",
+          "level": 4,
+          "line": 95
+        },
+        {
+          "heading": "5. 测试框架基础 ✅",
+          "level": 3,
+          "line": 101
+        },
+        {
+          "heading": "📋 下一步改进计划（第二批）",
+          "level": 2,
+          "line": 141
+        },
+        {
+          "heading": "P1 优先级",
+          "level": 3,
+          "line": 143
+        },
+        {
+          "heading": "P2 优先级",
+          "level": 3,
+          "line": 150
+        },
+        {
+          "heading": "🔧 本地验证方法",
+          "level": 2,
+          "line": 159
+        },
+        {
+          "heading": "1. 签出改进分支",
+          "level": 3,
+          "line": 161
+        },
+        {
+          "heading": "2. 编译验证",
+          "level": 3,
+          "line": 166
+        },
+        {
+          "heading": "3. 运行单元测试",
+          "level": 3,
+          "line": 171
+        },
+        {
+          "heading": "4. 合并到主分支",
+          "level": 3,
+          "line": 176
+        },
+        {
+          "heading": "📊 改进总结",
+          "level": 2,
+          "line": 185
+        },
+        {
+          "heading": "✨ 改进效果",
+          "level": 2,
+          "line": 200
+        },
+        {
+          "heading": "代码质量",
+          "level": 3,
+          "line": 202
+        },
+        {
+          "heading": "运维友好性",
+          "level": 3,
+          "line": 207
+        },
+        {
+          "heading": "系统可靠性",
+          "level": 3,
+          "line": 212
+        },
+        {
+          "heading": "💡 最佳实践建议",
+          "level": 2,
+          "line": 219
+        },
+        {
+          "heading": "1. 逐步迁移",
+          "level": 3,
+          "line": 221
+        },
+        {
+          "heading": "2. 审计日志存储",
+          "level": 3,
+          "line": 230
+        },
+        {
+          "heading": "3. 性能优化",
+          "level": 3,
+          "line": 248
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 26
+      }
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 345,
+      "nonEmptyLines": 295,
+      "sections": [
+        {
+          "heading": "银行外汇系统 (Forex Bank System)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "📋 技术栈 (Tech Stack)",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "后端 (Backend)",
+          "level": 3,
+          "line": 11
+        },
+        {
+          "heading": "前端 (Frontend)",
+          "level": 3,
+          "line": 34
+        },
+        {
+          "heading": "基础设施 (Infrastructure)",
+          "level": 3,
+          "line": 45
+        },
+        {
+          "heading": "🏗️ 架构设计 (Architecture)",
+          "level": 2,
+          "line": 57
+        },
+        {
+          "heading": "总体架构",
+          "level": 3,
+          "line": 59
+        },
+        {
+          "heading": "DDD 四层架构 (每个微服务内部)",
+          "level": 3,
+          "line": 87
+        },
+        {
+          "heading": "📁 项目结构 (Project Structure)",
+          "level": 2,
+          "line": 119
+        },
+        {
+          "heading": "🚀 快速启动 (Quick Start)",
+          "level": 2,
+          "line": 161
+        },
+        {
+          "heading": "环境要求",
+          "level": 3,
+          "line": 163
+        },
+        {
+          "heading": "1. 启动基础设施",
+          "level": 3,
+          "line": 170
+        },
+        {
+          "heading": "2. 初始化数据库",
+          "level": 3,
+          "line": 177
+        },
+        {
+          "heading": "3. 启动后端服务",
+          "level": 3,
+          "line": 191
+        },
+        {
+          "heading": "4. 启动前端",
+          "level": 3,
+          "line": 202
+        },
+        {
+          "heading": "5. 访问",
+          "level": 3,
+          "line": 209
+        },
+        {
+          "heading": "默认账户",
+          "level": 3,
+          "line": 217
+        },
+        {
+          "heading": "🔐 安全特性 (Security)",
+          "level": 2,
+          "line": 225
+        },
+        {
+          "heading": "📊 数据库 (Database)",
+          "level": 2,
+          "line": 242
+        },
+        {
+          "heading": "🔧 API 概览 (API Overview)",
+          "level": 2,
+          "line": 270
+        },
+        {
+          "heading": "🧪 安全审计 (Security Audit)",
+          "level": 2,
+          "line": 300
+        },
+        {
+          "heading": "📝 开发规范 (Development Convention)",
+          "level": 2,
+          "line": 316
+        },
+        {
+          "heading": "📄 License",
+          "level": 2,
+          "line": 329
+        },
+        {
+          "heading": "👥 角色设计 (User Roles)",
+          "level": 2,
+          "line": 335
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 24
+      }
+    },
+    {
+      "path": "pom.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 307,
+      "nonEmptyLines": 278,
+      "metrics": {}
+    }
+  ]
+}

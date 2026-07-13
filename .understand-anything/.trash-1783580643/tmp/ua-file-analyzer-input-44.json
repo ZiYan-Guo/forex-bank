@@ -1,0 +1,182 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-gateway/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 258,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-hedge-accounting/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/CreateHedgeReq.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/EffectivenessTestReq.java",
+      "language": "java",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/GenerateHedgeEntriesReq.java",
+      "language": "java",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-limit/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/LimitApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-limit/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 36,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-margin/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-notification/pom.xml",
+      "language": "xml",
+      "sizeLines": 60,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/NotificationApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-ocr/pom.xml",
+      "language": "xml",
+      "sizeLines": 63,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-payment/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/CreateTemplateReq.java",
+      "language": "java",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/UpdateTemplateReq.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "language": "java",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/PaymentApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "forex-gateway/src/main/resources/application.yml": [],
+    "forex-hedge-accounting/pom.xml": [],
+    "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/CreateHedgeReq.java": [],
+    "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/EffectivenessTestReq.java": [],
+    "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/GenerateHedgeEntriesReq.java": [],
+    "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java": [],
+    "forex-hedge-accounting/src/main/resources/application.yml": [],
+    "forex-limit/pom.xml": [],
+    "forex-limit/src/main/java/com/forex/limit/LimitApplication.java": [],
+    "forex-limit/src/main/resources/application.yml": [],
+    "forex-margin/pom.xml": [],
+    "forex-margin/src/main/java/com/forex/margin/MarginApplication.java": [],
+    "forex-margin/src/main/resources/application.yml": [],
+    "forex-notification/pom.xml": [],
+    "forex-notification/src/main/java/com/forex/notification/NotificationApplication.java": [],
+    "forex-notification/src/main/resources/application.yml": [],
+    "forex-ocr/pom.xml": [],
+    "forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java": [],
+    "forex-ocr/src/main/resources/application.yml": [],
+    "forex-payment/pom.xml": [],
+    "forex-payment/src/main/java/com/forex/payment/adapter/dto/CreateTemplateReq.java": [],
+    "forex-payment/src/main/java/com/forex/payment/adapter/dto/UpdateTemplateReq.java": [],
+    "forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java": [],
+    "forex-payment/src/main/java/com/forex/payment/PaymentApplication.java": [],
+    "forex-payment/src/main/resources/application.yml": []
+  }
+}

@@ -1,0 +1,987 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java",
+      "type": "file",
+      "name": "XxlJobConfig.java",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java",
+      "summary": "XxlJobConfig.java 是 调度任务 模块中的配置，主要定义 XxlJobConfig，承担该业务域的分层协作职责。",
+      "tags": [
+        "configuration",
+        "调度任务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java:XxlJobConfig",
+      "type": "class",
+      "name": "XxlJobConfig",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java",
+      "lineRange": [
+        11,
+        49
+      ],
+      "summary": "XxlJobConfig 是 调度任务 模块的配置，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "configuration",
+        "调度任务",
+        "java"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java:xxlJobExecutor",
+      "type": "function",
+      "name": "xxlJobExecutor",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java",
+      "lineRange": [
+        36,
+        48
+      ],
+      "summary": "xxlJobExecutor 实现 调度任务 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "调度任务",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java",
+      "type": "file",
+      "name": "ScheduleApplication.java",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java",
+      "summary": "ScheduleApplication.java 是 调度任务 模块中的启动入口，主要定义 ScheduleApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "调度任务",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java:ScheduleApplication",
+      "type": "class",
+      "name": "ScheduleApplication",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "ScheduleApplication 是 调度任务 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "调度任务",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 调度任务 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "调度任务",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-schedule/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-schedule/src/main/resources/application.yml",
+      "summary": "application.yml 配置 调度任务 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "调度任务"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:forex-settlement/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-settlement/pom.xml",
+      "summary": "pom.xml 是 国际结算 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "国际结算"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java",
+      "type": "file",
+      "name": "SettlementApplication.java",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java",
+      "summary": "SettlementApplication.java 是 国际结算 模块中的启动入口，主要定义 SettlementApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "国际结算",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java:SettlementApplication",
+      "type": "class",
+      "name": "SettlementApplication",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "SettlementApplication 是 国际结算 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "国际结算",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 国际结算 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "国际结算",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-settlement/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-settlement/src/main/resources/application.yml",
+      "summary": "application.yml 配置 国际结算 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "国际结算"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-supply-chain/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-supply-chain/pom.xml",
+      "summary": "pom.xml 是 supply-chain 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "supply-chain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java",
+      "type": "file",
+      "name": "SupplyChainApplication.java",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java",
+      "summary": "SupplyChainApplication.java 是 supply-chain 模块中的启动入口，主要定义 SupplyChainApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "supply-chain",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java:SupplyChainApplication",
+      "type": "class",
+      "name": "SupplyChainApplication",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "SupplyChainApplication 是 supply-chain 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "supply-chain",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 supply-chain 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "supply-chain",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-supply-chain/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-supply-chain/src/main/resources/application.yml",
+      "summary": "application.yml 配置 supply-chain 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "supply-chain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-trading/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-trading/pom.xml",
+      "summary": "pom.xml 是 trading 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "trading"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java",
+      "type": "file",
+      "name": "OptionStrategyService.java",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java",
+      "summary": "OptionStrategyService.java 是 trading 模块中的服务组件，主要定义 OptionStrategyService，承担该业务域的分层协作职责。",
+      "tags": [
+        "service",
+        "trading",
+        "java",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java:OptionStrategyService",
+      "type": "class",
+      "name": "OptionStrategyService",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java",
+      "lineRange": [
+        13,
+        67
+      ],
+      "summary": "OptionStrategyService 是 trading 模块的服务组件，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "service",
+        "trading",
+        "java",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java:recommendStrategies",
+      "type": "function",
+      "name": "recommendStrategies",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java",
+      "lineRange": [
+        26,
+        66
+      ],
+      "summary": "recommendStrategies 实现 trading 模块中的关键处理步骤，参数包括 customerId、riskPreference、exposure、currencyPair。",
+      "tags": [
+        "function",
+        "trading",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-trading/src/main/java/com/forex/trading/domain/model/enums/TradeStatus.java",
+      "type": "file",
+      "name": "TradeStatus.java",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/domain/model/enums/TradeStatus.java",
+      "summary": "TradeStatus.java 是 trading 模块中的领域模型，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "trading",
+        "java",
+        "domain"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-trading/src/main/java/com/forex/trading/TradingApplication.java",
+      "type": "file",
+      "name": "TradingApplication.java",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/TradingApplication.java",
+      "summary": "TradingApplication.java 是 trading 模块中的启动入口，主要定义 TradingApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "trading",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-trading/src/main/java/com/forex/trading/TradingApplication.java:TradingApplication",
+      "type": "class",
+      "name": "TradingApplication",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/TradingApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "TradingApplication 是 trading 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "trading",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/main/java/com/forex/trading/TradingApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-trading/src/main/java/com/forex/trading/TradingApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 trading 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "trading",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-trading/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-trading/src/main/resources/application.yml",
+      "summary": "application.yml 配置 trading 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "trading"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java",
+      "type": "file",
+      "name": "OptionStrategyServiceTest.java",
+      "filePath": "forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java",
+      "summary": "OptionStrategyServiceTest.java 是 trading 模块中的服务组件，主要定义 OptionStrategyServiceTest，承担该业务域的分层协作职责。",
+      "tags": [
+        "service",
+        "trading",
+        "java",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java:OptionStrategyServiceTest",
+      "type": "class",
+      "name": "OptionStrategyServiceTest",
+      "filePath": "forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java",
+      "lineRange": [
+        12,
+        58
+      ],
+      "summary": "OptionStrategyServiceTest 是 trading 模块的服务组件，封装 4 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "service",
+        "trading",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java:testRecommendStrategies_Conservative",
+      "type": "function",
+      "name": "testRecommendStrategies_Conservative",
+      "filePath": "forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java",
+      "lineRange": [
+        16,
+        26
+      ],
+      "summary": "testRecommendStrategies_Conservative 实现 trading 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "trading",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java:testStrategyListContents",
+      "type": "function",
+      "name": "testStrategyListContents",
+      "filePath": "forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java",
+      "lineRange": [
+        46,
+        57
+      ],
+      "summary": "testStrategyListContents 实现 trading 模块中的关键处理步骤，参数包括 无显式参数。",
+      "tags": [
+        "function",
+        "trading",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-valuation/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-valuation/pom.xml",
+      "summary": "pom.xml 是 valuation 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "valuation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java",
+      "type": "file",
+      "name": "ValuationApplication.java",
+      "filePath": "forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java",
+      "summary": "ValuationApplication.java 是 valuation 模块中的启动入口，主要定义 ValuationApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "valuation",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java:ValuationApplication",
+      "type": "class",
+      "name": "ValuationApplication",
+      "filePath": "forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "ValuationApplication 是 valuation 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "valuation",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 valuation 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "valuation",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-valuation/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-valuation/src/main/resources/application.yml",
+      "summary": "application.yml 配置 valuation 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "valuation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-workflow/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-workflow/pom.xml",
+      "summary": "pom.xml 是 workflow 模块的 Maven 构建配置，声明模块依赖、插件和构建元数据。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "workflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/ApprovalRecordMapper.java",
+      "type": "file",
+      "name": "ApprovalRecordMapper.java",
+      "filePath": "forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/ApprovalRecordMapper.java",
+      "summary": "ApprovalRecordMapper.java 是 workflow 模块中的MyBatis Mapper，主要定义 ApprovalRecordMapper，承担该业务域的分层协作职责。",
+      "tags": [
+        "mapper",
+        "workflow",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/ApprovalRecordMapper.java:ApprovalRecordMapper",
+      "type": "class",
+      "name": "ApprovalRecordMapper",
+      "filePath": "forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/ApprovalRecordMapper.java",
+      "lineRange": [
+        17,
+        22
+      ],
+      "summary": "ApprovalRecordMapper 是 workflow 模块的MyBatis Mapper，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "mapper",
+        "workflow",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/ApprovalRecordPO.java",
+      "type": "file",
+      "name": "ApprovalRecordPO.java",
+      "filePath": "forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/ApprovalRecordPO.java",
+      "summary": "ApprovalRecordPO.java 是 workflow 模块中的领域模型，主要定义 ApprovalRecordPO，承担该业务域的分层协作职责。",
+      "tags": [
+        "data-model",
+        "workflow",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/ApprovalRecordPO.java:ApprovalRecordPO",
+      "type": "class",
+      "name": "ApprovalRecordPO",
+      "filePath": "forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/ApprovalRecordPO.java",
+      "lineRange": [
+        12,
+        28
+      ],
+      "summary": "ApprovalRecordPO 是 workflow 模块的领域模型，封装 0 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "data-model",
+        "workflow",
+        "java",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java",
+      "type": "file",
+      "name": "WorkflowApplication.java",
+      "filePath": "forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java",
+      "summary": "WorkflowApplication.java 是 workflow 模块中的启动入口，主要定义 WorkflowApplication，承担该业务域的分层协作职责。",
+      "tags": [
+        "entry-point",
+        "workflow",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java:WorkflowApplication",
+      "type": "class",
+      "name": "WorkflowApplication",
+      "filePath": "forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java",
+      "lineRange": [
+        8,
+        15
+      ],
+      "summary": "WorkflowApplication 是 workflow 模块的启动入口，封装 1 个主要操作并支撑相关业务流程。",
+      "tags": [
+        "entry-point",
+        "workflow",
+        "java",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "main 实现 workflow 模块中的关键处理步骤，参数包括 args。",
+      "tags": [
+        "function",
+        "workflow",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:forex-workflow/src/main/resources/application.yml",
+      "type": "config",
+      "name": "application.yml",
+      "filePath": "forex-workflow/src/main/resources/application.yml",
+      "summary": "application.yml 配置 workflow 模块的运行参数、服务发现、数据源或集成组件。",
+      "tags": [
+        "configuration",
+        "build-system",
+        "workflow"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:sql/account/init.sql",
+      "type": "table",
+      "name": "init.sql",
+      "filePath": "sql/account/init.sql",
+      "summary": "init.sql 是 sql 模块中的代码文件，承担该业务域的分层协作职责。",
+      "tags": [
+        "code",
+        "sql"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "table:sql/ai/init.sql",
+      "type": "table",
+      "name": "init.sql",
+      "filePath": "sql/ai/init.sql",
+      "summary": "init.sql 是 sql 模块中的代码文件，承担该业务域的分层协作职责。",
+      "tags": [
+        "code",
+        "sql"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java:XxlJobConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java:XxlJobConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java:xxlJobExecutor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java:xxlJobExecutor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java:ScheduleApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java:ScheduleApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java:SettlementApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java:SettlementApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java",
+      "target": "class:forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java:SupplyChainApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java",
+      "target": "class:forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java:SupplyChainApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java",
+      "target": "function:forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java",
+      "target": "class:forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java:OptionStrategyService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java",
+      "target": "class:forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java:OptionStrategyService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java:recommendStrategies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java:recommendStrategies",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/TradingApplication.java",
+      "target": "class:forex-trading/src/main/java/com/forex/trading/TradingApplication.java:TradingApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/TradingApplication.java",
+      "target": "class:forex-trading/src/main/java/com/forex/trading/TradingApplication.java:TradingApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/TradingApplication.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/TradingApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/main/java/com/forex/trading/TradingApplication.java",
+      "target": "function:forex-trading/src/main/java/com/forex/trading/TradingApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java",
+      "target": "class:forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java:OptionStrategyServiceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java",
+      "target": "function:forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java:testRecommendStrategies_Conservative",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java",
+      "target": "function:forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java:testStrategyListContents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java",
+      "target": "class:forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java:ValuationApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java",
+      "target": "class:forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java:ValuationApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java",
+      "target": "function:forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/ApprovalRecordMapper.java",
+      "target": "class:forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/ApprovalRecordMapper.java:ApprovalRecordMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/ApprovalRecordMapper.java",
+      "target": "class:forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/ApprovalRecordMapper.java:ApprovalRecordMapper",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/ApprovalRecordMapper.java",
+      "target": "file:forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/ApprovalRecordPO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/ApprovalRecordPO.java",
+      "target": "class:forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/ApprovalRecordPO.java:ApprovalRecordPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/ApprovalRecordPO.java",
+      "target": "class:forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/ApprovalRecordPO.java:ApprovalRecordPO",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java",
+      "target": "class:forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java:WorkflowApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java",
+      "target": "class:forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java:WorkflowApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java",
+      "target": "function:forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java",
+      "target": "function:forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

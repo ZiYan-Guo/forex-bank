@@ -1,0 +1,6044 @@
+{
+  "scriptCompleted": true,
+  "files": [
+    {
+      "path": "API_SECURITY_GUIDE.md",
+      "language": "markdown",
+      "sizeLines": 156,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docker/docker-compose.yml",
+      "language": "yaml",
+      "sizeLines": 128,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "docker/nacos/conf/application.properties",
+      "language": "properties",
+      "sizeLines": 7,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-account/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/AccountApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/adapter/controller/AccountController.java",
+      "language": "java",
+      "sizeLines": 186,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/adapter/dto/AccountOperationReq.java",
+      "language": "java",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/adapter/dto/AccountResp.java",
+      "language": "java",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/adapter/dto/OpenAccountReq.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/adapter/dto/TransactionResp.java",
+      "language": "java",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/command/AccountOperationCmd.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/command/OpenAccountCmd.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/query/AccountDetailDTO.java",
+      "language": "java",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/query/AccountQuery.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/query/TransactionDTO.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/application/service/AccountAppService.java",
+      "language": "java",
+      "sizeLines": 130,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/event/AccountOpenedEvent.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/event/BalanceChangedEvent.java",
+      "language": "java",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/model/aggregate/ForexAccount.java",
+      "language": "java",
+      "sizeLines": 168,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/model/entity/AccountTransaction.java",
+      "language": "java",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/AccountNumber.java",
+      "language": "java",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/model/valueobject/Money.java",
+      "language": "java",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/repository/AccountRepository.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/repository/TransactionRepository.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/domain/service/AccountDomainService.java",
+      "language": "java",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/AccountTransactionMapper.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/BalanceSnapshotMapper.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/mapper/ForexAccountMapper.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/AccountTransactionPO.java",
+      "language": "java",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/BalanceSnapshotPO.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/persistence/ForexAccountPO.java",
+      "language": "java",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/repository/AccountRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 109,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/java/com/forex/account/infrastructure/repository/TransactionRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-account/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-account/src/test/java/com/forex/account/domain/service/AccountDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/pom.xml",
+      "language": "xml",
+      "sizeLines": 57,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AgentController.java",
+      "language": "java",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiChatController.java",
+      "language": "java",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiDocumentController.java",
+      "language": "java",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiPredictionController.java",
+      "language": "java",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/controller/AiRiskController.java",
+      "language": "java",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/AlertConfigReq.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/AmlEvaluateReq.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/AuditCompareReq.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageReq.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ChatMessageResp.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/ClearingCorrectionReq.java",
+      "language": "java",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/CreateSessionReq.java",
+      "language": "java",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/DocumentAuditResp.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/FuzzyMatchReq.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/GenerateAiReportReq.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/HedgingRecommendReq.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/NlTradeReq.java",
+      "language": "java",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/OcrUploadReq.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictExposureReq.java",
+      "language": "java",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/PredictRateReq.java",
+      "language": "java",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RatePredictionResp.java",
+      "language": "java",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/RiskAlertResp.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/adapter/dto/TradingRecommendResp.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/AiApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "language": "java",
+      "sizeLines": 167,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentAction.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentOrchestrator.java",
+      "language": "java",
+      "sizeLines": 174,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentResult.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ExchangeRateTool.java",
+      "language": "java",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "language": "java",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "language": "java",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "language": "java",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "language": "java",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "language": "java",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatMessage.java",
+      "language": "java",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/ChatSession.java",
+      "language": "java",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/DocumentAudit.java",
+      "language": "java",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RatePrediction.java",
+      "language": "java",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/model/aggregate/RiskAiAssessment.java",
+      "language": "java",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatMessageRepository.java",
+      "language": "java",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/repository/ChatSessionRepository.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/repository/DocumentAuditRepository.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/repository/RatePredictionRepository.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/repository/RiskAiAssessmentRepository.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/AmlDetectionEngine.java",
+      "language": "java",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/DocumentAuditService.java",
+      "language": "java",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/RatePredictionEngine.java",
+      "language": "java",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "language": "java",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/TradingAssistant.java",
+      "language": "java",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/DeepSeekConfig.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "language": "java",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/SpringAiConfig.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java",
+      "language": "java",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatMessageMapper.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/ChatSessionMapper.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/DocumentAuditMapper.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RatePredictionMapper.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/mapper/RiskAiAssessmentMapper.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatMessagePO.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/ChatSessionPO.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/DocumentAuditPO.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RatePredictionPO.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/persistence/RiskAiAssessmentPO.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/rag/KnowledgeBaseInitializer.java",
+      "language": "java",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatMessageRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/ChatSessionRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/DocumentAuditRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RatePredictionRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/repository/RiskAiAssessmentRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 71,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/faq/lc_process_faq.md",
+      "language": "markdown",
+      "sizeLines": 50,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/faq/spot_forex_faq.md",
+      "language": "markdown",
+      "sizeLines": 30,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/policy/aml_regulation.md",
+      "language": "markdown",
+      "sizeLines": 41,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "forex-ai/src/main/resources/knowledge/policy/forex_administration.md",
+      "language": "markdown",
+      "sizeLines": 31,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "forex-ai/src/test/java/com/forex/ai/domain/service/AmlDetectionEngineTest.java",
+      "language": "java",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/test/java/com/forex/ai/domain/service/DocumentAuditServiceTest.java",
+      "language": "java",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/test/java/com/forex/ai/domain/service/RatePredictionEngineTest.java",
+      "language": "java",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/test/java/com/forex/ai/domain/service/SmartRagServiceTest.java",
+      "language": "java",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/pom.xml",
+      "language": "xml",
+      "sizeLines": 63,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "language": "java",
+      "sizeLines": 169,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "language": "java",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/AuthApplication.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Permission.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/Role.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/model/aggregate/User.java",
+      "language": "java",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/PasswordHash.java",
+      "language": "java",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/model/valueobject/TokenVo.java",
+      "language": "java",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/repository/UserRepository.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/domain/service/AuthenticationDomainService.java",
+      "language": "java",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/PermissionMapper.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/RoleMapper.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/RolePermissionMapper.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserMapper.java",
+      "language": "java",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/mapper/UserRoleMapper.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/PermissionPO.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/RolePermissionPO.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/RolePO.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/UserPO.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/persistence/UserRolePO.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/infrastructure/repository/UserRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 99,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 57,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-auth/src/test/java/com/forex/auth/domain/service/AuthenticationDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 102,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/index.html",
+      "language": "html",
+      "sizeLines": 13,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "forex-bank-web/package.json",
+      "language": "json",
+      "sizeLines": 30,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-bank-web/src/api/auth.ts",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/api/business.ts",
+      "language": "typescript",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/api/customer.ts",
+      "language": "typescript",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/api/exchange.ts",
+      "language": "typescript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/api/request.ts",
+      "language": "typescript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/App.vue",
+      "language": "vue",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/components/layout/MainLayout.vue",
+      "language": "vue",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/env.d.ts",
+      "language": "typescript",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/main.ts",
+      "language": "typescript",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/router/index.ts",
+      "language": "typescript",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/store/rate.ts",
+      "language": "typescript",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/store/user.ts",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/types/api.ts",
+      "language": "typescript",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/account/AccountList.vue",
+      "language": "vue",
+      "sizeLines": 176,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/ai/AiChatAssistant.vue",
+      "language": "vue",
+      "sizeLines": 239,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/ai/AiDocumentAudit.vue",
+      "language": "vue",
+      "sizeLines": 195,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/ai/AiRatePrediction.vue",
+      "language": "vue",
+      "sizeLines": 186,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/ai/AiRiskDashboard.vue",
+      "language": "vue",
+      "sizeLines": 204,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/ai/AiTradingCoPilot.vue",
+      "language": "vue",
+      "sizeLines": 202,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/auth/Login.vue",
+      "language": "vue",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/bookkeeping/JournalEntry.vue",
+      "language": "vue",
+      "sizeLines": 143,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/bookkeeping/MonthEndClosing.vue",
+      "language": "vue",
+      "sizeLines": 198,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/cashpool/CashPoolDashboard.vue",
+      "language": "vue",
+      "sizeLines": 205,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/cashpool/OverseasLending.vue",
+      "language": "vue",
+      "sizeLines": 241,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/clearing/CipsManagement.vue",
+      "language": "vue",
+      "sizeLines": 221,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/clearing/ClearingList.vue",
+      "language": "vue",
+      "sizeLines": 149,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/clearing/ConfirmationBoard.vue",
+      "language": "vue",
+      "sizeLines": 251,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/clearing/ConversionLog.vue",
+      "language": "vue",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/clearing/ReconciliationBoard.vue",
+      "language": "vue",
+      "sizeLines": 212,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/clearing/SettlementDashboard.vue",
+      "language": "vue",
+      "sizeLines": 171,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/clearing/SettlementTracker.vue",
+      "language": "vue",
+      "sizeLines": 246,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/customer/CustomerList.vue",
+      "language": "vue",
+      "sizeLines": 230,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/dashboard/Dashboard.vue",
+      "language": "vue",
+      "sizeLines": 217,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/exchange/ExchangeTrade.vue",
+      "language": "vue",
+      "sizeLines": 471,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/hedge/HedgeAccounting.vue",
+      "language": "vue",
+      "sizeLines": 259,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/margin/MarginList.vue",
+      "language": "vue",
+      "sizeLines": 176,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/notification/NotificationCenter.vue",
+      "language": "vue",
+      "sizeLines": 159,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/ocr/OcrUpload.vue",
+      "language": "vue",
+      "sizeLines": 177,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/payment/BatchPayment.vue",
+      "language": "vue",
+      "sizeLines": 173,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/payment/PaymentForm.vue",
+      "language": "vue",
+      "sizeLines": 420,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/payment/PaymentTemplateManager.vue",
+      "language": "vue",
+      "sizeLines": 349,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/payment/RouteOptimizer.vue",
+      "language": "vue",
+      "sizeLines": 195,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/position/ExposureHeatmap.vue",
+      "language": "vue",
+      "sizeLines": 162,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/position/PositionDashboard.vue",
+      "language": "vue",
+      "sizeLines": 113,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/reporting/ReportingConsole.vue",
+      "language": "vue",
+      "sizeLines": 172,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/risk/EnterpriseRiskDashboard.vue",
+      "language": "vue",
+      "sizeLines": 219,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/risk/RiskMonitor.vue",
+      "language": "vue",
+      "sizeLines": 146,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/risk/SamplingRuleConfig.vue",
+      "language": "vue",
+      "sizeLines": 277,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/schedule/JobManagement.vue",
+      "language": "vue",
+      "sizeLines": 184,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/settlement/BankGuarantee.vue",
+      "language": "vue",
+      "sizeLines": 183,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/settlement/DocumentaryCollection.vue",
+      "language": "vue",
+      "sizeLines": 175,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/settlement/LetterOfCredit.vue",
+      "language": "vue",
+      "sizeLines": 278,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/trading/TradingList.vue",
+      "language": "vue",
+      "sizeLines": 209,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/valuation/PnlAttribution.vue",
+      "language": "vue",
+      "sizeLines": 166,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/valuation/ValuationList.vue",
+      "language": "vue",
+      "sizeLines": 116,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/views/workflow/WorkflowList.vue",
+      "language": "vue",
+      "sizeLines": 183,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/tsconfig.json",
+      "language": "json",
+      "sizeLines": 22,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-bank-web/tsconfig.node.json",
+      "language": "json",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-bank-web/vite.config.ts",
+      "language": "typescript",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/controller/BookkeepingController.java",
+      "language": "java",
+      "sizeLines": 163,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/dto/EntryResp.java",
+      "language": "java",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/dto/JournalPageQuery.java",
+      "language": "java",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/adapter/dto/RevaluationReq.java",
+      "language": "java",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/command/CreateEntryCmd.java",
+      "language": "java",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/application/service/BookkeepingAppService.java",
+      "language": "java",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/BookkeepingApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/event/EntryPostedEvent.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/JournalEntry.java",
+      "language": "java",
+      "sizeLines": 163,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/aggregate/MonthEndClosing.java",
+      "language": "java",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/query/JournalQuery.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/model/valueobject/VoucherNo.java",
+      "language": "java",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/JournalEntryRepository.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/repository/MonthEndClosingRepository.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/BookkeepingDomainService.java",
+      "language": "java",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/MonthEndClosingService.java",
+      "language": "java",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/domain/service/RevaluationEntryService.java",
+      "language": "java",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/event/EntryPostedEventListener.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/JournalEntryMapper.java",
+      "language": "java",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/mapper/MonthEndClosingMapper.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/persistence/JournalEntryPO.java",
+      "language": "java",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/persistence/MonthEndClosingPO.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/repository/JournalEntryRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 123,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/java/com/forex/bookkeeping/infrastructure/repository/MonthEndClosingRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-bookkeeping/src/test/java/com/forex/bookkeeping/domain/model/JournalEntryTest.java",
+      "language": "java",
+      "sizeLines": 99,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/test/java/com/forex/bookkeeping/domain/service/BookkeepingDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/test/java/com/forex/bookkeeping/infrastructure/repository/MonthEndClosingRepositoryImplTest.java",
+      "language": "java",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/test/java/com/forex/bookkeeping/TestApplication.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bookkeeping/src/test/resources/application-test.yml",
+      "language": "yaml",
+      "sizeLines": 27,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-bookkeeping/src/test/resources/schema.sql",
+      "language": "sql",
+      "sizeLines": 49,
+      "fileCategory": "data"
+    },
+    {
+      "path": "forex-cashpool/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "language": "java",
+      "sizeLines": 194,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "language": "java",
+      "sizeLines": 179,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/dto/AddMemberReq.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/dto/CalculateQuotaReq.java",
+      "language": "java",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/dto/CreateLendingReq.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/dto/CreatePoolReq.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/dto/LendingPageQuery.java",
+      "language": "java",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/dto/RecordRepaymentReq.java",
+      "language": "java",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/CashpoolApplication.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java",
+      "language": "java",
+      "sizeLines": 182,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java",
+      "language": "java",
+      "sizeLines": 205,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/entity/PoolMember.java",
+      "language": "java",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/repository/CashPoolRepository.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/repository/OverseasLendingRepository.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/repository/PoolMemberRepository.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/NettingSettlementService.java",
+      "language": "java",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "language": "java",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/infrastructure/mapper/CashPoolMapper.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/infrastructure/mapper/OverseasLendingMapper.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/infrastructure/mapper/PoolMemberMapper.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/infrastructure/persistence/CashPoolPO.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/infrastructure/persistence/OverseasLendingPO.java",
+      "language": "java",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/infrastructure/persistence/PoolMemberPO.java",
+      "language": "java",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/infrastructure/repository/CashPoolRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/infrastructure/repository/OverseasLendingRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/infrastructure/repository/PoolMemberRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-cashpool/src/test/java/com/forex/cashpool/domain/service/NettingSettlementServiceTest.java",
+      "language": "java",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/test/java/com/forex/cashpool/domain/service/QuotaCalculationEngineTest.java",
+      "language": "java",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "language": "java",
+      "sizeLines": 169,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ClearingController.java",
+      "language": "java",
+      "sizeLines": 145,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ConfirmationController.java",
+      "language": "java",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/PvpController.java",
+      "language": "java",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "language": "java",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/RouteController.java",
+      "language": "java",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/TrackerController.java",
+      "language": "java",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips111Req.java",
+      "language": "java",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips112Req.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips113Req.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ClearingPageQuery.java",
+      "language": "java",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ClearingResp.java",
+      "language": "java",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ConfirmationPageQuery.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/CreateTrackerReq.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/InitiateConfirmationReq.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileAutoMatchReq.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileConvertReq.java",
+      "language": "java",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcilePreviewReq.java",
+      "language": "java",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ResolveConfirmationReq.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/RouteOptimizeReq.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/UpdateTrackerStatusReq.java",
+      "language": "java",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/command/GenerateClearingCmd.java",
+      "language": "java",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/dto/InternalTrade.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "language": "java",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/dto/TradeConfirmation.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/AutomatedConfirmationService.java",
+      "language": "java",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsMessageGenerator.java",
+      "language": "java",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsRoutingService.java",
+      "language": "java",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/ClearingAppService.java",
+      "language": "java",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/ConfirmationWorkflowService.java",
+      "language": "java",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/MtMxConverter.java",
+      "language": "java",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/RouteOptimizationService.java",
+      "language": "java",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/SettlementTrackerService.java",
+      "language": "java",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/SwiftMessageGenerator.java",
+      "language": "java",
+      "sizeLines": 133,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/service/TradeConfirmationService.java",
+      "language": "java",
+      "sizeLines": 86,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/ClearingApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/event/InstructionSentEvent.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClearingInstruction.java",
+      "language": "java",
+      "sizeLines": 229,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/ClsSession.java",
+      "language": "java",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/PvpSettlementPair.java",
+      "language": "java",
+      "sizeLines": 125,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementBatch.java",
+      "language": "java",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/SettlementTracker.java",
+      "language": "java",
+      "sizeLines": 121,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/aggregate/TradeConfirmation.java",
+      "language": "java",
+      "sizeLines": 160,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/query/ClearingQuery.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ClearingAmount.java",
+      "language": "java",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ClsCurrency.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/ConfirmationFlag.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/NettingPosition.java",
+      "language": "java",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/PaymentChannel.java",
+      "language": "java",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/model/valueobject/SettlementRoute.java",
+      "language": "java",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/repository/ClearingInstructionRepository.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/repository/ClsSessionRepository.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/repository/PvpSettlementRepository.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/repository/SettlementBatchRepository.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/repository/SettlementTrackerRepository.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/repository/TradeConfirmationRepository.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/service/ClearingDomainService.java",
+      "language": "java",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/service/ClsSessionService.java",
+      "language": "java",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/service/NettingService.java",
+      "language": "java",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/domain/service/PvpSettlementService.java",
+      "language": "java",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/ClearingInstructionMapper.java",
+      "language": "java",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/ClsSessionMapper.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/PvpSettlementPairMapper.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/SettlementBatchMapper.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/SettlementTrackerMapper.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/mapper/TradeConfirmationMapper.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/ClearingInstructionPO.java",
+      "language": "java",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/ClsSessionPO.java",
+      "language": "java",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/PvpSettlementPairPO.java",
+      "language": "java",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/SettlementBatchPO.java",
+      "language": "java",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/SettlementTrackerPO.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/persistence/TradeConfirmationPO.java",
+      "language": "java",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/repository/ClearingInstructionRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 122,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/repository/ClsSessionRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/repository/PvpSettlementPairRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/repository/SettlementBatchRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/repository/SettlementTrackerRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/infrastructure/repository/TradeConfirmationRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-clearing/src/test/java/com/forex/clearing/application/service/CipsRoutingServiceTest.java",
+      "language": "java",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/test/java/com/forex/clearing/application/service/RouteOptimizationServiceTest.java",
+      "language": "java",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/test/java/com/forex/clearing/domain/service/ClearingDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/test/java/com/forex/clearing/domain/service/ClsSessionServiceTest.java",
+      "language": "java",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/test/java/com/forex/clearing/domain/service/NettingServiceTest.java",
+      "language": "java",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/test/java/com/forex/clearing/domain/service/PvpSettlementServiceTest.java",
+      "language": "java",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/pom.xml",
+      "language": "xml",
+      "sizeLines": 57,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/DomainEvent.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "language": "java",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RateLimit.java",
+      "language": "java",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RedisLock.java",
+      "language": "java",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/SystemConstants.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "language": "java",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseDomainEvent.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseEntity.java",
+      "language": "java",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "language": "java",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "language": "java",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/CurrencyEnum.java",
+      "language": "java",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/CustomerTypeEnum.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/OrderStatusEnum.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/PaymentDirectionEnum.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/RiskLevelEnum.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/TradeTypeEnum.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/enums/YesNoEnum.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BaseException.java",
+      "language": "java",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "language": "java",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "language": "java",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "language": "java",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "language": "java",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "language": "java",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "language": "java",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "language": "java",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java",
+      "language": "java",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-mybatis/pom.xml",
+      "language": "xml",
+      "sizeLines": 34,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "language": "java",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BasePO.java",
+      "language": "java",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "language": "java",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MyMetaObjectHandler.java",
+      "language": "java",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/EncryptTypeHandler.java",
+      "language": "java",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/JsonTypeHandler.java",
+      "language": "java",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-mybatis/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "language": "imports",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-security/pom.xml",
+      "language": "xml",
+      "sizeLines": 57,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/aspect/PermissionAspect.java",
+      "language": "java",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "language": "java",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/filter/TokenAuthenticationFilter.java",
+      "language": "java",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java",
+      "language": "java",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm2Util.java",
+      "language": "java",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm3Util.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/sm/Sm4Util.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserContextHolder.java",
+      "language": "java",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/util/UserInfo.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/forex-common-security/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "language": "imports",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-common/pom.xml",
+      "language": "xml",
+      "sizeLines": 23,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-customer/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/adapter/controller/CustomerController.java",
+      "language": "java",
+      "sizeLines": 213,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/adapter/dto/CreditCheckReq.java",
+      "language": "java",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/adapter/dto/CustomerReq.java",
+      "language": "java",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/adapter/dto/CustomerResp.java",
+      "language": "java",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/command/CreateCustomerCmd.java",
+      "language": "java",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/command/UpdateCustomerCmd.java",
+      "language": "java",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/query/CustomerDetailDTO.java",
+      "language": "java",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/query/CustomerListDTO.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/query/CustomerQuery.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/service/AddressCleansingService.java",
+      "language": "java",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/service/CustomerAppService.java",
+      "language": "java",
+      "sizeLines": 161,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/CustomerApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/event/CustomerCreatedEvent.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/event/RiskLevelChangedEvent.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "language": "java",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerQuery.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "language": "java",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java",
+      "language": "java",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java",
+      "language": "java",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "language": "java",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java",
+      "language": "java",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java",
+      "language": "java",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java",
+      "language": "java",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CreditLimitMapper.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerMapper.java",
+      "language": "java",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/infrastructure/mapper/CustomerQuotaMapper.java",
+      "language": "java",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CreditLimitPO.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerPO.java",
+      "language": "java",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/infrastructure/persistence/CustomerQuotaPO.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CreditLimitRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/infrastructure/repository/CustomerRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 120,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-customer/src/test/java/com/forex/customer/domain/service/CustomerDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/adapter/controller/ExchangeController.java",
+      "language": "java",
+      "sizeLines": 211,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/AmountCalcReq.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/CreateOrderReq.java",
+      "language": "java",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/ExchangeOrderPageQuery.java",
+      "language": "java",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/OrderResp.java",
+      "language": "java",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/QuoteReq.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/QuoteResp.java",
+      "language": "java",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/adapter/dto/RateLockReq.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/application/command/CancelOrderCmd.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/application/command/CreateOrderCmd.java",
+      "language": "java",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/application/service/EnterpriseQuoteService.java",
+      "language": "java",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/application/service/ExchangeAppService.java",
+      "language": "java",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/event/OrderCancelledEvent.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/event/OrderConfirmedEvent.java",
+      "language": "java",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "language": "java",
+      "sizeLines": 250,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/entity/ExchangeQuote.java",
+      "language": "java",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/query/ExchangeOrderQuery.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/CurrencyPair.java",
+      "language": "java",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java",
+      "language": "java",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/OrderNo.java",
+      "language": "java",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/repository/ExchangeOrderRepository.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/repository/ExchangeQuoteRepository.java",
+      "language": "java",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/service/ExchangeDomainService.java",
+      "language": "java",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/service/QuoteDomainService.java",
+      "language": "java",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/ExchangeApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/mapper/ExchangeOrderMapper.java",
+      "language": "java",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/mapper/ExchangeQuoteMapper.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/persistence/ExchangeOrderPO.java",
+      "language": "java",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/persistence/ExchangeQuotePO.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeOrderRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 126,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/infrastructure/repository/ExchangeQuoteRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-exchange/src/test/java/com/forex/exchange/application/service/EnterpriseQuoteServiceTest.java",
+      "language": "java",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/test/java/com/forex/exchange/domain/service/ExchangeDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/test/java/com/forex/exchange/domain/service/QuoteDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-gateway/pom.xml",
+      "language": "xml",
+      "sizeLines": 59,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-gateway/src/main/java/com/forex/gateway/config/CorsConfig.java",
+      "language": "java",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-gateway/src/main/java/com/forex/gateway/config/RateLimitConfig.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java",
+      "language": "java",
+      "sizeLines": 117,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java",
+      "language": "java",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-gateway/src/main/java/com/forex/gateway/GatewayApplication.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-gateway/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 258,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-hedge-accounting/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/controller/HedgeAccountingController.java",
+      "language": "java",
+      "sizeLines": 252,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/CreateHedgeReq.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/EffectivenessTestReq.java",
+      "language": "java",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/adapter/dto/GenerateHedgeEntriesReq.java",
+      "language": "java",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/aggregate/HedgeRelationship.java",
+      "language": "java",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/model/entity/HedgeEffectivenessTest.java",
+      "language": "java",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/repository/HedgeEffectivenessTestRepository.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/repository/HedgeRelationshipRepository.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/domain/service/HedgeAccountingService.java",
+      "language": "java",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/HedgeAccountingApplication.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/infrastructure/mapper/HedgeEffectivenessTestMapper.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/infrastructure/mapper/HedgeRelationshipMapper.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/infrastructure/persistence/HedgeEffectivenessTestPO.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/infrastructure/persistence/HedgeRelationshipPO.java",
+      "language": "java",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/infrastructure/repository/HedgeEffectivenessTestRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/java/com/forex/hedge/accounting/infrastructure/repository/HedgeRelationshipRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-hedge-accounting/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-hedge-accounting/src/test/java/com/forex/hedge/accounting/domain/service/HedgeAccountingServiceTest.java",
+      "language": "java",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-limit/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/adapter/controller/LimitController.java",
+      "language": "java",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/application/command/CreateLimitCmd.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/application/service/LimitAppService.java",
+      "language": "java",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/domain/model/aggregate/LimitConfig.java",
+      "language": "java",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/domain/repository/LimitConfigRepository.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/domain/service/LimitDomainService.java",
+      "language": "java",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/LimitApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-limit/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 36,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-margin/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java",
+      "language": "java",
+      "sizeLines": 129,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/adapter/dto/MarginPageQuery.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/adapter/dto/MarginResp.java",
+      "language": "java",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/application/command/CreateMarginCmd.java",
+      "language": "java",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java",
+      "language": "java",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/event/MarginCalledEvent.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java",
+      "language": "java",
+      "sizeLines": 211,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java",
+      "language": "java",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/model/query/MarginQuery.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java",
+      "language": "java",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "language": "java",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/WaterLevel.java",
+      "language": "java",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginAccountRepository.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/repository/MarginCallRepository.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/service/MarginDomainService.java",
+      "language": "java",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginAccountMapper.java",
+      "language": "java",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/infrastructure/mapper/MarginCallMapper.java",
+      "language": "java",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginAccountPO.java",
+      "language": "java",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/infrastructure/persistence/MarginCallPO.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginAccountRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/infrastructure/repository/MarginCallRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/MarginApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-margin/src/test/java/com/forex/margin/domain/model/MarginAccountTest.java",
+      "language": "java",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-margin/src/test/java/com/forex/margin/domain/service/MarginDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/pom.xml",
+      "language": "xml",
+      "sizeLines": 60,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NoticeController.java",
+      "language": "java",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/adapter/controller/NotificationController.java",
+      "language": "java",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/adapter/dto/CreateNoticeReq.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/adapter/dto/NoticeResp.java",
+      "language": "java",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/adapter/dto/NotificationResp.java",
+      "language": "java",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/adapter/dto/SendNotificationReq.java",
+      "language": "java",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/application/command/CreateNoticeCmd.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/application/command/SendNotificationCmd.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/application/query/NoticeQuery.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/application/query/NotifyQuery.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/application/service/NotificationAppService.java",
+      "language": "java",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/domain/event/NotificationSentEvent.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notice.java",
+      "language": "java",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/domain/model/aggregate/Notification.java",
+      "language": "java",
+      "sizeLines": 99,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/domain/repository/NoticeRepository.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/domain/repository/NotificationRepository.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/domain/service/NotificationDomainService.java",
+      "language": "java",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/mapper/NoticeMapper.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/mapper/NotificationMapper.java",
+      "language": "java",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/persistence/NoticePO.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/persistence/NotificationPO.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/repository/NoticeRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/infrastructure/repository/NotificationRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/java/com/forex/notification/NotificationApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-notification/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-notification/src/test/java/com/forex/notification/domain/service/NotificationDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/pom.xml",
+      "language": "xml",
+      "sizeLines": 63,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/adapter/controller/OcrController.java",
+      "language": "java",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/adapter/dto/OcrTaskResp.java",
+      "language": "java",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/adapter/dto/OcrUploadReq.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/application/query/OcrQuery.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/application/service/OcrAppService.java",
+      "language": "java",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/event/OcrCompletedEvent.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/model/aggregate/OcrTask.java",
+      "language": "java",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/repository/OcrTaskRepository.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/service/OcrDomainService.java",
+      "language": "java",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/infrastructure/mapper/OcrTaskMapper.java",
+      "language": "java",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/infrastructure/persistence/OcrTaskPO.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/infrastructure/repository/OcrTaskRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/OcrApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ocr/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-ocr/src/test/java/com/forex/ocr/domain/service/OcrDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "language": "java",
+      "sizeLines": 291,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentTemplateController.java",
+      "language": "java",
+      "sizeLines": 251,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/AddressValidateReq.java",
+      "language": "java",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/AmlCheckReq.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/BatchSubmitReq.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/CreatePaymentReq.java",
+      "language": "java",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/CreateTemplateReq.java",
+      "language": "java",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/FeeCalculateReq.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/GpiUpdateReq.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/IbanValidateReq.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/PaymentPageQuery.java",
+      "language": "java",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/PaymentResp.java",
+      "language": "java",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/SendPaymentReq.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/SwiftValidateReq.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/adapter/dto/UpdateTemplateReq.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/command/BlacklistHitCmd.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/command/CreatePaymentCmd.java",
+      "language": "java",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/command/SendPaymentCmd.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/service/BankCodeValidationService.java",
+      "language": "java",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/service/BatchPaymentService.java",
+      "language": "java",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/service/BatchResult.java",
+      "language": "java",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/service/PaymentAppService.java",
+      "language": "java",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSentEvent.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSubmittedEvent.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/aggregate/CrossBorderPayment.java",
+      "language": "java",
+      "sizeLines": 308,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/dto/PaymentQuery.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/entity/BlacklistHit.java",
+      "language": "java",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/entity/PaymentReconciliation.java",
+      "language": "java",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/entity/PaymentTemplate.java",
+      "language": "java",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/BeneficiaryInfo.java",
+      "language": "java",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PaymentAmount.java",
+      "language": "java",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PaymentNo.java",
+      "language": "java",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PostalAddress.java",
+      "language": "java",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/SwiftCode.java",
+      "language": "java",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/repository/BlacklistHitRepository.java",
+      "language": "java",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/repository/PaymentRepository.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/repository/ReconciliationRepository.java",
+      "language": "java",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "language": "java",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/infrastructure/event/PaymentEventListener.java",
+      "language": "java",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/infrastructure/mapper/BlacklistHitMapper.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/infrastructure/mapper/CrossBorderPaymentMapper.java",
+      "language": "java",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/infrastructure/mapper/PaymentReconciliationMapper.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/infrastructure/mapper/PaymentTemplateMapper.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/infrastructure/persistence/BlacklistHitPO.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/infrastructure/persistence/CrossBorderPaymentPO.java",
+      "language": "java",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/infrastructure/persistence/PaymentReconciliationPO.java",
+      "language": "java",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/infrastructure/persistence/PaymentTemplatePO.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/infrastructure/repository/BlacklistHitRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/infrastructure/repository/PaymentRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 151,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/infrastructure/repository/ReconciliationRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/PaymentApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-payment/src/test/java/com/forex/payment/application/service/BankCodeValidationServiceTest.java",
+      "language": "java",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-payment/src/test/java/com/forex/payment/domain/service/PaymentDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 157,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/adapter/controller/PositionController.java",
+      "language": "java",
+      "sizeLines": 161,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/adapter/dto/HeatmapReq.java",
+      "language": "java",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/adapter/dto/MaturityLadderReq.java",
+      "language": "java",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/adapter/dto/MultiDimAnalysisReq.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/adapter/dto/PositionPageQuery.java",
+      "language": "java",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/adapter/dto/PositionResp.java",
+      "language": "java",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/application/command/PositionCmd.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/application/service/ExposureAnalysisService.java",
+      "language": "java",
+      "sizeLines": 151,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/application/service/PositionAppService.java",
+      "language": "java",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/domain/event/PositionLimitBreachEvent.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/domain/model/aggregate/Position.java",
+      "language": "java",
+      "sizeLines": 179,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/domain/model/entity/PositionLimitConfig.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/domain/model/query/PositionQuery.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/domain/model/valueobject/PositionAmount.java",
+      "language": "java",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/domain/repository/PositionLimitConfigRepository.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/domain/repository/PositionRepository.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/domain/service/PositionDomainService.java",
+      "language": "java",
+      "sizeLines": 117,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/infrastructure/mapper/PositionLimitConfigMapper.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/infrastructure/mapper/PositionMapper.java",
+      "language": "java",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/infrastructure/persistence/PositionLimitConfigPO.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/infrastructure/persistence/PositionPO.java",
+      "language": "java",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/infrastructure/repository/PositionLimitConfigRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/infrastructure/repository/PositionRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/PositionApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-position/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-position/src/test/java/com/forex/position/domain/service/PositionDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 137,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-precious-metal/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/adapter/controller/PreciousMetalController.java",
+      "language": "java",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/CreateOrderCmd.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/command/SettleOrderCmd.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/query/OrderQuery.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/application/service/MetalAppService.java",
+      "language": "java",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/MetalPosition.java",
+      "language": "java",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/PreciousMetalOrder.java",
+      "language": "java",
+      "sizeLines": 163,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/MetalPositionRepository.java",
+      "language": "java",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/repository/PreciousMetalOrderRepository.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/service/PreciousMetalDomainService.java",
+      "language": "java",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/PreciousMetalApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-precious-metal/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 36,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-rate/pom.xml",
+      "language": "xml",
+      "sizeLines": 59,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "language": "java",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/adapter/dto/ConversionResp.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/adapter/dto/RateQueryReq.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/adapter/dto/RateResp.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/application/command/RateSaveCmd.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java",
+      "language": "java",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "language": "java",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/event/RateUpdatedEvent.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "language": "java",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/CurrencyPair.java",
+      "language": "java",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/model/valueobject/RateValue.java",
+      "language": "java",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "language": "java",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "language": "java",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/RatePublishConfigMapper.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/RatePublishLogMapper.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/infrastructure/persistence/ExchangeRatePO.java",
+      "language": "java",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/infrastructure/persistence/RatePublishConfigPO.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/infrastructure/persistence/RatePublishLogPO.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/RateApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-rate/src/test/java/com/forex/rate/domain/service/RateCalculationDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/test/java/com/forex/rate/domain/service/RatePublishDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/adapter/controller/ReportingController.java",
+      "language": "java",
+      "sizeLines": 161,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/adapter/dto/BopReportResp.java",
+      "language": "java",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/adapter/dto/ReportPageQuery.java",
+      "language": "java",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/adapter/dto/SettlementReportResp.java",
+      "language": "java",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/application/command/BopReportCmd.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/application/command/CapitalReportCmd.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/application/command/SettlementReportCmd.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/application/service/ReportingAppService.java",
+      "language": "java",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/event/ReportSubmittedEvent.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/model/aggregate/BopReport.java",
+      "language": "java",
+      "sizeLines": 214,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/model/entity/CapitalAccountReport.java",
+      "language": "java",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/model/entity/ForexSettlementReport.java",
+      "language": "java",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/model/query/ReportQuery.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/BopCode.java",
+      "language": "java",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/model/valueobject/ReportNo.java",
+      "language": "java",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/repository/BopReportRepository.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/repository/CapitalReportRepository.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/repository/SettlementReportRepository.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/domain/service/ReportingDomainService.java",
+      "language": "java",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/infrastructure/mapper/BopReportMapper.java",
+      "language": "java",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/infrastructure/mapper/CapitalAccountReportMapper.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/infrastructure/mapper/CapitalReportMapper.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/infrastructure/mapper/ForexSettlementReportMapper.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/infrastructure/mapper/SettlementReportMapper.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/infrastructure/persistence/BopReportPO.java",
+      "language": "java",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/infrastructure/persistence/CapitalAccountReportPO.java",
+      "language": "java",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/infrastructure/persistence/CapitalReportPO.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/infrastructure/persistence/ForexSettlementReportPO.java",
+      "language": "java",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/infrastructure/persistence/SettlementReportPO.java",
+      "language": "java",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/infrastructure/repository/BopReportRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/infrastructure/repository/CapitalReportRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/infrastructure/repository/SettlementReportRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/java/com/forex/reporting/ReportingApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-reporting/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-reporting/src/test/java/com/forex/reporting/domain/service/ReportingDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 145,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/controller/RiskController.java",
+      "language": "java",
+      "sizeLines": 159,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "language": "java",
+      "sizeLines": 173,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java",
+      "language": "java",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/CreateRiskLogReq.java",
+      "language": "java",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java",
+      "language": "java",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/RiskLogResp.java",
+      "language": "java",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/RiskPageQuery.java",
+      "language": "java",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/RiskReportResp.java",
+      "language": "java",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/application/command/EvaluateCmd.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/application/command/GenerateReportCmd.java",
+      "language": "java",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/application/service/RiskAppService.java",
+      "language": "java",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "language": "java",
+      "sizeLines": 116,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/event/RiskAlertEvent.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/model/aggregate/RiskMonitorLog.java",
+      "language": "java",
+      "sizeLines": 160,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/model/entity/MonitorRule.java",
+      "language": "java",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/model/entity/RiskParamConfig.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/model/entity/RiskReport.java",
+      "language": "java",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/model/entity/SamplingRule.java",
+      "language": "java",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/model/query/RiskQuery.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskLevel.java",
+      "language": "java",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RiskScore.java",
+      "language": "java",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/model/valueobject/RuleCondition.java",
+      "language": "java",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/repository/MonitorRuleRepository.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/repository/RiskMonitorLogRepository.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/repository/RiskParamConfigRepository.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/repository/RiskReportRepository.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java",
+      "language": "java",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/service/RiskDomainService.java",
+      "language": "java",
+      "sizeLines": 151,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/config/RocketMqConsumerConfig.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/event/RiskEventListener.java",
+      "language": "java",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/MonitorRuleMapper.java",
+      "language": "java",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/RiskMonitorLogMapper.java",
+      "language": "java",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/RiskParamConfigMapper.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/RiskReportMapper.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "language": "java",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/persistence/MonitorRulePO.java",
+      "language": "java",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/persistence/RiskMonitorLogPO.java",
+      "language": "java",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/persistence/RiskParamConfigPO.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/persistence/RiskReportPO.java",
+      "language": "java",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/persistence/SamplingRulePO.java",
+      "language": "java",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/MonitorRuleRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 86,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/RiskMonitorLogRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/RiskParamConfigRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/RiskReportRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/RiskApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "language": "java",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/adapter/controller/SaccrController.java",
+      "language": "java",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/adapter/dto/CalculateCmd.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/adapter/dto/SaccrPageQuery.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/adapter/dto/SaccrResultResp.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/adapter/dto/SimmCalculateCmd.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/adapter/dto/SimmPageQuery.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/adapter/dto/SimmResultResp.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/application/service/SaccrAppService.java",
+      "language": "java",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/domain/model/aggregate/SaccrResult.java",
+      "language": "java",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/domain/model/aggregate/SimmResult.java",
+      "language": "java",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/domain/model/query/SaccrQuery.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/domain/model/query/SimmQuery.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/domain/repository/SaccrResultRepository.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/domain/repository/SimmResultRepository.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/domain/service/SaccrCalculationService.java",
+      "language": "java",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/domain/service/SimmCalculationService.java",
+      "language": "java",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/infrastructure/mapper/SaccrResultMapper.java",
+      "language": "java",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/infrastructure/mapper/SimmResultMapper.java",
+      "language": "java",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/infrastructure/persistence/SaccrResultPO.java",
+      "language": "java",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/infrastructure/persistence/SimmResultPO.java",
+      "language": "java",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/infrastructure/repository/SaccrResultRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/infrastructure/repository/SimmResultRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/java/com/forex/saccr/SaccrApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-saccr/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-saccr/src/test/java/com/forex/saccr/domain/service/SaccrCalculationServiceTest.java",
+      "language": "java",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/pom.xml",
+      "language": "xml",
+      "sizeLines": 67,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "language": "java",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/adapter/dto/JobLogResp.java",
+      "language": "java",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/adapter/dto/ScheduleJobResp.java",
+      "language": "java",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/application/command/JobCmd.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/application/query/JobQuery.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "language": "java",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/config/XxlJobConfig.java",
+      "language": "java",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/JobLog.java",
+      "language": "java",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "language": "java",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/domain/repository/JobLogRepository.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/domain/repository/ScheduleJobRepository.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "language": "java",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/handler/ForexJobHandler.java",
+      "language": "java",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/infrastructure/mapper/JobLogMapper.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/infrastructure/mapper/ScheduleJobMapper.java",
+      "language": "java",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/infrastructure/persistence/JobLogPO.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/infrastructure/persistence/ScheduleJobPO.java",
+      "language": "java",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/JobLogRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/ScheduleApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-schedule/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 57,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "language": "java",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "language": "java",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "language": "java",
+      "sizeLines": 209,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/adapter/dto/CollectionReq.java",
+      "language": "java",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/adapter/dto/CollectionResp.java",
+      "language": "java",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/adapter/dto/CreateLcReq.java",
+      "language": "java",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/adapter/dto/GuaranteeReq.java",
+      "language": "java",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/adapter/dto/GuaranteeResp.java",
+      "language": "java",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/adapter/dto/LcPageQuery.java",
+      "language": "java",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/adapter/dto/LcResp.java",
+      "language": "java",
+      "sizeLines": 126,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/application/command/AmendLcCmd.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/application/command/CreateCollectionCmd.java",
+      "language": "java",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/application/command/CreateGuaranteeCmd.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/application/command/CreateLcCmd.java",
+      "language": "java",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "language": "java",
+      "sizeLines": 173,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/event/LcDocCheckedEvent.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/event/LcIssuedEvent.java",
+      "language": "java",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/model/aggregate/LetterOfCredit.java",
+      "language": "java",
+      "sizeLines": 303,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "language": "java",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "language": "java",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/model/query/CollectionQuery.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/model/query/GuaranteeQuery.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/model/query/LcQuery.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcAmount.java",
+      "language": "java",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/model/valueobject/LcNo.java",
+      "language": "java",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/repository/CollectionRepository.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/repository/GuaranteeRepository.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/repository/LcRepository.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "language": "java",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "language": "java",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "language": "java",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/infrastructure/mapper/BankGuaranteeMapper.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/infrastructure/mapper/CollectionMapper.java",
+      "language": "java",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/infrastructure/mapper/DocumentaryCollectionMapper.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/infrastructure/mapper/GuaranteeMapper.java",
+      "language": "java",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/infrastructure/mapper/LetterOfCreditMapper.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/infrastructure/persistence/BankGuaranteePO.java",
+      "language": "java",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/infrastructure/persistence/DocumentaryCollectionPO.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/infrastructure/persistence/LetterOfCreditPO.java",
+      "language": "java",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/infrastructure/repository/CollectionRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/infrastructure/repository/GuaranteeRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/infrastructure/repository/LcRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 147,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/SettlementApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-settlement/src/test/java/com/forex/settlement/domain/service/CollectionDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/test/java/com/forex/settlement/domain/service/LcDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 172,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-supply-chain/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/FactoringContract.java",
+      "language": "java",
+      "sizeLines": 128,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/model/aggregate/ForfaitingContract.java",
+      "language": "java",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/FactoringContractRepository.java",
+      "language": "java",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/repository/ForfaitingContractRepository.java",
+      "language": "java",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-supply-chain/src/main/java/com/forex/supplychain/domain/service/SupplyChainDomainService.java",
+      "language": "java",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-supply-chain/src/main/java/com/forex/supplychain/SupplyChainApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-supply-chain/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 36,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-trading/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/adapter/controller/TradingController.java",
+      "language": "java",
+      "sizeLines": 237,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/adapter/dto/CreateTradeReq.java",
+      "language": "java",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/adapter/dto/RollOverReq.java",
+      "language": "java",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/adapter/dto/TradePageQuery.java",
+      "language": "java",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/adapter/dto/TradeResp.java",
+      "language": "java",
+      "sizeLines": 115,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/application/command/CreateTradeCmd.java",
+      "language": "java",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/application/service/OptionStrategyService.java",
+      "language": "java",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/application/service/TradingAppService.java",
+      "language": "java",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/event/TradeExecutedEvent.java",
+      "language": "java",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/event/TradeSettledEvent.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/model/aggregate/FxTrade.java",
+      "language": "java",
+      "sizeLines": 256,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/model/entity/TradeLifecycle.java",
+      "language": "java",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/model/enums/TradeStatus.java",
+      "language": "java",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/model/query/TradeQuery.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/StrikePrice.java",
+      "language": "java",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/SwapPoints.java",
+      "language": "java",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/model/valueobject/TradeAmount.java",
+      "language": "java",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/repository/FxTradeRepository.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/repository/TradeLifecycleRepository.java",
+      "language": "java",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/domain/service/TradeDomainService.java",
+      "language": "java",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/infrastructure/mapper/FxTradeMapper.java",
+      "language": "java",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/infrastructure/mapper/TradeLifecycleMapper.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/infrastructure/persistence/FxTradePO.java",
+      "language": "java",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/infrastructure/persistence/TradeLifecyclePO.java",
+      "language": "java",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/infrastructure/repository/FxTradeRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 145,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/infrastructure/repository/TradeLifecycleRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/java/com/forex/trading/TradingApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-trading/src/test/java/com/forex/trading/application/service/OptionStrategyServiceTest.java",
+      "language": "java",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-trading/src/test/java/com/forex/trading/domain/service/TradeDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 171,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/pom.xml",
+      "language": "xml",
+      "sizeLines": 55,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/adapter/controller/ValuationController.java",
+      "language": "java",
+      "sizeLines": 146,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/adapter/dto/PnlAttributionResp.java",
+      "language": "java",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/adapter/dto/ValuationResp.java",
+      "language": "java",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/application/command/CalculateValuationCmd.java",
+      "language": "java",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/application/service/ValuationAppService.java",
+      "language": "java",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/event/ValuationCompletedEvent.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/model/aggregate/PnlAttribution.java",
+      "language": "java",
+      "sizeLines": 109,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/model/aggregate/ValuationResult.java",
+      "language": "java",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/model/query/ValuationQuery.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/FairValue.java",
+      "language": "java",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/ValuationInput.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/model/valueobject/ValuationModelType.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/repository/PnlAttributionRepository.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/repository/ValuationResultRepository.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/service/impl/BlackScholesModel.java",
+      "language": "java",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/service/impl/DiscountedCashFlowModel.java",
+      "language": "java",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/service/impl/GarmanKohlagenModel.java",
+      "language": "java",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/service/PnlAttributionService.java",
+      "language": "java",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationDomainService.java",
+      "language": "java",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModel.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/domain/service/ValuationModelRegistry.java",
+      "language": "java",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/infrastructure/mapper/PnlAttributionMapper.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/infrastructure/mapper/ValuationResultMapper.java",
+      "language": "java",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/infrastructure/persistence/PnlAttributionPO.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/infrastructure/persistence/ValuationResultPO.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/infrastructure/repository/PnlAttributionRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/infrastructure/repository/ValuationResultRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/java/com/forex/valuation/ValuationApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-valuation/src/test/java/com/forex/valuation/domain/service/PnlAttributionServiceTest.java",
+      "language": "java",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-valuation/src/test/java/com/forex/valuation/domain/service/ValuationDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/pom.xml",
+      "language": "xml",
+      "sizeLines": 59,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/adapter/controller/WorkflowController.java",
+      "language": "java",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/adapter/dto/CompleteTaskReq.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/adapter/dto/StartProcessReq.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/adapter/dto/WorkflowTaskResp.java",
+      "language": "java",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/application/command/StartProcessCmd.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/application/query/WorkflowQuery.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/application/service/WorkflowAppService.java",
+      "language": "java",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/domain/model/aggregate/WorkflowTask.java",
+      "language": "java",
+      "sizeLines": 130,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/domain/model/entity/ApprovalRecord.java",
+      "language": "java",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/domain/repository/WorkflowTaskRepository.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/domain/service/WorkflowDomainService.java",
+      "language": "java",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/ApprovalRecordMapper.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/infrastructure/mapper/WorkflowTaskMapper.java",
+      "language": "java",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/ApprovalRecordPO.java",
+      "language": "java",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/infrastructure/persistence/WorkflowTaskPO.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/infrastructure/repository/WorkflowTaskRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 113,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/java/com/forex/workflow/WorkflowApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-workflow/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "forex-workflow/src/test/java/com/forex/workflow/domain/service/WorkflowDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "IMPROVEMENTS.md",
+      "language": "markdown",
+      "sizeLines": 256,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "pom.xml",
+      "language": "xml",
+      "sizeLines": 307,
+      "fileCategory": "config"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 345,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "sql/account/init.sql",
+      "language": "sql",
+      "sizeLines": 70,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/ai/init.sql",
+      "language": "sql",
+      "sizeLines": 45,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/auth/init.sql",
+      "language": "sql",
+      "sizeLines": 178,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/bookkeeping/init.sql",
+      "language": "sql",
+      "sizeLines": 92,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/cashpool/init.sql",
+      "language": "sql",
+      "sizeLines": 84,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/clearing/init.sql",
+      "language": "sql",
+      "sizeLines": 171,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/customer/init.sql",
+      "language": "sql",
+      "sizeLines": 81,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/exchange/init.sql",
+      "language": "sql",
+      "sizeLines": 81,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/hedge-accounting/init.sql",
+      "language": "sql",
+      "sizeLines": 40,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/init-all.sql",
+      "language": "sql",
+      "sizeLines": 30,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/margin/init.sql",
+      "language": "sql",
+      "sizeLines": 52,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/notification/init.sql",
+      "language": "sql",
+      "sizeLines": 51,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/ocr/init.sql",
+      "language": "sql",
+      "sizeLines": 28,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/payment/init.sql",
+      "language": "sql",
+      "sizeLines": 133,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/position/init.sql",
+      "language": "sql",
+      "sizeLines": 53,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/rate/init.sql",
+      "language": "sql",
+      "sizeLines": 60,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/reporting/init.sql",
+      "language": "sql",
+      "sizeLines": 114,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/risk/init.sql",
+      "language": "sql",
+      "sizeLines": 124,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/saccr/init.sql",
+      "language": "sql",
+      "sizeLines": 48,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/schedule/init.sql",
+      "language": "sql",
+      "sizeLines": 52,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/settlement/init.sql",
+      "language": "sql",
+      "sizeLines": 116,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/t_journal_entry.sql",
+      "language": "sql",
+      "sizeLines": 31,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/t_month_end_closing.sql",
+      "language": "sql",
+      "sizeLines": 21,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/trading/init.sql",
+      "language": "sql",
+      "sizeLines": 93,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/valuation/init.sql",
+      "language": "sql",
+      "sizeLines": 63,
+      "fileCategory": "data"
+    },
+    {
+      "path": "sql/workflow/init.sql",
+      "language": "sql",
+      "sizeLines": 48,
+      "fileCategory": "data"
+    }
+  ],
+  "totalFiles": 1002,
+  "filteredByIgnore": 67,
+  "estimatedComplexity": "very-large",
+  "stats": {
+    "filesScanned": 1002,
+    "byCategory": {
+      "docs": 7,
+      "infra": 1,
+      "config": 64,
+      "code": 902,
+      "markup": 1,
+      "data": 27
+    },
+    "byLanguage": {
+      "markdown": 7,
+      "yaml": 29,
+      "properties": 1,
+      "xml": 32,
+      "java": 843,
+      "html": 1,
+      "json": 3,
+      "typescript": 12,
+      "vue": 45,
+      "sql": 27,
+      "imports": 2
+    }
+  }
+}

@@ -1,16 +1,22 @@
 <template>
   <div class="sampling-rule-config">
-    <h2>便利化抽查规则配置</h2>
+    <div class="page-header">
+      <h2>便利化抽查规则</h2>
+      <a-space>
+        <a-button @click="reloadAll">刷新 Refresh</a-button>
+        <a-button type="primary" @click="openCreateModal">新增规则 Add Rule</a-button>
+        <a-button type="primary" ghost @click="generateTasks">生成抽查任务 Generate Tasks</a-button>
+      </a-space>
+    </div>
 
-    <a-card style="margin-top: 16px">
-      <div style="margin-bottom: 16px">
-        <a-space>
-          <a-button type="primary" @click="showRuleModal = true">新增规则 Add Rule</a-button>
-          <a-button @click="generateTasks">生成抽查任务 Generate Tasks</a-button>
-        </a-space>
-      </div>
-
-      <a-table :columns="ruleColumns" :data-source="rules" row-key="id" :pagination="false">
+    <a-card>
+      <a-table
+        :columns="ruleColumns"
+        :data-source="rules"
+        :loading="ruleLoading"
+        row-key="id"
+        :pagination="{ pageSize: 8 }"
+      >
         <template #bodyCell="{ column, record }">
           <template v-if="column.key === 'targetModule'">
             <a-tag :color="moduleColorMap[record.targetModule]">
@@ -18,7 +24,11 @@
             </a-tag>
           </template>
           <template v-else-if="column.key === 'samplingRate'">
-            <a-progress :percent="record.samplingRate" :size="16" :stroke-color="rateColor(record.samplingRate)" />
+            <a-progress
+              :percent="Number(record.samplingRate || 0)"
+              :size="16"
+              :stroke-color="rateColor(Number(record.samplingRate || 0))"
+            />
           </template>
           <template v-else-if="column.key === 'status'">
             <a-switch
@@ -28,12 +38,14 @@
               @change="(checked: boolean) => toggleRuleStatus(record, checked)"
             />
           </template>
+          <template v-else-if="column.key === 'isAutoExtract'">
+            <a-tag :color="record.isAutoExtract ? 'green' : 'default'">
+              {{ record.isAutoExtract ? '自动 Auto' : '手动 Manual' }}
+            </a-tag>
+          </template>
           <template v-else-if="column.key === 'operation'">
             <a-space>
-              <a @click="editRule(record)">编辑 Edit</a>
-              <a-popconfirm title="确认停用该规则？" @confirm="toggleRuleStatus(record, false)">
-                <a style="color: #ff4d4f">停用 Disable</a>
-              </a-popconfirm>
+              <a @click="openEditModal(record)">编辑 Edit</a>
               <a-popconfirm title="确认删除该规则？" @confirm="deleteRule(record)">
                 <a style="color: #ff4d4f">删除 Delete</a>
               </a-popconfirm>
@@ -43,24 +55,46 @@
       </a-table>
     </a-card>
 
-    <a-card title="抽查任务 Sampling Tasks" style="margin-top: 16px" v-if="generatedTasks.length > 0">
-      <a-table :columns="taskColumns" :data-source="generatedTasks" row-key="taskId" :pagination="false">
+    <a-card title="抽查任务 Sampling Tasks" class="section">
+      <a-table
+        :columns="taskColumns"
+        :data-source="tasks"
+        :loading="taskLoading"
+        row-key="taskId"
+        :pagination="{ pageSize: 8 }"
+      >
         <template #bodyCell="{ column, record }">
-          <template v-if="column.key === 'status'">
+          <template v-if="column.key === 'amount'">
+            {{ formatAmount(record.amount, record.currency) }}
+          </template>
+          <template v-else-if="column.key === 'status'">
             <a-tag :color="record.status === 'PENDING' ? 'orange' : 'green'">
               {{ record.status === 'PENDING' ? '待处理 Pending' : '已完成 Completed' }}
             </a-tag>
           </template>
+          <template v-else-if="column.key === 'reviewResult'">
+            <span>{{ record.reviewResult || '-' }}</span>
+          </template>
+          <template v-else-if="column.key === 'matchedRules'">
+            <a-space wrap>
+              <a-tag v-for="rule in record.matchedRules || []" :key="rule" color="blue">{{ rule }}</a-tag>
+            </a-space>
+          </template>
           <template v-else-if="column.key === 'operation'">
-            <a-button v-if="record.status === 'PENDING'" size="small" type="link" @click="completeTask(record)">
-              标记完成 Complete
+            <a-button
+              v-if="record.status === 'PENDING'"
+              size="small"
+              type="link"
+              @click="openCompleteModal(record)"
+            >
+              完成 Complete
             </a-button>
           </template>
         </template>
       </a-table>
     </a-card>
 
-    <a-card title="抽查统计 Sampling Statistics" style="margin-top: 16px">
+    <a-card title="抽查统计 Sampling Statistics" class="section" :loading="statisticsLoading">
       <a-row :gutter="16">
         <a-col :span="6">
           <a-statistic title="近30天覆盖率 Last 30d" :value="statistics.last30dCoverageRate" />
@@ -72,52 +106,103 @@
           <a-statistic title="抽查笔数 Sampled" :value="statistics.sampledTransactions" />
         </a-col>
         <a-col :span="6">
-          <a-statistic title="抽查金额 Total Amount" :value="statistics.totalAmount" />
+          <a-statistic title="抽查金额 Total Amount" :value="formatAmount(statistics.totalAmount)" />
         </a-col>
       </a-row>
       <a-divider />
-      <h4>各模块抽查明细 Per-Module Breakdown</h4>
-      <a-table :columns="moduleColumns" :data-source="statistics.moduleBreakdown" row-key="module" :pagination="false" size="small" />
+      <a-table
+        :columns="moduleColumns"
+        :data-source="statistics.moduleBreakdown"
+        row-key="module"
+        :pagination="false"
+        size="small"
+      />
     </a-card>
 
-    <a-modal v-model:open="showRuleModal" title="新增抽查规则 Add Sampling Rule" @ok="addRule" width="640px">
+    <a-modal
+      v-model:open="showRuleModal"
+      :title="editingRuleId ? '编辑抽查规则 Edit Sampling Rule' : '新增抽查规则 Add Sampling Rule'"
+      @ok="saveRule"
+      width="720px"
+    >
       <a-form layout="vertical">
         <a-row :gutter="16">
           <a-col :span="12">
-            <a-form-item label="规则编码 Rule Code"><a-input v-model:value="newRule.ruleCode" placeholder="SMP_XXX" /></a-form-item>
+            <a-form-item label="规则编码 Rule Code">
+              <a-input v-model:value="ruleForm.ruleCode" placeholder="SMP_HIGH_AMT" />
+            </a-form-item>
           </a-col>
           <a-col :span="12">
-            <a-form-item label="规则名称 Rule Name"><a-input v-model:value="newRule.ruleName" placeholder="规则名称" /></a-form-item>
+            <a-form-item label="规则名称 Rule Name">
+              <a-input v-model:value="ruleForm.ruleName" placeholder="大额交易 High Amount" />
+            </a-form-item>
           </a-col>
         </a-row>
-        <a-form-item label="适用模块 Target Module">
-          <a-select v-model:value="newRule.targetModule" placeholder="选择模块 Select Module">
-            <a-select-option value="FX_EXCHANGE">结售汇 FX Exchange</a-select-option>
-            <a-select-option value="FX_PAYMENT">跨境支付 FX Payment</a-select-option>
-            <a-select-option value="FX_TRADING">外汇买卖 FX Trading</a-select-option>
-            <a-select-option value="FX_SETTLEMENT">国际结算 FX Settlement</a-select-option>
-          </a-select>
-        </a-form-item>
-        <a-form-item label="抽查比例 (%) Sampling Rate">
-          <a-input-number v-model:value="newRule.samplingRate" :min="0" :max="100" style="width: 100%" addon-after="%" />
-        </a-form-item>
-        <a-form-item label="规则条件 (JSON) Condition">
-          <a-textarea v-model:value="newRule.conditionJson" :rows="4" placeholder='{"minAmount": 500000, "currency": "USD"}' />
-        </a-form-item>
         <a-row :gutter="16">
           <a-col :span="12">
-            <a-form-item label="生效日期 Effective Date">
-              <a-date-picker v-model:value="newRule.effectiveDate" style="width: 100%" />
+            <a-form-item label="适用模块 Target Module">
+              <a-select v-model:value="ruleForm.targetModule">
+                <a-select-option value="FX_EXCHANGE">结售汇 FX Exchange</a-select-option>
+                <a-select-option value="FX_PAYMENT">跨境支付 FX Payment</a-select-option>
+                <a-select-option value="FX_TRADING">外汇买卖 FX Trading</a-select-option>
+                <a-select-option value="FX_SETTLEMENT">国际结算 FX Settlement</a-select-option>
+              </a-select>
             </a-form-item>
           </a-col>
           <a-col :span="12">
-            <a-form-item label="失效日期 Expiry Date">
-              <a-date-picker v-model:value="newRule.expireDate" style="width: 100%" />
+            <a-form-item label="抽查比例 Sampling Rate">
+              <a-input-number
+                v-model:value="ruleForm.samplingRate"
+                :min="0"
+                :max="100"
+                style="width: 100%"
+                addon-after="%"
+              />
             </a-form-item>
           </a-col>
         </a-row>
-        <a-form-item label="自动提取样本 Auto Extract">
-          <a-switch v-model:checked="newRule.isAutoExtract" checked-children="是" un-checked-children="否" />
+        <a-row :gutter="16">
+          <a-col :span="8">
+            <a-form-item label="优先级 Priority">
+              <a-input-number v-model:value="ruleForm.priority" :min="0" style="width: 100%" />
+            </a-form-item>
+          </a-col>
+          <a-col :span="8">
+            <a-form-item label="生效日期 Effective Date">
+              <a-date-picker v-model:value="ruleForm.effectiveDate" style="width: 100%" />
+            </a-form-item>
+          </a-col>
+          <a-col :span="8">
+            <a-form-item label="失效日期 Expiry Date">
+              <a-date-picker v-model:value="ruleForm.expireDate" style="width: 100%" />
+            </a-form-item>
+          </a-col>
+        </a-row>
+        <a-form-item label="规则条件 Condition JSON">
+          <a-textarea
+            v-model:value="ruleForm.conditionJson"
+            :rows="4"
+            placeholder='{"minAmount": 500000, "currency": "USD", "countries": ["IR", "KP"]}'
+          />
+        </a-form-item>
+        <a-space>
+          <a-switch v-model:checked="ruleForm.isAutoExtract" checked-children="自动" un-checked-children="手动" />
+          <span>自动提取样本 Auto Extract</span>
+        </a-space>
+      </a-form>
+    </a-modal>
+
+    <a-modal v-model:open="showCompleteModal" title="完成抽查任务 Complete Task" @ok="completeTask">
+      <a-form layout="vertical">
+        <a-form-item label="检查结果 Review Result">
+          <a-select v-model:value="completeForm.result">
+            <a-select-option value="PASS">通过 Pass</a-select-option>
+            <a-select-option value="WARNING">关注 Warning</a-select-option>
+            <a-select-option value="FAIL">不通过 Fail</a-select-option>
+          </a-select>
+        </a-form-item>
+        <a-form-item label="检查意见 Review Comment">
+          <a-textarea v-model:value="completeForm.comment" :rows="3" />
         </a-form-item>
       </a-form>
     </a-modal>
@@ -125,9 +210,54 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
+import { onMounted, reactive, ref } from 'vue'
 import { message } from 'ant-design-vue'
-import dayjs from 'dayjs'
+import dayjs, { Dayjs } from 'dayjs'
+import { riskApi } from '@/api/business'
+
+interface SamplingRule {
+  id: number
+  ruleCode: string
+  ruleName: string
+  conditionJson: string
+  samplingRate: number
+  targetModule: string
+  effectiveDate?: string
+  expireDate?: string
+  priority?: number
+  status: string
+  isAutoExtract: boolean
+}
+
+interface SamplingTask {
+  taskId: string
+  bizNo: string
+  bizType: string
+  customerId: number
+  amount: number | string
+  currency?: string
+  countryCode?: string
+  accountAgeDays?: number
+  samplingRate: number
+  reason: string
+  matchedRules?: string[]
+  status: string
+  reviewResult?: string
+  reviewComment?: string
+  completedAt?: string
+}
+
+interface RuleForm {
+  ruleCode: string
+  ruleName: string
+  targetModule: string
+  samplingRate: number
+  priority: number
+  conditionJson: string
+  effectiveDate: Dayjs | null
+  expireDate: Dayjs | null
+  isAutoExtract: boolean
+}
 
 const moduleColorMap: Record<string, string> = {
   FX_EXCHANGE: 'blue',
@@ -143,135 +273,255 @@ const moduleNameMap: Record<string, string> = {
   FX_SETTLEMENT: '国际结算 Settlement'
 }
 
+const rules = ref<SamplingRule[]>([])
+const tasks = ref<SamplingTask[]>([])
+const ruleLoading = ref(false)
+const taskLoading = ref(false)
+const statisticsLoading = ref(false)
+const showRuleModal = ref(false)
+const showCompleteModal = ref(false)
+const editingRuleId = ref<number | null>(null)
+const currentTaskId = ref('')
+
+const ruleForm = reactive<RuleForm>({
+  ruleCode: '',
+  ruleName: '',
+  targetModule: 'FX_PAYMENT',
+  samplingRate: 20,
+  priority: 0,
+  conditionJson: '{}',
+  effectiveDate: dayjs(),
+  expireDate: null,
+  isAutoExtract: true
+})
+
+const completeForm = reactive({
+  result: 'PASS',
+  comment: ''
+})
+
+const statistics = reactive({
+  last30dCoverageRate: '0%',
+  totalTransactions: 0,
+  sampledTransactions: 0,
+  totalAmount: 0,
+  moduleBreakdown: [] as any[]
+})
+
+const ruleColumns = [
+  { title: '规则编码 Code', dataIndex: 'ruleCode', key: 'ruleCode', width: 140 },
+  { title: '规则名称 Name', dataIndex: 'ruleName', key: 'ruleName' },
+  { title: '适用模块 Module', key: 'targetModule', width: 130 },
+  { title: '抽查比例 Rate', key: 'samplingRate', width: 160 },
+  { title: '生效日期 Effective', dataIndex: 'effectiveDate', key: 'effectiveDate', width: 120 },
+  { title: '自动 Auto', key: 'isAutoExtract', width: 100 },
+  { title: '状态 Status', key: 'status', width: 90 },
+  { title: '操作 Operations', key: 'operation', width: 150 }
+]
+
+const taskColumns = [
+  { title: '任务ID Task ID', dataIndex: 'taskId', key: 'taskId', width: 220 },
+  { title: '业务编号 Biz No', dataIndex: 'bizNo', key: 'bizNo', width: 160 },
+  { title: '业务类型 Biz Type', dataIndex: 'bizType', key: 'bizType', width: 120 },
+  { title: '客户ID Customer', dataIndex: 'customerId', key: 'customerId', width: 110 },
+  { title: '金额 Amount', key: 'amount', width: 130 },
+  { title: '开户天数 Age', dataIndex: 'accountAgeDays', key: 'accountAgeDays', width: 110 },
+  { title: '抽查比例 Rate', dataIndex: 'samplingRate', key: 'samplingRate', width: 110 },
+  { title: '命中规则 Rules', key: 'matchedRules', width: 180 },
+  { title: '原因 Reason', dataIndex: 'reason', key: 'reason' },
+  { title: '状态 Status', key: 'status', width: 120 },
+  { title: '检查结果 Result', key: 'reviewResult', width: 120 },
+  { title: '操作', key: 'operation', width: 100 }
+]
+
+const moduleColumns = [
+  { title: '模块 Module', dataIndex: 'moduleName', key: 'moduleName' },
+  { title: '抽查笔数 Sampled', dataIndex: 'sampledCount', key: 'sampledCount' },
+  { title: '总笔数 Total', dataIndex: 'totalCount', key: 'totalCount' },
+  { title: '覆盖率 Rate', dataIndex: 'rate', key: 'rate' }
+]
+
 function rateColor(rate: number): string {
   if (rate >= 80) return '#f5222d'
   if (rate >= 50) return '#fa8c16'
   return '#52c41a'
 }
 
-const rules = ref([
-  { id: 1, ruleCode: 'SMP_HIGH_AMT', ruleName: '大额交易 High Amount', targetModule: 'FX_PAYMENT', samplingRate: 50, effectiveDate: '2026-01-01', expireDate: '2027-01-01', status: 'ACTIVE', isAutoExtract: true, conditionJson: '{"minAmount":500000,"currency":"USD"}' },
-  { id: 2, ruleCode: 'SMP_HIGH_RISK', ruleName: '高风险国家 High Risk Country', targetModule: 'FX_PAYMENT', samplingRate: 100, effectiveDate: '2026-01-01', expireDate: '2027-01-01', status: 'ACTIVE', isAutoExtract: true, conditionJson: '{"countries":["IR","KP","MM"]}' },
-  { id: 3, ruleCode: 'SMP_NEW_CUSTOMER', ruleName: '新客户交易 New Customer', targetModule: 'FX_EXCHANGE', samplingRate: 30, effectiveDate: '2026-01-01', expireDate: '2027-01-01', status: 'ACTIVE', isAutoExtract: false, conditionJson: '{"maxAccountAge":30}' },
-  { id: 4, ruleCode: 'SMP_FREQUENT', ruleName: '频繁交易 Frequent Tx', targetModule: 'FX_TRADING', samplingRate: 60, effectiveDate: '2026-03-01', expireDate: '2027-03-01', status: 'INACTIVE', isAutoExtract: true, conditionJson: '{"maxDailyCount":5}' },
-])
+function formatAmount(amount: number | string, currency = 'CNY'): string {
+  const value = Number(amount || 0).toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+  return `${currency} ${value}`
+}
 
-const ruleColumns = [
-  { title: '规则编码 Code', dataIndex: 'ruleCode', key: 'ruleCode', width: 140 },
-  { title: '规则名称 Name', dataIndex: 'ruleName', key: 'ruleName' },
-  { title: '适用模块 Module', key: 'targetModule', width: 120 },
-  { title: '抽查比例 Rate', key: 'samplingRate', width: 160 },
-  { title: '生效日期 Effective', dataIndex: 'effectiveDate', key: 'effectiveDate', width: 110 },
-  { title: '状态 Status', key: 'status', width: 80 },
-  { title: '操作 Operations', key: 'operation', width: 180 }
-]
+function resetRuleForm() {
+  editingRuleId.value = null
+  Object.assign(ruleForm, {
+    ruleCode: '',
+    ruleName: '',
+    targetModule: 'FX_PAYMENT',
+    samplingRate: 20,
+    priority: 0,
+    conditionJson: '{}',
+    effectiveDate: dayjs(),
+    expireDate: null,
+    isAutoExtract: true
+  })
+}
 
-const showRuleModal = ref(false)
-const newRule = reactive({
-  ruleCode: '',
-  ruleName: '',
-  targetModule: 'FX_PAYMENT',
-  samplingRate: 20,
-  conditionJson: '',
-  effectiveDate: null as any,
-  expireDate: null as any,
-  isAutoExtract: true
-})
+function toPayload() {
+  // Normalize form state into the backend SamplingRule command payload.
+  // 将页面表单状态规整为后端 SamplingRule 命令参数。
+  return {
+    ruleCode: ruleForm.ruleCode,
+    ruleName: ruleForm.ruleName,
+    targetModule: ruleForm.targetModule,
+    samplingRate: ruleForm.samplingRate,
+    priority: ruleForm.priority,
+    conditionJson: ruleForm.conditionJson || '{}',
+    effectiveDate: ruleForm.effectiveDate?.format('YYYY-MM-DD'),
+    expireDate: ruleForm.expireDate?.format('YYYY-MM-DD') || '',
+    isAutoExtract: ruleForm.isAutoExtract
+  }
+}
 
-function addRule() {
-  if (!newRule.ruleCode || !newRule.ruleName) {
+async function loadRules() {
+  ruleLoading.value = true
+  try {
+    console.info('[SamplingRule] loading rules / 正在加载抽查规则')
+    const res = await riskApi.listSamplingRules()
+    rules.value = res.data.data || []
+  } finally {
+    ruleLoading.value = false
+  }
+}
+
+async function loadTasks() {
+  taskLoading.value = true
+  try {
+    console.info('[SamplingRule] loading persisted tasks / 正在加载已持久化抽查任务')
+    const res = await riskApi.listSamplingTasks()
+    tasks.value = res.data.data?.tasks || []
+  } finally {
+    taskLoading.value = false
+  }
+}
+
+async function loadStatistics() {
+  statisticsLoading.value = true
+  try {
+    console.info('[SamplingRule] loading statistics / 正在加载抽查统计')
+    const res = await riskApi.getSamplingStatistics()
+    Object.assign(statistics, res.data.data || {})
+  } finally {
+    statisticsLoading.value = false
+  }
+}
+
+async function reloadAll() {
+  // Refresh rules, generated tasks, and statistics together to keep the dashboard consistent.
+  // 同步刷新规则、抽查任务和统计数据，保证页面看板口径一致。
+  await Promise.all([loadRules(), loadTasks(), loadStatistics()])
+}
+
+function openCreateModal() {
+  resetRuleForm()
+  showRuleModal.value = true
+}
+
+function openEditModal(record: SamplingRule) {
+  editingRuleId.value = record.id
+  Object.assign(ruleForm, {
+    ruleCode: record.ruleCode,
+    ruleName: record.ruleName,
+    targetModule: record.targetModule,
+    samplingRate: Number(record.samplingRate || 0),
+    priority: record.priority || 0,
+    conditionJson: record.conditionJson || '{}',
+    effectiveDate: record.effectiveDate ? dayjs(record.effectiveDate) : null,
+    expireDate: record.expireDate ? dayjs(record.expireDate) : null,
+    isAutoExtract: record.isAutoExtract
+  })
+  showRuleModal.value = true
+}
+
+async function saveRule() {
+  if (!ruleForm.ruleCode || !ruleForm.ruleName) {
     message.warning('请填写规则编码和名称 Fill rule code and name')
     return
   }
-  rules.value.push({
-    id: rules.value.length + 1,
-    ruleCode: newRule.ruleCode,
-    ruleName: newRule.ruleName,
-    targetModule: newRule.targetModule,
-    samplingRate: newRule.samplingRate,
-    effectiveDate: newRule.effectiveDate ? newRule.effectiveDate.format('YYYY-MM-DD') : dayjs().format('YYYY-MM-DD'),
-    expireDate: newRule.expireDate ? newRule.expireDate.format('YYYY-MM-DD') : '',
-    status: 'ACTIVE',
-    isAutoExtract: newRule.isAutoExtract,
-    conditionJson: newRule.conditionJson
-  })
+  try {
+    JSON.parse(ruleForm.conditionJson || '{}')
+  } catch {
+    message.error('规则条件不是合法 JSON / Condition JSON is invalid')
+    return
+  }
+  const payload = toPayload()
+  if (editingRuleId.value) {
+    await riskApi.updateSamplingRule(editingRuleId.value, payload)
+    message.success('规则已更新 Rule updated')
+  } else {
+    await riskApi.createSamplingRule(payload)
+    message.success('规则已添加 Rule added')
+  }
   showRuleModal.value = false
-  message.success('规则已添加 Rule added')
-  // Reset form 重置表单
-  newRule.ruleCode = ''
-  newRule.ruleName = ''
-  newRule.conditionJson = ''
-  newRule.samplingRate = 20
-  newRule.targetModule = 'FX_PAYMENT'
-  newRule.effectiveDate = null
-  newRule.expireDate = null
-  newRule.isAutoExtract = true
+  await loadRules()
 }
 
-function editRule(record: any) {
-  message.info('编辑规则: ' + record.ruleName)
-}
-
-function toggleRuleStatus(record: any, checked: boolean) {
-  record.status = checked ? 'ACTIVE' : 'INACTIVE'
+async function toggleRuleStatus(record: SamplingRule, checked: boolean) {
+  const status = checked ? 'ACTIVE' : 'INACTIVE'
+  await riskApi.updateSamplingRuleStatus(record.id, status)
   message.success(`规则 ${record.ruleCode} 已${checked ? '启用' : '停用'}`)
+  await loadRules()
 }
 
-function deleteRule(record: any) {
-  rules.value = rules.value.filter(r => r.id !== record.id)
+async function deleteRule(record: SamplingRule) {
+  await riskApi.deleteSamplingRule(record.id)
   message.success('规则已删除 Rule deleted')
+  await loadRules()
 }
 
-const generatedTasks = ref<any[]>([])
-
-const taskColumns = [
-  { title: '任务ID Task ID', dataIndex: 'taskId', key: 'taskId', width: 180 },
-  { title: '业务编号 Biz No', dataIndex: 'bizNo', key: 'bizNo' },
-  { title: '业务类型 Biz Type', dataIndex: 'bizType', key: 'bizType', width: 120 },
-  { title: '客户ID Customer', dataIndex: 'customerId', key: 'customerId' },
-  { title: '金额 Amount', dataIndex: 'amount', key: 'amount' },
-  { title: '抽查比例 Rate', dataIndex: 'samplingRate', key: 'samplingRate' },
-  { title: '原因 Reason', dataIndex: 'reason', key: 'reason' },
-  { title: '状态 Status', key: 'status', width: 110 },
-  { title: '操作', key: 'operation', width: 100 }
-]
-
-function generateTasks() {
-  generatedTasks.value = [
-    { taskId: 'STK' + Date.now() + '1', bizNo: 'FX2026000001', bizType: 'FX_EXCHANGE', customerId: 1001, amount: 50000, samplingRate: 30, reason: '大额交易 High amount', status: 'PENDING' },
-    { taskId: 'STK' + Date.now() + '2', bizNo: 'FX2026000002', bizType: 'FX_EXCHANGE', customerId: 1002, amount: 100000, samplingRate: 40, reason: '大额交易 High amount', status: 'PENDING' },
-    { taskId: 'STK' + Date.now() + '3', bizNo: 'FX2026000003', bizType: 'FX_PAYMENT', customerId: 1003, amount: 150000, samplingRate: 50, reason: '高频交易 Frequent tx', status: 'PENDING' },
-    { taskId: 'STK' + Date.now() + '4', bizNo: 'FX2026000004', bizType: 'FX_PAYMENT', customerId: 1004, amount: 200000, samplingRate: 60, reason: '高风险国家 High risk', status: 'PENDING' },
-    { taskId: 'STK' + Date.now() + '5', bizNo: 'FX2026000005', bizType: 'FX_TRADING', customerId: 1005, amount: 250000, samplingRate: 70, reason: '新客户交易 New customer', status: 'PENDING' },
-  ]
-  message.success('抽查任务已生成 Tasks generated')
+async function generateTasks() {
+  const today = dayjs().format('YYYY-MM-DD')
+  console.info('[SamplingRule] generating and persisting tasks / 正在生成并持久化抽查任务', today)
+  const res = await riskApi.generateSamplingTasks({ date: today })
+  tasks.value = res.data.data?.tasks || []
+  message.success(`已生成 ${res.data.data?.count || 0} 条抽查任务`)
+  await loadStatistics()
 }
 
-function completeTask(record: any) {
-  record.status = 'COMPLETED'
-  message.success(`任务 ${record.taskId} 已完成 Task completed`)
+function openCompleteModal(record: SamplingTask) {
+  currentTaskId.value = record.taskId
+  completeForm.result = 'PASS'
+  completeForm.comment = ''
+  showCompleteModal.value = true
 }
 
-const statistics = reactive({
-  last30dCoverageRate: '28.5%',
-  totalTransactions: 1520,
-  sampledTransactions: 433,
-  totalAmount: '¥ 892,450,000.00',
-  moduleBreakdown: [
-    { module: 'FX_EXCHANGE', moduleName: '结售汇 Exchange', sampledCount: 180, totalCount: 600, rate: '30.0%' },
-    { module: 'FX_PAYMENT', moduleName: '跨境支付 Payment', sampledCount: 200, totalCount: 750, rate: '26.7%' },
-    { module: 'FX_TRADING', moduleName: '外汇买卖 Trading', sampledCount: 53, totalCount: 170, rate: '31.2%' },
-  ]
-})
+async function completeTask() {
+  await riskApi.completeSamplingTask(currentTaskId.value, completeForm)
+  message.success(`任务 ${currentTaskId.value} 已完成 Task completed`)
+  showCompleteModal.value = false
+  await Promise.all([loadTasks(), loadStatistics()])
+}
 
-const moduleColumns = [
-  { title: '模块 Module', dataIndex: 'moduleName', key: 'moduleName' },
-  { title: '抽查笔数 Sampled', dataIndex: 'sampledCount', key: 'sampledCount' },
-  { title: '总笔数 Total', dataIndex: 'totalCount', key: 'totalCount' },
-  { title: '覆盖率 Rate', dataIndex: 'rate', key: 'rate' },
-]
+onMounted(reloadAll)
 </script>
 
 <style scoped>
-.sampling-rule-config h2 { margin-bottom: 16px; }
+.sampling-rule-config {
+  padding: 0;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.page-header h2 {
+  margin: 0;
+}
+
+.section {
+  margin-top: 16px;
+}
 </style>

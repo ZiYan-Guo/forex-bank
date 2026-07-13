@@ -1,0 +1,310 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/adapter/controller/CustomerController.java",
+      "language": "java",
+      "sizeLines": 213,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/adapter/dto/CreditCheckReq.java",
+      "language": "java",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/adapter/dto/CustomerReq.java",
+      "language": "java",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/adapter/dto/CustomerResp.java",
+      "language": "java",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/command/CreateCustomerCmd.java",
+      "language": "java",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/command/UpdateCustomerCmd.java",
+      "language": "java",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/query/CustomerDetailDTO.java",
+      "language": "java",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/query/CustomerListDTO.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/query/CustomerQuery.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/application/service/CustomerAppService.java",
+      "language": "java",
+      "sizeLines": 161,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/event/CustomerCreatedEvent.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "language": "java",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "language": "java",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java",
+      "language": "java",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java",
+      "language": "java",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "language": "java",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java",
+      "language": "java",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java",
+      "language": "java",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java",
+      "language": "java",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-customer/src/test/java/com/forex/customer/domain/service/CustomerDomainServiceTest.java",
+      "language": "java",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java",
+      "language": "java",
+      "sizeLines": 250,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/CurrencyPair.java",
+      "language": "java",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java",
+      "language": "java",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/OrderNo.java",
+      "language": "java",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/adapter/controller/LimitController.java",
+      "language": "java",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/application/command/CreateLimitCmd.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "forex-customer/src/main/java/com/forex/customer/adapter/controller/CustomerController.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RedisLock.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "forex-customer/src/main/java/com/forex/customer/adapter/dto/CreditCheckReq.java",
+      "forex-customer/src/main/java/com/forex/customer/adapter/dto/CustomerReq.java",
+      "forex-customer/src/main/java/com/forex/customer/adapter/dto/CustomerResp.java",
+      "forex-customer/src/main/java/com/forex/customer/application/command/CreateCustomerCmd.java",
+      "forex-customer/src/main/java/com/forex/customer/application/command/UpdateCustomerCmd.java",
+      "forex-customer/src/main/java/com/forex/customer/application/query/CustomerDetailDTO.java",
+      "forex-customer/src/main/java/com/forex/customer/application/query/CustomerListDTO.java",
+      "forex-customer/src/main/java/com/forex/customer/application/query/CustomerQuery.java",
+      "forex-customer/src/main/java/com/forex/customer/application/service/CustomerAppService.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/adapter/dto/CreditCheckReq.java": [],
+    "forex-customer/src/main/java/com/forex/customer/adapter/dto/CustomerReq.java": [],
+    "forex-customer/src/main/java/com/forex/customer/adapter/dto/CustomerResp.java": [],
+    "forex-customer/src/main/java/com/forex/customer/application/command/CreateCustomerCmd.java": [],
+    "forex-customer/src/main/java/com/forex/customer/application/command/UpdateCustomerCmd.java": [],
+    "forex-customer/src/main/java/com/forex/customer/application/query/CustomerDetailDTO.java": [
+      "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/application/query/CustomerListDTO.java": [],
+    "forex-customer/src/main/java/com/forex/customer/application/query/CustomerQuery.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/application/service/CustomerAppService.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "forex-customer/src/main/java/com/forex/customer/application/command/CreateCustomerCmd.java",
+      "forex-customer/src/main/java/com/forex/customer/application/command/UpdateCustomerCmd.java",
+      "forex-customer/src/main/java/com/forex/customer/application/query/CustomerDetailDTO.java",
+      "forex-customer/src/main/java/com/forex/customer/application/query/CustomerListDTO.java",
+      "forex-customer/src/main/java/com/forex/customer/application/query/CustomerQuery.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/event/CustomerCreatedEvent.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseDomainEvent.java"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java": [],
+    "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseEntity.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CustomerQuota.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseEntity.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/RiskLevel.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java": [
+      "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerQuery.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/model/valueobject/CustomerId.java"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/service/CreditCheckDomainService.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java"
+    ],
+    "forex-customer/src/main/java/com/forex/customer/domain/service/CustomerDomainService.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/event/CustomerCreatedEvent.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java"
+    ],
+    "forex-customer/src/test/java/com/forex/customer/domain/service/CustomerDomainServiceTest.java": [
+      "forex-customer/src/main/java/com/forex/customer/domain/event/CustomerCreatedEvent.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/model/aggregate/Customer.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/model/dto/CustomerRegInfo.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/model/entity/CreditLimit.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/repository/CreditLimitRepository.java",
+      "forex-customer/src/main/java/com/forex/customer/domain/repository/CustomerRepository.java"
+    ],
+    "forex-exchange/src/main/java/com/forex/exchange/domain/model/aggregate/ExchangeOrder.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java",
+      "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/OrderNo.java"
+    ],
+    "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/CurrencyPair.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java"
+    ],
+    "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/Money.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-exchange/src/main/java/com/forex/exchange/domain/model/valueobject/OrderNo.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseValueObject.java"
+    ],
+    "forex-limit/src/main/java/com/forex/limit/adapter/controller/LimitController.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "forex-limit/src/main/java/com/forex/limit/application/command/CreateLimitCmd.java",
+      "forex-limit/src/main/java/com/forex/limit/application/service/LimitAppService.java",
+      "forex-limit/src/main/java/com/forex/limit/domain/model/aggregate/LimitConfig.java"
+    ],
+    "forex-limit/src/main/java/com/forex/limit/application/command/CreateLimitCmd.java": []
+  }
+}

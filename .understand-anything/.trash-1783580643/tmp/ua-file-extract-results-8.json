@@ -1,0 +1,6715 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 28,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/application/service/LimitAppService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 47,
+      "nonEmptyLines": 39,
+      "functions": [
+        {
+          "name": "createLimit",
+          "startLine": 24,
+          "endLine": 30,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "approveLimit",
+          "startLine": 32,
+          "endLine": 37,
+          "params": [
+            "limitNo"
+          ]
+        },
+        {
+          "name": "checkLimit",
+          "startLine": 39,
+          "endLine": 42,
+          "params": [
+            "customerId",
+            "limitType",
+            "dimension",
+            "dimensionValue",
+            "amount"
+          ]
+        },
+        {
+          "name": "getCustomerLimits",
+          "startLine": 44,
+          "endLine": 46,
+          "params": [
+            "customerId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "LimitAppService",
+          "startLine": 16,
+          "endLine": 47,
+          "methods": [
+            "createLimit",
+            "approveLimit",
+            "checkLimit",
+            "getCustomerLimits"
+          ],
+          "properties": [
+            "domainService",
+            "limitConfigRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createLimit",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "approveLimit",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "checkLimit",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "getCustomerLimits",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "LimitAppService",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createLimit",
+          "callee": "domainService.createLimit",
+          "lineNumber": 25
+        },
+        {
+          "caller": "createLimit",
+          "callee": "cmd.getCustomerId",
+          "lineNumber": 26
+        },
+        {
+          "caller": "createLimit",
+          "callee": "cmd.getLimitType",
+          "lineNumber": 26
+        },
+        {
+          "caller": "createLimit",
+          "callee": "cmd.getDimension",
+          "lineNumber": 26
+        },
+        {
+          "caller": "createLimit",
+          "callee": "cmd.getDimensionValue",
+          "lineNumber": 27
+        },
+        {
+          "caller": "createLimit",
+          "callee": "cmd.getLimitAmount",
+          "lineNumber": 27
+        },
+        {
+          "caller": "createLimit",
+          "callee": "cmd.getCurrency",
+          "lineNumber": 27
+        },
+        {
+          "caller": "createLimit",
+          "callee": "cmd.getLimitPeriod",
+          "lineNumber": 28
+        },
+        {
+          "caller": "createLimit",
+          "callee": "cmd.getEffectiveDate",
+          "lineNumber": 28
+        },
+        {
+          "caller": "createLimit",
+          "callee": "cmd.getExpiryDate",
+          "lineNumber": 28
+        },
+        {
+          "caller": "createLimit",
+          "callee": "config.getLimitNo",
+          "lineNumber": 29
+        },
+        {
+          "caller": "approveLimit",
+          "callee": "limitConfigRepository.findByLimitNo(limitNo).orElseThrow",
+          "lineNumber": 33
+        },
+        {
+          "caller": "approveLimit",
+          "callee": "limitConfigRepository.findByLimitNo",
+          "lineNumber": 33
+        },
+        {
+          "caller": "approveLimit",
+          "callee": "new BusinessException",
+          "lineNumber": 34
+        },
+        {
+          "caller": "approveLimit",
+          "callee": "config.approve",
+          "lineNumber": 35
+        },
+        {
+          "caller": "approveLimit",
+          "callee": "limitConfigRepository.save",
+          "lineNumber": 36
+        },
+        {
+          "caller": "checkLimit",
+          "callee": "domainService.checkLimit",
+          "lineNumber": 41
+        },
+        {
+          "caller": "getCustomerLimits",
+          "callee": "limitConfigRepository.findByCustomer",
+          "lineNumber": 45
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/domain/model/aggregate/LimitConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 118,
+      "nonEmptyLines": 104,
+      "functions": [
+        {
+          "name": "LimitConfig",
+          "startLine": 32,
+          "endLine": 34,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 36,
+          "endLine": 56,
+          "params": [
+            "customerId",
+            "limitType",
+            "dimension",
+            "dimensionValue",
+            "limitAmount",
+            "currency",
+            "limitPeriod",
+            "effectiveDate",
+            "expiryDate"
+          ]
+        },
+        {
+          "name": "utilize",
+          "startLine": 58,
+          "endLine": 69,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "release",
+          "startLine": 71,
+          "endLine": 79,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "approve",
+          "startLine": 81,
+          "endLine": 85,
+          "params": []
+        },
+        {
+          "name": "reject",
+          "startLine": 87,
+          "endLine": 91,
+          "params": []
+        },
+        {
+          "name": "suspend",
+          "startLine": 93,
+          "endLine": 96,
+          "params": []
+        },
+        {
+          "name": "isExceeded",
+          "startLine": 98,
+          "endLine": 100,
+          "params": [
+            "requestedAmount"
+          ]
+        },
+        {
+          "name": "assignLimitNo",
+          "startLine": 102,
+          "endLine": 104,
+          "params": [
+            "limitNo"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 106,
+          "endLine": 117,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "LimitConfig",
+          "startLine": 12,
+          "endLine": 118,
+          "methods": [
+            "LimitConfig",
+            "create",
+            "utilize",
+            "release",
+            "approve",
+            "reject",
+            "suspend",
+            "isExceeded",
+            "assignLimitNo",
+            "validate"
+          ],
+          "properties": [
+            "id",
+            "limitNo",
+            "customerId",
+            "limitType",
+            "dimension",
+            "dimensionValue",
+            "limitAmount",
+            "currency",
+            "limitPeriod",
+            "effectiveDate",
+            "expiryDate",
+            "usedAmount",
+            "availableAmount",
+            "limitStatus",
+            "approveStatus",
+            "createTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "utilize",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "release",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "approve",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "reject",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "suspend",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "isExceeded",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "assignLimitNo",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "LimitConfig",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new LimitConfig",
+          "lineNumber": 39
+        },
+        {
+          "caller": "create",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 53
+        },
+        {
+          "caller": "create",
+          "callee": "config.validate",
+          "lineNumber": 54
+        },
+        {
+          "caller": "utilize",
+          "callee": "this.availableAmount.compareTo",
+          "lineNumber": 59
+        },
+        {
+          "caller": "utilize",
+          "callee": "new BusinessException",
+          "lineNumber": 60
+        },
+        {
+          "caller": "utilize",
+          "callee": "this.usedAmount.add",
+          "lineNumber": 63
+        },
+        {
+          "caller": "utilize",
+          "callee": "this.limitAmount.subtract",
+          "lineNumber": 64
+        },
+        {
+          "caller": "utilize",
+          "callee": "this.availableAmount.compareTo",
+          "lineNumber": 65
+        },
+        {
+          "caller": "utilize",
+          "callee": "this.limitAmount.multiply",
+          "lineNumber": 65
+        },
+        {
+          "caller": "utilize",
+          "callee": "new BigDecimal",
+          "lineNumber": 65
+        },
+        {
+          "caller": "utilize",
+          "callee": "markUpdated",
+          "lineNumber": 68
+        },
+        {
+          "caller": "release",
+          "callee": "this.usedAmount.subtract",
+          "lineNumber": 72
+        },
+        {
+          "caller": "release",
+          "callee": "this.usedAmount.compareTo",
+          "lineNumber": 73
+        },
+        {
+          "caller": "release",
+          "callee": "this.limitAmount.subtract",
+          "lineNumber": 76
+        },
+        {
+          "caller": "release",
+          "callee": "markUpdated",
+          "lineNumber": 78
+        },
+        {
+          "caller": "approve",
+          "callee": "markUpdated",
+          "lineNumber": 84
+        },
+        {
+          "caller": "reject",
+          "callee": "markUpdated",
+          "lineNumber": 90
+        },
+        {
+          "caller": "suspend",
+          "callee": "markUpdated",
+          "lineNumber": 95
+        },
+        {
+          "caller": "isExceeded",
+          "callee": "this.availableAmount.compareTo",
+          "lineNumber": 99
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 109
+        },
+        {
+          "caller": "validate",
+          "callee": "limitAmount.compareTo",
+          "lineNumber": 111
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 112
+        },
+        {
+          "caller": "validate",
+          "callee": "effectiveDate.isAfter",
+          "lineNumber": 114
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 115
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 9,
+        "functionCount": 10,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/domain/repository/LimitConfigRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "LimitConfigRepository",
+          "startLine": 8,
+          "endLine": 14,
+          "methods": [
+            "save",
+            "findById",
+            "findByLimitNo",
+            "findActiveByCustomer",
+            "findByCustomer"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "LimitConfigRepository",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-limit/src/main/java/com/forex/limit/domain/service/LimitDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 72,
+      "nonEmptyLines": 63,
+      "functions": [
+        {
+          "name": "createLimit",
+          "startLine": 20,
+          "endLine": 36,
+          "params": [
+            "customerId",
+            "limitType",
+            "dimension",
+            "dimensionValue",
+            "limitAmount",
+            "currency",
+            "limitPeriod",
+            "effectiveDate",
+            "expiryDate"
+          ]
+        },
+        {
+          "name": "checkLimit",
+          "startLine": 38,
+          "endLine": 51,
+          "params": [
+            "customerId",
+            "limitType",
+            "dimension",
+            "dimensionValue",
+            "requestAmount"
+          ]
+        },
+        {
+          "name": "utilizeLimit",
+          "startLine": 53,
+          "endLine": 65,
+          "params": [
+            "customerId",
+            "limitType",
+            "dimension",
+            "dimensionValue",
+            "amount"
+          ]
+        },
+        {
+          "name": "isOverlapping",
+          "startLine": 67,
+          "endLine": 71,
+          "params": [
+            "config",
+            "start",
+            "end"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "LimitDomainService",
+          "startLine": 14,
+          "endLine": 72,
+          "methods": [
+            "createLimit",
+            "checkLimit",
+            "utilizeLimit",
+            "isOverlapping"
+          ],
+          "properties": [
+            "limitConfigRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createLimit",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "checkLimit",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "utilizeLimit",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "LimitDomainService",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createLimit",
+          "callee": "limitConfigRepository.findActiveByCustomer",
+          "lineNumber": 23
+        },
+        {
+          "caller": "createLimit",
+          "callee": "\"ACTIVE\".equals",
+          "lineNumber": 25
+        },
+        {
+          "caller": "createLimit",
+          "callee": "c.getLimitStatus",
+          "lineNumber": 25
+        },
+        {
+          "caller": "createLimit",
+          "callee": "isOverlapping",
+          "lineNumber": 25
+        },
+        {
+          "caller": "createLimit",
+          "callee": "new BusinessException",
+          "lineNumber": 26
+        },
+        {
+          "caller": "createLimit",
+          "callee": "c.getLimitNo",
+          "lineNumber": 27
+        },
+        {
+          "caller": "createLimit",
+          "callee": "LimitConfig.create",
+          "lineNumber": 31
+        },
+        {
+          "caller": "createLimit",
+          "callee": "config.assignLimitNo",
+          "lineNumber": 33
+        },
+        {
+          "caller": "createLimit",
+          "callee": "System.currentTimeMillis",
+          "lineNumber": 33
+        },
+        {
+          "caller": "createLimit",
+          "callee": "limitConfigRepository.save",
+          "lineNumber": 34
+        },
+        {
+          "caller": "checkLimit",
+          "callee": "limitConfigRepository.findActiveByCustomer",
+          "lineNumber": 40
+        },
+        {
+          "caller": "checkLimit",
+          "callee": "configs.isEmpty",
+          "lineNumber": 42
+        },
+        {
+          "caller": "checkLimit",
+          "callee": "config.isExceeded",
+          "lineNumber": 46
+        },
+        {
+          "caller": "utilizeLimit",
+          "callee": "limitConfigRepository.findActiveByCustomer",
+          "lineNumber": 55
+        },
+        {
+          "caller": "utilizeLimit",
+          "callee": "config.isExceeded",
+          "lineNumber": 58
+        },
+        {
+          "caller": "utilizeLimit",
+          "callee": "config.utilize",
+          "lineNumber": 59
+        },
+        {
+          "caller": "utilizeLimit",
+          "callee": "limitConfigRepository.save",
+          "lineNumber": 60
+        },
+        {
+          "caller": "utilizeLimit",
+          "callee": "new BusinessException",
+          "lineNumber": 64
+        },
+        {
+          "caller": "isOverlapping",
+          "callee": "config.getEffectiveDate",
+          "lineNumber": 68
+        },
+        {
+          "caller": "isOverlapping",
+          "callee": "config.getExpiryDate",
+          "lineNumber": 68
+        },
+        {
+          "caller": "isOverlapping",
+          "callee": "config.getExpiryDate().isBefore",
+          "lineNumber": 69
+        },
+        {
+          "caller": "isOverlapping",
+          "callee": "config.getExpiryDate",
+          "lineNumber": 69
+        },
+        {
+          "caller": "isOverlapping",
+          "callee": "config.getEffectiveDate().isAfter",
+          "lineNumber": 70
+        },
+        {
+          "caller": "isOverlapping",
+          "callee": "config.getEffectiveDate",
+          "lineNumber": 70
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/CollateralInfo.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 64,
+      "nonEmptyLines": 54,
+      "functions": [
+        {
+          "name": "CollateralInfo",
+          "startLine": 20,
+          "endLine": 34,
+          "params": [
+            "collateralType",
+            "marketValue",
+            "haircutPct"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 36,
+          "endLine": 38,
+          "params": [
+            "type",
+            "marketValue",
+            "haircutPct"
+          ]
+        },
+        {
+          "name": "getCollateralValue",
+          "startLine": 40,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "calcCollateralValue",
+          "startLine": 44,
+          "endLine": 48,
+          "params": []
+        },
+        {
+          "name": "equals",
+          "startLine": 50,
+          "endLine": 58,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 60,
+          "endLine": 63,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CollateralInfo",
+          "startLine": 12,
+          "endLine": 64,
+          "methods": [
+            "CollateralInfo",
+            "of",
+            "getCollateralValue",
+            "calcCollateralValue",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "collateralType",
+            "haircutPct",
+            "marketValue",
+            "collateralValue"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "getCollateralValue",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "CollateralInfo",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CollateralInfo",
+          "callee": "collateralType.isBlank",
+          "lineNumber": 21
+        },
+        {
+          "caller": "CollateralInfo",
+          "callee": "new BusinessException",
+          "lineNumber": 22
+        },
+        {
+          "caller": "CollateralInfo",
+          "callee": "marketValue.compareTo",
+          "lineNumber": 24
+        },
+        {
+          "caller": "CollateralInfo",
+          "callee": "new BusinessException",
+          "lineNumber": 25
+        },
+        {
+          "caller": "CollateralInfo",
+          "callee": "haircutPct.compareTo",
+          "lineNumber": 27
+        },
+        {
+          "caller": "CollateralInfo",
+          "callee": "new BusinessException",
+          "lineNumber": 28
+        },
+        {
+          "caller": "CollateralInfo",
+          "callee": "calcCollateralValue",
+          "lineNumber": 33
+        },
+        {
+          "caller": "of",
+          "callee": "new CollateralInfo",
+          "lineNumber": 37
+        },
+        {
+          "caller": "calcCollateralValue",
+          "callee": "new BigDecimal",
+          "lineNumber": 45
+        },
+        {
+          "caller": "calcCollateralValue",
+          "callee": "BigDecimal.ONE.subtract",
+          "lineNumber": 46
+        },
+        {
+          "caller": "calcCollateralValue",
+          "callee": "haircutPct.divide",
+          "lineNumber": 46
+        },
+        {
+          "caller": "calcCollateralValue",
+          "callee": "marketValue.multiply(haircutRatio).setScale",
+          "lineNumber": 47
+        },
+        {
+          "caller": "calcCollateralValue",
+          "callee": "marketValue.multiply",
+          "lineNumber": 47
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 54
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 55
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 56
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 57
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 62
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 5,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-margin/src/main/java/com/forex/margin/domain/model/valueobject/MarginAmount.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 71,
+      "nonEmptyLines": 59,
+      "functions": [
+        {
+          "name": "MarginAmount",
+          "startLine": 17,
+          "endLine": 26,
+          "params": [
+            "amount",
+            "currency"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 28,
+          "endLine": 30,
+          "params": [
+            "amount",
+            "currency"
+          ]
+        },
+        {
+          "name": "zero",
+          "startLine": 32,
+          "endLine": 34,
+          "params": [
+            "currency"
+          ]
+        },
+        {
+          "name": "add",
+          "startLine": 36,
+          "endLine": 44,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "subtract",
+          "startLine": 46,
+          "endLine": 54,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "isPositive",
+          "startLine": 56,
+          "endLine": 58,
+          "params": []
+        },
+        {
+          "name": "equals",
+          "startLine": 60,
+          "endLine": 65,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 67,
+          "endLine": 70,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MarginAmount",
+          "startLine": 11,
+          "endLine": 71,
+          "methods": [
+            "MarginAmount",
+            "of",
+            "zero",
+            "add",
+            "subtract",
+            "isPositive",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "amount",
+            "currency"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "zero",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "add",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "subtract",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "isPositive",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "MarginAmount",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "MarginAmount",
+          "callee": "new BusinessException",
+          "lineNumber": 19
+        },
+        {
+          "caller": "MarginAmount",
+          "callee": "currency.isBlank",
+          "lineNumber": 21
+        },
+        {
+          "caller": "MarginAmount",
+          "callee": "new BusinessException",
+          "lineNumber": 22
+        },
+        {
+          "caller": "of",
+          "callee": "new MarginAmount",
+          "lineNumber": 29
+        },
+        {
+          "caller": "zero",
+          "callee": "new MarginAmount",
+          "lineNumber": 33
+        },
+        {
+          "caller": "add",
+          "callee": "new BusinessException",
+          "lineNumber": 38
+        },
+        {
+          "caller": "add",
+          "callee": "this.currency.equals",
+          "lineNumber": 40
+        },
+        {
+          "caller": "add",
+          "callee": "new BusinessException",
+          "lineNumber": 41
+        },
+        {
+          "caller": "add",
+          "callee": "new MarginAmount",
+          "lineNumber": 43
+        },
+        {
+          "caller": "add",
+          "callee": "this.amount.add",
+          "lineNumber": 43
+        },
+        {
+          "caller": "subtract",
+          "callee": "new BusinessException",
+          "lineNumber": 48
+        },
+        {
+          "caller": "subtract",
+          "callee": "this.currency.equals",
+          "lineNumber": 50
+        },
+        {
+          "caller": "subtract",
+          "callee": "new BusinessException",
+          "lineNumber": 51
+        },
+        {
+          "caller": "subtract",
+          "callee": "new MarginAmount",
+          "lineNumber": 53
+        },
+        {
+          "caller": "subtract",
+          "callee": "this.amount.subtract",
+          "lineNumber": 53
+        },
+        {
+          "caller": "isPositive",
+          "callee": "amount.compareTo",
+          "lineNumber": 57
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 64
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 64
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/application/service/OcrAppService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 34,
+      "functions": [
+        {
+          "name": "uploadDocument",
+          "startLine": 23,
+          "endLine": 25,
+          "params": [
+            "docType",
+            "fileName",
+            "filePath"
+          ]
+        },
+        {
+          "name": "processOcr",
+          "startLine": 27,
+          "endLine": 32,
+          "params": [
+            "taskId"
+          ]
+        },
+        {
+          "name": "getOcrResult",
+          "startLine": 34,
+          "endLine": 38,
+          "params": [
+            "taskId"
+          ]
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 40,
+          "endLine": 42,
+          "params": [
+            "query"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "OcrAppService",
+          "startLine": 16,
+          "endLine": 43,
+          "methods": [
+            "uploadDocument",
+            "processOcr",
+            "getOcrResult",
+            "pageQuery"
+          ],
+          "properties": [
+            "ocrDomainService",
+            "ocrTaskRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "uploadDocument",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "processOcr",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "getOcrResult",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "OcrAppService",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "uploadDocument",
+          "callee": "ocrDomainService.uploadDocument",
+          "lineNumber": 24
+        },
+        {
+          "caller": "processOcr",
+          "callee": "ocrTaskRepository.findByTaskId(taskId).orElseThrow",
+          "lineNumber": 29
+        },
+        {
+          "caller": "processOcr",
+          "callee": "ocrTaskRepository.findByTaskId",
+          "lineNumber": 29
+        },
+        {
+          "caller": "processOcr",
+          "callee": "new BusinessException",
+          "lineNumber": 30
+        },
+        {
+          "caller": "processOcr",
+          "callee": "ocrDomainService.processOcr",
+          "lineNumber": 31
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.getId",
+          "lineNumber": 31
+        },
+        {
+          "caller": "getOcrResult",
+          "callee": "ocrTaskRepository.findByTaskId(taskId).orElseThrow",
+          "lineNumber": 35
+        },
+        {
+          "caller": "getOcrResult",
+          "callee": "ocrTaskRepository.findByTaskId",
+          "lineNumber": 35
+        },
+        {
+          "caller": "getOcrResult",
+          "callee": "new BusinessException",
+          "lineNumber": 36
+        },
+        {
+          "caller": "getOcrResult",
+          "callee": "ocrDomainService.getResult",
+          "lineNumber": 37
+        },
+        {
+          "caller": "getOcrResult",
+          "callee": "task.getId",
+          "lineNumber": 37
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "ocrTaskRepository.pageQuery",
+          "lineNumber": 41
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/event/OcrCompletedEvent.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 16,
+      "functions": [
+        {
+          "name": "OcrCompletedEvent",
+          "startLine": 13,
+          "endLine": 16,
+          "params": [
+            "taskId",
+            "docType"
+          ]
+        },
+        {
+          "name": "eventName",
+          "startLine": 18,
+          "endLine": 21,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "OcrCompletedEvent",
+          "startLine": 7,
+          "endLine": 22,
+          "methods": [
+            "OcrCompletedEvent",
+            "eventName"
+          ],
+          "properties": [
+            "taskId",
+            "docType"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OcrCompletedEvent",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "eventName",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "OcrCompletedEvent",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/model/aggregate/OcrTask.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 90,
+      "nonEmptyLines": 78,
+      "functions": [
+        {
+          "name": "OcrTask",
+          "startLine": 27,
+          "endLine": 29,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 31,
+          "endLine": 41,
+          "params": [
+            "docType",
+            "fileName",
+            "filePath"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 43,
+          "endLine": 60,
+          "params": [
+            "id",
+            "taskId",
+            "docType",
+            "fileName",
+            "filePath",
+            "ocrResult",
+            "recognizedFields",
+            "status",
+            "errorMsg",
+            "uploadTime",
+            "completeTime"
+          ]
+        },
+        {
+          "name": "startProcessing",
+          "startLine": 62,
+          "endLine": 65,
+          "params": []
+        },
+        {
+          "name": "complete",
+          "startLine": 67,
+          "endLine": 72,
+          "params": [
+            "result"
+          ]
+        },
+        {
+          "name": "fail",
+          "startLine": 74,
+          "endLine": 79,
+          "params": [
+            "error"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 81,
+          "endLine": 89,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "OcrTask",
+          "startLine": 12,
+          "endLine": 90,
+          "methods": [
+            "OcrTask",
+            "create",
+            "reconstitute",
+            "startProcessing",
+            "complete",
+            "fail",
+            "validate"
+          ],
+          "properties": [
+            "id",
+            "taskId",
+            "docType",
+            "fileName",
+            "filePath",
+            "ocrResult",
+            "recognizedFields",
+            "status",
+            "errorMsg",
+            "uploadTime",
+            "completeTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "startProcessing",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "complete",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "fail",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "OcrTask",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new OcrTask",
+          "lineNumber": 32
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID().toString().replace",
+          "lineNumber": 33
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 33
+        },
+        {
+          "caller": "create",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 33
+        },
+        {
+          "caller": "create",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 38
+        },
+        {
+          "caller": "create",
+          "callee": "task.validate",
+          "lineNumber": 39
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new OcrTask",
+          "lineNumber": 47
+        },
+        {
+          "caller": "startProcessing",
+          "callee": "markUpdated",
+          "lineNumber": 64
+        },
+        {
+          "caller": "complete",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 70
+        },
+        {
+          "caller": "complete",
+          "callee": "markUpdated",
+          "lineNumber": 71
+        },
+        {
+          "caller": "fail",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 77
+        },
+        {
+          "caller": "fail",
+          "callee": "markUpdated",
+          "lineNumber": 78
+        },
+        {
+          "caller": "validate",
+          "callee": "docType.isBlank",
+          "lineNumber": 83
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 84
+        },
+        {
+          "caller": "validate",
+          "callee": "fileName.isBlank",
+          "lineNumber": 86
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 87
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 6,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/repository/OcrTaskRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "OcrTaskRepository",
+          "startLine": 9,
+          "endLine": 18,
+          "methods": [
+            "save",
+            "findById",
+            "findByTaskId",
+            "pageQuery"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "OcrTaskRepository",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/main/java/com/forex/ocr/domain/service/OcrDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 69,
+      "nonEmptyLines": 55,
+      "functions": [
+        {
+          "name": "uploadDocument",
+          "startLine": 25,
+          "endLine": 30,
+          "params": [
+            "docType",
+            "fileName",
+            "filePath"
+          ]
+        },
+        {
+          "name": "processOcr",
+          "startLine": 32,
+          "endLine": 57,
+          "params": [
+            "taskId"
+          ]
+        },
+        {
+          "name": "getResult",
+          "startLine": 59,
+          "endLine": 62,
+          "params": [
+            "taskId"
+          ]
+        },
+        {
+          "name": "simulateOcr",
+          "startLine": 64,
+          "endLine": 68,
+          "params": [
+            "task"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "OcrDomainService",
+          "startLine": 16,
+          "endLine": 69,
+          "methods": [
+            "uploadDocument",
+            "processOcr",
+            "getResult",
+            "simulateOcr"
+          ],
+          "properties": [
+            "ocrTaskRepository",
+            "eventPublisher"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "uploadDocument",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "processOcr",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "getResult",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "OcrDomainService",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "uploadDocument",
+          "callee": "OcrTask.create",
+          "lineNumber": 26
+        },
+        {
+          "caller": "uploadDocument",
+          "callee": "ocrTaskRepository.save",
+          "lineNumber": 27
+        },
+        {
+          "caller": "uploadDocument",
+          "callee": "log.info",
+          "lineNumber": 28
+        },
+        {
+          "caller": "uploadDocument",
+          "callee": "saved.getTaskId",
+          "lineNumber": 28
+        },
+        {
+          "caller": "processOcr",
+          "callee": "ocrTaskRepository.findById(taskId).orElseThrow",
+          "lineNumber": 33
+        },
+        {
+          "caller": "processOcr",
+          "callee": "ocrTaskRepository.findById",
+          "lineNumber": 33
+        },
+        {
+          "caller": "processOcr",
+          "callee": "new BusinessException",
+          "lineNumber": 34
+        },
+        {
+          "caller": "processOcr",
+          "callee": "\"UPLOADED\".equals",
+          "lineNumber": 36
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.getStatus",
+          "lineNumber": 36
+        },
+        {
+          "caller": "processOcr",
+          "callee": "new IllegalStateException",
+          "lineNumber": 37
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.getStatus",
+          "lineNumber": 37
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.startProcessing",
+          "lineNumber": 40
+        },
+        {
+          "caller": "processOcr",
+          "callee": "ocrTaskRepository.save",
+          "lineNumber": 41
+        },
+        {
+          "caller": "processOcr",
+          "callee": "simulateOcr",
+          "lineNumber": 44
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.complete",
+          "lineNumber": 45
+        },
+        {
+          "caller": "processOcr",
+          "callee": "ocrTaskRepository.save",
+          "lineNumber": 46
+        },
+        {
+          "caller": "processOcr",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 48
+        },
+        {
+          "caller": "processOcr",
+          "callee": "new OcrCompletedEvent",
+          "lineNumber": 48
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.getId",
+          "lineNumber": 48
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.getDocType",
+          "lineNumber": 48
+        },
+        {
+          "caller": "processOcr",
+          "callee": "log.info",
+          "lineNumber": 49
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.getTaskId",
+          "lineNumber": 49
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.getDocType",
+          "lineNumber": 49
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.fail",
+          "lineNumber": 51
+        },
+        {
+          "caller": "processOcr",
+          "callee": "e.getMessage",
+          "lineNumber": 51
+        },
+        {
+          "caller": "processOcr",
+          "callee": "ocrTaskRepository.save",
+          "lineNumber": 52
+        },
+        {
+          "caller": "processOcr",
+          "callee": "log.error",
+          "lineNumber": 53
+        },
+        {
+          "caller": "processOcr",
+          "callee": "task.getTaskId",
+          "lineNumber": 53
+        },
+        {
+          "caller": "getResult",
+          "callee": "ocrTaskRepository.findById(taskId).orElseThrow",
+          "lineNumber": 60
+        },
+        {
+          "caller": "getResult",
+          "callee": "ocrTaskRepository.findById",
+          "lineNumber": 60
+        },
+        {
+          "caller": "getResult",
+          "callee": "new BusinessException",
+          "lineNumber": 61
+        },
+        {
+          "caller": "simulateOcr",
+          "callee": "log.info",
+          "lineNumber": 65
+        },
+        {
+          "caller": "simulateOcr",
+          "callee": "task.getTaskId",
+          "lineNumber": 65
+        },
+        {
+          "caller": "simulateOcr",
+          "callee": "task.getDocType",
+          "lineNumber": 65
+        },
+        {
+          "caller": "simulateOcr",
+          "callee": "task.getFileName",
+          "lineNumber": 65
+        },
+        {
+          "caller": "simulateOcr",
+          "callee": "String.format",
+          "lineNumber": 66
+        },
+        {
+          "caller": "simulateOcr",
+          "callee": "task.getTaskId",
+          "lineNumber": 67
+        },
+        {
+          "caller": "simulateOcr",
+          "callee": "task.getDocType",
+          "lineNumber": 67
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-ocr/src/test/java/com/forex/ocr/domain/service/OcrDomainServiceTest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 79,
+      "nonEmptyLines": 63,
+      "functions": [
+        {
+          "name": "testUploadDocument",
+          "startLine": 31,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "testProcessOcr",
+          "startLine": 42,
+          "endLine": 58,
+          "params": []
+        },
+        {
+          "name": "testProcessOcr_WrongStatus",
+          "startLine": 60,
+          "endLine": 68,
+          "params": []
+        },
+        {
+          "name": "testGetResult",
+          "startLine": 70,
+          "endLine": 78,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "OcrDomainServiceTest",
+          "startLine": 22,
+          "endLine": 79,
+          "methods": [
+            "testUploadDocument",
+            "testProcessOcr",
+            "testProcessOcr_WrongStatus",
+            "testGetResult"
+          ],
+          "properties": [
+            "ocrTaskRepository",
+            "eventPublisher",
+            "ocrDomainService"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "testUploadDocument",
+          "callee": "mock",
+          "lineNumber": 34
+        },
+        {
+          "caller": "testUploadDocument",
+          "callee": "when(ocrTaskRepository.save(any())).thenReturn",
+          "lineNumber": 35
+        },
+        {
+          "caller": "testUploadDocument",
+          "callee": "when",
+          "lineNumber": 35
+        },
+        {
+          "caller": "testUploadDocument",
+          "callee": "ocrTaskRepository.save",
+          "lineNumber": 35
+        },
+        {
+          "caller": "testUploadDocument",
+          "callee": "any",
+          "lineNumber": 35
+        },
+        {
+          "caller": "testUploadDocument",
+          "callee": "ocrDomainService.uploadDocument",
+          "lineNumber": 37
+        },
+        {
+          "caller": "testUploadDocument",
+          "callee": "assertNotNull",
+          "lineNumber": 38
+        },
+        {
+          "caller": "testUploadDocument",
+          "callee": "verify(ocrTaskRepository).save",
+          "lineNumber": 39
+        },
+        {
+          "caller": "testUploadDocument",
+          "callee": "verify",
+          "lineNumber": 39
+        },
+        {
+          "caller": "testUploadDocument",
+          "callee": "any",
+          "lineNumber": 39
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "mock",
+          "lineNumber": 45
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "when(task.getStatus()).thenReturn",
+          "lineNumber": 46
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "when",
+          "lineNumber": 46
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "task.getStatus",
+          "lineNumber": 46
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "when(task.getDocType()).thenReturn",
+          "lineNumber": 47
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "when",
+          "lineNumber": 47
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "task.getDocType",
+          "lineNumber": 47
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "when(task.getFileName()).thenReturn",
+          "lineNumber": 48
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "when",
+          "lineNumber": 48
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "task.getFileName",
+          "lineNumber": 48
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "when(task.getTaskId()).thenReturn",
+          "lineNumber": 49
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "when",
+          "lineNumber": 49
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "task.getTaskId",
+          "lineNumber": 49
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "when(ocrTaskRepository.findById(1L)).thenReturn",
+          "lineNumber": 50
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "when",
+          "lineNumber": 50
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "ocrTaskRepository.findById",
+          "lineNumber": 50
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "Optional.of",
+          "lineNumber": 50
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "when(ocrTaskRepository.save(any())).thenReturn",
+          "lineNumber": 51
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "when",
+          "lineNumber": 51
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "ocrTaskRepository.save",
+          "lineNumber": 51
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "any",
+          "lineNumber": 51
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "ocrDomainService.processOcr",
+          "lineNumber": 53
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "verify(task).startProcessing",
+          "lineNumber": 55
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "verify",
+          "lineNumber": 55
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "verify(task).complete",
+          "lineNumber": 56
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "verify",
+          "lineNumber": 56
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "anyString",
+          "lineNumber": 56
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "verify(eventPublisher).publishEvent",
+          "lineNumber": 57
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "verify",
+          "lineNumber": 57
+        },
+        {
+          "caller": "testProcessOcr",
+          "callee": "any",
+          "lineNumber": 57
+        },
+        {
+          "caller": "testProcessOcr_WrongStatus",
+          "callee": "mock",
+          "lineNumber": 63
+        },
+        {
+          "caller": "testProcessOcr_WrongStatus",
+          "callee": "when(task.getStatus()).thenReturn",
+          "lineNumber": 64
+        },
+        {
+          "caller": "testProcessOcr_WrongStatus",
+          "callee": "when",
+          "lineNumber": 64
+        },
+        {
+          "caller": "testProcessOcr_WrongStatus",
+          "callee": "task.getStatus",
+          "lineNumber": 64
+        },
+        {
+          "caller": "testProcessOcr_WrongStatus",
+          "callee": "when(ocrTaskRepository.findById(1L)).thenReturn",
+          "lineNumber": 65
+        },
+        {
+          "caller": "testProcessOcr_WrongStatus",
+          "callee": "when",
+          "lineNumber": 65
+        },
+        {
+          "caller": "testProcessOcr_WrongStatus",
+          "callee": "ocrTaskRepository.findById",
+          "lineNumber": 65
+        },
+        {
+          "caller": "testProcessOcr_WrongStatus",
+          "callee": "Optional.of",
+          "lineNumber": 65
+        },
+        {
+          "caller": "testProcessOcr_WrongStatus",
+          "callee": "assertThrows",
+          "lineNumber": 67
+        },
+        {
+          "caller": "testProcessOcr_WrongStatus",
+          "callee": "ocrDomainService.processOcr",
+          "lineNumber": 67
+        },
+        {
+          "caller": "testGetResult",
+          "callee": "mock",
+          "lineNumber": 73
+        },
+        {
+          "caller": "testGetResult",
+          "callee": "when(ocrTaskRepository.findById(1L)).thenReturn",
+          "lineNumber": 74
+        },
+        {
+          "caller": "testGetResult",
+          "callee": "when",
+          "lineNumber": 74
+        },
+        {
+          "caller": "testGetResult",
+          "callee": "ocrTaskRepository.findById",
+          "lineNumber": 74
+        },
+        {
+          "caller": "testGetResult",
+          "callee": "Optional.of",
+          "lineNumber": 74
+        },
+        {
+          "caller": "testGetResult",
+          "callee": "ocrDomainService.getResult",
+          "lineNumber": 76
+        },
+        {
+          "caller": "testGetResult",
+          "callee": "assertNotNull",
+          "lineNumber": 77
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 0,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/application/service/BatchPaymentService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 91,
+      "nonEmptyLines": 83,
+      "functions": [
+        {
+          "name": "processBatch",
+          "startLine": 27,
+          "endLine": 42,
+          "params": [
+            "commands",
+            "channel"
+          ]
+        },
+        {
+          "name": "splitOversized",
+          "startLine": 44,
+          "endLine": 58,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "cloneWithAmount",
+          "startLine": 60,
+          "endLine": 76,
+          "params": [
+            "cmd",
+            "amount",
+            "index"
+          ]
+        },
+        {
+          "name": "buildPayment",
+          "startLine": 78,
+          "endLine": 90,
+          "params": [
+            "cmd"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BatchPaymentService",
+          "startLine": 17,
+          "endLine": 91,
+          "methods": [
+            "processBatch",
+            "splitOversized",
+            "cloneWithAmount",
+            "buildPayment"
+          ],
+          "properties": [
+            "paymentDomainService",
+            "paymentRepository",
+            "CIPS_MAX_AMOUNT",
+            "SWIFT_MAX_AMOUNT"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CIPS_MAX_AMOUNT",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "SWIFT_MAX_AMOUNT",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "processBatch",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "splitOversized",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "BatchPaymentService",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "processBatch",
+          "callee": "new BatchResult",
+          "lineNumber": 28
+        },
+        {
+          "caller": "processBatch",
+          "callee": "splitOversized",
+          "lineNumber": 31
+        },
+        {
+          "caller": "processBatch",
+          "callee": "paymentDomainService.createPayment",
+          "lineNumber": 33
+        },
+        {
+          "caller": "processBatch",
+          "callee": "result.addSuccess",
+          "lineNumber": 34
+        },
+        {
+          "caller": "processBatch",
+          "callee": "payment.getPaymentNo",
+          "lineNumber": 34
+        },
+        {
+          "caller": "processBatch",
+          "callee": "result.addFailure",
+          "lineNumber": 37
+        },
+        {
+          "caller": "processBatch",
+          "callee": "cmd.getPayCurrency",
+          "lineNumber": 37
+        },
+        {
+          "caller": "processBatch",
+          "callee": "cmd.getPayAmount",
+          "lineNumber": 37
+        },
+        {
+          "caller": "processBatch",
+          "callee": "e.getMessage",
+          "lineNumber": 37
+        },
+        {
+          "caller": "processBatch",
+          "callee": "log.info",
+          "lineNumber": 40
+        },
+        {
+          "caller": "processBatch",
+          "callee": "result.getSuccessCount",
+          "lineNumber": 40
+        },
+        {
+          "caller": "processBatch",
+          "callee": "result.getFailureCount",
+          "lineNumber": 40
+        },
+        {
+          "caller": "splitOversized",
+          "callee": "new ArrayList<>",
+          "lineNumber": 45
+        },
+        {
+          "caller": "splitOversized",
+          "callee": "\"CIPS\".equals",
+          "lineNumber": 46
+        },
+        {
+          "caller": "splitOversized",
+          "callee": "cmd.getPaymentType",
+          "lineNumber": 46
+        },
+        {
+          "caller": "splitOversized",
+          "callee": "cmd.getPayAmount",
+          "lineNumber": 47
+        },
+        {
+          "caller": "splitOversized",
+          "callee": "remaining.compareTo",
+          "lineNumber": 49
+        },
+        {
+          "caller": "splitOversized",
+          "callee": "remaining.compareTo",
+          "lineNumber": 50
+        },
+        {
+          "caller": "splitOversized",
+          "callee": "cloneWithAmount",
+          "lineNumber": 51
+        },
+        {
+          "caller": "splitOversized",
+          "callee": "buildPayment",
+          "lineNumber": 52
+        },
+        {
+          "caller": "splitOversized",
+          "callee": "payments.add",
+          "lineNumber": 53
+        },
+        {
+          "caller": "splitOversized",
+          "callee": "remaining.subtract",
+          "lineNumber": 54
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "new CreatePaymentCmd",
+          "lineNumber": 61
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "clone.setCustomerId",
+          "lineNumber": 62
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "cmd.getCustomerId",
+          "lineNumber": 62
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "clone.setPaymentType",
+          "lineNumber": 63
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "cmd.getPaymentType",
+          "lineNumber": 63
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "clone.setPayAmount",
+          "lineNumber": 64
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "clone.setPayCurrency",
+          "lineNumber": 65
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "cmd.getPayCurrency",
+          "lineNumber": 65
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "clone.setBeneficiaryName",
+          "lineNumber": 66
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "cmd.getBeneficiaryName",
+          "lineNumber": 66
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "clone.setBeneficiaryAccount",
+          "lineNumber": 67
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "cmd.getBeneficiaryAccount",
+          "lineNumber": 67
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "clone.setBeneficiaryBank",
+          "lineNumber": 68
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "cmd.getBeneficiaryBank",
+          "lineNumber": 68
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "clone.setBeneficiarySwift",
+          "lineNumber": 69
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "cmd.getBeneficiarySwift",
+          "lineNumber": 69
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "clone.setBeneficiaryCountry",
+          "lineNumber": 70
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "cmd.getBeneficiaryCountry",
+          "lineNumber": 70
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "clone.setReceivingBankCode",
+          "lineNumber": 71
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "cmd.getReceivingBankCode",
+          "lineNumber": 71
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "clone.setPaymentPurpose",
+          "lineNumber": 72
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "cmd.getPaymentPurpose",
+          "lineNumber": 72
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "clone.setChargeBearer",
+          "lineNumber": 73
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "cmd.getChargeBearer",
+          "lineNumber": 73
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "clone.setValueDate",
+          "lineNumber": 74
+        },
+        {
+          "caller": "cloneWithAmount",
+          "callee": "cmd.getValueDate",
+          "lineNumber": 74
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "String.format",
+          "lineNumber": 79
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "cmd.getBeneficiaryName",
+          "lineNumber": 80
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "cmd.getBeneficiaryName",
+          "lineNumber": 80
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "cmd.getBeneficiaryAccount",
+          "lineNumber": 81
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "cmd.getBeneficiaryAccount",
+          "lineNumber": 81
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "cmd.getBeneficiaryBank",
+          "lineNumber": 82
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "cmd.getBeneficiaryBank",
+          "lineNumber": 82
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "cmd.getBeneficiarySwift",
+          "lineNumber": 83
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "cmd.getBeneficiarySwift",
+          "lineNumber": 83
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "CrossBorderPayment.create",
+          "lineNumber": 84
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "cmd.getCustomerId",
+          "lineNumber": 84
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "cmd.getPaymentType",
+          "lineNumber": 85
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "cmd.getPayAmount",
+          "lineNumber": 85
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "cmd.getPayCurrency",
+          "lineNumber": 85
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "cmd.getReceivingBankCode",
+          "lineNumber": 87
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "cmd.getPaymentPurpose",
+          "lineNumber": 88
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "cmd.getChargeBearer",
+          "lineNumber": 89
+        },
+        {
+          "caller": "buildPayment",
+          "callee": "cmd.getValueDate",
+          "lineNumber": 89
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSentEvent.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "functions": [
+        {
+          "name": "PaymentSentEvent",
+          "startLine": 13,
+          "endLine": 17,
+          "params": [
+            "paymentId",
+            "paymentNo",
+            "swiftRef"
+          ]
+        },
+        {
+          "name": "eventName",
+          "startLine": 19,
+          "endLine": 22,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PaymentSentEvent",
+          "startLine": 6,
+          "endLine": 23,
+          "methods": [
+            "PaymentSentEvent",
+            "eventName"
+          ],
+          "properties": [
+            "paymentId",
+            "paymentNo",
+            "swiftRef"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PaymentSentEvent",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "eventName",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "PaymentSentEvent",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/event/PaymentSubmittedEvent.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 21,
+      "functions": [
+        {
+          "name": "PaymentSubmittedEvent",
+          "startLine": 16,
+          "endLine": 21,
+          "params": [
+            "paymentId",
+            "paymentNo",
+            "amount",
+            "currency"
+          ]
+        },
+        {
+          "name": "eventName",
+          "startLine": 23,
+          "endLine": 26,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PaymentSubmittedEvent",
+          "startLine": 8,
+          "endLine": 27,
+          "methods": [
+            "PaymentSubmittedEvent",
+            "eventName"
+          ],
+          "properties": [
+            "paymentId",
+            "paymentNo",
+            "amount",
+            "currency"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PaymentSubmittedEvent",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "eventName",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "PaymentSubmittedEvent",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/aggregate/CrossBorderPayment.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 308,
+      "nonEmptyLines": 287,
+      "functions": [
+        {
+          "name": "CrossBorderPayment",
+          "startLine": 73,
+          "endLine": 75,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 80,
+          "endLine": 117,
+          "params": [
+            "customerId",
+            "paymentDirection",
+            "paymentType",
+            "payAmount",
+            "payCurrency",
+            "settlementAmount",
+            "exchangeRate",
+            "senderInfo",
+            "beneficiaryInfo",
+            "intermediaryBankInfo",
+            "payingBankCode",
+            "receivingBankCode",
+            "messageType",
+            "gpiTrackingId",
+            "paymentPurpose",
+            "bankPurposeCode",
+            "chargeBearer",
+            "valueDate",
+            "operatorId",
+            "remark"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 122,
+          "endLine": 173,
+          "params": [
+            "id",
+            "paymentNo",
+            "customerId",
+            "paymentDirection",
+            "paymentType",
+            "payAmount",
+            "payCurrency",
+            "settlementAmount",
+            "exchangeRate",
+            "senderInfo",
+            "beneficiaryInfo",
+            "intermediaryBankInfo",
+            "payingBankCode",
+            "receivingBankCode",
+            "messageType",
+            "swiftRef",
+            "cipsRef",
+            "gpiTrackingId",
+            "gpiStatus",
+            "paymentPurpose",
+            "bankPurposeCode",
+            "chargeBearer",
+            "feeAmount",
+            "telegraphicFee",
+            "commissionAmount",
+            "paymentStatus",
+            "submitTime",
+            "valueDate",
+            "settlementDate",
+            "operatorId",
+            "approverId",
+            "remark",
+            "createdAt",
+            "updatedAt",
+            "version"
+          ]
+        },
+        {
+          "name": "submit",
+          "startLine": 178,
+          "endLine": 185,
+          "params": []
+        },
+        {
+          "name": "approve",
+          "startLine": 190,
+          "endLine": 197,
+          "params": [
+            "approverId"
+          ]
+        },
+        {
+          "name": "send",
+          "startLine": 202,
+          "endLine": 209,
+          "params": []
+        },
+        {
+          "name": "updateSwiftRef",
+          "startLine": 214,
+          "endLine": 220,
+          "params": [
+            "ref"
+          ]
+        },
+        {
+          "name": "updateGpiStatus",
+          "startLine": 225,
+          "endLine": 231,
+          "params": [
+            "status"
+          ]
+        },
+        {
+          "name": "markAmlCheckPassed",
+          "startLine": 236,
+          "endLine": 242,
+          "params": []
+        },
+        {
+          "name": "markAmlCheckRejected",
+          "startLine": 247,
+          "endLine": 253,
+          "params": []
+        },
+        {
+          "name": "markFundsCredited",
+          "startLine": 258,
+          "endLine": 264,
+          "params": []
+        },
+        {
+          "name": "cancel",
+          "startLine": 269,
+          "endLine": 279,
+          "params": [
+            "reason"
+          ]
+        },
+        {
+          "name": "setPaymentNo",
+          "startLine": 281,
+          "endLine": 286,
+          "params": [
+            "paymentNo"
+          ]
+        },
+        {
+          "name": "setCipsRef",
+          "startLine": 288,
+          "endLine": 291,
+          "params": [
+            "cipsRef"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 293,
+          "endLine": 307,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CrossBorderPayment",
+          "startLine": 17,
+          "endLine": 308,
+          "methods": [
+            "CrossBorderPayment",
+            "create",
+            "reconstitute",
+            "submit",
+            "approve",
+            "send",
+            "updateSwiftRef",
+            "updateGpiStatus",
+            "markAmlCheckPassed",
+            "markAmlCheckRejected",
+            "markFundsCredited",
+            "cancel",
+            "setPaymentNo",
+            "setCipsRef",
+            "validate"
+          ],
+          "properties": [
+            "STATUS_DRAFT",
+            "STATUS_SUBMITTED",
+            "STATUS_AML_CHECK",
+            "STATUS_AML_REJECTED",
+            "STATUS_APPROVED",
+            "STATUS_SENT",
+            "STATUS_FUNDS_CREDITED",
+            "STATUS_CANCELLED",
+            "serialVersionUID",
+            "id",
+            "paymentNo",
+            "customerId",
+            "paymentDirection",
+            "paymentType",
+            "payAmount",
+            "payCurrency",
+            "settlementAmount",
+            "exchangeRate",
+            "senderInfo",
+            "beneficiaryInfo",
+            "intermediaryBankInfo",
+            "payingBankCode",
+            "receivingBankCode",
+            "messageType",
+            "swiftRef",
+            "cipsRef",
+            "gpiTrackingId",
+            "gpiStatus",
+            "paymentPurpose",
+            "bankPurposeCode",
+            "chargeBearer",
+            "feeAmount",
+            "telegraphicFee",
+            "commissionAmount",
+            "paymentStatus",
+            "submitTime",
+            "valueDate",
+            "settlementDate",
+            "operatorId",
+            "approverId",
+            "remark"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "STATUS_DRAFT",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_SUBMITTED",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_AML_CHECK",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_AML_REJECTED",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_APPROVED",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_SENT",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_FUNDS_CREDITED",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "STATUS_CANCELLED",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "create",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "submit",
+          "line": 178,
+          "isDefault": false
+        },
+        {
+          "name": "approve",
+          "line": 190,
+          "isDefault": false
+        },
+        {
+          "name": "send",
+          "line": 202,
+          "isDefault": false
+        },
+        {
+          "name": "updateSwiftRef",
+          "line": 214,
+          "isDefault": false
+        },
+        {
+          "name": "updateGpiStatus",
+          "line": 225,
+          "isDefault": false
+        },
+        {
+          "name": "markAmlCheckPassed",
+          "line": 236,
+          "isDefault": false
+        },
+        {
+          "name": "markAmlCheckRejected",
+          "line": 247,
+          "isDefault": false
+        },
+        {
+          "name": "markFundsCredited",
+          "line": 258,
+          "isDefault": false
+        },
+        {
+          "name": "cancel",
+          "line": 269,
+          "isDefault": false
+        },
+        {
+          "name": "setPaymentNo",
+          "line": 281,
+          "isDefault": false
+        },
+        {
+          "name": "setCipsRef",
+          "line": 288,
+          "isDefault": false
+        },
+        {
+          "name": "CrossBorderPayment",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new CrossBorderPayment",
+          "lineNumber": 90
+        },
+        {
+          "caller": "create",
+          "callee": "payment.validate",
+          "lineNumber": 115
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new CrossBorderPayment",
+          "lineNumber": 139
+        },
+        {
+          "caller": "submit",
+          "callee": "STATUS_DRAFT.equals",
+          "lineNumber": 179
+        },
+        {
+          "caller": "submit",
+          "callee": "new IllegalStateException",
+          "lineNumber": 180
+        },
+        {
+          "caller": "submit",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 183
+        },
+        {
+          "caller": "submit",
+          "callee": "markUpdated",
+          "lineNumber": 184
+        },
+        {
+          "caller": "approve",
+          "callee": "STATUS_SUBMITTED.equals",
+          "lineNumber": 191
+        },
+        {
+          "caller": "approve",
+          "callee": "new IllegalStateException",
+          "lineNumber": 192
+        },
+        {
+          "caller": "approve",
+          "callee": "markUpdated",
+          "lineNumber": 196
+        },
+        {
+          "caller": "send",
+          "callee": "STATUS_APPROVED.equals",
+          "lineNumber": 203
+        },
+        {
+          "caller": "send",
+          "callee": "STATUS_AML_CHECK.equals",
+          "lineNumber": 203
+        },
+        {
+          "caller": "send",
+          "callee": "new IllegalStateException",
+          "lineNumber": 204
+        },
+        {
+          "caller": "send",
+          "callee": "LocalDate.now",
+          "lineNumber": 207
+        },
+        {
+          "caller": "send",
+          "callee": "markUpdated",
+          "lineNumber": 208
+        },
+        {
+          "caller": "updateSwiftRef",
+          "callee": "ref.isBlank",
+          "lineNumber": 215
+        },
+        {
+          "caller": "updateSwiftRef",
+          "callee": "new BusinessException",
+          "lineNumber": 216
+        },
+        {
+          "caller": "updateSwiftRef",
+          "callee": "markUpdated",
+          "lineNumber": 219
+        },
+        {
+          "caller": "updateGpiStatus",
+          "callee": "status.isBlank",
+          "lineNumber": 226
+        },
+        {
+          "caller": "updateGpiStatus",
+          "callee": "new BusinessException",
+          "lineNumber": 227
+        },
+        {
+          "caller": "updateGpiStatus",
+          "callee": "markUpdated",
+          "lineNumber": 230
+        },
+        {
+          "caller": "markAmlCheckPassed",
+          "callee": "STATUS_AML_CHECK.equals",
+          "lineNumber": 237
+        },
+        {
+          "caller": "markAmlCheckPassed",
+          "callee": "new IllegalStateException",
+          "lineNumber": 238
+        },
+        {
+          "caller": "markAmlCheckPassed",
+          "callee": "markUpdated",
+          "lineNumber": 241
+        },
+        {
+          "caller": "markAmlCheckRejected",
+          "callee": "STATUS_AML_CHECK.equals",
+          "lineNumber": 248
+        },
+        {
+          "caller": "markAmlCheckRejected",
+          "callee": "new IllegalStateException",
+          "lineNumber": 249
+        },
+        {
+          "caller": "markAmlCheckRejected",
+          "callee": "markUpdated",
+          "lineNumber": 252
+        },
+        {
+          "caller": "markFundsCredited",
+          "callee": "STATUS_SENT.equals",
+          "lineNumber": 259
+        },
+        {
+          "caller": "markFundsCredited",
+          "callee": "new IllegalStateException",
+          "lineNumber": 260
+        },
+        {
+          "caller": "markFundsCredited",
+          "callee": "markUpdated",
+          "lineNumber": 263
+        },
+        {
+          "caller": "cancel",
+          "callee": "STATUS_CANCELLED.equals",
+          "lineNumber": 270
+        },
+        {
+          "caller": "cancel",
+          "callee": "new IllegalStateException",
+          "lineNumber": 271
+        },
+        {
+          "caller": "cancel",
+          "callee": "STATUS_FUNDS_CREDITED.equals",
+          "lineNumber": 273
+        },
+        {
+          "caller": "cancel",
+          "callee": "new IllegalStateException",
+          "lineNumber": 274
+        },
+        {
+          "caller": "cancel",
+          "callee": "markUpdated",
+          "lineNumber": 278
+        },
+        {
+          "caller": "setPaymentNo",
+          "callee": "paymentNo.isBlank",
+          "lineNumber": 282
+        },
+        {
+          "caller": "setPaymentNo",
+          "callee": "new BusinessException",
+          "lineNumber": 283
+        },
+        {
+          "caller": "setCipsRef",
+          "callee": "markUpdated",
+          "lineNumber": 290
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 296
+        },
+        {
+          "caller": "validate",
+          "callee": "paymentDirection.isBlank",
+          "lineNumber": 298
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 299
+        },
+        {
+          "caller": "validate",
+          "callee": "payAmount.compareTo",
+          "lineNumber": 301
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 302
+        },
+        {
+          "caller": "validate",
+          "callee": "payCurrency.isBlank",
+          "lineNumber": 304
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 305
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 22,
+        "functionCount": 15,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/BeneficiaryInfo.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 66,
+      "nonEmptyLines": 56,
+      "functions": [
+        {
+          "name": "BeneficiaryInfo",
+          "startLine": 20,
+          "endLine": 34,
+          "params": [
+            "name",
+            "accountNo",
+            "bankName",
+            "bankSwiftCode",
+            "postalAddress",
+            "country"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 36,
+          "endLine": 39,
+          "params": [
+            "name",
+            "accountNo",
+            "bankName",
+            "bankSwiftCode",
+            "postalAddress",
+            "country"
+          ]
+        },
+        {
+          "name": "getAddressLine",
+          "startLine": 41,
+          "endLine": 43,
+          "params": []
+        },
+        {
+          "name": "equals",
+          "startLine": 45,
+          "endLine": 55,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 57,
+          "endLine": 60,
+          "params": []
+        },
+        {
+          "name": "toString",
+          "startLine": 62,
+          "endLine": 65,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "BeneficiaryInfo",
+          "startLine": 10,
+          "endLine": 66,
+          "methods": [
+            "BeneficiaryInfo",
+            "of",
+            "getAddressLine",
+            "equals",
+            "hashCode",
+            "toString"
+          ],
+          "properties": [
+            "name",
+            "accountNo",
+            "bankName",
+            "bankSwiftCode",
+            "postalAddress",
+            "country"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "getAddressLine",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "BeneficiaryInfo",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "BeneficiaryInfo",
+          "callee": "name.isBlank",
+          "lineNumber": 22
+        },
+        {
+          "caller": "BeneficiaryInfo",
+          "callee": "new BusinessException",
+          "lineNumber": 23
+        },
+        {
+          "caller": "BeneficiaryInfo",
+          "callee": "accountNo.isBlank",
+          "lineNumber": 25
+        },
+        {
+          "caller": "BeneficiaryInfo",
+          "callee": "new BusinessException",
+          "lineNumber": 26
+        },
+        {
+          "caller": "of",
+          "callee": "new BeneficiaryInfo",
+          "lineNumber": 38
+        },
+        {
+          "caller": "getAddressLine",
+          "callee": "postalAddress.toUnstructured",
+          "lineNumber": 42
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 49
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 50
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 51
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 52
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 53
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 54
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 59
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PaymentAmount.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 72,
+      "nonEmptyLines": 60,
+      "functions": [
+        {
+          "name": "PaymentAmount",
+          "startLine": 17,
+          "endLine": 26,
+          "params": [
+            "amount",
+            "currency"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 28,
+          "endLine": 30,
+          "params": [
+            "amount",
+            "currency"
+          ]
+        },
+        {
+          "name": "zero",
+          "startLine": 32,
+          "endLine": 34,
+          "params": [
+            "currency"
+          ]
+        },
+        {
+          "name": "add",
+          "startLine": 36,
+          "endLine": 44,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "subtract",
+          "startLine": 46,
+          "endLine": 54,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 56,
+          "endLine": 61,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 63,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "toString",
+          "startLine": 68,
+          "endLine": 71,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PaymentAmount",
+          "startLine": 11,
+          "endLine": 72,
+          "methods": [
+            "PaymentAmount",
+            "of",
+            "zero",
+            "add",
+            "subtract",
+            "equals",
+            "hashCode",
+            "toString"
+          ],
+          "properties": [
+            "amount",
+            "currency"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "zero",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "add",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "subtract",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "PaymentAmount",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PaymentAmount",
+          "callee": "new BusinessException",
+          "lineNumber": 19
+        },
+        {
+          "caller": "PaymentAmount",
+          "callee": "currency.isBlank",
+          "lineNumber": 21
+        },
+        {
+          "caller": "PaymentAmount",
+          "callee": "new BusinessException",
+          "lineNumber": 22
+        },
+        {
+          "caller": "of",
+          "callee": "new PaymentAmount",
+          "lineNumber": 29
+        },
+        {
+          "caller": "zero",
+          "callee": "new PaymentAmount",
+          "lineNumber": 33
+        },
+        {
+          "caller": "add",
+          "callee": "new BusinessException",
+          "lineNumber": 38
+        },
+        {
+          "caller": "add",
+          "callee": "this.currency.equals",
+          "lineNumber": 40
+        },
+        {
+          "caller": "add",
+          "callee": "new BusinessException",
+          "lineNumber": 41
+        },
+        {
+          "caller": "add",
+          "callee": "new PaymentAmount",
+          "lineNumber": 43
+        },
+        {
+          "caller": "add",
+          "callee": "this.amount.add",
+          "lineNumber": 43
+        },
+        {
+          "caller": "subtract",
+          "callee": "new BusinessException",
+          "lineNumber": 48
+        },
+        {
+          "caller": "subtract",
+          "callee": "this.currency.equals",
+          "lineNumber": 50
+        },
+        {
+          "caller": "subtract",
+          "callee": "new BusinessException",
+          "lineNumber": 51
+        },
+        {
+          "caller": "subtract",
+          "callee": "new PaymentAmount",
+          "lineNumber": 53
+        },
+        {
+          "caller": "subtract",
+          "callee": "this.amount.subtract",
+          "lineNumber": 53
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 60
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 60
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 65
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PaymentNo.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 57,
+      "nonEmptyLines": 46,
+      "functions": [
+        {
+          "name": "PaymentNo",
+          "startLine": 20,
+          "endLine": 25,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 27,
+          "endLine": 29,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "generate",
+          "startLine": 31,
+          "endLine": 39,
+          "params": [
+            "direction"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 41,
+          "endLine": 46,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 48,
+          "endLine": 51,
+          "params": []
+        },
+        {
+          "name": "toString",
+          "startLine": 53,
+          "endLine": 56,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PaymentNo",
+          "startLine": 13,
+          "endLine": 57,
+          "methods": [
+            "PaymentNo",
+            "of",
+            "generate",
+            "equals",
+            "hashCode",
+            "toString"
+          ],
+          "properties": [
+            "DATE_FORMATTER",
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "generate",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "PaymentNo",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PaymentNo",
+          "callee": "value.isBlank",
+          "lineNumber": 21
+        },
+        {
+          "caller": "PaymentNo",
+          "callee": "new BusinessException",
+          "lineNumber": 22
+        },
+        {
+          "caller": "of",
+          "callee": "new PaymentNo",
+          "lineNumber": 28
+        },
+        {
+          "caller": "generate",
+          "callee": "direction.isBlank",
+          "lineNumber": 32
+        },
+        {
+          "caller": "generate",
+          "callee": "new BusinessException",
+          "lineNumber": 33
+        },
+        {
+          "caller": "generate",
+          "callee": "\"INWARD\".equalsIgnoreCase",
+          "lineNumber": 35
+        },
+        {
+          "caller": "generate",
+          "callee": "LocalDateTime.now().format",
+          "lineNumber": 36
+        },
+        {
+          "caller": "generate",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 36
+        },
+        {
+          "caller": "generate",
+          "callee": "ThreadLocalRandom.current().nextInt",
+          "lineNumber": 37
+        },
+        {
+          "caller": "generate",
+          "callee": "ThreadLocalRandom.current",
+          "lineNumber": 37
+        },
+        {
+          "caller": "generate",
+          "callee": "new PaymentNo",
+          "lineNumber": 38
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 45
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 50
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/PostalAddress.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 96,
+      "nonEmptyLines": 82,
+      "functions": [
+        {
+          "name": "PostalAddress",
+          "startLine": 21,
+          "endLine": 34,
+          "params": [
+            "country",
+            "province",
+            "city",
+            "streetName",
+            "buildingNumber",
+            "buildingName",
+            "postCode",
+            "department",
+            "subDepartment",
+            "townName"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 36,
+          "endLine": 39,
+          "params": [
+            "country",
+            "city",
+            "streetName",
+            "buildingNumber",
+            "postCode"
+          ]
+        },
+        {
+          "name": "withProvince",
+          "startLine": 41,
+          "endLine": 43,
+          "params": [
+            "province"
+          ]
+        },
+        {
+          "name": "withBuildingName",
+          "startLine": 45,
+          "endLine": 47,
+          "params": [
+            "buildingName"
+          ]
+        },
+        {
+          "name": "withDepartment",
+          "startLine": 49,
+          "endLine": 51,
+          "params": [
+            "dept",
+            "subDept"
+          ]
+        },
+        {
+          "name": "withTownName",
+          "startLine": 53,
+          "endLine": 55,
+          "params": [
+            "townName"
+          ]
+        },
+        {
+          "name": "isValidForPayment",
+          "startLine": 57,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "toUnstructured",
+          "startLine": 63,
+          "endLine": 73,
+          "params": []
+        },
+        {
+          "name": "parse",
+          "startLine": 75,
+          "endLine": 82,
+          "params": [
+            "unstructured"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 84,
+          "endLine": 90,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 92,
+          "endLine": 95,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PostalAddress",
+          "startLine": 8,
+          "endLine": 96,
+          "methods": [
+            "PostalAddress",
+            "of",
+            "withProvince",
+            "withBuildingName",
+            "withDepartment",
+            "withTownName",
+            "isValidForPayment",
+            "toUnstructured",
+            "parse",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "country",
+            "province",
+            "city",
+            "streetName",
+            "buildingNumber",
+            "buildingName",
+            "postCode",
+            "department",
+            "subDepartment",
+            "townName"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "withProvince",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "withBuildingName",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "withDepartment",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "withTownName",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "isValidForPayment",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "toUnstructured",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "parse",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "PostalAddress",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "of",
+          "callee": "new PostalAddress",
+          "lineNumber": 38
+        },
+        {
+          "caller": "withProvince",
+          "callee": "new PostalAddress",
+          "lineNumber": 42
+        },
+        {
+          "caller": "withBuildingName",
+          "callee": "new PostalAddress",
+          "lineNumber": 46
+        },
+        {
+          "caller": "withDepartment",
+          "callee": "new PostalAddress",
+          "lineNumber": 50
+        },
+        {
+          "caller": "withTownName",
+          "callee": "new PostalAddress",
+          "lineNumber": 54
+        },
+        {
+          "caller": "isValidForPayment",
+          "callee": "country.isBlank",
+          "lineNumber": 58
+        },
+        {
+          "caller": "isValidForPayment",
+          "callee": "city.isBlank",
+          "lineNumber": 59
+        },
+        {
+          "caller": "isValidForPayment",
+          "callee": "streetName.isBlank",
+          "lineNumber": 60
+        },
+        {
+          "caller": "isValidForPayment",
+          "callee": "buildingNumber.isBlank",
+          "lineNumber": 60
+        },
+        {
+          "caller": "toUnstructured",
+          "callee": "new StringBuilder",
+          "lineNumber": 64
+        },
+        {
+          "caller": "toUnstructured",
+          "callee": "sb.append(country).append",
+          "lineNumber": 65
+        },
+        {
+          "caller": "toUnstructured",
+          "callee": "sb.append",
+          "lineNumber": 65
+        },
+        {
+          "caller": "toUnstructured",
+          "callee": "sb.append(province).append",
+          "lineNumber": 66
+        },
+        {
+          "caller": "toUnstructured",
+          "callee": "sb.append",
+          "lineNumber": 66
+        },
+        {
+          "caller": "toUnstructured",
+          "callee": "sb.append(city).append",
+          "lineNumber": 67
+        },
+        {
+          "caller": "toUnstructured",
+          "callee": "sb.append",
+          "lineNumber": 67
+        },
+        {
+          "caller": "toUnstructured",
+          "callee": "sb.append",
+          "lineNumber": 68
+        },
+        {
+          "caller": "toUnstructured",
+          "callee": "sb.append(\" \").append",
+          "lineNumber": 69
+        },
+        {
+          "caller": "toUnstructured",
+          "callee": "sb.append",
+          "lineNumber": 69
+        },
+        {
+          "caller": "toUnstructured",
+          "callee": "sb.append(\", \").append",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toUnstructured",
+          "callee": "sb.append",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toUnstructured",
+          "callee": "sb.append(\", \").append",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toUnstructured",
+          "callee": "sb.append",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toUnstructured",
+          "callee": "sb.toString().trim",
+          "lineNumber": 72
+        },
+        {
+          "caller": "toUnstructured",
+          "callee": "sb.toString",
+          "lineNumber": 72
+        },
+        {
+          "caller": "parse",
+          "callee": "unstructured.isBlank",
+          "lineNumber": 76
+        },
+        {
+          "caller": "parse",
+          "callee": "unstructured.split",
+          "lineNumber": 77
+        },
+        {
+          "caller": "parse",
+          "callee": "parts[0].trim",
+          "lineNumber": 78
+        },
+        {
+          "caller": "parse",
+          "callee": "parts[1].trim",
+          "lineNumber": 79
+        },
+        {
+          "caller": "parse",
+          "callee": "parts[2].trim",
+          "lineNumber": 80
+        },
+        {
+          "caller": "parse",
+          "callee": "new PostalAddress",
+          "lineNumber": 81
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 88
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 88
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 89
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 89
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 94
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 11,
+        "functionCount": 11,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/model/valueobject/SwiftCode.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 46,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "SwiftCode",
+          "startLine": 15,
+          "endLine": 24,
+          "params": [
+            "code"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 26,
+          "endLine": 28,
+          "params": [
+            "code"
+          ]
+        },
+        {
+          "name": "equals",
+          "startLine": 30,
+          "endLine": 35,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 37,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "toString",
+          "startLine": 42,
+          "endLine": 45,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SwiftCode",
+          "startLine": 10,
+          "endLine": 46,
+          "methods": [
+            "SwiftCode",
+            "of",
+            "equals",
+            "hashCode",
+            "toString"
+          ],
+          "properties": [
+            "code"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "toString",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "SwiftCode",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SwiftCode",
+          "callee": "code.isBlank",
+          "lineNumber": 16
+        },
+        {
+          "caller": "SwiftCode",
+          "callee": "new BusinessException",
+          "lineNumber": 17
+        },
+        {
+          "caller": "SwiftCode",
+          "callee": "code.trim().toUpperCase",
+          "lineNumber": 19
+        },
+        {
+          "caller": "SwiftCode",
+          "callee": "code.trim",
+          "lineNumber": 19
+        },
+        {
+          "caller": "SwiftCode",
+          "callee": "trimmed.length",
+          "lineNumber": 20
+        },
+        {
+          "caller": "SwiftCode",
+          "callee": "trimmed.length",
+          "lineNumber": 20
+        },
+        {
+          "caller": "SwiftCode",
+          "callee": "new BusinessException",
+          "lineNumber": 21
+        },
+        {
+          "caller": "of",
+          "callee": "new SwiftCode",
+          "lineNumber": 27
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 34
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/repository/PaymentRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "PaymentRepository",
+          "startLine": 10,
+          "endLine": 21,
+          "methods": [
+            "save",
+            "findById",
+            "findByPaymentNo",
+            "findByCustomerId",
+            "pageQuery"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "PaymentRepository",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/domain/service/PaymentDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 118,
+      "nonEmptyLines": 96,
+      "functions": [
+        {
+          "name": "createPayment",
+          "startLine": 28,
+          "endLine": 37,
+          "params": [
+            "payment"
+          ]
+        },
+        {
+          "name": "submitPayment",
+          "startLine": 39,
+          "endLine": 48,
+          "params": [
+            "payment"
+          ]
+        },
+        {
+          "name": "approvePayment",
+          "startLine": 50,
+          "endLine": 55,
+          "params": [
+            "payment"
+          ]
+        },
+        {
+          "name": "processAmlResult",
+          "startLine": 57,
+          "endLine": 67,
+          "params": [
+            "payment",
+            "passed",
+            "reason"
+          ]
+        },
+        {
+          "name": "sendPayment",
+          "startLine": 69,
+          "endLine": 83,
+          "params": [
+            "payment",
+            "swiftRef",
+            "cipsRef"
+          ]
+        },
+        {
+          "name": "cancelPayment",
+          "startLine": 85,
+          "endLine": 90,
+          "params": [
+            "payment",
+            "reason"
+          ]
+        },
+        {
+          "name": "calculateFees",
+          "startLine": 92,
+          "endLine": 98,
+          "params": [
+            "amount",
+            "chargeBearer"
+          ]
+        },
+        {
+          "name": "calculateSettlementAmount",
+          "startLine": 100,
+          "endLine": 108,
+          "params": [
+            "payAmount",
+            "exchangeRate"
+          ]
+        },
+        {
+          "name": "getFeeRate",
+          "startLine": 110,
+          "endLine": 117,
+          "params": [
+            "chargeBearer"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PaymentDomainService",
+          "startLine": 19,
+          "endLine": 118,
+          "methods": [
+            "createPayment",
+            "submitPayment",
+            "approvePayment",
+            "processAmlResult",
+            "sendPayment",
+            "cancelPayment",
+            "calculateFees",
+            "calculateSettlementAmount",
+            "getFeeRate"
+          ],
+          "properties": [
+            "paymentRepository",
+            "eventPublisher"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createPayment",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "submitPayment",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "approvePayment",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "processAmlResult",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "sendPayment",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "cancelPayment",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "calculateFees",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "calculateSettlementAmount",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "PaymentDomainService",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createPayment",
+          "callee": "PaymentNo.generate(payment.getPaymentDirection()).getValue",
+          "lineNumber": 29
+        },
+        {
+          "caller": "createPayment",
+          "callee": "PaymentNo.generate",
+          "lineNumber": 29
+        },
+        {
+          "caller": "createPayment",
+          "callee": "payment.getPaymentDirection",
+          "lineNumber": 29
+        },
+        {
+          "caller": "createPayment",
+          "callee": "payment.setPaymentNo",
+          "lineNumber": 30
+        },
+        {
+          "caller": "createPayment",
+          "callee": "paymentRepository.save",
+          "lineNumber": 32
+        },
+        {
+          "caller": "createPayment",
+          "callee": "log.info",
+          "lineNumber": 34
+        },
+        {
+          "caller": "createPayment",
+          "callee": "saved.getPaymentNo",
+          "lineNumber": 35
+        },
+        {
+          "caller": "createPayment",
+          "callee": "saved.getPayAmount",
+          "lineNumber": 35
+        },
+        {
+          "caller": "createPayment",
+          "callee": "saved.getPayCurrency",
+          "lineNumber": 35
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "payment.submit",
+          "lineNumber": 40
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "paymentRepository.save",
+          "lineNumber": 41
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 43
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "new PaymentSubmittedEvent",
+          "lineNumber": 43
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "payment.getId",
+          "lineNumber": 44
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "payment.getPaymentNo",
+          "lineNumber": 44
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "payment.getPayAmount",
+          "lineNumber": 45
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "payment.getPayCurrency",
+          "lineNumber": 45
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "log.info",
+          "lineNumber": 47
+        },
+        {
+          "caller": "submitPayment",
+          "callee": "payment.getPaymentNo",
+          "lineNumber": 47
+        },
+        {
+          "caller": "approvePayment",
+          "callee": "payment.approve",
+          "lineNumber": 51
+        },
+        {
+          "caller": "approvePayment",
+          "callee": "paymentRepository.save",
+          "lineNumber": 52
+        },
+        {
+          "caller": "approvePayment",
+          "callee": "log.info",
+          "lineNumber": 54
+        },
+        {
+          "caller": "approvePayment",
+          "callee": "payment.getPaymentNo",
+          "lineNumber": 54
+        },
+        {
+          "caller": "processAmlResult",
+          "callee": "payment.markAmlCheckPassed",
+          "lineNumber": 59
+        },
+        {
+          "caller": "processAmlResult",
+          "callee": "payment.markAmlCheckRejected",
+          "lineNumber": 61
+        },
+        {
+          "caller": "processAmlResult",
+          "callee": "paymentRepository.save",
+          "lineNumber": 63
+        },
+        {
+          "caller": "processAmlResult",
+          "callee": "log.info",
+          "lineNumber": 65
+        },
+        {
+          "caller": "processAmlResult",
+          "callee": "payment.getPaymentNo",
+          "lineNumber": 66
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "payment.send",
+          "lineNumber": 70
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "swiftRef.isBlank",
+          "lineNumber": 71
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "payment.updateSwiftRef",
+          "lineNumber": 72
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "cipsRef.isBlank",
+          "lineNumber": 74
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "payment.setCipsRef",
+          "lineNumber": 75
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "paymentRepository.save",
+          "lineNumber": 77
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 79
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "new PaymentSentEvent",
+          "lineNumber": 79
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "payment.getId",
+          "lineNumber": 80
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "payment.getPaymentNo",
+          "lineNumber": 80
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "payment.getSwiftRef",
+          "lineNumber": 80
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "log.info",
+          "lineNumber": 82
+        },
+        {
+          "caller": "sendPayment",
+          "callee": "payment.getPaymentNo",
+          "lineNumber": 82
+        },
+        {
+          "caller": "cancelPayment",
+          "callee": "payment.cancel",
+          "lineNumber": 86
+        },
+        {
+          "caller": "cancelPayment",
+          "callee": "paymentRepository.save",
+          "lineNumber": 87
+        },
+        {
+          "caller": "cancelPayment",
+          "callee": "log.info",
+          "lineNumber": 89
+        },
+        {
+          "caller": "cancelPayment",
+          "callee": "payment.getPaymentNo",
+          "lineNumber": 89
+        },
+        {
+          "caller": "calculateFees",
+          "callee": "amount.compareTo",
+          "lineNumber": 93
+        },
+        {
+          "caller": "calculateFees",
+          "callee": "new BusinessException",
+          "lineNumber": 94
+        },
+        {
+          "caller": "calculateFees",
+          "callee": "getFeeRate",
+          "lineNumber": 96
+        },
+        {
+          "caller": "calculateFees",
+          "callee": "amount.multiply(feeRate).setScale",
+          "lineNumber": 97
+        },
+        {
+          "caller": "calculateFees",
+          "callee": "amount.multiply",
+          "lineNumber": 97
+        },
+        {
+          "caller": "calculateSettlementAmount",
+          "callee": "payAmount.compareTo",
+          "lineNumber": 101
+        },
+        {
+          "caller": "calculateSettlementAmount",
+          "callee": "new BusinessException",
+          "lineNumber": 102
+        },
+        {
+          "caller": "calculateSettlementAmount",
+          "callee": "exchangeRate.compareTo",
+          "lineNumber": 104
+        },
+        {
+          "caller": "calculateSettlementAmount",
+          "callee": "new BusinessException",
+          "lineNumber": 105
+        },
+        {
+          "caller": "calculateSettlementAmount",
+          "callee": "payAmount.multiply(exchangeRate).setScale",
+          "lineNumber": 107
+        },
+        {
+          "caller": "calculateSettlementAmount",
+          "callee": "payAmount.multiply",
+          "lineNumber": 107
+        },
+        {
+          "caller": "getFeeRate",
+          "callee": "\"OUR\".equalsIgnoreCase",
+          "lineNumber": 111
+        },
+        {
+          "caller": "getFeeRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 112
+        },
+        {
+          "caller": "getFeeRate",
+          "callee": "\"SHA\".equalsIgnoreCase",
+          "lineNumber": 113
+        },
+        {
+          "caller": "getFeeRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 114
+        },
+        {
+          "caller": "getFeeRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 116
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 9,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-payment/src/main/java/com/forex/payment/infrastructure/event/PaymentEventListener.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 40,
+      "nonEmptyLines": 34,
+      "functions": [
+        {
+          "name": "onPaymentSubmitted",
+          "startLine": 25,
+          "endLine": 29,
+          "params": [
+            "event"
+          ]
+        },
+        {
+          "name": "onPaymentSent",
+          "startLine": 35,
+          "endLine": 39,
+          "params": [
+            "event"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PaymentEventListener",
+          "startLine": 17,
+          "endLine": 40,
+          "methods": [
+            "onPaymentSubmitted",
+            "onPaymentSent"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "onPaymentSubmitted",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "onPaymentSent",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "PaymentEventListener",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "onPaymentSubmitted",
+          "callee": "log.info",
+          "lineNumber": 27
+        },
+        {
+          "caller": "onPaymentSubmitted",
+          "callee": "event.getPaymentId",
+          "lineNumber": 28
+        },
+        {
+          "caller": "onPaymentSubmitted",
+          "callee": "event.getPaymentNo",
+          "lineNumber": 28
+        },
+        {
+          "caller": "onPaymentSubmitted",
+          "callee": "event.getAmount",
+          "lineNumber": 28
+        },
+        {
+          "caller": "onPaymentSubmitted",
+          "callee": "event.getCurrency",
+          "lineNumber": 28
+        },
+        {
+          "caller": "onPaymentSent",
+          "callee": "log.info",
+          "lineNumber": 37
+        },
+        {
+          "caller": "onPaymentSent",
+          "callee": "event.getPaymentId",
+          "lineNumber": 38
+        },
+        {
+          "caller": "onPaymentSent",
+          "callee": "event.getPaymentNo",
+          "lineNumber": 38
+        },
+        {
+          "caller": "onPaymentSent",
+          "callee": "event.getSwiftRef",
+          "lineNumber": 38
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-payment/src/test/java/com/forex/payment/domain/service/PaymentDomainServiceTest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 157,
+      "nonEmptyLines": 137,
+      "functions": [
+        {
+          "name": "setUp",
+          "startLine": 36,
+          "endLine": 39,
+          "params": []
+        },
+        {
+          "name": "createPayment",
+          "startLine": 41,
+          "endLine": 51,
+          "params": []
+        },
+        {
+          "name": "testCreatePayment",
+          "startLine": 53,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "testSubmitPayment",
+          "startLine": 63,
+          "endLine": 72,
+          "params": []
+        },
+        {
+          "name": "testSendPayment",
+          "startLine": 74,
+          "endLine": 86,
+          "params": []
+        },
+        {
+          "name": "testApprovePayment",
+          "startLine": 88,
+          "endLine": 96,
+          "params": []
+        },
+        {
+          "name": "testProcessAmlResult_Passed",
+          "startLine": 98,
+          "endLine": 107,
+          "params": []
+        },
+        {
+          "name": "testProcessAmlResult_Rejected",
+          "startLine": 109,
+          "endLine": 118,
+          "params": []
+        },
+        {
+          "name": "testCancelPayment",
+          "startLine": 120,
+          "endLine": 127,
+          "params": []
+        },
+        {
+          "name": "testCalculateFees_OUR",
+          "startLine": 129,
+          "endLine": 134,
+          "params": []
+        },
+        {
+          "name": "testCalculateFees_SHA",
+          "startLine": 136,
+          "endLine": 141,
+          "params": []
+        },
+        {
+          "name": "testCalculateSettlementAmount",
+          "startLine": 143,
+          "endLine": 149,
+          "params": []
+        },
+        {
+          "name": "testCalculateSettlementAmount_ZeroAmount",
+          "startLine": 151,
+          "endLine": 156,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PaymentDomainServiceTest",
+          "startLine": 26,
+          "endLine": 157,
+          "methods": [
+            "setUp",
+            "createPayment",
+            "testCreatePayment",
+            "testSubmitPayment",
+            "testSendPayment",
+            "testApprovePayment",
+            "testProcessAmlResult_Passed",
+            "testProcessAmlResult_Rejected",
+            "testCancelPayment",
+            "testCalculateFees_OUR",
+            "testCalculateFees_SHA",
+            "testCalculateSettlementAmount",
+            "testCalculateSettlementAmount_ZeroAmount"
+          ],
+          "properties": [
+            "paymentRepository",
+            "eventPublisher",
+            "submittedCaptor",
+            "sentCaptor",
+            "paymentDomainService"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "setUp",
+          "callee": "new PaymentDomainService",
+          "lineNumber": 38
+        },
+        {
+          "caller": "createPayment",
+          "callee": "CrossBorderPayment.create",
+          "lineNumber": 42
+        },
+        {
+          "caller": "createPayment",
+          "callee": "new BigDecimal",
+          "lineNumber": 44
+        },
+        {
+          "caller": "createPayment",
+          "callee": "LocalDate.now",
+          "lineNumber": 49
+        },
+        {
+          "caller": "testCreatePayment",
+          "callee": "createPayment",
+          "lineNumber": 56
+        },
+        {
+          "caller": "testCreatePayment",
+          "callee": "when(paymentRepository.save(any())).thenAnswer",
+          "lineNumber": 57
+        },
+        {
+          "caller": "testCreatePayment",
+          "callee": "when",
+          "lineNumber": 57
+        },
+        {
+          "caller": "testCreatePayment",
+          "callee": "paymentRepository.save",
+          "lineNumber": 57
+        },
+        {
+          "caller": "testCreatePayment",
+          "callee": "any",
+          "lineNumber": 57
+        },
+        {
+          "caller": "testCreatePayment",
+          "callee": "i.getArgument",
+          "lineNumber": 57
+        },
+        {
+          "caller": "testCreatePayment",
+          "callee": "paymentDomainService.createPayment",
+          "lineNumber": 58
+        },
+        {
+          "caller": "testCreatePayment",
+          "callee": "assertNotNull",
+          "lineNumber": 59
+        },
+        {
+          "caller": "testCreatePayment",
+          "callee": "result.getPaymentNo",
+          "lineNumber": 59
+        },
+        {
+          "caller": "testCreatePayment",
+          "callee": "verify(paymentRepository).save",
+          "lineNumber": 60
+        },
+        {
+          "caller": "testCreatePayment",
+          "callee": "verify",
+          "lineNumber": 60
+        },
+        {
+          "caller": "testCreatePayment",
+          "callee": "any",
+          "lineNumber": 60
+        },
+        {
+          "caller": "testSubmitPayment",
+          "callee": "createPayment",
+          "lineNumber": 66
+        },
+        {
+          "caller": "testSubmitPayment",
+          "callee": "when(paymentRepository.save(any())).thenReturn",
+          "lineNumber": 67
+        },
+        {
+          "caller": "testSubmitPayment",
+          "callee": "when",
+          "lineNumber": 67
+        },
+        {
+          "caller": "testSubmitPayment",
+          "callee": "paymentRepository.save",
+          "lineNumber": 67
+        },
+        {
+          "caller": "testSubmitPayment",
+          "callee": "any",
+          "lineNumber": 67
+        },
+        {
+          "caller": "testSubmitPayment",
+          "callee": "paymentDomainService.submitPayment",
+          "lineNumber": 68
+        },
+        {
+          "caller": "testSubmitPayment",
+          "callee": "assertEquals",
+          "lineNumber": 69
+        },
+        {
+          "caller": "testSubmitPayment",
+          "callee": "payment.getPaymentStatus",
+          "lineNumber": 69
+        },
+        {
+          "caller": "testSubmitPayment",
+          "callee": "verify(eventPublisher).publishEvent",
+          "lineNumber": 70
+        },
+        {
+          "caller": "testSubmitPayment",
+          "callee": "verify",
+          "lineNumber": 70
+        },
+        {
+          "caller": "testSubmitPayment",
+          "callee": "submittedCaptor.capture",
+          "lineNumber": 70
+        },
+        {
+          "caller": "testSubmitPayment",
+          "callee": "assertEquals",
+          "lineNumber": 71
+        },
+        {
+          "caller": "testSubmitPayment",
+          "callee": "payment.getPayAmount",
+          "lineNumber": 71
+        },
+        {
+          "caller": "testSubmitPayment",
+          "callee": "submittedCaptor.getValue().getAmount",
+          "lineNumber": 71
+        },
+        {
+          "caller": "testSubmitPayment",
+          "callee": "submittedCaptor.getValue",
+          "lineNumber": 71
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "createPayment",
+          "lineNumber": 77
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "payment.submit",
+          "lineNumber": 78
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "payment.approve",
+          "lineNumber": 79
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "payment.markAmlCheckPassed",
+          "lineNumber": 80
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "when(paymentRepository.save(any())).thenReturn",
+          "lineNumber": 81
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "when",
+          "lineNumber": 81
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "paymentRepository.save",
+          "lineNumber": 81
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "any",
+          "lineNumber": 81
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "paymentDomainService.sendPayment",
+          "lineNumber": 82
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "assertEquals",
+          "lineNumber": 83
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "payment.getPaymentStatus",
+          "lineNumber": 83
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "verify(eventPublisher).publishEvent",
+          "lineNumber": 84
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "verify",
+          "lineNumber": 84
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "sentCaptor.capture",
+          "lineNumber": 84
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "assertEquals",
+          "lineNumber": 85
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "sentCaptor.getValue().getSwiftRef",
+          "lineNumber": 85
+        },
+        {
+          "caller": "testSendPayment",
+          "callee": "sentCaptor.getValue",
+          "lineNumber": 85
+        },
+        {
+          "caller": "testApprovePayment",
+          "callee": "createPayment",
+          "lineNumber": 91
+        },
+        {
+          "caller": "testApprovePayment",
+          "callee": "payment.submit",
+          "lineNumber": 92
+        },
+        {
+          "caller": "testApprovePayment",
+          "callee": "when(paymentRepository.save(any())).thenReturn",
+          "lineNumber": 93
+        },
+        {
+          "caller": "testApprovePayment",
+          "callee": "when",
+          "lineNumber": 93
+        },
+        {
+          "caller": "testApprovePayment",
+          "callee": "paymentRepository.save",
+          "lineNumber": 93
+        },
+        {
+          "caller": "testApprovePayment",
+          "callee": "any",
+          "lineNumber": 93
+        },
+        {
+          "caller": "testApprovePayment",
+          "callee": "paymentDomainService.approvePayment",
+          "lineNumber": 94
+        },
+        {
+          "caller": "testApprovePayment",
+          "callee": "assertEquals",
+          "lineNumber": 95
+        },
+        {
+          "caller": "testApprovePayment",
+          "callee": "payment.getPaymentStatus",
+          "lineNumber": 95
+        },
+        {
+          "caller": "testProcessAmlResult_Passed",
+          "callee": "createPayment",
+          "lineNumber": 101
+        },
+        {
+          "caller": "testProcessAmlResult_Passed",
+          "callee": "payment.submit",
+          "lineNumber": 102
+        },
+        {
+          "caller": "testProcessAmlResult_Passed",
+          "callee": "payment.approve",
+          "lineNumber": 103
+        },
+        {
+          "caller": "testProcessAmlResult_Passed",
+          "callee": "when(paymentRepository.save(any())).thenReturn",
+          "lineNumber": 104
+        },
+        {
+          "caller": "testProcessAmlResult_Passed",
+          "callee": "when",
+          "lineNumber": 104
+        },
+        {
+          "caller": "testProcessAmlResult_Passed",
+          "callee": "paymentRepository.save",
+          "lineNumber": 104
+        },
+        {
+          "caller": "testProcessAmlResult_Passed",
+          "callee": "any",
+          "lineNumber": 104
+        },
+        {
+          "caller": "testProcessAmlResult_Passed",
+          "callee": "paymentDomainService.processAmlResult",
+          "lineNumber": 105
+        },
+        {
+          "caller": "testProcessAmlResult_Passed",
+          "callee": "assertEquals",
+          "lineNumber": 106
+        },
+        {
+          "caller": "testProcessAmlResult_Passed",
+          "callee": "payment.getPaymentStatus",
+          "lineNumber": 106
+        },
+        {
+          "caller": "testProcessAmlResult_Rejected",
+          "callee": "createPayment",
+          "lineNumber": 112
+        },
+        {
+          "caller": "testProcessAmlResult_Rejected",
+          "callee": "payment.submit",
+          "lineNumber": 113
+        },
+        {
+          "caller": "testProcessAmlResult_Rejected",
+          "callee": "payment.approve",
+          "lineNumber": 114
+        },
+        {
+          "caller": "testProcessAmlResult_Rejected",
+          "callee": "when(paymentRepository.save(any())).thenReturn",
+          "lineNumber": 115
+        },
+        {
+          "caller": "testProcessAmlResult_Rejected",
+          "callee": "when",
+          "lineNumber": 115
+        },
+        {
+          "caller": "testProcessAmlResult_Rejected",
+          "callee": "paymentRepository.save",
+          "lineNumber": 115
+        },
+        {
+          "caller": "testProcessAmlResult_Rejected",
+          "callee": "any",
+          "lineNumber": 115
+        },
+        {
+          "caller": "testProcessAmlResult_Rejected",
+          "callee": "paymentDomainService.processAmlResult",
+          "lineNumber": 116
+        },
+        {
+          "caller": "testProcessAmlResult_Rejected",
+          "callee": "assertEquals",
+          "lineNumber": 117
+        },
+        {
+          "caller": "testProcessAmlResult_Rejected",
+          "callee": "payment.getPaymentStatus",
+          "lineNumber": 117
+        },
+        {
+          "caller": "testCancelPayment",
+          "callee": "createPayment",
+          "lineNumber": 123
+        },
+        {
+          "caller": "testCancelPayment",
+          "callee": "when(paymentRepository.save(any())).thenReturn",
+          "lineNumber": 124
+        },
+        {
+          "caller": "testCancelPayment",
+          "callee": "when",
+          "lineNumber": 124
+        },
+        {
+          "caller": "testCancelPayment",
+          "callee": "paymentRepository.save",
+          "lineNumber": 124
+        },
+        {
+          "caller": "testCancelPayment",
+          "callee": "any",
+          "lineNumber": 124
+        },
+        {
+          "caller": "testCancelPayment",
+          "callee": "paymentDomainService.cancelPayment",
+          "lineNumber": 125
+        },
+        {
+          "caller": "testCancelPayment",
+          "callee": "assertEquals",
+          "lineNumber": 126
+        },
+        {
+          "caller": "testCancelPayment",
+          "callee": "payment.getPaymentStatus",
+          "lineNumber": 126
+        },
+        {
+          "caller": "testCalculateFees_OUR",
+          "callee": "paymentDomainService.calculateFees",
+          "lineNumber": 132
+        },
+        {
+          "caller": "testCalculateFees_OUR",
+          "callee": "new BigDecimal",
+          "lineNumber": 132
+        },
+        {
+          "caller": "testCalculateFees_OUR",
+          "callee": "assertEquals",
+          "lineNumber": 133
+        },
+        {
+          "caller": "testCalculateFees_OUR",
+          "callee": "fee.compareTo",
+          "lineNumber": 133
+        },
+        {
+          "caller": "testCalculateFees_OUR",
+          "callee": "new BigDecimal",
+          "lineNumber": 133
+        },
+        {
+          "caller": "testCalculateFees_SHA",
+          "callee": "paymentDomainService.calculateFees",
+          "lineNumber": 139
+        },
+        {
+          "caller": "testCalculateFees_SHA",
+          "callee": "new BigDecimal",
+          "lineNumber": 139
+        },
+        {
+          "caller": "testCalculateFees_SHA",
+          "callee": "assertEquals",
+          "lineNumber": 140
+        },
+        {
+          "caller": "testCalculateFees_SHA",
+          "callee": "fee.compareTo",
+          "lineNumber": 140
+        },
+        {
+          "caller": "testCalculateFees_SHA",
+          "callee": "new BigDecimal",
+          "lineNumber": 140
+        },
+        {
+          "caller": "testCalculateSettlementAmount",
+          "callee": "paymentDomainService.calculateSettlementAmount",
+          "lineNumber": 146
+        },
+        {
+          "caller": "testCalculateSettlementAmount",
+          "callee": "new BigDecimal",
+          "lineNumber": 147
+        },
+        {
+          "caller": "testCalculateSettlementAmount",
+          "callee": "new BigDecimal",
+          "lineNumber": 147
+        },
+        {
+          "caller": "testCalculateSettlementAmount",
+          "callee": "assertEquals",
+          "lineNumber": 148
+        },
+        {
+          "caller": "testCalculateSettlementAmount",
+          "callee": "result.compareTo",
+          "lineNumber": 148
+        },
+        {
+          "caller": "testCalculateSettlementAmount",
+          "callee": "new BigDecimal",
+          "lineNumber": 148
+        },
+        {
+          "caller": "testCalculateSettlementAmount_ZeroAmount",
+          "callee": "assertThrows",
+          "lineNumber": 154
+        },
+        {
+          "caller": "testCalculateSettlementAmount_ZeroAmount",
+          "callee": "paymentDomainService.calculateSettlementAmount",
+          "lineNumber": 155
+        },
+        {
+          "caller": "testCalculateSettlementAmount_ZeroAmount",
+          "callee": "new BigDecimal",
+          "lineNumber": 155
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 0,
+        "functionCount": 13,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-position/src/main/java/com/forex/position/domain/model/valueobject/PositionAmount.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 60,
+      "nonEmptyLines": 48,
+      "functions": [
+        {
+          "name": "PositionAmount",
+          "startLine": 16,
+          "endLine": 21,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "of",
+          "startLine": 23,
+          "endLine": 25,
+          "params": [
+            "amount"
+          ]
+        },
+        {
+          "name": "zero",
+          "startLine": 27,
+          "endLine": 29,
+          "params": []
+        },
+        {
+          "name": "add",
+          "startLine": 31,
+          "endLine": 36,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "subtract",
+          "startLine": 38,
+          "endLine": 43,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "isPositive",
+          "startLine": 45,
+          "endLine": 47,
+          "params": []
+        },
+        {
+          "name": "equals",
+          "startLine": 49,
+          "endLine": 54,
+          "params": [
+            "o"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "startLine": 56,
+          "endLine": 59,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PositionAmount",
+          "startLine": 11,
+          "endLine": 60,
+          "methods": [
+            "PositionAmount",
+            "of",
+            "zero",
+            "add",
+            "subtract",
+            "isPositive",
+            "equals",
+            "hashCode"
+          ],
+          "properties": [
+            "amount"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "of",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "zero",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "add",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "subtract",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "isPositive",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "equals",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "hashCode",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "PositionAmount",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PositionAmount",
+          "callee": "new BusinessException",
+          "lineNumber": 18
+        },
+        {
+          "caller": "of",
+          "callee": "new PositionAmount",
+          "lineNumber": 24
+        },
+        {
+          "caller": "zero",
+          "callee": "new PositionAmount",
+          "lineNumber": 28
+        },
+        {
+          "caller": "add",
+          "callee": "new BusinessException",
+          "lineNumber": 33
+        },
+        {
+          "caller": "add",
+          "callee": "new PositionAmount",
+          "lineNumber": 35
+        },
+        {
+          "caller": "add",
+          "callee": "this.amount.add",
+          "lineNumber": 35
+        },
+        {
+          "caller": "subtract",
+          "callee": "new BusinessException",
+          "lineNumber": 40
+        },
+        {
+          "caller": "subtract",
+          "callee": "new PositionAmount",
+          "lineNumber": 42
+        },
+        {
+          "caller": "subtract",
+          "callee": "this.amount.subtract",
+          "lineNumber": 42
+        },
+        {
+          "caller": "isPositive",
+          "callee": "amount.compareTo",
+          "lineNumber": 46
+        },
+        {
+          "caller": "equals",
+          "callee": "Objects.equals",
+          "lineNumber": 53
+        },
+        {
+          "caller": "hashCode",
+          "callee": "Objects.hash",
+          "lineNumber": 58
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-precious-metal/src/main/java/com/forex/preciousmetal/domain/model/aggregate/MetalPosition.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 119,
+      "nonEmptyLines": 105,
+      "functions": [
+        {
+          "name": "MetalPosition",
+          "startLine": 31,
+          "endLine": 33,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 35,
+          "endLine": 54,
+          "params": [
+            "customerId",
+            "metalType",
+            "weight",
+            "weightUnit",
+            "cost",
+            "currency",
+            "storageLocation"
+          ]
+        },
+        {
+          "name": "addWeight",
+          "startLine": 56,
+          "endLine": 64,
+          "params": [
+            "weight",
+            "cost"
+          ]
+        },
+        {
+          "name": "lock",
+          "startLine": 66,
+          "endLine": 73,
+          "params": [
+            "weight"
+          ]
+        },
+        {
+          "name": "unlock",
+          "startLine": 75,
+          "endLine": 82,
+          "params": [
+            "weight"
+          ]
+        },
+        {
+          "name": "deliver",
+          "startLine": 84,
+          "endLine": 92,
+          "params": [
+            "weight"
+          ]
+        },
+        {
+          "name": "markToMarket",
+          "startLine": 94,
+          "endLine": 99,
+          "params": [
+            "newPrice"
+          ]
+        },
+        {
+          "name": "recalculatePnl",
+          "startLine": 101,
+          "endLine": 104,
+          "params": []
+        },
+        {
+          "name": "assignPositionNo",
+          "startLine": 106,
+          "endLine": 108,
+          "params": [
+            "positionNo"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 110,
+          "endLine": 118,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MetalPosition",
+          "startLine": 12,
+          "endLine": 119,
+          "methods": [
+            "MetalPosition",
+            "create",
+            "addWeight",
+            "lock",
+            "unlock",
+            "deliver",
+            "markToMarket",
+            "recalculatePnl",
+            "assignPositionNo",
+            "validate"
+          ],
+          "properties": [
+            "id",
+            "positionNo",
+            "customerId",
+            "metalType",
+            "totalWeight",
+            "availableWeight",
+            "lockedWeight",
+            "weightUnit",
+            "averageCost",
+            "currency",
+            "marketPrice",
+            "unrealizedPnl",
+            "storageLocation",
+            "lastValuationDate",
+            "updateTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "addWeight",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "lock",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "unlock",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "deliver",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "markToMarket",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "assignPositionNo",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "MetalPosition",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new MetalPosition",
+          "lineNumber": 38
+        },
+        {
+          "caller": "create",
+          "callee": "LocalDate.now",
+          "lineNumber": 50
+        },
+        {
+          "caller": "create",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 51
+        },
+        {
+          "caller": "create",
+          "callee": "position.validate",
+          "lineNumber": 52
+        },
+        {
+          "caller": "addWeight",
+          "callee": "this.totalWeight.multiply(this.averageCost).add",
+          "lineNumber": 57
+        },
+        {
+          "caller": "addWeight",
+          "callee": "this.totalWeight.multiply",
+          "lineNumber": 57
+        },
+        {
+          "caller": "addWeight",
+          "callee": "weight.multiply",
+          "lineNumber": 58
+        },
+        {
+          "caller": "addWeight",
+          "callee": "this.totalWeight.add",
+          "lineNumber": 59
+        },
+        {
+          "caller": "addWeight",
+          "callee": "totalCost.divide",
+          "lineNumber": 60
+        },
+        {
+          "caller": "addWeight",
+          "callee": "this.availableWeight.add",
+          "lineNumber": 61
+        },
+        {
+          "caller": "addWeight",
+          "callee": "recalculatePnl",
+          "lineNumber": 62
+        },
+        {
+          "caller": "addWeight",
+          "callee": "markUpdated",
+          "lineNumber": 63
+        },
+        {
+          "caller": "lock",
+          "callee": "this.availableWeight.compareTo",
+          "lineNumber": 67
+        },
+        {
+          "caller": "lock",
+          "callee": "new BusinessException",
+          "lineNumber": 68
+        },
+        {
+          "caller": "lock",
+          "callee": "this.availableWeight.subtract",
+          "lineNumber": 70
+        },
+        {
+          "caller": "lock",
+          "callee": "this.lockedWeight.add",
+          "lineNumber": 71
+        },
+        {
+          "caller": "lock",
+          "callee": "markUpdated",
+          "lineNumber": 72
+        },
+        {
+          "caller": "unlock",
+          "callee": "this.lockedWeight.compareTo",
+          "lineNumber": 76
+        },
+        {
+          "caller": "unlock",
+          "callee": "new BusinessException",
+          "lineNumber": 77
+        },
+        {
+          "caller": "unlock",
+          "callee": "this.lockedWeight.subtract",
+          "lineNumber": 79
+        },
+        {
+          "caller": "unlock",
+          "callee": "this.availableWeight.add",
+          "lineNumber": 80
+        },
+        {
+          "caller": "unlock",
+          "callee": "markUpdated",
+          "lineNumber": 81
+        },
+        {
+          "caller": "deliver",
+          "callee": "this.lockedWeight.compareTo",
+          "lineNumber": 85
+        },
+        {
+          "caller": "deliver",
+          "callee": "new BusinessException",
+          "lineNumber": 86
+        },
+        {
+          "caller": "deliver",
+          "callee": "this.lockedWeight.subtract",
+          "lineNumber": 88
+        },
+        {
+          "caller": "deliver",
+          "callee": "this.totalWeight.subtract",
+          "lineNumber": 89
+        },
+        {
+          "caller": "deliver",
+          "callee": "recalculatePnl",
+          "lineNumber": 90
+        },
+        {
+          "caller": "deliver",
+          "callee": "markUpdated",
+          "lineNumber": 91
+        },
+        {
+          "caller": "markToMarket",
+          "callee": "LocalDate.now",
+          "lineNumber": 96
+        },
+        {
+          "caller": "markToMarket",
+          "callee": "recalculatePnl",
+          "lineNumber": 97
+        },
+        {
+          "caller": "markToMarket",
+          "callee": "markUpdated",
+          "lineNumber": 98
+        },
+        {
+          "caller": "recalculatePnl",
+          "callee": "this.totalWeight.multiply",
+          "lineNumber": 102
+        },
+        {
+          "caller": "recalculatePnl",
+          "callee": "this.marketPrice.subtract",
+          "lineNumber": 103
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 113
+        },
+        {
+          "caller": "validate",
+          "callee": "metalType.isBlank",
+          "lineNumber": 115
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 116
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 8,
+        "functionCount": 10,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 107,
+      "nonEmptyLines": 89,
+      "functions": [
+        {
+          "name": "getRate",
+          "startLine": 41,
+          "endLine": 50,
+          "params": [
+            "currencyPair"
+          ]
+        },
+        {
+          "name": "getAllRates",
+          "startLine": 52,
+          "endLine": 55,
+          "params": []
+        },
+        {
+          "name": "calculateAmount",
+          "startLine": 57,
+          "endLine": 60,
+          "params": [
+            "currencyPair",
+            "amount"
+          ]
+        },
+        {
+          "name": "saveRate",
+          "startLine": 62,
+          "endLine": 69,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "convertCurrency",
+          "startLine": 71,
+          "endLine": 100,
+          "params": [
+            "fromCcy",
+            "toCcy",
+            "amount"
+          ]
+        },
+        {
+          "name": "publishToChannels",
+          "startLine": 102,
+          "endLine": 106,
+          "params": [
+            "rateId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RateAppService",
+          "startLine": 26,
+          "endLine": 107,
+          "methods": [
+            "getRate",
+            "getAllRates",
+            "calculateAmount",
+            "saveRate",
+            "convertCurrency",
+            "publishToChannels"
+          ],
+          "properties": [
+            "exchangeRateRepository",
+            "rateCalculationDomainService",
+            "ratePublishDomainService",
+            "eventPublisher",
+            "rateCache"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getRate",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "getAllRates",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "calculateAmount",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "saveRate",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "convertCurrency",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "publishToChannels",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "RateAppService",
+          "line": 26,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getRate",
+          "callee": "rateCache.getIfPresent",
+          "lineNumber": 42
+        },
+        {
+          "caller": "getRate",
+          "callee": "cached.isExpired",
+          "lineNumber": 43
+        },
+        {
+          "caller": "getRate",
+          "callee": "Duration.ofSeconds",
+          "lineNumber": 43
+        },
+        {
+          "caller": "getRate",
+          "callee": "exchangeRateRepository.findLatestByCurrencyPair(currencyPair).orElseThrow",
+          "lineNumber": 46
+        },
+        {
+          "caller": "getRate",
+          "callee": "exchangeRateRepository.findLatestByCurrencyPair",
+          "lineNumber": 46
+        },
+        {
+          "caller": "getRate",
+          "callee": "new BusinessException",
+          "lineNumber": 47
+        },
+        {
+          "caller": "getRate",
+          "callee": "rateCache.put",
+          "lineNumber": 48
+        },
+        {
+          "caller": "getAllRates",
+          "callee": "exchangeRateRepository.findLatestRates().stream().collect",
+          "lineNumber": 53
+        },
+        {
+          "caller": "getAllRates",
+          "callee": "exchangeRateRepository.findLatestRates().stream",
+          "lineNumber": 53
+        },
+        {
+          "caller": "getAllRates",
+          "callee": "exchangeRateRepository.findLatestRates",
+          "lineNumber": 53
+        },
+        {
+          "caller": "getAllRates",
+          "callee": "Collectors.toMap",
+          "lineNumber": 54
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "getRate",
+          "lineNumber": 58
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "rateCalculationDomainService.calculateAmount",
+          "lineNumber": 59
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "rate.getMidRate",
+          "lineNumber": 59
+        },
+        {
+          "caller": "saveRate",
+          "callee": "ExchangeRate.create",
+          "lineNumber": 63
+        },
+        {
+          "caller": "saveRate",
+          "callee": "cmd.getCurrencyPair",
+          "lineNumber": 63
+        },
+        {
+          "caller": "saveRate",
+          "callee": "cmd.getBaseCurrency",
+          "lineNumber": 63
+        },
+        {
+          "caller": "saveRate",
+          "callee": "cmd.getQuoteCurrency",
+          "lineNumber": 64
+        },
+        {
+          "caller": "saveRate",
+          "callee": "cmd.getBidRate",
+          "lineNumber": 64
+        },
+        {
+          "caller": "saveRate",
+          "callee": "cmd.getAskRate",
+          "lineNumber": 64
+        },
+        {
+          "caller": "saveRate",
+          "callee": "cmd.getRateSource",
+          "lineNumber": 64
+        },
+        {
+          "caller": "saveRate",
+          "callee": "exchangeRateRepository.save",
+          "lineNumber": 65
+        },
+        {
+          "caller": "saveRate",
+          "callee": "rateCache.invalidate",
+          "lineNumber": 66
+        },
+        {
+          "caller": "saveRate",
+          "callee": "saved.getCurrencyPair",
+          "lineNumber": 66
+        },
+        {
+          "caller": "saveRate",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 67
+        },
+        {
+          "caller": "saveRate",
+          "callee": "new RateUpdatedEvent",
+          "lineNumber": 67
+        },
+        {
+          "caller": "saveRate",
+          "callee": "saved.getCurrencyPair",
+          "lineNumber": 67
+        },
+        {
+          "caller": "saveRate",
+          "callee": "saved.getBidRate",
+          "lineNumber": 67
+        },
+        {
+          "caller": "saveRate",
+          "callee": "saved.getAskRate",
+          "lineNumber": 67
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "getRate",
+          "lineNumber": 77
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "rateCalculationDomainService.calculateAmount",
+          "lineNumber": 82
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "directRate.getMidRate",
+          "lineNumber": 82
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "getRate",
+          "lineNumber": 87
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "BigDecimal.ONE.divide",
+          "lineNumber": 92
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "reverseRate.getMidRate",
+          "lineNumber": 92
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "rateCalculationDomainService.calculateAmount",
+          "lineNumber": 93
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "getRate",
+          "lineNumber": 96
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "getRate",
+          "lineNumber": 97
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "rateCalculationDomainService.calculateCrossRate",
+          "lineNumber": 98
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "usdFrom.getMidRate",
+          "lineNumber": 98
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "usdTo.getMidRate",
+          "lineNumber": 98
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "rateCalculationDomainService.calculateAmount",
+          "lineNumber": 99
+        },
+        {
+          "caller": "publishToChannels",
+          "callee": "exchangeRateRepository.findById(rateId).orElseThrow",
+          "lineNumber": 103
+        },
+        {
+          "caller": "publishToChannels",
+          "callee": "exchangeRateRepository.findById",
+          "lineNumber": 103
+        },
+        {
+          "caller": "publishToChannels",
+          "callee": "new BusinessException",
+          "lineNumber": 104
+        },
+        {
+          "caller": "publishToChannels",
+          "callee": "ratePublishDomainService.validateRate",
+          "lineNumber": 105
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 7,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    }
+  ]
+}

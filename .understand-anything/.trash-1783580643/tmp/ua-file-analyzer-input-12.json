@@ -1,0 +1,247 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java",
+      "language": "java",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java",
+      "language": "java",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java",
+      "language": "java",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java",
+      "language": "java",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "language": "java",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java",
+      "language": "java",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/DeepSeekConfig.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java",
+      "language": "java",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java",
+      "language": "java",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java",
+      "language": "java",
+      "sizeLines": 169,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java",
+      "language": "java",
+      "sizeLines": 194,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java",
+      "language": "java",
+      "sizeLines": 179,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "language": "java",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java",
+      "language": "java",
+      "sizeLines": 169,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java",
+      "language": "java",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips111Req.java",
+      "language": "java",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips112Req.java",
+      "language": "java",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips113Req.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileAutoMatchReq.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileConvertReq.java",
+      "language": "java",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcilePreviewReq.java",
+      "language": "java",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/dto/InternalTrade.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java",
+      "language": "java",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/KnowledgeSearchTool.java": [
+      "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java",
+      "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/ReportGenerationTool.java": [
+      "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/RiskEvaluationTool.java": [
+      "forex-ai/src/main/java/com/forex/ai/application/service/AiAppService.java",
+      "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/agent/executor/TradeExecutionTool.java": [
+      "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java",
+      "forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/agent/registry/ToolRegistry.java": [
+      "forex-ai/src/main/java/com/forex/ai/domain/agent/core/AgentTool.java"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/domain/service/AiDomainService.java": [],
+    "forex-ai/src/main/java/com/forex/ai/domain/service/SmartRagService.java": [
+      "forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java"
+    ],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/config/DeepSeekConfig.java": [],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/config/ModelProviderConfig.java": [],
+    "forex-ai/src/main/java/com/forex/ai/infrastructure/llm/DeepSeekChatClient.java": [
+      "forex-ai/src/main/java/com/forex/ai/infrastructure/config/DeepSeekConfig.java"
+    ],
+    "forex-auth/src/main/java/com/forex/auth/adapter/controller/AuthController.java": [
+      "forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java",
+      "forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java",
+      "forex-auth/src/main/java/com/forex/auth/application/service/AuthAppService.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RateLimit.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java"
+    ],
+    "forex-auth/src/main/java/com/forex/auth/adapter/dto/LoginReq.java": [],
+    "forex-auth/src/main/java/com/forex/auth/adapter/dto/TokenResp.java": [],
+    "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/CashPoolController.java": [
+      "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/CashPool.java",
+      "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/entity/PoolMember.java",
+      "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java"
+    ],
+    "forex-cashpool/src/main/java/com/forex/cashpool/adapter/controller/OverseasLendingController.java": [
+      "forex-cashpool/src/main/java/com/forex/cashpool/domain/model/aggregate/OverseasLending.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java"
+    ],
+    "forex-cashpool/src/main/java/com/forex/cashpool/domain/service/QuotaCalculationEngine.java": [],
+    "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/CipsController.java": [
+      "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips111Req.java",
+      "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips112Req.java",
+      "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips113Req.java",
+      "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsMessageGenerator.java",
+      "forex-clearing/src/main/java/com/forex/clearing/application/service/CipsRoutingService.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/adapter/controller/ReconciliationController.java": [
+      "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileAutoMatchReq.java",
+      "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileConvertReq.java",
+      "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcilePreviewReq.java",
+      "forex-clearing/src/main/java/com/forex/clearing/application/dto/TradeConfirmation.java",
+      "forex-clearing/src/main/java/com/forex/clearing/application/service/SwiftMessageGenerator.java",
+      "forex-clearing/src/main/java/com/forex/clearing/application/service/TradeConfirmationService.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java"
+    ],
+    "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips111Req.java": [],
+    "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips112Req.java": [],
+    "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/Cips113Req.java": [],
+    "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileAutoMatchReq.java": [],
+    "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcileConvertReq.java": [],
+    "forex-clearing/src/main/java/com/forex/clearing/adapter/dto/ReconcilePreviewReq.java": [],
+    "forex-clearing/src/main/java/com/forex/clearing/application/dto/InternalTrade.java": [],
+    "forex-clearing/src/main/java/com/forex/clearing/application/dto/ReconciliationResult.java": []
+  }
+}
