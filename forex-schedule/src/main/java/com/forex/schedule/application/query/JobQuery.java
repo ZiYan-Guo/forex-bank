@@ -11,12 +11,12 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 public class JobQuery extends PageReq {
 
-    @Schema(description = "任务名称")
+    @Schema(description = "Job name / 任务名称")
     private String jobName;
 
-    @Schema(description = "任务组")
+    @Schema(description = "Job group / 任务组")
     private String jobGroup;
 
-    @Schema(description = "状态: ENABLED/DISABLED")
+    @Schema(description = "Status: ENABLED/DISABLED / 状态")
     private String status;
 }

@@ -7,36 +7,36 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-@Schema(description = "定时任务响应")
+@Schema(description = "Schedule job response / 定时任务响应")
 public class ScheduleJobResp {
 
-    @Schema(description = "主键ID")
+    @Schema(description = "Primary key / 主键ID")
     private Long id;
 
-    @Schema(description = "任务名称")
+    @Schema(description = "Job name / 任务名称")
     private String jobName;
 
-    @Schema(description = "任务组")
+    @Schema(description = "Job group / 任务组")
     private String jobGroup;
 
-    @Schema(description = "任务处理器")
+    @Schema(description = "Job handler / 任务处理器")
     private String jobHandler;
 
-    @Schema(description = "Cron表达式")
+    @Schema(description = "Cron expression / Cron表达式")
     private String cronExpression;
 
-    @Schema(description = "任务描述")
+    @Schema(description = "Job description / 任务描述")
     private String jobDesc;
 
-    @Schema(description = "状态: ENABLED/DISABLED")
+    @Schema(description = "Status: ENABLED/DISABLED / 状态")
     private String status;
 
-    @Schema(description = "最近执行结果")
+    @Schema(description = "Last execution result / 最近执行结果")
     private String lastResult;
 
-    @Schema(description = "上次执行时间")
+    @Schema(description = "Last execution time / 上次执行时间")
     private LocalDateTime lastExecuteTime;
 
-    @Schema(description = "下次执行时间")
+    @Schema(description = "Next execution time / 下次执行时间")
     private LocalDateTime nextExecuteTime;
 }

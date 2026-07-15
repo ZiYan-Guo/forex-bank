@@ -67,6 +67,21 @@ public class ScheduleJob extends BaseAggregate {
         markUpdated();
     }
 
+    /**
+     * Update job definition while keeping runtime state.
+     * 更新任务定义，同时保留运行状态和最近执行信息。
+     */
+    public void updateDefinition(String jobName, String jobGroup, String jobHandler,
+                                 String cronExpression, String jobDesc) {
+        this.jobName = jobName;
+        this.jobGroup = jobGroup;
+        this.jobHandler = jobHandler;
+        this.cronExpression = cronExpression;
+        this.jobDesc = jobDesc;
+        validate();
+        markUpdated();
+    }
+
     public void recordExecution(String result) {
         this.lastResult = result;
         this.lastExecuteTime = LocalDateTime.now();

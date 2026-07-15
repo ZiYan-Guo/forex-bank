@@ -71,6 +71,16 @@ export const riskApi = {
   getSamplingStatistics: () => request.get<ApiResponse>('/risk/sampling/statistics')
 }
 
+export const scheduleApi = {
+  addJob: (data: any) => request.post<ApiResponse>('/schedule/job/add', data),
+  updateJob: (id: number, data: any) => request.put<ApiResponse>(`/schedule/job/update/${id}`, data),
+  toggleJob: (id: number) => request.post<ApiResponse>(`/schedule/job/toggle/${id}`),
+  triggerJob: (id: number) => request.post<ApiResponse>(`/schedule/job/trigger/${id}`),
+  getJob: (id: number) => request.get<ApiResponse>(`/schedule/job/${id}`),
+  pageJobs: (params: any) => request.post<ApiResponse<PageResp<any>>>('/schedule/job/page', params),
+  getJobLogs: (jobId: number) => request.get<ApiResponse<any[]>>(`/schedule/job/${jobId}/logs`)
+}
+
 export const accountApi = {
   open: (data: any) => request.post<ApiResponse>('/account/open', data),
   close: (id: number) => request.post<ApiResponse>(`/account/close/${id}`),

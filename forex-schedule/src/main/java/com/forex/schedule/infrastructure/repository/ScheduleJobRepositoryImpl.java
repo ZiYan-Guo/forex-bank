@@ -55,7 +55,7 @@ public class ScheduleJobRepositoryImpl implements ScheduleJobRepository {
     @Override
     public PageResp<ScheduleJob> pageQuery(PageReq pageReq) {
         Page<ScheduleJobPO> page = new Page<>(pageReq.getPageNum(), pageReq.getPageSize());
-        JobQuery query = new JobQuery();
+        JobQuery query = pageReq instanceof JobQuery jobQuery ? jobQuery : new JobQuery();
         query.setPageNum(pageReq.getPageNum());
         query.setPageSize(pageReq.getPageSize());
         Page<ScheduleJobPO> result = scheduleJobMapper.pageQuery(page, query);

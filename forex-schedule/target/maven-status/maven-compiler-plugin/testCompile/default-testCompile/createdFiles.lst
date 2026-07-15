@@ -1,1 +1,3 @@
+com/forex/schedule/domain/service/ScheduleDomainServiceTest$StubScheduleJobRepository.class
+com/forex/schedule/domain/service/ScheduleDomainServiceTest$StubJobLogRepository.class
 com/forex/schedule/domain/service/ScheduleDomainServiceTest.class
