@@ -16,10 +16,15 @@ export const useRateStore = defineStore('rate', () => {
   let timer: ReturnType<typeof setInterval> | null = null
 
   const fetchRates = async () => {
+    loading.value = true
     try {
       const res = await rateApi.getAll()
       rates.value = res.data.data || []
-    } catch {}
+    } catch (error) {
+      console.error('[rate] fetch latest rates failed', error)
+    } finally {
+      loading.value = false
+    }
   }
 
   const startPolling = (intervalMs = 10000) => {

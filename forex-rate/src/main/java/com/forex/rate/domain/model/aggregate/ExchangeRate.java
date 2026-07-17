@@ -52,6 +52,39 @@ public class ExchangeRate extends BaseAggregate {
         return rate;
     }
 
+    /**
+     * 从持久化记录还原领域对象，避免历史牌价的时间被重置。
+     * Reconstitutes the domain object from persistence without resetting historical rate timestamps.
+     */
+    public static ExchangeRate reconstitute(Long id, String currencyPair, String baseCurrency, String quoteCurrency,
+                                            BigDecimal bidRate, BigDecimal askRate, BigDecimal midRate,
+                                            BigDecimal spread, String rateSource, LocalDate rateDate,
+                                            LocalDateTime rateTime, Integer status) {
+        ExchangeRate rate = new ExchangeRate();
+        rate.id = id;
+        rate.currencyPair = currencyPair;
+        rate.baseCurrency = baseCurrency;
+        rate.quoteCurrency = quoteCurrency;
+        rate.bidRate = bidRate;
+        rate.askRate = askRate;
+        rate.midRate = midRate == null ? calculateMidRate(bidRate, askRate) : midRate;
+        rate.spread = spread == null ? calculateSpread(bidRate, askRate) : spread;
+        rate.rateSource = rateSource;
+        rate.rateDate = rateDate;
+        rate.rateTime = rateTime;
+        rate.status = status;
+        rate.validate();
+        return rate;
+    }
+
+    private static BigDecimal calculateMidRate(BigDecimal bidRate, BigDecimal askRate) {
+        return bidRate.add(askRate).divide(new BigDecimal("2"), 8, RoundingMode.HALF_UP);
+    }
+
+    private static BigDecimal calculateSpread(BigDecimal bidRate, BigDecimal askRate) {
+        return askRate.subtract(bidRate);
+    }
+
     public void invalidate() {
         this.status = 0;
         markUpdated();

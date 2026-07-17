@@ -124,6 +124,90 @@
       </a-col>
     </a-row>
 
+    <a-card title="汇率历史" size="small" style="margin-top:16px">
+      <a-form layout="inline" class="rate-history-filter">
+        <a-form-item label="币种对">
+          <a-select
+            v-model:value="rateHistoryQuery.currencyPair"
+            allow-clear
+            show-search
+            option-filter-prop="label"
+            placeholder="全部"
+            style="width: 160px"
+          >
+            <a-select-option
+              v-for="r in rateStore.rates"
+              :key="r.currencyPair"
+              :value="r.currencyPair"
+              :label="r.currencyPair"
+            >
+              {{ r.currencyPair }}
+            </a-select-option>
+          </a-select>
+        </a-form-item>
+        <a-form-item label="来源">
+          <a-select
+            v-model:value="rateHistoryQuery.rateSource"
+            allow-clear
+            placeholder="全部"
+            style="width: 120px"
+          >
+            <a-select-option value="CFETS">CFETS</a-select-option>
+            <a-select-option value="Reuters">Reuters</a-select-option>
+            <a-select-option value="MANUAL">MANUAL</a-select-option>
+            <a-select-option value="MARKET">MARKET</a-select-option>
+          </a-select>
+        </a-form-item>
+        <a-form-item label="日期">
+          <a-range-picker v-model:value="rateHistoryRange" />
+        </a-form-item>
+        <a-form-item label="状态">
+          <a-select v-model:value="rateHistoryQuery.status" allow-clear placeholder="全部" style="width: 110px">
+            <a-select-option :value="1">有效</a-select-option>
+            <a-select-option :value="0">失效</a-select-option>
+          </a-select>
+        </a-form-item>
+        <a-form-item>
+          <a-space>
+            <a-button type="primary" @click="searchRateHistory">查询</a-button>
+            <a-button @click="resetRateHistory">重置</a-button>
+          </a-space>
+        </a-form-item>
+      </a-form>
+      <a-table
+        :columns="rateHistoryColumns"
+        :data-source="rateHistoryData"
+        :loading="rateHistoryLoading"
+        :pagination="rateHistoryPagination"
+        row-key="id"
+        size="small"
+        @change="handleRateHistoryTableChange"
+      >
+        <template #bodyCell="{ column, record }">
+          <template v-if="column.key === 'currencyPair'">
+            <strong>{{ record.currencyPair }}</strong>
+          </template>
+          <template v-if="column.key === 'bidRate'">
+            {{ formatRateNumber(record.bidRate) }}
+          </template>
+          <template v-if="column.key === 'askRate'">
+            {{ formatRateNumber(record.askRate) }}
+          </template>
+          <template v-if="column.key === 'midRate'">
+            {{ formatRateNumber(record.midRate) }}
+          </template>
+          <template v-if="column.key === 'spread'">
+            {{ formatRateNumber(record.spread) }}
+          </template>
+          <template v-if="column.key === 'status'">
+            <a-tag :color="record.status === 1 ? 'green' : 'default'">
+              {{ record.status === 1 ? '有效' : '失效' }}
+            </a-tag>
+          </template>
+        </template>
+      </a-table>
+    </a-card>
+
     <a-card title="交易记录" size="small" style="margin-top:16px">
       <a-table
         :columns="orderColumns"
@@ -235,9 +319,10 @@
 import { ref, reactive, computed, onMounted, onUnmounted } from 'vue'
 import { message } from 'ant-design-vue'
 import type { Dayjs } from 'dayjs'
-import { exchangeApi } from '@/api/exchange'
+import { exchangeApi, rateApi } from '@/api/exchange'
 import { useRateStore } from '@/store/rate'
 import { OrderStatusMap } from '@/types/api'
+import type { ExchangeRate } from '@/types/api'
 
 const rateStore = useRateStore()
 
@@ -266,7 +351,9 @@ function selectRate(r: { currencyPair: string; askRate: number; midRate: number 
   selectedPair.value = r.currencyPair
   formState.currencyPair = r.currencyPair
   formState.rate = r.askRate
+  rateHistoryQuery.currencyPair = r.currencyPair
   calcSettlement()
+  searchRateHistory()
 }
 
 function onPairChange(pair: string) {
@@ -274,8 +361,96 @@ function onPairChange(pair: string) {
   if (rate) {
     selectedPair.value = pair
     formState.rate = rate.askRate
+    rateHistoryQuery.currencyPair = pair
     calcSettlement()
+    searchRateHistory()
   }
+}
+
+type RateHistoryRecord = ExchangeRate
+
+const rateHistoryColumns = [
+  { title: '币种对', dataIndex: 'currencyPair', key: 'currencyPair', width: 120 },
+  { title: '买入价', dataIndex: 'bidRate', key: 'bidRate', width: 110 },
+  { title: '卖出价', dataIndex: 'askRate', key: 'askRate', width: 110 },
+  { title: '中间价', dataIndex: 'midRate', key: 'midRate', width: 110 },
+  { title: '点差', dataIndex: 'spread', key: 'spread', width: 100 },
+  { title: '来源', dataIndex: 'rateSource', key: 'rateSource', width: 110 },
+  { title: '日期', dataIndex: 'rateDate', key: 'rateDate', width: 120 },
+  { title: '更新时间', dataIndex: 'rateTime', key: 'rateTime', width: 180 },
+  { title: '状态', dataIndex: 'status', key: 'status', width: 90 }
+]
+
+const rateHistoryQuery = reactive({
+  currencyPair: '',
+  rateSource: '',
+  status: undefined as number | undefined
+})
+const rateHistoryRange = ref<[Dayjs, Dayjs] | null>(null)
+const rateHistoryData = ref<RateHistoryRecord[]>([])
+const rateHistoryLoading = ref(false)
+const rateHistoryPagination = reactive({
+  current: 1,
+  pageSize: 10,
+  total: 0,
+  showSizeChanger: true,
+  showTotal: (total: number) => `共 ${total} 条`
+})
+
+function buildRateHistoryPayload() {
+  const [startDate, endDate] = rateHistoryRange.value || []
+
+  // 只提交有值条件，减少后端动态 SQL 分支判断。
+  // Submit only meaningful filters to keep backend dynamic SQL predictable.
+  return {
+    pageNum: rateHistoryPagination.current,
+    pageSize: rateHistoryPagination.pageSize,
+    currencyPair: rateHistoryQuery.currencyPair || undefined,
+    rateSource: rateHistoryQuery.rateSource || undefined,
+    status: rateHistoryQuery.status,
+    startDate: startDate?.format('YYYY-MM-DD'),
+    endDate: endDate?.format('YYYY-MM-DD')
+  }
+}
+
+async function fetchRateHistory() {
+  rateHistoryLoading.value = true
+  try {
+    const res = await rateApi.pageQuery(buildRateHistoryPayload())
+    const data = res.data.data
+    rateHistoryData.value = data.records || []
+    rateHistoryPagination.total = data.total || 0
+  } catch (error) {
+    console.error('[rate-history] query failed', error)
+    rateHistoryData.value = []
+    rateHistoryPagination.total = 0
+  } finally {
+    rateHistoryLoading.value = false
+  }
+}
+
+function searchRateHistory() {
+  rateHistoryPagination.current = 1
+  fetchRateHistory()
+}
+
+function resetRateHistory() {
+  rateHistoryQuery.currencyPair = ''
+  rateHistoryQuery.rateSource = ''
+  rateHistoryQuery.status = undefined
+  rateHistoryRange.value = null
+  searchRateHistory()
+}
+
+function handleRateHistoryTableChange(pa: any) {
+  rateHistoryPagination.current = pa.current
+  rateHistoryPagination.pageSize = pa.pageSize
+  fetchRateHistory()
+}
+
+function formatRateNumber(value?: number) {
+  const numeric = Number(value)
+  return Number.isFinite(numeric) ? numeric.toFixed(4) : '-'
 }
 
 const submitting = ref(false)
@@ -402,6 +577,7 @@ function showDetail(record: any) {
 
 onMounted(() => {
   rateStore.fetchRates()
+  fetchRateHistory()
   fetchOrders()
 })
 onUnmounted(() => {})
@@ -467,5 +643,9 @@ onUnmounted(() => {})
   font-weight: bold;
   color: #1677ff;
   font-family: 'Courier New', monospace;
+}
+
+.rate-history-filter {
+  margin-bottom: 12px;
 }
 </style>

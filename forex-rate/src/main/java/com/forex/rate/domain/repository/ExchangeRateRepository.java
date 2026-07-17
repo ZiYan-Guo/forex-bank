@@ -3,8 +3,8 @@ package com.forex.rate.domain.repository;
 import java.util.List;
 import java.util.Optional;
 
-import com.forex.common.base.dto.PageReq;
 import com.forex.common.base.dto.PageResp;
+import com.forex.rate.application.query.RateQuery;
 import com.forex.rate.domain.model.aggregate.ExchangeRate;
 
 public interface ExchangeRateRepository {
@@ -17,5 +17,5 @@ public interface ExchangeRateRepository {
 
     List<ExchangeRate> findLatestRates();
 
-    PageResp<ExchangeRate> pageQuery(PageReq pageReq);
+    PageResp<ExchangeRate> pageQuery(RateQuery query);
 }

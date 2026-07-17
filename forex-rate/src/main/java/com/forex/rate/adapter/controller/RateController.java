@@ -12,12 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.forex.common.base.annotation.RateLimit;
+import com.forex.common.base.dto.PageResp;
 import com.forex.common.base.result.R;
 import com.forex.common.security.annotation.RequireRole;
 import com.forex.rate.adapter.dto.ConversionResp;
 import com.forex.rate.adapter.dto.RateQueryReq;
 import com.forex.rate.adapter.dto.RateResp;
 import com.forex.rate.application.command.RateSaveCmd;
+import com.forex.rate.application.query.RateQuery;
 import com.forex.rate.application.service.RateAppService;
 import com.forex.rate.domain.model.aggregate.ExchangeRate;
 
@@ -25,11 +27,13 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Tag(name = "汇率管理")
 @RestController
 @RequestMapping("/api/rate")
 @RequiredArgsConstructor
+@Slf4j
 public class RateController {
 
     private final RateAppService rateAppService;
@@ -48,6 +52,20 @@ public class RateController {
                 .map(this::toRateResp)
                 .collect(Collectors.toList());
         return R.ok(rates);
+    }
+
+    @Operation(summary = "分页查询汇率历史")
+    @PostMapping("/page")
+    public R<PageResp<RateResp>> pageQuery(@Valid @RequestBody RateQuery query) {
+        PageResp<ExchangeRate> page = rateAppService.pageQuery(query);
+        List<RateResp> records = page.getRecords().stream()
+                .map(this::toRateResp)
+                .toList();
+        PageResp<RateResp> result = PageResp.of(page.getTotal(), records, page.getPageNum(), page.getPageSize());
+
+        log.info("Exchange rate page response ready, currencyPair={}, pageNum={}, pageSize={}, total={}",
+                query.getCurrencyPair(), query.getPageNum(), query.getPageSize(), page.getTotal());
+        return R.ok(result);
     }
 
     @Operation(summary = "货币转换")
@@ -85,12 +103,18 @@ public class RateController {
 
     private RateResp toRateResp(ExchangeRate rate) {
         RateResp resp = new RateResp();
+        resp.setId(rate.getId());
         resp.setCurrencyPair(rate.getCurrencyPair());
+        resp.setBaseCurrency(rate.getBaseCurrency());
+        resp.setQuoteCurrency(rate.getQuoteCurrency());
         resp.setBidRate(rate.getBidRate());
         resp.setAskRate(rate.getAskRate());
         resp.setMidRate(rate.getMidRate());
+        resp.setSpread(rate.getSpread());
+        resp.setRateDate(rate.getRateDate());
         resp.setRateTime(rate.getRateTime());
         resp.setRateSource(rate.getRateSource());
+        resp.setStatus(rate.getStatus());
         return resp;
     }
 }

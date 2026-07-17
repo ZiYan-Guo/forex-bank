@@ -37,12 +37,18 @@ export interface UserInfo {
 }
 
 export interface ExchangeRate {
+  id?: number
   currencyPair: string
+  baseCurrency?: string
+  quoteCurrency?: string
   bidRate: number
   askRate: number
   midRate: number
+  spread?: number
+  rateDate?: string
   rateTime: string
   rateSource: string
+  status?: number
 }
 
 export interface RiskLevel { LOW: 1; MEDIUM: 2; HIGH: 3; PROHIBITED: 9 }
