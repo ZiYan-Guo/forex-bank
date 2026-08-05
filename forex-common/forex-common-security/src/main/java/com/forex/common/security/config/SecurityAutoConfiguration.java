@@ -12,13 +12,14 @@ import jakarta.annotation.PostConstruct;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
-@Data
-@Configuration
 /**
  * Security auto-configuration. Creates JwtUtil bean and validates secret key strength at startup.
  * 安全自动配置。创建JwtUtil并在启动时校验密钥强度。
  */
+@Slf4j
+@Data
+@Configuration
+@ConditionalOnProperty(prefix = "forex.security", name = "jwt-secret")
 @ConfigurationProperties(prefix = "forex.security")
 public class SecurityAutoConfiguration {
 
@@ -42,7 +43,7 @@ public class SecurityAutoConfiguration {
                     "Set 'forex.security.jwt-secret' in configuration. Current length: " +
                     (jwtSecret == null ? 0 : jwtSecret.length()));
         }
-        log.info("JWT secret validated: {} characters", jwtSecret.length());
+        log.info("JWT secret validated / JWT密钥校验通过, length={}", jwtSecret.length());
     }
 
     /**

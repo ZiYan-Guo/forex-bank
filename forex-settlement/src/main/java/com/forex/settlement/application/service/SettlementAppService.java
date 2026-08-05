@@ -22,13 +22,13 @@ import com.forex.settlement.domain.service.GuaranteeDomainService;
 import com.forex.settlement.domain.service.LcDomainService;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDate;
-
 @Service
 @RequiredArgsConstructor
+@Slf4j
 @Transactional
 public class SettlementAppService {
 
@@ -65,6 +65,10 @@ public class SettlementAppService {
     }
 
     public PageResp<LetterOfCredit> pageQuery(LcQuery query) {
+        log.debug(
+                "Query LC page / 查询信用证分页, lcNo={}, customerId={}, status={}, pageNum={}, pageSize={}",
+                query.getLcNo(), query.getCustomerId(), query.getLcStatus(),
+                query.getPageNum(), query.getPageSize());
         return lcRepository.pageQuery(query);
     }
 
@@ -133,6 +137,15 @@ public class SettlementAppService {
                 .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "托收不存在: " + collectionNo));
     }
 
+    @Transactional(readOnly = true)
+    public PageResp<DocumentaryCollection> pageCollections(CollectionQuery query) {
+        log.debug(
+                "Query collection page / 查询托收分页, collectionNo={}, customerId={}, status={}, pageNum={}, pageSize={}",
+                query.getCollectionNo(), query.getCustomerId(), query.getCollectionStatus(),
+                query.getPageNum(), query.getPageSize());
+        return collectionRepository.pageQuery(query);
+    }
+
     @RedisLock(key = "#collectionNo")
     public void payCollection(String collectionNo) {
         DocumentaryCollection col = collectionRepository.findByCollectionNo(collectionNo)
@@ -147,12 +160,13 @@ public class SettlementAppService {
                 cmd.getGuaranteeAmount(),
                 cmd.getGuaranteeCurrency(),
                 cmd.getBeneficiaryName(),
-                LocalDate.now(),
+                null,
                 cmd.getEffectiveDate(),
                 cmd.getExpiryDate(),
                 null,
                 null,
                 cmd.getGuaranteeFormat(),
+                cmd.getCommissionRate(),
                 null,
                 cmd.getRemark()
         );
@@ -162,6 +176,15 @@ public class SettlementAppService {
     public BankGuarantee getGuaranteeDetail(String guaranteeNo) {
         return guaranteeRepository.findByGuaranteeNo(guaranteeNo)
                 .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "保函不存在: " + guaranteeNo));
+    }
+
+    @Transactional(readOnly = true)
+    public PageResp<BankGuarantee> pageGuarantees(GuaranteeQuery query) {
+        log.debug(
+                "Query guarantee page / 查询保函分页, guaranteeNo={}, customerId={}, status={}, pageNum={}, pageSize={}",
+                query.getGuaranteeNo(), query.getCustomerId(), query.getGuaranteeStatus(),
+                query.getPageNum(), query.getPageSize());
+        return guaranteeRepository.pageQuery(query);
     }
 
     @RedisLock(key = "#guaranteeNo")

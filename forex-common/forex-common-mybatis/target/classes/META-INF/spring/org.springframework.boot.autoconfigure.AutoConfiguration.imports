@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.AutoConfiguration.imports=com.forex.common.mybatis.config.MybatisPlusConfig
+com.forex.common.mybatis.config.MybatisPlusConfig

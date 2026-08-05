@@ -44,7 +44,10 @@ public class RateLimitAspect {
         limiter.trySetRate(RateType.OVERALL, rateLimit.limit(), rateLimit.windowSeconds(), RateIntervalUnit.SECONDS);
 
         if (!limiter.tryAcquire()) {
-            log.warn("限流触发: key={}", limiterKey);
+            log.warn(
+                    "Rate limit triggered / 触发限流, method={}, keyDigest={}",
+                    signature.toShortString(),
+                    Integer.toHexString(limiterKey.hashCode()));
             throw new BusinessException(ResultCode.TOO_MANY_REQUESTS.getCode(), rateLimit.message());
         }
         return joinPoint.proceed();

@@ -13,11 +13,14 @@
             <a-select-option value="PAYMENT">付款保函</a-select-option>
           </a-select>
         </a-form-item>
+        <a-form-item label="客户ID" required>
+          <a-input-number v-model:value="form.customerId" :min="1" style="width:100%" placeholder="请输入客户ID" />
+        </a-form-item>
         <a-form-item label="金额" required>
-          <a-input-number v-model:value="form.amount" :min="0" :precision="2" style="width:100%" placeholder="请输入金额" />
+          <a-input-number v-model:value="form.guaranteeAmount" :min="0" :precision="2" style="width:100%" placeholder="请输入金额" />
         </a-form-item>
         <a-form-item label="币种" required>
-          <a-select v-model:value="form.currency" placeholder="请选择币种">
+          <a-select v-model:value="form.guaranteeCurrency" placeholder="请选择币种">
             <a-select-option value="USD">USD 美元</a-select-option>
             <a-select-option value="EUR">EUR 欧元</a-select-option>
             <a-select-option value="GBP">GBP 英镑</a-select-option>
@@ -26,7 +29,7 @@
           </a-select>
         </a-form-item>
         <a-form-item label="受益人" required>
-          <a-input v-model:value="form.beneficiary" placeholder="请输入受益人" />
+          <a-input v-model:value="form.beneficiaryName" placeholder="请输入受益人" />
         </a-form-item>
         <a-form-item label="生效日" required>
           <a-date-picker v-model:value="form.effectiveDate" style="width:100%" placeholder="请选择生效日" />
@@ -45,6 +48,7 @@
         :columns="columns"
         :data-source="list"
         :loading="loading"
+        :pagination="{ current: pagination.pageNum, pageSize: pagination.pageSize, total: pagination.total, showSizeChanger: true, onChange: onPageChange }"
         row-key="guaranteeNo"
       >
         <template #bodyCell="{ column, record }">
@@ -52,14 +56,14 @@
             <a-tag :color="typeColor(record.guaranteeType)">{{ typeLabel(record.guaranteeType) }}</a-tag>
           </template>
           <template v-if="column.key === 'status'">
-            <a-tag :color="OrderStatusMap[record.status]?.color || '#8c8c8c'">
-              {{ OrderStatusMap[record.status]?.label || record.status }}
+            <a-tag :color="OrderStatusMap[record.guaranteeStatus]?.color || '#8c8c8c'">
+              {{ OrderStatusMap[record.guaranteeStatus]?.label || record.guaranteeStatus }}
             </a-tag>
           </template>
           <template v-if="column.key === 'action'">
             <a-space>
               <a @click="viewDetail(record)">查看</a>
-              <a v-if="record.status === 'PENDING'" @click="handleIssue(record)">签发</a>
+              <a v-if="record.guaranteeStatus === 'DRAFT'" @click="handleIssue(record)">签发</a>
             </a-space>
           </template>
         </template>
@@ -72,12 +76,12 @@
         <a-descriptions-item label="保函类型">
           <a-tag :color="typeColor(detailRecord.guaranteeType)">{{ typeLabel(detailRecord.guaranteeType) }}</a-tag>
         </a-descriptions-item>
-        <a-descriptions-item label="金额">{{ detailRecord.amount }}</a-descriptions-item>
-        <a-descriptions-item label="币种">{{ detailRecord.currency }}</a-descriptions-item>
-        <a-descriptions-item label="受益人">{{ detailRecord.beneficiary }}</a-descriptions-item>
+        <a-descriptions-item label="金额">{{ detailRecord.guaranteeAmount }}</a-descriptions-item>
+        <a-descriptions-item label="币种">{{ detailRecord.guaranteeCurrency }}</a-descriptions-item>
+        <a-descriptions-item label="受益人">{{ detailRecord.beneficiaryInfo }}</a-descriptions-item>
         <a-descriptions-item label="状态">
-          <a-tag :color="OrderStatusMap[detailRecord.status]?.color || '#8c8c8c'">
-            {{ OrderStatusMap[detailRecord.status]?.label || detailRecord.status }}
+          <a-tag :color="OrderStatusMap[detailRecord.guaranteeStatus]?.color || '#8c8c8c'">
+            {{ OrderStatusMap[detailRecord.guaranteeStatus]?.label || detailRecord.guaranteeStatus }}
           </a-tag>
         </a-descriptions-item>
         <a-descriptions-item label="生效日">{{ detailRecord.effectiveDate }}</a-descriptions-item>
@@ -99,25 +103,28 @@ const detailVisible = ref(false)
 const detailRecord = ref<any>(null)
 
 const form = reactive({
+  customerId: null as number | null,
   guaranteeType: undefined as string | undefined,
-  amount: null as number | null,
-  currency: undefined as string | undefined,
-  beneficiary: '',
-  effectiveDate: undefined as string | undefined,
-  expiryDate: undefined as string | undefined
+  guaranteeAmount: null as number | null,
+  guaranteeCurrency: undefined as string | undefined,
+  beneficiaryName: '',
+  effectiveDate: undefined as any,
+  expiryDate: undefined as any,
+  guaranteeFormat: 'DIRECT'
 })
 
 const list = ref<any[]>([])
+const pagination = reactive({ pageNum: 1, pageSize: 10, total: 0 })
 
 const columns = [
   { title: '保函编号', dataIndex: 'guaranteeNo', key: 'guaranteeNo' },
   { title: '保函类型', dataIndex: 'guaranteeType', key: 'guaranteeType' },
-  { title: '金额', dataIndex: 'amount', key: 'amount' },
-  { title: '币种', dataIndex: 'currency', key: 'currency' },
-  { title: '受益人', dataIndex: 'beneficiary', key: 'beneficiary' },
+  { title: '金额', dataIndex: 'guaranteeAmount', key: 'guaranteeAmount' },
+  { title: '币种', dataIndex: 'guaranteeCurrency', key: 'guaranteeCurrency' },
+  { title: '受益人', dataIndex: 'beneficiaryInfo', key: 'beneficiaryInfo' },
   { title: '生效日', dataIndex: 'effectiveDate', key: 'effectiveDate' },
   { title: '到期日', dataIndex: 'expiryDate', key: 'expiryDate' },
-  { title: '状态', dataIndex: 'status', key: 'status' },
+  { title: '状态', dataIndex: 'guaranteeStatus', key: 'status' },
   { title: '操作', key: 'action', width: 150 }
 ]
 
@@ -137,21 +144,39 @@ function typeColor(type: string) {
   return map[type] || '#8c8c8c'
 }
 
-function mockFetch() {
-  list.value = [
-    { guaranteeNo: 'BG20260601001', guaranteeType: 'PERFORMANCE', amount: 200000, currency: 'USD', beneficiary: 'XYZ Construction', effectiveDate: '2026-06-01', expiryDate: '2027-06-01', status: 'CONFIRMED' },
-    { guaranteeNo: 'BG20260528002', guaranteeType: 'BID', amount: 50000, currency: 'EUR', beneficiary: 'ABC Engineering', effectiveDate: '2026-05-28', expiryDate: '2026-11-28', status: 'PENDING' },
-    { guaranteeNo: 'BG20260520003', guaranteeType: 'PAYMENT', amount: 120000, currency: 'GBP', beneficiary: 'Global Supplies', effectiveDate: '2026-05-20', expiryDate: '2026-12-31', status: 'SUCCESS' }
-  ]
+async function fetchGuarantees() {
+  loading.value = true
+  try {
+    const res = await settlementApi.guaranteePageQuery({
+      pageNum: pagination.pageNum,
+      pageSize: pagination.pageSize
+    })
+    if (res.data?.code === 200) {
+      list.value = res.data.data?.records || []
+      pagination.total = res.data.data?.total || 0
+    }
+  } finally {
+    loading.value = false
+  }
+}
+
+function onPageChange(page: number, size: number) {
+  pagination.pageNum = page
+  pagination.pageSize = size
+  fetchGuarantees()
 }
 
 async function handleCreate() {
   submitting.value = true
   try {
-    const res = await settlementApi.createGuarantee(form)
+    const res = await settlementApi.createGuarantee({
+      ...form,
+      effectiveDate: formatDate(form.effectiveDate),
+      expiryDate: formatDate(form.expiryDate)
+    })
     if (res.data?.code === 200) {
       message.success('保函创建成功')
-      mockFetch()
+      fetchGuarantees()
     } else {
       message.error(res.data?.message || '创建失败')
     }
@@ -169,12 +194,19 @@ async function handleIssue(record: any) {
   const res = await settlementApi.issueGuarantee(record.guaranteeNo)
   if (res.data?.code === 200) {
     message.success('保函已签发')
-    mockFetch()
+    fetchGuarantees()
   }
 }
 
+function formatDate(value: any) {
+  if (!value) {
+    return undefined
+  }
+  return typeof value?.format === 'function' ? value.format('YYYY-MM-DD') : value
+}
+
 onMounted(() => {
-  mockFetch()
+  fetchGuarantees()
 })
 </script>
 

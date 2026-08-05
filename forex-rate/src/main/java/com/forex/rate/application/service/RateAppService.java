@@ -3,23 +3,21 @@ package com.forex.rate.application.service;
 import java.math.BigDecimal;
 import java.time.Duration;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 
+import com.forex.common.base.constant.CacheConstants;
 import com.forex.common.base.dto.PageResp;
 import com.forex.rate.application.command.RateSaveCmd;
 import com.forex.rate.application.query.RateQuery;
+import com.forex.rate.application.port.ExchangeRateCache;
 import com.forex.rate.domain.event.RateUpdatedEvent;
 import com.forex.rate.domain.model.aggregate.ExchangeRate;
 import com.forex.rate.domain.repository.ExchangeRateRepository;
 import com.forex.rate.domain.service.RateCalculationDomainService;
 import com.forex.rate.domain.service.RatePublishDomainService;
-import com.github.benmanes.caffeine.cache.Cache;
-import com.github.benmanes.caffeine.cache.Caffeine;
-
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -37,22 +35,20 @@ public class RateAppService {
     private final RateCalculationDomainService rateCalculationDomainService;
     private final RatePublishDomainService ratePublishDomainService;
     private final ApplicationEventPublisher eventPublisher;
-
-    private final Cache<String, ExchangeRate> rateCache = Caffeine.newBuilder()
-            .expireAfterWrite(10, TimeUnit.SECONDS)
-            .maximumSize(1000)
-            .build();
+    private final ExchangeRateCache exchangeRateCache;
 
     public ExchangeRate getRate(String currencyPair) {
-        ExchangeRate cached = rateCache.getIfPresent(currencyPair);
-        if (cached != null && !cached.isExpired(Duration.ofSeconds(10))) {
-            log.debug("Rate cache hit, currencyPair={}, rateTime={}", currencyPair, cached.getRateTime());
+        ExchangeRate cached = exchangeRateCache
+                .getLatest(currencyPair, Duration.ofSeconds(CacheConstants.RATE_CACHE_TTL_SECONDS))
+                .orElse(null);
+        if (cached != null) {
             return cached;
         }
         ExchangeRate rate = exchangeRateRepository.findLatestByCurrencyPair(currencyPair)
                 .orElseThrow(() -> new BusinessException(ResultCode.NOT_FOUND, "Rate not found for: " + currencyPair));
-        rateCache.put(currencyPair, rate);
-        log.debug("Rate cache refreshed, currencyPair={}, rateTime={}", currencyPair, rate.getRateTime());
+        exchangeRateCache.putLatest(rate);
+        log.debug("Rate loaded from database / 汇率已从数据库加载, currencyPair={}, rateTime={}",
+                currencyPair, rate.getRateTime());
         return rate;
     }
 
@@ -84,7 +80,7 @@ public class RateAppService {
         ExchangeRate rate = ExchangeRate.create(cmd.getCurrencyPair(), cmd.getBaseCurrency(),
                 cmd.getQuoteCurrency(), cmd.getBidRate(), cmd.getAskRate(), cmd.getRateSource());
         ExchangeRate saved = exchangeRateRepository.save(rate);
-        rateCache.invalidate(saved.getCurrencyPair());
+        exchangeRateCache.putLatest(saved);
         eventPublisher.publishEvent(new RateUpdatedEvent(saved.getCurrencyPair(), saved.getBidRate(), saved.getAskRate()));
         log.info("Exchange rate saved and event published, id={}, currencyPair={}, rateTime={}",
                 saved.getId(), saved.getCurrencyPair(), saved.getRateTime());

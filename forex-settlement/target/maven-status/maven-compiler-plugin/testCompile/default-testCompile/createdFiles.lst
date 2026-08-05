@@ -1,3 +1,5 @@
+com/forex/settlement/domain/model/entity/DocumentaryCollectionTest.class
 com/forex/settlement/domain/service/GuaranteeDomainServiceTest.class
 com/forex/settlement/domain/service/LcDomainServiceTest.class
 com/forex/settlement/domain/service/CollectionDomainServiceTest.class
+com/forex/settlement/domain/model/entity/BankGuaranteeTest.class

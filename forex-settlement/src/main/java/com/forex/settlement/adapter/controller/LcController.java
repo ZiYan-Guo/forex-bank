@@ -19,6 +19,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,6 +34,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/settlement/lc")
 @RequiredArgsConstructor
+@Slf4j
 public class LcController {
 
     private final SettlementAppService settlementAppService;
@@ -40,10 +42,14 @@ public class LcController {
     @Operation(summary = "创建信用证")
     @PostMapping("/create")
     @RequirePermission("settlement:lc:create")
-    @Idempotent(key = "#req.customerId + '_lc_' + T(java.lang.System).currentTimeMillis()")
+    @Idempotent(key = "#req.customerId + '_lc'")
     public R<LcResp> createLc(@Valid @RequestBody CreateLcReq req) {
+        log.info(
+                "Create letter of credit / 创建信用证, customerId={}, currency={}, amount={}",
+                req.getCustomerId(), req.getLcCurrency(), req.getLcAmount());
         CreateLcCmd cmd = toCmd(req);
         LetterOfCredit lc = settlementAppService.createLc(cmd);
+        log.info("Letter of credit created / 信用证创建成功, lcNo={}", lc.getLcNo());
         return R.ok(toResp(lc));
     }
 
@@ -126,6 +132,10 @@ public class LcController {
         return R.ok("信用证已付款", toResp(lc));
     }
 
+    /**
+     * Builds a query object in the adapter layer.
+     * 在适配层构造查询对象，保持查询参数与领域模型隔离。
+     */
     private LcQuery toLcQuery(LcPageQuery req) {
         LcQuery query = new LcQuery();
         query.setPageNum(req.getPageNum());
@@ -139,6 +149,10 @@ public class LcController {
         return query;
     }
 
+    /**
+     * Maps the inbound DTO to an application command.
+     * 将入站 DTO 转换为应用层命令，避免适配层对象泄漏到领域层。
+     */
     private CreateLcCmd toCmd(CreateLcReq req) {
         CreateLcCmd cmd = new CreateLcCmd();
         cmd.setCustomerId(req.getCustomerId());

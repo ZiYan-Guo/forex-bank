@@ -44,9 +44,13 @@ export const settlementApi = {
   payLc: (lcNo: string) => request.post<ApiResponse>(`/settlement/lc/pay/${lcNo}`),
   createCollection: (data: any) => request.post<ApiResponse>('/settlement/collection/create', data),
   getCollection: (collectionNo: string) => request.get<ApiResponse>(`/settlement/collection/${collectionNo}`),
+  collectionPageQuery: (params: any) =>
+    request.post<ApiResponse<PageResp<any>>>('/settlement/collection/page', params),
   payCollection: (collectionNo: string) => request.post<ApiResponse>(`/settlement/collection/pay/${collectionNo}`),
   createGuarantee: (data: any) => request.post<ApiResponse>('/settlement/guarantee/create', data),
   getGuarantee: (guaranteeNo: string) => request.get<ApiResponse>(`/settlement/guarantee/${guaranteeNo}`),
+  guaranteePageQuery: (params: any) =>
+    request.post<ApiResponse<PageResp<any>>>('/settlement/guarantee/page', params),
   issueGuarantee: (guaranteeNo: string) => request.post<ApiResponse>(`/settlement/guarantee/issue/${guaranteeNo}`)
 }
 

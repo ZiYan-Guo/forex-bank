@@ -3,3 +3,4 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-gateway/src/main/java/com/forex/gateway/config/RateLimitConfig.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-gateway/src/main/java/com/forex/gateway/filter/AuthGlobalFilter.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-gateway/src/main/java/com/forex/gateway/filter/SecurityHeadersFilter.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-gateway/src/main/java/com/forex/gateway/filter/TraceGlobalFilter.java

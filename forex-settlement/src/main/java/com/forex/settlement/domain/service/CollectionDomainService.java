@@ -42,33 +42,38 @@ public class CollectionDomainService {
         DocumentaryCollection col = new DocumentaryCollection(null, collectionNo, customerId,
                 collectionType, collectionForm, collectionAmount, collectionCurrency,
                 drawerInfo, draweeInfo, remittingBank, collectingBank, documentsList,
-                "RECEIVED", null, operatorId, remark);
+                DocumentaryCollection.STATUS_DOCS_RECEIVED, null, operatorId, remark);
 
         DocumentaryCollection saved = collectionRepository.save(col);
 
-        log.info("创建跟单托收: collectionNo={}, amount={} {}", saved.getCollectionNo(),
+        log.info("Documentary collection created / 创建跟单托收, collectionNo={}, amount={} {}",
+                saved.getCollectionNo(),
                 saved.getCollectionAmount(), saved.getCollectionCurrency());
         return saved;
     }
 
     public void markReceivedDocuments(DocumentaryCollection col) {
+        col.markReceivedDocuments();
         collectionRepository.save(col);
-        log.info("跟单托收已收单: collectionNo={}", col.getCollectionNo());
+        log.info("Documentary collection documents received / 跟单托收已收单, collectionNo={}", col.getCollectionNo());
     }
 
     public void presentToDrawee(DocumentaryCollection col) {
+        col.presentToDrawee();
         collectionRepository.save(col);
-        log.info("跟单托收已向付款人提示: collectionNo={}", col.getCollectionNo());
+        log.info("Documentary collection presented / 跟单托收已向付款人提示, collectionNo={}", col.getCollectionNo());
     }
 
     public void accept(DocumentaryCollection col) {
+        col.accept();
         collectionRepository.save(col);
-        log.info("跟单托收已承兑: collectionNo={}", col.getCollectionNo());
+        log.info("Documentary collection accepted / 跟单托收已承兑, collectionNo={}", col.getCollectionNo());
     }
 
     public void pay(DocumentaryCollection col) {
+        col.pay();
         collectionRepository.save(col);
-        log.info("跟单托收已付款: collectionNo={}", col.getCollectionNo());
+        log.info("Documentary collection paid / 跟单托收已付款, collectionNo={}", col.getCollectionNo());
     }
 
     private String generateCollectionNo() {

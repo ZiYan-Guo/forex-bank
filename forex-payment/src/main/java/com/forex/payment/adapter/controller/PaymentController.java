@@ -17,18 +17,19 @@ import com.forex.payment.adapter.dto.PaymentResp;
 import com.forex.payment.adapter.dto.SendPaymentReq;
 import com.forex.payment.adapter.dto.SwiftValidateReq;
 import com.forex.payment.application.command.CreatePaymentCmd;
-import com.forex.payment.application.command.SendPaymentCmd;
-import com.forex.payment.domain.model.dto.PaymentQuery;
 import com.forex.payment.application.service.BankCodeValidationService;
 import com.forex.payment.application.service.BatchPaymentService;
+import com.forex.payment.application.service.BatchResult;
 import com.forex.payment.application.service.PaymentAppService;
 import com.forex.payment.domain.model.aggregate.CrossBorderPayment;
+import com.forex.payment.domain.model.dto.PaymentQuery;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -49,6 +50,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/payment")
 @RequiredArgsConstructor
+@Slf4j
 public class PaymentController {
 
     private final PaymentAppService paymentAppService;
@@ -58,20 +60,32 @@ public class PaymentController {
     @Operation(summary = "创建汇出支付")
     @PostMapping("/outward")
     @RequirePermission("payment:create")
-    @Idempotent(key = "#req.customerId + '_outward_' + T(java.lang.System).currentTimeMillis()")
+    @Idempotent(key = "#req.customerId + '_outward'")
     public R<PaymentResp> createOutwardPayment(@Valid @RequestBody CreatePaymentReq req) {
+        log.info(
+                "Create outward payment / 创建汇出支付, customerId={}, currency={}, amount={}",
+                req.getCustomerId(), req.getPayCurrency(), req.getPayAmount());
         CreatePaymentCmd cmd = toCmd(req);
         CrossBorderPayment payment = paymentAppService.createOutwardPayment(cmd);
+        log.info(
+                "Outward payment created / 汇出支付创建成功, paymentNo={}, customerId={}",
+                payment.getPaymentNo(), payment.getCustomerId());
         return R.ok("汇出支付创建成功", toResp(payment));
     }
 
     @Operation(summary = "创建汇入支付")
     @PostMapping("/inward")
     @RequirePermission("payment:create")
-    @Idempotent(key = "#req.customerId + '_inward_' + T(java.lang.System).currentTimeMillis()")
+    @Idempotent(key = "#req.customerId + '_inward'")
     public R<PaymentResp> createInwardPayment(@Valid @RequestBody CreatePaymentReq req) {
+        log.info(
+                "Create inward payment / 创建汇入支付, customerId={}, currency={}, amount={}",
+                req.getCustomerId(), req.getPayCurrency(), req.getPayAmount());
         CreatePaymentCmd cmd = toCmd(req);
         CrossBorderPayment payment = paymentAppService.createInwardPayment(cmd);
+        log.info(
+                "Inward payment created / 汇入支付创建成功, paymentNo={}, customerId={}",
+                payment.getPaymentNo(), payment.getCustomerId());
         return R.ok("汇入支付创建成功", toResp(payment));
     }
 
@@ -130,12 +144,10 @@ public class PaymentController {
     @RedisLock(key = "#req.paymentNo")
     @Idempotent(key = "#req.paymentNo + '_send'")
     public R<PaymentResp> sendPayment(@Valid @RequestBody SendPaymentReq req) {
-        SendPaymentCmd cmd = new SendPaymentCmd();
-        cmd.setPaymentNo(req.getPaymentNo());
-        cmd.setSwiftRef(req.getSwiftRef());
-        cmd.setCipsRef(req.getCipsRef());
+        log.info("Send payment / 发送支付, paymentNo={}", req.getPaymentNo());
         CrossBorderPayment payment = paymentAppService.sendPayment(
                 req.getPaymentNo(), req.getSwiftRef(), req.getCipsRef());
+        log.info("Payment sent / 支付发送成功, paymentNo={}", req.getPaymentNo());
         return R.ok("支付已发送", toResp(payment));
     }
 
@@ -157,6 +169,10 @@ public class PaymentController {
         return R.ok("GPI状态已更新", toResp(payment));
     }
 
+    /**
+     * Maps the inbound DTO to an application command.
+     * 将入站 DTO 转换为应用层命令，避免适配层对象泄漏到领域层。
+     */
     private CreatePaymentCmd toCmd(CreatePaymentReq req) {
         CreatePaymentCmd cmd = new CreatePaymentCmd();
         cmd.setCustomerId(req.getCustomerId());
@@ -186,13 +202,23 @@ public class PaymentController {
     @Operation(summary = "批量提交支付")
     @PostMapping("/batch/submit")
     @RequirePermission("payment:submit")
+    @Idempotent(key = "#req.channel + '_batch_payment'")
     public R<Map<String, Object>> batchSubmit(@Valid @RequestBody BatchSubmitReq req) {
         List<CreatePaymentCmd> commands = new ArrayList<>();
         for (CreatePaymentReq p : req.getPayments()) {
             commands.add(toCmd(p));
         }
-        return R.ok(Map.of("channel", req.getChannel(), "successCount",
-                batchPaymentService.processBatch(commands, req.getChannel()).getSuccessCount()));
+        log.info(
+                "Submit batch payment / 提交批量汇款, channel={}, count={}",
+                req.getChannel(), commands.size());
+        BatchResult batchResult = batchPaymentService.processBatch(commands, req.getChannel());
+        log.info(
+                "Batch payment completed / 批量汇款处理完成, channel={}, successCount={}, failureCount={}",
+                req.getChannel(), batchResult.getSuccessCount(), batchResult.getFailureCount());
+        return R.ok(Map.of(
+                "channel", req.getChannel(),
+                "successCount", batchResult.getSuccessCount(),
+                "failureCount", batchResult.getFailureCount()));
     }
 
     @Operation(summary = "验证SWIFT/BIC代码")

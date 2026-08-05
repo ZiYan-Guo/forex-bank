@@ -2,6 +2,7 @@ com/forex/common/base/dto/PageReq.class
 com/forex/common/base/annotation/RateLimit.class
 com/forex/common/base/idempotent/IdempotentAspect.class
 com/forex/common/base/lock/RedisLockAspect.class
+com/forex/common/base/context/TraceContext.class
 com/forex/common/base/domain/BaseAggregate.class
 com/forex/common/base/domain/BaseDomainEvent.class
 com/forex/common/base/exception/GlobalExceptionHandler.class
@@ -15,9 +16,12 @@ com/forex/common/base/constant/SystemConstants.class
 com/forex/common/base/enums/YesNoEnum.class
 com/forex/common/base/dto/PageResp.class
 com/forex/common/base/enums/CustomerTypeEnum.class
+com/forex/common/base/config/CommonBaseAutoConfiguration.class
 com/forex/common/base/util/SpelUtil.class
 com/forex/common/base/annotation/DomainEvent.class
 com/forex/common/base/ratelimit/RateLimitAspect.class
+com/forex/common/base/web/RequestTraceFilter.class
+com/forex/common/base/web/TraceResponseBodyAdvice.class
 com/forex/common/base/exception/BusinessException.class
 com/forex/common/base/annotation/RedisLock.class
 com/forex/common/base/enums/TradeTypeEnum.class
@@ -26,3 +30,4 @@ com/forex/common/base/domain/BaseEntity.class
 com/forex/common/base/exception/BaseException.class
 com/forex/common/base/domain/BaseValueObject.class
 com/forex/common/base/enums/CurrencyEnum.class
+com/forex/common/base/idempotent/IdempotencyKeyResolver.class

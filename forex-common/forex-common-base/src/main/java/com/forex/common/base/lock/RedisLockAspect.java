@@ -14,6 +14,7 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
@@ -21,6 +22,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 @Aspect
 @Component
+@Order(2)
 @ConditionalOnBean(RedissonClient.class)
 public class RedisLockAspect {
 
@@ -40,19 +42,35 @@ public class RedisLockAspect {
         try {
             acquired = lock.tryLock(redisLock.waitTime(), redisLock.leaseTime(), redisLock.timeUnit());
             if (!acquired) {
-                log.warn("获取分布式锁失败: key={}", lockKey);
+                log.warn(
+                        "Distributed lock acquisition failed / 获取分布式锁失败, method={}, keyDigest={}",
+                        signature.toShortString(),
+                        keyDigest(lockKey));
                 throw new BusinessException(ResultCode.LOCK_FAILED);
             }
-            log.debug("获取分布式锁成功: key={}", lockKey);
+            log.debug(
+                    "Distributed lock acquired / 获取分布式锁成功, method={}, keyDigest={}",
+                    signature.toShortString(),
+                    keyDigest(lockKey));
             return joinPoint.proceed();
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
+            log.warn(
+                    "Distributed lock interrupted / 获取分布式锁被中断, method={}",
+                    signature.toShortString());
             throw new BusinessException(ResultCode.LOCK_FAILED);
         } finally {
             if (acquired && lock.isHeldByCurrentThread()) {
                 lock.unlock();
-                log.debug("释放分布式锁: key={}", lockKey);
+                log.debug(
+                        "Distributed lock released / 释放分布式锁成功, method={}, keyDigest={}",
+                        signature.toShortString(),
+                        keyDigest(lockKey));
             }
         }
+    }
+
+    private String keyDigest(String lockKey) {
+        return Integer.toHexString(lockKey.hashCode());
     }
 }

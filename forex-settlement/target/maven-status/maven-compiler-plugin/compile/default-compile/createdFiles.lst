@@ -17,6 +17,7 @@ com/forex/settlement/adapter/dto/LcResp.class
 com/forex/settlement/adapter/dto/CreateLcReq.class
 com/forex/settlement/adapter/controller/GuaranteeController.class
 com/forex/settlement/domain/model/entity/BankGuarantee.class
+com/forex/settlement/adapter/dto/CollectionPageQuery.class
 com/forex/settlement/adapter/dto/LcPageQuery.class
 com/forex/settlement/infrastructure/persistence/LetterOfCreditPO.class
 com/forex/settlement/infrastructure/persistence/DocumentaryCollectionPO.class
@@ -39,5 +40,6 @@ com/forex/settlement/domain/model/entity/DocumentaryCollection.class
 com/forex/settlement/domain/model/query/CollectionQuery.class
 com/forex/settlement/adapter/controller/LcController.class
 com/forex/settlement/domain/model/query/LcQuery.class
+com/forex/settlement/adapter/dto/GuaranteePageQuery.class
 com/forex/settlement/application/command/CreateGuaranteeCmd.class
 com/forex/settlement/infrastructure/repository/LcRepositoryImpl.class

@@ -2,8 +2,10 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RateLimit.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RedisLock.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/config/CommonBaseAutoConfiguration.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/SystemConstants.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/context/TraceContext.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseDomainEvent.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseEntity.java
@@ -20,9 +22,12 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BaseException.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotencyKeyResolver.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/web/RequestTraceFilter.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-common/forex-common-base/src/main/java/com/forex/common/base/web/TraceResponseBodyAdvice.java

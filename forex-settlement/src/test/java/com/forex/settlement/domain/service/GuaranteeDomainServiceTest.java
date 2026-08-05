@@ -38,11 +38,11 @@ class GuaranteeDomainServiceTest {
                 new BigDecimal("200000.00"), "USD", "BENEFICIARY INC",
                 LocalDate.of(2026, 6, 1), LocalDate.of(2026, 6, 1),
                 LocalDate.of(2027, 6, 1), LocalDate.of(2027, 9, 1),
-                "CG202606001", "URDG758", 1001L, "Bid bond");
+                "CG202606001", "URDG758", new BigDecimal("0.001500"), 1001L, "Bid bond");
 
         assertNotNull(result);
         assertTrue(result.getGuaranteeNo().startsWith("BG"));
-        assertEquals("ISSUED", result.getGuaranteeStatus());
+        assertEquals(BankGuarantee.STATUS_DRAFT, result.getGuaranteeStatus());
         assertEquals(new BigDecimal("200000.00"), result.getGuaranteeAmount());
         verify(guaranteeRepository).save(any());
     }
@@ -50,7 +50,7 @@ class GuaranteeDomainServiceTest {
     @Test
     @DisplayName("Issue guarantee saves the guarantee")
     void testIssueGuarantee() {
-        BankGuarantee g = createGuarantee();
+        BankGuarantee g = createDraftGuarantee();
         when(guaranteeRepository.save(any())).thenReturn(g);
 
         guaranteeDomainService.issueGuarantee(g);
@@ -61,7 +61,7 @@ class GuaranteeDomainServiceTest {
     @Test
     @DisplayName("Claim saves the guarantee")
     void testClaim() {
-        BankGuarantee g = createGuarantee();
+        BankGuarantee g = createIssuedGuarantee();
         when(guaranteeRepository.save(any())).thenReturn(g);
 
         guaranteeDomainService.claim(g);
@@ -72,7 +72,7 @@ class GuaranteeDomainServiceTest {
     @Test
     @DisplayName("Expire saves the guarantee")
     void testExpire() {
-        BankGuarantee g = createGuarantee();
+        BankGuarantee g = createIssuedGuarantee();
         when(guaranteeRepository.save(any())).thenReturn(g);
 
         guaranteeDomainService.expire(g);
@@ -89,7 +89,7 @@ class GuaranteeDomainServiceTest {
                 new BigDecimal("500000.00"), "EUR", "OWNER LTD",
                 LocalDate.now(), LocalDate.now(),
                 LocalDate.now().plusYears(2), LocalDate.now().plusYears(2).plusMonths(3),
-                "CG001", "URDG758", 1001L, "Performance bond");
+                "CG001", "URDG758", BigDecimal.ZERO, 1001L, "Performance bond");
 
         assertTrue(perf.getGuaranteeNo().startsWith("BG"));
         assertEquals("EUR", perf.getGuaranteeCurrency());
@@ -121,12 +121,18 @@ class GuaranteeDomainServiceTest {
         assertFalse(g.isExpired());
     }
 
-    private BankGuarantee createGuarantee() {
+    private BankGuarantee createDraftGuarantee() {
         return new BankGuarantee(null, "BG20260601001", 1001L,
                 "BID", new BigDecimal("100000.00"), "USD",
                 "BENEFICIARY CO", LocalDate.now(), LocalDate.now(),
                 LocalDate.now().plusYears(1), LocalDate.now().plusYears(1).plusMonths(3),
-                "CG001", "URDG758", "ISSUED",
+                "CG001", "URDG758", BankGuarantee.STATUS_DRAFT,
                 BigDecimal.ZERO, BigDecimal.ZERO, 1001L, null, null);
+    }
+
+    private BankGuarantee createIssuedGuarantee() {
+        BankGuarantee guarantee = createDraftGuarantee();
+        guarantee.issue(LocalDate.now());
+        return guarantee;
     }
 }

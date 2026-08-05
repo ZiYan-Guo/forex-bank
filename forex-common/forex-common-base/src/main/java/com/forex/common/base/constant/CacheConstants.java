@@ -15,6 +15,7 @@ public final class CacheConstants {
     public static final String CONFIG_PREFIX = "config:";
 
     public static final long RATE_CACHE_TTL_SECONDS = 10;
+    public static final long RATE_CACHE_L2_TTL_SECONDS = 15;
     public static final long LOCK_DEFAULT_TTL_SECONDS = 10;
     public static final long IDEMPOTENT_DEFAULT_TTL_SECONDS = 30;
     public static final long BLACKLIST_REFRESH_MINUTES = 5;

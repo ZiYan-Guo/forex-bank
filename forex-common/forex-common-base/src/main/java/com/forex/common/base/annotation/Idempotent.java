@@ -7,9 +7,18 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Idempotent annotation. Prevents duplicate submissions via Redis-based token mechanism.
- * 幂等注解。基于Redis令牌机制防止重复提交。
- * Used by IdempotentAspect via AOP. 由IdempotentAspect通过AOP实现。
+ * Idempotent annotation. Prevents duplicate submissions via a business key and request fingerprint.
+ * 幂等注解。通过业务键和请求指纹防止重复提交。
+ *
+ * <p>The key expression must describe the business scope only. Do not append current time,
+ * random values, or UUIDs to the expression, otherwise every retry becomes a new request.
+ * key表达式只描述业务范围，禁止拼接当前时间、随机数或UUID，否则重试请求会被当成新请求。</p>
+ *
+ * <p>{@link com.forex.common.base.idempotent.IdempotentAspect} combines the expression with the
+ * Idempotency-Key request header. When the header is absent, it derives a deterministic
+ * fingerprint from the method arguments.
+ * {@link com.forex.common.base.idempotent.IdempotentAspect} 会将表达式与 Idempotency-Key 请求头组合；
+ * 未提供请求头时，则根据方法参数生成稳定指纹。</p>
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

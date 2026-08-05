@@ -32,7 +32,8 @@ public class GuaranteeDomainService {
                                            String beneficiaryInfo, LocalDate issueDate,
                                            LocalDate effectiveDate, LocalDate expiryDate,
                                            LocalDate claimExpiryDate, String counterGuaranteeNo,
-                                           String guaranteeFormat, Long operatorId, String remark) {
+                                           String guaranteeFormat, BigDecimal commissionRate,
+                                           Long operatorId, String remark) {
         if (customerId == null) {
             throw new BusinessException(ResultCode.VALIDATE_FAIL, "客户ID不能为空");
         }
@@ -43,29 +44,34 @@ public class GuaranteeDomainService {
         BankGuarantee g = new BankGuarantee(null, guaranteeNo, customerId,
                 guaranteeType, guaranteeAmount, guaranteeCurrency, beneficiaryInfo,
                 issueDate, effectiveDate, expiryDate, claimExpiryDate,
-                counterGuaranteeNo, guaranteeFormat, "ISSUED",
-                BigDecimal.ZERO, BigDecimal.ZERO, operatorId, null, remark);
+                counterGuaranteeNo, guaranteeFormat, BankGuarantee.STATUS_DRAFT,
+                BigDecimal.ZERO, commissionRate == null ? BigDecimal.ZERO : commissionRate,
+                operatorId, null, remark);
 
         BankGuarantee saved = guaranteeRepository.save(g);
 
-        log.info("创建银行保函: guaranteeNo={}, amount={} {}", saved.getGuaranteeNo(),
+        log.info("Bank guarantee created / 创建银行保函, guaranteeNo={}, amount={} {}",
+                saved.getGuaranteeNo(),
                 saved.getGuaranteeAmount(), saved.getGuaranteeCurrency());
         return saved;
     }
 
     public void issueGuarantee(BankGuarantee g) {
+        g.issue(LocalDate.now());
         guaranteeRepository.save(g);
-        log.info("银行保函已开立: guaranteeNo={}", g.getGuaranteeNo());
+        log.info("Bank guarantee issued / 银行保函已开立, guaranteeNo={}", g.getGuaranteeNo());
     }
 
     public void claim(BankGuarantee g) {
+        g.claim();
         guaranteeRepository.save(g);
-        log.info("银行保函索赔: guaranteeNo={}", g.getGuaranteeNo());
+        log.info("Bank guarantee claimed / 银行保函索赔, guaranteeNo={}", g.getGuaranteeNo());
     }
 
     public void expire(BankGuarantee g) {
+        g.expire();
         guaranteeRepository.save(g);
-        log.info("银行保函已到期: guaranteeNo={}", g.getGuaranteeNo());
+        log.info("Bank guarantee expired / 银行保函已到期, guaranteeNo={}", g.getGuaranteeNo());
     }
 
     private String generateGuaranteeNo() {

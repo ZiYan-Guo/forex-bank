@@ -4,6 +4,7 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/adapter/dto/RateQueryReq.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/adapter/dto/RateResp.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/application/command/RateSaveCmd.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/application/port/ExchangeRateCache.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/domain/event/RateUpdatedEvent.java
@@ -13,6 +14,7 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/infrastructure/cache/LayeredExchangeRateCache.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/RatePublishConfigMapper.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/RatePublishLogMapper.java
