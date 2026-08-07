@@ -1,0 +1,35 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java",
+      "language": "java",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java",
+      "language": "java",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java",
+      "language": "java",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java": [],
+    "forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java": [],
+    "forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java": [],
+    "forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java": []
+  }
+}

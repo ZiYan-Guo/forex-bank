@@ -1,0 +1,14 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "sql/risk/init.sql",
+      "language": "sql",
+      "sizeLines": 124,
+      "fileCategory": "data"
+    }
+  ],
+  "batchImportData": {
+    "sql/risk/init.sql": []
+  }
+}

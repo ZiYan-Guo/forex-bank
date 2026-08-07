@@ -1,0 +1,111 @@
+[
+  {
+    "order": 1,
+    "title": "项目概览",
+    "description": "从 README 开始理解这个银行外汇系统的业务定位、模块划分和整体技术栈。它为后续阅读 Java 微服务、Vue 前端和数据库脚本提供共同语境。",
+    "nodeIds": [
+      "document:README.md"
+    ]
+  },
+  {
+    "order": 2,
+    "title": "系统配置与构建",
+    "description": "根 Maven、各模块 pom 和前端构建配置定义了这个多模块系统如何编译、依赖和装配。先看配置层可以帮助你理解后端 Spring Boot 服务、前端 Vite 应用以及公共库之间的边界。",
+    "nodeIds": [
+      "config:pom.xml",
+      "config:forex-bank-web/package.json"
+    ]
+  },
+  {
+    "order": 3,
+    "title": "前端业务入口",
+    "description": "前端 API 客户端、汇率 store 和页面组件共同组成用户操作外汇业务的入口。这里可以看到 Vue 页面如何调用后端接口，并把汇率、风控、结算等业务状态呈现在界面中。",
+    "nodeIds": [
+      "file:forex-bank-web/src/api/request.ts",
+      "file:forex-bank-web/src/api/business.ts",
+      "file:forex-bank-web/src/store/rate.ts",
+      "file:forex-bank-web/src/views/exchange/ExchangeTrade.vue"
+    ],
+    "languageLesson": "Vue 单文件组件把 template、script 和 style 放在同一文件中；配合 Pinia store，可以让页面交互与共享状态保持清晰分层。"
+  },
+  {
+    "order": 4,
+    "title": "API 适配层",
+    "description": "各业务 Controller 是外部请求进入后端的第一站，负责参数校验、DTO 转换和应用服务委派。支付、汇率、调度、风控和结算 Controller 展示了系统以 REST API 暴露业务能力的方式。",
+    "nodeIds": [
+      "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java"
+    ],
+    "languageLesson": "Spring MVC 的 Controller 通常只处理 HTTP 边界，核心业务应委派给 Service，这让接口层更薄、测试边界更清楚。"
+  },
+  {
+    "order": 5,
+    "title": "应用服务编排",
+    "description": "应用服务层把 API 请求转换为业务用例，协调领域对象、仓储、缓存和外部系统。RateAppService、ScheduleAppService 和 SettlementAppService 展示了跨模块业务流程如何落在应用层。",
+    "nodeIds": [
+      "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java"
+    ]
+  },
+  {
+    "order": 6,
+    "title": "领域模型与规则",
+    "description": "领域层保存核心业务语义：汇率聚合、调度任务、结算实体和风控抽样规则都在这里表达。阅读这些模型和领域服务，可以看到系统如何把金融业务约束沉淀成可复用、可测试的对象。",
+    "nodeIds": [
+      "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java"
+    ],
+    "languageLesson": "DDD 项目通常把业务不变量放在聚合、实体和领域服务中，而不是散落在 Controller 里。这样规则能被多个用例共享，也更容易单独测试。"
+  },
+  {
+    "order": 7,
+    "title": "持久化适配",
+    "description": "基础设施与持久化层把领域仓储接口落实为数据库访问、MyBatis mapper 和缓存实现。它让领域层不直接依赖数据库细节，同时仍能支持分页查询、缓存读取和数据映射。",
+    "nodeIds": [
+      "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "file:forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java",
+      "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java"
+    ]
+  },
+  {
+    "order": 8,
+    "title": "共享平台能力",
+    "description": "公共模块提供跨业务域复用的异常处理、追踪、安全、限流、锁和幂等能力。它们通常通过 Spring 自动装配、AOP 或过滤器织入请求链路，让业务模块保持专注。",
+    "nodeIds": [
+      "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java"
+    ],
+    "languageLesson": "Spring AOP 适合处理日志、幂等、限流这类横切关注点；业务方法保持干净，增强逻辑由切面统一插入。"
+  },
+  {
+    "order": 9,
+    "title": "数据脚本",
+    "description": "SQL 脚本定义了系统运行所需的基础表结构和初始化数据。把它和领域模型、Repository 一起阅读，可以串起数据库字段、领域对象和应用查询之间的映射关系。",
+    "nodeIds": [
+      "table:sql/init-all.sql:init-all",
+      "table:sql/risk/init.sql:init",
+      "table:sql/t_journal_entry.sql:t_journal_entry",
+      "table:sql/t_month_end_closing.sql:t_month_end_closing"
+    ],
+    "languageLesson": "SQL 初始化脚本应保持可重复执行或明确执行顺序；表结构变化会直接影响领域模型、mapper 和前端展示。"
+  },
+  {
+    "order": 10,
+    "title": "测试与交付支撑",
+    "description": "测试层验证领域规则和应用服务的关键行为，文档与 Docker Compose 则支撑团队理解和运行系统。最后看这些文件，可以确认架构中的核心路径是否有测试保护，以及系统如何在本地被组装起来。",
+    "nodeIds": [
+      "file:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "file:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "file:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "service:docker/docker-compose.yml"
+    ]
+  }
+]

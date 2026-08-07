@@ -4,8 +4,16 @@ import com.forex.common.base.annotation.Idempotent;
 import com.forex.common.base.annotation.RedisLock;
 import com.forex.common.base.dto.PageResp;
 import com.forex.common.base.result.R;
+import com.forex.margin.adapter.dto.CollateralLedgerSummaryResp;
+import com.forex.margin.adapter.dto.CollateralValuationReq;
+import com.forex.margin.adapter.dto.CollateralValuationResp;
+import com.forex.margin.adapter.dto.InitialMarginCalcReq;
+import com.forex.margin.adapter.dto.InitialMarginCalcResp;
 import com.forex.margin.adapter.dto.MarginResp;
+import com.forex.margin.adapter.dto.VmMarginCalcReq;
+import com.forex.margin.adapter.dto.VmMarginCalcResp;
 import com.forex.margin.application.command.CreateMarginCmd;
+import com.forex.margin.application.service.MarginCalculationService;
 import com.forex.margin.application.service.MarginAppService;
 import com.forex.margin.domain.model.aggregate.MarginAccount;
 import com.forex.margin.adapter.dto.MarginPageQuery;
@@ -37,6 +45,7 @@ import com.forex.common.security.annotation.RequirePermission;
 public class MarginController {
 
     private final MarginAppService marginAppService;
+    private final MarginCalculationService marginCalculationService;
 
     @Operation(summary = "创建初始保证金")
     @RequirePermission("margin:create")
@@ -107,6 +116,34 @@ public class MarginController {
         return R.ok(result);
     }
 
+    @Operation(summary = "变动保证金计量")
+    @RequirePermission("margin:calculate")
+    @PostMapping("/calculate/vm")
+    public R<VmMarginCalcResp> calculateVariationMargin(@Valid @RequestBody VmMarginCalcReq req) {
+        return R.ok(marginCalculationService.calculateVariationMargin(req));
+    }
+
+    @Operation(summary = "初始保证金标准法计量")
+    @RequirePermission("margin:calculate")
+    @PostMapping("/calculate/im-standard")
+    public R<InitialMarginCalcResp> calculateStandardInitialMargin(@Valid @RequestBody InitialMarginCalcReq req) {
+        return R.ok(marginCalculationService.calculateStandardInitialMargin(req));
+    }
+
+    @Operation(summary = "押品估值")
+    @RequirePermission("margin:collateral")
+    @PostMapping("/collateral/valuation")
+    public R<CollateralValuationResp> valueCollateral(@Valid @RequestBody CollateralValuationReq req) {
+        return R.ok(marginCalculationService.valueCollateral(req));
+    }
+
+    @Operation(summary = "押品台账汇总")
+    @RequirePermission("margin:collateral")
+    @GetMapping("/collateral/ledger-summary")
+    public R<CollateralLedgerSummaryResp> summarizeCollateralLedger() {
+        return R.ok(marginAppService.summarizeCollateralLedger());
+    }
+
     private MarginResp toMarginResp(MarginAccount account) {
         MarginResp resp = new MarginResp();
         resp.setId(account.getId());
@@ -123,6 +160,8 @@ public class MarginController {
         resp.setDueDate(account.getDueDate());
         resp.setStatus(account.getStatus());
         resp.setCollateralType(account.getCollateralType());
+        resp.setCollateralValue(account.getCollateralValue());
+        resp.setWaterLevel(account.getWaterLevel());
         resp.setReleaseReason(account.getReleaseReason());
         return resp;
     }

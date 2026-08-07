@@ -1,0 +1,387 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java",
+      "type": "file",
+      "name": "ExchangeRateMapper.java",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java",
+      "summary": "定义汇率持久化查询的 MyBatis Mapper，提供最新汇率、全币种最新牌价、日期区间和分页历史查询。SQL 注解直接表达 t_exchange_rate 的过滤、排序和动态条件。",
+      "tags": [
+        "data-access",
+        "mybatis",
+        "汇率查询",
+        "sql-mapper"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Java interface 通过 MyBatis 注解声明 SQL，动态脚本条件用于可选查询参数。"
+    },
+    {
+      "id": "class:forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java:ExchangeRateMapper",
+      "type": "class",
+      "name": "ExchangeRateMapper",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java",
+      "lineRange": [
+        15,
+        51
+      ],
+      "summary": "汇率表的 MyBatis Mapper interface，承载最新牌价、历史查询和分页查询 SQL。",
+      "tags": [
+        "data-access",
+        "mybatis",
+        "sql-mapper",
+        "汇率"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "type": "file",
+      "name": "ExchangeRateRepositoryImpl.java",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "summary": "实现汇率领域仓储，将 ExchangeRate 聚合与 ExchangeRatePO 持久化对象互相转换，并封装保存、按 ID 查询、最新牌价和分页查询。它把 MyBatis 分页结果转换为通用 PageResp 供应用层使用。",
+      "tags": [
+        "repository",
+        "domain-mapping",
+        "汇率",
+        "mybatis",
+        "pagination"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:ExchangeRateRepositoryImpl",
+      "type": "class",
+      "name": "ExchangeRateRepositoryImpl",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "lineRange": [
+        20,
+        105
+      ],
+      "summary": "汇率领域仓储实现，负责领域聚合与持久化对象之间的转换以及分页结果封装。",
+      "tags": [
+        "repository",
+        "domain-mapping",
+        "mybatis",
+        "汇率"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "lineRange": [
+        27,
+        36
+      ],
+      "summary": "根据领域对象是否已有 ID 执行插入或更新，并返回重新构建的 ExchangeRate 聚合。",
+      "tags": [
+        "repository",
+        "persistence",
+        "domain-mapping"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:findById",
+      "type": "function",
+      "name": "findById",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "lineRange": [
+        38,
+        42
+      ],
+      "summary": "通过 Mapper 按主键读取持久化对象，并转换为 Optional<ExchangeRate>。",
+      "tags": [
+        "repository",
+        "查询",
+        "domain-mapping"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:findLatestByCurrencyPair",
+      "type": "function",
+      "name": "findLatestByCurrencyPair",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "lineRange": [
+        44,
+        48
+      ],
+      "summary": "查询指定货币对的最新有效汇率，并转换为领域聚合。",
+      "tags": [
+        "repository",
+        "汇率查询",
+        "domain-mapping"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:findLatestRates",
+      "type": "function",
+      "name": "findLatestRates",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "lineRange": [
+        50,
+        54
+      ],
+      "summary": "读取每个货币对的最新有效牌价列表，并批量转换为领域对象。",
+      "tags": [
+        "repository",
+        "汇率查询",
+        "stream-mapping"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "lineRange": [
+        56,
+        67
+      ],
+      "summary": "构造 MyBatis Plus Page，执行历史牌价分页查询并转换为 PageResp<ExchangeRate>。",
+      "tags": [
+        "repository",
+        "pagination",
+        "汇率查询"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:toDomain",
+      "type": "function",
+      "name": "toDomain",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "lineRange": [
+        69,
+        87
+      ],
+      "summary": "将 ExchangeRatePO 的持久化字段重建为 ExchangeRate 聚合。",
+      "tags": [
+        "domain-mapping",
+        "reconstitution",
+        "汇率"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:toPO",
+      "type": "function",
+      "name": "toPO",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "lineRange": [
+        89,
+        104
+      ],
+      "summary": "将 ExchangeRate 聚合的汇率、日期、来源和状态字段复制到 ExchangeRatePO。",
+      "tags": [
+        "persistence-mapping",
+        "domain-mapping",
+        "汇率"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/persistence/ExchangeRatePO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/persistence/ExchangeRatePO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java:ExchangeRateMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java:ExchangeRateMapper",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:ExchangeRateRepositoryImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:findById",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:findLatestByCurrencyPair",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:findLatestRates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:toDomain",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:toPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:save",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:findById",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:findLatestByCurrencyPair",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:findLatestRates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:pageQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:ExchangeRateRepositoryImpl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:pageQuery",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java:of",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:toDomain",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:reconstitute",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java:ExchangeRateRepositoryImpl",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java:ExchangeRateRepository",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java:ExchangeRateMapper",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/base/BaseMapperExt.java:BaseMapperExt",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    }
+  ]
+}

@@ -110,7 +110,8 @@ public class MarginAccount extends BaseAggregate {
                                               BigDecimal depositedAmount, BigDecimal shortfallAmount,
                                               BigDecimal marginRate, LocalDateTime callDate,
                                               LocalDateTime dueDate, String status,
-                                              String collateralType, String releaseReason) {
+                                              String collateralType, String releaseReason,
+                                              BigDecimal collateralValue, String waterLevel) {
         MarginAccount account = new MarginAccount();
         account.id = id;
         account.marginNo = marginNo;
@@ -127,6 +128,8 @@ public class MarginAccount extends BaseAggregate {
         account.status = status;
         account.collateralType = collateralType;
         account.releaseReason = releaseReason;
+        account.collateralValue = collateralValue != null ? collateralValue : BigDecimal.ZERO;
+        account.waterLevel = waterLevel;
         return account;
     }
 

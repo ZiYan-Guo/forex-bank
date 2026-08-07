@@ -28,5 +28,7 @@ public class MarginAccountPO extends BasePO {
     private LocalDateTime dueDate;
     private String status;
     private String collateralType;
+    private BigDecimal collateralValue;
+    private String waterLevel;
     private String releaseReason;
 }

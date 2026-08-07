@@ -1,0 +1,303 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "type": "file",
+      "name": "RateLimitAspect.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "summary": "提供 @RateLimit 注解的限流切面，使用 SpEL 或方法签名生成限流 key，并通过 Redisson RRateLimiter 控制请求吞吐。它为共享基础层提供统一的接口级流量保护。",
+      "tags": [
+        "aop",
+        "rate-limit",
+        "redis",
+        "traffic-control"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Redisson RRateLimiter 使用 OVERALL 速率类型和秒级窗口表达全局限流策略。"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:RateLimitAspect",
+      "type": "class",
+      "name": "RateLimitAspect",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "lineRange": [
+        22,
+        55
+      ],
+      "summary": "RateLimitAspect 封装一个 Spring AOP 横切关注点，将注解驱动的基础能力应用到被拦截方法。",
+      "tags": [
+        "aop",
+        "cross-cutting",
+        "spring",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:RateLimitAspect",
+      "type": "function",
+      "name": "RateLimitAspect",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "lineRange": [
+        31,
+        33
+      ],
+      "summary": "RateLimitAspect 实现 RateLimitAspect 中的一段核心业务流程。",
+      "tags": [
+        "function",
+        "java",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:around",
+      "type": "function",
+      "name": "around",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "lineRange": [
+        35,
+        54
+      ],
+      "summary": "解析限流 key 并配置 Redisson rate limiter，在令牌获取失败时返回业务限流异常。",
+      "tags": [
+        "aop",
+        "interceptor",
+        "cross-cutting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "type": "file",
+      "name": "SecurityAutoConfiguration.java",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "summary": "安全模块自动配置类，绑定 forex.security 配置并在启动时校验 JWT secret 强度。它创建 JwtUtil Bean，并在启用 SM2 时提供 Sm2Util Bean。",
+      "tags": [
+        "configuration",
+        "security",
+        "jwt",
+        "auto-configuration"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Spring Boot 的 @ConfigurationProperties 与条件装配注解共同控制安全组件初始化。"
+    },
+    {
+      "id": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:SecurityAutoConfiguration",
+      "type": "class",
+      "name": "SecurityAutoConfiguration",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "lineRange": [
+        19,
+        63
+      ],
+      "summary": "SecurityAutoConfiguration 封装 SecurityAutoConfiguration.java 中的核心职责。",
+      "tags": [
+        "java",
+        "class",
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:validate",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "lineRange": [
+        38,
+        47
+      ],
+      "summary": "启动后校验 JWT secret 长度是否满足 256-bit 强度要求，不满足时阻止应用继续启动。",
+      "tags": [
+        "validation",
+        "business-rules",
+        "guard-clause"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:jwtUtil",
+      "type": "function",
+      "name": "jwtUtil",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "lineRange": [
+        53,
+        56
+      ],
+      "summary": "使用配置中的 jwtSecret 创建 JwtUtil Bean。",
+      "tags": [
+        "function",
+        "java",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:sm2Util",
+      "type": "function",
+      "name": "sm2Util",
+      "filePath": "forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "lineRange": [
+        58,
+        62
+      ],
+      "summary": "在 SM2 开关启用时创建 Sm2Util Bean，用于国密能力初始化。",
+      "tags": [
+        "function",
+        "java",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:RateLimitAspect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:RateLimitAspect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:RateLimitAspect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:RateLimitAspect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:around",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:around",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RateLimit.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:SecurityAutoConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:SecurityAutoConfiguration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:validate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:jwtUtil",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:jwtUtil",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:sm2Util",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "target": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:sm2Util",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java:around",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java:resolveTemplate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java:jwtUtil",
+      "target": "class:forex-common/forex-common-security/src/main/java/com/forex/common/security/jwt/JwtUtil.java:JwtUtil",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

@@ -1,0 +1,1052 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "type": "file",
+      "name": "SamplingController.java",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "summary": "提供资本项目便利化抽查的 REST API，管理抽查规则、评估交易抽查比例、生成和完成抽查任务，并计算覆盖率统计。控制器协调规则引擎与规则、任务仓储，将领域对象转换为前端可消费的 Map 视图。",
+      "tags": [
+        "api-handler",
+        "风险控制",
+        "抽查规则",
+        "task-management",
+        "权限控制"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Spring MVC endpoint 与领域转换逻辑集中在同一控制器中，包含多处中英双语业务日志。"
+    },
+    {
+      "id": "class:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:SamplingController",
+      "type": "class",
+      "name": "SamplingController",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "lineRange": [
+        43,
+        416
+      ],
+      "summary": "抽查规则和任务 API 控制器，连接规则引擎、规则仓储和任务仓储。",
+      "tags": [
+        "api-handler",
+        "风险控制",
+        "spring-mvc",
+        "adapter"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:listRules",
+      "type": "function",
+      "name": "listRules",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "lineRange": [
+        54,
+        63
+      ],
+      "summary": "读取全部抽查规则并转换为列表视图。",
+      "tags": [
+        "endpoint",
+        "规则管理",
+        "查询"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:createRule",
+      "type": "function",
+      "name": "createRule",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "lineRange": [
+        65,
+        76
+      ],
+      "summary": "根据请求体构造新的 SamplingRule，保存后返回规则视图。",
+      "tags": [
+        "endpoint",
+        "规则管理",
+        "权限控制"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:updateRule",
+      "type": "function",
+      "name": "updateRule",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "lineRange": [
+        78,
+        91
+      ],
+      "summary": "加载已有规则，合并请求字段后保存更新结果。",
+      "tags": [
+        "endpoint",
+        "规则管理",
+        "更新"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:updateRuleStatus",
+      "type": "function",
+      "name": "updateRuleStatus",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "lineRange": [
+        93,
+        108
+      ],
+      "summary": "在规则存在时合并状态字段并保存，用于启用或停用抽查规则。",
+      "tags": [
+        "endpoint",
+        "规则管理",
+        "状态切换"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:deleteRule",
+      "type": "function",
+      "name": "deleteRule",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "lineRange": [
+        110,
+        117
+      ],
+      "summary": "按 ID 删除抽查规则。",
+      "tags": [
+        "endpoint",
+        "规则管理",
+        "删除"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:evaluate",
+      "type": "function",
+      "name": "evaluate",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "lineRange": [
+        124,
+        153
+      ],
+      "summary": "提取交易属性并调用 SamplingRuleEngine 计算适用抽查比例。",
+      "tags": [
+        "endpoint",
+        "rule-engine",
+        "风险评估"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:generateTasks",
+      "type": "function",
+      "name": "generateTasks",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "lineRange": [
+        159,
+        179
+      ],
+      "summary": "按请求日期生成抽查任务快照，转换为领域任务后批量持久化。",
+      "tags": [
+        "endpoint",
+        "task-generation",
+        "规则引擎"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:listTasks",
+      "type": "function",
+      "name": "listTasks",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "lineRange": [
+        185,
+        196
+      ],
+      "summary": "读取全部抽查任务并组装总数和任务列表。",
+      "tags": [
+        "endpoint",
+        "task-management",
+        "查询"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:completeTask",
+      "type": "function",
+      "name": "completeTask",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "lineRange": [
+        202,
+        217
+      ],
+      "summary": "按 taskId 查找抽查任务，写入检查结果并返回完成后的任务视图。",
+      "tags": [
+        "endpoint",
+        "task-management",
+        "状态流转"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:getStatistics",
+      "type": "function",
+      "name": "getStatistics",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "lineRange": [
+        223,
+        275
+      ],
+      "summary": "基于持久化抽查任务和固定业务分母计算近 30 日覆盖率、金额和模块分布。",
+      "tags": [
+        "endpoint",
+        "statistics",
+        "风险控制"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:toRule",
+      "type": "function",
+      "name": "toRule",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "lineRange": [
+        277,
+        291
+      ],
+      "summary": "把请求字段、默认值和既有规则合并为可保存的 SamplingRule。",
+      "tags": [
+        "domain-mapping",
+        "规则管理",
+        "adapter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:toRuleReq",
+      "type": "function",
+      "name": "toRuleReq",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "lineRange": [
+        293,
+        306
+      ],
+      "summary": "将已有 SamplingRule 反向转换为请求对象，便于局部更新状态。",
+      "tags": [
+        "dto-mapping",
+        "规则管理",
+        "adapter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:toRuleView",
+      "type": "function",
+      "name": "toRuleView",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "lineRange": [
+        308,
+        322
+      ],
+      "summary": "把 SamplingRule 转为包含条件、比例、模块、日期和状态字段的 Map 视图。",
+      "tags": [
+        "response-mapping",
+        "规则管理",
+        "adapter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:toTask",
+      "type": "function",
+      "name": "toTask",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "lineRange": [
+        324,
+        351
+      ],
+      "summary": "把规则引擎返回的任务快照转换为可持久化 SamplingTask，包含命中规则、业务日期和创建时间。",
+      "tags": [
+        "domain-mapping",
+        "task-management",
+        "adapter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:toTaskView",
+      "type": "function",
+      "name": "toTaskView",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "lineRange": [
+        353,
+        374
+      ],
+      "summary": "将 SamplingTask 的业务字段、抽查结果和审计时间转换为 API 响应视图。",
+      "tags": [
+        "response-mapping",
+        "task-management",
+        "adapter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "type": "file",
+      "name": "SamplingRuleEngine.java",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "summary": "实现资本项目便利化抽查规则引擎，根据活跃规则、交易属性、币种、国家和客户开户天数计算抽查比例。它还能基于候选交易生成可复现的抽查任务快照。",
+      "tags": [
+        "service",
+        "rule-engine",
+        "风险控制",
+        "json-condition",
+        "抽样"
+      ],
+      "complexity": "complex",
+      "languageNotes": "规则条件以 JSON 解析为 Map 后进行匹配，稳定 hash bucket 让同一业务日期的抽样结果保持可复现。"
+    },
+    {
+      "id": "class:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:SamplingRuleEngine",
+      "type": "class",
+      "name": "SamplingRuleEngine",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "lineRange": [
+        30,
+        299
+      ],
+      "summary": "资本项目便利化抽查规则引擎，执行 JSON 条件匹配、抽查比例计算和任务生成。",
+      "tags": [
+        "service",
+        "rule-engine",
+        "风险控制",
+        "抽样"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:evaluateTransaction",
+      "type": "function",
+      "name": "evaluateTransaction",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "lineRange": [
+        53,
+        73
+      ],
+      "summary": "评估交易命中的活跃抽查规则，并返回四舍五入后的最高抽查比例。",
+      "tags": [
+        "rule-engine",
+        "风险评估",
+        "抽样"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:generateSamplingTasks",
+      "type": "function",
+      "name": "generateSamplingTasks",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "lineRange": [
+        83,
+        123
+      ],
+      "summary": "遍历候选交易，按规则命中结果和稳定抽样桶生成待审核任务快照。",
+      "tags": [
+        "task-generation",
+        "rule-engine",
+        "抽样"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:evaluateMatchedRules",
+      "type": "function",
+      "name": "evaluateMatchedRules",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "lineRange": [
+        125,
+        152
+      ],
+      "summary": "筛选活跃或自动抽取规则，按优先级排序后匹配模块和条件并计算最高抽查率。",
+      "tags": [
+        "rule-engine",
+        "condition-matching",
+        "优先级"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:parseCondition",
+      "type": "function",
+      "name": "parseCondition",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "lineRange": [
+        154,
+        164
+      ],
+      "summary": "将规则条件 JSON 解析为 Map，解析失败时记录告警并返回空条件。",
+      "tags": [
+        "json-condition",
+        "解析",
+        "容错"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:conditionMatches",
+      "type": "function",
+      "name": "conditionMatches",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "lineRange": [
+        170,
+        203
+      ],
+      "summary": "按金额上下限、币种、国家、客户 ID 和开户天数判断交易是否满足规则条件。",
+      "tags": [
+        "condition-matching",
+        "风险控制",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:matchesOne",
+      "type": "function",
+      "name": "matchesOne",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "lineRange": [
+        205,
+        218
+      ],
+      "summary": "支持单值或集合条件与实际字符串进行大小写无关匹配。",
+      "tags": [
+        "utility",
+        "condition-matching",
+        "collection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:buildCandidateTransactions",
+      "type": "function",
+      "name": "buildCandidateTransactions",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "lineRange": [
+        238,
+        253
+      ],
+      "summary": "构造固定的候选交易快照，覆盖支付、结售汇、交易和结算等业务模块。",
+      "tags": [
+        "data-seed",
+        "task-generation",
+        "业务样本"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:tx",
+      "type": "function",
+      "name": "tx",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "lineRange": [
+        255,
+        266
+      ],
+      "summary": "生成单笔候选交易 Map，包含业务编号、客户、币种、国家、金额和开户天数。",
+      "tags": [
+        "factory",
+        "data-seed",
+        "业务样本"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "type": "file",
+      "name": "SamplingRuleEngineTest.java",
+      "filePath": "forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "summary": "验证 SamplingRuleEngine 在无规则、多规则取最高抽查率、开户天数条件和自动生成抽查任务场景下的行为。测试使用内存仓储桩，避免在受限 JDK 中依赖 Mockito runtime agent。",
+      "tags": [
+        "test",
+        "unit-test",
+        "rule-engine",
+        "风险控制",
+        "stub"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java:SamplingRuleEngineTest",
+      "type": "class",
+      "name": "SamplingRuleEngineTest",
+      "filePath": "forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "lineRange": [
+        24,
+        142
+      ],
+      "summary": "SamplingRuleEngine 的 JUnit 单元测试类，使用内存仓储桩覆盖核心规则匹配和任务生成路径。",
+      "tags": [
+        "test",
+        "unit-test",
+        "rule-engine",
+        "stub"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java:testEvaluateTransaction_NoRules",
+      "type": "function",
+      "name": "testEvaluateTransaction_NoRules",
+      "filePath": "forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "lineRange": [
+        35,
+        44
+      ],
+      "summary": "验证没有活跃规则时抽查比例返回 0.00。",
+      "tags": [
+        "unit-test",
+        "rule-engine",
+        "边界场景"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java:testEvaluateTransaction_WithSamplingRules",
+      "type": "function",
+      "name": "testEvaluateTransaction_WithSamplingRules",
+      "filePath": "forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "lineRange": [
+        46,
+        57
+      ],
+      "summary": "验证多条匹配规则时返回最高抽查比例。",
+      "tags": [
+        "unit-test",
+        "rule-engine",
+        "优先级"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java:testEvaluateTransaction_AccountAgeCondition",
+      "type": "function",
+      "name": "testEvaluateTransaction_AccountAgeCondition",
+      "filePath": "forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "lineRange": [
+        59,
+        70
+      ],
+      "summary": "验证开户天数条件能够命中并返回预期抽查比例。",
+      "tags": [
+        "unit-test",
+        "condition-matching",
+        "客户画像"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java:testGenerateSamplingTasks",
+      "type": "function",
+      "name": "testGenerateSamplingTasks",
+      "filePath": "forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "lineRange": [
+        72,
+        86
+      ],
+      "summary": "验证自动抽取规则能生成待处理任务并带有命中规则信息。",
+      "tags": [
+        "unit-test",
+        "task-generation",
+        "抽样"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java:createRule",
+      "type": "function",
+      "name": "createRule",
+      "filePath": "forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "lineRange": [
+        88,
+        102
+      ],
+      "summary": "构造测试用 SamplingRule，统一设置条件、比例、模块和启用状态。",
+      "tags": [
+        "test-helper",
+        "factory",
+        "rule-engine"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/domain/model/entity/MonitorRule.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/domain/repository/MonitorRuleRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/domain/model/entity/MonitorRule.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/domain/repository/MonitorRuleRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:SamplingController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:listRules",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:createRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:updateRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:updateRuleStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:deleteRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:evaluate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:generateTasks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:listTasks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:completeTask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:getStatistics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:toRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:toRuleReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:toRuleView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:toTask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:toTaskView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:listRules",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:createRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:updateRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:updateRuleStatus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:deleteRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:evaluate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:generateTasks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:listTasks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:completeTask",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:getStatistics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:SamplingController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:SamplingRuleEngine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:evaluateTransaction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:generateSamplingTasks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:evaluateMatchedRules",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:parseCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:conditionMatches",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:matchesOne",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:buildCandidateTransactions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:tx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:evaluateTransaction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:generateSamplingTasks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:SamplingRuleEngine",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "target": "class:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java:SamplingRuleEngineTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "target": "function:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java:testEvaluateTransaction_NoRules",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "target": "function:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java:testEvaluateTransaction_WithSamplingRules",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "target": "function:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java:testEvaluateTransaction_AccountAgeCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "target": "function:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java:testGenerateSamplingTasks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "target": "function:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java:createRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:evaluate",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:evaluateTransaction",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java:generateTasks",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:generateSamplingTasks",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:evaluateTransaction",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:evaluateMatchedRules",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:generateSamplingTasks",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:evaluateMatchedRules",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:generateSamplingTasks",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:buildCandidateTransactions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:evaluateMatchedRules",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:parseCondition",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:evaluateMatchedRules",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:conditionMatches",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:conditionMatches",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:matchesOne",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:buildCandidateTransactions",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:tx",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "target": "file:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "function:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java:testEvaluateTransaction_NoRules",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:evaluateTransaction",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java:testEvaluateTransaction_WithSamplingRules",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:evaluateTransaction",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java:testEvaluateTransaction_AccountAgeCondition",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:evaluateTransaction",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java:testGenerateSamplingTasks",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java:generateSamplingTasks",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

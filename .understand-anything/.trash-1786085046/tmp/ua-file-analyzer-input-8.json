@@ -1,0 +1,17 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "language": "java",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ]
+  }
+}

@@ -20,6 +20,9 @@ public interface MarginAccountMapper extends BaseMapperExt<MarginAccountPO> {
     @Select("SELECT * FROM t_margin_account WHERE customer_id = #{customerId} AND deleted = 0 ORDER BY create_time DESC")
     List<MarginAccountPO> selectByCustomerId(@Param("customerId") Long customerId);
 
+    @Select("SELECT * FROM t_margin_account WHERE deleted = 0 ORDER BY create_time DESC")
+    List<MarginAccountPO> selectForLedgerSummary();
+
     @Select("<script>" +
             "SELECT * FROM t_margin_account WHERE deleted = 0" +
             "<if test='query.customerId != null'>" +

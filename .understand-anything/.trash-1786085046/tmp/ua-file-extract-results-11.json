@@ -1,0 +1,1348 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 5,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 5,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 120,
+      "nonEmptyLines": 105,
+      "functions": [
+        {
+          "name": "getLatestRate",
+          "startLine": 41,
+          "endLine": 46,
+          "params": [
+            "currencyPair"
+          ]
+        },
+        {
+          "name": "getAllRates",
+          "startLine": 48,
+          "endLine": 55,
+          "params": []
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 57,
+          "endLine": 69,
+          "params": [
+            "query"
+          ]
+        },
+        {
+          "name": "convertCurrency",
+          "startLine": 71,
+          "endLine": 86,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "saveRate",
+          "startLine": 88,
+          "endLine": 94,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "publishRate",
+          "startLine": 96,
+          "endLine": 102,
+          "params": [
+            "rateId"
+          ]
+        },
+        {
+          "name": "toRateResp",
+          "startLine": 104,
+          "endLine": 119,
+          "params": [
+            "rate"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RateController",
+          "startLine": 32,
+          "endLine": 120,
+          "methods": [
+            "getLatestRate",
+            "getAllRates",
+            "pageQuery",
+            "convertCurrency",
+            "saveRate",
+            "publishRate",
+            "toRateResp"
+          ],
+          "properties": [
+            "rateAppService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getLatestRate",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "getAllRates",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "convertCurrency",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "saveRate",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "publishRate",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "RateController",
+          "line": 32,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getLatestRate",
+          "callee": "rateAppService.getRate",
+          "lineNumber": 44
+        },
+        {
+          "caller": "getLatestRate",
+          "callee": "R.ok",
+          "lineNumber": 45
+        },
+        {
+          "caller": "getLatestRate",
+          "callee": "toRateResp",
+          "lineNumber": 45
+        },
+        {
+          "caller": "getAllRates",
+          "callee": "rateAppService.getAllRates().values().stream()\n                .map(this::toRateResp).collect",
+          "lineNumber": 51
+        },
+        {
+          "caller": "getAllRates",
+          "callee": "rateAppService.getAllRates().values().stream().map",
+          "lineNumber": 51
+        },
+        {
+          "caller": "getAllRates",
+          "callee": "rateAppService.getAllRates().values().stream",
+          "lineNumber": 51
+        },
+        {
+          "caller": "getAllRates",
+          "callee": "rateAppService.getAllRates().values",
+          "lineNumber": 51
+        },
+        {
+          "caller": "getAllRates",
+          "callee": "rateAppService.getAllRates",
+          "lineNumber": 51
+        },
+        {
+          "caller": "getAllRates",
+          "callee": "Collectors.toList",
+          "lineNumber": 53
+        },
+        {
+          "caller": "getAllRates",
+          "callee": "R.ok",
+          "lineNumber": 54
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "rateAppService.pageQuery",
+          "lineNumber": 60
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getRecords().stream()\n                .map(this::toRateResp).toList",
+          "lineNumber": 61
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getRecords().stream().map",
+          "lineNumber": 61
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getRecords().stream",
+          "lineNumber": 61
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getRecords",
+          "lineNumber": 61
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "PageResp.of",
+          "lineNumber": 64
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getTotal",
+          "lineNumber": 64
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getPageNum",
+          "lineNumber": 64
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getPageSize",
+          "lineNumber": 64
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "log.info",
+          "lineNumber": 66
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getCurrencyPair",
+          "lineNumber": 67
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageNum",
+          "lineNumber": 67
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageSize",
+          "lineNumber": 67
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "page.getTotal",
+          "lineNumber": 67
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "R.ok",
+          "lineNumber": 68
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "rateAppService.convertCurrency",
+          "lineNumber": 75
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "req.getCurrencyPair",
+          "lineNumber": 75
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "req.getTargetCurrency",
+          "lineNumber": 75
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "req.getAmount",
+          "lineNumber": 75
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "rateAppService.getRate",
+          "lineNumber": 76
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "req.getCurrencyPair",
+          "lineNumber": 76
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "new ConversionResp",
+          "lineNumber": 78
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "resp.setFromCurrency",
+          "lineNumber": 79
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "req.getCurrencyPair",
+          "lineNumber": 79
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "resp.setToCurrency",
+          "lineNumber": 80
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "req.getTargetCurrency",
+          "lineNumber": 80
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "resp.setOriginalAmount",
+          "lineNumber": 81
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "req.getAmount",
+          "lineNumber": 81
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "resp.setConvertedAmount",
+          "lineNumber": 82
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "resp.setExchangeRate",
+          "lineNumber": 83
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "rate.getMidRate",
+          "lineNumber": 83
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "resp.setRateTime",
+          "lineNumber": 84
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "rate.getRateTime",
+          "lineNumber": 84
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "R.ok",
+          "lineNumber": 85
+        },
+        {
+          "caller": "saveRate",
+          "callee": "rateAppService.saveRate",
+          "lineNumber": 92
+        },
+        {
+          "caller": "saveRate",
+          "callee": "R.ok",
+          "lineNumber": 93
+        },
+        {
+          "caller": "saveRate",
+          "callee": "toRateResp",
+          "lineNumber": 93
+        },
+        {
+          "caller": "publishRate",
+          "callee": "rateAppService.publishToChannels",
+          "lineNumber": 100
+        },
+        {
+          "caller": "publishRate",
+          "callee": "R.ok",
+          "lineNumber": 101
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "new RateResp",
+          "lineNumber": 105
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "resp.setId",
+          "lineNumber": 106
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "rate.getId",
+          "lineNumber": 106
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "resp.setCurrencyPair",
+          "lineNumber": 107
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "rate.getCurrencyPair",
+          "lineNumber": 107
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "resp.setBaseCurrency",
+          "lineNumber": 108
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "rate.getBaseCurrency",
+          "lineNumber": 108
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "resp.setQuoteCurrency",
+          "lineNumber": 109
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "rate.getQuoteCurrency",
+          "lineNumber": 109
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "resp.setBidRate",
+          "lineNumber": 110
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "rate.getBidRate",
+          "lineNumber": 110
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "resp.setAskRate",
+          "lineNumber": 111
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "rate.getAskRate",
+          "lineNumber": 111
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "resp.setMidRate",
+          "lineNumber": 112
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "rate.getMidRate",
+          "lineNumber": 112
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "resp.setSpread",
+          "lineNumber": 113
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "rate.getSpread",
+          "lineNumber": 113
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "resp.setRateDate",
+          "lineNumber": 114
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "rate.getRateDate",
+          "lineNumber": 114
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "resp.setRateTime",
+          "lineNumber": 115
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "rate.getRateTime",
+          "lineNumber": 115
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "resp.setRateSource",
+          "lineNumber": 116
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "rate.getRateSource",
+          "lineNumber": 116
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "resp.setStatus",
+          "lineNumber": 117
+        },
+        {
+          "caller": "toRateResp",
+          "callee": "rate.getStatus",
+          "lineNumber": 117
+        }
+      ],
+      "metrics": {
+        "importCount": 9,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/adapter/dto/RateResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 49,
+      "nonEmptyLines": 34,
+      "classes": [
+        {
+          "name": "RateResp",
+          "startLine": 10,
+          "endLine": 49,
+          "methods": [],
+          "properties": [
+            "id",
+            "currencyPair",
+            "baseCurrency",
+            "quoteCurrency",
+            "bidRate",
+            "askRate",
+            "midRate",
+            "spread",
+            "rateDate",
+            "rateTime",
+            "rateSource",
+            "status"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RateResp",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 129,
+      "nonEmptyLines": 111,
+      "functions": [
+        {
+          "name": "getRate",
+          "startLine": 40,
+          "endLine": 53,
+          "params": [
+            "currencyPair"
+          ]
+        },
+        {
+          "name": "getAllRates",
+          "startLine": 55,
+          "endLine": 59,
+          "params": []
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 65,
+          "endLine": 70,
+          "params": [
+            "query"
+          ]
+        },
+        {
+          "name": "calculateAmount",
+          "startLine": 72,
+          "endLine": 75,
+          "params": [
+            "currencyPair",
+            "amount"
+          ]
+        },
+        {
+          "name": "saveRate",
+          "startLine": 77,
+          "endLine": 88,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "convertCurrency",
+          "startLine": 90,
+          "endLine": 121,
+          "params": [
+            "fromCcy",
+            "toCcy",
+            "amount"
+          ]
+        },
+        {
+          "name": "publishToChannels",
+          "startLine": 123,
+          "endLine": 128,
+          "params": [
+            "rateId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RateAppService",
+          "startLine": 28,
+          "endLine": 129,
+          "methods": [
+            "getRate",
+            "getAllRates",
+            "pageQuery",
+            "calculateAmount",
+            "saveRate",
+            "convertCurrency",
+            "publishToChannels"
+          ],
+          "properties": [
+            "exchangeRateRepository",
+            "rateCalculationDomainService",
+            "ratePublishDomainService",
+            "eventPublisher",
+            "exchangeRateCache"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getRate",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "getAllRates",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "calculateAmount",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "saveRate",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "convertCurrency",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "publishToChannels",
+          "line": 123,
+          "isDefault": false
+        },
+        {
+          "name": "RateAppService",
+          "line": 28,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getRate",
+          "callee": "exchangeRateCache\n                .getLatest(currencyPair, Duration.ofSeconds(CacheConstants.RATE_CACHE_TTL_SECONDS)).orElse",
+          "lineNumber": 41
+        },
+        {
+          "caller": "getRate",
+          "callee": "exchangeRateCache.getLatest",
+          "lineNumber": 41
+        },
+        {
+          "caller": "getRate",
+          "callee": "Duration.ofSeconds",
+          "lineNumber": 42
+        },
+        {
+          "caller": "getRate",
+          "callee": "exchangeRateRepository.findLatestByCurrencyPair(currencyPair).orElseThrow",
+          "lineNumber": 47
+        },
+        {
+          "caller": "getRate",
+          "callee": "exchangeRateRepository.findLatestByCurrencyPair",
+          "lineNumber": 47
+        },
+        {
+          "caller": "getRate",
+          "callee": "new BusinessException",
+          "lineNumber": 48
+        },
+        {
+          "caller": "getRate",
+          "callee": "exchangeRateCache.putLatest",
+          "lineNumber": 49
+        },
+        {
+          "caller": "getRate",
+          "callee": "log.debug",
+          "lineNumber": 50
+        },
+        {
+          "caller": "getRate",
+          "callee": "rate.getRateTime",
+          "lineNumber": 51
+        },
+        {
+          "caller": "getAllRates",
+          "callee": "exchangeRateRepository.findLatestRates().stream().collect",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getAllRates",
+          "callee": "exchangeRateRepository.findLatestRates().stream",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getAllRates",
+          "callee": "exchangeRateRepository.findLatestRates",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getAllRates",
+          "callee": "Collectors.toMap",
+          "lineNumber": 58
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "log.info",
+          "lineNumber": 67
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getCurrencyPair",
+          "lineNumber": 68
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getStartDate",
+          "lineNumber": 68
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getEndDate",
+          "lineNumber": 68
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageNum",
+          "lineNumber": 68
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageSize",
+          "lineNumber": 68
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "exchangeRateRepository.pageQuery",
+          "lineNumber": 69
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "getRate",
+          "lineNumber": 73
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "rateCalculationDomainService.calculateAmount",
+          "lineNumber": 74
+        },
+        {
+          "caller": "calculateAmount",
+          "callee": "rate.getMidRate",
+          "lineNumber": 74
+        },
+        {
+          "caller": "saveRate",
+          "callee": "log.info",
+          "lineNumber": 78
+        },
+        {
+          "caller": "saveRate",
+          "callee": "cmd.getCurrencyPair",
+          "lineNumber": 79
+        },
+        {
+          "caller": "saveRate",
+          "callee": "cmd.getRateSource",
+          "lineNumber": 79
+        },
+        {
+          "caller": "saveRate",
+          "callee": "cmd.getBidRate",
+          "lineNumber": 79
+        },
+        {
+          "caller": "saveRate",
+          "callee": "cmd.getAskRate",
+          "lineNumber": 79
+        },
+        {
+          "caller": "saveRate",
+          "callee": "ExchangeRate.create",
+          "lineNumber": 80
+        },
+        {
+          "caller": "saveRate",
+          "callee": "cmd.getCurrencyPair",
+          "lineNumber": 80
+        },
+        {
+          "caller": "saveRate",
+          "callee": "cmd.getBaseCurrency",
+          "lineNumber": 80
+        },
+        {
+          "caller": "saveRate",
+          "callee": "cmd.getQuoteCurrency",
+          "lineNumber": 81
+        },
+        {
+          "caller": "saveRate",
+          "callee": "cmd.getBidRate",
+          "lineNumber": 81
+        },
+        {
+          "caller": "saveRate",
+          "callee": "cmd.getAskRate",
+          "lineNumber": 81
+        },
+        {
+          "caller": "saveRate",
+          "callee": "cmd.getRateSource",
+          "lineNumber": 81
+        },
+        {
+          "caller": "saveRate",
+          "callee": "exchangeRateRepository.save",
+          "lineNumber": 82
+        },
+        {
+          "caller": "saveRate",
+          "callee": "exchangeRateCache.putLatest",
+          "lineNumber": 83
+        },
+        {
+          "caller": "saveRate",
+          "callee": "eventPublisher.publishEvent",
+          "lineNumber": 84
+        },
+        {
+          "caller": "saveRate",
+          "callee": "new RateUpdatedEvent",
+          "lineNumber": 84
+        },
+        {
+          "caller": "saveRate",
+          "callee": "saved.getCurrencyPair",
+          "lineNumber": 84
+        },
+        {
+          "caller": "saveRate",
+          "callee": "saved.getBidRate",
+          "lineNumber": 84
+        },
+        {
+          "caller": "saveRate",
+          "callee": "saved.getAskRate",
+          "lineNumber": 84
+        },
+        {
+          "caller": "saveRate",
+          "callee": "log.info",
+          "lineNumber": 85
+        },
+        {
+          "caller": "saveRate",
+          "callee": "saved.getId",
+          "lineNumber": 86
+        },
+        {
+          "caller": "saveRate",
+          "callee": "saved.getCurrencyPair",
+          "lineNumber": 86
+        },
+        {
+          "caller": "saveRate",
+          "callee": "saved.getRateTime",
+          "lineNumber": 86
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "getRate",
+          "lineNumber": 96
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "log.debug",
+          "lineNumber": 98
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "rateCalculationDomainService.calculateAmount",
+          "lineNumber": 102
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "directRate.getMidRate",
+          "lineNumber": 102
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "getRate",
+          "lineNumber": 107
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "log.debug",
+          "lineNumber": 109
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "BigDecimal.ONE.divide",
+          "lineNumber": 113
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "reverseRate.getMidRate",
+          "lineNumber": 113
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "rateCalculationDomainService.calculateAmount",
+          "lineNumber": 114
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "getRate",
+          "lineNumber": 117
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "getRate",
+          "lineNumber": 118
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "rateCalculationDomainService.calculateCrossRate",
+          "lineNumber": 119
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "usdFrom.getMidRate",
+          "lineNumber": 119
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "usdTo.getMidRate",
+          "lineNumber": 119
+        },
+        {
+          "caller": "convertCurrency",
+          "callee": "rateCalculationDomainService.calculateAmount",
+          "lineNumber": 120
+        },
+        {
+          "caller": "publishToChannels",
+          "callee": "exchangeRateRepository.findById(rateId).orElseThrow",
+          "lineNumber": 124
+        },
+        {
+          "caller": "publishToChannels",
+          "callee": "exchangeRateRepository.findById",
+          "lineNumber": 124
+        },
+        {
+          "caller": "publishToChannels",
+          "callee": "new BusinessException",
+          "lineNumber": 125
+        },
+        {
+          "caller": "publishToChannels",
+          "callee": "ratePublishDomainService.validateRate",
+          "lineNumber": 126
+        },
+        {
+          "caller": "publishToChannels",
+          "callee": "log.info",
+          "lineNumber": 127
+        },
+        {
+          "caller": "publishToChannels",
+          "callee": "rate.getCurrencyPair",
+          "lineNumber": 127
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 8,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 112,
+      "nonEmptyLines": 98,
+      "functions": [
+        {
+          "name": "ExchangeRate",
+          "startLine": 33,
+          "endLine": 35,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 37,
+          "endLine": 53,
+          "params": [
+            "currencyPair",
+            "baseCurrency",
+            "quoteCurrency",
+            "bidRate",
+            "askRate",
+            "rateSource"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 59,
+          "endLine": 78,
+          "params": [
+            "id",
+            "currencyPair",
+            "baseCurrency",
+            "quoteCurrency",
+            "bidRate",
+            "askRate",
+            "midRate",
+            "spread",
+            "rateSource",
+            "rateDate",
+            "rateTime",
+            "status"
+          ]
+        },
+        {
+          "name": "calculateMidRate",
+          "startLine": 80,
+          "endLine": 82,
+          "params": [
+            "bidRate",
+            "askRate"
+          ]
+        },
+        {
+          "name": "calculateSpread",
+          "startLine": 84,
+          "endLine": 86,
+          "params": [
+            "bidRate",
+            "askRate"
+          ]
+        },
+        {
+          "name": "invalidate",
+          "startLine": 88,
+          "endLine": 91,
+          "params": []
+        },
+        {
+          "name": "isExpired",
+          "startLine": 93,
+          "endLine": 98,
+          "params": [
+            "ttl"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 100,
+          "endLine": 111,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ExchangeRate",
+          "startLine": 15,
+          "endLine": 112,
+          "methods": [
+            "ExchangeRate",
+            "create",
+            "reconstitute",
+            "calculateMidRate",
+            "calculateSpread",
+            "invalidate",
+            "isExpired",
+            "validate"
+          ],
+          "properties": [
+            "serialVersionUID",
+            "id",
+            "currencyPair",
+            "baseCurrency",
+            "quoteCurrency",
+            "bidRate",
+            "askRate",
+            "midRate",
+            "spread",
+            "rateSource",
+            "rateDate",
+            "rateTime",
+            "status"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "invalidate",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "isExpired",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "ExchangeRate",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new ExchangeRate",
+          "lineNumber": 39
+        },
+        {
+          "caller": "create",
+          "callee": "bidRate.add(askRate).divide",
+          "lineNumber": 45
+        },
+        {
+          "caller": "create",
+          "callee": "bidRate.add",
+          "lineNumber": 45
+        },
+        {
+          "caller": "create",
+          "callee": "new BigDecimal",
+          "lineNumber": 45
+        },
+        {
+          "caller": "create",
+          "callee": "askRate.subtract",
+          "lineNumber": 46
+        },
+        {
+          "caller": "create",
+          "callee": "LocalDate.now",
+          "lineNumber": 48
+        },
+        {
+          "caller": "create",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 49
+        },
+        {
+          "caller": "create",
+          "callee": "rate.validate",
+          "lineNumber": 51
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new ExchangeRate",
+          "lineNumber": 63
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "calculateMidRate",
+          "lineNumber": 70
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "calculateSpread",
+          "lineNumber": 71
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "rate.validate",
+          "lineNumber": 76
+        },
+        {
+          "caller": "calculateMidRate",
+          "callee": "bidRate.add(askRate).divide",
+          "lineNumber": 81
+        },
+        {
+          "caller": "calculateMidRate",
+          "callee": "bidRate.add",
+          "lineNumber": 81
+        },
+        {
+          "caller": "calculateMidRate",
+          "callee": "new BigDecimal",
+          "lineNumber": 81
+        },
+        {
+          "caller": "calculateSpread",
+          "callee": "askRate.subtract",
+          "lineNumber": 85
+        },
+        {
+          "caller": "invalidate",
+          "callee": "markUpdated",
+          "lineNumber": 90
+        },
+        {
+          "caller": "isExpired",
+          "callee": "Duration.between(rateTime, LocalDateTime.now()).compareTo",
+          "lineNumber": 97
+        },
+        {
+          "caller": "isExpired",
+          "callee": "Duration.between",
+          "lineNumber": 97
+        },
+        {
+          "caller": "isExpired",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 97
+        },
+        {
+          "caller": "validate",
+          "callee": "currencyPair.isBlank",
+          "lineNumber": 102
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 103
+        },
+        {
+          "caller": "validate",
+          "callee": "bidRate.compareTo",
+          "lineNumber": 105
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 106
+        },
+        {
+          "caller": "validate",
+          "callee": "askRate.compareTo",
+          "lineNumber": 108
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 109
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 5,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "ExchangeRateRepository",
+          "startLine": 10,
+          "endLine": 21,
+          "methods": [
+            "save",
+            "findById",
+            "findLatestByCurrencyPair",
+            "findLatestRates",
+            "pageQuery"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ExchangeRateRepository",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

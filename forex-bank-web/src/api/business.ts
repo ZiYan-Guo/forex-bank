@@ -85,6 +85,21 @@ export const scheduleApi = {
   getJobLogs: (jobId: number) => request.get<ApiResponse<any[]>>(`/schedule/job/${jobId}/logs`)
 }
 
+export const marginApi = {
+  pageQuery: (params: any) => request.post<ApiResponse<PageResp<any>>>('/margin/page', params),
+  getDetail: (marginNo: string) => request.get<ApiResponse>(`/margin/${marginNo}`),
+  deposit: (marginNo: string, amount: number) =>
+    request.post<ApiResponse>(`/margin/deposit?marginNo=${marginNo}&amount=${amount}`),
+  call: (marginNo: string, amount: number) =>
+    request.post<ApiResponse>(`/margin/call?marginNo=${marginNo}&amount=${amount}`),
+  release: (marginNo: string, amount: number, reason: string) =>
+    request.post<ApiResponse>(`/margin/release?marginNo=${marginNo}&amount=${amount}&reason=${encodeURIComponent(reason)}`),
+  calculateVm: (data: any) => request.post<ApiResponse>('/margin/calculate/vm', data),
+  calculateImStandard: (data: any) => request.post<ApiResponse>('/margin/calculate/im-standard', data),
+  valueCollateral: (data: any) => request.post<ApiResponse>('/margin/collateral/valuation', data),
+  ledgerSummary: () => request.get<ApiResponse>('/margin/collateral/ledger-summary')
+}
+
 export const accountApi = {
   open: (data: any) => request.post<ApiResponse>('/account/open', data),
   close: (id: number) => request.post<ApiResponse>(`/account/close/${id}`),

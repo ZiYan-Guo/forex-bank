@@ -1,0 +1,69 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "language": "java",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/adapter/dto/RateResp.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "language": "java",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "language": "java",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RateLimit.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java",
+      "forex-rate/src/main/java/com/forex/rate/adapter/dto/ConversionResp.java",
+      "forex-rate/src/main/java/com/forex/rate/adapter/dto/RateQueryReq.java",
+      "forex-rate/src/main/java/com/forex/rate/adapter/dto/RateResp.java",
+      "forex-rate/src/main/java/com/forex/rate/application/command/RateSaveCmd.java",
+      "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java"
+    ],
+    "forex-rate/src/main/java/com/forex/rate/adapter/dto/RateResp.java": [],
+    "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "forex-rate/src/main/java/com/forex/rate/application/command/RateSaveCmd.java",
+      "forex-rate/src/main/java/com/forex/rate/domain/event/RateUpdatedEvent.java",
+      "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java"
+    ],
+    "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java"
+    ],
+    "forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java"
+    ]
+  }
+}

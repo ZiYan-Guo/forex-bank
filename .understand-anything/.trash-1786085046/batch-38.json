@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-bank-web/src/views/exchange/ExchangeTrade.vue",
+      "type": "file",
+      "name": "ExchangeTrade.vue",
+      "filePath": "forex-bank-web/src/views/exchange/ExchangeTrade.vue",
+      "summary": "提供 Vue 页面级交互界面，承载对应业务场景的数据展示、表单操作和用户反馈。",
+      "tags": [
+        "UI",
+        "Vue",
+        "页面组件"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": []
+}

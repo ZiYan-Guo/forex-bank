@@ -53,6 +53,13 @@ public class MarginAccountRepositoryImpl implements MarginAccountRepository {
     }
 
     @Override
+    public List<MarginAccount> listForLedgerSummary() {
+        return marginAccountMapper.selectForLedgerSummary().stream()
+                .map(this::toDomain)
+                .toList();
+    }
+
+    @Override
     public PageResp<MarginAccount> pageQuery(MarginQuery query) {
         Page<MarginAccountPO> page = new Page<>(query.getPageNum(), query.getPageSize());
         Page<MarginAccountPO> result = marginAccountMapper.pageQuery(page, query);
@@ -78,7 +85,9 @@ public class MarginAccountRepositoryImpl implements MarginAccountRepository {
                 po.getDueDate(),
                 po.getStatus(),
                 po.getCollateralType(),
-                po.getReleaseReason()
+                po.getReleaseReason(),
+                po.getCollateralValue(),
+                po.getWaterLevel()
         );
     }
 
@@ -98,6 +107,8 @@ public class MarginAccountRepositoryImpl implements MarginAccountRepository {
         po.setDueDate(marginAccount.getDueDate());
         po.setStatus(marginAccount.getStatus());
         po.setCollateralType(marginAccount.getCollateralType());
+        po.setCollateralValue(marginAccount.getCollateralValue());
+        po.setWaterLevel(marginAccount.getWaterLevel());
         po.setReleaseReason(marginAccount.getReleaseReason());
         return po;
     }

@@ -1,0 +1,53 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-bank-web/src/api/business.ts",
+      "language": "typescript",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/api/exchange.ts",
+      "language": "typescript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/api/request.ts",
+      "language": "typescript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/store/rate.ts",
+      "language": "typescript",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-bank-web/src/types/api.ts",
+      "language": "typescript",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "forex-bank-web/src/api/business.ts": [
+      "forex-bank-web/src/api/request.ts",
+      "forex-bank-web/src/types/api.ts"
+    ],
+    "forex-bank-web/src/api/exchange.ts": [
+      "forex-bank-web/src/api/request.ts",
+      "forex-bank-web/src/types/api.ts"
+    ],
+    "forex-bank-web/src/api/request.ts": [
+      "forex-bank-web/src/router/index.ts",
+      "forex-bank-web/src/types/api.ts"
+    ],
+    "forex-bank-web/src/store/rate.ts": [
+      "forex-bank-web/src/api/exchange.ts"
+    ],
+    "forex-bank-web/src/types/api.ts": []
+  }
+}

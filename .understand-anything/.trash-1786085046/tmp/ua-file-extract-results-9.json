@@ -1,0 +1,409 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 2,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 2,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 2,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 61,
+      "nonEmptyLines": 54,
+      "functions": [
+        {
+          "name": "around",
+          "startLine": 33,
+          "endLine": 60,
+          "params": [
+            "joinPoint",
+            "idempotent"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "IdempotentAspect",
+          "startLine": 22,
+          "endLine": 61,
+          "methods": [
+            "around"
+          ],
+          "properties": [
+            "redissonClient",
+            "idempotencyKeyResolver"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "around",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "IdempotentAspect",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "around",
+          "callee": "joinPoint.getSignature",
+          "lineNumber": 35
+        },
+        {
+          "caller": "around",
+          "callee": "idempotencyKeyResolver.resolve",
+          "lineNumber": 36
+        },
+        {
+          "caller": "around",
+          "callee": "signature.getMethod",
+          "lineNumber": 37
+        },
+        {
+          "caller": "around",
+          "callee": "joinPoint.getArgs",
+          "lineNumber": 37
+        },
+        {
+          "caller": "around",
+          "callee": "idempotent.key",
+          "lineNumber": 37
+        },
+        {
+          "caller": "around",
+          "callee": "redissonClient.getBucket",
+          "lineNumber": 39
+        },
+        {
+          "caller": "around",
+          "callee": "bucket.setIfAbsent",
+          "lineNumber": 41
+        },
+        {
+          "caller": "around",
+          "callee": "Duration.ofSeconds",
+          "lineNumber": 41
+        },
+        {
+          "caller": "around",
+          "callee": "idempotent.expireSeconds",
+          "lineNumber": 41
+        },
+        {
+          "caller": "around",
+          "callee": "log.warn",
+          "lineNumber": 43
+        },
+        {
+          "caller": "around",
+          "callee": "signature.toShortString",
+          "lineNumber": 45
+        },
+        {
+          "caller": "around",
+          "callee": "idempotencyKeyResolver.digest",
+          "lineNumber": 46
+        },
+        {
+          "caller": "around",
+          "callee": "new BusinessException",
+          "lineNumber": 47
+        },
+        {
+          "caller": "around",
+          "callee": "ResultCode.IDEMPOTENT_REPEATED.getCode",
+          "lineNumber": 47
+        },
+        {
+          "caller": "around",
+          "callee": "idempotent.message",
+          "lineNumber": 47
+        },
+        {
+          "caller": "around",
+          "callee": "log.debug",
+          "lineNumber": 49
+        },
+        {
+          "caller": "around",
+          "callee": "signature.toShortString",
+          "lineNumber": 51
+        },
+        {
+          "caller": "around",
+          "callee": "idempotencyKeyResolver.digest",
+          "lineNumber": 52
+        },
+        {
+          "caller": "around",
+          "callee": "idempotent.expireSeconds",
+          "lineNumber": 53
+        },
+        {
+          "caller": "around",
+          "callee": "joinPoint.proceed",
+          "lineNumber": 54
+        },
+        {
+          "caller": "around",
+          "callee": "log.debug",
+          "lineNumber": 55
+        },
+        {
+          "caller": "around",
+          "callee": "signature.toShortString",
+          "lineNumber": 57
+        },
+        {
+          "caller": "around",
+          "callee": "idempotencyKeyResolver.digest",
+          "lineNumber": 58
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 66,
+      "functions": [
+        {
+          "name": "RedisLockAspect",
+          "startLine": 31,
+          "endLine": 33,
+          "params": [
+            "redissonClient"
+          ]
+        },
+        {
+          "name": "around",
+          "startLine": 35,
+          "endLine": 71,
+          "params": [
+            "joinPoint",
+            "redisLock"
+          ]
+        },
+        {
+          "name": "keyDigest",
+          "startLine": 73,
+          "endLine": 75,
+          "params": [
+            "lockKey"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RedisLockAspect",
+          "startLine": 22,
+          "endLine": 76,
+          "methods": [
+            "RedisLockAspect",
+            "around",
+            "keyDigest"
+          ],
+          "properties": [
+            "redissonClient"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RedisLockAspect",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "around",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "RedisLockAspect",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "around",
+          "callee": "joinPoint.getSignature",
+          "lineNumber": 37
+        },
+        {
+          "caller": "around",
+          "callee": "SpelUtil.resolveTemplate",
+          "lineNumber": 38
+        },
+        {
+          "caller": "around",
+          "callee": "signature.getMethod",
+          "lineNumber": 38
+        },
+        {
+          "caller": "around",
+          "callee": "joinPoint.getArgs",
+          "lineNumber": 38
+        },
+        {
+          "caller": "around",
+          "callee": "redisLock.key",
+          "lineNumber": 38
+        },
+        {
+          "caller": "around",
+          "callee": "redissonClient.getLock",
+          "lineNumber": 39
+        },
+        {
+          "caller": "around",
+          "callee": "lock.tryLock",
+          "lineNumber": 43
+        },
+        {
+          "caller": "around",
+          "callee": "redisLock.waitTime",
+          "lineNumber": 43
+        },
+        {
+          "caller": "around",
+          "callee": "redisLock.leaseTime",
+          "lineNumber": 43
+        },
+        {
+          "caller": "around",
+          "callee": "redisLock.timeUnit",
+          "lineNumber": 43
+        },
+        {
+          "caller": "around",
+          "callee": "log.warn",
+          "lineNumber": 45
+        },
+        {
+          "caller": "around",
+          "callee": "signature.toShortString",
+          "lineNumber": 47
+        },
+        {
+          "caller": "around",
+          "callee": "keyDigest",
+          "lineNumber": 48
+        },
+        {
+          "caller": "around",
+          "callee": "new BusinessException",
+          "lineNumber": 49
+        },
+        {
+          "caller": "around",
+          "callee": "log.debug",
+          "lineNumber": 51
+        },
+        {
+          "caller": "around",
+          "callee": "signature.toShortString",
+          "lineNumber": 53
+        },
+        {
+          "caller": "around",
+          "callee": "keyDigest",
+          "lineNumber": 54
+        },
+        {
+          "caller": "around",
+          "callee": "joinPoint.proceed",
+          "lineNumber": 55
+        },
+        {
+          "caller": "around",
+          "callee": "Thread.currentThread().interrupt",
+          "lineNumber": 57
+        },
+        {
+          "caller": "around",
+          "callee": "Thread.currentThread",
+          "lineNumber": 57
+        },
+        {
+          "caller": "around",
+          "callee": "log.warn",
+          "lineNumber": 58
+        },
+        {
+          "caller": "around",
+          "callee": "signature.toShortString",
+          "lineNumber": 60
+        },
+        {
+          "caller": "around",
+          "callee": "new BusinessException",
+          "lineNumber": 61
+        },
+        {
+          "caller": "around",
+          "callee": "lock.isHeldByCurrentThread",
+          "lineNumber": 63
+        },
+        {
+          "caller": "around",
+          "callee": "lock.unlock",
+          "lineNumber": 64
+        },
+        {
+          "caller": "around",
+          "callee": "log.debug",
+          "lineNumber": 65
+        },
+        {
+          "caller": "around",
+          "callee": "signature.toShortString",
+          "lineNumber": 67
+        },
+        {
+          "caller": "around",
+          "callee": "keyDigest",
+          "lineNumber": 68
+        },
+        {
+          "caller": "keyDigest",
+          "callee": "Integer.toHexString",
+          "lineNumber": 74
+        },
+        {
+          "caller": "keyDigest",
+          "callee": "lockKey.hashCode",
+          "lineNumber": 74
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "type": "file",
+      "name": "IdempotentAspect.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "summary": "提供 @Idempotent 注解的 AOP 拦截逻辑，通过 Redisson bucket 写入幂等键来阻止重复请求，并在重复命中时抛出业务异常。它位于 common-base 横切能力层，为接口和业务方法提供统一的幂等保护。",
+      "tags": [
+        "aop",
+        "idempotency",
+        "redis",
+        "cross-cutting"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Spring AOP 的 @Around advice 与 Redisson RBucket#setIfAbsent 组合实现分布式幂等窗口。"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java:IdempotentAspect",
+      "type": "class",
+      "name": "IdempotentAspect",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "lineRange": [
+        22,
+        61
+      ],
+      "summary": "IdempotentAspect 封装一个 Spring AOP 横切关注点，将注解驱动的基础能力应用到被拦截方法。",
+      "tags": [
+        "aop",
+        "cross-cutting",
+        "spring",
+        "infrastructure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java:around",
+      "type": "function",
+      "name": "around",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "lineRange": [
+        33,
+        60
+      ],
+      "summary": "围绕标记 @Idempotent 的方法生成幂等 key，尝试写入 Redis bucket，并在重复请求时抛出业务异常。",
+      "tags": [
+        "aop",
+        "interceptor",
+        "cross-cutting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "type": "file",
+      "name": "RedisLockAspect.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "summary": "实现 @RedisLock 注解的分布式锁切面，使用 SpEL 解析锁 key 并通过 Redisson RLock 控制并发进入。它负责锁获取失败、线程中断和 finally 释放锁的统一处理。",
+      "tags": [
+        "aop",
+        "distributed-lock",
+        "redis",
+        "concurrency"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "try/finally 包住 RLock 生命周期，避免业务方法异常时锁泄漏。"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:RedisLockAspect",
+      "type": "class",
+      "name": "RedisLockAspect",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "lineRange": [
+        22,
+        76
+      ],
+      "summary": "RedisLockAspect 封装一个 Spring AOP 横切关注点，将注解驱动的基础能力应用到被拦截方法。",
+      "tags": [
+        "aop",
+        "cross-cutting",
+        "spring",
+        "infrastructure"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:RedisLockAspect",
+      "type": "function",
+      "name": "RedisLockAspect",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "lineRange": [
+        31,
+        33
+      ],
+      "summary": "RedisLockAspect 实现 RedisLockAspect 中的一段核心业务流程。",
+      "tags": [
+        "function",
+        "java",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:around",
+      "type": "function",
+      "name": "around",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "lineRange": [
+        35,
+        71
+      ],
+      "summary": "围绕标记 @RedisLock 的方法获取 Redisson 分布式锁，执行业务逻辑后在 finally 中释放锁。",
+      "tags": [
+        "aop",
+        "interceptor",
+        "cross-cutting"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java:IdempotentAspect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java:IdempotentAspect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java:around",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java:around",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/idempotent/IdempotentAspect.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:RedisLockAspect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:RedisLockAspect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:RedisLockAspect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:RedisLockAspect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:around",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:around",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RedisLock.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/lock/RedisLockAspect.java:around",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/util/SpelUtil.java:resolveTemplate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

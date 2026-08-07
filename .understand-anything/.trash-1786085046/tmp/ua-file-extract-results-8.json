@@ -1,0 +1,489 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 1,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 1,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 92,
+      "nonEmptyLines": 80,
+      "functions": [
+        {
+          "name": "handleBusinessException",
+          "startLine": 23,
+          "endLine": 30,
+          "params": [
+            "e"
+          ]
+        },
+        {
+          "name": "handleIllegalArgumentException",
+          "startLine": 32,
+          "endLine": 39,
+          "params": [
+            "e"
+          ]
+        },
+        {
+          "name": "handleValidationException",
+          "startLine": 41,
+          "endLine": 50,
+          "params": [
+            "e"
+          ]
+        },
+        {
+          "name": "handleHttpMessageNotReadable",
+          "startLine": 52,
+          "endLine": 58,
+          "params": [
+            "e"
+          ]
+        },
+        {
+          "name": "handleMissingParam",
+          "startLine": 60,
+          "endLine": 67,
+          "params": [
+            "e"
+          ]
+        },
+        {
+          "name": "handleMethodNotSupported",
+          "startLine": 69,
+          "endLine": 75,
+          "params": [
+            "e"
+          ]
+        },
+        {
+          "name": "handleDataIntegrityViolation",
+          "startLine": 77,
+          "endLine": 83,
+          "params": [
+            "e"
+          ]
+        },
+        {
+          "name": "handleException",
+          "startLine": 85,
+          "endLine": 91,
+          "params": [
+            "e"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "GlobalExceptionHandler",
+          "startLine": 19,
+          "endLine": 92,
+          "methods": [
+            "handleBusinessException",
+            "handleIllegalArgumentException",
+            "handleValidationException",
+            "handleHttpMessageNotReadable",
+            "handleMissingParam",
+            "handleMethodNotSupported",
+            "handleDataIntegrityViolation",
+            "handleException"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "handleBusinessException",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "handleIllegalArgumentException",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "handleValidationException",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "handleHttpMessageNotReadable",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "handleMissingParam",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "handleMethodNotSupported",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "handleDataIntegrityViolation",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "handleException",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "GlobalExceptionHandler",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "handleBusinessException",
+          "callee": "log.warn",
+          "lineNumber": 26
+        },
+        {
+          "caller": "handleBusinessException",
+          "callee": "e.getCode",
+          "lineNumber": 28
+        },
+        {
+          "caller": "handleBusinessException",
+          "callee": "e.getMessage",
+          "lineNumber": 28
+        },
+        {
+          "caller": "handleBusinessException",
+          "callee": "TraceContext.getTraceId",
+          "lineNumber": 28
+        },
+        {
+          "caller": "handleBusinessException",
+          "callee": "R.<Void>fail(e.getCode(), e.getMessage()).traceId",
+          "lineNumber": 29
+        },
+        {
+          "caller": "handleBusinessException",
+          "callee": "R.fail",
+          "lineNumber": 29
+        },
+        {
+          "caller": "handleBusinessException",
+          "callee": "e.getCode",
+          "lineNumber": 29
+        },
+        {
+          "caller": "handleBusinessException",
+          "callee": "e.getMessage",
+          "lineNumber": 29
+        },
+        {
+          "caller": "handleBusinessException",
+          "callee": "TraceContext.getTraceId",
+          "lineNumber": 29
+        },
+        {
+          "caller": "handleIllegalArgumentException",
+          "callee": "log.warn",
+          "lineNumber": 35
+        },
+        {
+          "caller": "handleIllegalArgumentException",
+          "callee": "e.getMessage",
+          "lineNumber": 37
+        },
+        {
+          "caller": "handleIllegalArgumentException",
+          "callee": "TraceContext.getTraceId",
+          "lineNumber": 37
+        },
+        {
+          "caller": "handleIllegalArgumentException",
+          "callee": "R.<Void>fail(ResultCode.VALIDATE_FAIL.getCode(), e.getMessage()).traceId",
+          "lineNumber": 38
+        },
+        {
+          "caller": "handleIllegalArgumentException",
+          "callee": "R.fail",
+          "lineNumber": 38
+        },
+        {
+          "caller": "handleIllegalArgumentException",
+          "callee": "ResultCode.VALIDATE_FAIL.getCode",
+          "lineNumber": 38
+        },
+        {
+          "caller": "handleIllegalArgumentException",
+          "callee": "e.getMessage",
+          "lineNumber": 38
+        },
+        {
+          "caller": "handleIllegalArgumentException",
+          "callee": "TraceContext.getTraceId",
+          "lineNumber": 38
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "e.getBindingResult().getFieldErrors().stream()\n                .map(fe -> fe.getField() + \": \" + fe.getDefaultMessage())\n                .reduce((a, b) -> a + \"; \" + b).orElse",
+          "lineNumber": 44
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "e.getBindingResult().getFieldErrors().stream()\n                .map(fe -> fe.getField() + \": \" + fe.getDefaultMessage()).reduce",
+          "lineNumber": 44
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "e.getBindingResult().getFieldErrors().stream().map",
+          "lineNumber": 44
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "e.getBindingResult().getFieldErrors().stream",
+          "lineNumber": 44
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "e.getBindingResult().getFieldErrors",
+          "lineNumber": 44
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "e.getBindingResult",
+          "lineNumber": 44
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "fe.getField",
+          "lineNumber": 45
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "fe.getDefaultMessage",
+          "lineNumber": 45
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "log.warn",
+          "lineNumber": 48
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "TraceContext.getTraceId",
+          "lineNumber": 48
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "R.<Void>fail(ResultCode.VALIDATE_FAIL.getCode(), msg).traceId",
+          "lineNumber": 49
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "R.fail",
+          "lineNumber": 49
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "ResultCode.VALIDATE_FAIL.getCode",
+          "lineNumber": 49
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "TraceContext.getTraceId",
+          "lineNumber": 49
+        },
+        {
+          "caller": "handleHttpMessageNotReadable",
+          "callee": "log.warn",
+          "lineNumber": 55
+        },
+        {
+          "caller": "handleHttpMessageNotReadable",
+          "callee": "e.getMessage",
+          "lineNumber": 56
+        },
+        {
+          "caller": "handleHttpMessageNotReadable",
+          "callee": "TraceContext.getTraceId",
+          "lineNumber": 56
+        },
+        {
+          "caller": "handleHttpMessageNotReadable",
+          "callee": "R.<Void>fail(ResultCode.VALIDATE_FAIL.getCode(), \"请求格式错误\").traceId",
+          "lineNumber": 57
+        },
+        {
+          "caller": "handleHttpMessageNotReadable",
+          "callee": "R.fail",
+          "lineNumber": 57
+        },
+        {
+          "caller": "handleHttpMessageNotReadable",
+          "callee": "ResultCode.VALIDATE_FAIL.getCode",
+          "lineNumber": 57
+        },
+        {
+          "caller": "handleHttpMessageNotReadable",
+          "callee": "TraceContext.getTraceId",
+          "lineNumber": 57
+        },
+        {
+          "caller": "handleMissingParam",
+          "callee": "log.warn",
+          "lineNumber": 63
+        },
+        {
+          "caller": "handleMissingParam",
+          "callee": "e.getParameterName",
+          "lineNumber": 64
+        },
+        {
+          "caller": "handleMissingParam",
+          "callee": "TraceContext.getTraceId",
+          "lineNumber": 64
+        },
+        {
+          "caller": "handleMissingParam",
+          "callee": "R.<Void>fail(ResultCode.VALIDATE_FAIL.getCode(), \"缺少必需参数: \" + e.getParameterName()).traceId",
+          "lineNumber": 65
+        },
+        {
+          "caller": "handleMissingParam",
+          "callee": "R.fail",
+          "lineNumber": 65
+        },
+        {
+          "caller": "handleMissingParam",
+          "callee": "ResultCode.VALIDATE_FAIL.getCode",
+          "lineNumber": 65
+        },
+        {
+          "caller": "handleMissingParam",
+          "callee": "e.getParameterName",
+          "lineNumber": 65
+        },
+        {
+          "caller": "handleMissingParam",
+          "callee": "TraceContext.getTraceId",
+          "lineNumber": 66
+        },
+        {
+          "caller": "handleMethodNotSupported",
+          "callee": "log.warn",
+          "lineNumber": 72
+        },
+        {
+          "caller": "handleMethodNotSupported",
+          "callee": "e.getMethod",
+          "lineNumber": 73
+        },
+        {
+          "caller": "handleMethodNotSupported",
+          "callee": "TraceContext.getTraceId",
+          "lineNumber": 73
+        },
+        {
+          "caller": "handleMethodNotSupported",
+          "callee": "R.<Void>fail(405, \"不支持的请求方法: \" + e.getMethod()).traceId",
+          "lineNumber": 74
+        },
+        {
+          "caller": "handleMethodNotSupported",
+          "callee": "R.fail",
+          "lineNumber": 74
+        },
+        {
+          "caller": "handleMethodNotSupported",
+          "callee": "e.getMethod",
+          "lineNumber": 74
+        },
+        {
+          "caller": "handleMethodNotSupported",
+          "callee": "TraceContext.getTraceId",
+          "lineNumber": 74
+        },
+        {
+          "caller": "handleDataIntegrityViolation",
+          "callee": "log.error",
+          "lineNumber": 80
+        },
+        {
+          "caller": "handleDataIntegrityViolation",
+          "callee": "TraceContext.getTraceId",
+          "lineNumber": 80
+        },
+        {
+          "caller": "handleDataIntegrityViolation",
+          "callee": "R.<Void>fail(ResultCode.BUSINESS_ERROR.getCode(), \"数据操作冲突，请检查后重试\").traceId",
+          "lineNumber": 81
+        },
+        {
+          "caller": "handleDataIntegrityViolation",
+          "callee": "R.fail",
+          "lineNumber": 81
+        },
+        {
+          "caller": "handleDataIntegrityViolation",
+          "callee": "ResultCode.BUSINESS_ERROR.getCode",
+          "lineNumber": 81
+        },
+        {
+          "caller": "handleDataIntegrityViolation",
+          "callee": "TraceContext.getTraceId",
+          "lineNumber": 82
+        },
+        {
+          "caller": "handleException",
+          "callee": "log.error",
+          "lineNumber": 88
+        },
+        {
+          "caller": "handleException",
+          "callee": "TraceContext.getTraceId",
+          "lineNumber": 88
+        },
+        {
+          "caller": "handleException",
+          "callee": "R.<Void>fail(ResultCode.FAILURE.getCode(), \"系统繁忙，请稍后再试\").traceId",
+          "lineNumber": 89
+        },
+        {
+          "caller": "handleException",
+          "callee": "R.fail",
+          "lineNumber": 89
+        },
+        {
+          "caller": "handleException",
+          "callee": "ResultCode.FAILURE.getCode",
+          "lineNumber": 89
+        },
+        {
+          "caller": "handleException",
+          "callee": "TraceContext.getTraceId",
+          "lineNumber": 90
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 9,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    }
+  ]
+}

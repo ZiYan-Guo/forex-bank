@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "id": "config:forex-common/forex-common-base/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "forex-common/forex-common-base/pom.xml",
+      "summary": "配置项目构建、依赖或运行时行为，支撑 pom.xml 所属模块的编译与自动装配。",
+      "tags": [
+        "配置",
+        "构建系统"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java",
+      "type": "file",
+      "name": "CacheConstants.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java",
+      "summary": "承载 CacheConstants.java 所在业务模块的代码职责，并与周边服务、模型或配置协作完成系统功能。",
+      "tags": [
+        "模块",
+        "业务能力"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java:CacheConstants",
+      "type": "class",
+      "name": "CacheConstants",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java",
+      "lineRange": [
+        3,
+        22
+      ],
+      "summary": "定义 CacheConstants 类型，封装 CacheConstants.java 中的主要状态、行为或接口契约。",
+      "tags": [
+        "模块",
+        "业务能力",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java:CacheConstants",
+      "type": "function",
+      "name": "CacheConstants",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java",
+      "lineRange": [
+        5,
+        6
+      ],
+      "summary": "实现 CacheConstants 处理逻辑，是 CacheConstants.java 中可复用或对外暴露的重要行为。",
+      "tags": [
+        "模块",
+        "业务能力",
+        "function"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java:CacheConstants",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java:CacheConstants",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java:CacheConstants",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java:CacheConstants",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

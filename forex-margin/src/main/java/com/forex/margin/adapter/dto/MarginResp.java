@@ -53,6 +53,12 @@ public class MarginResp {
     @Schema(description = "抵押品类型")
     private String collateralType;
 
+    @Schema(description = "押品价值")
+    private BigDecimal collateralValue;
+
+    @Schema(description = "水位线")
+    private String waterLevel;
+
     @Schema(description = "释放原因")
     private String releaseReason;
 }

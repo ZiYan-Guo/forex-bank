@@ -1,0 +1,14 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-bank-web/src/views/exchange/ExchangeTrade.vue",
+      "language": "vue",
+      "sizeLines": 471,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "forex-bank-web/src/views/exchange/ExchangeTrade.vue": []
+  }
+}

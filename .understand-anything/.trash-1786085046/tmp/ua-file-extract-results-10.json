@@ -1,0 +1,315 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 2,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 2,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 2,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/ratelimit/RateLimitAspect.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 55,
+      "nonEmptyLines": 47,
+      "functions": [
+        {
+          "name": "RateLimitAspect",
+          "startLine": 31,
+          "endLine": 33,
+          "params": [
+            "redissonClient"
+          ]
+        },
+        {
+          "name": "around",
+          "startLine": 35,
+          "endLine": 54,
+          "params": [
+            "joinPoint",
+            "rateLimit"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RateLimitAspect",
+          "startLine": 22,
+          "endLine": 55,
+          "methods": [
+            "RateLimitAspect",
+            "around"
+          ],
+          "properties": [
+            "redissonClient"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RateLimitAspect",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "around",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "RateLimitAspect",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "around",
+          "callee": "joinPoint.getSignature",
+          "lineNumber": 37
+        },
+        {
+          "caller": "around",
+          "callee": "SpelUtil.resolveTemplate",
+          "lineNumber": 38
+        },
+        {
+          "caller": "around",
+          "callee": "signature.getMethod",
+          "lineNumber": 38
+        },
+        {
+          "caller": "around",
+          "callee": "joinPoint.getArgs",
+          "lineNumber": 38
+        },
+        {
+          "caller": "around",
+          "callee": "rateLimit.key",
+          "lineNumber": 38
+        },
+        {
+          "caller": "around",
+          "callee": "baseKey.isEmpty",
+          "lineNumber": 39
+        },
+        {
+          "caller": "around",
+          "callee": "signature.getMethod().getDeclaringClass().getName",
+          "lineNumber": 40
+        },
+        {
+          "caller": "around",
+          "callee": "signature.getMethod().getDeclaringClass",
+          "lineNumber": 40
+        },
+        {
+          "caller": "around",
+          "callee": "signature.getMethod",
+          "lineNumber": 40
+        },
+        {
+          "caller": "around",
+          "callee": "signature.getMethod().getName",
+          "lineNumber": 40
+        },
+        {
+          "caller": "around",
+          "callee": "signature.getMethod",
+          "lineNumber": 40
+        },
+        {
+          "caller": "around",
+          "callee": "redissonClient.getRateLimiter",
+          "lineNumber": 43
+        },
+        {
+          "caller": "around",
+          "callee": "limiter.trySetRate",
+          "lineNumber": 44
+        },
+        {
+          "caller": "around",
+          "callee": "rateLimit.limit",
+          "lineNumber": 44
+        },
+        {
+          "caller": "around",
+          "callee": "rateLimit.windowSeconds",
+          "lineNumber": 44
+        },
+        {
+          "caller": "around",
+          "callee": "limiter.tryAcquire",
+          "lineNumber": 46
+        },
+        {
+          "caller": "around",
+          "callee": "log.warn",
+          "lineNumber": 47
+        },
+        {
+          "caller": "around",
+          "callee": "signature.toShortString",
+          "lineNumber": 49
+        },
+        {
+          "caller": "around",
+          "callee": "Integer.toHexString",
+          "lineNumber": 50
+        },
+        {
+          "caller": "around",
+          "callee": "limiterKey.hashCode",
+          "lineNumber": 50
+        },
+        {
+          "caller": "around",
+          "callee": "new BusinessException",
+          "lineNumber": 51
+        },
+        {
+          "caller": "around",
+          "callee": "ResultCode.TOO_MANY_REQUESTS.getCode",
+          "lineNumber": 51
+        },
+        {
+          "caller": "around",
+          "callee": "rateLimit.message",
+          "lineNumber": 51
+        },
+        {
+          "caller": "around",
+          "callee": "joinPoint.proceed",
+          "lineNumber": 53
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-common/forex-common-security/src/main/java/com/forex/common/security/config/SecurityAutoConfiguration.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 63,
+      "nonEmptyLines": 53,
+      "functions": [
+        {
+          "name": "validate",
+          "startLine": 38,
+          "endLine": 47,
+          "params": []
+        },
+        {
+          "name": "jwtUtil",
+          "startLine": 53,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "sm2Util",
+          "startLine": 58,
+          "endLine": 62,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SecurityAutoConfiguration",
+          "startLine": 19,
+          "endLine": 63,
+          "methods": [
+            "validate",
+            "jwtUtil",
+            "sm2Util"
+          ],
+          "properties": [
+            "MIN_KEY_BYTES",
+            "jwtSecret",
+            "sm2Enabled",
+            "sm2PrivateKey",
+            "sm2PublicKey",
+            "sm4Key"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "validate",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "jwtUtil",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "sm2Util",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "SecurityAutoConfiguration",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "validate",
+          "callee": "jwtSecret.length",
+          "lineNumber": 40
+        },
+        {
+          "caller": "validate",
+          "callee": "new IllegalStateException",
+          "lineNumber": 41
+        },
+        {
+          "caller": "validate",
+          "callee": "jwtSecret.length",
+          "lineNumber": 44
+        },
+        {
+          "caller": "validate",
+          "callee": "log.info",
+          "lineNumber": 46
+        },
+        {
+          "caller": "validate",
+          "callee": "jwtSecret.length",
+          "lineNumber": 46
+        },
+        {
+          "caller": "jwtUtil",
+          "callee": "new JwtUtil",
+          "lineNumber": 55
+        },
+        {
+          "caller": "sm2Util",
+          "callee": "new com.forex.common.security.sm.Sm2Util",
+          "lineNumber": 61
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    }
+  ]
+}

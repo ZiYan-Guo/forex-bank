@@ -1,0 +1,586 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "type": "file",
+      "name": "ScheduleController.java",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "summary": "定时任务模块的 REST controller，提供任务新增、更新、启停、手动触发、详情、分页和执行日志查询接口。它负责权限/幂等注解、请求入参接收，并把领域对象转换为响应 DTO。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "schedule",
+        "authorization"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "接口层同时使用 @RequirePermission 和 @Idempotent 表达访问控制与重复提交保护。"
+    },
+    {
+      "id": "class:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:ScheduleController",
+      "type": "class",
+      "name": "ScheduleController",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "lineRange": [
+        33,
+        141
+      ],
+      "summary": "ScheduleController 暴露 HTTP API，并把请求/响应 DTO 与应用服务调用连接起来。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "spring",
+        "adapter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:addJob",
+      "type": "function",
+      "name": "addJob",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "lineRange": [
+        42,
+        50
+      ],
+      "summary": "接收新增任务命令，在权限和幂等校验后委托应用服务创建任务。",
+      "tags": [
+        "command",
+        "write-model",
+        "transaction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:updateJob",
+      "type": "function",
+      "name": "updateJob",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "lineRange": [
+        52,
+        60
+      ],
+      "summary": "按任务 ID 更新任务定义并返回最新任务响应。",
+      "tags": [
+        "command",
+        "write-model",
+        "transaction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:toggleJob",
+      "type": "function",
+      "name": "toggleJob",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "lineRange": [
+        62,
+        69
+      ],
+      "summary": "按任务 ID 切换启用/禁用状态并返回操作消息。",
+      "tags": [
+        "mapping",
+        "dto",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:triggerJob",
+      "type": "function",
+      "name": "triggerJob",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "lineRange": [
+        71,
+        78
+      ],
+      "summary": "按任务 ID 手动触发调度任务。",
+      "tags": [
+        "job-execution",
+        "schedule",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:getJob",
+      "type": "function",
+      "name": "getJob",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "lineRange": [
+        80,
+        85
+      ],
+      "summary": "按任务 ID 查询任务详情并转换为 ScheduleJobResp。",
+      "tags": [
+        "query",
+        "read-model",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "lineRange": [
+        87,
+        100
+      ],
+      "summary": "分页查询任务列表并把领域分页结果转换为响应分页对象。",
+      "tags": [
+        "query",
+        "read-model",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:getJobLogs",
+      "type": "function",
+      "name": "getJobLogs",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "lineRange": [
+        102,
+        111
+      ],
+      "summary": "查询指定任务的执行日志列表并转换为 JobLogResp。",
+      "tags": [
+        "query",
+        "read-model",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:toResp",
+      "type": "function",
+      "name": "toResp",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "lineRange": [
+        113,
+        126
+      ],
+      "summary": "把 ScheduleJob 聚合映射为对外的任务响应 DTO。",
+      "tags": [
+        "mapping",
+        "dto",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:toLogResp",
+      "type": "function",
+      "name": "toLogResp",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "lineRange": [
+        128,
+        140
+      ],
+      "summary": "把 JobLog 聚合映射为对外的任务日志响应 DTO。",
+      "tags": [
+        "mapping",
+        "dto",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/dto/JobLogResp.java",
+      "type": "file",
+      "name": "JobLogResp.java",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/adapter/dto/JobLogResp.java",
+      "summary": "任务执行日志响应 DTO，描述任务 ID、处理器、起止时间、执行状态、执行结果和错误信息。它用于调度日志查询接口的出参序列化。",
+      "tags": [
+        "dto",
+        "api-response",
+        "schedule-log",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-schedule/src/main/java/com/forex/schedule/adapter/dto/JobLogResp.java:JobLogResp",
+      "type": "class",
+      "name": "JobLogResp",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/adapter/dto/JobLogResp.java",
+      "lineRange": [
+        9,
+        39
+      ],
+      "summary": "JobLogResp 是 API 响应 DTO，承载序列化给前端或调用方的字段。",
+      "tags": [
+        "dto",
+        "api-response",
+        "serialization",
+        "schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/dto/ScheduleJobResp.java",
+      "type": "file",
+      "name": "ScheduleJobResp.java",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/adapter/dto/ScheduleJobResp.java",
+      "summary": "定时任务响应 DTO，承载任务名称、分组、处理器、cron 表达式、状态和最近/下次执行信息。它是调度任务管理接口的标准返回结构。",
+      "tags": [
+        "dto",
+        "api-response",
+        "schedule-job",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-schedule/src/main/java/com/forex/schedule/adapter/dto/ScheduleJobResp.java:ScheduleJobResp",
+      "type": "class",
+      "name": "ScheduleJobResp",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/adapter/dto/ScheduleJobResp.java",
+      "lineRange": [
+        9,
+        42
+      ],
+      "summary": "ScheduleJobResp 是 API 响应 DTO，承载序列化给前端或调用方的字段。",
+      "tags": [
+        "dto",
+        "api-response",
+        "serialization",
+        "schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-schedule/src/main/java/com/forex/schedule/application/command/JobCmd.java",
+      "type": "file",
+      "name": "JobCmd.java",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/application/command/JobCmd.java",
+      "summary": "定时任务创建和更新命令对象，包含任务名称、分组、处理器、cron 表达式和描述字段。它通过 Jakarta Validation 约束必填字段。",
+      "tags": [
+        "command",
+        "validation",
+        "schedule-job",
+        "dto"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-schedule/src/main/java/com/forex/schedule/application/command/JobCmd.java:JobCmd",
+      "type": "class",
+      "name": "JobCmd",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/application/command/JobCmd.java",
+      "lineRange": [
+        9,
+        31
+      ],
+      "summary": "JobCmd 是应用命令 DTO，承载写操作入参并声明校验约束。",
+      "tags": [
+        "command",
+        "validation",
+        "dto",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-schedule/src/main/java/com/forex/schedule/application/query/JobQuery.java",
+      "type": "file",
+      "name": "JobQuery.java",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/application/query/JobQuery.java",
+      "summary": "定时任务分页查询对象，继承 PageReq 并增加任务名称、分组和状态筛选条件。它承载 controller 到仓储查询之间的过滤参数。",
+      "tags": [
+        "query-object",
+        "pagination",
+        "schedule-job",
+        "dto"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-schedule/src/main/java/com/forex/schedule/application/query/JobQuery.java:JobQuery",
+      "type": "class",
+      "name": "JobQuery",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/application/query/JobQuery.java",
+      "lineRange": [
+        10,
+        22
+      ],
+      "summary": "JobQuery 是查询 DTO，承载分页和过滤条件。",
+      "tags": [
+        "query-object",
+        "pagination",
+        "dto",
+        "filtering"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:ScheduleController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:ScheduleController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:addJob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:addJob",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:updateJob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:updateJob",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:toggleJob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:toggleJob",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:triggerJob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:triggerJob",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:getJob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:getJob",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:pageQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:getJobLogs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:getJobLogs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:toResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java:toLogResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/dto/JobLogResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/dto/ScheduleJobResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/application/command/JobCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/application/query/JobQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/JobLog.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/dto/JobLogResp.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/adapter/dto/JobLogResp.java:JobLogResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/dto/JobLogResp.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/adapter/dto/JobLogResp.java:JobLogResp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/dto/ScheduleJobResp.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/adapter/dto/ScheduleJobResp.java:ScheduleJobResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/adapter/dto/ScheduleJobResp.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/adapter/dto/ScheduleJobResp.java:ScheduleJobResp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/command/JobCmd.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/application/command/JobCmd.java:JobCmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/command/JobCmd.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/application/command/JobCmd.java:JobCmd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/query/JobQuery.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/application/query/JobQuery.java:JobQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/query/JobQuery.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/application/query/JobQuery.java:JobQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/query/JobQuery.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

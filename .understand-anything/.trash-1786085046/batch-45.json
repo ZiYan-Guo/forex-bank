@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {
+      "id": "table:sql/risk/init.sql:init",
+      "type": "table",
+      "name": "init.sql",
+      "filePath": "sql/risk/init.sql",
+      "summary": "定义数据库表、初始化数据或数据结构，是业务持久化和查询逻辑的基础。",
+      "tags": [
+        "数据库",
+        "数据模型"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "schema:sql/risk/init.sql",
+      "target": "table:sql/risk/init.sql:init",
+      "type": "defines_schema",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 4,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 4,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 39,
+      "nonEmptyLines": 27,
+      "classes": [
+        {
+          "name": "RateQuery",
+          "startLine": 11,
+          "endLine": 39,
+          "methods": [],
+          "properties": [
+            "currencyPair",
+            "baseCurrency",
+            "quoteCurrency",
+            "rateSource",
+            "status",
+            "rateDate",
+            "startDate",
+            "endDate"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RateQuery",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "CompleteTaskReq",
+          "startLine": 6,
+          "endLine": 14,
+          "methods": [],
+          "properties": [
+            "result",
+            "comment"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CompleteTaskReq",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "GenerateSamplingReq",
+          "startLine": 6,
+          "endLine": 11,
+          "methods": [],
+          "properties": [
+            "date"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GenerateSamplingReq",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 20,
+      "classes": [
+        {
+          "name": "SamplingEvaluateReq",
+          "startLine": 7,
+          "endLine": 27,
+          "methods": [],
+          "properties": [
+            "customerId",
+            "bizType",
+            "amount",
+            "currency",
+            "countryCode",
+            "accountAgeDays"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SamplingEvaluateReq",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java",
+      "type": "file",
+      "name": "RateQuery.java",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java",
+      "summary": "定义请求、响应或命令查询载体，用于在 API、应用服务和前端之间传递结构化数据。",
+      "tags": [
+        "type-definition",
+        "DTO"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java:RateQuery",
+      "type": "class",
+      "name": "RateQuery",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java",
+      "lineRange": [
+        11,
+        39
+      ],
+      "summary": "定义 RateQuery 类型，封装 RateQuery.java 中的主要状态、行为或接口契约。",
+      "tags": [
+        "type-definition",
+        "DTO",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java",
+      "type": "file",
+      "name": "CompleteTaskReq.java",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java",
+      "summary": "定义请求、响应或命令查询载体，用于在 API、应用服务和前端之间传递结构化数据。",
+      "tags": [
+        "type-definition",
+        "DTO"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java:CompleteTaskReq",
+      "type": "class",
+      "name": "CompleteTaskReq",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java",
+      "lineRange": [
+        6,
+        14
+      ],
+      "summary": "定义 CompleteTaskReq 类型，封装 CompleteTaskReq.java 中的主要状态、行为或接口契约。",
+      "tags": [
+        "type-definition",
+        "DTO",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java",
+      "type": "file",
+      "name": "GenerateSamplingReq.java",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java",
+      "summary": "定义请求、响应或命令查询载体，用于在 API、应用服务和前端之间传递结构化数据。",
+      "tags": [
+        "type-definition",
+        "DTO"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java:GenerateSamplingReq",
+      "type": "class",
+      "name": "GenerateSamplingReq",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java",
+      "lineRange": [
+        6,
+        11
+      ],
+      "summary": "定义 GenerateSamplingReq 类型，封装 GenerateSamplingReq.java 中的主要状态、行为或接口契约。",
+      "tags": [
+        "type-definition",
+        "DTO",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java",
+      "type": "file",
+      "name": "SamplingEvaluateReq.java",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java",
+      "summary": "定义请求、响应或命令查询载体，用于在 API、应用服务和前端之间传递结构化数据。",
+      "tags": [
+        "type-definition",
+        "DTO"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java:SamplingEvaluateReq",
+      "type": "class",
+      "name": "SamplingEvaluateReq",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java",
+      "lineRange": [
+        7,
+        27
+      ],
+      "summary": "定义 SamplingEvaluateReq 类型，封装 SamplingEvaluateReq.java 中的主要状态、行为或接口契约。",
+      "tags": [
+        "type-definition",
+        "DTO",
+        "class"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java:RateQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/application/query/RateQuery.java:RateQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java:CompleteTaskReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/CompleteTaskReq.java:CompleteTaskReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java:GenerateSamplingReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/GenerateSamplingReq.java:GenerateSamplingReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java:SamplingEvaluateReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/adapter/dto/SamplingEvaluateReq.java:SamplingEvaluateReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

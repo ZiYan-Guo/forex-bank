@@ -1,0 +1,529 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 2,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 2,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 2,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/infrastructure/mapper/ExchangeRateMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 43,
+      "classes": [
+        {
+          "name": "ExchangeRateMapper",
+          "startLine": 15,
+          "endLine": 51,
+          "methods": [
+            "selectLatestByCurrencyPair",
+            "selectLatestRates",
+            "selectByDateRange",
+            "pageQuery"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ExchangeRateMapper",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-rate/src/main/java/com/forex/rate/infrastructure/repository/ExchangeRateRepositoryImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 105,
+      "nonEmptyLines": 91,
+      "functions": [
+        {
+          "name": "save",
+          "startLine": 27,
+          "endLine": 36,
+          "params": [
+            "rate"
+          ]
+        },
+        {
+          "name": "findById",
+          "startLine": 38,
+          "endLine": 42,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "findLatestByCurrencyPair",
+          "startLine": 44,
+          "endLine": 48,
+          "params": [
+            "currencyPair"
+          ]
+        },
+        {
+          "name": "findLatestRates",
+          "startLine": 50,
+          "endLine": 54,
+          "params": []
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 56,
+          "endLine": 67,
+          "params": [
+            "query"
+          ]
+        },
+        {
+          "name": "toDomain",
+          "startLine": 69,
+          "endLine": 87,
+          "params": [
+            "po"
+          ]
+        },
+        {
+          "name": "toPO",
+          "startLine": 89,
+          "endLine": 104,
+          "params": [
+            "rate"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ExchangeRateRepositoryImpl",
+          "startLine": 20,
+          "endLine": 105,
+          "methods": [
+            "save",
+            "findById",
+            "findLatestByCurrencyPair",
+            "findLatestRates",
+            "pageQuery",
+            "toDomain",
+            "toPO"
+          ],
+          "properties": [
+            "exchangeRateMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "save",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "findById",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "findLatestByCurrencyPair",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "findLatestRates",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "ExchangeRateRepositoryImpl",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "save",
+          "callee": "toPO",
+          "lineNumber": 29
+        },
+        {
+          "caller": "save",
+          "callee": "rate.getId",
+          "lineNumber": 30
+        },
+        {
+          "caller": "save",
+          "callee": "exchangeRateMapper.insert",
+          "lineNumber": 31
+        },
+        {
+          "caller": "save",
+          "callee": "exchangeRateMapper.updateById",
+          "lineNumber": 33
+        },
+        {
+          "caller": "save",
+          "callee": "toDomain",
+          "lineNumber": 35
+        },
+        {
+          "caller": "findById",
+          "callee": "exchangeRateMapper.selectById",
+          "lineNumber": 40
+        },
+        {
+          "caller": "findById",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 41
+        },
+        {
+          "caller": "findById",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 41
+        },
+        {
+          "caller": "findLatestByCurrencyPair",
+          "callee": "exchangeRateMapper.selectLatestByCurrencyPair",
+          "lineNumber": 46
+        },
+        {
+          "caller": "findLatestByCurrencyPair",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 47
+        },
+        {
+          "caller": "findLatestByCurrencyPair",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 47
+        },
+        {
+          "caller": "findLatestRates",
+          "callee": "exchangeRateMapper.selectLatestRates",
+          "lineNumber": 52
+        },
+        {
+          "caller": "findLatestRates",
+          "callee": "poList.stream().map(this::toDomain).collect",
+          "lineNumber": 53
+        },
+        {
+          "caller": "findLatestRates",
+          "callee": "poList.stream().map",
+          "lineNumber": 53
+        },
+        {
+          "caller": "findLatestRates",
+          "callee": "poList.stream",
+          "lineNumber": 53
+        },
+        {
+          "caller": "findLatestRates",
+          "callee": "Collectors.toList",
+          "lineNumber": 53
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "new Page<>",
+          "lineNumber": 58
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageNum",
+          "lineNumber": 58
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageSize",
+          "lineNumber": 58
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "exchangeRateMapper.pageQuery",
+          "lineNumber": 59
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords().stream()\n                .map(this::toDomain).toList",
+          "lineNumber": 60
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords().stream().map",
+          "lineNumber": 60
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords().stream",
+          "lineNumber": 60
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords",
+          "lineNumber": 60
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "log.debug",
+          "lineNumber": 64
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getCurrencyPair",
+          "lineNumber": 65
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageNum",
+          "lineNumber": 65
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageSize",
+          "lineNumber": 65
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getTotal",
+          "lineNumber": 65
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "PageResp.of",
+          "lineNumber": 66
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getTotal",
+          "lineNumber": 66
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageNum",
+          "lineNumber": 66
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageSize",
+          "lineNumber": 66
+        },
+        {
+          "caller": "toDomain",
+          "callee": "ExchangeRate.reconstitute",
+          "lineNumber": 73
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getId",
+          "lineNumber": 74
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getCurrencyPair",
+          "lineNumber": 75
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getBaseCurrency",
+          "lineNumber": 76
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getQuoteCurrency",
+          "lineNumber": 77
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getBidRate",
+          "lineNumber": 78
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getAskRate",
+          "lineNumber": 79
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getMidRate",
+          "lineNumber": 80
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getSpread",
+          "lineNumber": 81
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getRateSource",
+          "lineNumber": 82
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getRateDate",
+          "lineNumber": 83
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getRateTime",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getStatus",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toPO",
+          "callee": "new ExchangeRatePO",
+          "lineNumber": 90
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setId",
+          "lineNumber": 91
+        },
+        {
+          "caller": "toPO",
+          "callee": "rate.getId",
+          "lineNumber": 91
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setCurrencyPair",
+          "lineNumber": 92
+        },
+        {
+          "caller": "toPO",
+          "callee": "rate.getCurrencyPair",
+          "lineNumber": 92
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setBaseCurrency",
+          "lineNumber": 93
+        },
+        {
+          "caller": "toPO",
+          "callee": "rate.getBaseCurrency",
+          "lineNumber": 93
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setQuoteCurrency",
+          "lineNumber": 94
+        },
+        {
+          "caller": "toPO",
+          "callee": "rate.getQuoteCurrency",
+          "lineNumber": 94
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setBidRate",
+          "lineNumber": 95
+        },
+        {
+          "caller": "toPO",
+          "callee": "rate.getBidRate",
+          "lineNumber": 95
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setAskRate",
+          "lineNumber": 96
+        },
+        {
+          "caller": "toPO",
+          "callee": "rate.getAskRate",
+          "lineNumber": 96
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setMidRate",
+          "lineNumber": 97
+        },
+        {
+          "caller": "toPO",
+          "callee": "rate.getMidRate",
+          "lineNumber": 97
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setSpread",
+          "lineNumber": 98
+        },
+        {
+          "caller": "toPO",
+          "callee": "rate.getSpread",
+          "lineNumber": 98
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setRateSource",
+          "lineNumber": 99
+        },
+        {
+          "caller": "toPO",
+          "callee": "rate.getRateSource",
+          "lineNumber": 99
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setRateDate",
+          "lineNumber": 100
+        },
+        {
+          "caller": "toPO",
+          "callee": "rate.getRateDate",
+          "lineNumber": 100
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setRateTime",
+          "lineNumber": 101
+        },
+        {
+          "caller": "toPO",
+          "callee": "rate.getRateTime",
+          "lineNumber": 101
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setStatus",
+          "lineNumber": 102
+        },
+        {
+          "caller": "toPO",
+          "callee": "rate.getStatus",
+          "lineNumber": 102
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 6,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    }
+  ]
+}

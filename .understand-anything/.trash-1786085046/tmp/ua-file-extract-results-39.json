@@ -1,0 +1,22 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 0,
+  "filesSkipped": [
+    "forex-bank-web/src/views/risk/SamplingRuleConfig.vue",
+    "forex-bank-web/src/views/schedule/JobManagement.vue",
+    "forex-bank-web/src/views/settlement/BankGuarantee.vue",
+    "forex-bank-web/src/views/settlement/DocumentaryCollection.vue"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 0,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": []
+}

@@ -1,0 +1,306 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 5,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 5,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "forex-bank-web/src/api/business.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 126,
+      "nonEmptyLines": 117,
+      "exports": [
+        {
+          "name": "tradingApi",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "paymentApi",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "settlementApi",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "riskApi",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "scheduleApi",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "accountApi",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "reportingApi",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "positionApi",
+          "line": 111,
+          "isDefault": false
+        },
+        {
+          "name": "workflowApi",
+          "line": 120,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 9,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "forex-bank-web/src/api/exchange.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 21,
+      "exports": [
+        {
+          "name": "exchangeApi",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "rateApi",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "forex-bank-web/src/api/request.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 94,
+      "nonEmptyLines": 86,
+      "functions": [
+        {
+          "name": "buildIdempotencyKey",
+          "startLine": 57,
+          "endLine": 65,
+          "params": [
+            "config"
+          ]
+        },
+        {
+          "name": "stableStringify",
+          "startLine": 71,
+          "endLine": 83,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "hashString",
+          "startLine": 85,
+          "endLine": 92,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "buildIdempotencyKey",
+          "callee": "stableStringify",
+          "lineNumber": 58
+        },
+        {
+          "caller": "buildIdempotencyKey",
+          "callee": "(config.method || 'get').toLowerCase",
+          "lineNumber": 59
+        },
+        {
+          "caller": "buildIdempotencyKey",
+          "callee": "hashString",
+          "lineNumber": 64
+        },
+        {
+          "caller": "stableStringify",
+          "callee": "JSON.stringify",
+          "lineNumber": 76
+        },
+        {
+          "caller": "stableStringify",
+          "callee": "String",
+          "lineNumber": 76
+        },
+        {
+          "caller": "stableStringify",
+          "callee": "Array.isArray",
+          "lineNumber": 78
+        },
+        {
+          "caller": "stableStringify",
+          "callee": "value.map(item => stableStringify(item)).join",
+          "lineNumber": 79
+        },
+        {
+          "caller": "stableStringify",
+          "callee": "value.map",
+          "lineNumber": 79
+        },
+        {
+          "caller": "stableStringify",
+          "callee": "stableStringify",
+          "lineNumber": 79
+        },
+        {
+          "caller": "stableStringify",
+          "callee": "Object.keys(record).sort().map(key => `${JSON.stringify(key)}:${stableStringify(record[key])}`).join",
+          "lineNumber": 82
+        },
+        {
+          "caller": "stableStringify",
+          "callee": "Object.keys(record).sort().map",
+          "lineNumber": 82
+        },
+        {
+          "caller": "stableStringify",
+          "callee": "Object.keys(record).sort",
+          "lineNumber": 82
+        },
+        {
+          "caller": "stableStringify",
+          "callee": "Object.keys",
+          "lineNumber": 82
+        },
+        {
+          "caller": "stableStringify",
+          "callee": "JSON.stringify",
+          "lineNumber": 82
+        },
+        {
+          "caller": "stableStringify",
+          "callee": "stableStringify",
+          "lineNumber": 82
+        },
+        {
+          "caller": "hashString",
+          "callee": "value.charCodeAt",
+          "lineNumber": 88
+        },
+        {
+          "caller": "hashString",
+          "callee": "Math.imul",
+          "lineNumber": 89
+        },
+        {
+          "caller": "hashString",
+          "callee": "(hash >>> 0).toString",
+          "lineNumber": 91
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "forex-bank-web/src/store/rate.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 40,
+      "nonEmptyLines": 34,
+      "exports": [
+        {
+          "name": "useRateStore",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fetchRates",
+          "callee": "rateApi.getAll",
+          "lineNumber": 21
+        },
+        {
+          "caller": "fetchRates",
+          "callee": "console.error",
+          "lineNumber": 24
+        },
+        {
+          "caller": "startPolling",
+          "callee": "fetchRates",
+          "lineNumber": 31
+        },
+        {
+          "caller": "startPolling",
+          "callee": "setInterval",
+          "lineNumber": 32
+        },
+        {
+          "caller": "stopPolling",
+          "callee": "clearInterval",
+          "lineNumber": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "forex-bank-web/src/types/api.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 86,
+      "nonEmptyLines": 78,
+      "exports": [
+        {
+          "name": "RiskLevelMap",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "OrderStatusMap",
+          "line": 62,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

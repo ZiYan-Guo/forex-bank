@@ -1,0 +1,721 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "type": "file",
+      "name": "CollectionDomainService.java",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "summary": "跟单托收领域服务负责创建托收编号、校验关键字段并驱动收单、提示、承兑和付款状态迁移。",
+      "tags": [
+        "领域服务",
+        "跟单托收",
+        "业务校验",
+        "状态流转"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:CollectionDomainService",
+      "type": "class",
+      "name": "CollectionDomainService",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "lineRange": [
+        19,
+        84
+      ],
+      "summary": "跟单托收领域服务封装创建与状态流转业务规则。",
+      "tags": [
+        "领域服务",
+        "跟单托收",
+        "业务规则"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:createCollection",
+      "type": "function",
+      "name": "createCollection",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "lineRange": [
+        29,
+        53
+      ],
+      "summary": "createCollection 执行跟单托收领域规则并保存状态变更。",
+      "tags": [
+        "领域服务",
+        "业务规则",
+        "状态流转"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:markReceivedDocuments",
+      "type": "function",
+      "name": "markReceivedDocuments",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "lineRange": [
+        55,
+        59
+      ],
+      "summary": "markReceivedDocuments 执行跟单托收领域规则并保存状态变更。",
+      "tags": [
+        "领域服务",
+        "业务规则",
+        "状态流转"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:presentToDrawee",
+      "type": "function",
+      "name": "presentToDrawee",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "lineRange": [
+        61,
+        65
+      ],
+      "summary": "presentToDrawee 执行跟单托收领域规则并保存状态变更。",
+      "tags": [
+        "领域服务",
+        "业务规则",
+        "状态流转"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:accept",
+      "type": "function",
+      "name": "accept",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "lineRange": [
+        67,
+        71
+      ],
+      "summary": "accept 执行跟单托收领域规则并保存状态变更。",
+      "tags": [
+        "领域服务",
+        "业务规则",
+        "状态流转"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:pay",
+      "type": "function",
+      "name": "pay",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "lineRange": [
+        73,
+        77
+      ],
+      "summary": "pay 执行跟单托收领域规则并保存状态变更。",
+      "tags": [
+        "领域服务",
+        "业务规则",
+        "状态流转"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "type": "file",
+      "name": "GuaranteeDomainService.java",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "summary": "保函领域服务负责生成保函编号、校验金额与客户，并驱动保函开立、索赔和到期处理。",
+      "tags": [
+        "领域服务",
+        "国际保函",
+        "业务校验",
+        "状态流转"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:GuaranteeDomainService",
+      "type": "class",
+      "name": "GuaranteeDomainService",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "lineRange": [
+        20,
+        82
+      ],
+      "summary": "保函领域服务封装创建、开立、索赔和到期业务规则。",
+      "tags": [
+        "领域服务",
+        "国际保函",
+        "业务规则"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:createGuarantee",
+      "type": "function",
+      "name": "createGuarantee",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "lineRange": [
+        30,
+        57
+      ],
+      "summary": "createGuarantee 执行保函领域规则并保存状态变更。",
+      "tags": [
+        "领域服务",
+        "业务规则",
+        "状态流转"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:issueGuarantee",
+      "type": "function",
+      "name": "issueGuarantee",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "lineRange": [
+        59,
+        63
+      ],
+      "summary": "issueGuarantee 执行保函领域规则并保存状态变更。",
+      "tags": [
+        "领域服务",
+        "业务规则",
+        "状态流转"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:claim",
+      "type": "function",
+      "name": "claim",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "lineRange": [
+        65,
+        69
+      ],
+      "summary": "claim 执行保函领域规则并保存状态变更。",
+      "tags": [
+        "领域服务",
+        "业务规则",
+        "状态流转"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:expire",
+      "type": "function",
+      "name": "expire",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "lineRange": [
+        71,
+        75
+      ],
+      "summary": "expire 执行保函领域规则并保存状态变更。",
+      "tags": [
+        "领域服务",
+        "业务规则",
+        "状态流转"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "type": "file",
+      "name": "GuaranteeDomainServiceTest.java",
+      "filePath": "forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "summary": "使用 JUnit 5 与 Mockito 验证保函领域服务的创建、开立、索赔、到期和过期判断行为。",
+      "tags": [
+        "test",
+        "junit",
+        "mockito",
+        "国际保函"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:GuaranteeDomainServiceTest",
+      "type": "class",
+      "name": "GuaranteeDomainServiceTest",
+      "filePath": "forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "lineRange": [
+        20,
+        138
+      ],
+      "summary": "保函领域服务测试类，使用 mock 仓储验证服务行为。",
+      "tags": [
+        "test",
+        "junit",
+        "mockito"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:testCreateGuarantee",
+      "type": "function",
+      "name": "testCreateGuarantee",
+      "filePath": "forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "lineRange": [
+        32,
+        48
+      ],
+      "summary": "testCreateGuarantee 验证保函领域逻辑在对应场景下的行为和持久化调用。",
+      "tags": [
+        "test",
+        "业务场景",
+        "断言"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:testIssueGuarantee",
+      "type": "function",
+      "name": "testIssueGuarantee",
+      "filePath": "forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "lineRange": [
+        50,
+        59
+      ],
+      "summary": "testIssueGuarantee 验证保函领域逻辑在对应场景下的行为和持久化调用。",
+      "tags": [
+        "test",
+        "业务场景",
+        "断言"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:testClaim",
+      "type": "function",
+      "name": "testClaim",
+      "filePath": "forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "lineRange": [
+        61,
+        70
+      ],
+      "summary": "testClaim 验证保函领域逻辑在对应场景下的行为和持久化调用。",
+      "tags": [
+        "test",
+        "业务场景",
+        "断言"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:testExpire",
+      "type": "function",
+      "name": "testExpire",
+      "filePath": "forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "lineRange": [
+        72,
+        81
+      ],
+      "summary": "testExpire 验证保函领域逻辑在对应场景下的行为和持久化调用。",
+      "tags": [
+        "test",
+        "业务场景",
+        "断言"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:testCreateGuarantee_Types",
+      "type": "function",
+      "name": "testCreateGuarantee_Types",
+      "filePath": "forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "lineRange": [
+        83,
+        96
+      ],
+      "summary": "testCreateGuarantee_Types 验证保函领域逻辑在对应场景下的行为和持久化调用。",
+      "tags": [
+        "test",
+        "业务场景",
+        "断言"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:testIsExpired_True",
+      "type": "function",
+      "name": "testIsExpired_True",
+      "filePath": "forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "lineRange": [
+        98,
+        109
+      ],
+      "summary": "testIsExpired_True 验证保函领域逻辑在对应场景下的行为和持久化调用。",
+      "tags": [
+        "test",
+        "业务场景",
+        "断言"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:testIsExpired_False",
+      "type": "function",
+      "name": "testIsExpired_False",
+      "filePath": "forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "lineRange": [
+        111,
+        122
+      ],
+      "summary": "testIsExpired_False 验证保函领域逻辑在对应场景下的行为和持久化调用。",
+      "tags": [
+        "test",
+        "业务场景",
+        "断言"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/repository/CollectionRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:CollectionDomainService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:CollectionDomainService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:createCollection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:createCollection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:markReceivedDocuments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:markReceivedDocuments",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:presentToDrawee",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:presentToDrawee",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:accept",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:accept",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:pay",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:pay",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/repository/GuaranteeRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:GuaranteeDomainService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:GuaranteeDomainService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:createGuarantee",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:createGuarantee",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:issueGuarantee",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:issueGuarantee",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:claim",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:claim",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:expire",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:expire",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/repository/GuaranteeRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "target": "class:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:GuaranteeDomainServiceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "target": "class:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:GuaranteeDomainServiceTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "target": "function:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:testCreateGuarantee",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "target": "function:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:testIssueGuarantee",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "target": "function:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:testClaim",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "target": "function:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:testExpire",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "target": "function:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:testCreateGuarantee_Types",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "target": "function:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:testIsExpired_True",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "target": "function:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java:testIsExpired_False",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:markReceivedDocuments",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:presentToDrawee",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:accept",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java:pay",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:issueGuarantee",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:claim",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java:expire",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "target": "file:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "target": "file:forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

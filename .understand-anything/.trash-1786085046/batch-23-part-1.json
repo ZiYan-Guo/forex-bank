@@ -1,0 +1,1218 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "type": "file",
+      "name": "Idempotent.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "summary": "定义业务幂等注解，允许控制器方法声明 SpEL 幂等 key、过期时间和重复提交提示。",
+      "tags": [
+        "幂等控制",
+        "annotation",
+        "横切关注点",
+        "请求保护"
+      ],
+      "complexity": "simple",
+      "languageNotes": "运行期保留的 Java annotation 由 AOP 切面读取并执行幂等校验。"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java:Idempotent",
+      "type": "class",
+      "name": "Idempotent",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "lineRange": [
+        23,
+        45
+      ],
+      "summary": "声明方法级幂等保护配置，由幂等切面读取 key、过期时间和重复提交提示。",
+      "tags": [
+        "annotation",
+        "幂等控制",
+        "aop"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "type": "file",
+      "name": "CollectionController.java",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "summary": "暴露跟单托收 REST 接口，处理创建、详情、分页和付款请求，并在适配层完成 DTO 与命令对象转换。",
+      "tags": [
+        "rest-controller",
+        "跟单托收",
+        "api-handler",
+        "dto转换"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:CollectionController",
+      "type": "class",
+      "name": "CollectionController",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "lineRange": [
+        31,
+        138
+      ],
+      "summary": "跟单托收控制器承接 HTTP 请求并调用结算应用服务。",
+      "tags": [
+        "rest-controller",
+        "跟单托收",
+        "api-handler"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "lineRange": [
+        40,
+        52
+      ],
+      "summary": "create 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:getDetail",
+      "type": "function",
+      "name": "getDetail",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "lineRange": [
+        54,
+        59
+      ],
+      "summary": "getDetail 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "lineRange": [
+        61,
+        75
+      ],
+      "summary": "pageQuery 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:pay",
+      "type": "function",
+      "name": "pay",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "lineRange": [
+        77,
+        85
+      ],
+      "summary": "pay 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:toCmd",
+      "type": "function",
+      "name": "toCmd",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "lineRange": [
+        91,
+        102
+      ],
+      "summary": "toCmd 在适配层转换请求、查询或响应对象，避免外部 DTO 泄漏到领域层。",
+      "tags": [
+        "dto转换",
+        "适配层",
+        "映射"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:toResp",
+      "type": "function",
+      "name": "toResp",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "lineRange": [
+        118,
+        137
+      ],
+      "summary": "toResp 在适配层转换请求、查询或响应对象，避免外部 DTO 泄漏到领域层。",
+      "tags": [
+        "dto转换",
+        "适配层",
+        "映射"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "type": "file",
+      "name": "GuaranteeController.java",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "summary": "暴露国际保函 REST 接口，处理保函创建、查询、分页和开立动作，并委派 SettlementAppService 执行业务用例。",
+      "tags": [
+        "rest-controller",
+        "国际保函",
+        "api-handler",
+        "权限控制"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:GuaranteeController",
+      "type": "class",
+      "name": "GuaranteeController",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "lineRange": [
+        31,
+        143
+      ],
+      "summary": "国际保函控制器承接 HTTP 请求并调用结算应用服务。",
+      "tags": [
+        "rest-controller",
+        "国际保函",
+        "api-handler"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "lineRange": [
+        40,
+        52
+      ],
+      "summary": "create 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:getDetail",
+      "type": "function",
+      "name": "getDetail",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "lineRange": [
+        54,
+        59
+      ],
+      "summary": "getDetail 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "lineRange": [
+        61,
+        75
+      ],
+      "summary": "pageQuery 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:issue",
+      "type": "function",
+      "name": "issue",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "lineRange": [
+        77,
+        85
+      ],
+      "summary": "issue 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:toCmd",
+      "type": "function",
+      "name": "toCmd",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "lineRange": [
+        91,
+        104
+      ],
+      "summary": "toCmd 在适配层转换请求、查询或响应对象，避免外部 DTO 泄漏到领域层。",
+      "tags": [
+        "dto转换",
+        "适配层",
+        "映射"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:toResp",
+      "type": "function",
+      "name": "toResp",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "lineRange": [
+        120,
+        142
+      ],
+      "summary": "toResp 在适配层转换请求、查询或响应对象，避免外部 DTO 泄漏到领域层。",
+      "tags": [
+        "dto转换",
+        "适配层",
+        "映射"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "type": "file",
+      "name": "LcController.java",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "summary": "暴露信用证管理 REST 接口，覆盖创建、开立、修改、交单、审单、承兑和付款等完整生命周期操作。",
+      "tags": [
+        "rest-controller",
+        "信用证",
+        "api-handler",
+        "生命周期"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:LcController",
+      "type": "class",
+      "name": "LcController",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "lineRange": [
+        33,
+        223
+      ],
+      "summary": "信用证控制器暴露信用证生命周期操作的 REST 入口。",
+      "tags": [
+        "rest-controller",
+        "信用证",
+        "生命周期"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:createLc",
+      "type": "function",
+      "name": "createLc",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "lineRange": [
+        42,
+        54
+      ],
+      "summary": "createLc 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:getDetail",
+      "type": "function",
+      "name": "getDetail",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "lineRange": [
+        56,
+        61
+      ],
+      "summary": "getDetail 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "lineRange": [
+        63,
+        73
+      ],
+      "summary": "pageQuery 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:issue",
+      "type": "function",
+      "name": "issue",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "lineRange": [
+        75,
+        83
+      ],
+      "summary": "issue 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:amend",
+      "type": "function",
+      "name": "amend",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "lineRange": [
+        85,
+        93
+      ],
+      "summary": "amend 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:presentDocs",
+      "type": "function",
+      "name": "presentDocs",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "lineRange": [
+        95,
+        103
+      ],
+      "summary": "presentDocs 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:checkDocs",
+      "type": "function",
+      "name": "checkDocs",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "lineRange": [
+        105,
+        113
+      ],
+      "summary": "checkDocs 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:accept",
+      "type": "function",
+      "name": "accept",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "lineRange": [
+        115,
+        123
+      ],
+      "summary": "accept 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:pay",
+      "type": "function",
+      "name": "pay",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "lineRange": [
+        125,
+        133
+      ],
+      "summary": "pay 处理结算模块 HTTP 请求并调用应用服务返回标准响应。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "结算业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:toLcQuery",
+      "type": "function",
+      "name": "toLcQuery",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "lineRange": [
+        139,
+        150
+      ],
+      "summary": "toLcQuery 在适配层转换请求、查询或响应对象，避免外部 DTO 泄漏到领域层。",
+      "tags": [
+        "dto转换",
+        "适配层",
+        "映射"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:toCmd",
+      "type": "function",
+      "name": "toCmd",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "lineRange": [
+        156,
+        179
+      ],
+      "summary": "toCmd 在适配层转换请求、查询或响应对象，避免外部 DTO 泄漏到领域层。",
+      "tags": [
+        "dto转换",
+        "适配层",
+        "映射"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:toResp",
+      "type": "function",
+      "name": "toResp",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "lineRange": [
+        181,
+        222
+      ],
+      "summary": "toResp 在适配层转换请求、查询或响应对象，避免外部 DTO 泄漏到领域层。",
+      "tags": [
+        "dto转换",
+        "适配层",
+        "映射"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java:Idempotent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java:Idempotent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RedisLock.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/dto/CollectionReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/dto/CollectionResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/command/CreateCollectionCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:CollectionController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:CollectionController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:getDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:getDetail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:pageQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:pay",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:pay",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:toCmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:toResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RedisLock.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/dto/GuaranteeReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/dto/GuaranteeResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/command/CreateGuaranteeCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:GuaranteeController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:GuaranteeController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:getDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:getDetail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:pageQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:issue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:issue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:toCmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:toResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RedisLock.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/dto/CreateLcReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/dto/LcPageQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/dto/LcResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/command/AmendLcCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/command/CreateLcCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/aggregate/LetterOfCredit.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/query/LcQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:LcController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:LcController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:createLc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:createLc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:getDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:getDetail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:pageQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:issue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:issue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:amend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:amend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:presentDocs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:presentDocs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:checkDocs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:checkDocs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:accept",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:accept",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:pay",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:pay",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:toLcQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:toCmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:toResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:create",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:getDetail",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:pageQuery",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java:pay",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:create",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:getDetail",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:pageQuery",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java:issue",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:createLc",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:getDetail",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:pageQuery",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:issue",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:amend",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:presentDocs",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:checkDocs",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:accept",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java:pay",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

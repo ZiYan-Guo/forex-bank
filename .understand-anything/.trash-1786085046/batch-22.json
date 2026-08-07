@@ -1,0 +1,483 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java",
+      "type": "file",
+      "name": "SamplingRuleRepository.java",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java",
+      "summary": "定义抽查规则领域仓储端口，提供保存、按 ID 或规则编码查询、查询有效规则以及删除规则的统一契约。",
+      "tags": [
+        "仓储接口",
+        "风险抽查",
+        "领域端口",
+        "规则管理"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Java interface 用于隔离领域层与 MyBatis 持久化实现。"
+    },
+    {
+      "id": "class:forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java:SamplingRuleRepository",
+      "type": "class",
+      "name": "SamplingRuleRepository",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java",
+      "lineRange": [
+        12,
+        31
+      ],
+      "summary": "抽查规则仓储接口定义领域层需要的规则持久化能力。",
+      "tags": [
+        "仓储接口",
+        "领域端口",
+        "风险抽查"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "type": "file",
+      "name": "SamplingRuleMapper.java",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "summary": "提供抽查规则的 MyBatis 数据访问接口，封装按规则编码、有效期与优先级查询 t_sampling_rule 的 SQL。",
+      "tags": [
+        "mybatis",
+        "数据访问",
+        "风险抽查",
+        "sql查询"
+      ],
+      "complexity": "simple",
+      "languageNotes": "@Select 注解直接声明查询语句，适合小型只读查询。"
+    },
+    {
+      "id": "class:forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java:SamplingRuleMapper",
+      "type": "class",
+      "name": "SamplingRuleMapper",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "lineRange": [
+        17,
+        28
+      ],
+      "summary": "MyBatis Mapper 负责访问抽查规则持久化表并返回 SamplingRulePO。",
+      "tags": [
+        "mybatis",
+        "数据访问",
+        "mapper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "type": "file",
+      "name": "SamplingRuleRepositoryImpl.java",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "summary": "实现抽查规则仓储端口，负责 SamplingRule 领域对象与 SamplingRulePO 持久化对象之间的转换和保存查询。",
+      "tags": [
+        "仓储实现",
+        "领域转换",
+        "mybatis",
+        "风险抽查"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "通过 Spring @Repository 和构造器注入把领域仓储适配到 MyBatis-Plus。"
+    },
+    {
+      "id": "class:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:SamplingRuleRepositoryImpl",
+      "type": "class",
+      "name": "SamplingRuleRepositoryImpl",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "lineRange": [
+        20,
+        102
+      ],
+      "summary": "抽查规则仓储实现连接领域模型与数据库持久化对象。",
+      "tags": [
+        "仓储实现",
+        "适配器",
+        "领域转换"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "lineRange": [
+        27,
+        38
+      ],
+      "summary": "save 实现抽查规则仓储的持久化访问或领域/PO 转换逻辑。",
+      "tags": [
+        "仓储实现",
+        "持久化",
+        "领域转换"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:findById",
+      "type": "function",
+      "name": "findById",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "lineRange": [
+        40,
+        44
+      ],
+      "summary": "findById 实现抽查规则仓储的持久化访问或领域/PO 转换逻辑。",
+      "tags": [
+        "仓储实现",
+        "持久化",
+        "领域转换"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:findByRuleCode",
+      "type": "function",
+      "name": "findByRuleCode",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "lineRange": [
+        46,
+        50
+      ],
+      "summary": "findByRuleCode 实现抽查规则仓储的持久化访问或领域/PO 转换逻辑。",
+      "tags": [
+        "仓储实现",
+        "持久化",
+        "领域转换"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:findAllActive",
+      "type": "function",
+      "name": "findAllActive",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "lineRange": [
+        52,
+        57
+      ],
+      "summary": "findAllActive 实现抽查规则仓储的持久化访问或领域/PO 转换逻辑。",
+      "tags": [
+        "仓储实现",
+        "持久化",
+        "领域转换"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:findAll",
+      "type": "function",
+      "name": "findAll",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "lineRange": [
+        59,
+        64
+      ],
+      "summary": "findAll 实现抽查规则仓储的持久化访问或领域/PO 转换逻辑。",
+      "tags": [
+        "仓储实现",
+        "持久化",
+        "领域转换"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:deleteById",
+      "type": "function",
+      "name": "deleteById",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "lineRange": [
+        66,
+        69
+      ],
+      "summary": "deleteById 实现抽查规则仓储的持久化访问或领域/PO 转换逻辑。",
+      "tags": [
+        "仓储实现",
+        "持久化",
+        "领域转换"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:toDomain",
+      "type": "function",
+      "name": "toDomain",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "lineRange": [
+        71,
+        85
+      ],
+      "summary": "toDomain 在适配层转换请求、查询或响应对象，避免外部 DTO 泄漏到领域层。",
+      "tags": [
+        "dto转换",
+        "适配层",
+        "映射"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:toPO",
+      "type": "function",
+      "name": "toPO",
+      "filePath": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "lineRange": [
+        87,
+        101
+      ],
+      "summary": "toPO 在适配层转换请求、查询或响应对象，避免外部 DTO 泄漏到领域层。",
+      "tags": [
+        "dto转换",
+        "适配层",
+        "映射"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/domain/model/entity/SamplingRule.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java:SamplingRuleRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java:SamplingRuleRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/persistence/SamplingRulePO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java:SamplingRuleMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java:SamplingRuleMapper",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/domain/model/entity/SamplingRule.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/persistence/SamplingRulePO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:SamplingRuleRepositoryImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:SamplingRuleRepositoryImpl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:save",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:findById",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:findById",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:findByRuleCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:findByRuleCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:findAllActive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:findAllActive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:findAll",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:findAll",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:deleteById",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:deleteById",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:toDomain",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "target": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:toPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:SamplingRuleRepositoryImpl",
+      "target": "class:forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java:SamplingRuleRepository",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:save",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:findById",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:findByRuleCode",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:findAllActive",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:findAll",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:deleteById",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:toDomain",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/domain/model/entity/SamplingRule.java",
+      "type": "transforms",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "function:forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java:toPO",
+      "target": "file:forex-risk/src/main/java/com/forex/risk/infrastructure/persistence/SamplingRulePO.java",
+      "type": "transforms",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

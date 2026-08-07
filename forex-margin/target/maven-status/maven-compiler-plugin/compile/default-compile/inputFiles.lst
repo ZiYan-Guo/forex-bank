@@ -1,9 +1,17 @@
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/MarginApplication.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/adapter/controller/MarginController.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/adapter/dto/CollateralLedgerSummaryResp.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/adapter/dto/CollateralValuationReq.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/adapter/dto/CollateralValuationResp.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/adapter/dto/InitialMarginCalcReq.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/adapter/dto/InitialMarginCalcResp.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/adapter/dto/MarginPageQuery.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/adapter/dto/MarginResp.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/adapter/dto/VmMarginCalcReq.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/adapter/dto/VmMarginCalcResp.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/application/command/CreateMarginCmd.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/application/service/MarginAppService.java
+/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/application/service/MarginCalculationService.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/domain/event/MarginCalledEvent.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/domain/model/aggregate/MarginAccount.java
 /Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/forex-margin/src/main/java/com/forex/margin/domain/model/entity/MarginCall.java

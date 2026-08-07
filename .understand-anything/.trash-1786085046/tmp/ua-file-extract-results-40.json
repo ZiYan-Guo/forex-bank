@@ -1,0 +1,138 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 1,
+  "filesSkipped": [
+    "forex-common/forex-common-base/pom.xml"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 1,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/constant/CacheConstants.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 18,
+      "functions": [
+        {
+          "name": "CacheConstants",
+          "startLine": 5,
+          "endLine": 6,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CacheConstants",
+          "startLine": 3,
+          "endLine": 22,
+          "methods": [
+            "CacheConstants"
+          ],
+          "properties": [
+            "RATE_PREFIX",
+            "LOCK_PREFIX",
+            "IDEMPOTENT_PREFIX",
+            "RATE_LIMIT_PREFIX",
+            "QUOTA_PREFIX",
+            "BLACKLIST_KEY",
+            "TOKEN_BLACKLIST_PREFIX",
+            "CONFIG_PREFIX",
+            "RATE_CACHE_TTL_SECONDS",
+            "RATE_CACHE_L2_TTL_SECONDS",
+            "LOCK_DEFAULT_TTL_SECONDS",
+            "IDEMPOTENT_DEFAULT_TTL_SECONDS",
+            "BLACKLIST_REFRESH_MINUTES"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RATE_PREFIX",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "LOCK_PREFIX",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "IDEMPOTENT_PREFIX",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "RATE_LIMIT_PREFIX",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "QUOTA_PREFIX",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "BLACKLIST_KEY",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "TOKEN_BLACKLIST_PREFIX",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "CONFIG_PREFIX",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "RATE_CACHE_TTL_SECONDS",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "RATE_CACHE_L2_TTL_SECONDS",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "LOCK_DEFAULT_TTL_SECONDS",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "IDEMPOTENT_DEFAULT_TTL_SECONDS",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "BLACKLIST_REFRESH_MINUTES",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "CacheConstants",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 14,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,1048 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "type": "file",
+      "name": "RateController.java",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "summary": "汇率模块的 REST controller，暴露最新汇率查询、历史分页、货币转换、保存汇率和发布汇率接口。它把应用服务返回的 ExchangeRate 聚合转换为 API 响应 DTO，并叠加限流与角色校验。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "rate",
+        "authorization"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Controller 使用 Spring MVC 注解、Swagger Operation 元数据和泛型 R<PageResp<T>> 统一响应形态。"
+    },
+    {
+      "id": "class:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:RateController",
+      "type": "class",
+      "name": "RateController",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "lineRange": [
+        32,
+        120
+      ],
+      "summary": "RateController 暴露 HTTP API，并把请求/响应 DTO 与应用服务调用连接起来。",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "spring",
+        "adapter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:getLatestRate",
+      "type": "function",
+      "name": "getLatestRate",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "lineRange": [
+        41,
+        46
+      ],
+      "summary": "按货币对查询最新汇率，并转换为 RateResp 响应。",
+      "tags": [
+        "query",
+        "read-model",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:getAllRates",
+      "type": "function",
+      "name": "getAllRates",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "lineRange": [
+        48,
+        55
+      ],
+      "summary": "获取所有货币对的最新汇率并批量映射为响应 DTO。",
+      "tags": [
+        "query",
+        "read-model",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "lineRange": [
+        57,
+        69
+      ],
+      "summary": "分页查询历史汇率并把领域分页结果转换为 API 分页响应。",
+      "tags": [
+        "query",
+        "read-model",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:convertCurrency",
+      "type": "function",
+      "name": "convertCurrency",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "lineRange": [
+        71,
+        86
+      ],
+      "summary": "接收换汇请求，调用应用服务计算目标金额，并补充使用的中间价与报价时间。",
+      "tags": [
+        "calculation",
+        "rate",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:saveRate",
+      "type": "function",
+      "name": "saveRate",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "lineRange": [
+        88,
+        94
+      ],
+      "summary": "校验交易员角色后保存新的汇率报价并返回响应 DTO。",
+      "tags": [
+        "command",
+        "write-model",
+        "transaction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:publishRate",
+      "type": "function",
+      "name": "publishRate",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "lineRange": [
+        96,
+        102
+      ],
+      "summary": "校验交易员角色后触发指定汇率的渠道发布前处理。",
+      "tags": [
+        "function",
+        "java",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:toRateResp",
+      "type": "function",
+      "name": "toRateResp",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "lineRange": [
+        104,
+        119
+      ],
+      "summary": "把 ExchangeRate 聚合字段复制到 RateResp，隔离领域模型与 HTTP 响应。",
+      "tags": [
+        "mapping",
+        "dto",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-rate/src/main/java/com/forex/rate/adapter/dto/RateResp.java",
+      "type": "file",
+      "name": "RateResp.java",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/adapter/dto/RateResp.java",
+      "summary": "汇率查询响应 DTO，承载货币对、买卖价、中间价、点差、报价时间和状态等字段。它作为 adapter 层对外隐藏领域对象细节。",
+      "tags": [
+        "dto",
+        "api-response",
+        "rate",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-rate/src/main/java/com/forex/rate/adapter/dto/RateResp.java:RateResp",
+      "type": "class",
+      "name": "RateResp",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/adapter/dto/RateResp.java",
+      "lineRange": [
+        10,
+        49
+      ],
+      "summary": "RateResp 是 API 响应 DTO，承载序列化给前端或调用方的字段。",
+      "tags": [
+        "dto",
+        "api-response",
+        "serialization",
+        "schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "type": "file",
+      "name": "RateAppService.java",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "summary": "汇率应用服务，协调缓存、仓储、领域计算服务、发布校验服务和应用事件来完成查询、保存、兑换和发布前校验。它是 controller 与汇率领域模型之间的主要编排层。",
+      "tags": [
+        "application-service",
+        "rate",
+        "cache",
+        "domain-orchestration"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "事务边界放在 application service，读查询使用 readOnly，写操作发布 RateUpdatedEvent 并刷新缓存。"
+    },
+    {
+      "id": "class:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:RateAppService",
+      "type": "class",
+      "name": "RateAppService",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "lineRange": [
+        28,
+        129
+      ],
+      "summary": "RateAppService 编排领域对象、仓储和外部端口，承载该模块的应用层用例。",
+      "tags": [
+        "application-service",
+        "orchestration",
+        "transaction",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:getRate",
+      "type": "function",
+      "name": "getRate",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "lineRange": [
+        40,
+        53
+      ],
+      "summary": "优先从汇率缓存读取最新报价，缓存未命中时回退仓储并写回缓存。",
+      "tags": [
+        "query",
+        "read-model",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:getAllRates",
+      "type": "function",
+      "name": "getAllRates",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "lineRange": [
+        55,
+        59
+      ],
+      "summary": "读取所有最新汇率并按 currencyPair 聚合成 Map。",
+      "tags": [
+        "query",
+        "read-model",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "lineRange": [
+        65,
+        70
+      ],
+      "summary": "记录查询条件并委托仓储执行历史牌价分页查询。",
+      "tags": [
+        "query",
+        "read-model",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:calculateAmount",
+      "type": "function",
+      "name": "calculateAmount",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "lineRange": [
+        72,
+        75
+      ],
+      "summary": "读取指定货币对中间价并调用领域计算服务计算兑换金额。",
+      "tags": [
+        "calculation",
+        "rate",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:saveRate",
+      "type": "function",
+      "name": "saveRate",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "lineRange": [
+        77,
+        88
+      ],
+      "summary": "根据保存命令创建汇率聚合，持久化后刷新缓存并发布 RateUpdatedEvent。",
+      "tags": [
+        "command",
+        "write-model",
+        "transaction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:convertCurrency",
+      "type": "function",
+      "name": "convertCurrency",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "lineRange": [
+        90,
+        121
+      ],
+      "summary": "按直接汇率、反向汇率和 USD 交叉汇率的顺序解析换汇路径并计算金额。",
+      "tags": [
+        "calculation",
+        "rate",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:publishToChannels",
+      "type": "function",
+      "name": "publishToChannels",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "lineRange": [
+        123,
+        128
+      ],
+      "summary": "读取指定汇率并调用发布领域服务做发布前校验。",
+      "tags": [
+        "function",
+        "java",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "type": "file",
+      "name": "ExchangeRate.java",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "summary": "汇率领域聚合，封装货币对、买卖价、中间价、点差、来源、时间和有效状态。它负责创建、持久化重建、失效、过期判断以及核心数据校验。",
+      "tags": [
+        "domain-model",
+        "aggregate",
+        "rate",
+        "validation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "静态工厂方法集中维护 midRate 与 spread 的 BigDecimal 精度和领域不变量。"
+    },
+    {
+      "id": "class:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:ExchangeRate",
+      "type": "class",
+      "name": "ExchangeRate",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "lineRange": [
+        15,
+        112
+      ],
+      "summary": "ExchangeRate 是汇率领域聚合，维护报价、点差、状态、时间和校验规则。",
+      "tags": [
+        "domain-model",
+        "aggregate",
+        "validation",
+        "business-rules"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:ExchangeRate",
+      "type": "function",
+      "name": "ExchangeRate",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "lineRange": [
+        33,
+        35
+      ],
+      "summary": "ExchangeRate 实现 ExchangeRate 中的一段核心业务流程。",
+      "tags": [
+        "function",
+        "java",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "lineRange": [
+        37,
+        53
+      ],
+      "summary": "创建新的汇率聚合，计算中间价和点差，设置报价日期时间并执行领域校验。",
+      "tags": [
+        "factory",
+        "domain-model",
+        "construction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:reconstitute",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "lineRange": [
+        59,
+        78
+      ],
+      "summary": "从持久化字段重建汇率聚合，在缺失中间价或点差时按买卖价补算。",
+      "tags": [
+        "factory",
+        "domain-model",
+        "construction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:invalidate",
+      "type": "function",
+      "name": "invalidate",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "lineRange": [
+        88,
+        91
+      ],
+      "summary": "将汇率状态标记为无效并记录更新时间。",
+      "tags": [
+        "state-change",
+        "domain-model",
+        "business-rules"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:isExpired",
+      "type": "function",
+      "name": "isExpired",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "lineRange": [
+        93,
+        98
+      ],
+      "summary": "根据报价时间和传入 TTL 判断缓存或报价是否已经过期。",
+      "tags": [
+        "function",
+        "java",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:validate",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "lineRange": [
+        100,
+        111
+      ],
+      "summary": "校验货币对非空、买入价大于零且卖出价大于买入价。",
+      "tags": [
+        "validation",
+        "business-rules",
+        "guard-clause"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "type": "file",
+      "name": "ExchangeRateRepository.java",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "summary": "汇率聚合的领域仓储接口，定义保存、按 ID 查询、按货币对查询最新价、查询最新价列表和分页历史查询能力。它把领域层与基础设施持久化实现解耦。",
+      "tags": [
+        "repository",
+        "domain-port",
+        "rate",
+        "persistence"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java:ExchangeRateRepository",
+      "type": "class",
+      "name": "ExchangeRateRepository",
+      "filePath": "forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "lineRange": [
+        10,
+        21
+      ],
+      "summary": "ExchangeRateRepository 定义领域仓储端口，隐藏具体持久化实现。",
+      "tags": [
+        "repository",
+        "domain-port",
+        "persistence",
+        "interface"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:RateController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:RateController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:getLatestRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:getLatestRate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:getAllRates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:getAllRates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:pageQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:convertCurrency",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:convertCurrency",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:saveRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:saveRate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:publishRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:publishRate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:toRateResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RateLimit.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequireRole.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/adapter/dto/ConversionResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/adapter/dto/RateQueryReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/adapter/dto/RateResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/application/command/RateSaveCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/dto/RateResp.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/adapter/dto/RateResp.java:RateResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/adapter/dto/RateResp.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/adapter/dto/RateResp.java:RateResp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:RateAppService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:RateAppService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:getRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:getRate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:getAllRates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:getAllRates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:pageQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:calculateAmount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:calculateAmount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:saveRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:saveRate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:convertCurrency",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:convertCurrency",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:publishToChannels",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:publishToChannels",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/application/command/RateSaveCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/domain/event/RateUpdatedEvent.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/domain/service/RatePublishDomainService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:ExchangeRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:ExchangeRate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:ExchangeRate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:ExchangeRate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:reconstitute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:reconstitute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:invalidate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:invalidate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:isExpired",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:isExpired",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java:ExchangeRateRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "target": "class:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java:ExchangeRateRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-rate/src/main/java/com/forex/rate/domain/repository/ExchangeRateRepository.java",
+      "target": "file:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:getLatestRate",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:getRate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:saveRate",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:saveRate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-rate/src/main/java/com/forex/rate/adapter/controller/RateController.java:publishRate",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:publishToChannels",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:saveRate",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:create",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-rate/src/main/java/com/forex/rate/application/service/RateAppService.java:convertCurrency",
+      "target": "function:forex-rate/src/main/java/com/forex/rate/domain/service/RateCalculationDomainService.java:calculateAmount",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-rate/src/main/java/com/forex/rate/domain/model/aggregate/ExchangeRate.java:ExchangeRate",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java:BaseAggregate",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    }
+  ]
+}

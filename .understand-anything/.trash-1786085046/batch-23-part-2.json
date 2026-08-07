@@ -1,0 +1,1147 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "type": "file",
+      "name": "SettlementAppService.java",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "summary": "结算应用服务编排信用证、跟单托收和保函用例，统一处理事务、分布式锁、仓储查询和领域服务调用。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "结算业务",
+        "用例层"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "@Transactional 标记类级事务边界，部分查询方法再覆盖为 readOnly。"
+    },
+    {
+      "id": "class:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:SettlementAppService",
+      "type": "class",
+      "name": "SettlementAppService",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        29,
+        196
+      ],
+      "summary": "结算应用服务协调控制器、仓储和领域服务完成跨聚合用例。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "结算业务"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:createLc",
+      "type": "function",
+      "name": "createLc",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        42,
+        60
+      ],
+      "summary": "createLc 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:getLcDetail",
+      "type": "function",
+      "name": "getLcDetail",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        62,
+        65
+      ],
+      "summary": "getLcDetail 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        67,
+        73
+      ],
+      "summary": "pageQuery 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:issueLc",
+      "type": "function",
+      "name": "issueLc",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        75,
+        80
+      ],
+      "summary": "issueLc 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:amendLc",
+      "type": "function",
+      "name": "amendLc",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        82,
+        87
+      ],
+      "summary": "amendLc 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:presentDocuments",
+      "type": "function",
+      "name": "presentDocuments",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        89,
+        94
+      ],
+      "summary": "presentDocuments 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:checkDocuments",
+      "type": "function",
+      "name": "checkDocuments",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        96,
+        101
+      ],
+      "summary": "checkDocuments 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:acceptLc",
+      "type": "function",
+      "name": "acceptLc",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        103,
+        108
+      ],
+      "summary": "acceptLc 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:payLc",
+      "type": "function",
+      "name": "payLc",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        110,
+        115
+      ],
+      "summary": "payLc 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:createCollection",
+      "type": "function",
+      "name": "createCollection",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        117,
+        132
+      ],
+      "summary": "createCollection 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:getCollectionDetail",
+      "type": "function",
+      "name": "getCollectionDetail",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        134,
+        138
+      ],
+      "summary": "getCollectionDetail 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:pageCollections",
+      "type": "function",
+      "name": "pageCollections",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        140,
+        147
+      ],
+      "summary": "pageCollections 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:payCollection",
+      "type": "function",
+      "name": "payCollection",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        149,
+        154
+      ],
+      "summary": "payCollection 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:createGuarantee",
+      "type": "function",
+      "name": "createGuarantee",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        156,
+        173
+      ],
+      "summary": "createGuarantee 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:getGuaranteeDetail",
+      "type": "function",
+      "name": "getGuaranteeDetail",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        175,
+        179
+      ],
+      "summary": "getGuaranteeDetail 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:pageGuarantees",
+      "type": "function",
+      "name": "pageGuarantees",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        181,
+        188
+      ],
+      "summary": "pageGuarantees 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:issueGuarantee",
+      "type": "function",
+      "name": "issueGuarantee",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "lineRange": [
+        190,
+        195
+      ],
+      "summary": "issueGuarantee 编排结算用例，加载聚合或调用领域服务并处理异常边界。",
+      "tags": [
+        "应用服务",
+        "事务编排",
+        "用例"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "type": "file",
+      "name": "BankGuarantee.java",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "summary": "银行保函领域实体，保存保函金额、币种、受益人、期限和状态，并封装开立、索赔、到期等状态迁移规则。",
+      "tags": [
+        "领域实体",
+        "国际保函",
+        "状态机",
+        "业务规则"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:BankGuarantee",
+      "type": "class",
+      "name": "BankGuarantee",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "lineRange": [
+        15,
+        112
+      ],
+      "summary": "银行保函聚合内实体，维护保函状态和关键业务字段。",
+      "tags": [
+        "领域实体",
+        "国际保函",
+        "状态机"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:BankGuarantee",
+      "type": "function",
+      "name": "BankGuarantee",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "lineRange": [
+        45,
+        73
+      ],
+      "summary": "BankGuarantee 封装银行保函实体的构造、状态判断或状态迁移行为。",
+      "tags": [
+        "领域实体",
+        "状态机",
+        "业务规则"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:isExpired",
+      "type": "function",
+      "name": "isExpired",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "lineRange": [
+        75,
+        77
+      ],
+      "summary": "isExpired 封装银行保函实体的构造、状态判断或状态迁移行为。",
+      "tags": [
+        "领域实体",
+        "状态机",
+        "业务规则"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:issue",
+      "type": "function",
+      "name": "issue",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "lineRange": [
+        83,
+        89
+      ],
+      "summary": "issue 封装银行保函实体的构造、状态判断或状态迁移行为。",
+      "tags": [
+        "领域实体",
+        "状态机",
+        "业务规则"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:claim",
+      "type": "function",
+      "name": "claim",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "lineRange": [
+        95,
+        100
+      ],
+      "summary": "claim 封装银行保函实体的构造、状态判断或状态迁移行为。",
+      "tags": [
+        "领域实体",
+        "状态机",
+        "业务规则"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:expire",
+      "type": "function",
+      "name": "expire",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "lineRange": [
+        106,
+        111
+      ],
+      "summary": "expire 封装银行保函实体的构造、状态判断或状态迁移行为。",
+      "tags": [
+        "领域实体",
+        "状态机",
+        "业务规则"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "type": "file",
+      "name": "DocumentaryCollection.java",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "summary": "跟单托收领域实体，保存托收金额、单据、银行信息和状态，并封装收单、提示、承兑和付款的状态流转。",
+      "tags": [
+        "领域实体",
+        "跟单托收",
+        "状态机",
+        "业务规则"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:DocumentaryCollection",
+      "type": "class",
+      "name": "DocumentaryCollection",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "lineRange": [
+        14,
+        112
+      ],
+      "summary": "跟单托收实体，维护托收状态和单据信息。",
+      "tags": [
+        "领域实体",
+        "跟单托收",
+        "状态机"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:DocumentaryCollection",
+      "type": "function",
+      "name": "DocumentaryCollection",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "lineRange": [
+        42,
+        65
+      ],
+      "summary": "DocumentaryCollection 封装跟单托收实体的构造或生命周期状态迁移行为。",
+      "tags": [
+        "领域实体",
+        "状态机",
+        "业务规则"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:markReceivedDocuments",
+      "type": "function",
+      "name": "markReceivedDocuments",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "lineRange": [
+        71,
+        76
+      ],
+      "summary": "markReceivedDocuments 封装跟单托收实体的构造或生命周期状态迁移行为。",
+      "tags": [
+        "领域实体",
+        "状态机",
+        "业务规则"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:presentToDrawee",
+      "type": "function",
+      "name": "presentToDrawee",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "lineRange": [
+        82,
+        87
+      ],
+      "summary": "presentToDrawee 封装跟单托收实体的构造或生命周期状态迁移行为。",
+      "tags": [
+        "领域实体",
+        "状态机",
+        "业务规则"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:accept",
+      "type": "function",
+      "name": "accept",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "lineRange": [
+        93,
+        98
+      ],
+      "summary": "accept 封装跟单托收实体的构造或生命周期状态迁移行为。",
+      "tags": [
+        "领域实体",
+        "状态机",
+        "业务规则"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:pay",
+      "type": "function",
+      "name": "pay",
+      "filePath": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "lineRange": [
+        104,
+        111
+      ],
+      "summary": "pay 封装跟单托收实体的构造或生命周期状态迁移行为。",
+      "tags": [
+        "领域实体",
+        "状态机",
+        "业务规则"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RedisLock.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/command/AmendLcCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/command/CreateCollectionCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/command/CreateGuaranteeCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/application/command/CreateLcCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/aggregate/LetterOfCredit.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/query/CollectionQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/query/GuaranteeQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/query/LcQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/repository/CollectionRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/repository/GuaranteeRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/repository/LcRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "file:forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:SettlementAppService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:SettlementAppService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:createLc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:createLc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:getLcDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:getLcDetail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:pageQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:issueLc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:issueLc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:amendLc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:amendLc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:presentDocuments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:presentDocuments",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:checkDocuments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:checkDocuments",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:acceptLc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:acceptLc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:payLc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:payLc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:createCollection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:createCollection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:getCollectionDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:getCollectionDetail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:pageCollections",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:pageCollections",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:payCollection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:payCollection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:createGuarantee",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:createGuarantee",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:getGuaranteeDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:getGuaranteeDetail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:pageGuarantees",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:pageGuarantees",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:issueGuarantee",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java:issueGuarantee",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseEntity.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:BankGuarantee",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:BankGuarantee",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:BankGuarantee",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:BankGuarantee",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:isExpired",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:isExpired",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:issue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:issue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:claim",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:claim",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:expire",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:expire",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseEntity.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:DocumentaryCollection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "target": "class:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:DocumentaryCollection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:DocumentaryCollection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:DocumentaryCollection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:markReceivedDocuments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:markReceivedDocuments",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:presentToDrawee",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:presentToDrawee",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:accept",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:accept",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:pay",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "target": "function:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:pay",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java:BankGuarantee",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseEntity.java",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java:DocumentaryCollection",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseEntity.java",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    }
+  ]
+}

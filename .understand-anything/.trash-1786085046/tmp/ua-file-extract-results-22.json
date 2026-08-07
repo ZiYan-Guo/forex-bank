@@ -1,0 +1,531 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 3,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 22,
+      "classes": [
+        {
+          "name": "SamplingRuleRepository",
+          "startLine": 12,
+          "endLine": 31,
+          "methods": [
+            "save",
+            "findById",
+            "findByRuleCode",
+            "findAllActive",
+            "findAll",
+            "deleteById"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SamplingRuleRepository",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 28,
+      "nonEmptyLines": 20,
+      "classes": [
+        {
+          "name": "SamplingRuleMapper",
+          "startLine": 17,
+          "endLine": 28,
+          "methods": [
+            "selectByRuleCode",
+            "selectAllActive",
+            "selectAllRules"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SamplingRuleMapper",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 102,
+      "nonEmptyLines": 88,
+      "functions": [
+        {
+          "name": "save",
+          "startLine": 27,
+          "endLine": 38,
+          "params": [
+            "rule"
+          ]
+        },
+        {
+          "name": "findById",
+          "startLine": 40,
+          "endLine": 44,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "findByRuleCode",
+          "startLine": 46,
+          "endLine": 50,
+          "params": [
+            "ruleCode"
+          ]
+        },
+        {
+          "name": "findAllActive",
+          "startLine": 52,
+          "endLine": 57,
+          "params": []
+        },
+        {
+          "name": "findAll",
+          "startLine": 59,
+          "endLine": 64,
+          "params": []
+        },
+        {
+          "name": "deleteById",
+          "startLine": 66,
+          "endLine": 69,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "toDomain",
+          "startLine": 71,
+          "endLine": 85,
+          "params": [
+            "po"
+          ]
+        },
+        {
+          "name": "toPO",
+          "startLine": 87,
+          "endLine": 101,
+          "params": [
+            "rule"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SamplingRuleRepositoryImpl",
+          "startLine": 20,
+          "endLine": 102,
+          "methods": [
+            "save",
+            "findById",
+            "findByRuleCode",
+            "findAllActive",
+            "findAll",
+            "deleteById",
+            "toDomain",
+            "toPO"
+          ],
+          "properties": [
+            "samplingRuleMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "save",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "findById",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "findByRuleCode",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "findAllActive",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "findAll",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "deleteById",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "SamplingRuleRepositoryImpl",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "save",
+          "callee": "toPO",
+          "lineNumber": 29
+        },
+        {
+          "caller": "save",
+          "callee": "rule.getId",
+          "lineNumber": 30
+        },
+        {
+          "caller": "save",
+          "callee": "samplingRuleMapper.insert",
+          "lineNumber": 31
+        },
+        {
+          "caller": "save",
+          "callee": "log.info",
+          "lineNumber": 32
+        },
+        {
+          "caller": "save",
+          "callee": "po.getRuleCode",
+          "lineNumber": 32
+        },
+        {
+          "caller": "save",
+          "callee": "po.getRuleName",
+          "lineNumber": 32
+        },
+        {
+          "caller": "save",
+          "callee": "po.getSamplingRate",
+          "lineNumber": 32
+        },
+        {
+          "caller": "save",
+          "callee": "samplingRuleMapper.updateById",
+          "lineNumber": 34
+        },
+        {
+          "caller": "save",
+          "callee": "log.info",
+          "lineNumber": 35
+        },
+        {
+          "caller": "save",
+          "callee": "po.getId",
+          "lineNumber": 35
+        },
+        {
+          "caller": "save",
+          "callee": "po.getRuleCode",
+          "lineNumber": 35
+        },
+        {
+          "caller": "save",
+          "callee": "toDomain",
+          "lineNumber": 37
+        },
+        {
+          "caller": "findById",
+          "callee": "samplingRuleMapper.selectById",
+          "lineNumber": 42
+        },
+        {
+          "caller": "findById",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 43
+        },
+        {
+          "caller": "findById",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 43
+        },
+        {
+          "caller": "findByRuleCode",
+          "callee": "samplingRuleMapper.selectByRuleCode",
+          "lineNumber": 48
+        },
+        {
+          "caller": "findByRuleCode",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 49
+        },
+        {
+          "caller": "findByRuleCode",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 49
+        },
+        {
+          "caller": "findAllActive",
+          "callee": "samplingRuleMapper.selectAllActive().stream()\n                .map(this::toDomain).toList",
+          "lineNumber": 54
+        },
+        {
+          "caller": "findAllActive",
+          "callee": "samplingRuleMapper.selectAllActive().stream().map",
+          "lineNumber": 54
+        },
+        {
+          "caller": "findAllActive",
+          "callee": "samplingRuleMapper.selectAllActive().stream",
+          "lineNumber": 54
+        },
+        {
+          "caller": "findAllActive",
+          "callee": "samplingRuleMapper.selectAllActive",
+          "lineNumber": 54
+        },
+        {
+          "caller": "findAll",
+          "callee": "samplingRuleMapper.selectAllRules().stream()\n                .map(this::toDomain).toList",
+          "lineNumber": 61
+        },
+        {
+          "caller": "findAll",
+          "callee": "samplingRuleMapper.selectAllRules().stream().map",
+          "lineNumber": 61
+        },
+        {
+          "caller": "findAll",
+          "callee": "samplingRuleMapper.selectAllRules().stream",
+          "lineNumber": 61
+        },
+        {
+          "caller": "findAll",
+          "callee": "samplingRuleMapper.selectAllRules",
+          "lineNumber": 61
+        },
+        {
+          "caller": "deleteById",
+          "callee": "samplingRuleMapper.deleteById",
+          "lineNumber": 68
+        },
+        {
+          "caller": "toDomain",
+          "callee": "new SamplingRule",
+          "lineNumber": 72
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getId",
+          "lineNumber": 73
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getRuleCode",
+          "lineNumber": 74
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getRuleName",
+          "lineNumber": 75
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getConditionJson",
+          "lineNumber": 76
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getSamplingRate",
+          "lineNumber": 77
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getTargetModule",
+          "lineNumber": 78
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getEffectiveDate",
+          "lineNumber": 79
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getExpireDate",
+          "lineNumber": 80
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getPriority",
+          "lineNumber": 81
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getStatus",
+          "lineNumber": 82
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getIsAutoExtract",
+          "lineNumber": 83
+        },
+        {
+          "caller": "toPO",
+          "callee": "new SamplingRulePO",
+          "lineNumber": 88
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setId",
+          "lineNumber": 89
+        },
+        {
+          "caller": "toPO",
+          "callee": "rule.getId",
+          "lineNumber": 89
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setRuleCode",
+          "lineNumber": 90
+        },
+        {
+          "caller": "toPO",
+          "callee": "rule.getRuleCode",
+          "lineNumber": 90
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setRuleName",
+          "lineNumber": 91
+        },
+        {
+          "caller": "toPO",
+          "callee": "rule.getRuleName",
+          "lineNumber": 91
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setConditionJson",
+          "lineNumber": 92
+        },
+        {
+          "caller": "toPO",
+          "callee": "rule.getConditionJson",
+          "lineNumber": 92
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setSamplingRate",
+          "lineNumber": 93
+        },
+        {
+          "caller": "toPO",
+          "callee": "rule.getSamplingRate",
+          "lineNumber": 93
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setTargetModule",
+          "lineNumber": 94
+        },
+        {
+          "caller": "toPO",
+          "callee": "rule.getTargetModule",
+          "lineNumber": 94
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setEffectiveDate",
+          "lineNumber": 95
+        },
+        {
+          "caller": "toPO",
+          "callee": "rule.getEffectiveDate",
+          "lineNumber": 95
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setExpireDate",
+          "lineNumber": 96
+        },
+        {
+          "caller": "toPO",
+          "callee": "rule.getExpireDate",
+          "lineNumber": 96
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setPriority",
+          "lineNumber": 97
+        },
+        {
+          "caller": "toPO",
+          "callee": "rule.getPriority",
+          "lineNumber": 97
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setStatus",
+          "lineNumber": 98
+        },
+        {
+          "caller": "toPO",
+          "callee": "rule.getStatus",
+          "lineNumber": 98
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setIsAutoExtract",
+          "lineNumber": 99
+        },
+        {
+          "caller": "toPO",
+          "callee": "rule.getIsAutoExtract",
+          "lineNumber": 99
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 7,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    }
+  ]
+}

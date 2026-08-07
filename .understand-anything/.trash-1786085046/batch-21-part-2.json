@@ -1,0 +1,1302 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "type": "file",
+      "name": "ScheduleAppService.java",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "summary": "调度应用服务，编排任务新增、更新、状态切换、手动触发、详情查询、分页查询和日志查询。它连接 controller、领域服务和任务/日志仓储，并维护事务边界。",
+      "tags": [
+        "application-service",
+        "schedule",
+        "domain-orchestration",
+        "transaction"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "应用服务将命令对象转换为 ScheduleJob 聚合，并把手动触发委托给 domain service。"
+    },
+    {
+      "id": "class:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:ScheduleAppService",
+      "type": "class",
+      "name": "ScheduleAppService",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "lineRange": [
+        23,
+        106
+      ],
+      "summary": "ScheduleAppService 编排领域对象、仓储和外部端口，承载该模块的应用层用例。",
+      "tags": [
+        "application-service",
+        "orchestration",
+        "transaction",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:addJob",
+      "type": "function",
+      "name": "addJob",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "lineRange": [
+        32,
+        48
+      ],
+      "summary": "从 JobCmd 创建 ScheduleJob 聚合，保存后返回持久化结果。",
+      "tags": [
+        "command",
+        "write-model",
+        "transaction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:updateJob",
+      "type": "function",
+      "name": "updateJob",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "lineRange": [
+        50,
+        65
+      ],
+      "summary": "读取任务聚合并更新定义字段，未找到时抛出 NOT_FOUND 业务异常。",
+      "tags": [
+        "command",
+        "write-model",
+        "transaction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:toggleJob",
+      "type": "function",
+      "name": "toggleJob",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "lineRange": [
+        67,
+        80
+      ],
+      "summary": "读取任务后根据当前状态执行 enable 或 disable，并保存状态变更。",
+      "tags": [
+        "mapping",
+        "dto",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:triggerJob",
+      "type": "function",
+      "name": "triggerJob",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "lineRange": [
+        82,
+        88
+      ],
+      "summary": "读取任务并将 jobHandler 交给领域服务执行手动触发。",
+      "tags": [
+        "job-execution",
+        "schedule",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:getJob",
+      "type": "function",
+      "name": "getJob",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "lineRange": [
+        90,
+        93
+      ],
+      "summary": "按 ID 查询任务聚合，缺失时抛出业务异常。",
+      "tags": [
+        "query",
+        "read-model",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "lineRange": [
+        95,
+        100
+      ],
+      "summary": "记录分页和过滤条件，并委托仓储查询任务分页结果。",
+      "tags": [
+        "query",
+        "read-model",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:getJobLogs",
+      "type": "function",
+      "name": "getJobLogs",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "lineRange": [
+        102,
+        105
+      ],
+      "summary": "按任务 ID 查询调度执行日志。",
+      "tags": [
+        "query",
+        "read-model",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "type": "file",
+      "name": "ScheduleJob.java",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "summary": "定时任务领域聚合，封装任务定义、启停状态、执行结果和执行时间信息。它提供创建、重建、启用、禁用、定义更新、执行记录和领域校验能力。",
+      "tags": [
+        "domain-model",
+        "aggregate",
+        "schedule-job",
+        "validation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "聚合方法通过 markUpdated 记录状态变更，保护任务定义和运行状态的一致性。"
+    },
+    {
+      "id": "class:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:ScheduleJob",
+      "type": "class",
+      "name": "ScheduleJob",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "lineRange": [
+        11,
+        103
+      ],
+      "summary": "ScheduleJob 是调度任务领域聚合，维护任务定义、状态和执行记录。",
+      "tags": [
+        "domain-model",
+        "aggregate",
+        "validation",
+        "business-rules"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:ScheduleJob",
+      "type": "function",
+      "name": "ScheduleJob",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "lineRange": [
+        25,
+        27
+      ],
+      "summary": "ScheduleJob 实现 ScheduleJob 中的一段核心业务流程。",
+      "tags": [
+        "function",
+        "java",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "lineRange": [
+        29,
+        40
+      ],
+      "summary": "创建启用状态的任务聚合并执行任务名称、处理器和 cron 表达式校验。",
+      "tags": [
+        "factory",
+        "domain-model",
+        "construction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:reconstitute",
+      "type": "function",
+      "name": "reconstitute",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "lineRange": [
+        42,
+        58
+      ],
+      "summary": "从持久化字段重建任务聚合，保留最近执行结果和时间。",
+      "tags": [
+        "factory",
+        "domain-model",
+        "construction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:enable",
+      "type": "function",
+      "name": "enable",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "lineRange": [
+        60,
+        63
+      ],
+      "summary": "将任务状态切换为 ENABLED 并记录更新时间。",
+      "tags": [
+        "state-change",
+        "domain-model",
+        "business-rules"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:disable",
+      "type": "function",
+      "name": "disable",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "lineRange": [
+        65,
+        68
+      ],
+      "summary": "将任务状态切换为 DISABLED 并记录更新时间。",
+      "tags": [
+        "state-change",
+        "domain-model",
+        "business-rules"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:updateDefinition",
+      "type": "function",
+      "name": "updateDefinition",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "lineRange": [
+        74,
+        83
+      ],
+      "summary": "更新任务定义字段，同时保留运行状态和最近执行信息。",
+      "tags": [
+        "command",
+        "write-model",
+        "transaction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:recordExecution",
+      "type": "function",
+      "name": "recordExecution",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "lineRange": [
+        85,
+        89
+      ],
+      "summary": "记录最近执行结果和执行时间，并标记聚合已更新。",
+      "tags": [
+        "state-change",
+        "domain-model",
+        "business-rules"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:validate",
+      "type": "function",
+      "name": "validate",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "lineRange": [
+        91,
+        102
+      ],
+      "summary": "校验任务名称、处理器和 cron 表达式不能为空。",
+      "tags": [
+        "validation",
+        "business-rules",
+        "guard-clause"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "type": "file",
+      "name": "ScheduleDomainService.java",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "summary": "调度领域服务，按 jobHandler 查找并触发已启用任务，创建执行日志，分派内置业务处理器并回写执行结果。它集中处理任务执行成功/失败的领域状态更新。",
+      "tags": [
+        "domain-service",
+        "schedule",
+        "job-dispatch",
+        "execution-log"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Java switch expression 将 handler 字符串映射到内置业务动作，失败路径仍会落库执行日志。"
+    },
+    {
+      "id": "class:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java:ScheduleDomainService",
+      "type": "class",
+      "name": "ScheduleDomainService",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "lineRange": [
+        19,
+        114
+      ],
+      "summary": "ScheduleDomainService 封装 ScheduleDomainService.java 中的核心职责。",
+      "tags": [
+        "domain-service",
+        "business-logic",
+        "transaction",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java:triggerJob",
+      "type": "function",
+      "name": "triggerJob",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "lineRange": [
+        28,
+        56
+      ],
+      "summary": "按处理器查找已启用任务，创建运行日志，执行 handler 并保存成功或失败结果。",
+      "tags": [
+        "job-execution",
+        "schedule",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java:executeDailyClosing",
+      "type": "function",
+      "name": "executeDailyClosing",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "lineRange": [
+        58,
+        60
+      ],
+      "summary": "记录日终结算任务的业务日期。",
+      "tags": [
+        "job-execution",
+        "schedule",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java:executeReconciliation",
+      "type": "function",
+      "name": "executeReconciliation",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "lineRange": [
+        62,
+        64
+      ],
+      "summary": "记录对账任务的执行动作。",
+      "tags": [
+        "job-execution",
+        "schedule",
+        "business-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "type": "file",
+      "name": "ScheduleJobRepositoryImpl.java",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "summary": "ScheduleJobRepository 的 MyBatis-Plus 基础设施实现，负责任务聚合与持久化对象的双向转换。它实现保存、按 ID/handler 查询、查询启用任务和分页查询。",
+      "tags": [
+        "repository",
+        "persistence",
+        "mybatis-plus",
+        "mapping"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Repository implementation 使用 Java pattern matching 判断 PageReq 是否为 JobQuery，以保留过滤条件。"
+    },
+    {
+      "id": "class:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:ScheduleJobRepositoryImpl",
+      "type": "class",
+      "name": "ScheduleJobRepositoryImpl",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "lineRange": [
+        19,
+        97
+      ],
+      "summary": "ScheduleJobRepositoryImpl 将领域仓储接口适配到 MyBatis-Plus 持久化层。",
+      "tags": [
+        "repository",
+        "persistence",
+        "mapping",
+        "adapter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:save",
+      "type": "function",
+      "name": "save",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "lineRange": [
+        25,
+        34
+      ],
+      "summary": "把 ScheduleJob 转换为 PO，并根据 ID 是否存在选择 insert 或 updateById。",
+      "tags": [
+        "command",
+        "write-model",
+        "transaction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:findById",
+      "type": "function",
+      "name": "findById",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "lineRange": [
+        36,
+        40
+      ],
+      "summary": "按主键查询任务持久化对象并映射回领域聚合。",
+      "tags": [
+        "query",
+        "read-model",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:findByJobHandler",
+      "type": "function",
+      "name": "findByJobHandler",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "lineRange": [
+        42,
+        46
+      ],
+      "summary": "按 jobHandler 查询任务持久化对象并映射回领域聚合。",
+      "tags": [
+        "query",
+        "read-model",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:findAllEnabled",
+      "type": "function",
+      "name": "findAllEnabled",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "lineRange": [
+        48,
+        53
+      ],
+      "summary": "查询所有启用任务并转换为领域聚合列表。",
+      "tags": [
+        "query",
+        "read-model",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "lineRange": [
+        55,
+        66
+      ],
+      "summary": "构建 MyBatis-Plus 分页对象，执行条件分页查询并包装为 PageResp。",
+      "tags": [
+        "query",
+        "read-model",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:toDomain",
+      "type": "function",
+      "name": "toDomain",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "lineRange": [
+        68,
+        81
+      ],
+      "summary": "把 ScheduleJobPO 的持久化字段重建为 ScheduleJob 聚合。",
+      "tags": [
+        "mapping",
+        "dto",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:toPO",
+      "type": "function",
+      "name": "toPO",
+      "filePath": "forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "lineRange": [
+        83,
+        96
+      ],
+      "summary": "把 ScheduleJob 聚合字段复制到 ScheduleJobPO 用于数据库写入。",
+      "tags": [
+        "mapping",
+        "dto",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "type": "file",
+      "name": "ScheduleDomainServiceTest.java",
+      "filePath": "forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "summary": "ScheduleDomainService 的单元测试，使用内存 stub 仓储验证任务触发成功、禁用任务、任务不存在以及内置日志动作。它覆盖调度领域服务的核心执行路径。",
+      "tags": [
+        "test",
+        "domain-service",
+        "schedule",
+        "in-memory-stub"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "测试文件内嵌 stub repository，使领域服务测试不依赖 Spring 容器或数据库。"
+    },
+    {
+      "id": "class:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java:ScheduleDomainServiceTest",
+      "type": "class",
+      "name": "ScheduleDomainServiceTest",
+      "filePath": "forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "lineRange": [
+        25,
+        161
+      ],
+      "summary": "ScheduleDomainServiceTest 使用 JUnit 验证领域服务核心行为。",
+      "tags": [
+        "test",
+        "junit",
+        "domain-service",
+        "stub"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java:testTriggerJob_Success",
+      "type": "function",
+      "name": "testTriggerJob_Success",
+      "filePath": "forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "lineRange": [
+        38,
+        53
+      ],
+      "summary": "构造启用的日终任务并断言触发后日志与任务最近结果均为成功。",
+      "tags": [
+        "test",
+        "junit",
+        "assertion"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java:testTriggerJob_Disabled",
+      "type": "function",
+      "name": "testTriggerJob_Disabled",
+      "filePath": "forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "lineRange": [
+        55,
+        65
+      ],
+      "summary": "构造禁用任务并断言触发时抛出 IllegalStateException。",
+      "tags": [
+        "test",
+        "junit",
+        "assertion"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:ScheduleAppService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:ScheduleAppService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:addJob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:addJob",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:updateJob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:updateJob",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:toggleJob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:toggleJob",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:triggerJob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:triggerJob",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:getJob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:getJob",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:pageQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:getJobLogs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:getJobLogs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/application/command/JobCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/application/query/JobQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/JobLog.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/repository/JobLogRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/repository/ScheduleJobRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:ScheduleJob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:ScheduleJob",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:ScheduleJob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:ScheduleJob",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:reconstitute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:reconstitute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:enable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:enable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:disable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:disable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:updateDefinition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:updateDefinition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:recordExecution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:recordExecution",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java:ScheduleDomainService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java:ScheduleDomainService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java:triggerJob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java:triggerJob",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java:executeDailyClosing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java:executeDailyClosing",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java:executeReconciliation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java:executeReconciliation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/JobLog.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/repository/JobLogRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/repository/ScheduleJobRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:ScheduleJobRepositoryImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:ScheduleJobRepositoryImpl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:save",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:findById",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:findById",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:findByJobHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:findByJobHandler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:findAllEnabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:findAllEnabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:pageQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:toDomain",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:toPO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/application/query/JobQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/repository/ScheduleJobRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/mapper/ScheduleJobMapper.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/infrastructure/persistence/ScheduleJobPO.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "target": "class:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java:ScheduleDomainServiceTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "target": "function:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java:testTriggerJob_Success",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "target": "function:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java:testTriggerJob_Disabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/JobLog.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/repository/JobLogRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "target": "file:forex-schedule/src/main/java/com/forex/schedule/domain/repository/ScheduleJobRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:addJob",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:create",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java:triggerJob",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java:triggerJob",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:ScheduleJob",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseAggregate.java:BaseAggregate",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "function:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java:triggerJob",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/JobLog.java:create",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java:triggerJob",
+      "target": "function:forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java:recordExecution",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java:ScheduleJobRepositoryImpl",
+      "target": "class:forex-schedule/src/main/java/com/forex/schedule/domain/repository/ScheduleJobRepository.java:ScheduleJobRepository",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "target": "file:forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

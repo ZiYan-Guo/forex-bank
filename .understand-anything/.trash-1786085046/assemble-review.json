@@ -1,0 +1,11 @@
+{
+  "fixedSectionOk": false,
+  "nodesRecovered": 453,
+  "edgesRestored": 1174,
+  "crossBatchEdgesAdded": 1174,
+  "typesRemapped": 0,
+  "complexityRemapped": 0,
+  "notes": [
+    "补齐 scan-result 中缺失的 file-level 节点，并按 importMap 恢复可验证 imports 边。"
+  ]
+}

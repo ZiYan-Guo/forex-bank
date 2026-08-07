@@ -17,5 +17,7 @@ public interface MarginAccountRepository {
 
     List<MarginAccount> findByCustomerId(Long customerId);
 
+    List<MarginAccount> listForLedgerSummary();
+
     PageResp<MarginAccount> pageQuery(MarginQuery query);
 }

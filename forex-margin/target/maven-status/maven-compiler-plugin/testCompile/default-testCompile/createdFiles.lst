@@ -1,2 +1,6 @@
+com/forex/margin/domain/service/MarginDomainServiceTest$CapturingEventPublisher.class
+com/forex/margin/domain/service/MarginDomainServiceTest$FakeMarginAccountRepository.class
 com/forex/margin/domain/model/MarginAccountTest.class
+com/forex/margin/application/service/MarginCalculationServiceTest.class
 com/forex/margin/domain/service/MarginDomainServiceTest.class
+com/forex/margin/domain/service/MarginDomainServiceTest$FakeMarginCallRepository.class

@@ -1,0 +1,2722 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 10,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 10,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 10,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/adapter/controller/ScheduleController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 141,
+      "nonEmptyLines": 124,
+      "functions": [
+        {
+          "name": "addJob",
+          "startLine": 42,
+          "endLine": 50,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "updateJob",
+          "startLine": 52,
+          "endLine": 60,
+          "params": [
+            "id",
+            "cmd"
+          ]
+        },
+        {
+          "name": "toggleJob",
+          "startLine": 62,
+          "endLine": 69,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "triggerJob",
+          "startLine": 71,
+          "endLine": 78,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getJob",
+          "startLine": 80,
+          "endLine": 85,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 87,
+          "endLine": 100,
+          "params": [
+            "query"
+          ]
+        },
+        {
+          "name": "getJobLogs",
+          "startLine": 102,
+          "endLine": 111,
+          "params": [
+            "jobId"
+          ]
+        },
+        {
+          "name": "toResp",
+          "startLine": 113,
+          "endLine": 126,
+          "params": [
+            "job"
+          ]
+        },
+        {
+          "name": "toLogResp",
+          "startLine": 128,
+          "endLine": 140,
+          "params": [
+            "log"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ScheduleController",
+          "startLine": 33,
+          "endLine": 141,
+          "methods": [
+            "addJob",
+            "updateJob",
+            "toggleJob",
+            "triggerJob",
+            "getJob",
+            "pageQuery",
+            "getJobLogs",
+            "toResp",
+            "toLogResp"
+          ],
+          "properties": [
+            "scheduleAppService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "addJob",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "updateJob",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "toggleJob",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "triggerJob",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "getJob",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "getJobLogs",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "ScheduleController",
+          "line": 33,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "addJob",
+          "callee": "log.info",
+          "lineNumber": 47
+        },
+        {
+          "caller": "addJob",
+          "callee": "cmd.getJobHandler",
+          "lineNumber": 47
+        },
+        {
+          "caller": "addJob",
+          "callee": "cmd.getJobHandler",
+          "lineNumber": 47
+        },
+        {
+          "caller": "addJob",
+          "callee": "scheduleAppService.addJob",
+          "lineNumber": 48
+        },
+        {
+          "caller": "addJob",
+          "callee": "R.ok",
+          "lineNumber": 49
+        },
+        {
+          "caller": "addJob",
+          "callee": "toResp",
+          "lineNumber": 49
+        },
+        {
+          "caller": "updateJob",
+          "callee": "log.info",
+          "lineNumber": 56
+        },
+        {
+          "caller": "updateJob",
+          "callee": "cmd.getJobHandler",
+          "lineNumber": 57
+        },
+        {
+          "caller": "updateJob",
+          "callee": "cmd.getJobHandler",
+          "lineNumber": 57
+        },
+        {
+          "caller": "updateJob",
+          "callee": "scheduleAppService.updateJob",
+          "lineNumber": 58
+        },
+        {
+          "caller": "updateJob",
+          "callee": "R.ok",
+          "lineNumber": 59
+        },
+        {
+          "caller": "updateJob",
+          "callee": "toResp",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toggleJob",
+          "callee": "log.info",
+          "lineNumber": 66
+        },
+        {
+          "caller": "toggleJob",
+          "callee": "scheduleAppService.toggleJob",
+          "lineNumber": 67
+        },
+        {
+          "caller": "toggleJob",
+          "callee": "R.okMsg",
+          "lineNumber": 68
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "log.info",
+          "lineNumber": 75
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "scheduleAppService.triggerJob",
+          "lineNumber": 76
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "R.okMsg",
+          "lineNumber": 77
+        },
+        {
+          "caller": "getJob",
+          "callee": "scheduleAppService.getJob",
+          "lineNumber": 83
+        },
+        {
+          "caller": "getJob",
+          "callee": "R.ok",
+          "lineNumber": 84
+        },
+        {
+          "caller": "getJob",
+          "callee": "toResp",
+          "lineNumber": 84
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "log.info",
+          "lineNumber": 91
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageNum",
+          "lineNumber": 92
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageSize",
+          "lineNumber": 92
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageNum",
+          "lineNumber": 92
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageSize",
+          "lineNumber": 92
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "scheduleAppService.pageQuery",
+          "lineNumber": 93
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getRecords().stream()\n                .map(this::toResp).toList",
+          "lineNumber": 94
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getRecords().stream().map",
+          "lineNumber": 94
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getRecords().stream",
+          "lineNumber": 94
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getRecords",
+          "lineNumber": 94
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "PageResp.of",
+          "lineNumber": 97
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getTotal",
+          "lineNumber": 98
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getPageNum",
+          "lineNumber": 98
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageResp.getPageSize",
+          "lineNumber": 98
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "R.ok",
+          "lineNumber": 99
+        },
+        {
+          "caller": "getJobLogs",
+          "callee": "log.info",
+          "lineNumber": 105
+        },
+        {
+          "caller": "getJobLogs",
+          "callee": "scheduleAppService.getJobLogs",
+          "lineNumber": 106
+        },
+        {
+          "caller": "getJobLogs",
+          "callee": "logs.stream()\n                .map(this::toLogResp).toList",
+          "lineNumber": 107
+        },
+        {
+          "caller": "getJobLogs",
+          "callee": "logs.stream().map",
+          "lineNumber": 107
+        },
+        {
+          "caller": "getJobLogs",
+          "callee": "logs.stream",
+          "lineNumber": 107
+        },
+        {
+          "caller": "getJobLogs",
+          "callee": "R.ok",
+          "lineNumber": 110
+        },
+        {
+          "caller": "toResp",
+          "callee": "new ScheduleJobResp",
+          "lineNumber": 114
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setId",
+          "lineNumber": 115
+        },
+        {
+          "caller": "toResp",
+          "callee": "job.getId",
+          "lineNumber": 115
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setJobName",
+          "lineNumber": 116
+        },
+        {
+          "caller": "toResp",
+          "callee": "job.getJobName",
+          "lineNumber": 116
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setJobGroup",
+          "lineNumber": 117
+        },
+        {
+          "caller": "toResp",
+          "callee": "job.getJobGroup",
+          "lineNumber": 117
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setJobHandler",
+          "lineNumber": 118
+        },
+        {
+          "caller": "toResp",
+          "callee": "job.getJobHandler",
+          "lineNumber": 118
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setCronExpression",
+          "lineNumber": 119
+        },
+        {
+          "caller": "toResp",
+          "callee": "job.getCronExpression",
+          "lineNumber": 119
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setJobDesc",
+          "lineNumber": 120
+        },
+        {
+          "caller": "toResp",
+          "callee": "job.getJobDesc",
+          "lineNumber": 120
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setStatus",
+          "lineNumber": 121
+        },
+        {
+          "caller": "toResp",
+          "callee": "job.getStatus",
+          "lineNumber": 121
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setLastResult",
+          "lineNumber": 122
+        },
+        {
+          "caller": "toResp",
+          "callee": "job.getLastResult",
+          "lineNumber": 122
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setLastExecuteTime",
+          "lineNumber": 123
+        },
+        {
+          "caller": "toResp",
+          "callee": "job.getLastExecuteTime",
+          "lineNumber": 123
+        },
+        {
+          "caller": "toResp",
+          "callee": "resp.setNextExecuteTime",
+          "lineNumber": 124
+        },
+        {
+          "caller": "toResp",
+          "callee": "job.getNextExecuteTime",
+          "lineNumber": 124
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "new JobLogResp",
+          "lineNumber": 129
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "resp.setId",
+          "lineNumber": 130
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "log.getId",
+          "lineNumber": 130
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "resp.setJobId",
+          "lineNumber": 131
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "log.getJobId",
+          "lineNumber": 131
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "resp.setJobName",
+          "lineNumber": 132
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "log.getJobName",
+          "lineNumber": 132
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "resp.setJobHandler",
+          "lineNumber": 133
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "log.getJobHandler",
+          "lineNumber": 133
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "resp.setStartTime",
+          "lineNumber": 134
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "log.getStartTime",
+          "lineNumber": 134
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "resp.setEndTime",
+          "lineNumber": 135
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "log.getEndTime",
+          "lineNumber": 135
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "resp.setExecuteStatus",
+          "lineNumber": 136
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "log.getExecuteStatus",
+          "lineNumber": 136
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "resp.setExecuteResult",
+          "lineNumber": 137
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "log.getExecuteResult",
+          "lineNumber": 137
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "resp.setErrorMsg",
+          "lineNumber": 138
+        },
+        {
+          "caller": "toLogResp",
+          "callee": "log.getErrorMsg",
+          "lineNumber": 138
+        }
+      ],
+      "metrics": {
+        "importCount": 11,
+        "exportCount": 8,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/adapter/dto/JobLogResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 39,
+      "nonEmptyLines": 26,
+      "classes": [
+        {
+          "name": "JobLogResp",
+          "startLine": 9,
+          "endLine": 39,
+          "methods": [],
+          "properties": [
+            "id",
+            "jobId",
+            "jobName",
+            "jobHandler",
+            "startTime",
+            "endTime",
+            "executeStatus",
+            "executeResult",
+            "errorMsg"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "JobLogResp",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/adapter/dto/ScheduleJobResp.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 42,
+      "nonEmptyLines": 28,
+      "classes": [
+        {
+          "name": "ScheduleJobResp",
+          "startLine": 9,
+          "endLine": 42,
+          "methods": [],
+          "properties": [
+            "id",
+            "jobName",
+            "jobGroup",
+            "jobHandler",
+            "cronExpression",
+            "jobDesc",
+            "status",
+            "lastResult",
+            "lastExecuteTime",
+            "nextExecuteTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ScheduleJobResp",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/application/command/JobCmd.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 22,
+      "classes": [
+        {
+          "name": "JobCmd",
+          "startLine": 9,
+          "endLine": 31,
+          "methods": [],
+          "properties": [
+            "jobName",
+            "jobGroup",
+            "jobHandler",
+            "cronExpression",
+            "jobDesc"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "JobCmd",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/application/query/JobQuery.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "JobQuery",
+          "startLine": 10,
+          "endLine": 22,
+          "methods": [],
+          "properties": [
+            "jobName",
+            "jobGroup",
+            "status"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "JobQuery",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/application/service/ScheduleAppService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 106,
+      "nonEmptyLines": 90,
+      "functions": [
+        {
+          "name": "addJob",
+          "startLine": 32,
+          "endLine": 48,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "updateJob",
+          "startLine": 50,
+          "endLine": 65,
+          "params": [
+            "id",
+            "cmd"
+          ]
+        },
+        {
+          "name": "toggleJob",
+          "startLine": 67,
+          "endLine": 80,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "triggerJob",
+          "startLine": 82,
+          "endLine": 88,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getJob",
+          "startLine": 90,
+          "endLine": 93,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 95,
+          "endLine": 100,
+          "params": [
+            "query"
+          ]
+        },
+        {
+          "name": "getJobLogs",
+          "startLine": 102,
+          "endLine": 105,
+          "params": [
+            "jobId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ScheduleAppService",
+          "startLine": 23,
+          "endLine": 106,
+          "methods": [
+            "addJob",
+            "updateJob",
+            "toggleJob",
+            "triggerJob",
+            "getJob",
+            "pageQuery",
+            "getJobLogs"
+          ],
+          "properties": [
+            "scheduleDomainService",
+            "scheduleJobRepository",
+            "jobLogRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "addJob",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "updateJob",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "toggleJob",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "triggerJob",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "getJob",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "getJobLogs",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "ScheduleAppService",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "addJob",
+          "callee": "log.info",
+          "lineNumber": 34
+        },
+        {
+          "caller": "addJob",
+          "callee": "cmd.getJobName",
+          "lineNumber": 35
+        },
+        {
+          "caller": "addJob",
+          "callee": "cmd.getJobGroup",
+          "lineNumber": 35
+        },
+        {
+          "caller": "addJob",
+          "callee": "cmd.getJobHandler",
+          "lineNumber": 35
+        },
+        {
+          "caller": "addJob",
+          "callee": "cmd.getJobName",
+          "lineNumber": 36
+        },
+        {
+          "caller": "addJob",
+          "callee": "cmd.getJobGroup",
+          "lineNumber": 36
+        },
+        {
+          "caller": "addJob",
+          "callee": "cmd.getJobHandler",
+          "lineNumber": 36
+        },
+        {
+          "caller": "addJob",
+          "callee": "ScheduleJob.create",
+          "lineNumber": 37
+        },
+        {
+          "caller": "addJob",
+          "callee": "cmd.getJobName",
+          "lineNumber": 38
+        },
+        {
+          "caller": "addJob",
+          "callee": "cmd.getJobGroup",
+          "lineNumber": 39
+        },
+        {
+          "caller": "addJob",
+          "callee": "cmd.getJobHandler",
+          "lineNumber": 40
+        },
+        {
+          "caller": "addJob",
+          "callee": "cmd.getCronExpression",
+          "lineNumber": 41
+        },
+        {
+          "caller": "addJob",
+          "callee": "cmd.getJobDesc",
+          "lineNumber": 42
+        },
+        {
+          "caller": "addJob",
+          "callee": "scheduleJobRepository.save",
+          "lineNumber": 44
+        },
+        {
+          "caller": "addJob",
+          "callee": "log.info",
+          "lineNumber": 45
+        },
+        {
+          "caller": "addJob",
+          "callee": "saved.getId",
+          "lineNumber": 46
+        },
+        {
+          "caller": "addJob",
+          "callee": "saved.getJobHandler",
+          "lineNumber": 46
+        },
+        {
+          "caller": "addJob",
+          "callee": "saved.getId",
+          "lineNumber": 46
+        },
+        {
+          "caller": "addJob",
+          "callee": "saved.getJobHandler",
+          "lineNumber": 46
+        },
+        {
+          "caller": "updateJob",
+          "callee": "scheduleJobRepository.findById(id).orElseThrow",
+          "lineNumber": 52
+        },
+        {
+          "caller": "updateJob",
+          "callee": "scheduleJobRepository.findById",
+          "lineNumber": 52
+        },
+        {
+          "caller": "updateJob",
+          "callee": "new BusinessException",
+          "lineNumber": 53
+        },
+        {
+          "caller": "updateJob",
+          "callee": "log.info",
+          "lineNumber": 55
+        },
+        {
+          "caller": "updateJob",
+          "callee": "job.getJobHandler",
+          "lineNumber": 56
+        },
+        {
+          "caller": "updateJob",
+          "callee": "cmd.getJobHandler",
+          "lineNumber": 56
+        },
+        {
+          "caller": "updateJob",
+          "callee": "job.getJobHandler",
+          "lineNumber": 56
+        },
+        {
+          "caller": "updateJob",
+          "callee": "cmd.getJobHandler",
+          "lineNumber": 56
+        },
+        {
+          "caller": "updateJob",
+          "callee": "job.updateDefinition",
+          "lineNumber": 57
+        },
+        {
+          "caller": "updateJob",
+          "callee": "cmd.getJobName",
+          "lineNumber": 58
+        },
+        {
+          "caller": "updateJob",
+          "callee": "cmd.getJobGroup",
+          "lineNumber": 59
+        },
+        {
+          "caller": "updateJob",
+          "callee": "cmd.getJobHandler",
+          "lineNumber": 60
+        },
+        {
+          "caller": "updateJob",
+          "callee": "cmd.getCronExpression",
+          "lineNumber": 61
+        },
+        {
+          "caller": "updateJob",
+          "callee": "cmd.getJobDesc",
+          "lineNumber": 62
+        },
+        {
+          "caller": "updateJob",
+          "callee": "scheduleJobRepository.save",
+          "lineNumber": 64
+        },
+        {
+          "caller": "toggleJob",
+          "callee": "scheduleJobRepository.findById(id).orElseThrow",
+          "lineNumber": 69
+        },
+        {
+          "caller": "toggleJob",
+          "callee": "scheduleJobRepository.findById",
+          "lineNumber": 69
+        },
+        {
+          "caller": "toggleJob",
+          "callee": "new BusinessException",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toggleJob",
+          "callee": "\"ENABLED\".equals",
+          "lineNumber": 72
+        },
+        {
+          "caller": "toggleJob",
+          "callee": "job.getStatus",
+          "lineNumber": 72
+        },
+        {
+          "caller": "toggleJob",
+          "callee": "job.disable",
+          "lineNumber": 73
+        },
+        {
+          "caller": "toggleJob",
+          "callee": "job.enable",
+          "lineNumber": 75
+        },
+        {
+          "caller": "toggleJob",
+          "callee": "scheduleJobRepository.save",
+          "lineNumber": 77
+        },
+        {
+          "caller": "toggleJob",
+          "callee": "log.info",
+          "lineNumber": 78
+        },
+        {
+          "caller": "toggleJob",
+          "callee": "job.getStatus",
+          "lineNumber": 79
+        },
+        {
+          "caller": "toggleJob",
+          "callee": "job.getStatus",
+          "lineNumber": 79
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "scheduleJobRepository.findById(id).orElseThrow",
+          "lineNumber": 83
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "scheduleJobRepository.findById",
+          "lineNumber": 83
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "new BusinessException",
+          "lineNumber": 84
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "log.info",
+          "lineNumber": 85
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "job.getJobHandler",
+          "lineNumber": 86
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "job.getJobHandler",
+          "lineNumber": 86
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "scheduleDomainService.triggerJob",
+          "lineNumber": 87
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "job.getJobHandler",
+          "lineNumber": 87
+        },
+        {
+          "caller": "getJob",
+          "callee": "scheduleJobRepository.findById(id).orElseThrow",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getJob",
+          "callee": "scheduleJobRepository.findById",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getJob",
+          "callee": "new BusinessException",
+          "lineNumber": 92
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "log.info",
+          "lineNumber": 96
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageNum",
+          "lineNumber": 97
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageSize",
+          "lineNumber": 97
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getJobName",
+          "lineNumber": 97
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getJobGroup",
+          "lineNumber": 97
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getStatus",
+          "lineNumber": 97
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageNum",
+          "lineNumber": 98
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getPageSize",
+          "lineNumber": 98
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getJobName",
+          "lineNumber": 98
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getJobGroup",
+          "lineNumber": 98
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.getStatus",
+          "lineNumber": 98
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "scheduleJobRepository.pageQuery",
+          "lineNumber": 99
+        },
+        {
+          "caller": "getJobLogs",
+          "callee": "log.info",
+          "lineNumber": 103
+        },
+        {
+          "caller": "getJobLogs",
+          "callee": "jobLogRepository.findByJobId",
+          "lineNumber": 104
+        }
+      ],
+      "metrics": {
+        "importCount": 10,
+        "exportCount": 8,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/domain/model/aggregate/ScheduleJob.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 103,
+      "nonEmptyLines": 90,
+      "functions": [
+        {
+          "name": "ScheduleJob",
+          "startLine": 25,
+          "endLine": 27,
+          "params": []
+        },
+        {
+          "name": "create",
+          "startLine": 29,
+          "endLine": 40,
+          "params": [
+            "jobName",
+            "jobGroup",
+            "jobHandler",
+            "cronExpression",
+            "jobDesc"
+          ]
+        },
+        {
+          "name": "reconstitute",
+          "startLine": 42,
+          "endLine": 58,
+          "params": [
+            "id",
+            "jobName",
+            "jobGroup",
+            "jobHandler",
+            "cronExpression",
+            "jobDesc",
+            "status",
+            "lastResult",
+            "lastExecuteTime",
+            "nextExecuteTime"
+          ]
+        },
+        {
+          "name": "enable",
+          "startLine": 60,
+          "endLine": 63,
+          "params": []
+        },
+        {
+          "name": "disable",
+          "startLine": 65,
+          "endLine": 68,
+          "params": []
+        },
+        {
+          "name": "updateDefinition",
+          "startLine": 74,
+          "endLine": 83,
+          "params": [
+            "jobName",
+            "jobGroup",
+            "jobHandler",
+            "cronExpression",
+            "jobDesc"
+          ]
+        },
+        {
+          "name": "recordExecution",
+          "startLine": 85,
+          "endLine": 89,
+          "params": [
+            "result"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 91,
+          "endLine": 102,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ScheduleJob",
+          "startLine": 11,
+          "endLine": 103,
+          "methods": [
+            "ScheduleJob",
+            "create",
+            "reconstitute",
+            "enable",
+            "disable",
+            "updateDefinition",
+            "recordExecution",
+            "validate"
+          ],
+          "properties": [
+            "id",
+            "jobName",
+            "jobGroup",
+            "jobHandler",
+            "cronExpression",
+            "jobDesc",
+            "status",
+            "lastResult",
+            "lastExecuteTime",
+            "nextExecuteTime"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "reconstitute",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "enable",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "disable",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "updateDefinition",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "recordExecution",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "ScheduleJob",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "new ScheduleJob",
+          "lineNumber": 31
+        },
+        {
+          "caller": "create",
+          "callee": "job.validate",
+          "lineNumber": 38
+        },
+        {
+          "caller": "reconstitute",
+          "callee": "new ScheduleJob",
+          "lineNumber": 46
+        },
+        {
+          "caller": "enable",
+          "callee": "markUpdated",
+          "lineNumber": 62
+        },
+        {
+          "caller": "disable",
+          "callee": "markUpdated",
+          "lineNumber": 67
+        },
+        {
+          "caller": "updateDefinition",
+          "callee": "validate",
+          "lineNumber": 81
+        },
+        {
+          "caller": "updateDefinition",
+          "callee": "markUpdated",
+          "lineNumber": 82
+        },
+        {
+          "caller": "recordExecution",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 87
+        },
+        {
+          "caller": "recordExecution",
+          "callee": "markUpdated",
+          "lineNumber": 88
+        },
+        {
+          "caller": "validate",
+          "callee": "jobName.isBlank",
+          "lineNumber": 93
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 94
+        },
+        {
+          "caller": "validate",
+          "callee": "jobHandler.isBlank",
+          "lineNumber": 96
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 97
+        },
+        {
+          "caller": "validate",
+          "callee": "cronExpression.isBlank",
+          "lineNumber": 99
+        },
+        {
+          "caller": "validate",
+          "callee": "new BusinessException",
+          "lineNumber": 100
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 7,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/domain/service/ScheduleDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 114,
+      "nonEmptyLines": 94,
+      "functions": [
+        {
+          "name": "triggerJob",
+          "startLine": 28,
+          "endLine": 56,
+          "params": [
+            "jobHandler"
+          ]
+        },
+        {
+          "name": "executeDailyClosing",
+          "startLine": 58,
+          "endLine": 60,
+          "params": [
+            "date"
+          ]
+        },
+        {
+          "name": "executeReconciliation",
+          "startLine": 62,
+          "endLine": 64,
+          "params": []
+        },
+        {
+          "name": "executeBusinessHandler",
+          "startLine": 70,
+          "endLine": 78,
+          "params": [
+            "job"
+          ]
+        },
+        {
+          "name": "executeDailyClosingJob",
+          "startLine": 80,
+          "endLine": 84,
+          "params": []
+        },
+        {
+          "name": "executeReconciliationJob",
+          "startLine": 86,
+          "endLine": 89,
+          "params": []
+        },
+        {
+          "name": "executeReportingBatchJob",
+          "startLine": 91,
+          "endLine": 94,
+          "params": []
+        },
+        {
+          "name": "executeRateRefreshJob",
+          "startLine": 96,
+          "endLine": 99,
+          "params": []
+        },
+        {
+          "name": "executeGenericJob",
+          "startLine": 101,
+          "endLine": 105,
+          "params": [
+            "job"
+          ]
+        },
+        {
+          "name": "successResult",
+          "startLine": 107,
+          "endLine": 113,
+          "params": [
+            "handler",
+            "action",
+            "message",
+            "detailKey",
+            "detailValue"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ScheduleDomainService",
+          "startLine": 19,
+          "endLine": 114,
+          "methods": [
+            "triggerJob",
+            "executeDailyClosing",
+            "executeReconciliation",
+            "executeBusinessHandler",
+            "executeDailyClosingJob",
+            "executeReconciliationJob",
+            "executeReportingBatchJob",
+            "executeRateRefreshJob",
+            "executeGenericJob",
+            "successResult"
+          ],
+          "properties": [
+            "scheduleJobRepository",
+            "jobLogRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "triggerJob",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "executeDailyClosing",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "executeReconciliation",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "ScheduleDomainService",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "triggerJob",
+          "callee": "log.info",
+          "lineNumber": 29
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "scheduleJobRepository.findByJobHandler(jobHandler).orElseThrow",
+          "lineNumber": 30
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "scheduleJobRepository.findByJobHandler",
+          "lineNumber": 30
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "new BusinessException",
+          "lineNumber": 31
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "\"ENABLED\".equals",
+          "lineNumber": 33
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "job.getStatus",
+          "lineNumber": 33
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "new IllegalStateException",
+          "lineNumber": 34
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "jobLogRepository.save",
+          "lineNumber": 37
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "JobLog.create",
+          "lineNumber": 37
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "job.getId",
+          "lineNumber": 37
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "job.getJobName",
+          "lineNumber": 37
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "job.getJobHandler",
+          "lineNumber": 37
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "executeBusinessHandler",
+          "lineNumber": 40
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "jobLog.markSuccess",
+          "lineNumber": 41
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "job.recordExecution",
+          "lineNumber": 42
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "jobLogRepository.save",
+          "lineNumber": 43
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "scheduleJobRepository.save",
+          "lineNumber": 44
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "log.info",
+          "lineNumber": 45
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "jobLog.markFailed",
+          "lineNumber": 48
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "e.getMessage",
+          "lineNumber": 48
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "job.recordExecution",
+          "lineNumber": 49
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "jobLogRepository.save",
+          "lineNumber": 50
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "scheduleJobRepository.save",
+          "lineNumber": 51
+        },
+        {
+          "caller": "triggerJob",
+          "callee": "log.error",
+          "lineNumber": 52
+        },
+        {
+          "caller": "executeDailyClosing",
+          "callee": "log.info",
+          "lineNumber": 59
+        },
+        {
+          "caller": "executeReconciliation",
+          "callee": "log.info",
+          "lineNumber": 63
+        },
+        {
+          "caller": "executeBusinessHandler",
+          "callee": "job.getJobHandler",
+          "lineNumber": 71
+        },
+        {
+          "caller": "executeBusinessHandler",
+          "callee": "executeDailyClosingJob",
+          "lineNumber": 72
+        },
+        {
+          "caller": "executeBusinessHandler",
+          "callee": "executeReconciliationJob",
+          "lineNumber": 73
+        },
+        {
+          "caller": "executeBusinessHandler",
+          "callee": "executeReportingBatchJob",
+          "lineNumber": 74
+        },
+        {
+          "caller": "executeBusinessHandler",
+          "callee": "executeRateRefreshJob",
+          "lineNumber": 75
+        },
+        {
+          "caller": "executeBusinessHandler",
+          "callee": "executeGenericJob",
+          "lineNumber": 76
+        },
+        {
+          "caller": "executeDailyClosingJob",
+          "callee": "LocalDate.now",
+          "lineNumber": 81
+        },
+        {
+          "caller": "executeDailyClosingJob",
+          "callee": "executeDailyClosing",
+          "lineNumber": 82
+        },
+        {
+          "caller": "executeDailyClosingJob",
+          "callee": "successResult",
+          "lineNumber": 83
+        },
+        {
+          "caller": "executeDailyClosingJob",
+          "callee": "businessDate.toString",
+          "lineNumber": 83
+        },
+        {
+          "caller": "executeReconciliationJob",
+          "callee": "executeReconciliation",
+          "lineNumber": 87
+        },
+        {
+          "caller": "executeReconciliationJob",
+          "callee": "successResult",
+          "lineNumber": 88
+        },
+        {
+          "caller": "executeReportingBatchJob",
+          "callee": "log.info",
+          "lineNumber": 92
+        },
+        {
+          "caller": "executeReportingBatchJob",
+          "callee": "successResult",
+          "lineNumber": 93
+        },
+        {
+          "caller": "executeRateRefreshJob",
+          "callee": "log.info",
+          "lineNumber": 97
+        },
+        {
+          "caller": "executeRateRefreshJob",
+          "callee": "successResult",
+          "lineNumber": 98
+        },
+        {
+          "caller": "executeGenericJob",
+          "callee": "log.info",
+          "lineNumber": 102
+        },
+        {
+          "caller": "executeGenericJob",
+          "callee": "job.getJobHandler",
+          "lineNumber": 103
+        },
+        {
+          "caller": "executeGenericJob",
+          "callee": "job.getJobHandler",
+          "lineNumber": 103
+        },
+        {
+          "caller": "executeGenericJob",
+          "callee": "successResult",
+          "lineNumber": 104
+        },
+        {
+          "caller": "executeGenericJob",
+          "callee": "job.getJobHandler",
+          "lineNumber": 104
+        },
+        {
+          "caller": "executeGenericJob",
+          "callee": "job.getJobGroup",
+          "lineNumber": 104
+        },
+        {
+          "caller": "successResult",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 112
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 4,
+        "functionCount": 10,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-schedule/src/main/java/com/forex/schedule/infrastructure/repository/ScheduleJobRepositoryImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 97,
+      "nonEmptyLines": 84,
+      "functions": [
+        {
+          "name": "save",
+          "startLine": 25,
+          "endLine": 34,
+          "params": [
+            "job"
+          ]
+        },
+        {
+          "name": "findById",
+          "startLine": 36,
+          "endLine": 40,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "findByJobHandler",
+          "startLine": 42,
+          "endLine": 46,
+          "params": [
+            "jobHandler"
+          ]
+        },
+        {
+          "name": "findAllEnabled",
+          "startLine": 48,
+          "endLine": 53,
+          "params": []
+        },
+        {
+          "name": "pageQuery",
+          "startLine": 55,
+          "endLine": 66,
+          "params": [
+            "pageReq"
+          ]
+        },
+        {
+          "name": "toDomain",
+          "startLine": 68,
+          "endLine": 81,
+          "params": [
+            "po"
+          ]
+        },
+        {
+          "name": "toPO",
+          "startLine": 83,
+          "endLine": 96,
+          "params": [
+            "job"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ScheduleJobRepositoryImpl",
+          "startLine": 19,
+          "endLine": 97,
+          "methods": [
+            "save",
+            "findById",
+            "findByJobHandler",
+            "findAllEnabled",
+            "pageQuery",
+            "toDomain",
+            "toPO"
+          ],
+          "properties": [
+            "scheduleJobMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "save",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "findById",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "findByJobHandler",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "findAllEnabled",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "pageQuery",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "ScheduleJobRepositoryImpl",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "save",
+          "callee": "toPO",
+          "lineNumber": 27
+        },
+        {
+          "caller": "save",
+          "callee": "job.getId",
+          "lineNumber": 28
+        },
+        {
+          "caller": "save",
+          "callee": "scheduleJobMapper.insert",
+          "lineNumber": 29
+        },
+        {
+          "caller": "save",
+          "callee": "scheduleJobMapper.updateById",
+          "lineNumber": 31
+        },
+        {
+          "caller": "save",
+          "callee": "toDomain",
+          "lineNumber": 33
+        },
+        {
+          "caller": "findById",
+          "callee": "scheduleJobMapper.selectById",
+          "lineNumber": 38
+        },
+        {
+          "caller": "findById",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 39
+        },
+        {
+          "caller": "findById",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 39
+        },
+        {
+          "caller": "findByJobHandler",
+          "callee": "scheduleJobMapper.selectByJobHandler",
+          "lineNumber": 44
+        },
+        {
+          "caller": "findByJobHandler",
+          "callee": "Optional.ofNullable(po).map",
+          "lineNumber": 45
+        },
+        {
+          "caller": "findByJobHandler",
+          "callee": "Optional.ofNullable",
+          "lineNumber": 45
+        },
+        {
+          "caller": "findAllEnabled",
+          "callee": "scheduleJobMapper.selectAllEnabled().stream()\n                .map(this::toDomain).toList",
+          "lineNumber": 50
+        },
+        {
+          "caller": "findAllEnabled",
+          "callee": "scheduleJobMapper.selectAllEnabled().stream().map",
+          "lineNumber": 50
+        },
+        {
+          "caller": "findAllEnabled",
+          "callee": "scheduleJobMapper.selectAllEnabled().stream",
+          "lineNumber": 50
+        },
+        {
+          "caller": "findAllEnabled",
+          "callee": "scheduleJobMapper.selectAllEnabled",
+          "lineNumber": 50
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "new Page<>",
+          "lineNumber": 57
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageNum",
+          "lineNumber": 57
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageSize",
+          "lineNumber": 57
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "new JobQuery",
+          "lineNumber": 58
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.setPageNum",
+          "lineNumber": 59
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageNum",
+          "lineNumber": 59
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "query.setPageSize",
+          "lineNumber": 60
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageSize",
+          "lineNumber": 60
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "scheduleJobMapper.pageQuery",
+          "lineNumber": 61
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords().stream()\n                .map(this::toDomain).toList",
+          "lineNumber": 62
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords().stream().map",
+          "lineNumber": 62
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords().stream",
+          "lineNumber": 62
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getRecords",
+          "lineNumber": 62
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "PageResp.of",
+          "lineNumber": 65
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "result.getTotal",
+          "lineNumber": 65
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageNum",
+          "lineNumber": 65
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageSize",
+          "lineNumber": 65
+        },
+        {
+          "caller": "toDomain",
+          "callee": "ScheduleJob.reconstitute",
+          "lineNumber": 69
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getId",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getJobName",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getJobGroup",
+          "lineNumber": 72
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getJobHandler",
+          "lineNumber": 73
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getCronExpression",
+          "lineNumber": 74
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getJobDesc",
+          "lineNumber": 75
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getStatus",
+          "lineNumber": 76
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getLastResult",
+          "lineNumber": 77
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getLastExecuteTime",
+          "lineNumber": 78
+        },
+        {
+          "caller": "toDomain",
+          "callee": "po.getNextExecuteTime",
+          "lineNumber": 79
+        },
+        {
+          "caller": "toPO",
+          "callee": "new ScheduleJobPO",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setId",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toPO",
+          "callee": "job.getId",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setJobName",
+          "lineNumber": 86
+        },
+        {
+          "caller": "toPO",
+          "callee": "job.getJobName",
+          "lineNumber": 86
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setJobGroup",
+          "lineNumber": 87
+        },
+        {
+          "caller": "toPO",
+          "callee": "job.getJobGroup",
+          "lineNumber": 87
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setJobHandler",
+          "lineNumber": 88
+        },
+        {
+          "caller": "toPO",
+          "callee": "job.getJobHandler",
+          "lineNumber": 88
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setCronExpression",
+          "lineNumber": 89
+        },
+        {
+          "caller": "toPO",
+          "callee": "job.getCronExpression",
+          "lineNumber": 89
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setJobDesc",
+          "lineNumber": 90
+        },
+        {
+          "caller": "toPO",
+          "callee": "job.getJobDesc",
+          "lineNumber": 90
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setStatus",
+          "lineNumber": 91
+        },
+        {
+          "caller": "toPO",
+          "callee": "job.getStatus",
+          "lineNumber": 91
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setLastResult",
+          "lineNumber": 92
+        },
+        {
+          "caller": "toPO",
+          "callee": "job.getLastResult",
+          "lineNumber": 92
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setLastExecuteTime",
+          "lineNumber": 93
+        },
+        {
+          "caller": "toPO",
+          "callee": "job.getLastExecuteTime",
+          "lineNumber": 93
+        },
+        {
+          "caller": "toPO",
+          "callee": "po.setNextExecuteTime",
+          "lineNumber": 94
+        },
+        {
+          "caller": "toPO",
+          "callee": "job.getNextExecuteTime",
+          "lineNumber": 94
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 6,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-schedule/src/test/java/com/forex/schedule/domain/service/ScheduleDomainServiceTest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 161,
+      "nonEmptyLines": 132,
+      "functions": [
+        {
+          "name": "setUp",
+          "startLine": 31,
+          "endLine": 36,
+          "params": []
+        },
+        {
+          "name": "testTriggerJob_Success",
+          "startLine": 38,
+          "endLine": 53,
+          "params": []
+        },
+        {
+          "name": "testTriggerJob_Disabled",
+          "startLine": 55,
+          "endLine": 65,
+          "params": []
+        },
+        {
+          "name": "testTriggerJob_NotFound",
+          "startLine": 67,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "testExecuteDailyClosing",
+          "startLine": 76,
+          "endLine": 80,
+          "params": []
+        },
+        {
+          "name": "testExecuteReconciliation",
+          "startLine": 82,
+          "endLine": 86,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ScheduleDomainServiceTest",
+          "startLine": 25,
+          "endLine": 161,
+          "methods": [
+            "setUp",
+            "testTriggerJob_Success",
+            "testTriggerJob_Disabled",
+            "testTriggerJob_NotFound",
+            "testExecuteDailyClosing",
+            "testExecuteReconciliation"
+          ],
+          "properties": [
+            "scheduleJobRepository",
+            "jobLogRepository",
+            "scheduleDomainService"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "setUp",
+          "callee": "new StubScheduleJobRepository",
+          "lineNumber": 33
+        },
+        {
+          "caller": "setUp",
+          "callee": "new StubJobLogRepository",
+          "lineNumber": 34
+        },
+        {
+          "caller": "setUp",
+          "callee": "new ScheduleDomainService",
+          "lineNumber": 35
+        },
+        {
+          "caller": "testTriggerJob_Success",
+          "callee": "ScheduleJob.reconstitute",
+          "lineNumber": 41
+        },
+        {
+          "caller": "testTriggerJob_Success",
+          "callee": "List.of",
+          "lineNumber": 44
+        },
+        {
+          "caller": "testTriggerJob_Success",
+          "callee": "scheduleDomainService.triggerJob",
+          "lineNumber": 46
+        },
+        {
+          "caller": "testTriggerJob_Success",
+          "callee": "assertNotNull",
+          "lineNumber": 48
+        },
+        {
+          "caller": "testTriggerJob_Success",
+          "callee": "assertEquals",
+          "lineNumber": 49
+        },
+        {
+          "caller": "testTriggerJob_Success",
+          "callee": "result.getExecuteStatus",
+          "lineNumber": 49
+        },
+        {
+          "caller": "testTriggerJob_Success",
+          "callee": "assertTrue",
+          "lineNumber": 50
+        },
+        {
+          "caller": "testTriggerJob_Success",
+          "callee": "result.getExecuteResult().contains",
+          "lineNumber": 50
+        },
+        {
+          "caller": "testTriggerJob_Success",
+          "callee": "result.getExecuteResult",
+          "lineNumber": 50
+        },
+        {
+          "caller": "testTriggerJob_Success",
+          "callee": "assertEquals",
+          "lineNumber": 51
+        },
+        {
+          "caller": "testTriggerJob_Success",
+          "callee": "jobLogRepository.logs.size",
+          "lineNumber": 51
+        },
+        {
+          "caller": "testTriggerJob_Success",
+          "callee": "assertTrue",
+          "lineNumber": 52
+        },
+        {
+          "caller": "testTriggerJob_Success",
+          "callee": "scheduleJobRepository.savedJob.getLastResult().contains",
+          "lineNumber": 52
+        },
+        {
+          "caller": "testTriggerJob_Success",
+          "callee": "scheduleJobRepository.savedJob.getLastResult",
+          "lineNumber": 52
+        },
+        {
+          "caller": "testTriggerJob_Disabled",
+          "callee": "ScheduleJob.reconstitute",
+          "lineNumber": 58
+        },
+        {
+          "caller": "testTriggerJob_Disabled",
+          "callee": "List.of",
+          "lineNumber": 61
+        },
+        {
+          "caller": "testTriggerJob_Disabled",
+          "callee": "assertThrows",
+          "lineNumber": 63
+        },
+        {
+          "caller": "testTriggerJob_Disabled",
+          "callee": "scheduleDomainService.triggerJob",
+          "lineNumber": 64
+        },
+        {
+          "caller": "testTriggerJob_NotFound",
+          "callee": "List.of",
+          "lineNumber": 70
+        },
+        {
+          "caller": "testTriggerJob_NotFound",
+          "callee": "assertThrows",
+          "lineNumber": 72
+        },
+        {
+          "caller": "testTriggerJob_NotFound",
+          "callee": "scheduleDomainService.triggerJob",
+          "lineNumber": 73
+        },
+        {
+          "caller": "testExecuteDailyClosing",
+          "callee": "scheduleDomainService.executeDailyClosing",
+          "lineNumber": 79
+        },
+        {
+          "caller": "testExecuteDailyClosing",
+          "callee": "LocalDate.now",
+          "lineNumber": 79
+        },
+        {
+          "caller": "testExecuteReconciliation",
+          "callee": "scheduleDomainService.executeReconciliation",
+          "lineNumber": 85
+        },
+        {
+          "caller": "findById",
+          "callee": "jobs.stream().filter(job -> job.getId().equals(id)).findFirst",
+          "lineNumber": 105
+        },
+        {
+          "caller": "findById",
+          "callee": "jobs.stream().filter",
+          "lineNumber": 105
+        },
+        {
+          "caller": "findById",
+          "callee": "jobs.stream",
+          "lineNumber": 105
+        },
+        {
+          "caller": "findById",
+          "callee": "job.getId().equals",
+          "lineNumber": 105
+        },
+        {
+          "caller": "findById",
+          "callee": "job.getId",
+          "lineNumber": 105
+        },
+        {
+          "caller": "findByJobHandler",
+          "callee": "jobs.stream().filter(job -> job.getJobHandler().equals(jobHandler)).findFirst",
+          "lineNumber": 110
+        },
+        {
+          "caller": "findByJobHandler",
+          "callee": "jobs.stream().filter",
+          "lineNumber": 110
+        },
+        {
+          "caller": "findByJobHandler",
+          "callee": "jobs.stream",
+          "lineNumber": 110
+        },
+        {
+          "caller": "findByJobHandler",
+          "callee": "job.getJobHandler().equals",
+          "lineNumber": 110
+        },
+        {
+          "caller": "findByJobHandler",
+          "callee": "job.getJobHandler",
+          "lineNumber": 110
+        },
+        {
+          "caller": "findAllEnabled",
+          "callee": "jobs.stream().filter(job -> \"ENABLED\".equals(job.getStatus())).toList",
+          "lineNumber": 115
+        },
+        {
+          "caller": "findAllEnabled",
+          "callee": "jobs.stream().filter",
+          "lineNumber": 115
+        },
+        {
+          "caller": "findAllEnabled",
+          "callee": "jobs.stream",
+          "lineNumber": 115
+        },
+        {
+          "caller": "findAllEnabled",
+          "callee": "\"ENABLED\".equals",
+          "lineNumber": 115
+        },
+        {
+          "caller": "findAllEnabled",
+          "callee": "job.getStatus",
+          "lineNumber": 115
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "PageResp.of",
+          "lineNumber": 120
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "jobs.size",
+          "lineNumber": 120
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageNum",
+          "lineNumber": 120
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageSize",
+          "lineNumber": 120
+        },
+        {
+          "caller": "save",
+          "callee": "log.getId",
+          "lineNumber": 135
+        },
+        {
+          "caller": "save",
+          "callee": "JobLog.reconstitute",
+          "lineNumber": 136
+        },
+        {
+          "caller": "save",
+          "callee": "log.getJobId",
+          "lineNumber": 136
+        },
+        {
+          "caller": "save",
+          "callee": "log.getJobName",
+          "lineNumber": 136
+        },
+        {
+          "caller": "save",
+          "callee": "log.getJobHandler",
+          "lineNumber": 136
+        },
+        {
+          "caller": "save",
+          "callee": "log.getStartTime",
+          "lineNumber": 137
+        },
+        {
+          "caller": "save",
+          "callee": "log.getEndTime",
+          "lineNumber": 137
+        },
+        {
+          "caller": "save",
+          "callee": "log.getExecuteStatus",
+          "lineNumber": 137
+        },
+        {
+          "caller": "save",
+          "callee": "log.getExecuteResult",
+          "lineNumber": 137
+        },
+        {
+          "caller": "save",
+          "callee": "log.getErrorMsg",
+          "lineNumber": 137
+        },
+        {
+          "caller": "save",
+          "callee": "persisted.getId",
+          "lineNumber": 139
+        },
+        {
+          "caller": "save",
+          "callee": "logs.removeIf",
+          "lineNumber": 140
+        },
+        {
+          "caller": "save",
+          "callee": "persisted.getId().equals",
+          "lineNumber": 140
+        },
+        {
+          "caller": "save",
+          "callee": "persisted.getId",
+          "lineNumber": 140
+        },
+        {
+          "caller": "save",
+          "callee": "existing.getId",
+          "lineNumber": 140
+        },
+        {
+          "caller": "save",
+          "callee": "logs.add",
+          "lineNumber": 142
+        },
+        {
+          "caller": "findById",
+          "callee": "logs.stream().filter(log -> log.getId().equals(id)).findFirst",
+          "lineNumber": 148
+        },
+        {
+          "caller": "findById",
+          "callee": "logs.stream().filter",
+          "lineNumber": 148
+        },
+        {
+          "caller": "findById",
+          "callee": "logs.stream",
+          "lineNumber": 148
+        },
+        {
+          "caller": "findById",
+          "callee": "log.getId().equals",
+          "lineNumber": 148
+        },
+        {
+          "caller": "findById",
+          "callee": "log.getId",
+          "lineNumber": 148
+        },
+        {
+          "caller": "findByJobId",
+          "callee": "logs.stream().filter(log -> jobId.equals(log.getJobId())).toList",
+          "lineNumber": 153
+        },
+        {
+          "caller": "findByJobId",
+          "callee": "logs.stream().filter",
+          "lineNumber": 153
+        },
+        {
+          "caller": "findByJobId",
+          "callee": "logs.stream",
+          "lineNumber": 153
+        },
+        {
+          "caller": "findByJobId",
+          "callee": "jobId.equals",
+          "lineNumber": 153
+        },
+        {
+          "caller": "findByJobId",
+          "callee": "log.getJobId",
+          "lineNumber": 153
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "PageResp.of",
+          "lineNumber": 158
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "logs.size",
+          "lineNumber": 158
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageNum",
+          "lineNumber": 158
+        },
+        {
+          "caller": "pageQuery",
+          "callee": "pageReq.getPageSize",
+          "lineNumber": 158
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 0,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    }
+  ]
+}

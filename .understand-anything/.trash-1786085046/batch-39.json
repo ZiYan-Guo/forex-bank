@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-bank-web/src/views/risk/SamplingRuleConfig.vue",
+      "type": "file",
+      "name": "SamplingRuleConfig.vue",
+      "filePath": "forex-bank-web/src/views/risk/SamplingRuleConfig.vue",
+      "summary": "提供 Vue 页面级交互界面，承载对应业务场景的数据展示、表单操作和用户反馈。",
+      "tags": [
+        "配置",
+        "Spring"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:forex-bank-web/src/views/schedule/JobManagement.vue",
+      "type": "file",
+      "name": "JobManagement.vue",
+      "filePath": "forex-bank-web/src/views/schedule/JobManagement.vue",
+      "summary": "提供 Vue 页面级交互界面，承载对应业务场景的数据展示、表单操作和用户反馈。",
+      "tags": [
+        "UI",
+        "Vue",
+        "页面组件"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-bank-web/src/views/settlement/BankGuarantee.vue",
+      "type": "file",
+      "name": "BankGuarantee.vue",
+      "filePath": "forex-bank-web/src/views/settlement/BankGuarantee.vue",
+      "summary": "表达核心领域对象及其业务状态，为服务层规则和持久化逻辑提供统一模型。",
+      "tags": [
+        "UI",
+        "Vue",
+        "页面组件"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:forex-bank-web/src/views/settlement/DocumentaryCollection.vue",
+      "type": "file",
+      "name": "DocumentaryCollection.vue",
+      "filePath": "forex-bank-web/src/views/settlement/DocumentaryCollection.vue",
+      "summary": "表达核心领域对象及其业务状态，为服务层规则和持久化逻辑提供统一模型。",
+      "tags": [
+        "UI",
+        "Vue",
+        "页面组件"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": []
+}

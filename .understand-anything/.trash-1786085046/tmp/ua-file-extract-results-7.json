@@ -1,0 +1,3603 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 3,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/adapter/controller/SamplingController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 416,
+      "nonEmptyLines": 374,
+      "functions": [
+        {
+          "name": "listRules",
+          "startLine": 54,
+          "endLine": 63,
+          "params": []
+        },
+        {
+          "name": "createRule",
+          "startLine": 65,
+          "endLine": 76,
+          "params": [
+            "body"
+          ]
+        },
+        {
+          "name": "updateRule",
+          "startLine": 78,
+          "endLine": 91,
+          "params": [
+            "id",
+            "body"
+          ]
+        },
+        {
+          "name": "updateRuleStatus",
+          "startLine": 93,
+          "endLine": 108,
+          "params": [
+            "id",
+            "body"
+          ]
+        },
+        {
+          "name": "deleteRule",
+          "startLine": 110,
+          "endLine": 117,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "evaluate",
+          "startLine": 124,
+          "endLine": 153,
+          "params": [
+            "body"
+          ]
+        },
+        {
+          "name": "generateTasks",
+          "startLine": 159,
+          "endLine": 179,
+          "params": [
+            "body"
+          ]
+        },
+        {
+          "name": "listTasks",
+          "startLine": 185,
+          "endLine": 196,
+          "params": []
+        },
+        {
+          "name": "completeTask",
+          "startLine": 202,
+          "endLine": 217,
+          "params": [
+            "taskId",
+            "body"
+          ]
+        },
+        {
+          "name": "getStatistics",
+          "startLine": 223,
+          "endLine": 275,
+          "params": []
+        },
+        {
+          "name": "toRule",
+          "startLine": 277,
+          "endLine": 291,
+          "params": [
+            "id",
+            "body",
+            "existing"
+          ]
+        },
+        {
+          "name": "toRuleReq",
+          "startLine": 293,
+          "endLine": 306,
+          "params": [
+            "rule"
+          ]
+        },
+        {
+          "name": "toRuleView",
+          "startLine": 308,
+          "endLine": 322,
+          "params": [
+            "rule"
+          ]
+        },
+        {
+          "name": "toTask",
+          "startLine": 324,
+          "endLine": 351,
+          "params": [
+            "payload"
+          ]
+        },
+        {
+          "name": "toTaskView",
+          "startLine": 353,
+          "endLine": 374,
+          "params": [
+            "task"
+          ]
+        },
+        {
+          "name": "moduleName",
+          "startLine": 376,
+          "endLine": 384,
+          "params": [
+            "module"
+          ]
+        },
+        {
+          "name": "valueOrDefault",
+          "startLine": 386,
+          "endLine": 391,
+          "params": [
+            "value",
+            "defaultValue"
+          ]
+        },
+        {
+          "name": "decimal",
+          "startLine": 393,
+          "endLine": 395,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "toLong",
+          "startLine": 397,
+          "endLine": 399,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "integer",
+          "startLine": 401,
+          "endLine": 403,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "str",
+          "startLine": 405,
+          "endLine": 407,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "date",
+          "startLine": 409,
+          "endLine": 411,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "dateTime",
+          "startLine": 413,
+          "endLine": 415,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SamplingController",
+          "startLine": 43,
+          "endLine": 416,
+          "methods": [
+            "listRules",
+            "createRule",
+            "updateRule",
+            "updateRuleStatus",
+            "deleteRule",
+            "evaluate",
+            "generateTasks",
+            "listTasks",
+            "completeTask",
+            "getStatistics",
+            "toRule",
+            "toRuleReq",
+            "toRuleView",
+            "toTask",
+            "toTaskView",
+            "moduleName",
+            "valueOrDefault",
+            "decimal",
+            "toLong",
+            "integer",
+            "str",
+            "date",
+            "dateTime"
+          ],
+          "properties": [
+            "samplingRuleEngine",
+            "samplingRuleRepository",
+            "samplingTaskRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "listRules",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "createRule",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "updateRule",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "updateRuleStatus",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "deleteRule",
+          "line": 110,
+          "isDefault": false
+        },
+        {
+          "name": "evaluate",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "generateTasks",
+          "line": 159,
+          "isDefault": false
+        },
+        {
+          "name": "listTasks",
+          "line": 185,
+          "isDefault": false
+        },
+        {
+          "name": "completeTask",
+          "line": 202,
+          "isDefault": false
+        },
+        {
+          "name": "getStatistics",
+          "line": 223,
+          "isDefault": false
+        },
+        {
+          "name": "SamplingController",
+          "line": 43,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "listRules",
+          "callee": "log.info",
+          "lineNumber": 57
+        },
+        {
+          "caller": "listRules",
+          "callee": "samplingRuleRepository.findAll().stream()\n                .map(this::toRuleView).toList",
+          "lineNumber": 58
+        },
+        {
+          "caller": "listRules",
+          "callee": "samplingRuleRepository.findAll().stream().map",
+          "lineNumber": 58
+        },
+        {
+          "caller": "listRules",
+          "callee": "samplingRuleRepository.findAll().stream",
+          "lineNumber": 58
+        },
+        {
+          "caller": "listRules",
+          "callee": "samplingRuleRepository.findAll",
+          "lineNumber": 58
+        },
+        {
+          "caller": "listRules",
+          "callee": "log.info",
+          "lineNumber": 61
+        },
+        {
+          "caller": "listRules",
+          "callee": "rules.size",
+          "lineNumber": 61
+        },
+        {
+          "caller": "listRules",
+          "callee": "rules.size",
+          "lineNumber": 61
+        },
+        {
+          "caller": "listRules",
+          "callee": "R.ok",
+          "lineNumber": 62
+        },
+        {
+          "caller": "createRule",
+          "callee": "log.info",
+          "lineNumber": 69
+        },
+        {
+          "caller": "createRule",
+          "callee": "body.getRuleCode",
+          "lineNumber": 70
+        },
+        {
+          "caller": "createRule",
+          "callee": "body.getTargetModule",
+          "lineNumber": 70
+        },
+        {
+          "caller": "createRule",
+          "callee": "body.getRuleCode",
+          "lineNumber": 70
+        },
+        {
+          "caller": "createRule",
+          "callee": "body.getTargetModule",
+          "lineNumber": 70
+        },
+        {
+          "caller": "createRule",
+          "callee": "toRule",
+          "lineNumber": 71
+        },
+        {
+          "caller": "createRule",
+          "callee": "samplingRuleRepository.save",
+          "lineNumber": 72
+        },
+        {
+          "caller": "createRule",
+          "callee": "log.info",
+          "lineNumber": 73
+        },
+        {
+          "caller": "createRule",
+          "callee": "saved.getId",
+          "lineNumber": 74
+        },
+        {
+          "caller": "createRule",
+          "callee": "saved.getRuleCode",
+          "lineNumber": 74
+        },
+        {
+          "caller": "createRule",
+          "callee": "saved.getId",
+          "lineNumber": 74
+        },
+        {
+          "caller": "createRule",
+          "callee": "saved.getRuleCode",
+          "lineNumber": 74
+        },
+        {
+          "caller": "createRule",
+          "callee": "R.ok",
+          "lineNumber": 75
+        },
+        {
+          "caller": "createRule",
+          "callee": "toRuleView",
+          "lineNumber": 75
+        },
+        {
+          "caller": "updateRule",
+          "callee": "samplingRuleRepository.findById(id).orElse",
+          "lineNumber": 82
+        },
+        {
+          "caller": "updateRule",
+          "callee": "samplingRuleRepository.findById",
+          "lineNumber": 82
+        },
+        {
+          "caller": "updateRule",
+          "callee": "log.warn",
+          "lineNumber": 84
+        },
+        {
+          "caller": "updateRule",
+          "callee": "R.fail",
+          "lineNumber": 85
+        },
+        {
+          "caller": "updateRule",
+          "callee": "log.info",
+          "lineNumber": 87
+        },
+        {
+          "caller": "updateRule",
+          "callee": "existing.getRuleCode",
+          "lineNumber": 88
+        },
+        {
+          "caller": "updateRule",
+          "callee": "existing.getRuleCode",
+          "lineNumber": 88
+        },
+        {
+          "caller": "updateRule",
+          "callee": "samplingRuleRepository.save",
+          "lineNumber": 89
+        },
+        {
+          "caller": "updateRule",
+          "callee": "toRule",
+          "lineNumber": 89
+        },
+        {
+          "caller": "updateRule",
+          "callee": "R.ok",
+          "lineNumber": 90
+        },
+        {
+          "caller": "updateRule",
+          "callee": "toRuleView",
+          "lineNumber": 90
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "samplingRuleRepository.findById(id).orElse",
+          "lineNumber": 97
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "samplingRuleRepository.findById",
+          "lineNumber": 97
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "log.warn",
+          "lineNumber": 99
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "R.fail",
+          "lineNumber": 100
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "toRuleReq",
+          "lineNumber": 102
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "merged.setStatus",
+          "lineNumber": 103
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "body.getStatus",
+          "lineNumber": 103
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "body.getStatus().isBlank",
+          "lineNumber": 103
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "body.getStatus",
+          "lineNumber": 103
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "body.getStatus",
+          "lineNumber": 103
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "samplingRuleRepository.save",
+          "lineNumber": 104
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "toRule",
+          "lineNumber": 104
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "log.info",
+          "lineNumber": 105
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "saved.getStatus",
+          "lineNumber": 106
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "saved.getStatus",
+          "lineNumber": 106
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "R.ok",
+          "lineNumber": 107
+        },
+        {
+          "caller": "updateRuleStatus",
+          "callee": "toRuleView",
+          "lineNumber": 107
+        },
+        {
+          "caller": "deleteRule",
+          "callee": "log.info",
+          "lineNumber": 114
+        },
+        {
+          "caller": "deleteRule",
+          "callee": "samplingRuleRepository.deleteById",
+          "lineNumber": 115
+        },
+        {
+          "caller": "deleteRule",
+          "callee": "R.ok",
+          "lineNumber": 116
+        },
+        {
+          "caller": "evaluate",
+          "callee": "body.getCustomerId",
+          "lineNumber": 128
+        },
+        {
+          "caller": "evaluate",
+          "callee": "body.getBizType",
+          "lineNumber": 129
+        },
+        {
+          "caller": "evaluate",
+          "callee": "body.getAmount",
+          "lineNumber": 130
+        },
+        {
+          "caller": "evaluate",
+          "callee": "body.getAmount",
+          "lineNumber": 130
+        },
+        {
+          "caller": "evaluate",
+          "callee": "body.getCurrency",
+          "lineNumber": 131
+        },
+        {
+          "caller": "evaluate",
+          "callee": "body.getCountryCode",
+          "lineNumber": 132
+        },
+        {
+          "caller": "evaluate",
+          "callee": "body.getAccountAgeDays",
+          "lineNumber": 133
+        },
+        {
+          "caller": "evaluate",
+          "callee": "log.info",
+          "lineNumber": 135
+        },
+        {
+          "caller": "evaluate",
+          "callee": "samplingRuleEngine.evaluateTransaction",
+          "lineNumber": 139
+        },
+        {
+          "caller": "evaluate",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 142
+        },
+        {
+          "caller": "evaluate",
+          "callee": "result.put",
+          "lineNumber": 143
+        },
+        {
+          "caller": "evaluate",
+          "callee": "result.put",
+          "lineNumber": 144
+        },
+        {
+          "caller": "evaluate",
+          "callee": "result.put",
+          "lineNumber": 145
+        },
+        {
+          "caller": "evaluate",
+          "callee": "result.put",
+          "lineNumber": 146
+        },
+        {
+          "caller": "evaluate",
+          "callee": "result.put",
+          "lineNumber": 147
+        },
+        {
+          "caller": "evaluate",
+          "callee": "result.put",
+          "lineNumber": 148
+        },
+        {
+          "caller": "evaluate",
+          "callee": "result.put",
+          "lineNumber": 149
+        },
+        {
+          "caller": "evaluate",
+          "callee": "log.info",
+          "lineNumber": 151
+        },
+        {
+          "caller": "evaluate",
+          "callee": "R.ok",
+          "lineNumber": 152
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "body.getDate",
+          "lineNumber": 163
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "body.getDate().isBlank",
+          "lineNumber": 163
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "body.getDate",
+          "lineNumber": 163
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "LocalDate.parse",
+          "lineNumber": 164
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "body.getDate",
+          "lineNumber": 164
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "LocalDate.now",
+          "lineNumber": 164
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "log.info",
+          "lineNumber": 165
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "samplingRuleEngine.generateSamplingTasks(date).stream()\n                .map(this::toTask).toList",
+          "lineNumber": 166
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "samplingRuleEngine.generateSamplingTasks(date).stream().map",
+          "lineNumber": 166
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "samplingRuleEngine.generateSamplingTasks(date).stream",
+          "lineNumber": 166
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "samplingRuleEngine.generateSamplingTasks",
+          "lineNumber": 166
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "samplingTaskRepository.saveAll",
+          "lineNumber": 169
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 171
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "result.put",
+          "lineNumber": 172
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "date.toString",
+          "lineNumber": 172
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "result.put",
+          "lineNumber": 173
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "savedTasks.size",
+          "lineNumber": 173
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "result.put",
+          "lineNumber": 174
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "savedTasks.stream().map(this::toTaskView).toList",
+          "lineNumber": 174
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "savedTasks.stream().map",
+          "lineNumber": 174
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "savedTasks.stream",
+          "lineNumber": 174
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "log.info",
+          "lineNumber": 176
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "savedTasks.size",
+          "lineNumber": 177
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "savedTasks.size",
+          "lineNumber": 177
+        },
+        {
+          "caller": "generateTasks",
+          "callee": "R.ok",
+          "lineNumber": 178
+        },
+        {
+          "caller": "listTasks",
+          "callee": "samplingTaskRepository.findAll().stream()\n                .map(this::toTaskView).toList",
+          "lineNumber": 188
+        },
+        {
+          "caller": "listTasks",
+          "callee": "samplingTaskRepository.findAll().stream().map",
+          "lineNumber": 188
+        },
+        {
+          "caller": "listTasks",
+          "callee": "samplingTaskRepository.findAll().stream",
+          "lineNumber": 188
+        },
+        {
+          "caller": "listTasks",
+          "callee": "samplingTaskRepository.findAll",
+          "lineNumber": 188
+        },
+        {
+          "caller": "listTasks",
+          "callee": "log.info",
+          "lineNumber": 191
+        },
+        {
+          "caller": "listTasks",
+          "callee": "tasks.size",
+          "lineNumber": 191
+        },
+        {
+          "caller": "listTasks",
+          "callee": "tasks.size",
+          "lineNumber": 191
+        },
+        {
+          "caller": "listTasks",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 192
+        },
+        {
+          "caller": "listTasks",
+          "callee": "result.put",
+          "lineNumber": 193
+        },
+        {
+          "caller": "listTasks",
+          "callee": "tasks.size",
+          "lineNumber": 193
+        },
+        {
+          "caller": "listTasks",
+          "callee": "result.put",
+          "lineNumber": 194
+        },
+        {
+          "caller": "listTasks",
+          "callee": "R.ok",
+          "lineNumber": 195
+        },
+        {
+          "caller": "completeTask",
+          "callee": "log.info",
+          "lineNumber": 207
+        },
+        {
+          "caller": "completeTask",
+          "callee": "body.getResult",
+          "lineNumber": 208
+        },
+        {
+          "caller": "completeTask",
+          "callee": "body.getResult",
+          "lineNumber": 208
+        },
+        {
+          "caller": "completeTask",
+          "callee": "samplingTaskRepository.findByTaskId(taskId).orElse",
+          "lineNumber": 209
+        },
+        {
+          "caller": "completeTask",
+          "callee": "samplingTaskRepository.findByTaskId",
+          "lineNumber": 209
+        },
+        {
+          "caller": "completeTask",
+          "callee": "samplingTaskRepository.save",
+          "lineNumber": 211
+        },
+        {
+          "caller": "completeTask",
+          "callee": "task.complete",
+          "lineNumber": 211
+        },
+        {
+          "caller": "completeTask",
+          "callee": "body.getResult",
+          "lineNumber": 211
+        },
+        {
+          "caller": "completeTask",
+          "callee": "body.getComment",
+          "lineNumber": 211
+        },
+        {
+          "caller": "completeTask",
+          "callee": "log.info",
+          "lineNumber": 212
+        },
+        {
+          "caller": "completeTask",
+          "callee": "R.ok",
+          "lineNumber": 213
+        },
+        {
+          "caller": "completeTask",
+          "callee": "toTaskView",
+          "lineNumber": 213
+        },
+        {
+          "caller": "completeTask",
+          "callee": "log.warn",
+          "lineNumber": 215
+        },
+        {
+          "caller": "completeTask",
+          "callee": "R.fail",
+          "lineNumber": 216
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "log.info",
+          "lineNumber": 226
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 227
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 231
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "moduleTotals.put",
+          "lineNumber": 232
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "moduleTotals.put",
+          "lineNumber": 233
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "moduleTotals.put",
+          "lineNumber": 234
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "moduleTotals.put",
+          "lineNumber": 235
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 237
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "samplingTaskRepository.findAll",
+          "lineNumber": 239
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "task.getBizType",
+          "lineNumber": 241
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "task.getBizType",
+          "lineNumber": 241
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "sampledByModule.merge",
+          "lineNumber": 242
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "task.getAmount",
+          "lineNumber": 243
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "totalAmount.add",
+          "lineNumber": 244
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "task.getAmount",
+          "lineNumber": 244
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "persistedTasks.size",
+          "lineNumber": 248
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "moduleTotals.values().stream().mapToInt(Integer::intValue).sum",
+          "lineNumber": 249
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "moduleTotals.values().stream().mapToInt",
+          "lineNumber": 249
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "moduleTotals.values().stream",
+          "lineNumber": 249
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "moduleTotals.values",
+          "lineNumber": 249
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "BigDecimal.valueOf(sampledTransactions * 100.0 / totalTransactions).setScale",
+          "lineNumber": 251
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "BigDecimal.valueOf",
+          "lineNumber": 251
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "stats.put",
+          "lineNumber": 253
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "stats.put",
+          "lineNumber": 254
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "stats.put",
+          "lineNumber": 255
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "stats.put",
+          "lineNumber": 256
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "new ArrayList<>",
+          "lineNumber": 258
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "moduleTotals.entrySet",
+          "lineNumber": 259
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "sampledByModule.getOrDefault",
+          "lineNumber": 260
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "entry.getKey",
+          "lineNumber": 260
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "BigDecimal.valueOf(sampled * 100.0 / entry.getValue()).setScale",
+          "lineNumber": 261
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "BigDecimal.valueOf",
+          "lineNumber": 261
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "entry.getValue",
+          "lineNumber": 261
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "moduleBreakdown.add",
+          "lineNumber": 263
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "Map.of",
+          "lineNumber": 263
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "entry.getKey",
+          "lineNumber": 264
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "moduleName",
+          "lineNumber": 265
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "entry.getKey",
+          "lineNumber": 265
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "entry.getValue",
+          "lineNumber": 267
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "stats.put",
+          "lineNumber": 270
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "log.info",
+          "lineNumber": 272
+        },
+        {
+          "caller": "getStatistics",
+          "callee": "R.ok",
+          "lineNumber": 274
+        },
+        {
+          "caller": "toRule",
+          "callee": "new SamplingRule",
+          "lineNumber": 278
+        },
+        {
+          "caller": "toRule",
+          "callee": "valueOrDefault",
+          "lineNumber": 280
+        },
+        {
+          "caller": "toRule",
+          "callee": "body.getRuleCode",
+          "lineNumber": 280
+        },
+        {
+          "caller": "toRule",
+          "callee": "existing.getRuleCode",
+          "lineNumber": 280
+        },
+        {
+          "caller": "toRule",
+          "callee": "valueOrDefault",
+          "lineNumber": 281
+        },
+        {
+          "caller": "toRule",
+          "callee": "body.getRuleName",
+          "lineNumber": 281
+        },
+        {
+          "caller": "toRule",
+          "callee": "existing.getRuleName",
+          "lineNumber": 281
+        },
+        {
+          "caller": "toRule",
+          "callee": "valueOrDefault",
+          "lineNumber": 282
+        },
+        {
+          "caller": "toRule",
+          "callee": "body.getConditionJson",
+          "lineNumber": 282
+        },
+        {
+          "caller": "toRule",
+          "callee": "existing.getConditionJson",
+          "lineNumber": 282
+        },
+        {
+          "caller": "toRule",
+          "callee": "body.getSamplingRate",
+          "lineNumber": 283
+        },
+        {
+          "caller": "toRule",
+          "callee": "existing.getSamplingRate",
+          "lineNumber": 283
+        },
+        {
+          "caller": "toRule",
+          "callee": "body.getSamplingRate",
+          "lineNumber": 283
+        },
+        {
+          "caller": "toRule",
+          "callee": "valueOrDefault",
+          "lineNumber": 284
+        },
+        {
+          "caller": "toRule",
+          "callee": "body.getTargetModule",
+          "lineNumber": 284
+        },
+        {
+          "caller": "toRule",
+          "callee": "existing.getTargetModule",
+          "lineNumber": 284
+        },
+        {
+          "caller": "toRule",
+          "callee": "date",
+          "lineNumber": 285
+        },
+        {
+          "caller": "toRule",
+          "callee": "valueOrDefault",
+          "lineNumber": 285
+        },
+        {
+          "caller": "toRule",
+          "callee": "body.getEffectiveDate",
+          "lineNumber": 285
+        },
+        {
+          "caller": "toRule",
+          "callee": "LocalDate.now().toString",
+          "lineNumber": 285
+        },
+        {
+          "caller": "toRule",
+          "callee": "LocalDate.now",
+          "lineNumber": 285
+        },
+        {
+          "caller": "toRule",
+          "callee": "existing.getEffectiveDate",
+          "lineNumber": 285
+        },
+        {
+          "caller": "toRule",
+          "callee": "date",
+          "lineNumber": 286
+        },
+        {
+          "caller": "toRule",
+          "callee": "valueOrDefault",
+          "lineNumber": 286
+        },
+        {
+          "caller": "toRule",
+          "callee": "body.getExpireDate",
+          "lineNumber": 286
+        },
+        {
+          "caller": "toRule",
+          "callee": "existing.getExpireDate",
+          "lineNumber": 286
+        },
+        {
+          "caller": "toRule",
+          "callee": "body.getPriority",
+          "lineNumber": 287
+        },
+        {
+          "caller": "toRule",
+          "callee": "existing.getPriority",
+          "lineNumber": 287
+        },
+        {
+          "caller": "toRule",
+          "callee": "body.getPriority",
+          "lineNumber": 287
+        },
+        {
+          "caller": "toRule",
+          "callee": "valueOrDefault",
+          "lineNumber": 288
+        },
+        {
+          "caller": "toRule",
+          "callee": "body.getStatus",
+          "lineNumber": 288
+        },
+        {
+          "caller": "toRule",
+          "callee": "existing.getStatus",
+          "lineNumber": 288
+        },
+        {
+          "caller": "toRule",
+          "callee": "body.getIsAutoExtract",
+          "lineNumber": 289
+        },
+        {
+          "caller": "toRule",
+          "callee": "Boolean.TRUE.equals",
+          "lineNumber": 289
+        },
+        {
+          "caller": "toRule",
+          "callee": "existing.getIsAutoExtract",
+          "lineNumber": 289
+        },
+        {
+          "caller": "toRule",
+          "callee": "body.getIsAutoExtract",
+          "lineNumber": 289
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "new SamplingRuleReq",
+          "lineNumber": 294
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "req.setRuleCode",
+          "lineNumber": 295
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "rule.getRuleCode",
+          "lineNumber": 295
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "req.setRuleName",
+          "lineNumber": 296
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "rule.getRuleName",
+          "lineNumber": 296
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "req.setConditionJson",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "rule.getConditionJson",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "req.setSamplingRate",
+          "lineNumber": 298
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "rule.getSamplingRate",
+          "lineNumber": 298
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "req.setTargetModule",
+          "lineNumber": 299
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "rule.getTargetModule",
+          "lineNumber": 299
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "req.setEffectiveDate",
+          "lineNumber": 300
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "rule.getEffectiveDate",
+          "lineNumber": 300
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "rule.getEffectiveDate().toString",
+          "lineNumber": 300
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "rule.getEffectiveDate",
+          "lineNumber": 300
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "req.setExpireDate",
+          "lineNumber": 301
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "rule.getExpireDate",
+          "lineNumber": 301
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "rule.getExpireDate().toString",
+          "lineNumber": 301
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "rule.getExpireDate",
+          "lineNumber": 301
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "req.setPriority",
+          "lineNumber": 302
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "rule.getPriority",
+          "lineNumber": 302
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "req.setStatus",
+          "lineNumber": 303
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "rule.getStatus",
+          "lineNumber": 303
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "req.setIsAutoExtract",
+          "lineNumber": 304
+        },
+        {
+          "caller": "toRuleReq",
+          "callee": "rule.getIsAutoExtract",
+          "lineNumber": 304
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 309
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "view.put",
+          "lineNumber": 310
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "rule.getId",
+          "lineNumber": 310
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "view.put",
+          "lineNumber": 311
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "rule.getRuleCode",
+          "lineNumber": 311
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "view.put",
+          "lineNumber": 312
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "rule.getRuleName",
+          "lineNumber": 312
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "view.put",
+          "lineNumber": 313
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "rule.getConditionJson",
+          "lineNumber": 313
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "view.put",
+          "lineNumber": 314
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "rule.getSamplingRate",
+          "lineNumber": 314
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "view.put",
+          "lineNumber": 315
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "rule.getTargetModule",
+          "lineNumber": 315
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "view.put",
+          "lineNumber": 316
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "rule.getEffectiveDate",
+          "lineNumber": 316
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "view.put",
+          "lineNumber": 317
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "rule.getExpireDate",
+          "lineNumber": 317
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "view.put",
+          "lineNumber": 318
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "rule.getPriority",
+          "lineNumber": 318
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "view.put",
+          "lineNumber": 319
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "rule.getStatus",
+          "lineNumber": 319
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "view.put",
+          "lineNumber": 320
+        },
+        {
+          "caller": "toRuleView",
+          "callee": "rule.getIsAutoExtract",
+          "lineNumber": 320
+        },
+        {
+          "caller": "toTask",
+          "callee": "payload.get",
+          "lineNumber": 328
+        },
+        {
+          "caller": "toTask",
+          "callee": "new SamplingTask",
+          "lineNumber": 329
+        },
+        {
+          "caller": "toTask",
+          "callee": "str",
+          "lineNumber": 331
+        },
+        {
+          "caller": "toTask",
+          "callee": "payload.get",
+          "lineNumber": 331
+        },
+        {
+          "caller": "toTask",
+          "callee": "str",
+          "lineNumber": 332
+        },
+        {
+          "caller": "toTask",
+          "callee": "payload.get",
+          "lineNumber": 332
+        },
+        {
+          "caller": "toTask",
+          "callee": "str",
+          "lineNumber": 333
+        },
+        {
+          "caller": "toTask",
+          "callee": "payload.get",
+          "lineNumber": 333
+        },
+        {
+          "caller": "toTask",
+          "callee": "toLong",
+          "lineNumber": 334
+        },
+        {
+          "caller": "toTask",
+          "callee": "payload.get",
+          "lineNumber": 334
+        },
+        {
+          "caller": "toTask",
+          "callee": "decimal",
+          "lineNumber": 335
+        },
+        {
+          "caller": "toTask",
+          "callee": "payload.get",
+          "lineNumber": 335
+        },
+        {
+          "caller": "toTask",
+          "callee": "str",
+          "lineNumber": 336
+        },
+        {
+          "caller": "toTask",
+          "callee": "payload.get",
+          "lineNumber": 336
+        },
+        {
+          "caller": "toTask",
+          "callee": "str",
+          "lineNumber": 337
+        },
+        {
+          "caller": "toTask",
+          "callee": "payload.get",
+          "lineNumber": 337
+        },
+        {
+          "caller": "toTask",
+          "callee": "integer",
+          "lineNumber": 338
+        },
+        {
+          "caller": "toTask",
+          "callee": "payload.get",
+          "lineNumber": 338
+        },
+        {
+          "caller": "toTask",
+          "callee": "decimal",
+          "lineNumber": 339
+        },
+        {
+          "caller": "toTask",
+          "callee": "payload.get",
+          "lineNumber": 339
+        },
+        {
+          "caller": "toTask",
+          "callee": "str",
+          "lineNumber": 340
+        },
+        {
+          "caller": "toTask",
+          "callee": "payload.get",
+          "lineNumber": 340
+        },
+        {
+          "caller": "toTask",
+          "callee": "list.stream().map(Object::toString).toList",
+          "lineNumber": 342
+        },
+        {
+          "caller": "toTask",
+          "callee": "list.stream().map",
+          "lineNumber": 342
+        },
+        {
+          "caller": "toTask",
+          "callee": "list.stream",
+          "lineNumber": 342
+        },
+        {
+          "caller": "toTask",
+          "callee": "List.of",
+          "lineNumber": 343
+        },
+        {
+          "caller": "toTask",
+          "callee": "valueOrDefault",
+          "lineNumber": 344
+        },
+        {
+          "caller": "toTask",
+          "callee": "str",
+          "lineNumber": 344
+        },
+        {
+          "caller": "toTask",
+          "callee": "payload.get",
+          "lineNumber": 344
+        },
+        {
+          "caller": "toTask",
+          "callee": "date",
+          "lineNumber": 345
+        },
+        {
+          "caller": "toTask",
+          "callee": "payload.get",
+          "lineNumber": 345
+        },
+        {
+          "caller": "toTask",
+          "callee": "dateTime",
+          "lineNumber": 346
+        },
+        {
+          "caller": "toTask",
+          "callee": "payload.get",
+          "lineNumber": 346
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 354
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 355
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getId",
+          "lineNumber": 355
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 356
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getTaskId",
+          "lineNumber": 356
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 357
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getBizNo",
+          "lineNumber": 357
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 358
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getBizType",
+          "lineNumber": 358
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 359
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getCustomerId",
+          "lineNumber": 359
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 360
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getAmount",
+          "lineNumber": 360
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 361
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getCurrency",
+          "lineNumber": 361
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 362
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getCountryCode",
+          "lineNumber": 362
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 363
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getAccountAgeDays",
+          "lineNumber": 363
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 364
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getSamplingRate",
+          "lineNumber": 364
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 365
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getReason",
+          "lineNumber": 365
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 366
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getMatchedRules",
+          "lineNumber": 366
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 367
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getStatus",
+          "lineNumber": 367
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 368
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getBusinessDate",
+          "lineNumber": 368
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 369
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getCreatedAt",
+          "lineNumber": 369
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 370
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getCompletedAt",
+          "lineNumber": 370
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 371
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getReviewResult",
+          "lineNumber": 371
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "view.put",
+          "lineNumber": 372
+        },
+        {
+          "caller": "toTaskView",
+          "callee": "task.getReviewComment",
+          "lineNumber": 372
+        },
+        {
+          "caller": "valueOrDefault",
+          "callee": "value.isBlank",
+          "lineNumber": 387
+        },
+        {
+          "caller": "valueOrDefault",
+          "callee": "defaultValue.toString",
+          "lineNumber": 388
+        },
+        {
+          "caller": "decimal",
+          "callee": "value.toString().isBlank",
+          "lineNumber": 394
+        },
+        {
+          "caller": "decimal",
+          "callee": "value.toString",
+          "lineNumber": 394
+        },
+        {
+          "caller": "decimal",
+          "callee": "new BigDecimal",
+          "lineNumber": 394
+        },
+        {
+          "caller": "decimal",
+          "callee": "value.toString",
+          "lineNumber": 394
+        },
+        {
+          "caller": "toLong",
+          "callee": "value.toString().isBlank",
+          "lineNumber": 398
+        },
+        {
+          "caller": "toLong",
+          "callee": "value.toString",
+          "lineNumber": 398
+        },
+        {
+          "caller": "toLong",
+          "callee": "Long.valueOf",
+          "lineNumber": 398
+        },
+        {
+          "caller": "toLong",
+          "callee": "value.toString",
+          "lineNumber": 398
+        },
+        {
+          "caller": "integer",
+          "callee": "value.toString().isBlank",
+          "lineNumber": 402
+        },
+        {
+          "caller": "integer",
+          "callee": "value.toString",
+          "lineNumber": 402
+        },
+        {
+          "caller": "integer",
+          "callee": "Integer.valueOf",
+          "lineNumber": 402
+        },
+        {
+          "caller": "integer",
+          "callee": "value.toString",
+          "lineNumber": 402
+        },
+        {
+          "caller": "str",
+          "callee": "value.toString",
+          "lineNumber": 406
+        },
+        {
+          "caller": "date",
+          "callee": "value.toString().isBlank",
+          "lineNumber": 410
+        },
+        {
+          "caller": "date",
+          "callee": "value.toString",
+          "lineNumber": 410
+        },
+        {
+          "caller": "date",
+          "callee": "LocalDate.parse",
+          "lineNumber": 410
+        },
+        {
+          "caller": "date",
+          "callee": "value.toString",
+          "lineNumber": 410
+        },
+        {
+          "caller": "dateTime",
+          "callee": "value.toString().isBlank",
+          "lineNumber": 414
+        },
+        {
+          "caller": "dateTime",
+          "callee": "value.toString",
+          "lineNumber": 414
+        },
+        {
+          "caller": "dateTime",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 414
+        },
+        {
+          "caller": "dateTime",
+          "callee": "LocalDateTime.parse",
+          "lineNumber": 414
+        },
+        {
+          "caller": "dateTime",
+          "callee": "value.toString",
+          "lineNumber": 414
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 11,
+        "functionCount": 23,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/application/service/SamplingRuleEngine.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 299,
+      "nonEmptyLines": 265,
+      "functions": [
+        {
+          "name": "evaluateTransaction",
+          "startLine": 53,
+          "endLine": 56,
+          "params": [
+            "customerId",
+            "bizType",
+            "amount",
+            "currency",
+            "countryCode"
+          ]
+        },
+        {
+          "name": "evaluateTransaction",
+          "startLine": 62,
+          "endLine": 73,
+          "params": [
+            "customerId",
+            "bizType",
+            "amount",
+            "currency",
+            "countryCode",
+            "accountAgeDays"
+          ]
+        },
+        {
+          "name": "generateSamplingTasks",
+          "startLine": 83,
+          "endLine": 123,
+          "params": [
+            "date"
+          ]
+        },
+        {
+          "name": "evaluateMatchedRules",
+          "startLine": 125,
+          "endLine": 152,
+          "params": [
+            "customerId",
+            "bizType",
+            "amount",
+            "currency",
+            "countryCode",
+            "accountAgeDays",
+            "autoExtractOnly"
+          ]
+        },
+        {
+          "name": "parseCondition",
+          "startLine": 154,
+          "endLine": 164,
+          "params": [
+            "rule"
+          ]
+        },
+        {
+          "name": "moduleMatches",
+          "startLine": 166,
+          "endLine": 168,
+          "params": [
+            "rule",
+            "bizType"
+          ]
+        },
+        {
+          "name": "conditionMatches",
+          "startLine": 170,
+          "endLine": 203,
+          "params": [
+            "condition",
+            "customerId",
+            "amount",
+            "currency",
+            "countryCode",
+            "accountAgeDays"
+          ]
+        },
+        {
+          "name": "matchesOne",
+          "startLine": 205,
+          "endLine": 218,
+          "params": [
+            "expected",
+            "actual"
+          ]
+        },
+        {
+          "name": "shouldSample",
+          "startLine": 220,
+          "endLine": 226,
+          "params": [
+            "tx",
+            "rate"
+          ]
+        },
+        {
+          "name": "buildReason",
+          "startLine": 228,
+          "endLine": 236,
+          "params": [
+            "rules"
+          ]
+        },
+        {
+          "name": "buildCandidateTransactions",
+          "startLine": 238,
+          "endLine": 253,
+          "params": [
+            "date"
+          ]
+        },
+        {
+          "name": "tx",
+          "startLine": 255,
+          "endLine": 266,
+          "params": [
+            "date",
+            "index",
+            "bizType",
+            "customerId",
+            "currency",
+            "countryCode",
+            "amount",
+            "accountAgeDays"
+          ]
+        },
+        {
+          "name": "toBigDecimal",
+          "startLine": 268,
+          "endLine": 273,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "toLong",
+          "startLine": 275,
+          "endLine": 280,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "toInteger",
+          "startLine": 282,
+          "endLine": 287,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "asString",
+          "startLine": 289,
+          "endLine": 291,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "isBlank",
+          "startLine": 293,
+          "endLine": 295,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SamplingRuleEngine",
+          "startLine": 30,
+          "endLine": 299,
+          "methods": [
+            "evaluateTransaction",
+            "evaluateTransaction",
+            "generateSamplingTasks",
+            "evaluateMatchedRules",
+            "parseCondition",
+            "moduleMatches",
+            "conditionMatches",
+            "matchesOne",
+            "shouldSample",
+            "buildReason",
+            "buildCandidateTransactions",
+            "tx",
+            "toBigDecimal",
+            "toLong",
+            "toInteger",
+            "asString",
+            "isBlank"
+          ],
+          "properties": [
+            "CONDITION_TYPE",
+            "ruleRepository",
+            "objectMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "evaluateTransaction",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "evaluateTransaction",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "generateSamplingTasks",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "SamplingRuleEngine",
+          "line": 30,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "evaluateTransaction",
+          "callee": "evaluateTransaction",
+          "lineNumber": 55
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "log.info",
+          "lineNumber": 64
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "evaluateMatchedRules",
+          "lineNumber": 68
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "log.info",
+          "lineNumber": 69
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "result.rules().stream().map(SamplingRule::getRuleCode).toList",
+          "lineNumber": 70
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "result.rules().stream().map",
+          "lineNumber": 70
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "result.rules().stream",
+          "lineNumber": 70
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "result.rules",
+          "lineNumber": 70
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "result.rate",
+          "lineNumber": 70
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "result.rules().stream().map(SamplingRule::getRuleCode).toList",
+          "lineNumber": 71
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "result.rules().stream().map",
+          "lineNumber": 71
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "result.rules().stream",
+          "lineNumber": 71
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "result.rules",
+          "lineNumber": 71
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "result.rate",
+          "lineNumber": 71
+        },
+        {
+          "caller": "evaluateTransaction",
+          "callee": "result.rate",
+          "lineNumber": 72
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "log.info",
+          "lineNumber": 84
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "new ArrayList<>",
+          "lineNumber": 85
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "buildCandidateTransactions",
+          "lineNumber": 87
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "toLong",
+          "lineNumber": 88
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "tx.get",
+          "lineNumber": 88
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "asString",
+          "lineNumber": 89
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "tx.get",
+          "lineNumber": 89
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "toBigDecimal",
+          "lineNumber": 90
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "tx.get",
+          "lineNumber": 90
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "asString",
+          "lineNumber": 91
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "tx.get",
+          "lineNumber": 91
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "asString",
+          "lineNumber": 92
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "tx.get",
+          "lineNumber": 92
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "toInteger",
+          "lineNumber": 93
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "tx.get",
+          "lineNumber": 93
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "evaluateMatchedRules",
+          "lineNumber": 94
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "result.rate().compareTo",
+          "lineNumber": 96
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "result.rate",
+          "lineNumber": 96
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "shouldSample",
+          "lineNumber": 96
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "result.rate",
+          "lineNumber": 96
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "log.debug",
+          "lineNumber": 97
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "tx.get",
+          "lineNumber": 98
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "result.rate",
+          "lineNumber": 98
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "tx.get",
+          "lineNumber": 98
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "result.rate",
+          "lineNumber": 98
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 102
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "task.put",
+          "lineNumber": 103
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "date.toString().replace",
+          "lineNumber": 103
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "date.toString",
+          "lineNumber": 103
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "tx.get",
+          "lineNumber": 103
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "task.put",
+          "lineNumber": 104
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "tx.get",
+          "lineNumber": 104
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "task.put",
+          "lineNumber": 105
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "task.put",
+          "lineNumber": 106
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "task.put",
+          "lineNumber": 107
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "task.put",
+          "lineNumber": 108
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "task.put",
+          "lineNumber": 109
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "task.put",
+          "lineNumber": 110
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "task.put",
+          "lineNumber": 111
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "result.rate",
+          "lineNumber": 111
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "task.put",
+          "lineNumber": 112
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "buildReason",
+          "lineNumber": 112
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "result.rules",
+          "lineNumber": 112
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "task.put",
+          "lineNumber": 113
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "result.rules().stream().map(SamplingRule::getRuleCode).toList",
+          "lineNumber": 113
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "result.rules().stream().map",
+          "lineNumber": 113
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "result.rules().stream",
+          "lineNumber": 113
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "result.rules",
+          "lineNumber": 113
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "task.put",
+          "lineNumber": 114
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "task.put",
+          "lineNumber": 115
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "date.toString",
+          "lineNumber": 115
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "task.put",
+          "lineNumber": 116
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "LocalDateTime.now().toString",
+          "lineNumber": 116
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 116
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "tasks.add",
+          "lineNumber": 117
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "log.info",
+          "lineNumber": 120
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "tasks.size",
+          "lineNumber": 121
+        },
+        {
+          "caller": "generateSamplingTasks",
+          "callee": "tasks.size",
+          "lineNumber": 121
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "new ArrayList<>",
+          "lineNumber": 128
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "ruleRepository.findAllActive().stream()\n                .filter(rule -> !autoExtractOnly || Boolean.TRUE.equals(rule.getIsAutoExtract()))\n                .sorted(Comparator.comparing(SamplingRule::getPriority,\n                        Comparator.nullsLast(Comparator.reverseOrder()))).toList",
+          "lineNumber": 131
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "ruleRepository.findAllActive().stream()\n                .filter(rule -> !autoExtractOnly || Boolean.TRUE.equals(rule.getIsAutoExtract())).sorted",
+          "lineNumber": 131
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "ruleRepository.findAllActive().stream().filter",
+          "lineNumber": 131
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "ruleRepository.findAllActive().stream",
+          "lineNumber": 131
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "ruleRepository.findAllActive",
+          "lineNumber": 131
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "Boolean.TRUE.equals",
+          "lineNumber": 132
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "rule.getIsAutoExtract",
+          "lineNumber": 132
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "Comparator.comparing",
+          "lineNumber": 133
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "Comparator.nullsLast",
+          "lineNumber": 134
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "Comparator.reverseOrder",
+          "lineNumber": 134
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "parseCondition",
+          "lineNumber": 140
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "moduleMatches",
+          "lineNumber": 141
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "conditionMatches",
+          "lineNumber": 142
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "matched.add",
+          "lineNumber": 145
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "rule.getSamplingRate",
+          "lineNumber": 146
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "rule.getSamplingRate().compareTo",
+          "lineNumber": 146
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "rule.getSamplingRate",
+          "lineNumber": 146
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "rule.getSamplingRate",
+          "lineNumber": 147
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "new MatchResult",
+          "lineNumber": 151
+        },
+        {
+          "caller": "evaluateMatchedRules",
+          "callee": "maxRate.setScale",
+          "lineNumber": 151
+        },
+        {
+          "caller": "parseCondition",
+          "callee": "rule.getConditionJson",
+          "lineNumber": 156
+        },
+        {
+          "caller": "parseCondition",
+          "callee": "rule.getConditionJson().isBlank",
+          "lineNumber": 156
+        },
+        {
+          "caller": "parseCondition",
+          "callee": "rule.getConditionJson",
+          "lineNumber": 156
+        },
+        {
+          "caller": "parseCondition",
+          "callee": "objectMapper.readValue",
+          "lineNumber": 157
+        },
+        {
+          "caller": "parseCondition",
+          "callee": "rule.getConditionJson",
+          "lineNumber": 157
+        },
+        {
+          "caller": "parseCondition",
+          "callee": "log.warn",
+          "lineNumber": 160
+        },
+        {
+          "caller": "parseCondition",
+          "callee": "rule.getRuleCode",
+          "lineNumber": 161
+        },
+        {
+          "caller": "parseCondition",
+          "callee": "rule.getConditionJson",
+          "lineNumber": 161
+        },
+        {
+          "caller": "parseCondition",
+          "callee": "rule.getRuleCode",
+          "lineNumber": 161
+        },
+        {
+          "caller": "parseCondition",
+          "callee": "rule.getConditionJson",
+          "lineNumber": 161
+        },
+        {
+          "caller": "parseCondition",
+          "callee": "Map.of",
+          "lineNumber": 163
+        },
+        {
+          "caller": "moduleMatches",
+          "callee": "isBlank",
+          "lineNumber": 167
+        },
+        {
+          "caller": "moduleMatches",
+          "callee": "rule.getTargetModule",
+          "lineNumber": 167
+        },
+        {
+          "caller": "moduleMatches",
+          "callee": "isBlank",
+          "lineNumber": 167
+        },
+        {
+          "caller": "moduleMatches",
+          "callee": "rule.getTargetModule().equalsIgnoreCase",
+          "lineNumber": 167
+        },
+        {
+          "caller": "moduleMatches",
+          "callee": "rule.getTargetModule",
+          "lineNumber": 167
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "condition.isEmpty",
+          "lineNumber": 172
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "toBigDecimal",
+          "lineNumber": 175
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "condition.get",
+          "lineNumber": 175
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "amount.compareTo",
+          "lineNumber": 176
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "toBigDecimal",
+          "lineNumber": 179
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "condition.get",
+          "lineNumber": 179
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "amount.compareTo",
+          "lineNumber": 180
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "matchesOne",
+          "lineNumber": 183
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "condition.get",
+          "lineNumber": 183
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "matchesOne",
+          "lineNumber": 183
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "condition.get",
+          "lineNumber": 183
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "matchesOne",
+          "lineNumber": 186
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "condition.get",
+          "lineNumber": 186
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "matchesOne",
+          "lineNumber": 186
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "condition.get",
+          "lineNumber": 186
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "toLong",
+          "lineNumber": 189
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "condition.get",
+          "lineNumber": 189
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "toLong",
+          "lineNumber": 193
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "condition.get",
+          "lineNumber": 193
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "toInteger",
+          "lineNumber": 197
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "condition.get",
+          "lineNumber": 197
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "toInteger",
+          "lineNumber": 201
+        },
+        {
+          "caller": "conditionMatches",
+          "callee": "condition.get",
+          "lineNumber": 201
+        },
+        {
+          "caller": "matchesOne",
+          "callee": "isBlank",
+          "lineNumber": 206
+        },
+        {
+          "caller": "matchesOne",
+          "callee": "actual.equalsIgnoreCase",
+          "lineNumber": 211
+        },
+        {
+          "caller": "matchesOne",
+          "callee": "Objects.toString",
+          "lineNumber": 211
+        },
+        {
+          "caller": "matchesOne",
+          "callee": "actual.equalsIgnoreCase",
+          "lineNumber": 217
+        },
+        {
+          "caller": "matchesOne",
+          "callee": "Objects.toString",
+          "lineNumber": 217
+        },
+        {
+          "caller": "shouldSample",
+          "callee": "tx.get",
+          "lineNumber": 223
+        },
+        {
+          "caller": "shouldSample",
+          "callee": "tx.get",
+          "lineNumber": 223
+        },
+        {
+          "caller": "shouldSample",
+          "callee": "tx.get",
+          "lineNumber": 223
+        },
+        {
+          "caller": "shouldSample",
+          "callee": "Math.floorMod",
+          "lineNumber": 224
+        },
+        {
+          "caller": "shouldSample",
+          "callee": "seed.hashCode",
+          "lineNumber": 224
+        },
+        {
+          "caller": "shouldSample",
+          "callee": "rate.intValue",
+          "lineNumber": 225
+        },
+        {
+          "caller": "buildReason",
+          "callee": "rules.isEmpty",
+          "lineNumber": 229
+        },
+        {
+          "caller": "buildReason",
+          "callee": "rules.stream()\n                .map(rule -> rule.getRuleName() + \"(\" + rule.getRuleCode() + \")\")\n                .toList().toString",
+          "lineNumber": 232
+        },
+        {
+          "caller": "buildReason",
+          "callee": "rules.stream()\n                .map(rule -> rule.getRuleName() + \"(\" + rule.getRuleCode() + \")\").toList",
+          "lineNumber": 232
+        },
+        {
+          "caller": "buildReason",
+          "callee": "rules.stream().map",
+          "lineNumber": 232
+        },
+        {
+          "caller": "buildReason",
+          "callee": "rules.stream",
+          "lineNumber": 232
+        },
+        {
+          "caller": "buildReason",
+          "callee": "rule.getRuleName",
+          "lineNumber": 233
+        },
+        {
+          "caller": "buildReason",
+          "callee": "rule.getRuleCode",
+          "lineNumber": 233
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "new ArrayList<>",
+          "lineNumber": 241
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "rows.add",
+          "lineNumber": 242
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "tx",
+          "lineNumber": 242
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "rows.add",
+          "lineNumber": 243
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "tx",
+          "lineNumber": 243
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "rows.add",
+          "lineNumber": 244
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "tx",
+          "lineNumber": 244
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "rows.add",
+          "lineNumber": 245
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "tx",
+          "lineNumber": 245
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "rows.add",
+          "lineNumber": 246
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "tx",
+          "lineNumber": 246
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "rows.add",
+          "lineNumber": 247
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "tx",
+          "lineNumber": 247
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "rows.add",
+          "lineNumber": 248
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "tx",
+          "lineNumber": 248
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "rows.add",
+          "lineNumber": 249
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "tx",
+          "lineNumber": 249
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "rows.add",
+          "lineNumber": 250
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "tx",
+          "lineNumber": 250
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "rows.add",
+          "lineNumber": 251
+        },
+        {
+          "caller": "buildCandidateTransactions",
+          "callee": "tx",
+          "lineNumber": 251
+        },
+        {
+          "caller": "tx",
+          "callee": "new HashMap<>",
+          "lineNumber": 257
+        },
+        {
+          "caller": "tx",
+          "callee": "tx.put",
+          "lineNumber": 258
+        },
+        {
+          "caller": "tx",
+          "callee": "date.toString().replace",
+          "lineNumber": 258
+        },
+        {
+          "caller": "tx",
+          "callee": "date.toString",
+          "lineNumber": 258
+        },
+        {
+          "caller": "tx",
+          "callee": "String.format",
+          "lineNumber": 258
+        },
+        {
+          "caller": "tx",
+          "callee": "tx.put",
+          "lineNumber": 259
+        },
+        {
+          "caller": "tx",
+          "callee": "tx.put",
+          "lineNumber": 260
+        },
+        {
+          "caller": "tx",
+          "callee": "tx.put",
+          "lineNumber": 261
+        },
+        {
+          "caller": "tx",
+          "callee": "tx.put",
+          "lineNumber": 262
+        },
+        {
+          "caller": "tx",
+          "callee": "tx.put",
+          "lineNumber": 263
+        },
+        {
+          "caller": "tx",
+          "callee": "new BigDecimal",
+          "lineNumber": 263
+        },
+        {
+          "caller": "tx",
+          "callee": "tx.put",
+          "lineNumber": 264
+        },
+        {
+          "caller": "toBigDecimal",
+          "callee": "value.toString().isBlank",
+          "lineNumber": 269
+        },
+        {
+          "caller": "toBigDecimal",
+          "callee": "value.toString",
+          "lineNumber": 269
+        },
+        {
+          "caller": "toBigDecimal",
+          "callee": "new BigDecimal",
+          "lineNumber": 272
+        },
+        {
+          "caller": "toBigDecimal",
+          "callee": "value.toString",
+          "lineNumber": 272
+        },
+        {
+          "caller": "toLong",
+          "callee": "value.toString().isBlank",
+          "lineNumber": 276
+        },
+        {
+          "caller": "toLong",
+          "callee": "value.toString",
+          "lineNumber": 276
+        },
+        {
+          "caller": "toLong",
+          "callee": "Long.valueOf",
+          "lineNumber": 279
+        },
+        {
+          "caller": "toLong",
+          "callee": "value.toString",
+          "lineNumber": 279
+        },
+        {
+          "caller": "toInteger",
+          "callee": "value.toString().isBlank",
+          "lineNumber": 283
+        },
+        {
+          "caller": "toInteger",
+          "callee": "value.toString",
+          "lineNumber": 283
+        },
+        {
+          "caller": "toInteger",
+          "callee": "Integer.valueOf",
+          "lineNumber": 286
+        },
+        {
+          "caller": "toInteger",
+          "callee": "value.toString",
+          "lineNumber": 286
+        },
+        {
+          "caller": "asString",
+          "callee": "value.toString",
+          "lineNumber": 290
+        },
+        {
+          "caller": "isBlank",
+          "callee": "value.isBlank",
+          "lineNumber": 294
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 4,
+        "functionCount": 17,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-risk/src/test/java/com/forex/risk/application/service/SamplingRuleEngineTest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 142,
+      "nonEmptyLines": 114,
+      "functions": [
+        {
+          "name": "setUp",
+          "startLine": 29,
+          "endLine": 33,
+          "params": []
+        },
+        {
+          "name": "testEvaluateTransaction_NoRules",
+          "startLine": 35,
+          "endLine": 44,
+          "params": []
+        },
+        {
+          "name": "testEvaluateTransaction_WithSamplingRules",
+          "startLine": 46,
+          "endLine": 57,
+          "params": []
+        },
+        {
+          "name": "testEvaluateTransaction_AccountAgeCondition",
+          "startLine": 59,
+          "endLine": 70,
+          "params": []
+        },
+        {
+          "name": "testGenerateSamplingTasks",
+          "startLine": 72,
+          "endLine": 86,
+          "params": []
+        },
+        {
+          "name": "createRule",
+          "startLine": 88,
+          "endLine": 102,
+          "params": [
+            "id",
+            "code",
+            "name",
+            "condition",
+            "rate",
+            "module"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SamplingRuleEngineTest",
+          "startLine": 24,
+          "endLine": 142,
+          "methods": [
+            "setUp",
+            "testEvaluateTransaction_NoRules",
+            "testEvaluateTransaction_WithSamplingRules",
+            "testEvaluateTransaction_AccountAgeCondition",
+            "testGenerateSamplingTasks",
+            "createRule"
+          ],
+          "properties": [
+            "ruleRepository",
+            "samplingRuleEngine"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "setUp",
+          "callee": "new StubSamplingRuleRepository",
+          "lineNumber": 31
+        },
+        {
+          "caller": "setUp",
+          "callee": "new SamplingRuleEngine",
+          "lineNumber": 32
+        },
+        {
+          "caller": "setUp",
+          "callee": "new ObjectMapper",
+          "lineNumber": 32
+        },
+        {
+          "caller": "testEvaluateTransaction_NoRules",
+          "callee": "List.of",
+          "lineNumber": 38
+        },
+        {
+          "caller": "testEvaluateTransaction_NoRules",
+          "callee": "samplingRuleEngine.evaluateTransaction",
+          "lineNumber": 40
+        },
+        {
+          "caller": "testEvaluateTransaction_NoRules",
+          "callee": "new BigDecimal",
+          "lineNumber": 41
+        },
+        {
+          "caller": "testEvaluateTransaction_NoRules",
+          "callee": "assertEquals",
+          "lineNumber": 43
+        },
+        {
+          "caller": "testEvaluateTransaction_NoRules",
+          "callee": "new BigDecimal",
+          "lineNumber": 43
+        },
+        {
+          "caller": "testEvaluateTransaction_WithSamplingRules",
+          "callee": "createRule",
+          "lineNumber": 49
+        },
+        {
+          "caller": "testEvaluateTransaction_WithSamplingRules",
+          "callee": "createRule",
+          "lineNumber": 50
+        },
+        {
+          "caller": "testEvaluateTransaction_WithSamplingRules",
+          "callee": "List.of",
+          "lineNumber": 51
+        },
+        {
+          "caller": "testEvaluateTransaction_WithSamplingRules",
+          "callee": "samplingRuleEngine.evaluateTransaction",
+          "lineNumber": 53
+        },
+        {
+          "caller": "testEvaluateTransaction_WithSamplingRules",
+          "callee": "new BigDecimal",
+          "lineNumber": 54
+        },
+        {
+          "caller": "testEvaluateTransaction_WithSamplingRules",
+          "callee": "assertEquals",
+          "lineNumber": 56
+        },
+        {
+          "caller": "testEvaluateTransaction_WithSamplingRules",
+          "callee": "new BigDecimal",
+          "lineNumber": 56
+        },
+        {
+          "caller": "testEvaluateTransaction_AccountAgeCondition",
+          "callee": "createRule",
+          "lineNumber": 62
+        },
+        {
+          "caller": "testEvaluateTransaction_AccountAgeCondition",
+          "callee": "List.of",
+          "lineNumber": 64
+        },
+        {
+          "caller": "testEvaluateTransaction_AccountAgeCondition",
+          "callee": "samplingRuleEngine.evaluateTransaction",
+          "lineNumber": 66
+        },
+        {
+          "caller": "testEvaluateTransaction_AccountAgeCondition",
+          "callee": "new BigDecimal",
+          "lineNumber": 67
+        },
+        {
+          "caller": "testEvaluateTransaction_AccountAgeCondition",
+          "callee": "assertEquals",
+          "lineNumber": 69
+        },
+        {
+          "caller": "testEvaluateTransaction_AccountAgeCondition",
+          "callee": "new BigDecimal",
+          "lineNumber": 69
+        },
+        {
+          "caller": "testGenerateSamplingTasks",
+          "callee": "createRule",
+          "lineNumber": 75
+        },
+        {
+          "caller": "testGenerateSamplingTasks",
+          "callee": "createRule",
+          "lineNumber": 77
+        },
+        {
+          "caller": "testGenerateSamplingTasks",
+          "callee": "List.of",
+          "lineNumber": 79
+        },
+        {
+          "caller": "testGenerateSamplingTasks",
+          "callee": "samplingRuleEngine.generateSamplingTasks",
+          "lineNumber": 81
+        },
+        {
+          "caller": "testGenerateSamplingTasks",
+          "callee": "LocalDate.of",
+          "lineNumber": 81
+        },
+        {
+          "caller": "testGenerateSamplingTasks",
+          "callee": "assertEquals",
+          "lineNumber": 83
+        },
+        {
+          "caller": "testGenerateSamplingTasks",
+          "callee": "tasks.size",
+          "lineNumber": 83
+        },
+        {
+          "caller": "testGenerateSamplingTasks",
+          "callee": "assertEquals",
+          "lineNumber": 84
+        },
+        {
+          "caller": "testGenerateSamplingTasks",
+          "callee": "tasks.get(0).get",
+          "lineNumber": 84
+        },
+        {
+          "caller": "testGenerateSamplingTasks",
+          "callee": "tasks.get",
+          "lineNumber": 84
+        },
+        {
+          "caller": "testGenerateSamplingTasks",
+          "callee": "assertFalse",
+          "lineNumber": 85
+        },
+        {
+          "caller": "testGenerateSamplingTasks",
+          "callee": "((List<?>) tasks.get(0).get(\"matchedRules\")).isEmpty",
+          "lineNumber": 85
+        },
+        {
+          "caller": "testGenerateSamplingTasks",
+          "callee": "tasks.get(0).get",
+          "lineNumber": 85
+        },
+        {
+          "caller": "testGenerateSamplingTasks",
+          "callee": "tasks.get",
+          "lineNumber": 85
+        },
+        {
+          "caller": "createRule",
+          "callee": "new SamplingRule",
+          "lineNumber": 89
+        },
+        {
+          "caller": "createRule",
+          "callee": "new BigDecimal",
+          "lineNumber": 94
+        },
+        {
+          "caller": "createRule",
+          "callee": "LocalDate.of",
+          "lineNumber": 96
+        },
+        {
+          "caller": "findById",
+          "callee": "rules.stream().filter(rule -> rule.getId().equals(id)).findFirst",
+          "lineNumber": 119
+        },
+        {
+          "caller": "findById",
+          "callee": "rules.stream().filter",
+          "lineNumber": 119
+        },
+        {
+          "caller": "findById",
+          "callee": "rules.stream",
+          "lineNumber": 119
+        },
+        {
+          "caller": "findById",
+          "callee": "rule.getId().equals",
+          "lineNumber": 119
+        },
+        {
+          "caller": "findById",
+          "callee": "rule.getId",
+          "lineNumber": 119
+        },
+        {
+          "caller": "findByRuleCode",
+          "callee": "rules.stream().filter(rule -> rule.getRuleCode().equals(ruleCode)).findFirst",
+          "lineNumber": 124
+        },
+        {
+          "caller": "findByRuleCode",
+          "callee": "rules.stream().filter",
+          "lineNumber": 124
+        },
+        {
+          "caller": "findByRuleCode",
+          "callee": "rules.stream",
+          "lineNumber": 124
+        },
+        {
+          "caller": "findByRuleCode",
+          "callee": "rule.getRuleCode().equals",
+          "lineNumber": 124
+        },
+        {
+          "caller": "findByRuleCode",
+          "callee": "rule.getRuleCode",
+          "lineNumber": 124
+        },
+        {
+          "caller": "deleteById",
+          "callee": "rules.stream().filter(rule -> !rule.getId().equals(id)).toList",
+          "lineNumber": 139
+        },
+        {
+          "caller": "deleteById",
+          "callee": "rules.stream().filter",
+          "lineNumber": 139
+        },
+        {
+          "caller": "deleteById",
+          "callee": "rules.stream",
+          "lineNumber": 139
+        },
+        {
+          "caller": "deleteById",
+          "callee": "rule.getId().equals",
+          "lineNumber": 139
+        },
+        {
+          "caller": "deleteById",
+          "callee": "rule.getId",
+          "lineNumber": 139
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    }
+  ]
+}

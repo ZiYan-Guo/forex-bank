@@ -1,0 +1,344 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "type": "file",
+      "name": "GlobalExceptionHandler.java",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "summary": "提供全局 REST 异常处理，将业务异常、参数错误、请求体解析失败、方法不支持、数据冲突和未知异常统一转换为 R 响应。每个处理器会记录 traceId，便于跨服务问题追踪。",
+      "tags": [
+        "api-handler",
+        "exception-handling",
+        "统一响应",
+        "trace-id",
+        "spring-advice"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "@RestControllerAdvice 与多个 @ExceptionHandler 方法组合，集中处理 Spring Web 和业务异常。"
+    },
+    {
+      "id": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "type": "class",
+      "name": "GlobalExceptionHandler",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "lineRange": [
+        19,
+        92
+      ],
+      "summary": "Spring 全局异常处理器，把 Web、业务和数据库异常统一转换为带 traceId 的响应。",
+      "tags": [
+        "api-handler",
+        "exception-handling",
+        "spring-advice",
+        "trace-id"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleBusinessException",
+      "type": "function",
+      "name": "handleBusinessException",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "lineRange": [
+        23,
+        30
+      ],
+      "summary": "处理业务异常，保留业务错误码、消息和 traceId。",
+      "tags": [
+        "exception-handling",
+        "业务异常",
+        "trace-id"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleIllegalArgumentException",
+      "type": "function",
+      "name": "handleIllegalArgumentException",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "lineRange": [
+        32,
+        39
+      ],
+      "summary": "将非法参数异常转换为参数校验失败响应。",
+      "tags": [
+        "exception-handling",
+        "validation",
+        "trace-id"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleValidationException",
+      "type": "function",
+      "name": "handleValidationException",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "lineRange": [
+        41,
+        50
+      ],
+      "summary": "汇总字段校验错误信息，并返回统一参数校验失败响应。",
+      "tags": [
+        "exception-handling",
+        "validation",
+        "spring-web"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleHttpMessageNotReadable",
+      "type": "function",
+      "name": "handleHttpMessageNotReadable",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "lineRange": [
+        52,
+        58
+      ],
+      "summary": "处理请求体解析失败，返回请求格式错误提示。",
+      "tags": [
+        "exception-handling",
+        "request-body",
+        "spring-web"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleMissingParam",
+      "type": "function",
+      "name": "handleMissingParam",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "lineRange": [
+        60,
+        67
+      ],
+      "summary": "处理缺失请求参数异常，并在响应中指出缺少的参数名。",
+      "tags": [
+        "exception-handling",
+        "validation",
+        "spring-web"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleMethodNotSupported",
+      "type": "function",
+      "name": "handleMethodNotSupported",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "lineRange": [
+        69,
+        75
+      ],
+      "summary": "处理不支持的 HTTP 方法并返回 405 语义的统一响应。",
+      "tags": [
+        "exception-handling",
+        "http-method",
+        "spring-web"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleDataIntegrityViolation",
+      "type": "function",
+      "name": "handleDataIntegrityViolation",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "lineRange": [
+        77,
+        83
+      ],
+      "summary": "处理数据库完整性冲突，记录错误并返回业务冲突提示。",
+      "tags": [
+        "exception-handling",
+        "database",
+        "数据冲突"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleException",
+      "type": "function",
+      "name": "handleException",
+      "filePath": "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "lineRange": [
+        85,
+        91
+      ],
+      "summary": "兜底处理未知系统异常，隐藏内部细节并返回系统繁忙提示。",
+      "tags": [
+        "exception-handling",
+        "fallback",
+        "trace-id"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleBusinessException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleIllegalArgumentException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleValidationException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleHttpMessageNotReadable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleMissingParam",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleMethodNotSupported",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleDataIntegrityViolation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleBusinessException",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleIllegalArgumentException",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleValidationException",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleHttpMessageNotReadable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleMissingParam",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleMethodNotSupported",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleDataIntegrityViolation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleException",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java",
+      "target": "class:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleBusinessException",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java:fail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleIllegalArgumentException",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java:fail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleValidationException",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java:fail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/GlobalExceptionHandler.java:handleException",
+      "target": "function:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java:fail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "language": "java",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java",
+      "language": "java",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java",
+      "language": "java",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java",
+      "language": "java",
+      "sizeLines": 209,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "language": "java",
+      "sizeLines": 173,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "language": "java",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "language": "java",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java": [],
+    "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/CollectionController.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RedisLock.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "forex-settlement/src/main/java/com/forex/settlement/adapter/dto/CollectionReq.java",
+      "forex-settlement/src/main/java/com/forex/settlement/adapter/dto/CollectionResp.java",
+      "forex-settlement/src/main/java/com/forex/settlement/application/command/CreateCollectionCmd.java",
+      "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java"
+    ],
+    "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/GuaranteeController.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RedisLock.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "forex-settlement/src/main/java/com/forex/settlement/adapter/dto/GuaranteeReq.java",
+      "forex-settlement/src/main/java/com/forex/settlement/adapter/dto/GuaranteeResp.java",
+      "forex-settlement/src/main/java/com/forex/settlement/application/command/CreateGuaranteeCmd.java",
+      "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java"
+    ],
+    "forex-settlement/src/main/java/com/forex/settlement/adapter/controller/LcController.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RedisLock.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "forex-settlement/src/main/java/com/forex/settlement/adapter/dto/CreateLcReq.java",
+      "forex-settlement/src/main/java/com/forex/settlement/adapter/dto/LcPageQuery.java",
+      "forex-settlement/src/main/java/com/forex/settlement/adapter/dto/LcResp.java",
+      "forex-settlement/src/main/java/com/forex/settlement/application/command/AmendLcCmd.java",
+      "forex-settlement/src/main/java/com/forex/settlement/application/command/CreateLcCmd.java",
+      "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java",
+      "forex-settlement/src/main/java/com/forex/settlement/domain/model/aggregate/LetterOfCredit.java",
+      "forex-settlement/src/main/java/com/forex/settlement/domain/model/query/LcQuery.java"
+    ],
+    "forex-settlement/src/main/java/com/forex/settlement/application/service/SettlementAppService.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RedisLock.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/exception/BusinessException.java",
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/result/ResultCode.java",
+      "forex-settlement/src/main/java/com/forex/settlement/application/command/AmendLcCmd.java",
+      "forex-settlement/src/main/java/com/forex/settlement/application/command/CreateCollectionCmd.java",
+      "forex-settlement/src/main/java/com/forex/settlement/application/command/CreateGuaranteeCmd.java",
+      "forex-settlement/src/main/java/com/forex/settlement/application/command/CreateLcCmd.java",
+      "forex-settlement/src/main/java/com/forex/settlement/domain/model/aggregate/LetterOfCredit.java",
+      "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java",
+      "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java",
+      "forex-settlement/src/main/java/com/forex/settlement/domain/model/query/CollectionQuery.java",
+      "forex-settlement/src/main/java/com/forex/settlement/domain/model/query/GuaranteeQuery.java",
+      "forex-settlement/src/main/java/com/forex/settlement/domain/model/query/LcQuery.java",
+      "forex-settlement/src/main/java/com/forex/settlement/domain/repository/CollectionRepository.java",
+      "forex-settlement/src/main/java/com/forex/settlement/domain/repository/GuaranteeRepository.java",
+      "forex-settlement/src/main/java/com/forex/settlement/domain/repository/LcRepository.java",
+      "forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "forex-settlement/src/main/java/com/forex/settlement/domain/service/LcDomainService.java"
+    ],
+    "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/BankGuarantee.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseEntity.java"
+    ],
+    "forex-settlement/src/main/java/com/forex/settlement/domain/model/entity/DocumentaryCollection.java": [
+      "forex-common/forex-common-base/src/main/java/com/forex/common/base/domain/BaseEntity.java"
+    ]
+  }
+}

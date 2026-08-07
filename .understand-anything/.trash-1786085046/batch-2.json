@@ -1,0 +1,892 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "type": "file",
+      "name": "PaymentController.java",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "summary": "提供跨境支付 REST API，覆盖汇入汇出创建、提交审批、AML 处理、发送、取消、GPI 状态更新以及 SWIFT、IBAN、费用和地址校验。该控制器把适配层 DTO 转换为应用层命令，并将领域聚合映射为统一响应。",
+      "tags": [
+        "api-handler",
+        "跨境支付",
+        "权限控制",
+        "dto-mapping",
+        "幂等控制"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Spring MVC 控制器结合 @RequirePermission、@RedisLock 和 @Idempotent 注解，把支付生命周期操作包裹为受控 HTTP endpoint。"
+    },
+    {
+      "id": "class:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:PaymentController",
+      "type": "class",
+      "name": "PaymentController",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        49,
+        317
+      ],
+      "summary": "跨境支付 API 控制器，集中暴露支付生命周期、批量提交、银行代码校验和费用计算 endpoint。",
+      "tags": [
+        "api-handler",
+        "跨境支付",
+        "spring-mvc",
+        "adapter"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:createOutwardPayment",
+      "type": "function",
+      "name": "createOutwardPayment",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        60,
+        74
+      ],
+      "summary": "创建汇出支付请求，记录关键业务日志，将 CreatePaymentReq 转换为 CreatePaymentCmd 后调用 PaymentAppService 创建领域聚合。",
+      "tags": [
+        "endpoint",
+        "跨境支付",
+        "幂等控制"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:createInwardPayment",
+      "type": "function",
+      "name": "createInwardPayment",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        76,
+        90
+      ],
+      "summary": "创建汇入支付请求，沿用相同命令映射流程并调用应用服务生成汇入支付记录。",
+      "tags": [
+        "endpoint",
+        "跨境支付",
+        "幂等控制"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:getPaymentDetail",
+      "type": "function",
+      "name": "getPaymentDetail",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        92,
+        97
+      ],
+      "summary": "按支付编号查询支付详情，并将 CrossBorderPayment 聚合映射为 PaymentResp。",
+      "tags": [
+        "endpoint",
+        "查询",
+        "response-mapping"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:pageQuery",
+      "type": "function",
+      "name": "pageQuery",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        99,
+        110
+      ],
+      "summary": "将分页查询 DTO 转换为 PaymentQuery，调用应用服务分页检索并组装 PageResp 响应。",
+      "tags": [
+        "endpoint",
+        "pagination",
+        "dto-mapping"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:submitPayment",
+      "type": "function",
+      "name": "submitPayment",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        112,
+        120
+      ],
+      "summary": "提交指定支付单并重新读取详情，返回提交后的最新支付状态。",
+      "tags": [
+        "endpoint",
+        "状态流转",
+        "redis-lock"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:approvePayment",
+      "type": "function",
+      "name": "approvePayment",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        122,
+        130
+      ],
+      "summary": "审批指定支付单并返回审批后的支付详情。",
+      "tags": [
+        "endpoint",
+        "审批",
+        "redis-lock"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:processAmlCheck",
+      "type": "function",
+      "name": "processAmlCheck",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        132,
+        139
+      ],
+      "summary": "接收 AML 检查结果并把通过标记与原因传递给支付应用服务。",
+      "tags": [
+        "endpoint",
+        "aml",
+        "状态流转"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:sendPayment",
+      "type": "function",
+      "name": "sendPayment",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        141,
+        152
+      ],
+      "summary": "发送支付并记录 SWIFT/CIPS 引用信息，使用锁和幂等键保护重复发送。",
+      "tags": [
+        "endpoint",
+        "支付发送",
+        "幂等控制"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:cancelPayment",
+      "type": "function",
+      "name": "cancelPayment",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        154,
+        161
+      ],
+      "summary": "取消指定支付单并记录取消原因。",
+      "tags": [
+        "endpoint",
+        "状态流转",
+        "redis-lock"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:updateGpiStatus",
+      "type": "function",
+      "name": "updateGpiStatus",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        163,
+        170
+      ],
+      "summary": "根据请求体更新支付 GPI 状态和 trackingId，并返回最新支付视图。",
+      "tags": [
+        "endpoint",
+        "gpi",
+        "状态同步"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:toCmd",
+      "type": "function",
+      "name": "toCmd",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        176,
+        200
+      ],
+      "summary": "把创建支付请求中的付款人、收款人、银行、用途、费用承担和日期字段完整复制到 CreatePaymentCmd。",
+      "tags": [
+        "dto-mapping",
+        "adapter",
+        "命令转换"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:batchSubmit",
+      "type": "function",
+      "name": "batchSubmit",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        202,
+        222
+      ],
+      "summary": "将批量请求中的每笔支付转换为命令列表，并调用 BatchPaymentService 执行批量汇款处理。",
+      "tags": [
+        "endpoint",
+        "batch-processing",
+        "幂等控制"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:validateSwift",
+      "type": "function",
+      "name": "validateSwift",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        224,
+        230
+      ],
+      "summary": "调用银行代码校验服务验证 SWIFT/BIC 并返回自动补全结果。",
+      "tags": [
+        "endpoint",
+        "validation",
+        "swift"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:validateIban",
+      "type": "function",
+      "name": "validateIban",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        232,
+        237
+      ],
+      "summary": "调用银行代码校验服务验证 IBAN 并返回校验状态。",
+      "tags": [
+        "endpoint",
+        "validation",
+        "iban"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:calculateFee",
+      "type": "function",
+      "name": "calculateFee",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        239,
+        244
+      ],
+      "summary": "根据渠道、费用承担方式和金额调用应用服务计算跨境支付费用。",
+      "tags": [
+        "endpoint",
+        "fee-calculation",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:validateAddress",
+      "type": "function",
+      "name": "validateAddress",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        246,
+        259
+      ],
+      "summary": "校验结构化地址中的国家、城市和街道或楼号字段，返回缺失字段列表与中文提示。",
+      "tags": [
+        "endpoint",
+        "validation",
+        "地址校验"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:toPaymentQuery",
+      "type": "function",
+      "name": "toPaymentQuery",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        263,
+        278
+      ],
+      "summary": "把分页查询请求映射为领域查询对象，保留支付编号、客户、状态、币种和日期区间等筛选项。",
+      "tags": [
+        "dto-mapping",
+        "query",
+        "adapter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:toResp",
+      "type": "function",
+      "name": "toResp",
+      "filePath": "forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "lineRange": [
+        280,
+        316
+      ],
+      "summary": "把 CrossBorderPayment 聚合的金额、汇率、银行、状态、GPI 和审计字段映射为 PaymentResp。",
+      "tags": [
+        "response-mapping",
+        "domain-mapping",
+        "adapter"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/Idempotent.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/annotation/RedisLock.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/dto/PageResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-common/forex-common-base/src/main/java/com/forex/common/base/result/R.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-common/forex-common-security/src/main/java/com/forex/common/security/annotation/RequirePermission.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/AddressValidateReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/AmlCheckReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/BatchSubmitReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/CreatePaymentReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/FeeCalculateReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/GpiUpdateReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/IbanValidateReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/PaymentPageQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/PaymentResp.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/SendPaymentReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/adapter/dto/SwiftValidateReq.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/application/command/CreatePaymentCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/application/command/SendPaymentCmd.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/application/service/BankCodeValidationService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/application/service/BatchPaymentService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/application/service/PaymentAppService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/domain/model/aggregate/CrossBorderPayment.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "file:forex-payment/src/main/java/com/forex/payment/domain/model/dto/PaymentQuery.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "class:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:PaymentController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:createOutwardPayment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:createInwardPayment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:getPaymentDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:pageQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:submitPayment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:approvePayment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:processAmlCheck",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:sendPayment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:cancelPayment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:updateGpiStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:toCmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:batchSubmit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:validateSwift",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:validateIban",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:calculateFee",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:validateAddress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:toPaymentQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:toResp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:createOutwardPayment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:createInwardPayment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:getPaymentDetail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:pageQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:submitPayment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:approvePayment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:processAmlCheck",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:sendPayment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:cancelPayment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:updateGpiStatus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:batchSubmit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:validateSwift",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:validateIban",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:calculateFee",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:validateAddress",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java",
+      "target": "class:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:PaymentController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:createOutwardPayment",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:toCmd",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:createOutwardPayment",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/PaymentAppService.java:createOutwardPayment",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:createOutwardPayment",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:toResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:createInwardPayment",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:toCmd",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:createInwardPayment",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/PaymentAppService.java:createInwardPayment",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:createInwardPayment",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:toResp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:pageQuery",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:toPaymentQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:pageQuery",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/PaymentAppService.java:pageQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:submitPayment",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/PaymentAppService.java:submitPayment",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:approvePayment",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/PaymentAppService.java:approvePayment",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:processAmlCheck",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/PaymentAppService.java:processAmlCheck",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:sendPayment",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/PaymentAppService.java:sendPayment",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:cancelPayment",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/PaymentAppService.java:cancelPayment",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:updateGpiStatus",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/PaymentAppService.java:updateGpiStatus",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:batchSubmit",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:toCmd",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:batchSubmit",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/BatchPaymentService.java:processBatch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:validateSwift",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/BankCodeValidationService.java:validateSwiftCode",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:validateSwift",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/BankCodeValidationService.java:autoCompleteBic",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:validateIban",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/BankCodeValidationService.java:validateIban",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:forex-payment/src/main/java/com/forex/payment/adapter/controller/PaymentController.java:calculateFee",
+      "target": "function:forex-payment/src/main/java/com/forex/payment/application/service/BankCodeValidationService.java:calculateFee",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

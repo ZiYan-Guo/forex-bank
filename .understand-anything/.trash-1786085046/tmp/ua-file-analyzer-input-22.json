@@ -1,0 +1,37 @@
+{
+  "projectRoot": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system",
+  "batchFiles": [
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java",
+      "language": "java",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "language": "java",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java",
+      "language": "java",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java": [
+      "forex-risk/src/main/java/com/forex/risk/domain/model/entity/SamplingRule.java"
+    ],
+    "forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java": [
+      "forex-risk/src/main/java/com/forex/risk/infrastructure/persistence/SamplingRulePO.java"
+    ],
+    "forex-risk/src/main/java/com/forex/risk/infrastructure/repository/SamplingRuleRepositoryImpl.java": [
+      "forex-risk/src/main/java/com/forex/risk/domain/model/entity/SamplingRule.java",
+      "forex-risk/src/main/java/com/forex/risk/domain/repository/SamplingRuleRepository.java",
+      "forex-risk/src/main/java/com/forex/risk/infrastructure/mapper/SamplingRuleMapper.java",
+      "forex-risk/src/main/java/com/forex/risk/infrastructure/persistence/SamplingRulePO.java"
+    ]
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 1,
+  "filesSkipped": [
+    "forex-common/forex-common-mybatis/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+    "forex-common/forex-common-security/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 1,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 47,
+      "nonEmptyLines": 42,
+      "functions": [
+        {
+          "name": "mybatisPlusInterceptor",
+          "startLine": 28,
+          "endLine": 35,
+          "params": []
+        },
+        {
+          "name": "globalConfig",
+          "startLine": 37,
+          "endLine": 46,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MybatisPlusConfig",
+          "startLine": 23,
+          "endLine": 47,
+          "methods": [
+            "mybatisPlusInterceptor",
+            "globalConfig"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "mybatisPlusInterceptor",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "globalConfig",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "MybatisPlusConfig",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "mybatisPlusInterceptor",
+          "callee": "new MybatisPlusInterceptor",
+          "lineNumber": 30
+        },
+        {
+          "caller": "mybatisPlusInterceptor",
+          "callee": "interceptor.addInnerInterceptor",
+          "lineNumber": 31
+        },
+        {
+          "caller": "mybatisPlusInterceptor",
+          "callee": "new PaginationInnerInterceptor",
+          "lineNumber": 31
+        },
+        {
+          "caller": "mybatisPlusInterceptor",
+          "callee": "interceptor.addInnerInterceptor",
+          "lineNumber": 32
+        },
+        {
+          "caller": "mybatisPlusInterceptor",
+          "callee": "new OptimisticLockerInnerInterceptor",
+          "lineNumber": 32
+        },
+        {
+          "caller": "mybatisPlusInterceptor",
+          "callee": "interceptor.addInnerInterceptor",
+          "lineNumber": 33
+        },
+        {
+          "caller": "mybatisPlusInterceptor",
+          "callee": "new BlockAttackInnerInterceptor",
+          "lineNumber": 33
+        },
+        {
+          "caller": "globalConfig",
+          "callee": "new GlobalConfig",
+          "lineNumber": 39
+        },
+        {
+          "caller": "globalConfig",
+          "callee": "new GlobalConfig.DbConfig",
+          "lineNumber": 40
+        },
+        {
+          "caller": "globalConfig",
+          "callee": "dbConfig.setLogicDeleteField",
+          "lineNumber": 41
+        },
+        {
+          "caller": "globalConfig",
+          "callee": "dbConfig.setLogicDeleteValue",
+          "lineNumber": 42
+        },
+        {
+          "caller": "globalConfig",
+          "callee": "dbConfig.setLogicNotDeleteValue",
+          "lineNumber": 43
+        },
+        {
+          "caller": "globalConfig",
+          "callee": "globalConfig.setDbConfig",
+          "lineNumber": 44
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    }
+  ]
+}

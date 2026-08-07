@@ -1,0 +1,142 @@
+{
+  "nodes": [
+    {
+      "id": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "type": "file",
+      "name": "MybatisPlusConfig.java",
+      "filePath": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "summary": "承载 MybatisPlusConfig.java 所在业务模块的代码职责，并与周边服务、模型或配置协作完成系统功能。",
+      "tags": [
+        "配置",
+        "Spring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java:MybatisPlusConfig",
+      "type": "class",
+      "name": "MybatisPlusConfig",
+      "filePath": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "lineRange": [
+        23,
+        47
+      ],
+      "summary": "定义 MybatisPlusConfig 类型，封装 MybatisPlusConfig.java 中的主要状态、行为或接口契约。",
+      "tags": [
+        "配置",
+        "Spring",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java:mybatisPlusInterceptor",
+      "type": "function",
+      "name": "mybatisPlusInterceptor",
+      "filePath": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "lineRange": [
+        28,
+        35
+      ],
+      "summary": "实现 mybatisPlusInterceptor 处理逻辑，是 MybatisPlusConfig.java 中可复用或对外暴露的重要行为。",
+      "tags": [
+        "配置",
+        "Spring",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java:globalConfig",
+      "type": "function",
+      "name": "globalConfig",
+      "filePath": "forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "lineRange": [
+        37,
+        46
+      ],
+      "summary": "实现 globalConfig 处理逻辑，是 MybatisPlusConfig.java 中可复用或对外暴露的重要行为。",
+      "tags": [
+        "配置",
+        "Spring",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-mybatis/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "type": "file",
+      "name": "org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "filePath": "forex-common/forex-common-mybatis/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "summary": "承载 org.springframework.boot.autoconfigure.AutoConfiguration.imports 所在业务模块的代码职责，并与周边服务、模型或配置协作完成系统功能。",
+      "tags": [
+        "配置",
+        "Spring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:forex-common/forex-common-security/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "type": "file",
+      "name": "org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "filePath": "forex-common/forex-common-security/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "summary": "承载 org.springframework.boot.autoconfigure.AutoConfiguration.imports 所在业务模块的代码职责，并与周边服务、模型或配置协作完成系统功能。",
+      "tags": [
+        "配置",
+        "Spring"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "target": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/handler/EncryptTypeHandler.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java:MybatisPlusConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "target": "class:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java:MybatisPlusConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "target": "function:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java:mybatisPlusInterceptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "target": "function:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java:mybatisPlusInterceptor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "target": "function:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java:globalConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java",
+      "target": "function:forex-common/forex-common-mybatis/src/main/java/com/forex/common/mybatis/config/MybatisPlusConfig.java:globalConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

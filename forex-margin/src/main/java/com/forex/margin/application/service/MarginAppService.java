@@ -1,6 +1,7 @@
 package com.forex.margin.application.service;
 
 import com.forex.common.base.dto.PageResp;
+import com.forex.margin.adapter.dto.CollateralLedgerSummaryResp;
 import com.forex.margin.application.command.CreateMarginCmd;
 import com.forex.margin.domain.model.aggregate.MarginAccount;
 import com.forex.margin.domain.model.query.MarginQuery;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import java.util.List;
 import com.forex.common.base.exception.BusinessException;
 import com.forex.common.base.result.ResultCode;
 
@@ -60,5 +62,37 @@ public class MarginAppService {
 
     public PageResp<MarginAccount> pageQuery(MarginQuery query) {
         return marginAccountRepository.pageQuery(query);
+    }
+
+    public CollateralLedgerSummaryResp summarizeCollateralLedger() {
+        List<MarginAccount> accounts = marginAccountRepository.listForLedgerSummary();
+        CollateralLedgerSummaryResp summary = new CollateralLedgerSummaryResp();
+        for (MarginAccount account : accounts) {
+            BigDecimal deposited = defaultAmount(account.getDepositedAmount());
+            BigDecimal collateralValue = defaultAmount(account.getCollateralValue()).compareTo(BigDecimal.ZERO) > 0
+                    ? defaultAmount(account.getCollateralValue())
+                    : deposited;
+            BigDecimal shortfall = defaultAmount(account.getShortfallAmount());
+            summary.setTotalCollateralValue(summary.getTotalCollateralValue().add(collateralValue));
+            summary.setTotalShortfallAmount(summary.getTotalShortfallAmount().add(shortfall));
+            if ("BOND".equalsIgnoreCase(account.getCollateralType())) {
+                summary.setBondCollateralBalance(summary.getBondCollateralBalance().add(collateralValue));
+            } else {
+                summary.setCashCollateralBalance(summary.getCashCollateralBalance().add(collateralValue));
+            }
+            if ("INITIAL".equalsIgnoreCase(account.getMarginType())) {
+                summary.setImPledgeeBalance(summary.getImPledgeeBalance().add(collateralValue));
+            } else {
+                summary.setVmReceivedBalance(summary.getVmReceivedBalance().add(collateralValue));
+            }
+            if ("CALLED".equalsIgnoreCase(account.getStatus()) || "PENDING".equalsIgnoreCase(account.getStatus())) {
+                summary.setInTransitAmount(summary.getInTransitAmount().add(shortfall));
+            }
+        }
+        return summary;
+    }
+
+    private BigDecimal defaultAmount(BigDecimal amount) {
+        return amount == null ? BigDecimal.ZERO : amount;
     }
 }

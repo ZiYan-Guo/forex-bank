@@ -1,0 +1,1121 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 3,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/service/CollectionDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 84,
+      "nonEmptyLines": 69,
+      "functions": [
+        {
+          "name": "createCollection",
+          "startLine": 29,
+          "endLine": 53,
+          "params": [
+            "customerId",
+            "collectionType",
+            "collectionForm",
+            "collectionAmount",
+            "collectionCurrency",
+            "drawerInfo",
+            "draweeInfo",
+            "remittingBank",
+            "collectingBank",
+            "documentsList",
+            "operatorId",
+            "remark"
+          ]
+        },
+        {
+          "name": "markReceivedDocuments",
+          "startLine": 55,
+          "endLine": 59,
+          "params": [
+            "col"
+          ]
+        },
+        {
+          "name": "presentToDrawee",
+          "startLine": 61,
+          "endLine": 65,
+          "params": [
+            "col"
+          ]
+        },
+        {
+          "name": "accept",
+          "startLine": 67,
+          "endLine": 71,
+          "params": [
+            "col"
+          ]
+        },
+        {
+          "name": "pay",
+          "startLine": 73,
+          "endLine": 77,
+          "params": [
+            "col"
+          ]
+        },
+        {
+          "name": "generateCollectionNo",
+          "startLine": 79,
+          "endLine": 83,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CollectionDomainService",
+          "startLine": 19,
+          "endLine": 84,
+          "methods": [
+            "createCollection",
+            "markReceivedDocuments",
+            "presentToDrawee",
+            "accept",
+            "pay",
+            "generateCollectionNo"
+          ],
+          "properties": [
+            "DATE_FORMATTER",
+            "collectionRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createCollection",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "markReceivedDocuments",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "presentToDrawee",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "accept",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "pay",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "CollectionDomainService",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createCollection",
+          "callee": "new BusinessException",
+          "lineNumber": 36
+        },
+        {
+          "caller": "createCollection",
+          "callee": "collectionAmount.compareTo",
+          "lineNumber": 38
+        },
+        {
+          "caller": "createCollection",
+          "callee": "new BusinessException",
+          "lineNumber": 39
+        },
+        {
+          "caller": "createCollection",
+          "callee": "generateCollectionNo",
+          "lineNumber": 41
+        },
+        {
+          "caller": "createCollection",
+          "callee": "new DocumentaryCollection",
+          "lineNumber": 42
+        },
+        {
+          "caller": "createCollection",
+          "callee": "collectionRepository.save",
+          "lineNumber": 47
+        },
+        {
+          "caller": "createCollection",
+          "callee": "log.info",
+          "lineNumber": 49
+        },
+        {
+          "caller": "createCollection",
+          "callee": "saved.getCollectionNo",
+          "lineNumber": 50
+        },
+        {
+          "caller": "createCollection",
+          "callee": "saved.getCollectionAmount",
+          "lineNumber": 51
+        },
+        {
+          "caller": "createCollection",
+          "callee": "saved.getCollectionCurrency",
+          "lineNumber": 51
+        },
+        {
+          "caller": "markReceivedDocuments",
+          "callee": "col.markReceivedDocuments",
+          "lineNumber": 56
+        },
+        {
+          "caller": "markReceivedDocuments",
+          "callee": "collectionRepository.save",
+          "lineNumber": 57
+        },
+        {
+          "caller": "markReceivedDocuments",
+          "callee": "log.info",
+          "lineNumber": 58
+        },
+        {
+          "caller": "markReceivedDocuments",
+          "callee": "col.getCollectionNo",
+          "lineNumber": 58
+        },
+        {
+          "caller": "presentToDrawee",
+          "callee": "col.presentToDrawee",
+          "lineNumber": 62
+        },
+        {
+          "caller": "presentToDrawee",
+          "callee": "collectionRepository.save",
+          "lineNumber": 63
+        },
+        {
+          "caller": "presentToDrawee",
+          "callee": "log.info",
+          "lineNumber": 64
+        },
+        {
+          "caller": "presentToDrawee",
+          "callee": "col.getCollectionNo",
+          "lineNumber": 64
+        },
+        {
+          "caller": "accept",
+          "callee": "col.accept",
+          "lineNumber": 68
+        },
+        {
+          "caller": "accept",
+          "callee": "collectionRepository.save",
+          "lineNumber": 69
+        },
+        {
+          "caller": "accept",
+          "callee": "log.info",
+          "lineNumber": 70
+        },
+        {
+          "caller": "accept",
+          "callee": "col.getCollectionNo",
+          "lineNumber": 70
+        },
+        {
+          "caller": "pay",
+          "callee": "col.pay",
+          "lineNumber": 74
+        },
+        {
+          "caller": "pay",
+          "callee": "collectionRepository.save",
+          "lineNumber": 75
+        },
+        {
+          "caller": "pay",
+          "callee": "log.info",
+          "lineNumber": 76
+        },
+        {
+          "caller": "pay",
+          "callee": "col.getCollectionNo",
+          "lineNumber": 76
+        },
+        {
+          "caller": "generateCollectionNo",
+          "callee": "LocalDateTime.now().format",
+          "lineNumber": 80
+        },
+        {
+          "caller": "generateCollectionNo",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 80
+        },
+        {
+          "caller": "generateCollectionNo",
+          "callee": "ThreadLocalRandom.current().nextInt",
+          "lineNumber": 81
+        },
+        {
+          "caller": "generateCollectionNo",
+          "callee": "ThreadLocalRandom.current",
+          "lineNumber": 81
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-settlement/src/main/java/com/forex/settlement/domain/service/GuaranteeDomainService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 82,
+      "nonEmptyLines": 68,
+      "functions": [
+        {
+          "name": "createGuarantee",
+          "startLine": 30,
+          "endLine": 57,
+          "params": [
+            "customerId",
+            "guaranteeType",
+            "guaranteeAmount",
+            "guaranteeCurrency",
+            "beneficiaryInfo",
+            "issueDate",
+            "effectiveDate",
+            "expiryDate",
+            "claimExpiryDate",
+            "counterGuaranteeNo",
+            "guaranteeFormat",
+            "commissionRate",
+            "operatorId",
+            "remark"
+          ]
+        },
+        {
+          "name": "issueGuarantee",
+          "startLine": 59,
+          "endLine": 63,
+          "params": [
+            "g"
+          ]
+        },
+        {
+          "name": "claim",
+          "startLine": 65,
+          "endLine": 69,
+          "params": [
+            "g"
+          ]
+        },
+        {
+          "name": "expire",
+          "startLine": 71,
+          "endLine": 75,
+          "params": [
+            "g"
+          ]
+        },
+        {
+          "name": "generateGuaranteeNo",
+          "startLine": 77,
+          "endLine": 81,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "GuaranteeDomainService",
+          "startLine": 20,
+          "endLine": 82,
+          "methods": [
+            "createGuarantee",
+            "issueGuarantee",
+            "claim",
+            "expire",
+            "generateGuaranteeNo"
+          ],
+          "properties": [
+            "DATE_FORMATTER",
+            "guaranteeRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createGuarantee",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "issueGuarantee",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "claim",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "expire",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "GuaranteeDomainService",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createGuarantee",
+          "callee": "new BusinessException",
+          "lineNumber": 38
+        },
+        {
+          "caller": "createGuarantee",
+          "callee": "guaranteeAmount.compareTo",
+          "lineNumber": 40
+        },
+        {
+          "caller": "createGuarantee",
+          "callee": "new BusinessException",
+          "lineNumber": 41
+        },
+        {
+          "caller": "createGuarantee",
+          "callee": "generateGuaranteeNo",
+          "lineNumber": 43
+        },
+        {
+          "caller": "createGuarantee",
+          "callee": "new BankGuarantee",
+          "lineNumber": 44
+        },
+        {
+          "caller": "createGuarantee",
+          "callee": "guaranteeRepository.save",
+          "lineNumber": 51
+        },
+        {
+          "caller": "createGuarantee",
+          "callee": "log.info",
+          "lineNumber": 53
+        },
+        {
+          "caller": "createGuarantee",
+          "callee": "saved.getGuaranteeNo",
+          "lineNumber": 54
+        },
+        {
+          "caller": "createGuarantee",
+          "callee": "saved.getGuaranteeAmount",
+          "lineNumber": 55
+        },
+        {
+          "caller": "createGuarantee",
+          "callee": "saved.getGuaranteeCurrency",
+          "lineNumber": 55
+        },
+        {
+          "caller": "issueGuarantee",
+          "callee": "g.issue",
+          "lineNumber": 60
+        },
+        {
+          "caller": "issueGuarantee",
+          "callee": "LocalDate.now",
+          "lineNumber": 60
+        },
+        {
+          "caller": "issueGuarantee",
+          "callee": "guaranteeRepository.save",
+          "lineNumber": 61
+        },
+        {
+          "caller": "issueGuarantee",
+          "callee": "log.info",
+          "lineNumber": 62
+        },
+        {
+          "caller": "issueGuarantee",
+          "callee": "g.getGuaranteeNo",
+          "lineNumber": 62
+        },
+        {
+          "caller": "claim",
+          "callee": "g.claim",
+          "lineNumber": 66
+        },
+        {
+          "caller": "claim",
+          "callee": "guaranteeRepository.save",
+          "lineNumber": 67
+        },
+        {
+          "caller": "claim",
+          "callee": "log.info",
+          "lineNumber": 68
+        },
+        {
+          "caller": "claim",
+          "callee": "g.getGuaranteeNo",
+          "lineNumber": 68
+        },
+        {
+          "caller": "expire",
+          "callee": "g.expire",
+          "lineNumber": 72
+        },
+        {
+          "caller": "expire",
+          "callee": "guaranteeRepository.save",
+          "lineNumber": 73
+        },
+        {
+          "caller": "expire",
+          "callee": "log.info",
+          "lineNumber": 74
+        },
+        {
+          "caller": "expire",
+          "callee": "g.getGuaranteeNo",
+          "lineNumber": 74
+        },
+        {
+          "caller": "generateGuaranteeNo",
+          "callee": "LocalDateTime.now().format",
+          "lineNumber": 78
+        },
+        {
+          "caller": "generateGuaranteeNo",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 78
+        },
+        {
+          "caller": "generateGuaranteeNo",
+          "callee": "ThreadLocalRandom.current().nextInt",
+          "lineNumber": 79
+        },
+        {
+          "caller": "generateGuaranteeNo",
+          "callee": "ThreadLocalRandom.current",
+          "lineNumber": 79
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "forex-settlement/src/test/java/com/forex/settlement/domain/service/GuaranteeDomainServiceTest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 138,
+      "nonEmptyLines": 109,
+      "functions": [
+        {
+          "name": "setUp",
+          "startLine": 27,
+          "endLine": 30,
+          "params": []
+        },
+        {
+          "name": "testCreateGuarantee",
+          "startLine": 32,
+          "endLine": 48,
+          "params": []
+        },
+        {
+          "name": "testIssueGuarantee",
+          "startLine": 50,
+          "endLine": 59,
+          "params": []
+        },
+        {
+          "name": "testClaim",
+          "startLine": 61,
+          "endLine": 70,
+          "params": []
+        },
+        {
+          "name": "testExpire",
+          "startLine": 72,
+          "endLine": 81,
+          "params": []
+        },
+        {
+          "name": "testCreateGuarantee_Types",
+          "startLine": 83,
+          "endLine": 96,
+          "params": []
+        },
+        {
+          "name": "testIsExpired_True",
+          "startLine": 98,
+          "endLine": 109,
+          "params": []
+        },
+        {
+          "name": "testIsExpired_False",
+          "startLine": 111,
+          "endLine": 122,
+          "params": []
+        },
+        {
+          "name": "createDraftGuarantee",
+          "startLine": 124,
+          "endLine": 131,
+          "params": []
+        },
+        {
+          "name": "createIssuedGuarantee",
+          "startLine": 133,
+          "endLine": 137,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "GuaranteeDomainServiceTest",
+          "startLine": 20,
+          "endLine": 138,
+          "methods": [
+            "setUp",
+            "testCreateGuarantee",
+            "testIssueGuarantee",
+            "testClaim",
+            "testExpire",
+            "testCreateGuarantee_Types",
+            "testIsExpired_True",
+            "testIsExpired_False",
+            "createDraftGuarantee",
+            "createIssuedGuarantee"
+          ],
+          "properties": [
+            "guaranteeRepository",
+            "guaranteeDomainService"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "setUp",
+          "callee": "new GuaranteeDomainService",
+          "lineNumber": 29
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "when(guaranteeRepository.save(any())).thenAnswer",
+          "lineNumber": 35
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "when",
+          "lineNumber": 35
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "guaranteeRepository.save",
+          "lineNumber": 35
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "any",
+          "lineNumber": 35
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "i.getArgument",
+          "lineNumber": 35
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "guaranteeDomainService.createGuarantee",
+          "lineNumber": 37
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "new BigDecimal",
+          "lineNumber": 38
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "LocalDate.of",
+          "lineNumber": 39
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "LocalDate.of",
+          "lineNumber": 39
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "LocalDate.of",
+          "lineNumber": 40
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "LocalDate.of",
+          "lineNumber": 40
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "new BigDecimal",
+          "lineNumber": 41
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "assertNotNull",
+          "lineNumber": 43
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "assertTrue",
+          "lineNumber": 44
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "result.getGuaranteeNo().startsWith",
+          "lineNumber": 44
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "result.getGuaranteeNo",
+          "lineNumber": 44
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "assertEquals",
+          "lineNumber": 45
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "result.getGuaranteeStatus",
+          "lineNumber": 45
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "assertEquals",
+          "lineNumber": 46
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "new BigDecimal",
+          "lineNumber": 46
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "result.getGuaranteeAmount",
+          "lineNumber": 46
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "verify(guaranteeRepository).save",
+          "lineNumber": 47
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "verify",
+          "lineNumber": 47
+        },
+        {
+          "caller": "testCreateGuarantee",
+          "callee": "any",
+          "lineNumber": 47
+        },
+        {
+          "caller": "testIssueGuarantee",
+          "callee": "createDraftGuarantee",
+          "lineNumber": 53
+        },
+        {
+          "caller": "testIssueGuarantee",
+          "callee": "when(guaranteeRepository.save(any())).thenReturn",
+          "lineNumber": 54
+        },
+        {
+          "caller": "testIssueGuarantee",
+          "callee": "when",
+          "lineNumber": 54
+        },
+        {
+          "caller": "testIssueGuarantee",
+          "callee": "guaranteeRepository.save",
+          "lineNumber": 54
+        },
+        {
+          "caller": "testIssueGuarantee",
+          "callee": "any",
+          "lineNumber": 54
+        },
+        {
+          "caller": "testIssueGuarantee",
+          "callee": "guaranteeDomainService.issueGuarantee",
+          "lineNumber": 56
+        },
+        {
+          "caller": "testIssueGuarantee",
+          "callee": "verify(guaranteeRepository).save",
+          "lineNumber": 58
+        },
+        {
+          "caller": "testIssueGuarantee",
+          "callee": "verify",
+          "lineNumber": 58
+        },
+        {
+          "caller": "testClaim",
+          "callee": "createIssuedGuarantee",
+          "lineNumber": 64
+        },
+        {
+          "caller": "testClaim",
+          "callee": "when(guaranteeRepository.save(any())).thenReturn",
+          "lineNumber": 65
+        },
+        {
+          "caller": "testClaim",
+          "callee": "when",
+          "lineNumber": 65
+        },
+        {
+          "caller": "testClaim",
+          "callee": "guaranteeRepository.save",
+          "lineNumber": 65
+        },
+        {
+          "caller": "testClaim",
+          "callee": "any",
+          "lineNumber": 65
+        },
+        {
+          "caller": "testClaim",
+          "callee": "guaranteeDomainService.claim",
+          "lineNumber": 67
+        },
+        {
+          "caller": "testClaim",
+          "callee": "verify(guaranteeRepository).save",
+          "lineNumber": 69
+        },
+        {
+          "caller": "testClaim",
+          "callee": "verify",
+          "lineNumber": 69
+        },
+        {
+          "caller": "testExpire",
+          "callee": "createIssuedGuarantee",
+          "lineNumber": 75
+        },
+        {
+          "caller": "testExpire",
+          "callee": "when(guaranteeRepository.save(any())).thenReturn",
+          "lineNumber": 76
+        },
+        {
+          "caller": "testExpire",
+          "callee": "when",
+          "lineNumber": 76
+        },
+        {
+          "caller": "testExpire",
+          "callee": "guaranteeRepository.save",
+          "lineNumber": 76
+        },
+        {
+          "caller": "testExpire",
+          "callee": "any",
+          "lineNumber": 76
+        },
+        {
+          "caller": "testExpire",
+          "callee": "guaranteeDomainService.expire",
+          "lineNumber": 78
+        },
+        {
+          "caller": "testExpire",
+          "callee": "verify(guaranteeRepository).save",
+          "lineNumber": 80
+        },
+        {
+          "caller": "testExpire",
+          "callee": "verify",
+          "lineNumber": 80
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "when(guaranteeRepository.save(any())).thenAnswer",
+          "lineNumber": 86
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "when",
+          "lineNumber": 86
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "guaranteeRepository.save",
+          "lineNumber": 86
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "any",
+          "lineNumber": 86
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "i.getArgument",
+          "lineNumber": 86
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "guaranteeDomainService.createGuarantee",
+          "lineNumber": 88
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "new BigDecimal",
+          "lineNumber": 89
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "LocalDate.now",
+          "lineNumber": 90
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "LocalDate.now",
+          "lineNumber": 90
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "LocalDate.now().plusYears",
+          "lineNumber": 91
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "LocalDate.now",
+          "lineNumber": 91
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "LocalDate.now().plusYears(2).plusMonths",
+          "lineNumber": 91
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "LocalDate.now().plusYears",
+          "lineNumber": 91
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "LocalDate.now",
+          "lineNumber": 91
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "assertTrue",
+          "lineNumber": 94
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "perf.getGuaranteeNo().startsWith",
+          "lineNumber": 94
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "perf.getGuaranteeNo",
+          "lineNumber": 94
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "assertEquals",
+          "lineNumber": 95
+        },
+        {
+          "caller": "testCreateGuarantee_Types",
+          "callee": "perf.getGuaranteeCurrency",
+          "lineNumber": 95
+        },
+        {
+          "caller": "testIsExpired_True",
+          "callee": "new BankGuarantee",
+          "lineNumber": 101
+        },
+        {
+          "caller": "testIsExpired_True",
+          "callee": "new BigDecimal",
+          "lineNumber": 102
+        },
+        {
+          "caller": "testIsExpired_True",
+          "callee": "LocalDate.of",
+          "lineNumber": 103
+        },
+        {
+          "caller": "testIsExpired_True",
+          "callee": "LocalDate.of",
+          "lineNumber": 103
+        },
+        {
+          "caller": "testIsExpired_True",
+          "callee": "LocalDate.of",
+          "lineNumber": 104
+        },
+        {
+          "caller": "testIsExpired_True",
+          "callee": "LocalDate.of",
+          "lineNumber": 104
+        },
+        {
+          "caller": "testIsExpired_True",
+          "callee": "assertTrue",
+          "lineNumber": 108
+        },
+        {
+          "caller": "testIsExpired_True",
+          "callee": "g.isExpired",
+          "lineNumber": 108
+        },
+        {
+          "caller": "testIsExpired_False",
+          "callee": "new BankGuarantee",
+          "lineNumber": 114
+        },
+        {
+          "caller": "testIsExpired_False",
+          "callee": "new BigDecimal",
+          "lineNumber": 115
+        },
+        {
+          "caller": "testIsExpired_False",
+          "callee": "LocalDate.of",
+          "lineNumber": 116
+        },
+        {
+          "caller": "testIsExpired_False",
+          "callee": "LocalDate.of",
+          "lineNumber": 116
+        },
+        {
+          "caller": "testIsExpired_False",
+          "callee": "LocalDate.of",
+          "lineNumber": 117
+        },
+        {
+          "caller": "testIsExpired_False",
+          "callee": "LocalDate.of",
+          "lineNumber": 117
+        },
+        {
+          "caller": "testIsExpired_False",
+          "callee": "assertFalse",
+          "lineNumber": 121
+        },
+        {
+          "caller": "testIsExpired_False",
+          "callee": "g.isExpired",
+          "lineNumber": 121
+        },
+        {
+          "caller": "createDraftGuarantee",
+          "callee": "new BankGuarantee",
+          "lineNumber": 125
+        },
+        {
+          "caller": "createDraftGuarantee",
+          "callee": "new BigDecimal",
+          "lineNumber": 126
+        },
+        {
+          "caller": "createDraftGuarantee",
+          "callee": "LocalDate.now",
+          "lineNumber": 127
+        },
+        {
+          "caller": "createDraftGuarantee",
+          "callee": "LocalDate.now",
+          "lineNumber": 127
+        },
+        {
+          "caller": "createDraftGuarantee",
+          "callee": "LocalDate.now().plusYears",
+          "lineNumber": 128
+        },
+        {
+          "caller": "createDraftGuarantee",
+          "callee": "LocalDate.now",
+          "lineNumber": 128
+        },
+        {
+          "caller": "createDraftGuarantee",
+          "callee": "LocalDate.now().plusYears(1).plusMonths",
+          "lineNumber": 128
+        },
+        {
+          "caller": "createDraftGuarantee",
+          "callee": "LocalDate.now().plusYears",
+          "lineNumber": 128
+        },
+        {
+          "caller": "createDraftGuarantee",
+          "callee": "LocalDate.now",
+          "lineNumber": 128
+        },
+        {
+          "caller": "createIssuedGuarantee",
+          "callee": "createDraftGuarantee",
+          "lineNumber": 134
+        },
+        {
+          "caller": "createIssuedGuarantee",
+          "callee": "guarantee.issue",
+          "lineNumber": 135
+        },
+        {
+          "caller": "createIssuedGuarantee",
+          "callee": "LocalDate.now",
+          "lineNumber": 135
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 10,
+        "classCount": 1
+      }
+    }
+  ]
+}

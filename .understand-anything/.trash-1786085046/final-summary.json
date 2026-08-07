@@ -1,0 +1,126 @@
+{
+  "project": {
+    "name": "forex-bank-system",
+    "languages": [
+      "html",
+      "java",
+      "json",
+      "markdown",
+      "properties",
+      "sql",
+      "typescript",
+      "vue",
+      "xml",
+      "yaml"
+    ],
+    "frameworks": [
+      "Spring Boot 3.2.5",
+      "Spring Cloud 2023.0.3",
+      "Spring Cloud Alibaba 2023.0.1.0",
+      "MyBatis-Plus 3.5.5",
+      "MySQL 8.0.35",
+      "Redis (Redisson) 3.27.0",
+      "Caffeine 3.1.8",
+      "Nacos 2.3.2",
+      "Sentinel 1.8.6",
+      "Seata 1.8.0",
+      "RocketMQ 5.1.4",
+      "Flowable 7.0.0",
+      "XXL-JOB 2.4.1",
+      "JWT (jjwt) 0.12.3",
+      "Bouncy Castle 1.77",
+      "Knife4j 4.5.0",
+      "Hutool 5.8.25",
+      "MapStruct 1.5.5",
+      "Vue 3.4.21",
+      "TypeScript 5.4",
+      "Ant Design Vue 4.2.1",
+      "Pinia 2.1.7",
+      "ECharts 5.5.0",
+      "Axios 1.6.8",
+      "Vite 5.2.0",
+      "DDD (Domain-Driven Design)",
+      "Docker Compose"
+    ],
+    "description": "银行外汇系统 - 国际业务综合管理平台 (Forex Bank System - International Business Management Platform)",
+    "analyzedAt": "2026-08-07T06:42:04.489Z",
+    "gitCommitHash": "01cfbe7a177f28567cb6878a101bc404fc33f463"
+  },
+  "files": {
+    "total": 1002,
+    "byCategory": {
+      "docs": 7,
+      "infra": 1,
+      "config": 64,
+      "code": 902,
+      "markup": 1,
+      "data": 27
+    },
+    "filteredByIgnore": 67
+  },
+  "nodes": {
+    "file": 900,
+    "class": 436,
+    "function": 1240,
+    "table": 32,
+    "config": 59,
+    "document": 7,
+    "service": 1
+  },
+  "edges": {
+    "contains": 1718,
+    "imports": 1943,
+    "depends_on": 74,
+    "calls": 192,
+    "inherits": 12,
+    "implements": 5,
+    "configures": 8,
+    "exports": 848,
+    "tested_by": 4
+  },
+  "layers": [
+    {
+      "name": "前端 UI 层",
+      "count": 57
+    },
+    {
+      "name": "API 适配层",
+      "count": 170
+    },
+    {
+      "name": "应用服务层",
+      "count": 113
+    },
+    {
+      "name": "领域模型层",
+      "count": 257
+    },
+    {
+      "name": "基础设施与持久化层",
+      "count": 198
+    },
+    {
+      "name": "共享平台层",
+      "count": 50
+    },
+    {
+      "name": "配置与构建层",
+      "count": 69
+    },
+    {
+      "name": "数据脚本层",
+      "count": 32
+    },
+    {
+      "name": "文档与部署层",
+      "count": 8
+    },
+    {
+      "name": "测试层",
+      "count": 45
+    }
+  ],
+  "tourSteps": 10,
+  "warnings": 252,
+  "output": "/Users/guoziyan/Desktop/java-project/project-ai/forex-bank-system/.understand-anything/knowledge-graph.json"
+}
